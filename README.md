@@ -1,5 +1,5 @@
-Cet exemple d'Implementation Guide (IG) très simplifié sert de base pour le développement de nouveaux guides d'implémentation. La démarche d'élaboration d'un nouvel IG est expliquée dans le [wiki de ce repo](https://github.com/ansforge/FIG_ans-ig-sample/wiki). 
-Le README ci-dessous constitue un template à adapter et compléter pour chaque projet.
+***/!\ Cet Implementation Guide (IG) destiné au Service d'Accès aux Soins est en cours de construction.***
+Ne pas utiliser, référencer, diffuser avant publication de la v1.0.0.
 
 # Contexte
 
