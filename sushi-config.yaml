@@ -1,9 +1,9 @@
 # Documentation à propos de cette page : https://fshschool.org/docs/sushi/configuration/
 
-id: ans.fhir.fr.example
-canonical: https://interop.esante.gouv.fr/ig/fhir/example
-name: ExampleIG
-title: ANS IG Example
+id: ans.fhir.fr.sas
+canonical: https://interop.esante.gouv.fr/ig/fhir/sas
+name: Service d'accès aux soins
+title: Service d'accès aux soins
 publisher:
   name: ANS
   url: https://esante.gouv.fr
@@ -16,7 +16,10 @@ releaseLabel: ci-build
 parameters:
     shownav: 'true'
 
-
+dependencies:
+  hl7.fhir.fr.core: 
+    uri: https://simplifier.net/packages/hl7.fhir.fr.core/1.1.0/snapshots/$download
+    version: 1.1.0
 
 pages:
     index.md:
@@ -27,16 +30,12 @@ pages:
             title: Flux 01
         st_flux2.md:
             title: Flux 02
-    # specifications_fonctionnelles.md:
-    #     sf_ajout.md:
-    #         title: Fonctionnalité 1
     autres_ressources.md:
         title: Autres Ressources
         securite.md:
             title: Sécurité
         downloads.md:
             title: Téléchargements et usages
-
     tests.md:
         title: Tests      
     about.md:
@@ -48,10 +47,7 @@ menu:
         Construction des flux: construction_des_flux.html
         Flux 01: st_flux1.html
         Flux 02: st_flux2.html
-    # Spécifications fonctionnelles:
-    #     Spécifications fonctionnelles: specifications_fonctionnelles.html
-    #     Fonctionnalité 1: sf_ajout.html
-    Ressources de conformance: artifacts.html
+    Ressources de conformité: artifacts.html
     Tests:   tests.html
     Autres ressources:
         Sécurité: securite.html
