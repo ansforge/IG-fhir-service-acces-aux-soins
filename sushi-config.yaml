@@ -1,9 +1,9 @@
 # Documentation à propos de cette page : https://fshschool.org/docs/sushi/configuration/
 
-id: ans.fhir.fr.example
-canonical: https://interop.esante.gouv.fr/ig/fhir/example
-name: ExampleIG
-title: ANS IG Example
+id: ans.fhir.fr.sas
+canonical: https://interop.esante.gouv.fr/ig/fhir/sas
+name: Service d'accès aux soins
+title: Service d'accès aux soins
 publisher:
   name: ANS
   url: https://esante.gouv.fr
@@ -16,7 +16,10 @@ releaseLabel: ci-build
 parameters:
     shownav: 'true'
 
-
+dependencies:
+  hl7.fhir.fr.core: 
+    uri: https://simplifier.net/packages/hl7.fhir.fr.core/1.1.0/snapshots/$download
+    version: 1.1.0
 
 pages:
     index.md:
