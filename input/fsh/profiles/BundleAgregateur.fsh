@@ -18,4 +18,4 @@ Description: "Profil de Bundle qui représente le flux de réponse contenant les
 * entry[FrSlotAgregateur].resource only FrSlotAgregateur
 * entry[FrScheduleAgregateur].resource only FrScheduleAgregateur
 * entry[FrPractitionerAgregateur].resource only FrPractitionerAgregateur
-* entry[FrPractitionerRoleExerciceAgregateur].resource only $FrPractitionerRoleExerciceAgregateur
+* entry[FrPractitionerRoleExerciceAgregateur].resource only FrPractitionerRoleExerciceAgregateur
