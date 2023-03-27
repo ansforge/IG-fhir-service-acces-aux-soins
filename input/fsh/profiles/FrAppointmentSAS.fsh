@@ -2,7 +2,7 @@ Profile: FrAppointmentSAS
 Parent: FrAppointment
 Id: FrAppointmentSAS
 * ^url = "http://sas.fr/fhir/StructureDefinition/FrAppointmentSAS"
-* ^status = #draft
+* ^version = "1.0.0"
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
