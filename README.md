@@ -14,8 +14,6 @@ Plus d'information sur le site dédié du ministère https://esante.gouv.fr/sas
 L'objectif de ce projet est de définir les profils qui doivent être implémentés par les éditeurs de solution de prise de rendez-vous en ligne pour exposer les créneaux disponibles et informer la plateforme des rendez-vous pris.
 Les opérations de la plateforme SAS sont réalisées au moyen d'API FHIR.
 
-Le modèle d'exposition cible du ROR est ici le modèle 3.0.
-
 Les ressources profilées pour ce cas d'usage spécifique sont :
 - BundleAgregateur
 - FrLocationAgregateur
