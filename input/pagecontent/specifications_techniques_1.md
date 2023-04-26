@@ -156,7 +156,7 @@ Par ailleurs, en complément des ressources Slot, afin de récupérer l'ensemble
 
 **Réponse "simplifiée" :**
 
-```json
+```xml
 HTTP 200 OK
   resourceType: Bundle
   type: searchset
