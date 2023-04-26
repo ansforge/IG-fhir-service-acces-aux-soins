@@ -48,7 +48,7 @@
 </tr>
 <tr>
   <td width="25%"><p><strong>Construction requête de base</strong></p></td>
-  <td><p><code>POST[base]/Appointment{?_format=[mime-type]}</code></p></td>
+  <td><p><code>PUT[base]/Appointment?Identifier=[ID]{&amp;_format=[mime-type]}</code></p></td>
 </tr>
 </tbody>
 </table>
