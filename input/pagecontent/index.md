@@ -17,4 +17,5 @@ Les principales sections de l'IG  sont :
 
 | Role  | Nom | Organisation | Contact |
 | --- | --- | --- | --- |
-| **Primary Editor** | Prenom Nom | Agence du Numérique en Santé | prenom.nom@address.email |
+| **Primary Editor** | Benjamin REVERSEAU | Agence du Numérique en Santé | benjamin.reverseau@esante.gouv.fr |
+| **Primary Editor** | Cédric PANISSOD | Agence du Numérique en Santé | cedric.panissod@esante.gouv.fr |
