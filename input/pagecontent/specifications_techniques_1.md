@@ -178,7 +178,7 @@ HTTP 200 OK
   Practitioner4
   PractitionerRole4
 
-```
+`
 
 **Réponse complète :**
 
