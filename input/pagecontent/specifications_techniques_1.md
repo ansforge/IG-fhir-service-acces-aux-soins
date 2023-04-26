@@ -156,7 +156,7 @@ Par ailleurs, en complément des ressources Slot, afin de récupérer l'ensemble
 
 **Réponse simplifiée :**
 
-```xml
+`
 HTTP 200 OK
   resourceType: Bundle
   type: searchset
@@ -182,7 +182,7 @@ HTTP 200 OK
 
 **Réponse complète :**
 
-```xml
+`
 {
   "resourceType": "Bundle",
   "id": "8cbb33dc-779e-45e9-a5f6-ea66101288c5",
@@ -779,4 +779,4 @@ HTTP 200 OK
   ]
 }
 
-```
+`
