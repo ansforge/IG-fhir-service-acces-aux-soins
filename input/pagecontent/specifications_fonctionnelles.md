@@ -1,9 +1,9 @@
 A ce jour, les API ont pour vocation de répondre aux cas d'usage suivants :
 1. Service exposé par une solution de prise de rendez-vous en ligne consommé par la plateforme SAS
-   * Recherche de créneaux
+    - Recherche de créneaux
 1. Service exposé par la plateforme SAS consommé par une solution de prise de rendez-vous en ligne
-   * Création de rendez-vous
-   * Mise à jour de rendez-vous
+    - Création de rendez-vous
+    - Mise à jour de rendez-vous
 
 Pour les cas d'usage couverts par ces API :
 - Le système consommateur doit disposer des points d'accès et des moyens d'authentification (authentification mTLS avec des certificats IGC-Santé).
