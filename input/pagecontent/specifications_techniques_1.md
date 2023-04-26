@@ -156,7 +156,7 @@ Par ailleurs, en complément des ressources Slot, afin de récupérer l'ensemble
 
 **Réponse simplifiée :**
 
-`
+```
 HTTP 200 OK
   resourceType: Bundle
   type: searchset
@@ -178,11 +178,11 @@ HTTP 200 OK
   Practitioner4
   PractitionerRole4
 
-`
+```
 
 **Réponse complète :**
 
-`
+```
 {
   "resourceType": "Bundle",
   "id": "8cbb33dc-779e-45e9-a5f6-ea66101288c5",
@@ -779,4 +779,4 @@ HTTP 200 OK
   ]
 }
 
-`
+```
