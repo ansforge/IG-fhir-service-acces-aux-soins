@@ -53,7 +53,6 @@ Cette requête s'appuie sur le flux 3A du volet d'agenda partagé du CI-SIS.
 </tr>
 </tbody>
 </table>
-<p>&nbsp;</p>
 <p><a href="#_ftnref1" name="_ftn1">[1]</a> <a href="https://www.hl7.org/fhir/http.html#search">https://www.hl7.org/fhir/http.html#search</a> et <a href="https://www.hl7.org/fhir/http.html#general">https://www.hl7.org/fhir/http.html#general</a></p>
 
 ### Construction de la réponse de base
@@ -155,7 +154,6 @@ Par ailleurs, en complément des ressources Slot, afin de récupérer l'ensemble
 
 `get[BASE]/Slot?_include=Slot:schedule&_include:iterate=Schedule:actor&start=ge2021-01-02T10:00:00&start=le2021-01-06T10:00:00&schedule.actor:Practitioner.identifier=urn:oid:1.2.250.1.71.4.2.1|810101288385, urn:oid:1.2.250.1.71.4.2.1|800001288385,urn:oid:1.2.250.1.71.4.2.1|810106738385&status=free`
 
-```
 **Réponse "simplifiée" :**
 
 ```json
