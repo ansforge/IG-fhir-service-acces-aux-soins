@@ -1,4 +1,3 @@
-### Sécurité
 
 Les données véhiculées à travers ces flux sont des données relatives à la prise de rendez-vous pour des Soins Non Programmés via la plateforme SAS.
 

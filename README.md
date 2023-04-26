@@ -4,10 +4,26 @@ Ne pas utiliser, référencer, diffuser avant publication de la v1.0.0.
 # Contexte
 
 ## Contexte métier du projet
-[A COMPLETER : doit contenir la description fonctionnelle du projet destinée à un profil non technique]
+Pour le patient confronté à un besoin de soins non programmés et lorsque l'accès à son médecin traitant n'est pas possible, le Service d'Accès aux Soins (SAS) doit permettre d'accéder, à toute heure et à distance à un professionnel de santé. Ce dernier pourra lui fournir un conseil médical, l'orienter selon la situation vers une consultation de soin non programmé en ville, vers un service d'urgence ou déclencher l'intervention d'un SMUR.
+Pour le patient orienté vers la filière de ville, les acteurs de la chaîne de régulation médicale du SAS peuvent s’appuyer sur la plateforme numérique, afin de :
+- Visualiser les créneaux disponibles des effecteurs de soin,
+- Réserver pour le patient une consultation de soin non programmé, au plus proche de ses besoins (localisation, horaire, spécialité).
+Plus d'information sur le site dédié du ministère https://esante.gouv.fr/sas
 
 ## Contexte technique du projet
-[A COMPLETER : doit expliquer brièvement quelles ressources / profils sont utilisés, exemple implémentation où IG est utilisé]
+L'objectif de ce projet est de définir les profils qui doivent être implémentés par les éditeurs de solution de prise de rendez-vous en ligne pour exposer les créneaux disponibles et informer la plateforme des rendez-vous pris.
+Les opérations de la plateforme SAS sont réalisées au moyen d'API FHIR.
+
+Le modèle d'exposition cible du ROR est ici le modèle 3.0.
+
+Les ressources profilées pour ce cas d'usage spécifique sont :
+- BundleAgregateur
+- FrLocationAgregateur
+- FrPractitionerAgregateur
+- FrPractitionerRoleExerciceAgregateur
+- FrScheduleAgregateur
+- FrSlotAgregateur
+- FrAppointmentSAS
 
 # CI/CD
 Les workflows associés à ce repository (.github/workflows) permettent : 
@@ -16,9 +32,8 @@ Les workflows associés à ce repository (.github/workflows) permettent :
 * De publier les pages : https://ansforge.github.io/{nom du repo}/ig/{nom de la branche}
 
 # Notes
-Ce repo "sample IG ANS" a été créé à partir du repo "sample-ig" de l'organisation GitHub FHIR : https://github.com/FHIR/sample-ig.
+Ce repository "IG-service-acces-aux-soins " a été créé à partir du repo "IG-modele" de l'organisation GitHub ANS : https://github.com/ansforge.
 
-[A COMPLETER: notes supplémentaires pour le lecteur de la spec]
 Un commentaire ? Une remarque ? Utilisez les GitHub [issues](https://docs.github.com/fr/issues) pour indiquer vos propositions d'amélioration et de correction.
 
 ## Acronymes
@@ -27,5 +42,4 @@ Un commentaire ? Une remarque ? Utilisez les GitHub [issues](https://docs.github
 * FHIR : Fast Healthcare Interoperability Resources
 * FIG : FHIR Implementation Guide
 * HL7 : Health Level Seven
-
-[A COMPLETER : acronymes utilisés dans le cadre de ce projet]
+* SAS : Service d'Accès aux Soins
