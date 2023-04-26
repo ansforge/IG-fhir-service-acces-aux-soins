@@ -1,4 +1,4 @@
-<!-- Création de rendez-vous -->
+<!-- Mise à jour de rendez-vous -->
 ### Caractéristiques de l'API
 
 <table>
@@ -36,11 +36,11 @@
 <tbody>
 <tr>
   <td width="25%"><p><strong>Interaction FHIR</strong></p></td>
-  <td><p>Create<a href="#_ftn1" name="_ftnref1">[1]</a></p></td>
+  <td><p>Conditional update<a href="#_ftn1" name="_ftnref1">[1]</a></p></td>
 </tr>
 <tr>
   <td width="25%"><p><strong>Méthode http associée</strong></p></td>
-  <td><p>POST</p></td>
+  <td><p>PUT</p></td>
 </tr>
 <tr>
   <td width="25%"><p><strong>Ressource créée</strong></p></td>
@@ -52,7 +52,7 @@
 </tr>
 </tbody>
 </table>
-<p><a href="#_ftnref1" name="_ftn1">[1]</a> <a href="https://www.hl7.org/fhir/http.html#create">https://www.hl7.org/fhir/http.html#create</a> et <a href="https://www.hl7.org/fhir/http.html#general">https://www.hl7.org/fhir/http.html#general</a></p>
+<p><a href="#_ftnref1" name="_ftn1">[1]</a> <a href="https://www.hl7.org/fhir/http.html#cond-update">https://www.hl7.org/fhir/http.html#cond-update</a> et <a href="https://www.hl7.org/fhir/http.html#general">https://www.hl7.org/fhir/http.html#general</a></p>
 
 ### Construction de la réponse de base
 
@@ -62,8 +62,8 @@ Lien vers la spécification FHIR : <https://www.hl7.org/fhir/bundle.html>
 
 Si la création est un succès, le serveur répond :
 
--   Un header avec un code 201 Created HTTP
--   Un header Location incluant l'ID de la ressource créée par le serveur `Location: [base]/Appointment/12345`
+-   Un header avec un code 200 OK HTTP
+-   Un header Location incluant l'ID de la ressource mise à jour par le serveur `Location: [base]/Appointment/12345`
 
 Plus de précision sur la spécification FHIR :
 https://www.hl7.org/fhir/http.html
@@ -91,7 +91,7 @@ Plus de précision sur la spécification FHIR :
 
 **Requête :**
 
-`post[BASE]/Appointment`
+`put[BASE]/Appointment`
 
 **Corps de la requête :**
 
