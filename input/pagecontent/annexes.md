@@ -41,12 +41,12 @@ Le tableau ci-dessous présente les endpoints de la plateforme numérique SAS pa
 ### Filtrage par adresses IP
 
 <p>Pour des raisons de sécurité, il arrive que certains éditeurs souhaitent mettre en place un filtrage IP supplémentaire. Vous trouverez ainsi les informations nécessaires ci-dessous :</p>
-<br>**Recette ANS**
-- IP Publique : 193.41.222.248
-<br>**Pré-production ANS**
-- IP Publique : 31.15.27.36
-<br>**Production ANS**
-- IP Publique : 31.15.27.13
+1. **Recette ANS**
+  - IP Publique : 193.41.222.248
+2. **Pré-production ANS**
+  - IP Publique : 31.15.27.36
+3. **Production ANS**
+  - IP Publique : 31.15.27.13
 
 ### Sécurisation des échanges par mTLS
 
@@ -123,21 +123,21 @@ Les solutions logicielles vont effectuer des appels HTTPS classiques (TLS 1.2) v
 Afin d'établir la double authentification, la solution logicielle éditeur (client) utilise le certificat émis par IGC Santé et devra le présenter lors de chaque requête transmise à la plateforme numérique SAS (serveur).
 
 <p>Ci-dessous les informations utiles pour chacun des environnements ANS :</p>
-<br>**Recette ANS**
-- Certificat MTLS (<http://igc-sante.esante.gouv.fr/PC%20TEST/>) :
-  - Racines : ACR-EL-TEST.cer (<http://igc-sante.esante.gouv.fr/AC%20TEST/ACR-EL-TEST.cer>)
-  - Intermédiaires : ACI-EL-ORG-TEST.cer (<http://igc-sante.esante.gouv.fr/AC%20TEST/ACI-EL-ORG-TEST.cer>)
-- C = FR, ST = Paris (75), O = CABINET MLLE DENTISTE0023419, OU = 499700234190004, CN = sas-agregateur-recette
-<br>**Pré-production ANS**
-- Certificat MTLS (<http://igc-sante.esante.gouv.fr/PC%20TEST/>) :
-  - Racines : ACR-EL-TEST.cer (<http://igc-sante.esante.gouv.fr/AC%20TEST/ACR-EL-TEST.cer>)
-  - Intermédiaires : ACI-EL-ORG-TEST.cer (<http://igc-sante.esante.gouv.fr/AC%20TEST/ACI-EL-ORG-TEST.cer>)
-- C = FR, ST = Paris (75), O = CABINET M. MASSEUR0034394, OU = 499700343942006, CN = sas-aggregator-preproduction
-<br>**Production ANS**
-- Certificat MTLS (<http://igc-sante.esante.gouv.fr/PC/#ca>) :
-  - Racines : ACR-EL.cer (<http://igc-sante.esante.gouv.fr/AC/ACR-EL.cer>)
-  - Intermédiaires : ACI-EL-ORG.cer (<http://igc-sante.esante.gouv.fr/AC/ACI-EL-ORG.cer>)
-- C = FR, ST = Paris (75), O = AGENCE DES SYSTEMES D'INFORMATION PARTAG, OU = 318751275100020, CN = sas-aggregator-production
+1. **Recette ANS**
+  - Certificat MTLS (<http://igc-sante.esante.gouv.fr/PC%20TEST/>) :
+    - Racines : ACR-EL-TEST.cer (<http://igc-sante.esante.gouv.fr/AC%20TEST/ACR-EL-TEST.cer>)
+    - Intermédiaires : ACI-EL-ORG-TEST.cer (<http://igc-sante.esante.gouv.fr/AC%20TEST/ACI-EL-ORG-TEST.cer>)
+  - C = FR, ST = Paris (75), O = CABINET MLLE DENTISTE0023419, OU = 499700234190004, CN = sas-agregateur-recette
+2. **Pré-production ANS**
+  - Certificat MTLS (<http://igc-sante.esante.gouv.fr/PC%20TEST/>) :
+    - Racines : ACR-EL-TEST.cer (<http://igc-sante.esante.gouv.fr/AC%20TEST/ACR-EL-TEST.cer>)
+    - Intermédiaires : ACI-EL-ORG-TEST.cer (<http://igc-sante.esante.gouv.fr/AC%20TEST/ACI-EL-ORG-TEST.cer>)
+  - C = FR, ST = Paris (75), O = CABINET M. MASSEUR0034394, OU = 499700343942006, CN = sas-aggregator-preproduction
+3. **Production ANS**
+  - Certificat MTLS (<http://igc-sante.esante.gouv.fr/PC/#ca>) :
+    - Racines : ACR-EL.cer (<http://igc-sante.esante.gouv.fr/AC/ACR-EL.cer>)
+    - Intermédiaires : ACI-EL-ORG.cer (<http://igc-sante.esante.gouv.fr/AC/ACI-EL-ORG.cer>)
+  - C = FR, ST = Paris (75), O = AGENCE DES SYSTEMES D'INFORMATION PARTAG, OU = 318751275100020, CN = sas-aggregator-production
 
 Tout un ensemble de tests seront ensuite réalisés par les équipes projet afin de vérifier et valider la conformité de l'implémentation.
 
