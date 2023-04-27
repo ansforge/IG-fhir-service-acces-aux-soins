@@ -149,14 +149,14 @@ Les éditeurs ont la possibilité de récupérer les référentiels nationaux de
   <td>
     <p>Une logique corrigeant le format du numéro de téléphone renseigné dans la solution logicielle doit être mise en oeuvre.<br>
     Rappel du format attendu : <strong>+33XXXXXXXXX</strong><br>
-    <code>
+    <code><pre>
       "telecom": [
         {
           "system": "phone",
           "value": "+33XXXXXXXXX"
         }
       ]
-    </code>
+    </pre></code>
     </p>
   </td>
 </tr>
@@ -166,7 +166,7 @@ Les éditeurs ont la possibilité de récupérer les référentiels nationaux de
   <td>
   <p>L'ensemble des spécialités ou compétences associées aux créneaux, ou au PS, doivent être transmises. Si l'information est codifiée au niveau de l'application, il doit être transmis au sein d'un élément structuré coding. Sinon, le libellé doit être transmis sous forme de texte au niveau de l'élément text.<br>
   Exemple :<br>
-  <code>
+  <code><pre>
     "specialty": [
       {
         "coding": [
@@ -179,7 +179,7 @@ Les éditeurs ont la possibilité de récupérer les référentiels nationaux de
       {
         "text": "ORL"
       },
-  </code>
+  </pre></code>
   </p>
   </td>
 </tr>
@@ -188,7 +188,7 @@ Les éditeurs ont la possibilité de récupérer les référentiels nationaux de
   <td><p>Type de créneau</p></td>
   <td><p>L'ensemble des types associés aux créneaux doivent être transmis, sous forme codifiée, au niveau de l'élément meta.security.<br>
   Exemple :<br>
-  <code>
+  <code><pre>
     "resourceType": "Slot",
     "id": "1636036800",
     "meta": {
@@ -210,7 +210,7 @@ Les éditeurs ont la possibilité de récupérer les référentiels nationaux de
         }
       ]
     },
-  </code>
+  </pre></code>
   </p>
   </td>
 </tr>
@@ -224,7 +224,7 @@ Les éditeurs ont la possibilité de récupérer les référentiels nationaux de
         <li>L'ensemble des motifs de consultation associés aux créneaux doivent être transmis, sous forme de texte libre</li>
       </ul>
       Exemple :<br>
-      <code>
+      <code><pre>
         "serviceType": [
           {
             "coding": [
@@ -249,7 +249,7 @@ Les éditeurs ont la possibilité de récupérer les référentiels nationaux de
             "text": "Pédiatrie"
           }
         ],
-      </code>
+      </pre></code>
     </p>
   </td>
 </tr>
@@ -268,7 +268,7 @@ Les éditeurs ont la possibilité de récupérer les référentiels nationaux de
   <td><p>Gestion de l'absence de créneaux<br>et agenda PS</p></td>
   <td><p>Lorsqu'aucun créneau n'est disponible ou qu'aucun des PS de la recherche n'est présent dans la solution logicielle, un bundle de réponse vide est attendu.<br>
   Exemple :<br>
-  <code>
+  <code><pre>
     "resourceType": "Bundle",
     "id": "8cbb33dc-779e-45e9-a5f6-ea66101288c5",
     "meta": {
@@ -284,7 +284,7 @@ Les éditeurs ont la possibilité de récupérer les référentiels nationaux de
         "url": "https://exemple.com/ans-sas/Slot/?_include=Slot:schedule&_include:iterate=Schedule:actor&status=free&start=ge2021-11-04T14:19:35.760+00:00&start=le2021-11-06T23:59:59.999+00:00&schedule.actor:Practitioner.identifier=urn:oid:1.2.250.1.71.4.2.1%7C810002673899,urn:oid:1.2.250.1.71.4.2.1%7C810100050075&_count=1000"
       }
     ],
-  </code>
+  </pre></code>
   </p>
   </td>
 </tr>
