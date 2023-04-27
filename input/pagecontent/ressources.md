@@ -38,6 +38,26 @@ Ces structures définissent les contraintes sur les ressources FHIR par les syst
 </tbody>
 </table>
 
+#### Validateur
+Le validateur mis à disposition des développeurs dans le cadre du projet SAS offre la possibilité tester le format des bundles de réponse générés. Il permet de vérifier que les réponses sont correctement formatées, que l'ensemble des informations obligatoires sont bien présentes et que les données codifiées exploitent les bonnes nomenclatures.
+Pour que le validateur puisse effectuer correctement les contrôles au niveau de la structure, il est nécessaire de renseigner pour chacun des "resourceType" correspondant, le meta.profile "URL" ci-dessous :
+- http://sas.fr/fhir/StructureDefinition/BundleAgregateur
+- http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur
+- http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur
+- http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur
+- http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur
+- http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur
+
+Ci-dessous un exemple :
+
+
+Le validateur est disponible sur l'espace de test de l'ANS : https://interop.esante.gouv.fr/EVSClient/fhir/validator.seam?standard=FHIR%20(SAS)&extension=SAS. Pour faciliter les tests et conserver l'historique, nous vous recommandons de créer votre compte sur la plateforme.
+Afin de tester un fichier, il suffit de sélectionner le format `JSON`, d'ajouter le fichier via le bouton `Add…`, de sélectionner le modèle `FrBundleAgregateurSAS` puis de cliquer sur `valider` :
+
+
+Vous obtiendrez alors un rapport de test mettant en valeur les erreurs bloquantes et les différents warning :
+
+
 ### Rendez-vous
 
 #### Structures: Resource Profiles

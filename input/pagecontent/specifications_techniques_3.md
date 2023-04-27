@@ -95,6 +95,8 @@ Plus de précision sur la spécification FHIR :
 
 **Corps de la requête :**
 
+La requête ci-dessous correspond à la transmission d’un RDV pris par le régulateur avec un identifiant national 3456780581/11242343 avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h, dont le statut est annulé.
+
 ```
 {
   "resourceType": "Appointment",
@@ -129,7 +131,7 @@ Plus de précision sur la spécification FHIR :
       }
     }
   ],
-  "status": "booked",
+  "status": "cancelled",
   "start": "2022-09-04T14:00:00+01:00",
   "end": "2022-09-04T14:15:00+01:00",
   "participant": [
@@ -148,7 +150,7 @@ Plus de précision sur la spécification FHIR :
           "value": "810100050075"
         }
       },
-      "status": "accepted"
+      "status": "refused"
     }
   ]
 }
