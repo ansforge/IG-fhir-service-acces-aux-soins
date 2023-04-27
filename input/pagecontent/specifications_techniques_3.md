@@ -150,7 +150,7 @@ La requête ci-dessous correspond à la transmission d’un RDV pris par le rég
           "value": "810100050075"
         }
       },
-      "status": "refused"
+      "status": "accepted"
     }
   ]
 }
