@@ -8,7 +8,7 @@ A ce jour, les API ont pour vocation de répondre aux cas d'usage suivants :
 Pour les cas d'usage couverts par ces API :
 - Le système consommateur doit disposer des points d'accès et des moyens d'authentification (authentification mTLS avec des certificats IGC-Santé).
 
-### Recherche de créneaux
+### Agrégateur - Recherche de créneaux
 
 #### Description du cas d'usage
 L'objectif de cette interface, flux INT_R01, est de permettre l’agrégation des créneaux de disponibilités, des solutions logicielles d'agenda avec prise de RDV, dans la plateforme numérique SAS.
