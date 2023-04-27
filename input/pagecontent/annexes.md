@@ -16,7 +16,6 @@ Il est attendu de la part de l'éditeur de communiquer les endpoints corresponda
 ### Endpoints de la plateforme SAS
 
 Le tableau ci-dessous présente les endpoints de la plateforme numérique SAS par environnement à renseigner pour les échanges.
-Dans la suite de cette section, `<ENV_AGREG>` doit être remplacé par la ligne correspondante de ce tableau en fonction de l'environnement concerné.
 
 <table>
 <tbody>
@@ -26,15 +25,15 @@ Dans la suite de cette section, `<ENV_AGREG>` doit être remplacé par la ligne 
 </tr>
 <tr>
   <td ><p>Recette</p></td>
-  <td><p>https://sas-agregateur.integration.santefr.esante.gouv.fr/</p></td>
+  <td><p><a href="https://sas-agregateur.integration.santefr.esante.gouv.fr/">https://sas-agregateur.integration.santefr.esante.gouv.fr/</a></p></td>
 </tr>
 <tr>
   <td><p>Pré-production</p></td>
-  <td><p>https://sas-agregateur.preproduction.santefr.esante.gouv.fr/</p></td>
+  <td><p><a href="https://sas-agregateur.preproduction.santefr.esante.gouv.fr/">https://sas-agregateur.preproduction.santefr.esante.gouv.fr/</a></p></td>
 </tr>
 <tr>
   <td><p>Production</p></td>
-  <td><p>https://sas-agregateur.production.santefr.esante.gouv.fr/</p></td>
+  <td><p><a href="https://sas-agregateur.production.santefr.esante.gouv.fr/">https://sas-agregateur.production.santefr.esante.gouv.fr/</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -42,11 +41,11 @@ Dans la suite de cette section, `<ENV_AGREG>` doit être remplacé par la ligne 
 ### Filtrage par adresses IP
 
 Pour des raisons de sécurité, il arrive que certains éditeurs souhaitent mettre en place un filtrage IP supplémentaire. Vous trouverez ainsi les informations nécessaires ci-dessous :
-**Recette ANS**
+<br>**Recette ANS**
 - IP Publique : 193.41.222.248
-**Pré-production ANS**
+<br>**Pré-production ANS**
 - IP Publique : 31.15.27.36
-**Production ANS**
+<br>**Production ANS**
 - IP Publique : 31.15.27.13
 
 ### Sécurisation des échanges par mTLS
@@ -72,13 +71,13 @@ Le contrôle d'accès aux solutions logicielles s'effectue par la vérification 
 
 Le certificat présenté par le client doit être issu de l'IGC Santé. Il est de type AUTH_CLI de la gamme élémentaire et du domaine organisation. Ces certificats sont à installer dans les trust-stores des solutions logicielles.
 
-Autorités IGC Santé certifiant l'environnement de PRODUCTION : http://igc-sante.esante.gouv.fr/PC/#ca :
-- ACR-EL.cer (http://igc-sante.esante.gouv.fr/AC/ACR-EL.cer)
-- ACI-EL-ORG.cer (http://igc-sante.esante.gouv.fr/AC/ACI-EL-ORG.cer)
+Autorités IGC Santé certifiant l'environnement de PRODUCTION : <http://igc-sante.esante.gouv.fr/PC/#ca> :
+- ACR-EL.cer (<http://igc-sante.esante.gouv.fr/AC/ACR-EL.cer>)
+- ACI-EL-ORG.cer (<http://igc-sante.esante.gouv.fr/AC/ACI-EL-ORG.cer>)
 
-Autorités IGC Santé certifiant les environnements de RECETTE et PREPRODUCTION : http://igc-sante.esante.gouv.fr/PC%20TEST/ :
-- ACR-EL-TEST.cer (http://igc-sante.esante.gouv.fr/AC%20TEST/ACR-EL-TEST.cer)
-- ACI-EL-ORG-TEST.cer (http://igc-sante.esante.gouv.fr/AC%20TEST/ACI-EL-ORG-TEST.cer)
+Autorités IGC Santé certifiant les environnements de RECETTE et PREPRODUCTION : <http://igc-sante.esante.gouv.fr/PC%20TEST/> :
+- ACR-EL-TEST.cer (<http://igc-sante.esante.gouv.fr/AC%20TEST/ACR-EL-TEST.cer>)
+- ACI-EL-ORG-TEST.cer (<http://igc-sante.esante.gouv.fr/AC%20TEST/ACI-EL-ORG-TEST.cer>)
 
 Il est également demandé d'ajouter un second niveau de contrôle lors de l'authentification du client sur le Common Name (CN) du certificat. Il s'agit d’une chaîne de caractère unique pour chaque client et environnement.
 Ce contrôle permet également de rejeter un certificat compromis dans le cas où les protocoles de révocation ont pu être mis en place.
@@ -87,19 +86,19 @@ Ce contrôle permet également de rejeter un certificat compromis dans le cas o�
 
 Afin de parer à toutes compromissions de certificats clients, ceux-ci peuvent être révoqués à tout moment. Nous recommandons aux solutions logicielles d'implémenter une méthode de vérification des révocations de ces certificats.
 L'IGC Santé prend en charge deux méthodes de révocations TLS : CRL et OCSP. Vous trouverez ci-dessous les liens vers la documentation IGC associée :
-- https://integrateurs-cps.asipsante.fr/node/179
-- https://integrateurs-cps.asipsante.fr/sites/default/files/170719_Guide_pratiques_verification_etat_certificats.pdf
+- <https://integrateurs-cps.asipsante.fr/node/179>
+- <https://integrateurs-cps.asipsante.fr/sites/default/files/170719_Guide_pratiques_verification_etat_certificats.pdf>
 A noter qu'en cas d’impossibilité de mettre à jour les listes CRL, un mécanisme de débrayage pourrait être mis en place.
 
 ##### Certificate Revocation List (CRL)
 
-Ce protocole est basé sur la consultation de liste de certificats révoqués (CRL) : https://datatracker.ietf.org/doc/html/rfc5280#section-5
+Ce protocole est basé sur la consultation de liste de certificats révoqués (CRL) : <https://datatracker.ietf.org/doc/html/rfc5280#section-5>
 Tous les matins à partir de 7h les listes de révocations CRL sont mises à jour par l'IGC Santé.
 
 ##### Online Certificate Status Protocol (OCSP)
 
-Ce protocole est une alternative aux CRL et permet d'effectuer une vérification "à la demande" : https://datatracker.ietf.org/doc/html/rfc2560
-L'ANS met à disposition des utilisateurs des certificats produits par l'IGC Santé (uniquement) un service OCSP à l'adresse : http://ocsp.esante.gouv.fr
+Ce protocole est une alternative aux CRL et permet d'effectuer une vérification "à la demande" : <https://datatracker.ietf.org/doc/html/rfc2560>
+L'ANS met à disposition des utilisateurs des certificats produits par l'IGC Santé (uniquement) un service OCSP à l'adresse : <http://ocsp.esante.gouv.fr>
 
 #### Sécurisation des échanges avec la solution éditeur dans le rôle SERVEUR
 
@@ -124,20 +123,20 @@ Les solutions logicielles vont effectuer des appels HTTPS classiques (TLS 1.2) v
 Afin d'établir la double authentification, la solution logicielle éditeur (client) utilise le certificat émis par IGC Santé et devra le présenter lors de chaque requête transmise à la plateforme numérique SAS (serveur).
 
 Ci-dessous les informations utiles pour chacun des environnements ANS :
-**Recette ANS**
-- Certificat MTLS (http://igc-sante.esante.gouv.fr/PC%20TEST/) :
-  - Racines : ACR-EL-TEST.cer (http://igc-sante.esante.gouv.fr/AC%20TEST/ACR-EL-TEST.cer)
-  - Intermédiaires : ACI-EL-ORG-TEST.cer (http://igc-sante.esante.gouv.fr/AC%20TEST/ACI-EL-ORG-TEST.cer)
+<br>**Recette ANS**
+- Certificat MTLS (<http://igc-sante.esante.gouv.fr/PC%20TEST/>) :
+  - Racines : ACR-EL-TEST.cer (<http://igc-sante.esante.gouv.fr/AC%20TEST/ACR-EL-TEST.cer>)
+  - Intermédiaires : ACI-EL-ORG-TEST.cer (<http://igc-sante.esante.gouv.fr/AC%20TEST/ACI-EL-ORG-TEST.cer>)
 - C = FR, ST = Paris (75), O = CABINET MLLE DENTISTE0023419, OU = 499700234190004, CN = sas-agregateur-recette
-**Pré-production ANS**
-- Certificat MTLS (http://igc-sante.esante.gouv.fr/PC%20TEST/) :
-  - Racines : ACR-EL-TEST.cer (http://igc-sante.esante.gouv.fr/AC%20TEST/ACR-EL-TEST.cer)
-  - Intermédiaires : ACI-EL-ORG-TEST.cer (http://igc-sante.esante.gouv.fr/AC%20TEST/ACI-EL-ORG-TEST.cer)
+<br>**Pré-production ANS**
+- Certificat MTLS (<http://igc-sante.esante.gouv.fr/PC%20TEST/>) :
+  - Racines : ACR-EL-TEST.cer (<http://igc-sante.esante.gouv.fr/AC%20TEST/ACR-EL-TEST.cer>)
+  - Intermédiaires : ACI-EL-ORG-TEST.cer (<http://igc-sante.esante.gouv.fr/AC%20TEST/ACI-EL-ORG-TEST.cer>)
 - C = FR, ST = Paris (75), O = CABINET M. MASSEUR0034394, OU = 499700343942006, CN = sas-aggregator-preproduction
-**Production ANS**
-- Certificat MTLS (http://igc-sante.esante.gouv.fr/PC/#ca) :
-  - Racines : ACR-EL.cer (http://igc-sante.esante.gouv.fr/AC/ACR-EL.cer)
-  - Intermédiaires : ACI-EL-ORG.cer (http://igc-sante.esante.gouv.fr/AC/ACI-EL-ORG.cer)
+<br>**Production ANS**
+- Certificat MTLS (<http://igc-sante.esante.gouv.fr/PC/#ca>) :
+  - Racines : ACR-EL.cer (<http://igc-sante.esante.gouv.fr/AC/ACR-EL.cer>)
+  - Intermédiaires : ACI-EL-ORG.cer (<http://igc-sante.esante.gouv.fr/AC/ACI-EL-ORG.cer>)
 - C = FR, ST = Paris (75), O = AGENCE DES SYSTEMES D'INFORMATION PARTAG, OU = 318751275100020, CN = sas-aggregator-production
 
 Tout un ensemble de tests seront ensuite réalisés par les équipes projet afin de vérifier et valider la conformité de l'implémentation.
