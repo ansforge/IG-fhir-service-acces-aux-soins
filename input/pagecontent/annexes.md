@@ -40,7 +40,7 @@ Le tableau ci-dessous présente les endpoints de la plateforme numérique SAS pa
 
 ### Filtrage par adresses IP
 
-Pour des raisons de sécurité, il arrive que certains éditeurs souhaitent mettre en place un filtrage IP supplémentaire. Vous trouverez ainsi les informations nécessaires ci-dessous :
+<p>Pour des raisons de sécurité, il arrive que certains éditeurs souhaitent mettre en place un filtrage IP supplémentaire. Vous trouverez ainsi les informations nécessaires ci-dessous :</p>
 <br>**Recette ANS**
 - IP Publique : 193.41.222.248
 <br>**Pré-production ANS**
@@ -122,7 +122,7 @@ Côté éditeur, il est attendu de :
 Les solutions logicielles vont effectuer des appels HTTPS classiques (TLS 1.2) vers la plateforme numérique SAS en y ajoutant un certificat "TLS client" (mTLS).
 Afin d'établir la double authentification, la solution logicielle éditeur (client) utilise le certificat émis par IGC Santé et devra le présenter lors de chaque requête transmise à la plateforme numérique SAS (serveur).
 
-Ci-dessous les informations utiles pour chacun des environnements ANS :
+<p>Ci-dessous les informations utiles pour chacun des environnements ANS :</p>
 <br>**Recette ANS**
 - Certificat MTLS (<http://igc-sante.esante.gouv.fr/PC%20TEST/>) :
   - Racines : ACR-EL-TEST.cer (<http://igc-sante.esante.gouv.fr/AC%20TEST/ACR-EL-TEST.cer>)
