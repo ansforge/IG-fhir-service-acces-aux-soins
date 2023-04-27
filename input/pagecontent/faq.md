@@ -1,4 +1,4 @@
-Cette section regroupe les réponses aux questions les plus fréquemment posées au cours des travaux de développements menés par les éditeurs, et les tests d’intégration.
+Cette section regroupe les réponses aux questions les plus fréquemment posées au cours des travaux de développements menés par les éditeurs, et les tests d'intégration.
 
 ### Agrégateur
 
@@ -148,7 +148,7 @@ Les éditeurs ont la possibilité de récupérer les référentiels nationaux de
   <td><p>Format du numéro de téléphone</p></td>
   <td>
     <p>Une logique corrigeant le format du numéro de téléphone renseigné dans la solution logicielle doit être mise en oeuvre.<br>
-    Rappel du format attendu : <strong>+33XXXXXXXXX</strong><br>
+    Rappel du format attendu : <strong>+33XXXXXXXXX</strong>
     <code><pre>
       "telecom": [
         {
@@ -165,7 +165,7 @@ Les éditeurs ont la possibilité de récupérer les référentiels nationaux de
   <td><p>Spécialité et compétences</p></td>
   <td>
   <p>L'ensemble des spécialités ou compétences associées aux créneaux, ou au PS, doivent être transmises. Si l'information est codifiée au niveau de l'application, il doit être transmis au sein d'un élément structuré coding. Sinon, le libellé doit être transmis sous forme de texte au niveau de l'élément text.<br>
-  Exemple :<br>
+  Exemple :
   <code><pre>
     "specialty": [
       {
@@ -187,7 +187,7 @@ Les éditeurs ont la possibilité de récupérer les référentiels nationaux de
   <td><p>4</p></td>
   <td><p>Type de créneau</p></td>
   <td><p>L'ensemble des types associés aux créneaux doivent être transmis, sous forme codifiée, au niveau de l'élément meta.security.<br>
-  Exemple :<br>
+  Exemple :
   <code><pre>
     "resourceType": "Slot",
     "id": "1636036800",
@@ -223,7 +223,7 @@ Les éditeurs ont la possibilité de récupérer les référentiels nationaux de
         <li>L'ensemble des types de consultation associés aux créneaux doivent être transmis, sous forme codifiée</li>
         <li>L'ensemble des motifs de consultation associés aux créneaux doivent être transmis, sous forme de texte libre</li>
       </ul>
-      Exemple :<br>
+      Exemple :
       <code><pre>
         "serviceType": [
           {
@@ -267,7 +267,7 @@ Les éditeurs ont la possibilité de récupérer les référentiels nationaux de
   <td><p>8</p></td>
   <td><p>Gestion de l'absence de créneaux<br>et agenda PS</p></td>
   <td><p>Lorsqu'aucun créneau n'est disponible ou qu'aucun des PS de la recherche n'est présent dans la solution logicielle, un bundle de réponse vide est attendu.<br>
-  Exemple :<br>
+  Exemple :
   <code><pre>
     "resourceType": "Bundle",
     "id": "8cbb33dc-779e-45e9-a5f6-ea66101288c5",
@@ -295,3 +295,10 @@ Les éditeurs ont la possibilité de récupérer les référentiels nationaux de
 </tr>
 </tbody>
 </table>
+
+### Rendez-vous
+
+#### Comment faire la distinction entre un ID national et un ID technique ?
+
+Un ID national possède une structure bien définie dont les spécificités sont explicitées ici. Un identifiant technique SAS prendra la forme d'un UUID (ex. b6e39355-8a61-4556-b340-36f7b95fec6a) où une REGEX peut-être implémentée côté éditeur.
+Dans les spécifications **SAS_SPEC INT_R02_Gestion des comptes régulateurs**, au sein de la requête, les champs `identifier.system` (autorité d'affectation) et `identifier.type` (type d'identifiant) permettent d'indiquer s'il s'agit d'un identifiant technique SAS ou d'un identifiant national.
