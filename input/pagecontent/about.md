@@ -16,7 +16,7 @@ L'onglet de [téléchargement](downloads.html) vous permettra de télécharger :
 * L'ensemble de cette documentation pour consultation hors ligne.
 
 
-Ce guide a été généré à partir de ce [repository GitHub](https://github.com/ansforge/FIG_ans-ig-PDSm), qui contient également l'historique des commits.
+Ce guide a été généré à partir de ce [repository GitHub](https://github.com/ansforge/IG-service-acces-aux-soins), qui contient également l'historique des commits.
 
 Liens utiles :
 - [Wiki ANS sur les IGs](https://github.com/ansforge/IG-modele/wiki) (en cours de construction)
