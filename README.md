@@ -41,3 +41,5 @@ Un commentaire ? Une remarque ? Utilisez les GitHub [issues](https://docs.github
 * FIG : FHIR Implementation Guide
 * HL7 : Health Level Seven
 * SAS : Service d'Accès aux Soins
+* PS : Professionnel de Santé
+* CPTS : Communauté Professionnelles Territoriales de Santé

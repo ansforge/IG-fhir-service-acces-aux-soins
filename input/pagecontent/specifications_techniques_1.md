@@ -180,7 +180,35 @@ HTTP 200 OK
 
 ```
 
-**Réponse complète :**
+**Corps de la réponse complète :**
+
+La réponse ci-dessous correspond à :
+1. 2 créneaux disponibles pour Docteur Sébastien THOMAS (RPPS : 810100050075)
+  - 1 créneau au 1 rue Mme Delmas (47000). L'ID de la structure associée est 1810004421. Le 5 novembre 2021 de 9h à 9h30 ayant les caractéristiques suivantes :
+    - Avec prise de RDV,
+    - Visible du grand public,
+    - Au cabinet ou en téléconsultation
+    - Pour le motif "Visite de contrôle"
+    - Les spécialités codifiées associées sont SM54, SM05 et la spécialité non codifiée associée est "Médecine générale (polyvalente)"
+  - 1 créneau au 30 rue Mme Delmas (47000). L'ID de la structure associée est 1810004956. Le 5 novembre 2021 de 11h à 11h30 ayant les caractéristiques suivantes :
+    - Sans prise de RDV,
+    - Visible des professionnels,
+    - Au cabinet,
+    - Pour le motif "Visite urgente"
+    - La spécialité non codifiée associée est "Médecine générale (polyvalente)"
+1. 2 créneaux disponibles pour Médecin Guillaume MARCEL (RPPS : 810002673899) au 1 rue Mme Delmas (47000). L'ID de la structure associée est 1810004421
+  - 1 créneau le 4 novembre 2021 de 14h20 à 14h40 ayant les caractéristiques suivantes :
+    - Avec prise de RDV,
+    - Visible des professionnels et du grand public,
+    - En téléconsultation
+    - Pour le motif "Visite de contrôle"
+    - La spécialité non codifiée associée est "Pneumologie"
+  - 1 créneau le 4 novembre 2021 de 14h40 à 15h00 ayant les caractéristiques suivantes :
+    - Avec prise de RDV,
+    - Visible des professionnels et du grand public,
+    - A domicile
+    - Pour le motif "Visite de contrôle" et "Consultation de suivi pneumologique"
+    - Les spécialités non codifiées associées sont "Pneumologie" et "Médecine générale (polyvalente)"
 
 ```
 {
