@@ -30,15 +30,20 @@ Les ressources profilées pour ce cas d'usage spécifique sont :
 - FrAppointmentSAS
 
 # CI/CD
-Les workflows associés à ce repository (.github/workflows) permettent : 
-* D'executer Sushi pour vérifier la grammaire
-* De faire les tests avec le validator_cli
-* De publier les pages : https://ansforge.github.io/{nom du repo}/ig/{nom de la branche}
+Les pipelines de ce repository permettent : 
+* Executer  Sushi
+* Faire les tests avec le validator_cli
+* Publier les pages :  https://ansforge.github.io/IG-service-acces-aux-soins/ig/main/ (ou https://ansforge.github.io/IG-service-acces-aux-soins/ig/[nom_de_la_branche] pour prévisualiser l'IG d'une branche)
+
+![image](https://user-images.githubusercontent.com/101335975/215342980-61686171-e3f8-40c5-865c-efdfc3dd52b4.png)
+
+# Pull Request
+Faire la PR sur la branche main.
 
 # Notes
-Ce repository "IG-service-acces-aux-soins " a été créé à partir du repo "IG-modele" de l'organisation GitHub ANS : https://github.com/ansforge.
+Ce repository "IG-service-acces-aux-soins " a été créé à partir du repo "IG-modele" de l'organisation GitHub ANS : <https://github.com/ansforge/IG-modele>.
 
-Un commentaire ? Une remarque ? Utilisez les GitHub [issues](https://docs.github.com/fr/issues) pour indiquer vos propositions d'amélioration et de correction.
+Un commentaire ? Une remarque ? Utilisez les GitHub [issues](https://github.com/ansforge/IG-service-acces-aux-soins/issues) pour indiquer vos propositions d'amélioration et de correction.
 
 ## Acronymes
 
