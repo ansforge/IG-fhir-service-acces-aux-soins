@@ -41,12 +41,12 @@ Le tableau ci-dessous présente les endpoints de la plateforme numérique SAS pa
 ### Filtrage par adresses IP
 
 <p>Pour des raisons de sécurité, il arrive que certains éditeurs souhaitent mettre en place un filtrage IP supplémentaire. Vous trouverez ainsi les informations nécessaires ci-dessous :</p>
-1. **Recette ANS**
-  - IP Publique : 193.41.222.248
+1. **Recette/Intégration ANS**
+  - IP Publique : 51.91.149.173
 2. **Pré-production ANS**
-  - IP Publique : 31.15.27.36
+  - IP Publique : 37.59.26.69
 3. **Production ANS**
-  - IP Publique : 31.15.27.13
+  - IP Publique : 51.68.88.222
 
 ### Sécurisation des échanges par mTLS
 
