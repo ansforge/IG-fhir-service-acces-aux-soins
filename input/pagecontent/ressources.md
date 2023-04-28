@@ -137,7 +137,7 @@ Ces structures définissent les contraintes sur les ressources FHIR par les syst
 </tbody>
 </table>
 
-### Nomenclatures
+#### Nomenclatures
 
 Cette section détaille les nomenclatures à utiliser afin de renseigner les différents éléments codifiés de la requête.
 - **ID : 1 – Identifiant technique du RDV :**
