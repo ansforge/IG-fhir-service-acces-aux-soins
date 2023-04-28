@@ -2,7 +2,7 @@ This page provides a list of the FHIR artifacts defined as part of this implemen
 
 ### Agrégateur
 
-#### Structures: Resource Profiles
+#### Profils des ressources
 Ces structures définissent les contraintes sur les ressources FHIR par les systèmes conformes à cet Implementation Guide (IG).
 
 <table>
@@ -84,7 +84,7 @@ Ci-dessous un exemple :
 },
 ```
 
-Le validateur est disponible sur l'espace de test de l'ANS : https://interop.esante.gouv.fr/EVSClient/fhir/validator.seam?standard=FHIR%20(SAS)&extension=SAS. Pour faciliter les tests et conserver l'historique, nous vous recommandons de créer votre compte sur la plateforme.
+Le validateur est disponible sur l'espace de test de l'ANS : <https://interop.esante.gouv.fr/EVSClient/fhir/validator.seam?standard=FHIR%20(SAS)&extension=SAS>. Pour faciliter les tests et conserver l'historique, nous vous recommandons de créer votre compte sur la plateforme.
 Afin de tester un fichier, il suffit de sélectionner le format `JSON`, d'ajouter le fichier via le bouton `Add…`, de sélectionner le modèle `FrBundleAgregateurSAS` puis de cliquer sur `valider` :
 
 <table align="center">
@@ -121,7 +121,7 @@ Vous obtiendrez alors un rapport de test mettant en valeur les erreurs bloquante
 
 ### Rendez-vous
 
-#### Structures: Resource Profiles
+#### Profils des ressources
 Ces structures définissent les contraintes sur les ressources FHIR par les systèmes conformes à cet Implementation Guide (IG).
 
 <table>
@@ -187,7 +187,7 @@ Ci-dessous un exemple :
 },
 ```
 
-Le validateur est disponible sur l'espace de test de l'ANS : https://interop.esante.gouv.fr/EVSClient/fhir/validator.seam?extension=SAS&standard=FHIR+%28SAS%29&type=FHIR&cid=750. Pour faciliter les tests et conserver l'historique, nous vous recommandons de créer votre compte sur la plateforme.
+Le validateur est disponible sur l'espace de test de l'ANS : <https://interop.esante.gouv.fr/EVSClient/fhir/validator.seam?extension=SAS&standard=FHIR+%28SAS%29&type=FHIR&cid=750>. Pour faciliter les tests et conserver l'historique, nous vous recommandons de créer votre compte sur la plateforme.
 Afin de tester un fichier, il suffit de sélectionner le format `JSON`, d’ajouter le fichier via le bouton `Add…`, de sélectionner le modèle `FrAppointmentSAS` puis de cliquer sur `valider` :
 
 <table align="center">
