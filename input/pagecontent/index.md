@@ -1,20 +1,21 @@
-### Introduction
+### SAS - Service d'Accès aux Soins
 
-Il s'agit d'un exemple d'Implementation Guide de l'ANS, à prendre comme base pour créer de nouveaux IGs. 
+#### Contexte métier
 
-Selon la documentation officielle, cette page d'accueil de l'IG doit contenir :
-* De quoi parle l'IG (En termes non expert, compréhensible par un patient)
-* Des détails techniques sur le contexte et le besoin
+Pour le patient confronté à un besoin de soins non programmés et lorsque l'accès à son médecin traitant n'est pas possible, le Service d'Accès aux Soins (SAS) doit permettre d'accéder, à toute heure et à distance à un professionnel de santé. Ce dernier pourra lui fournir un conseil médical, l'orienter selon la situation vers une consultation de soin non programmé en ville, vers un service d'urgence ou déclencher l'intervention d'un SMUR.
 
+Pour le patient orienté vers la filière de ville, les acteurs de la chaîne de régulation médicale du SAS peuvent s’appuyer sur la plateforme numérique, afin de :
+- Visualiser les créneaux disponibles des effecteurs de soin,
+- Réserver pour le patient une consultation de soin non programmé, au plus proche de ses besoins (localisation, horaire, spécialité).
+Plus d'information sur le site dédié du ministère https://esante.gouv.fr/sas
 
-Les principales sections de l'IG  sont :
-* Le contexte de l'IG et les points dont les implémenteurs doivent être familier avant dans s'avoir plus sur l'IG
-* Ce que les Implémenteurs doivent mettre en place
-* Un onglet "télécharger"
-
+#### Contexte technique
+L'objectif de ce projet est de définir les profils qui doivent être implémentés par les éditeurs de solution de prise de rendez-vous en ligne pour exposer les créneaux disponibles et informer la plateforme des rendez-vous pris.
+Les opérations de la plateforme SAS sont réalisées au moyen d'API FHIR.
 
 ### Auteurs et contributeurs
 
 | Role  | Nom | Organisation | Contact |
 | --- | --- | --- | --- |
-| **Primary Editor** | Prenom Nom | Agence du Numérique en Santé | prenom.nom@address.email |
+| **Primary Editor** | Benjamin REVERSEAU | Agence du Numérique en Santé | benjamin.reverseau@esante.gouv.fr |
+| **Primary Editor** | Cédric PANISSOD | Agence du Numérique en Santé | cedric.panissod@esante.gouv.fr |
