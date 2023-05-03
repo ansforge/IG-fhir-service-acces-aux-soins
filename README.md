@@ -1,4 +1,4 @@
-***/!\ Cet Implementation Guide (IG) destiné au Service d'Accès aux Soins est en cours de construction.***
+TEST ***/!\ Cet Implementation Guide (IG) destiné au Service d'Accès aux Soins est en cours de construction.***
 Ne pas utiliser, référencer, diffuser avant publication de la v1.0.0.
 
 <div align="center">
