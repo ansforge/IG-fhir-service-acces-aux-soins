@@ -1,7 +1,7 @@
 Profile: FrPractitionerRoleExerciceAgregateur
 Parent: FrPractitionerRoleExercice
 Id: FrPractitionerRoleExerciceAgregateur
-Description: "Profil de PractitionerRole, dérivé de FrPractitionerRoleExercice, pour le service d'aggrégation de créneaux de la plateforeme SAS (Service d'accès aux soins)"
+Description: "Profil de PractitionerRole, dérivé de FrPractitionerRoleExercice, pour le service d'agrégation de créneaux de la plateforme SAS (Service d'accès aux soins)"
 * ^url = "http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"
 * ^version = "1.0"
 * ^date = "2021-06-14"
@@ -12,7 +12,7 @@ Description: "Profil de PractitionerRole, dérivé de FrPractitionerRoleExercice
 * practitioner ^type.aggregation[+] = #bundled
 * organization.identifier ^short = "Identifiant national de la structure"
 * organization.identifier ^definition = "Identifiant national de la structure (FINESS, SIRET ou RPPS Rang uniquement)"
-* organization.identifier.type = $v2-0203#IDNST (exactly)
+* organization.identifier.type = $fr-v2-0203#IDNST (exactly)
 * organization.identifier.system = "urn:oid:1.2.250.1.71.4.2.2" (exactly)
 * location 1..1
 * location only Reference(FrLocationAgregateur)

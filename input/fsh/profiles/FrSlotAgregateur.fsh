@@ -1,7 +1,7 @@
 Profile: FrSlotAgregateur
 Parent: FrSlot
 Id: FrSlotAgregateur
-Description: "Profil de Slot, dérivé de FrSlot, pour le service d'aggrégation de créneaux de la plateforeme SAS (Service d'accès aux soins)"
+Description: "Profil de Slot, dérivé de FrSlot, pour le service d'agrégation de créneaux de la plateforme SAS (Service d'accès aux soins)"
 * ^url = "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"
 * ^version = "1.0"
 * ^date = "2021-06-14"
