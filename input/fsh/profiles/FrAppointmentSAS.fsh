@@ -6,21 +6,20 @@ Description: "Profil de Appointment, dérivé de FrAppointment, pour le cas d'us
 * ^version = "1.0.0"
 
 
-// Commenté par Nicolas à corriger (définir l'extension dans un fichier à part, peut être utiliser un identifier plutôt qu'une référence)
-// * extension ^slicing.discriminator.type = #value
-// * extension ^slicing.discriminator.path = "url"
-// * extension ^slicing.rules = #open
-// * extension[appointmentOperator] 1..
-// * extension[appointmentOperator].value[x] 1..
-// * extension[appointmentOperator].value[x] only Reference
-// * extension[appointmentOperator].valueReference.identifier 1..
-// * extension[appointmentOperator].valueReference.identifier.type 1..
-// * extension[appointmentOperator].valueReference.identifier.type.coding 1..1
-// * extension[appointmentOperator].valueReference.identifier.type.coding.system 1..
-// * extension[appointmentOperator].valueReference.identifier.type.coding.system = "http://interopsante.org/fhir/CodeSystem/fr-v2-0203" (exactly)
-// * extension[appointmentOperator].valueReference.identifier.type.coding.code 1..
-// * extension[appointmentOperator].valueReference.identifier.system 1..
-// * extension[appointmentOperator].valueReference.identifier.value 1..
+// Extension appointmentOperator provenant de FrAppointment
+* extension ^slicing.discriminator.type = #value
+* extension ^slicing.discriminator.path = "url"
+* extension ^slicing.rules = #open
+* extension[appointmentOperator] 1..
+* extension[appointmentOperator].valueReference 1..
+* extension[appointmentOperator].valueReference.identifier 1..
+* extension[appointmentOperator].valueReference.identifier.type 1..
+* extension[appointmentOperator].valueReference.identifier.type.coding 1..1
+* extension[appointmentOperator].valueReference.identifier.type.coding.system 1..
+* extension[appointmentOperator].valueReference.identifier.type.coding.system = "http://interopsante.org/fhir/CodeSystem/fr-v2-0203" (exactly)
+* extension[appointmentOperator].valueReference.identifier.type.coding.code 1..
+* extension[appointmentOperator].valueReference.identifier.system 1..
+* extension[appointmentOperator].valueReference.identifier.value 1..
 
 * identifier 1..1
 * identifier.system 1..

@@ -54,3 +54,5 @@ Un commentaire ? Une remarque ? Utilisez les GitHub [issues](https://github.com/
 * SAS : Service d'Accès aux Soins
 * PS : Professionnel de Santé
 * CPTS : Communauté Professionnelles Territoriales de Santé
+
+C'est dans le groupe teams de notre équipe General > Presentations
