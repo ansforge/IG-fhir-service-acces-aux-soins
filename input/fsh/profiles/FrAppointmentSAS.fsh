@@ -11,6 +11,8 @@ Description: "Profil de Appointment, dérivé de FrAppointment, pour le cas d'us
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
 * extension[appointmentOperator] 1..
+* extension[appointmentOperator].value[x] 1..
+* extension[appointmentOperator].value[x] only Reference
 * extension[appointmentOperator].valueReference 1..
 * extension[appointmentOperator].valueReference.identifier 1..
 * extension[appointmentOperator].valueReference.identifier.type 1..
