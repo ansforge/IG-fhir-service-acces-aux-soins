@@ -10,7 +10,7 @@ Description: "Profil de Slot, dérivé de FrSlot, pour le service d'agrégation 
     SASServiceType-R5 named sas-servicetype-r5 0..* 
 
 * serviceType ^slicing.discriminator.type = #type
-* serviceType ^slicing.discriminator.path = $this 
+* serviceType ^slicing.discriminator.path = "$this" 
 * serviceType ^slicing.rules = #open
 
 * serviceType contains

@@ -8,4 +8,4 @@ Description: "Test extension R5"
     concept 0..1 and
     reference 0..1
 * extension[concept].value[x] only CodeableConcept
-* extension[reference].value[x] only Reference()
+* extension[reference].value[x] only Reference
