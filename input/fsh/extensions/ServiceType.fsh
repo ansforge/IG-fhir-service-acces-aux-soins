@@ -5,4 +5,4 @@ Description: "Test extension R5"
 * ^context.expression = "FrSlotAgregateurCPTS.serviceType"
 
 * concept only CodeableConcept
-* reference only Reference
+* reference only Reference(HealthcareService)
