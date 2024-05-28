@@ -8,7 +8,7 @@ Description: "Profil de Slot, dérivé de FrSlot, pour le service d'agrégation 
 
 * serviceType.extension contains
     SASServiceType-R5 named sas-servicetype-r5 0..* 
-
+/*
 * serviceType ^slicing.discriminator.type = #type
 * serviceType ^slicing.discriminator.path = "$this" 
 * serviceType ^slicing.rules = #open
@@ -22,6 +22,8 @@ Description: "Profil de Slot, dérivé de FrSlot, pour le service d'agrégation 
 
 
 * serviceType.[serviceTypeTypeConsultation].coding from sas-sos-valueset-typeconsultation (required)
+
+*/
 
 
 * appointmentType.coding from sas-sos-valueset-appointmentreason (required)
