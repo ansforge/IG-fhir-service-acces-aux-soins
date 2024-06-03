@@ -10,4 +10,4 @@ Description: "Test extension R5"
 
 
 * extension[concept].value[x]  only CodeableConcept
-* extension[reference].value[x]  only Reference(FrHealthcareServiceAgregateurCPTS)
+* extension[reference].value[x]  only Reference(HealthcareService)

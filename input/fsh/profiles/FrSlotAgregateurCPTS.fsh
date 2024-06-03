@@ -28,5 +28,5 @@ Description: "Profil de Slot, dérivé de FrSlot, pour le service d'agrégation 
 
 * appointmentType.coding from sas-sos-valueset-appointmentreason (required)
 // vérifier si référence à ce profil ou nouveau profil CPTS
-* schedule only Reference(FrScheduleAgregateurSOS)
+* schedule only Reference(FrScheduleAgregateur)
 * status = #free
