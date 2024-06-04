@@ -6,9 +6,11 @@ Description: "Profil de Slot, dérivé de FrSlot, pour le service d'agrégation 
 * meta.security from sas-sos-valueset-typecreneau (required)
 * meta.security ^binding.description = "type de créneau : public, pro, SNP, CPTS"
 
-* serviceType.extension contains
-    SASServiceType-R5 named sas-servicetype-r5 0..* 
-/*
+//* serviceType.extension contains
+//    SASServiceType-R5 named sas-servicetype-r5 0..* 
+
+
+
 * serviceType ^slicing.discriminator.type = #type
 * serviceType ^slicing.discriminator.path = "$this" 
 * serviceType ^slicing.rules = #open
@@ -22,8 +24,7 @@ Description: "Profil de Slot, dérivé de FrSlot, pour le service d'agrégation 
 
 
 * serviceType.[serviceTypeTypeConsultation].coding from sas-sos-valueset-typeconsultation (required)
-
-*/
+* serviceType[serviceTypeReferenceHS].extension contains SASServiceType-R5 named sas-servicetype-r5 0..*
 
 
 * appointmentType.coding from sas-sos-valueset-appointmentreason (required)
