@@ -5,4 +5,4 @@ Description: "Extension créée afin de permettre la reference à la ressource H
 * ^context.expression = "Slot.serviceType"
 * ^url = $servicetype-r5
 
-* valueReference  only Reference(HealthcareService)
+* value[x] only Reference(HealthcareService)
