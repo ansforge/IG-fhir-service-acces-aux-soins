@@ -7,10 +7,19 @@ Description: "Profil de Slot, dérivé de FrSlot, pour le service d'agrégation 
 * meta.security ^short = "type de créneau : public, pro, SNP, CPTS"
 
 * serviceType.extension contains SASServiceType-R5 named sas-servicetype-r5 0..1 
+* serviceType ^slicing.discriminator.type = #pattern
+* serviceType ^slicing.discriminator.path = "$this"
+* serviceType ^slicing.rules = #open
 
-* serviceType.coding from $v3-ActEncounterCode (required)
-* serviceType.coding.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+* serviceType contains type 0..* and cpts 0..* // fix card
 
+//AMB, VR, HH
+* serviceType[type] from $v3-ActEncounterCode (required)
+* serviceType[type].coding.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+* serviceType[type].extension[sas-servicetype-r5] 0..0
+
+* serviceType[cpts] = ACT#http://terminology.hl7.org/CodeSystem/v3-ActCode // choisir bon code
+* serviceType[cpts].extension[sas-servicetype-r5] 1..1
 
 * appointmentType.coding from sas-sos-valueset-appointmentreason (required)
 // vérifier si référence à ce profil ou nouveau profil CPTS
