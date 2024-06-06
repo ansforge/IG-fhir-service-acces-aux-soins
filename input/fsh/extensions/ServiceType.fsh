@@ -1,14 +1,8 @@
 Extension: SASServiceType-R5
 Id: sas-cpts-slot-servicetype-aggregator
-Description: "Test extension R5"
+Description: "Extension créée afin de permettre la reference à la ressource HealthcareService. Cette extension implemente l'élément serviceType de R5 https://hl7.org/fhir/slot-definitions.html#Slot.serviceType"
 * ^context.type = #element
-* ^context.expression = "FrSlotAgregateurCPTS.serviceType"
+* ^context.expression = "Slot.serviceType"
 * ^url = $servicetype-r5
 
-* extension contains
-    concept  0..* and
-    reference 0..*
-
-
-* extension[concept].value[x]  only CodeableConcept
-* extension[reference].value[x]  only Reference(HealthcareService)
+* valueReference  only Reference(HealthcareService)
