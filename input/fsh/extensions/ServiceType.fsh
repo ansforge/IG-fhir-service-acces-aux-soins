@@ -3,6 +3,7 @@ Id: sas-cpts-slot-servicetype-aggregator
 Description: "Test extension R5"
 * ^context.type = #element
 * ^context.expression = "FrSlotAgregateurCPTS.serviceType"
+* ^url = $servicetype-r5
 
 * extension contains
     concept  0..* and

@@ -5,3 +5,4 @@ Alias: $fr-v2-0203 = http://interopsante.org/fhir/CodeSystem/fr-v2-0203
 Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
 Alias: $fr-location-identifier-type = http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type
 Alias: $v2-0276 = http://terminology.hl7.org/CodeSystem/v2-0276
+Alias: $servicetype-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType
