@@ -18,8 +18,9 @@ Description: "Profil de Slot, dérivé de FrSlot, pour le service d'agrégation 
 * serviceType[type].coding.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
 * serviceType[type].extension[sas-servicetype-r5] 0..0
 
-* serviceType[cpts] = ACT#http://terminology.hl7.org/CodeSystem/v3-ActCode // choisir bon code
+* serviceType[cpts] = http://terminology.hl7.org/CodeSystem/service-type#1 // choisir bon code
 * serviceType[cpts].extension[sas-servicetype-r5] 1..1
+* serviceType[cpts].extension[sas-servicetype-r5].valueReference only Reference(FrHealthcareServiceAgregateurCPTS)
 
 * appointmentType.coding from sas-sos-valueset-appointmentreason (required)
 // vérifier si référence à ce profil ou nouveau profil CPTS
