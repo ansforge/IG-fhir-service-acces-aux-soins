@@ -3,7 +3,7 @@ Parent: FrSlot
 Id: sas-cpts-slot-aggregator
 Description: "Profil de Slot, dérivé de FrSlot, pour le service d'agrégation de créneaux de la plateforme SAS (Service d'accès aux soins), dans le cadre du cas d'usage CPTS"
 
-* meta.security from sas-sos-valueset-typecreneau (required) //corriger
+* meta.security from sas-cpts-valueset-typecreneau (required) //verifier
 * meta.security ^short = "type de créneau : public, pro, SNP, CPTS"
 
 * serviceType.extension contains SASServiceTypeR5 named sas-servicetype-r5 0..1 
