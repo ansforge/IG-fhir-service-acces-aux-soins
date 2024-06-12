@@ -14,8 +14,8 @@ Description: "Bundle Agrégateur SAS CPTS"
     scheduleAgregateurCPTS 1..* and
     practitionerAgregateur 1..* and
     practitionerRole 1..* and
-    healthcareserviceCPTS 1..* and
-    organizationAgregateurCPTS 1..*
+    healthcareserviceCPTS 0..* and
+    organizationAgregateurCPTS 0..*
 
 * entry[slotAgregateurCPTS].resource only FrSlotAgregateurCPTS
 * entry[slotAgregateurCPTS].fullUrl 1..
@@ -30,7 +30,7 @@ Description: "Bundle Agrégateur SAS CPTS"
 * entry[practitionerRole].fullUrl 1..
 
 * entry[healthcareserviceCPTS].resource only FrHealthcareServiceAgregateurCPTS
-* entry[healthcareserviceCPTS].fullUrl 0..*
+* entry[healthcareserviceCPTS].fullUrl 1..
 
 * entry[organizationAgregateurCPTS].resource only FrOrganizationAgregateurCPTS
 * entry[organizationAgregateurCPTS].fullUrl 0..*
