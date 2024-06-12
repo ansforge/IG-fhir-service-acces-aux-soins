@@ -17,7 +17,7 @@ Description: "Bundle Agrégateur SAS SOS"
 * entry[slotAgregateurSOS].resource only FrSlotAgregateurSOS
 * entry[slotAgregateurSOS].fullUrl 1..
 
-* entry[scheduleAgregateurSOS].resource only FrScheduleAgregateurSOS
+* entry[scheduleAgregateurSOS].resource only FrScheduleAgregateur
 * entry[scheduleAgregateurSOS].fullUrl 1..
 
 
