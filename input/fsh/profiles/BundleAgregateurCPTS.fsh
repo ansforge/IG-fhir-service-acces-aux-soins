@@ -33,4 +33,4 @@ Description: "Bundle Agrégateur SAS CPTS"
 * entry[healthcareserviceCPTS].fullUrl 1..
 
 * entry[organizationAgregateurCPTS].resource only FrOrganizationAgregateurCPTS
-* entry[organizationAgregateurCPTS].fullUrl 0..*
+* entry[organizationAgregateurCPTS].fullUrl 1..
