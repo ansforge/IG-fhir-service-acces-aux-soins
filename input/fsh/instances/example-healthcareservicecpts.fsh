@@ -3,4 +3,6 @@ InstanceOf: FrHealthcareServiceAgregateurCPTS
 Description: "Exemple healthcare service CPTS"
 Usage: #example
 
-* providedBy = "Organization/ExampleOrgaCPTS"
+* providedBy = {
+    "reference": "Organization/ExampleOrgaCPTS"
+    }
