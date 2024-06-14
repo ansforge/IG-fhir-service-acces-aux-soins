@@ -1,3 +1,4 @@
+/*
 Instance: ExampleSlotCPTS
 InstanceOf: FrSlotAgregateurCPTS
 Description: "Exemple ressource slot CPTS"
@@ -9,3 +10,5 @@ Usage: #example
 * schedule.reference: "Schedule/1234"
 * start = "2024-06-12T16:40:00.000+02:00"
 * end = "2024-06-12T17:00:00.000+02:00"
+
+*/

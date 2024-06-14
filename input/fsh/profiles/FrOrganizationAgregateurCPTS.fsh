@@ -11,5 +11,5 @@ Id: sas-sos-organization-aggregator
 
 Invariant:   FINESS-invariant
 Description: "Le numéro FINESS doit être préfixé par 1 suivi de 9 caractères numériques"
-Expression:  "value.matches('^3[0-9]{9}$')"
+Expression:  "value.matches('^1[0-9]{9}$')"
 Severity:    #error
