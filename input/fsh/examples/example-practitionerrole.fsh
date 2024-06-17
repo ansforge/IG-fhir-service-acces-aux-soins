@@ -1,6 +1,6 @@
 
-Instance: FrPractitionerRoleExerciceAgregateur
-InstanceOf: FrPractitionerRoleAgregateur
+Instance: ExamplePractitionerRoleAgregateur
+InstanceOf: FrPractitionerRoleExerciceAgregateur
 Description: "Exemple PractitionerRole flux agrégateur"
 Usage: #example
 
