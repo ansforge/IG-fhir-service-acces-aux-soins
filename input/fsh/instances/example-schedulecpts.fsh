@@ -1,6 +1,6 @@
 
 Instance: ExampleScheduleCPTS
-InstanceOf: FrScheduleAgregateurCPTS
+InstanceOf: FrScheduleAgregateur
 Description: "Exemple ressource schedule CPTS"
 Usage: #example
 
