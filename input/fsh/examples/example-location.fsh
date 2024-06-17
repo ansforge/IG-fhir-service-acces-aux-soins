@@ -4,8 +4,6 @@ InstanceOf: FrLocationAgregateur
 Description: "Exemple location flux agrégateur"
 Usage: #inline
 
-* target.reference = "#"
-
 * identifier.system = "https://editeur.com"
 * identifier.value = "123456789"
 * identifier.type.coding = http://www.interopsante.org/fhir/valuesets/fr-location-identifier-type#INTRN
