@@ -2,7 +2,7 @@
 Instance: ExamplePractitionerRole
 InstanceOf: FrPractitionerRoleAgregateur
 Description: "Exemple PractitionerRole flux agrégateur"
-Usage: #inline
+Usage: #example
 
 * contained[+] = ExampleLocation
 * practitioner = Reference(ExamplePractitioner)
