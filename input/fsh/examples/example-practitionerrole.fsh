@@ -9,7 +9,7 @@ Usage: #example
 
 * organization.identifier.value = "412345678912345"
  
- //location 
+ location = "#ExampleLocation"
 
 * telecom.system = #phone
 * telecom.value =  "+33561855977"
