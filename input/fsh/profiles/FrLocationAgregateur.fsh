@@ -6,6 +6,7 @@ Description: "Profil de Location, dérivé de FrLocation, pour le service d'agr�
 * ^version = "1.0"
 * ^date = "2021-06-14"
 * ^publisher = "ANS"
+
 * address 1..
 * address.line 1..1
 * address.line ^binding.strength = #extensible
