@@ -1,9 +1,15 @@
 
-<div align="center">
-  <figure>
-    <img alt="Service d'Accès aux Soins (SAS)" src="sas_logo.png" align="middle">
-  </figure>
-</div>
+<figure>
+  <img alt="Service d'Accès aux Soins (SAS)" src="sas_logo.png" style="width:100%;">
+</figure>
+
+<blockquote class="stu-note">
+<p>
+  <b>Attention !</b>
+  <br>
+ Cet Implementation Guide est actuellement en mode draft
+</p>
+</blockquote>
 
 ### Contexte métier
 
