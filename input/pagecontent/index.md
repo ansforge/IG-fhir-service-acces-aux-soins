@@ -1,7 +1,6 @@
-
-<figure>
-  <img alt="Service d'Accès aux Soins (SAS)" src="sas_logo.png" style="width:100%;">
-</figure>
+<div class="figure" style="width:65%;">
+    <img style="height: auto; width: 100%;" src="sas_logo.png" alt="Service d'Accès aux Soins (SAS)" title="Logo SAS">
+</div>
 
 <blockquote class="stu-note">
 <p>
