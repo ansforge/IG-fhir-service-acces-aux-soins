@@ -25,7 +25,7 @@ Les opérations de la plateforme SAS sont réalisées au moyen d'API FHIR.
 - [Spécifications fonctionnelles](./specifications_fonctionnelles-ps.html)
 - [Spécifications techniques - Recherche de créneaux](./specifications_techniques-ps-recherche_creneaux.html)
 
-Spécifications partagées avec les autres cas d'usage
+**Spécifications partagées avec les autres cas d'usage :**
 - [Spécifications techniques - Création de rendez-vous](./specifications_techniques-tous-creation_rdv.html)
 - [Spécifications techniques - Mise à jour de rendez-vous](./specifications_techniques-tous-maj_rdv.html)
 
@@ -34,7 +34,7 @@ Spécifications partagées avec les autres cas d'usage
 - [Spécifications fonctionnelles](./specifications_fonctionnelles-cpts.html)
 - [Spécifications techniques - Recherche de créneaux](./specifications_techniques-cpts-recherche_creneaux.html)
 
-Spécifications partagées avec les autres cas d'usage
+**Spécifications partagées avec les autres cas d'usage :**
 - [Spécifications techniques - Création de rendez-vous](./specifications_techniques-tous-creation_rdv.html)
 - [Spécifications techniques - Mise à jour de rendez-vous](./specifications_techniques-tous-maj_rdv.html)
 
