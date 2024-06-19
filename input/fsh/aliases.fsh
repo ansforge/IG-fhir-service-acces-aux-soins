@@ -11,5 +11,4 @@ Alias: $v2-0276 = http://terminology.hl7.org/CodeSystem/v2-0276
 // ---- Extensions
 Alias: $servicetype-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType
 
-//Alias: $servicetype-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType.reference
 
