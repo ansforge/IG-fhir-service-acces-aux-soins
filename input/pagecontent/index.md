@@ -7,7 +7,7 @@
 <p>
   <b>Attention !</b>
   <br>
- Cet Implementation Guide est actuellement en mode draft, seule la partie SOS est à utiliser.
+ Cet Implementation Guide est actuellement en mode draft
 </p>
 </blockquote>
 
