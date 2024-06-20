@@ -12,7 +12,7 @@ Usage: #example
 * entry[slotAgregateurCPTS].resource = ExampleSlotCPTS
 * entry[slotAgregateurCPTS].fullUrl = "https://<base_URl>/Slot/ExampleSlotCPTS"
 
-* entry[scheduleAgregateurCPTS].resource = ExampleScheduleCPTS
+* entry[scheduleAgregateurCPTS].resource = ExampleSchedule
 * entry[scheduleAgregateurCPTS].fullUrl = "https://<base_URl>/Schedule/ExampleScheduleCPTS"
 
 * entry[practitionerAgregateur].resource = ExamplePractitioner

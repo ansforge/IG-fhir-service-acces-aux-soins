@@ -1,7 +1,7 @@
 
-Instance: ExampleScheduleCPTS
+Instance: ExampleSchedule
 InstanceOf: FrScheduleAgregateur
-Description: "Exemple ressource schedule CPTS"
+Description: "Exemple ressource schedule"
 Usage: #example
 
 * actor[+] = Reference(ExamplePractitioner)
