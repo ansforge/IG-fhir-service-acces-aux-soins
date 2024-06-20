@@ -3,9 +3,7 @@ Parent: FrSlot
 Id: FrSlotAgregateur
 Description: "Profil de Slot, dérivé de FrSlot, pour le service d'agrégation de créneaux de la plateforme SAS (Service d'accès aux soins)"
 * ^url = "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"
-* ^version = "1.0"
-* ^date = "2021-06-14"
-* ^publisher = "ANS"
+
 * meta.security from $JDV-J165-TypeCreneau-SAS (required)
 * meta.security ^binding.description = "type de créneau : public, pro, SNP"
 * serviceType ^slicing.discriminator.type = #value

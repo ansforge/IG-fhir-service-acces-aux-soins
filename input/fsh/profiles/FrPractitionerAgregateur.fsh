@@ -3,9 +3,7 @@ Parent: FrPractitioner
 Id: FrPractitionerAgregateur
 Description: "Profil de Practitioner, dérivé de FrPractitioner, pour le service d'agrégation de créneaux de la plateforme SAS (Service d'accès aux soins)"
 * ^url = "http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur"
-* ^version = "1.0"
-* ^date = "2021-06-14"
-* ^publisher = "ANS"
+
 * identifier 1..
 * identifier.type = $fr-v2-0203#IDNPS (exactly)
 * identifier.type ^binding.strength = #required
