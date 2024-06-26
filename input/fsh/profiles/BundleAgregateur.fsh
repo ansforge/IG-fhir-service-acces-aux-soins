@@ -5,7 +5,7 @@ Description: "Profil de Bundle qui représente le flux de réponse contenant les
 * ^url = "http://sas.fr/fhir/StructureDefinition/BundleAgregateur"
 
 
-* type = #searchset (exactly)
+* type = #searchset
 * entry ^slicing.discriminator.type = #type
 * entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #open

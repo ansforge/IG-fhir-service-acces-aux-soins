@@ -11,7 +11,7 @@ Description: "Profil de Slot, dérivé de FrSlot, pour le service d'agrégation 
 * serviceType ^slicing.rules = #open
 * serviceType contains TypeConsultation 0..*
 * serviceType[TypeConsultation] from $v3-ActEncounterCode (required)
-* serviceType[TypeConsultation].coding.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode" (exactly)
+* serviceType[TypeConsultation].coding.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
 * specialty ^binding.strength = #required
 * specialty ^binding.description = "Spécialités ou compétences particulières du PS associées au créneau"
 * appointmentType ^short = "Créneau avec ou sans RDV"
