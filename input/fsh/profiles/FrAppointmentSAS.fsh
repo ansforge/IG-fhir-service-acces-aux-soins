@@ -4,12 +4,16 @@ Id: FrAppointmentSAS
 Description: "Profil de Appointment, dérivé de FrAppointment, pour le cas d'usage prise de RDV de la plateforme SAS (Service d'accès aux soins)"
 * ^url = "http://sas.fr/fhir/StructureDefinition/FrAppointmentSAS"
 * ^version = "1.0.0"
+
+
+// Extension appointmentOperator provenant de FrAppointment
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
 * extension[appointmentOperator] 1..
 * extension[appointmentOperator].value[x] 1..
 * extension[appointmentOperator].value[x] only Reference
+* extension[appointmentOperator].valueReference 1..
 * extension[appointmentOperator].valueReference.identifier 1..
 * extension[appointmentOperator].valueReference.identifier.type 1..
 * extension[appointmentOperator].valueReference.identifier.type.coding 1..1
@@ -18,6 +22,7 @@ Description: "Profil de Appointment, dérivé de FrAppointment, pour le cas d'us
 * extension[appointmentOperator].valueReference.identifier.type.coding.code 1..
 * extension[appointmentOperator].valueReference.identifier.system 1..
 * extension[appointmentOperator].valueReference.identifier.value 1..
+
 * identifier 1..1
 * identifier.system 1..
 * identifier.value 1..

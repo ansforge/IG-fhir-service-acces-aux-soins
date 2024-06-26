@@ -2,7 +2,7 @@
 
 id: ans.fhir.fr.sas
 canonical: https://interop.esante.gouv.fr/ig/fhir/sas
-name: Service d'Accès aux Soins
+name: SAS
 title: Service d'Accès aux Soins
 publisher:
   name: ANS
@@ -11,7 +11,7 @@ status: draft
 version: 0.1.0
 fhirVersion: 4.0.1
 copyrightYear: 2020+
-releaseLabel: ci-build
+releaseLabel: trial-use
 jurisdiction: urn:iso:std:iso:3166#FR "FRANCE"
 
 parameters:
@@ -47,8 +47,6 @@ pages:
             title: Annexes
         downloads.md:
             title: Téléchargements et usages
-    about.md:
-        title: A propos de ce guide
 
 menu:
     Accueil: index.html
@@ -60,12 +58,13 @@ menu:
         02 - CPTS - Recherche des créneaux: specifications_techniques-cpts-recherche_creneaux.html
         11 - Tous - Création de rendez-vous: specifications_techniques-tous-creation_rdv.html
         12 - Tous - Mise à jour de rendez-vous: specifications_techniques-tous-maj_rdv.html
-    Ressources de conformité: ressources.html
+    Ressources de conformité: artifacts.html
     Autres ressources:
+        Liste des ressources: ressources.html
         Sécurité: securite.html
         FAQ: faq.html
         Annexes: annexes.html
         Téléchargements et usage: downloads.html
         "Spécifications FHIR ": new-tab {{site.data.fhir.path}}index.html
         "Site de l'ANS ": new-tab https://esante.gouv.fr/
-    A propos de ce guide: about.html
+    Documentation: new-tab https://interop.esante.gouv.fr/ig/documentation/
