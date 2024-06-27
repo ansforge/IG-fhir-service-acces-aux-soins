@@ -5,6 +5,5 @@ Liste des ressources à utiliser par cas d'usage
 
 Liste des profils à utiliser dans le cadre du cas d'usage CPTS
 
-{% sql SELECT Id || '.html' as "Profil", Type, IFNULL(Description,' ') as "Description" from Resources
-where Id like '%cpts%' %}
+{% sql SELECT '[' || Id ||'](StructureDefinition-' || id || '.html)' as "Profil", Type, IFNULL(Description,' ') as "Description" from Resources where Id like '%cpts%' and type = 'StructureDefinition'; %}
 
