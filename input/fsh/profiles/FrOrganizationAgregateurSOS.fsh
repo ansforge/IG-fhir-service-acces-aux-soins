@@ -1,6 +1,8 @@
 Profile: FrOrganizationAgregateurSOS
 Parent: FrOrganization
 Id: sas-cpts-organization-aggregator
+Description: "Profil d'Organization, dérivé de FrOrganization, pour le service d’agrégation de créneaux de la plateforme SAS (Service d’accès aux soins), dans le cadre du cas d’usage SOS Médecins"
+
 
 * identifier 1..1
 * identifier.type = $fr-location-identifier-type#IDNST
