@@ -5,7 +5,7 @@ Description: "Profil de Slot, dérivé de FrSlot, pour le service d’agrégatio
 
 * meta.security from sas-sos-valueset-typecreneau (required)
 * meta.security ^binding.description = "type de créneau : public, SNP"
-* serviceType.coding from sas-sos-valueset-typeconsultation (required)
+* serviceType.coding from sas-valueset-typeconsultation (required)
 * appointmentType.coding from sas-valueset-appointmentreason (required)
 * schedule only Reference(FrScheduleAgregateurSOS)
 * status = #free
