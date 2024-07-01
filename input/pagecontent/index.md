@@ -22,3 +22,7 @@ Plus d'information sur le site dédié du ministère https://esante.gouv.fr/sas
 ### Contexte technique
 L'objectif de ce projet est de définir les profils qui doivent être implémentés par les éditeurs de solution de prise de rendez-vous en ligne pour exposer les créneaux disponibles et informer la plateforme des rendez-vous pris.
 Les opérations de la plateforme SAS sont réalisées au moyen d'API FHIR.
+
+### Dépendances
+ 
+{% include dependency-table.xhtml %}
