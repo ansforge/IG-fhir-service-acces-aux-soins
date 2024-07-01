@@ -6,7 +6,6 @@ Description: "Profil de Practitioner, dérivé de FrPractitioner, pour le servic
 
 * identifier 1..
 * identifier.type = $fr-v2-0203#IDNPS
-* identifier.type ^binding.strength = #required
 * identifier.type.coding ..1
 * identifier.system = "urn:oid:1.2.250.1.71.4.2.1"
 * name.family ^binding.strength = #preferred
