@@ -3,7 +3,7 @@ InstanceOf: SearchParameter
 Usage: #definition
 
 * status = #active
-* name = "SP Service Type CPTS"
+* name = "SPServiceTypeCPTS"
 * description = "Paramètre de recherche sur le service type qui mime le paramètre R5. Permet de rechercher ou d'inclure la ressource reférencée HealthCare Service"
 * code = #service-type-reference
 * base = #Slot
