@@ -1,6 +1,6 @@
 **Release 1.0.0-ballot de l'Implémentation Guide Service d'Accès aux Soins.**
 
-[Modifications apportées dans cette release] :
+[Modifications apportées dans cette release] (https://github.com/ansforge/IG-fhir-service-acces-aux-soins/milestone/3?closed=1) :
 
 * Mise au format guide d'implémentation FHIR à partir des spécifications PDF existantes (Spécifications agrégation de créneaux et prise de RDV). Première version de ce guide d'implémentation.
 * Ajout des ressources de conformité de la spécification agrégation de créneaux SOS Médecins, sans la partie narrative
