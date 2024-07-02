@@ -238,10 +238,9 @@ La requête ci-dessous correspond à une recherche de créneaux disponibles entr
 `get[BASE]/Slot?_include=Slot:schedule&_include:iterate=Schedule:actor&start=ge2021-01-02T10:00:00&start=le2021-01-06T10:00:00&schedule.actor:Practitioner.identifier=urn:oid:1.2.250.1.71.4.2.1|810101288385, urn:oid:1.2.250.1.71.4.2.1|800001288385,urn:oid:1.2.250.1.71.4.2.1|810106738385&status=free`
 
 **Réponse simplifiée :**
-
 <details>
   <summary>Déplier pour accéder au détail de l'exemple de réponse simplifiée</summary>
-  <code>
+  <pre>
 HTTP 200 OK
   resourceType: Bundle
   type: searchset
@@ -262,9 +261,9 @@ HTTP 200 OK
   Schedule4
   Practitioner4
   PractitionerRole4
-  </code>
+  </pre>
 </details>
-
+  
 **Corps de la réponse complète :**
 
 La réponse ci-dessous correspond à :
@@ -297,7 +296,7 @@ La réponse ci-dessous correspond à :
 
 <details>
   <summary>Déplier pour accéder au détail de l'exemple de réponse complète au format json</summary>
-  <code>
+  <pre>
 {
   "resourceType": "Bundle",
   "id": "8cbb33dc-779e-45e9-a5f6-ea66101288c5",
@@ -893,5 +892,5 @@ La réponse ci-dessous correspond à :
     }
   ]
 }
-  </code>
+  </pre>
 </details>
