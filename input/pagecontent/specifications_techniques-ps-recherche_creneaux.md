@@ -238,7 +238,7 @@ La requête ci-dessous correspond à une recherche de créneaux disponibles entr
 `get[BASE]/Slot?_include=Slot:schedule&_include:iterate=Schedule:actor&start=ge2021-01-02T10:00:00&start=le2021-01-06T10:00:00&schedule.actor:Practitioner.identifier=urn:oid:1.2.250.1.71.4.2.1|810101288385, urn:oid:1.2.250.1.71.4.2.1|800001288385,urn:oid:1.2.250.1.71.4.2.1|810106738385&status=free`
 
 **Réponse simplifiée :**
-<p>
+
 <details>
   <summary>Déplier pour accéder au détail de l'exemple de réponse simplifiée</summary>
   <pre>
@@ -264,9 +264,9 @@ HTTP 200 OK
   PractitionerRole4
   </pre>
 </details>
-</p>
+<br><br>
 
-**Corps de la réponse complète :**
+**Corps de la réponse complète :**
 
 La réponse ci-dessous correspond à :
 1. 2 créneaux disponibles pour Docteur Sébastien THOMAS (RPPS : 810100050075)
@@ -296,7 +296,6 @@ La réponse ci-dessous correspond à :
     - Pour le motif `Visite de contrôle` et `Consultation de suivi pneumologique`
     - Les spécialités non codifiées associées sont `Pneumologie` et `Médecine générale (polyvalente)`
 
-<p>
 <details>
   <summary>Déplier pour accéder au détail de l'exemple de réponse complète au format json</summary>
   <pre>
@@ -897,5 +896,5 @@ La réponse ci-dessous correspond à :
 }
   </pre>
 </details>
-</p>
+<br><br>
 
