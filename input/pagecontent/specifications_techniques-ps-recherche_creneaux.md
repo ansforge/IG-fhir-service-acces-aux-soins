@@ -264,6 +264,7 @@ HTTP 200 OK
   </pre>
 </details>
   
+  
 **Corps de la réponse complète :**
 
 La réponse ci-dessous correspond à :
@@ -894,3 +895,5 @@ La réponse ci-dessous correspond à :
 }
   </pre>
 </details>
+  
+  
