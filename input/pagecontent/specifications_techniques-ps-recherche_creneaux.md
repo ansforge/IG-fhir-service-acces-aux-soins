@@ -157,9 +157,9 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
   - Dans le cadre du profil FrSlot, l'élément specialty est lié à la nomenclature des spécialités ordinales du MOS (<https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale/>). La plateforme numérique SAS sera cependant en mesure de traiter d'autres compétences ou spécialités transmises sous la forme d'une donnée structurée au sein de l'élément `coding`, ou sous la forme d’un texte libre au niveau de l'élément `text`.
 - **ID : 14 – Type de créneau :**
   - Afin de répondre aux besoins de la plateforme numérique SAS, une nomenclature dédiée a été mise en oeuvre (<https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau>). 3 types de créneaux sont présentés ci-dessous. A noter qu'un créneau peut porter une combinaison de ces valeurs :
-    - PUBLIC – Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible par le grand public.
-    - PRO – Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible à l'ensemble des PS.
-    - SNP – Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible par les Régulateurs et OSNP.
+    - PUBLIC – Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible par le grand public
+    - PRO – Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible à l'ensemble des PS
+    - SNP – Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible par les Régulateurs et OSNP
 - **ID : 15 – Type de consultation :**
   - L'utilisation de la nomenclature standard ActEncounterCode (<https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html>) est attendue. Cette nomenclature contient différentes notions, cependant, la plateforme numérique SAS gère les 3 types de créneaux ci-dessous. A noter qu'un créneau peut porter une combinaison de ces valeurs :
     - AMB – Consultation au cabinet
@@ -201,7 +201,7 @@ Afin de tester un fichier, il suffit de sélectionner le format `JSON`, d'ajoute
     <tr>
         <td align ="center">
             <div class="figure">
-                <img src="validateur_creneaux_1.png" alt="Accès au validateur agrégateur de créneaux" title="Accès au validateur agrégateur de créneaux">
+                <img src="validateur_creneaux-PS_1.png" alt="Accès au validateur agrégateur de créneaux" title="Accès au validateur agrégateur de créneaux">
             </div>
         </td>    
     </tr>
@@ -212,13 +212,13 @@ Afin de tester un fichier, il suffit de sélectionner le format `JSON`, d'ajoute
     </tr>
 </table>
 
-Vous obtiendrez alors un rapport de test mettant en valeur les erreurs bloquantes et les différents warning :
+Vous obtiendrez alors un rapport de test mettant en valeur les erreurs bloquantes et les différents warnings :
 
 <table align="center">
     <tr>
         <td align ="center">
             <div class="figure">
-                <img src="validateur_creneaux_2.png" alt="Rapport validateur agrégateur de créneaux" title="Rapport validateur agrégateur de créneaux">
+                <img src="validateur_creneaux-PS_2.png" alt="Rapport validateur agrégateur de créneaux" title="Rapport validateur agrégateur de créneaux">
             </div>
         </td>    
     </tr>
@@ -264,7 +264,7 @@ HTTP 200 OK
   PractitionerRole4
   </pre>
 </details>
-<br><br>
+<br>
 
 **Corps de la réponse complète :**
 
