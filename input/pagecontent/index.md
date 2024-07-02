@@ -23,6 +23,26 @@ Plus d'information sur le site dédié du ministère https://esante.gouv.fr/sas
 L'objectif de ce projet est de définir les profils qui doivent être implémentés par les éditeurs de solution de prise de rendez-vous en ligne pour exposer les créneaux disponibles et informer la plateforme des rendez-vous pris.
 Les opérations de la plateforme SAS sont réalisées au moyen d'API FHIR.
 
+### Cas d'usage
+
+#### PS à titre individuel
+
+- [Spécifications fonctionnelles](./specifications_fonctionnelles.html)
+- [Spécifications techniques - Recherche de créneaux](./specifications_techniques-ps-recherche_creneaux.html)
+
+**Spécifications partagées avec les autres cas d'usage :**
+- [Spécifications techniques - Création de rendez-vous](./specifications_techniques-tous-creation_rdv.html)
+- [Spécifications techniques - Mise à jour de rendez-vous](./specifications_techniques-tous-maj_rdv.html)
+
+#### CPTS
+
+- [Spécifications fonctionnelles](./specifications_fonctionnelles.html)
+- [Spécifications techniques - Recherche de créneaux](./specifications_techniques-cpts-recherche_creneaux.html)
+
+**Spécifications partagées avec les autres cas d'usage :**
+- [Spécifications techniques - Création de rendez-vous](./specifications_techniques-tous-creation_rdv.html)
+- [Spécifications techniques - Mise à jour de rendez-vous](./specifications_techniques-tous-maj_rdv.html)
+
 ### Dépendances
  
 {% include dependency-table.xhtml %}
