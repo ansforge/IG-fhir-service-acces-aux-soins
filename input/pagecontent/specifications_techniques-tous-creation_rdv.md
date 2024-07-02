@@ -98,9 +98,8 @@ Plus de précision sur la spécification FHIR :
 La requête ci-dessous correspond à la transmission d'un RDV pris par le régulateur avec un identifiant national 3456780581/11242343 avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h.
 
 <details>
-  <summary>Déplier pour accéder au détail de l'exemple de réponse au format json</summary>
-
-```
+  <summary>Déplier pour accéder au détail de l'exemple de réponse complète au format json</summary>
+  <pre>
 {
   "resourceType": "Appointment",
   "id": "1",
@@ -157,8 +156,9 @@ La requête ci-dessous correspond à la transmission d'un RDV pris par le régul
     }
   ]
 }
-```
+  </pre>
 </details>
+<br>
 
 ### Nomenclatures
 
