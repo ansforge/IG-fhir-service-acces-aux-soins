@@ -21,7 +21,7 @@ Le schéma de présentation générale ci-dessous illustre ce cas d'usage :
     <tr>
         <td align ="center">
             <div class="figure">
-                <img src="recherche_creneaux_1.png" width="70%" height="70%" alt="Présentation recherche de créneaux" title="Présentation recherche de créneaux">
+                <img src="recherche_creneaux_1.png" width="80%" height="80%" alt="Présentation recherche de créneaux" title="Présentation recherche de créneaux">
             </div>
         </td>    
     </tr>
