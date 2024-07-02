@@ -28,6 +28,11 @@ Les ressources locations doivent être contenues `contained` dans la ressource `
 
 Il est attendu dans le fichier de réponse JSON d'avoir 1 ressource `Schedule` pour 1 ressource `PractitionerRole`. Cela se traduit par le fait d’avoir 1 agenda pour 1 lieu de consultation. Dans la structure du fichier de réponse, un PS aura ainsi autant d'agendas que de lieux de consultation.
 
+#### Quelles sont les ressources à transmettre lorsqu'un créneau de disponibilité transmis est mis en visibilité d'une ou plusieurs CPTS ?
+
+Il est attendu dans le fichier de réponse JSON d’avoir la relation : 1 ressource HealthcareService pour 1 ressource Organization (modélisant la structure CPTS).<br>
+Dans la structure du fichier de réponse, si un créneau est associé à plusieurs CPTS, alors il y aura autant de références à de ressources HealthcareService qu’il y a de CPTS. 
+
 #### Comment intégrer les ID nationaux de structure (FINESS, SIRET, RPPS rang) ?
 
 <table>
@@ -100,9 +105,8 @@ Les éditeurs ont la possibilité de récupérer les référentiels nationaux de
   <td><p>Interfaces FHIR</p></td>
   <td>
     <p><strong>Par la récupération via une API mise à disposition par l'ANS</strong><br>
-    De nouvelles interfaces sont en cours de co-construction avec les éditeurs.<br>
-    Ces nouveaux services permettront d'exposer les données des référentiels Personnes physiques/Personnes morales au format JSON, structurés selon la norme d'interopérabilité FHIR. Une première version sera mise à disposition à l'été 2022.<br>
-    Les StructureDefinition ont été publiées et sont accessibles sur : https://simplifier.net/Modelisationdesstructuresetdesprofessionnels
+    Une API en libre accès, permettant d'exposer les données des référentiels Personnes physiques/Personnes morales au format JSON, structurés selon la norme d'interopérabilité FHIR est mise à disposition avec la documentation associée ci-dessous :<br>
+    https://ansforge.github.io/annuaire-sante-fhir-documentation/
     </p>
   </td>
 </tr>
@@ -207,6 +211,10 @@ Les éditeurs ont la possibilité de récupérer les référentiels nationaux de
         {
           "system": "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
           "code": "SNP"
+        },
+        {
+          "system": "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
+          "code": "CPTS"
         }
       ]
     },
@@ -254,6 +262,58 @@ Les éditeurs ont la possibilité de récupérer les référentiels nationaux de
   </td>
 </tr>
 <tr>
+  <td><p>&nbsp;</p></td>
+  <td><p>Créneau de type CPTS</p></td>
+  <td><p>Dans le cas d'un créneau mis en visibilité d'une (ou plusieurs) CPTS, des données supplémentaires sont à renseigner au sein de la ressource Slot, au niveau du serviceType.<br>
+  - Le type de soins correspondant aux structures de CPTS<br>
+  Exemple :
+  <code><pre>
+        "serviceType": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "VR"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "AMB"
+              }
+            ]
+          },
+          {
+            "text": "Suivi médical"
+          },
+          {
+            "text": "Pédiatrie"
+          },
+          {
+            "coding": [
+              {
+                "system": "https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement",
+                "code": "604"
+              }
+            ],
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType",
+                "valueReference": {
+                  "reference": "HealthcareService/e9e31708-9550-4197-8c32-ae541b6a5cbd"
+                }
+              }
+            ]
+          },
+        ],
+  </pre></code>
+  - Il sera également attendu de transmettre les ressources HealthcareService et Organization correspondantes (cf. tableau de valeur et nomenclature 2.3.1 et 2.3.2)
+  </p>
+  </td>
+</tr>
+<tr>
   <td><p>6</p></td>
   <td><p>Gestion des multiples lieux<br>de consultation</p></td>
   <td><p>Lorsqu'un PS dispose de créneaux associés à différents lieux de consultation, il est attendu que l'ensemble des créneaux soient remontés, et soient associés au bon lieu de consultation.</p></td>
@@ -292,6 +352,20 @@ Les éditeurs ont la possibilité de récupérer les référentiels nationaux de
   <td><p>9</p></td>
   <td><p>Eléments vide</p></td>
   <td><p>Lorsqu'une information optionnelle n'est pas renseignée dans la solution logicielle, l'élément correspondant ne doit pas être transmis au niveau de la réponse. Il ne faut pas transmettre un élément vide.</p></td>
+</tr>
+<tr>
+  <td><p>10</p></td>
+  <td><p>Créneau mis en visibilité de 2 CPTS</p></td>
+  <td><p><i>à venir</i></p></td>
+</tr>
+<tr>
+  <td><p>11</p></td>
+  <td><p>Créneau non rattaché à une CPTS</p></td>
+  <td><p>
+    Si pour une ressource Slot, le type de créneau ne contient pas la valorisation `CPTS` (ID 14) mais uniquement PUBLIC, PRO et/ou SNP, alors aucune donnée supplémentaire n’est attendue.<br>
+    On est dans la configuration du flux d'agrégation de disponibilités INT_R01 (PS à titre individuel) qui a déjà été implémenté par l'éditeur.
+    </p>
+  </td>
 </tr>
 </tbody>
 </table>

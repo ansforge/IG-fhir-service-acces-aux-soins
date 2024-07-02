@@ -184,9 +184,9 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
     - WALKIN – Créneau sans prise de RDV possible
 - **ID : 23, 24, 25 – ID de la structure CPTS (FINESS) :**
   - Identifiant unique propre à chaque structure CPTS. Les champs attendus doivent être valorisés comme suit :
-    - identifier.value (valeur de l'identifiant) : numéro du FINESS avec préfixe « 1 »
+    - identifier.value (valeur de l'identifiant) : numéro du FINESS avec préfixe `1`
     - identifier.system (autorité d’affectation) : urn:oid:1.2.250.1.71.4.2.2
-    - identifier.type (type d’identifiant) : le champ type.coding.code est valorisé à « IDNST » et type.coding.system à «http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type »
+    - identifier.type (type d’identifiant) : le champ type.coding.code est valorisé à `IDNST` et type.coding.system à «http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type »
 
 ### Validateur ressources
 Le validateur mis à disposition des développeurs dans le cadre du projet SAS offre la possibilité tester le format des bundles de réponse générés. Il permet de vérifier que les réponses sont correctement formatées, que l'ensemble des informations obligatoires sont bien présentes et que les données codifiées exploitent les bonnes nomenclatures.
