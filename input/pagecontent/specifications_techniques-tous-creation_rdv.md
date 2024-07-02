@@ -97,6 +97,9 @@ Plus de précision sur la spécification FHIR :
 
 La requête ci-dessous correspond à la transmission d'un RDV pris par le régulateur avec un identifiant national 3456780581/11242343 avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h.
 
+<details>
+  <summary>Déplier pour accéder au détail de l'exemple de réponse au format json</summary>
+
 ```
 {
   "resourceType": "Appointment",
@@ -154,5 +157,90 @@ La requête ci-dessous correspond à la transmission d'un RDV pris par le régul
     }
   ]
 }
+```
+</details>
+
+### Nomenclatures
+
+Cette section détaille les nomenclatures à utiliser afin de renseigner les différents éléments codifiés de la requête.
+- **ID : 1 – Identifiant technique du RDV :**
+  - Un identifiant technique unique par RDV est attendu. Cet ID est défini par la solution logicielle éditeur et peut prendre la forme d'un UUID par exemple. Les échanges s'appuieront sur cet ID pour les requêtes de mises à jour (interaction conditional update).
+- **ID : 2 – Autorité d'affectation de la solution logicielle éditeur :**
+  - Ce champ est une valeur fixe, valorisé soit par une URL soit par un OID. Si l'éditeur possède un OID propre à sa solution logicielle il est attendu que celui-ci soit transmis, sinon il est demandé de définir une URL propre à la solution éditeur.
+- **ID : 3 – URL de l'extension AppointmentOperator pour la référence au régulateur :**
+  - Ce champ est une valeur fixe, valorisé à `http://interopsante.org/fhir/StructureDefinition/FrAppointmentOperator`.
+- **ID : 4, 5, 6 – Identification du régulateur ayant pris le RDV pour le patient :**
+  - Il s'agit de l'identifiant communiqué par la plateforme numérique SAS dans l'interface INT_R02 "Gestion des comptes régulateurs". Deux combinaisons sont possibles pour ces trois champs selon que le régulateur possède ou non un identifiant national.
+  - Lorsque le régulateur a un identifiant national, les différents champs seront valorisés comme suit (1) :
+    - Valeur de l'identifiant (ID 4) : Identifiant national avec préfixe ;
+    - Autorité d'affectation (ID 5) : urn:oid:1.2.250.1.71.4.2.1 ;
+    - Type d'identifiant (ID 6) : le champ `type.coding.code` est valorisé à `IDNPS` et `type.coding.system` à `http://interopsante.org/fhir/CodeSystem/fr-v2-0203`.
+  - Lorsque le régulateur n'a pas d’identifiant national, nous utiliserons un ID technique SAS, les différents champs seront valorisés comme suit :
+    - Valeur de l'identifiant (ID 4) : Identifiant technique SAS avec un format de type UUID ;
+    - Autorité d'affectation (ID 5) : urn:oid:1.2.250.1.213.3.6 ;
+    - Type d'identifiant (ID 6) : le champ type.coding.code est valorisé à `INTRN` et `type.coding.system` à `http://interopsante.org/fhir/CodeSystem/fr-v2-0203`.
+- **ID : 7 – Statut du RDV :**
+  - L'utilisation de la nomenclature standard AppointmentStatus (<http://hl7.org/fhir/appointmentstatus>) est attendue. La plateforme numérique SAS exploite à date les valeurs suivantes :
+    - BOOKED : RDV pris et confirmé
+    - FULFILLED : RDV honoré
+    - NOSHOW : RDV non honoré
+    - CANCELLED : RDV annulé
+- **ID : 10, 11, 12 – Identification du PS effecteur de soins :**
+  - Les champs attendus doivent être valorisés comme suit (1) :
+    - Valeur de l'identifiant (ID 10) : RPPS avec préfixe "8" ou ADELI avec préfixe "0"
+    - Autorité d'affectation (ID 11) : urn:oid:1.2.250.1.71.4.2.1
+    - Type d'identifiant (ID 12) : le champ `type.coding.code` est valorisé à `IDNPS` et `type.coding.system` à `http://interopsante.org/fhir/CodeSystem/fr-v2-0203`
+- **ID : 13 – Statut d’acceptation du RDV par le PS effecteur de soins :**
+  - L'utilisation de la nomenclature standard Appointmentparticipantstatus (<http://hl7.org/fhir/ValueSet/participationstatus>) est attendue. La plateforme numérique SAS ne récupérant que les RDV avec acceptation automatique et tacite du médecin effecteur de soins, ce champ aura systématiquement la valeur « accepted ».
+
+### Validateur ressources
+Un validateur mis à disposition des développeurs dans le cadre du projet SAS offre la possibilité de tester le format des requêtes POST et PUT à générer. Il permet de vérifier que les requêtes sont correctement formatées, que l'ensemble des informations obligatoires sont bien présentes et que les données codifiées exploitent les bonnes nomenclatures.
+Pour que le validateur puisse effectuer correctement les contrôles au niveau de la structure, il est nécessaire de renseigner pour le resourceType `Appointment`, le meta.profile `URL` ci-après :
+- http://sas.fr/fhir/StructureDefinition/FrAppointmentSAS
+
+Ci-dessous un exemple :
 
 ```
+"resourceType": "Appointment",
+"id": "1",
+"meta": {
+  "profile": [
+    "http://interopsante.org/fhir/StructureDefinition/FrAppointmentSAS"
+  ]
+},
+```
+
+Le validateur est disponible sur l'espace de test de l'ANS : <https://interop.esante.gouv.fr/EVSClient/fhir/validator.seam?extension=SAS&standard=FHIR+%28SAS%29&type=FHIR&cid=750>. Pour faciliter les tests et conserver l'historique, nous vous recommandons de créer votre compte sur la plateforme.
+Afin de tester un fichier, il suffit de sélectionner le format `JSON`, d’ajouter le fichier via le bouton `Add…`, de sélectionner le modèle `FrAppointmentSAS` puis de cliquer sur `valider` :
+
+<table align="center">
+    <tr>
+        <td align ="center">
+            <div class="figure">
+                <img src="validateur_rendez_vous_1.png" alt="Accès au validateur rendez-vous" title="Accès au validateur rendez-vous">
+            </div>
+        </td>    
+    </tr>
+    <tr>
+        <td align ="center">
+            <b>Figure 3 - Accès au validateur rendez-vous</b>
+        </td>
+    </tr>
+</table>
+
+Vous obtiendrez alors un rapport de test mettant en valeur les erreurs bloquantes et les différents warning :
+
+<table align="center">
+    <tr>
+        <td align ="center">
+            <div class="figure">
+                <img src="validateur_rendez_vous_2.png" alt="Rapport validateur rendez-vous" title="Rapport validateur rendez-vous">
+            </div>
+        </td>    
+    </tr>
+    <tr>
+        <td align ="center">
+            <b>Figure 4 - Rapport validateur rendez-vous</b>
+        </td>
+    </tr>
+</table>
