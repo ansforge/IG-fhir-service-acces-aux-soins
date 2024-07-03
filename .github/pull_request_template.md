@@ -6,4 +6,4 @@
 
 ## Preview
 
-https://ansforge.github.io/IG-service-acces-aux-soins/[ajouter_nom_de_la_branche]/ig
+https://ansforge.github.io/IG-fhir-service-acces-aux-soins/[ajouter_nom_de_la_branche]/ig
