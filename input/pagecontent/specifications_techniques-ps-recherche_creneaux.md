@@ -1,6 +1,7 @@
 <!-- Recherche des créneaux -->
 ### Caractéristiques de l'API
-Cette requête s'appuie sur le flux 3A du volet d'agenda partagé du CI-SIS.
+Cette requête s'appuie sur le flux 3A du volet d'agenda partagé du **CI-SIS volet Gestion d'Agenda Partagés**.  
+https://interop.esante.gouv.fr/ig/fhir/gap/flux-gestion-dispo.html#flux-3a---cr%C3%A9ation-de-disponibilit%C3%A9s  
 
 <table>
 <tbody>
@@ -194,7 +195,7 @@ Ci-dessous un exemple :
 },
 ```
 
-Le validateur est disponible sur l'espace de test de l'ANS : <https://interop.esante.gouv.fr/EVSClient/fhir/validator.seam?standard=FHIR%20(SAS)&extension=SAS>. Pour faciliter les tests et conserver l'historique, nous vous recommandons de créer votre compte sur la plateforme.
+Le validateur est disponible sur l'espace de test de l'ANS : <https://interop.esante.gouv.fr/evs/fhir/validator.seam?standard=37>. Pour faciliter les tests et conserver l'historique, nous vous recommandons de créer votre compte sur la plateforme.
 Afin de tester un fichier, il suffit de sélectionner le format `JSON`, d'ajouter le fichier via le bouton `Add…`, de sélectionner le modèle `FrBundleAgregateurSAS` puis de cliquer sur `valider` :
 
 <table align="center">

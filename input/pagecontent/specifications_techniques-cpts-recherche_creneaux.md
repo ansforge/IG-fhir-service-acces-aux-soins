@@ -1,6 +1,7 @@
 <!-- Recherche des créneaux -->
 ### Caractéristiques de l'API
-Cette requête s'appuie sur le flux 3A du volet d'agenda partagé du CI-SIS.
+Cette requête s'appuie sur le flux 3A du volet d'agenda partagé du **CI-SIS volet Gestion Agenda Partagés**.  
+https://interop.esante.gouv.fr/ig/fhir/gap/flux-gestion-dispo.html#flux-3a---cr%C3%A9ation-de-disponibilit%C3%A9s  
 
 <table>
 <tbody>
