@@ -200,6 +200,9 @@ Pour que le validateur puisse effectuer correctement les contrôles au niveau de
 - https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-healthcareservice-aggregator
 - https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator
 
+Note :  
+Il y a actuellement des inconsistances dans les URLs canoniques des différents profils contenus dans ce guide, certaines URLs sont au format "http://sas.fr/fhir/..." et d'autres au format "https://interop.esante.gouv.fr/ig/fhir/sas/...". L'uniformisation n'a pas été effectuée pour cette release pour éviter les changements non rétrocompatibles. Ce changement sera à anticiper lors des prochaines releases.  
+
 Ci-dessous un exemple :
 
 ```
