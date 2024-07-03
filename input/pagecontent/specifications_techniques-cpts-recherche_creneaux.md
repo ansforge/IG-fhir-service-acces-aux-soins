@@ -1,7 +1,6 @@
 <!-- Recherche des créneaux -->
 ### Caractéristiques de l'API
-Cette requête s'appuie sur le flux 3A du volet d'agenda partagé du **CI-SIS volet Gestion Agenda Partagés** :  
-<https://interop.esante.gouv.fr/ig/fhir/gap/flux-gestion-dispo.html#flux-3a%E2%80%94cr%C3%A9ation-de-disponibilit%C3%A9s>  
+Cette requête s'appuie sur le flux 3A du volet d'agenda partagé du [CI-SIS volet Gestion Agenda Partagés](https://esante.gouv.fr/sites/default/files/media_entity/documents/CISIS-TEC_SPECIFICATIONS_TECHNIQUES-GESTION_AGENDAS_PARTAGES_V1.0.pdf).  
 
 <table>
 <tbody>
