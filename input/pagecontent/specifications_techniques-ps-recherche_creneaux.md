@@ -1,7 +1,7 @@
 <!-- Recherche des créneaux -->
 ### Caractéristiques de l'API
-Cette requête s'appuie sur le flux 3A du volet d'agenda partagé du **CI-SIS volet Gestion d'Agenda Partagés**.  
-https://interop.esante.gouv.fr/ig/fhir/gap/flux-gestion-dispo.html#flux-3a---cr%C3%A9ation-de-disponibilit%C3%A9s  
+Cette requête s'appuie sur le flux 3A du volet d'agenda partagé du **CI-SIS volet Gestion Agenda Partagés** :  
+<https://interop.esante.gouv.fr/ig/fhir/gap/flux-gestion-dispo.html#flux-3a%E2%80%94cr%C3%A9ation-de-disponibilit%C3%A9s>  
 
 <table>
 <tbody>
@@ -79,7 +79,7 @@ Remarque : la recherche est un succès à partir du moment où la requête
 peut être exécutée. Il peut il y avoir 0 à n correspondances.
 
 Plus de précision sur la spécification FHIR :
-https://www.hl7.org/fhir/http.html
+<https://www.hl7.org/fhir/http.html>
 
 #### Réponse de base -- Echec
 

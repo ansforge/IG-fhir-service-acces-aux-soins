@@ -10,7 +10,7 @@ urn:oid:1.2.250.1.71.4.2.2 = IDNST
 
 #### Quels codes sont attendus afin de décrire le type d'identifiant de professionnel (élément `identifier.type.coding.code` des ressources `Practitioner`), ou de structure (élément `organization.identifier.type.coding.code` des ressources `Location`), transmis ?
 
-Les valeurs IDNPS (ID National de PS) et IDNST (ID National de STructure), présentes dans la nomenclature http://interopsante.org/fhir/CodeSystem/fr-v2-0203 sont attendues.
+Les valeurs IDNPS (ID National de PS) et IDNST (ID National de STructure), présentes dans la nomenclature <http://interopsante.org/fhir/CodeSystem/fr-v2-0203> sont attendues.
 
 #### Quels champs de l'élément identifier des ressources `FrLocation` et `FrPractitioner` sont obligatoires ?
 
@@ -106,7 +106,7 @@ Les éditeurs ont la possibilité de récupérer les référentiels nationaux de
   <td>
     <p><strong>Par la récupération via une API mise à disposition par l'ANS</strong><br>
     Une API en libre accès, permettant d'exposer les données des référentiels Personnes physiques/Personnes morales au format JSON, structurés selon la norme d'interopérabilité FHIR est mise à disposition avec la documentation associée ci-dessous :<br>
-    https://ansforge.github.io/annuaire-sante-fhir-documentation/
+    <https://ansforge.github.io/annuaire-sante-fhir-documentation/>
     </p>
   </td>
 </tr>

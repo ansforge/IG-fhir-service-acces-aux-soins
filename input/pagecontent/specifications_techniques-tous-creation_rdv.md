@@ -66,7 +66,7 @@ Si la création est un succès, le serveur répond :
 -   Un header Location incluant l'ID de la ressource créée par le serveur `Location: [base]/Appointment/12345`
 
 Plus de précision sur la spécification FHIR :
-https://www.hl7.org/fhir/http.html
+<https://www.hl7.org/fhir/http.html>
 
 #### Réponse de base -- Echec
 

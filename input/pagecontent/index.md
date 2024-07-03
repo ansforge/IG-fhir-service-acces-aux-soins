@@ -9,7 +9,7 @@ Pour le patient confronté à un besoin de soins non programmés et lorsque l'ac
 Pour le patient orienté vers la filière de ville, les acteurs de la chaîne de régulation médicale du SAS peuvent s’appuyer sur la plateforme numérique, afin de :
 - Visualiser les créneaux disponibles des effecteurs de soin,
 - Réserver pour le patient une consultation de soin non programmé, au plus proche de ses besoins (localisation, horaire, spécialité).
-Plus d'information sur le site dédié du ministère https://esante.gouv.fr/sas
+Plus d'information sur le site dédié du ministère : <https://esante.gouv.fr/sas>.
 
 ### Contexte technique
 L'objectif de ce projet est de définir les profils qui doivent être implémentés par les éditeurs de solution de prise de rendez-vous en ligne pour exposer les créneaux disponibles et informer la plateforme des rendez-vous pris.
