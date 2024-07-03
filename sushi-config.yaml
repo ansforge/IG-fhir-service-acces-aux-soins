@@ -25,17 +25,17 @@ pages:
     index.md:
         title: Accueil
     specifications_fonctionnelles.md:
-        title: Spécifications fonctionnelles
-    specifications_techniques_1.md:
-        title: Recherche des créneaux
-    specifications_techniques_2.md:
-        title: Création de rendez-vous
-    specifications_techniques_3.md:
-        title: Mise à jour de rendez-vous
-    ressources_casusages.md:
-        title: Ressources par cas d'usage    
-    ressources.md:
-        title: Ressources de conformité
+        title: Spécif. fonctionnelles
+    specifications_techniques-ps-recherche_creneaux.md:
+        title: 01 - PS - Recherche des créneaux
+    specifications_techniques-cpts-recherche_creneaux.md:
+        title: 02 - CPTS - Recherche des créneaux
+    specifications_techniques-tous-creation_rdv.md:
+        title: 11 - Tous - Création de rendez-vous
+    specifications_techniques-tous-maj_rdv.md:
+        title: 12 - Tous - Mise à jour de rendez-vous
+    ressources_casusage.md:
+        title: Ressources par cas d'usage
     autres_ressources.md:
         title: Autres Ressources
         securite.md:
@@ -49,18 +49,19 @@ pages:
 
 menu:
     Accueil: index.html
-    Spécifications fonctionnelles: specifications_fonctionnelles.html
-    Spécifications techniques: 
-        Recherche des créneaux: specifications_techniques_1.html
-        Création de rendez-vous: specifications_techniques_2.html
-        Mise à jour de rendez-vous: specifications_techniques_3.html
-    Ressources par cas d'usage: ressources_casusages.html 
+    Spécif. fonctionnelles: specifications_fonctionnelles.html
+    Spécif. techniques: 
+        01 - PS - Recherche des créneaux: specifications_techniques-ps-recherche_creneaux.html
+        02 - CPTS - Recherche des créneaux: specifications_techniques-cpts-recherche_creneaux.html
+        11 - Tous - Création de rendez-vous: specifications_techniques-tous-creation_rdv.html
+        12 - Tous - Mise à jour de rendez-vous: specifications_techniques-tous-maj_rdv.html
+    Ressources par cas d'usage: ressources_casusage.html 
     Ressources de conformité: artifacts.html
     Autres ressources:
         Sécurité: securite.html
         FAQ: faq.html
         Annexes: annexes.html
         Téléchargements et usage: downloads.html
-        "Spécifications FHIR ": new-tab {{site.data.fhir.path}}index.html
-        "Site de l'ANS ": new-tab https://esante.gouv.fr/
+        Spécifications FHIR: new-tab {{site.data.fhir.path}}index.html
+        Site de l'ANS: new-tab https://esante.gouv.fr/
     Documentation: new-tab https://interop.esante.gouv.fr/ig/documentation/

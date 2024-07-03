@@ -1,6 +1,6 @@
 <!-- Recherche des créneaux -->
 ### Caractéristiques de l'API
-Cette requête s'appuie sur le flux 3A du volet d'agenda partagé du CI-SIS.
+Cette requête s'appuie sur le flux 3A du volet d'agenda partagé du [CI-SIS volet Gestion Agenda Partagés](https://esante.gouv.fr/sites/default/files/media_entity/documents/CISIS-TEC_SPECIFICATIONS_TECHNIQUES-GESTION_AGENDAS_PARTAGES_V1.0.pdf).  
 
 <table>
 <tbody>
@@ -78,7 +78,7 @@ Remarque : la recherche est un succès à partir du moment où la requête
 peut être exécutée. Il peut il y avoir 0 à n correspondances.
 
 Plus de précision sur la spécification FHIR :
-https://www.hl7.org/fhir/http.html
+<https://www.hl7.org/fhir/http.html>
 
 #### Réponse de base -- Echec
 
@@ -148,7 +148,90 @@ Par ailleurs, en complément des ressources Slot, afin de récupérer l'ensemble
 - `_include=Slot:schedule` indique qu'il est nécessaire de transmettre les ressources Schedule associées aux Slot. La présence de cette ressource est nécessaire pour permettre de faire le lien entre le créneau (Slot) et les ressources Practitioner et PractitionerRole associées.
 - `_include:iterate=Schedule:actor` indique qu'il est nécessaire de transmettre les ressources actor référencées dans les ressources Schedule transmises. En particulier, les ressources Practitioner et PractitionerRole (incluant la ressource Location dans une élément "contained") sont attendues.
 
+### Nomenclatures
+
+Cette section détaille les nomenclatures à utiliser afin de renseigner les différents éléments codifiés de la réponse.
+- **ID : 3 – Statut du créneau :**
+  - L'utilisation de la nomenclature standard slotstatus (<http://hl7.org/fhir/R4/valueset-slotstatus.html>) est attendue. Cependant, la plateforme numérique SAS ne récupérant que des créneaux disponibles, ce champ aura systématiquement la valeur `free`.
+- **ID : 13 – Spécialités ou compétences particulières du PS associées au créneau :**
+  - Dans le cadre du profil FrSlot, l'élément specialty est lié à la nomenclature des spécialités ordinales du MOS (<https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale/>). La plateforme numérique SAS sera cependant en mesure de traiter d'autres compétences ou spécialités transmises sous la forme d'une donnée structurée au sein de l'élément `coding`, ou sous la forme d’un texte libre au niveau de l'élément `text`.
+- **ID : 14 – Type de créneau :**
+  - Afin de répondre aux besoins de la plateforme numérique SAS, une nomenclature dédiée a été mise en oeuvre (<https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau>). 3 types de créneaux sont présentés ci-dessous. A noter qu'un créneau peut porter une combinaison de ces valeurs :
+    - PUBLIC – Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible par le grand public
+    - PRO – Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible à l'ensemble des PS
+    - SNP – Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible par les Régulateurs et OSNP
+- **ID : 15 – Type de consultation :**
+  - L'utilisation de la nomenclature standard ActEncounterCode (<https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html>) est attendue. Cette nomenclature contient différentes notions, cependant, la plateforme numérique SAS gère les 3 types de créneaux ci-dessous. A noter qu'un créneau peut porter une combinaison de ces valeurs :
+    - AMB – Consultation au cabinet
+    - HH – Consultation à domicile
+    - VR – Téléconsultation
+- **ID : 17 – URL de redirection pour la prise de RDV :**
+  - Il est attendu l'URL de redirection vers l'agenda du PS concerné. Si l'utilisateur vient du SAS et n'est pas authentifié, il est demandé de le rediriger vers la page d'authentification de la solution éditeur avant d'accéder à l'agenda du PS. Afin de faciliter l'implémentation de la règle métier, la PTF numérique SAS ajoute un paramètre `origin` à l'URL transmise par l'éditeur au moment de la redirection pour identifier la provenance.
+- **ID : 18 – Créneau avec ou sans RDV :**
+  - L'utilisation de la nomenclature standard AppointmentReasonCodes (<https://www.hl7.org/fhir/v2/0276/index.html>) est attendue. Cette nomenclature contient différentes notions, cependant, la plateforme numérique SAS gère les 2 valeurs ci-dessous :
+    - ROUTINE – Créneau avec prise de RDV possible.
+    - WALKIN – Créneau sans prise de RDV possible
+
+### Validateur ressources
+Le validateur mis à disposition des développeurs dans le cadre du projet SAS offre la possibilité tester le format des bundles de réponse générés. Il permet de vérifier que les réponses sont correctement formatées, que l'ensemble des informations obligatoires sont bien présentes et que les données codifiées exploitent les bonnes nomenclatures.
+Pour que le validateur puisse effectuer correctement les contrôles au niveau de la structure, il est nécessaire de renseigner pour chacun des "resourceType" correspondant, le meta.profile "URL" ci-dessous :
+- http://sas.fr/fhir/StructureDefinition/BundleAgregateur
+- http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur
+- http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur
+- http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur
+- http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur
+- http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur
+
+Ci-dessous un exemple :
+
+```
+"resourceType": "Bundle",
+"id": "8cbb33dc-779e-45e9-a5f6-ea66101288c5",
+"meta": {
+  "profile": [
+    "http://sas.fr/fhir/StructureDefinition/BundleAgregateur"
+  ]
+},
+```
+
+Le validateur est disponible sur l'espace de test de l'ANS : <https://interop.esante.gouv.fr/evs/fhir/validator.seam?standard=37>. Pour faciliter les tests et conserver l'historique, nous vous recommandons de créer votre compte sur la plateforme.
+Afin de tester un fichier, il suffit de sélectionner le format `JSON`, d'ajouter le fichier via le bouton `Add…`, de sélectionner le modèle `FrBundleAgregateurSAS` puis de cliquer sur `valider` :
+
+<table align="center">
+    <tr>
+        <td align ="center">
+            <div class="figure">
+                <img src="validateur_creneaux-PS_1.png" alt="Accès au validateur agrégateur de créneaux" title="Accès au validateur agrégateur de créneaux">
+            </div>
+        </td>    
+    </tr>
+    <tr>
+        <td align ="center">
+            <b>Figure 1 - Accès au validateur agrégateur de créneaux</b>
+        </td>
+    </tr>
+</table>
+
+Vous obtiendrez alors un rapport de test mettant en valeur les erreurs bloquantes et les différents warnings :
+
+<table align="center">
+    <tr>
+        <td align ="center">
+            <div class="figure">
+                <img src="validateur_creneaux-PS_2.png" alt="Rapport validateur agrégateur de créneaux" title="Rapport validateur agrégateur de créneaux">
+            </div>
+        </td>    
+    </tr>
+    <tr>
+        <td align ="center">
+            <b>Figure 2 - Rapport validateur agrégateur de créneaux</b>
+        </td>
+    </tr>
+</table>
+
 ### Exemple de requête
+
+La requête ci-dessous correspond à une recherche de créneaux disponibles entre le 02 janvier 2021 à 10h et le 06 janvier 2021 à 10h pour les PS correspondant aux RPPS préfixés : 810101288385, 800001288385 ou 810106738385.
 
 **Requête :**
 
@@ -156,7 +239,9 @@ Par ailleurs, en complément des ressources Slot, afin de récupérer l'ensemble
 
 **Réponse simplifiée :**
 
-```
+<details>
+  <summary>Déplier pour accéder au détail de l'exemple de réponse simplifiée</summary>
+  <pre>
 HTTP 200 OK
   resourceType: Bundle
   type: searchset
@@ -177,10 +262,11 @@ HTTP 200 OK
   Schedule4
   Practitioner4
   PractitionerRole4
+  </pre>
+</details>
+<br>
 
-```
-
-**Corps de la réponse complète :**
+**Corps de la réponse complète :**
 
 La réponse ci-dessous correspond à :
 1. 2 créneaux disponibles pour Docteur Sébastien THOMAS (RPPS : 810100050075)
@@ -210,7 +296,9 @@ La réponse ci-dessous correspond à :
     - Pour le motif `Visite de contrôle` et `Consultation de suivi pneumologique`
     - Les spécialités non codifiées associées sont `Pneumologie` et `Médecine générale (polyvalente)`
 
-```
+<details>
+  <summary>Déplier pour accéder au détail de l'exemple de réponse complète au format json</summary>
+  <pre>
 {
   "resourceType": "Bundle",
   "id": "8cbb33dc-779e-45e9-a5f6-ea66101288c5",
@@ -806,5 +894,7 @@ La réponse ci-dessous correspond à :
     }
   ]
 }
+  </pre>
+</details>
+<br><br>
 
-```
