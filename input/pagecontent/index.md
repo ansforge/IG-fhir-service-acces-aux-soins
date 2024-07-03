@@ -2,14 +2,6 @@
     <img style="height: auto; width: 100%;" src="sas_logo.png" alt="Service d'Accès aux Soins (SAS)" title="Logo SAS">
 </div>
 
-<blockquote class="stu-note">
-<p>
-  <b>Attention !</b>
-  <br>
- Cet Implementation Guide est actuellement en mode draft
-</p>
-</blockquote>
-
 ### Contexte métier
 
 Pour le patient confronté à un besoin de soins non programmés et lorsque l'accès à son médecin traitant n'est pas possible, le Service d'Accès aux Soins (SAS) doit permettre d'accéder, à toute heure et à distance à un professionnel de santé. Ce dernier pourra lui fournir un conseil médical, l'orienter selon la situation vers une consultation de soin non programmé en ville, vers un service d'urgence ou déclencher l'intervention d'un SMUR.
