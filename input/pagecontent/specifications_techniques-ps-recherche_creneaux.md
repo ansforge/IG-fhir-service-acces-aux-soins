@@ -296,6 +296,6 @@ La réponse ci-dessous correspond à :
     - Pour le motif `Visite de contrôle` et `Consultation de suivi pneumologique`
     - Les spécialités non codifiées associées sont `Pneumologie` et `Médecine générale (polyvalente)`
 
-<iframe src="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition-BundleAgregateur.json" width="100%" height="300" frameborder="1" scrolling="yes"></iframe>
+<iframe src="https://ansforge.github.io/IG-fhir-service-acces-aux-soins/feature/embed-examples/ig/StructureDefinition-BundleAgregateur.json" width="100%" height="300" frameborder="1" scrolling="yes"></iframe>
 <br><br>
 
