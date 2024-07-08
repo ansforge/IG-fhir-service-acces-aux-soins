@@ -1,0 +1,65 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://hl7.org/fhir/participationstatus",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ParticipationStatus",
+      "title" : "ParticipationStatus",
+      "description" : "The Participation status of an appointment.",
+      "oids" : ["2.16.840.1.113883.4.642.4.487"],
+      "uses" : {
+      },
+      "ValueSet-sas-sos-valueset-participant-status.html" : "Statut participant SAS SOS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/slotstatus",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SlotStatus",
+      "title" : "SlotStatus",
+      "description" : "The free/busy status of the slot.",
+      "oids" : ["2.16.840.1.113883.4.642.4.483"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-slotstatus.html" : "SlotStatus"
+    },
+    {
+      "url" : "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
+      "version" : "1.0.1",
+      "status" : "draft",
+      "name" : "fr-v2-0203",
+      "title" : null,
+      "description" : "HL7 v2 - Identifier type",
+      "uses" : {
+      },
+      "ValueSet-sas-valueset-typeidentifiant.html" : "Type identifiant SAS"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/v2-0276",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "AppointmentReason",
+      "title" : "appointmentReason",
+      "description" : "Code system of concepts used to describe the kind of appointment or the reason why an appointment has been scheduled.  Used in HL7 Version 2.x messaging in the ARQ segment.",
+      "oids" : ["2.16.840.1.113883.18.169"],
+      "uses" : {
+      },
+      "ValueSet-sas-valueset-appointmentreason.html" : "Appointment reason SAS",
+      "http://terminology.hl7.org/5.5.0/ValueSet-v2-0276.html" : "hl7VS-appointmentReasonCodes"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "version" : "9.0.0",
+      "status" : "active",
+      "name" : "ActCode",
+      "title" : "ActCode",
+      "description" : "A code specifying the particular kind of Act that the Act-instance represents within its class.\r\n\r\n*Constraints:* The kind of Act (e.g. physical examination, serum potassium, inpatient encounter, charge financial transaction, etc.) is specified with a code from one of several, typically external, coding systems. The coding system will depend on the class of Act, such as LOINC for observations, etc.\r\n\r\nConceptually, the Act.code must be a specialization of the Act.classCode. This is why the structure of ActClass domain should be reflected in the superstructure of the ActCode domain and then individual codes or externally referenced vocabularies subordinated under these domains that reflect the ActClass structure.\r\n\r\nAct.classCode and Act.code are not modifiers of each other but the Act.code concept should really imply the Act.classCode concept. For a negative example, it is not appropriate to use an Act.code \"potassium\" together with and Act.classCode for \"laboratory observation\" to somehow mean \"potassium laboratory observation\" and then use the same Act.code for \"potassium\" together with Act.classCode for \"medication\" to mean \"substitution of potassium\". This mutually modifying use of Act.code and Act.classCode is not permitted.",
+      "oids" : ["2.16.840.1.113883.5.4"],
+      "uses" : {
+      },
+      "ValueSet-sas-valueset-typeconsultation.html" : "Type consultation SAS",
+      "http://terminology.hl7.org/5.5.0/ValueSet-v3-ActEncounterCode.html" : "ActEncounterCode"
+    }
+  ]
+}
