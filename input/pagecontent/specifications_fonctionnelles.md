@@ -69,7 +69,7 @@ Au niveau de la structure de réponse, 1 à n créneaux de consultation CPTS (Sl
 
 Le schéma ci-dessous présente une synthèse de la structure attendue :
 
-<div class="figure" style="width:100%;">
+<div class="figure" style="width:100%;" align ="center">
     <p>{% include ressources-exploitees-fhir.svg %}</p>
 </div>
 
