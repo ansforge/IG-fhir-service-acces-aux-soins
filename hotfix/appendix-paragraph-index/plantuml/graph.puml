@@ -1,0 +1,351 @@
+@startuml
+set namespaceSeparator ?
+hide circle
+hide class fields
+
+package IG #DDDDDD{
+
+     package Profiles #DDDDDD{
+
+        class BundleAgregateur{
+
+             Bundle.type => [None..None]
+             Bundle.entry => [None..None]
+             Bundle.entry:FrSlotAgregateur => [0..*]
+             Bundle.entry:FrSlotAgregateur.resource => [None..None]
+             Bundle.entry:FrScheduleAgregateur => [0..*]
+             Bundle.entry:FrScheduleAgregateur.resource => [None..None]
+             Bundle.entry:FrPractitionerAgregateur => [0..*]
+             Bundle.entry:FrPractitionerAgregateur.resource => [None..None]
+             Bundle.entry:FrPractitionerRoleExerciceAgregateur => [0..*]
+             Bundle.entry:FrPractitionerRoleExerciceAgregateur.resource => [None..None]
+        } 
+
+        class FrAppointmentSAS{
+
+             Appointment => [None..None]
+             Appointment.extension => [1..None]
+             Appointment.extension:appointmentOperator => <&plus>[1..None]
+             Appointment.extension:appointmentOperator.extension => <&plus>[None..0]
+             Appointment.extension:appointmentOperator.value[x] => <&plus>[1..None]
+             Appointment.extension:appointmentOperator.value[x]:valueReference => <&plus>[1..None]
+             Appointment.extension:appointmentOperator.value[x]:valueReference.identifier => <&plus>[1..None]
+             Appointment.extension:appointmentOperator.value[x]:valueReference.identifier.type => <&plus>[1..None]
+             Appointment.extension:appointmentOperator.value[x]:valueReference.identifier.type.coding => <&plus>[1..1]
+             Appointment.extension:appointmentOperator.value[x]:valueReference.identifier.type.coding.system => <&plus>[1..None]
+             Appointment.extension:appointmentOperator.value[x]:valueReference.identifier.type.coding.code => <&plus>[1..None]
+             Appointment.extension:appointmentOperator.value[x]:valueReference.identifier.system => <&plus>[1..None]
+             Appointment.extension:appointmentOperator.value[x]:valueReference.identifier.value => <&plus>[1..None]
+             Appointment.identifier => [1..1]
+             Appointment.identifier.system => [1..None]
+             Appointment.identifier.value => [1..None]
+             Appointment.start => [1..None]
+             Appointment.end => [1..None]
+             Appointment.participant.actor.identifier.type => [1..None]
+             Appointment.participant.actor.identifier.type.coding => [1..1]
+             Appointment.participant.actor.identifier.system => [1..None]
+             Appointment.participant.actor.identifier.value => [1..None]
+             Appointment.participant.status => [None..None]
+        } 
+
+        class FrLocationAgregateur{
+
+             Location.address => [1..None]
+             Location.address.line => [1..1]
+             Location.address.city => [1..None]
+             Location.address.postalCode => [1..None]
+        } 
+
+        class FrPractitionerAgregateur{
+
+             Practitioner.identifier => [1..None]
+             Practitioner.identifier.type => [None..None]
+             Practitioner.identifier.type.coding => [None..1]
+             Practitioner.identifier.system => [None..None]
+             Practitioner.name.family => [None..None]
+             Practitioner.name.given => [None..None]
+        } 
+
+        class FrPractitionerRoleExerciceAgregateur{
+
+             PractitionerRole.contained => [1..None]
+             PractitionerRole.practitioner => [None..None]
+             PractitionerRole.organization.identifier => [None..None]
+             PractitionerRole.organization.identifier.type => [None..None]
+             PractitionerRole.organization.identifier.system => [None..None]
+             PractitionerRole.location => [1..1]
+        } 
+
+        class FrScheduleAgregateur{
+
+             Schedule.actor => [None..None]
+        } 
+
+        class FrSlotAgregateur{
+
+             Slot.meta.security => [None..None]
+             Slot.serviceType => [None..None]
+             Slot.serviceType:TypeConsultation => [0..*]
+             Slot.serviceType:TypeConsultation.coding.system => [1..None]
+             Slot.specialty => [None..None]
+             Slot.appointmentType => [None..None]
+             Slot.schedule => [None..None]
+             Slot.status => [None..None]
+             Slot.start => [None..None]
+             Slot.end => [None..None]
+             Slot.comment => [None..None]
+        } 
+
+        class BundleAgregateurCPTS{
+
+             Bundle.type => [None..None]
+             Bundle.total => [1..None]
+             Bundle.link => [1..1]
+             Bundle.entry => [4..None]
+             Bundle.entry:slotAgregateurCPTS => [1..*]
+             Bundle.entry:slotAgregateurCPTS.fullUrl => [1..None]
+             Bundle.entry:slotAgregateurCPTS.resource => [None..None]
+             Bundle.entry:scheduleAgregateurCPTS => [1..*]
+             Bundle.entry:scheduleAgregateurCPTS.fullUrl => [1..None]
+             Bundle.entry:scheduleAgregateurCPTS.resource => [None..None]
+             Bundle.entry:practitionerAgregateur => [1..*]
+             Bundle.entry:practitionerAgregateur.fullUrl => [1..None]
+             Bundle.entry:practitionerAgregateur.resource => [None..None]
+             Bundle.entry:practitionerRole => [1..*]
+             Bundle.entry:practitionerRole.fullUrl => [1..None]
+             Bundle.entry:practitionerRole.resource => [None..None]
+             Bundle.entry:healthcareserviceCPTS => [0..*]
+             Bundle.entry:healthcareserviceCPTS.fullUrl => [1..None]
+             Bundle.entry:healthcareserviceCPTS.resource => [None..None]
+             Bundle.entry:organizationAgregateurCPTS => [0..*]
+             Bundle.entry:organizationAgregateurCPTS.fullUrl => [1..None]
+             Bundle.entry:organizationAgregateurCPTS.resource => [None..None]
+        } 
+
+        class FrHealthcareServiceAgregateurCPTS{
+
+             HealthcareService.id => [1..None]
+             HealthcareService.providedBy => [1..None]
+        } 
+
+        class FrOrganizationAgregateurCPTS{
+
+             Organization.identifier => [1..1]
+             Organization.identifier.type => [None..None]
+             Organization.identifier.system => [None..None]
+             Organization.name => [None..None]
+             Organization.telecom => [None..None]
+        } 
+
+        class FrSlotAgregateurCPTS{
+
+             Slot.meta.security => [None..None]
+             Slot.serviceType => [None..None]
+             Slot.serviceType.extension:sas-servicetype-r5 => <&plus>[0..1]
+             Slot.serviceType:TypeConsultation => [0..*]
+             Slot.serviceType:TypeConsultation.extension:sas-servicetype-r5 => <&plus>[0..0]
+             Slot.serviceType:TypeConsultation.coding.system => [None..None]
+             Slot.serviceType:referencecpts => [0..*]
+             Slot.serviceType:referencecpts.extension => [1..None]
+             Slot.serviceType:referencecpts.extension:sas-servicetype-r5 => <&plus>[1..1]
+             Slot.serviceType:referencecpts.extension:sas-servicetype-r5.value[x] => <&plus>[None..None]
+             Slot.appointmentType.coding => [None..None]
+             Slot.schedule => [None..None]
+             Slot.status => [None..None]
+        } 
+
+        class FrAppointmentSASSOS{
+
+             Appointment => [None..None]
+             Appointment.extension => [1..1]
+             Appointment.extension:appointmentOperator => <&plus>[1..None]
+             Appointment.extension:appointmentOperator.extension => <&plus>[None..0]
+             Appointment.extension:appointmentOperator.value[x] => <&plus>[None..None]
+             Appointment.extension:appointmentOperator.value[x]:valueReference => <&plus>[None..None]
+             Appointment.extension:appointmentOperator.value[x]:valueReference.identifier.type => <&plus>[1..None]
+             Appointment.extension:appointmentOperator.value[x]:valueReference.identifier.type.coding => <&plus>[1..1]
+             Appointment.extension:appointmentOperator.value[x]:valueReference.identifier.type.coding.code => <&plus>[1..None]
+             Appointment.extension:appointmentOperator.value[x]:valueReference.identifier.system => <&plus>[1..None]
+             Appointment.extension:appointmentOperator.value[x]:valueReference.identifier.value => <&plus>[1..None]
+             Appointment.identifier => [1..1]
+             Appointment.identifier.system => [1..None]
+             Appointment.identifier.value => [1..None]
+             Appointment.start => [1..None]
+             Appointment.end => [1..None]
+             Appointment.participant.status => [None..None]
+        } 
+
+        class BundleAgregateurSOS{
+
+             Bundle.type => [None..None]
+             Bundle.total => [1..None]
+             Bundle.link => [1..1]
+             Bundle.entry => [4..None]
+             Bundle.entry:slotAgregateurSOS => [1..*]
+             Bundle.entry:slotAgregateurSOS.fullUrl => [1..None]
+             Bundle.entry:slotAgregateurSOS.resource => [None..None]
+             Bundle.entry:scheduleAgregateurSOS => [1..*]
+             Bundle.entry:scheduleAgregateurSOS.fullUrl => [1..None]
+             Bundle.entry:scheduleAgregateurSOS.resource => [None..None]
+             Bundle.entry:locationAgregateurSOS => [1..*]
+             Bundle.entry:locationAgregateurSOS.fullUrl => [1..None]
+             Bundle.entry:locationAgregateurSOS.resource => [None..None]
+             Bundle.entry:organizationAgregateurSOS => [1..*]
+             Bundle.entry:organizationAgregateurSOS.fullUrl => [1..None]
+             Bundle.entry:organizationAgregateurSOS.resource => [None..None]
+        } 
+
+        class FrLocationAgregateurSOS{
+
+             Location.identifier.type => [None..None]
+             Location.name => [1..None]
+             Location.address => [1..None]
+             Location.address.line => [1..1]
+             Location.address.city => [1..None]
+             Location.address.postalCode => [1..None]
+             Location.managingOrganization => [1..None]
+             Location.managingOrganization.reference => [1..None]
+        } 
+
+        class FrOrganizationAgregateurSOS{
+
+             Organization.identifier => [1..1]
+             Organization.identifier.type => [None..None]
+             Organization.identifier.system => [None..None]
+        } 
+
+        class FrScheduleAgregateurSOS{
+
+             Schedule.actor => [None..None]
+             Schedule.actor.reference => [1..None]
+        } 
+
+        class FrSlotAgregateurSOS{
+
+             Slot.meta.security => [None..None]
+             Slot.serviceType.coding => [None..None]
+             Slot.appointmentType.coding => [None..None]
+             Slot.schedule => [None..None]
+             Slot.status => [None..None]
+         }
+
+     }
+     package extension #paleturquoise {
+
+     FrSlotAgregateurCPTS -[#black,dashed,thickness=2]-> SASServiceTypeR5
+     FrSlotAgregateurCPTS -[#black,dashed,thickness=2]-> SASServiceTypeR5
+     FrSlotAgregateurCPTS -[#black,dashed,thickness=2]-> SASServiceTypeR5
+
+        class SASServiceTypeR5{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+         }
+     }
+     package valueset #PaleVioletRed{
+
+        class TypeCreneauSASCPTS  
+
+     FrSlotAgregateurCPTS -[#black,dotted,thickness=2]-> TypeCreneauSASCPTS
+
+        class CategorieEtablissementSAS  
+
+     FrSlotAgregateurCPTS -[#black,dotted,thickness=2]-> CategorieEtablissementSAS
+
+        class AppointmentReasonSAS  
+
+     FrSlotAgregateurCPTS -[#black,dotted,thickness=2]-> AppointmentReasonSAS
+
+        class TypeIdentifiantSAS  
+
+     FrAppointmentSASSOS -[#black,dotted,thickness=2]-> TypeIdentifiantSAS
+
+        class ParticipantStatusSASSOS  
+
+     FrAppointmentSASSOS -[#black,dotted,thickness=2]-> ParticipantStatusSASSOS
+
+        class TypeCreneauSASSOS  
+
+     FrSlotAgregateurSOS -[#black,dotted,thickness=2]-> TypeCreneauSASSOS
+
+        class TypeConsultationSAS  
+
+     FrSlotAgregateurSOS -[#black,dotted,thickness=2]-> TypeConsultationSAS
+
+        class AppointmentReasonSAS  
+
+     FrSlotAgregateurSOS -[#black,dotted,thickness=2]-> AppointmentReasonSAS
+       }
+
+package "Ressources de base" #palegreen {
+
+ class "Bundle" as  class94c51f19c37f96ed231f5a0ae512b2a8 
+
+    class94c51f19c37f96ed231f5a0ae512b2a8 --> BundleAgregateur
+
+ class "http://interopsante.org/fhir/StructureDefinition/FrAppointment" as  class659762428c9192e4f39a709a90b89755 
+
+    class659762428c9192e4f39a709a90b89755 --> FrAppointmentSAS
+
+ class "http://interopsante.org/fhir/StructureDefinition/FrLocation" as  class98c716d0a783586b61bf924a0c5553ee 
+
+    class98c716d0a783586b61bf924a0c5553ee --> FrLocationAgregateur
+
+ class "http://interopsante.org/fhir/StructureDefinition/FrPractitioner" as  class9c7338635efde0683609aa872d6f0df2 
+
+    class9c7338635efde0683609aa872d6f0df2 --> FrPractitionerAgregateur
+
+ class "http://interopsante.org/fhir/StructureDefinition/FrPractitionerRoleExercice" as  class73920bd04935d0e883dcf7188fa9fd22 
+
+    class73920bd04935d0e883dcf7188fa9fd22 --> FrPractitionerRoleExerciceAgregateur
+
+ class "http://interopsante.org/fhir/StructureDefinition/FrSchedule" as  classb622660bfabd924a2e1a86fb95e2ca04 
+
+    classb622660bfabd924a2e1a86fb95e2ca04 --> FrScheduleAgregateur
+
+ class "http://interopsante.org/fhir/StructureDefinition/FrSlot" as  class86363a39b418154a968adc9b5da3fe9c 
+
+    class86363a39b418154a968adc9b5da3fe9c --> FrSlotAgregateur
+
+ class "Bundle" as  class94c51f19c37f96ed231f5a0ae512b2a8 
+
+    class94c51f19c37f96ed231f5a0ae512b2a8 --> BundleAgregateurCPTS
+
+ class "http://interopsante.org/fhir/StructureDefinition/FrHealthcareService" as  class5d328cad2fd8b92e4c266f5123e4a872 
+
+    class5d328cad2fd8b92e4c266f5123e4a872 --> FrHealthcareServiceAgregateurCPTS
+
+ class "http://interopsante.org/fhir/StructureDefinition/FrOrganization" as  class8851530b55b5391f2e88430de6209c3c 
+
+    class8851530b55b5391f2e88430de6209c3c --> FrOrganizationAgregateurCPTS
+
+ class "http://interopsante.org/fhir/StructureDefinition/FrSlot" as  class86363a39b418154a968adc9b5da3fe9c 
+
+    class86363a39b418154a968adc9b5da3fe9c --> FrSlotAgregateurCPTS
+
+ class "http://interopsante.org/fhir/StructureDefinition/FrAppointment" as  class659762428c9192e4f39a709a90b89755 
+
+    class659762428c9192e4f39a709a90b89755 --> FrAppointmentSASSOS
+
+ class "Bundle" as  class94c51f19c37f96ed231f5a0ae512b2a8 
+
+    class94c51f19c37f96ed231f5a0ae512b2a8 --> BundleAgregateurSOS
+
+ class "http://interopsante.org/fhir/StructureDefinition/FrLocation" as  class98c716d0a783586b61bf924a0c5553ee 
+
+    class98c716d0a783586b61bf924a0c5553ee --> FrLocationAgregateurSOS
+
+ class "http://interopsante.org/fhir/StructureDefinition/FrOrganization" as  class8851530b55b5391f2e88430de6209c3c 
+
+    class8851530b55b5391f2e88430de6209c3c --> FrOrganizationAgregateurSOS
+
+ class "http://interopsante.org/fhir/StructureDefinition/FrSchedule" as  classb622660bfabd924a2e1a86fb95e2ca04 
+
+    classb622660bfabd924a2e1a86fb95e2ca04 --> FrScheduleAgregateurSOS
+
+ class "http://interopsante.org/fhir/StructureDefinition/FrSlot" as  class86363a39b418154a968adc9b5da3fe9c 
+
+    class86363a39b418154a968adc9b5da3fe9c --> FrSlotAgregateurSOS
+}
+@enduml
