@@ -12,8 +12,14 @@ jobs:
         with:      
           path: igSource
 
-      - uses: ansforge/IG-workflows@v0.2.0
+      - name: Copy "all" to "use cases" specs
+        run: |
+          cp "./igSource/input/pagecontent/specifications_techniques-tous-creation_rdv.md" "./igSource/input/pagecontent/specifications_techniques-ps-creation_rdv.md"
+          cp "./igSource/input/pagecontent/specifications_techniques-tous-creation_rdv.md" "./igSource/input/pagecontent/specifications_techniques-cpts-creation_rdv.md"
+          cp "./igSource/input/pagecontent/specifications_techniques-tous-maj_rdv.md" "./igSource/input/pagecontent/specifications_techniques-ps-maj_rdv.md"
+          cp "./igSource/input/pagecontent/specifications_techniques-tous-maj_rdv.md" "./igSource/input/pagecontent/specifications_techniques-cpts-maj_rdv.md"
 
+      - uses: ansforge/IG-workflows@v0.2.0
         with:      
           bake: "true"
           nos: "true"
