@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Ressources par cas d&#39;usage - Service d'Accès aux Soins v1.0.0-ballot</title>
+    <title>PS - Création de rendez-vous - Service d'Accès aux Soins v1.0.0-ballot</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -41,8 +41,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"9"}
-    h3,h4,h5,h6{--heading-prefix:"9"}</style>
+    <style type="text/css">h2{--heading-prefix:"4"}
+    h3,h4,h5,h6{--heading-prefix:"4"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -170,15 +170,15 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Ressources par cas d'usage</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>PS - Création de rendez-vous</b></li>
 
           <span style="float:right;">
 
-            <a href="specifications_techniques-cpts-maj_rdv.html">&lt;prev</a> | 
+            <a href="specifications_techniques-ps-recherche_creneaux.html">&lt;prev</a> | 
 
             <a href="#bottom">bottom</a>
 
-          | <a href="autres_ressources.html">next&gt;</a>
+          | <a href="specifications_techniques-ps-maj_rdv.html">next&gt;</a>
 
           </span>
 
@@ -201,7 +201,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </style>
 <div class="col-12">
   <!--ReleaseHeader--><p id="publish-box">Service d'Accès aux Soins - Local Development build (v1.0.0-ballot) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/fhir/sas/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
-  <h2>Ressources par cas d&#39;usage</h2>
+  <h2>PS - Création de rendez-vous</h2>
   
 
 
@@ -218,64 +218,306 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#ps-à-titre-individuel" id="markdown-toc-ps-à-titre-individuel">PS à titre individuel</a></li>
-  <li><a href="#cpts" id="markdown-toc-cpts">CPTS</a></li>
-  <li><a href="#sos-médecins" id="markdown-toc-sos-médecins">SOS Médecins</a></li>
+  <li><a href="#caractéristiques-de-lapi" id="markdown-toc-caractéristiques-de-lapi">Caractéristiques de l’API</a></li>
+  <li><a href="#construction-de-la-requête-de-base" id="markdown-toc-construction-de-la-requête-de-base">Construction de la requête de base</a></li>
+  <li><a href="#construction-de-la-réponse-de-base" id="markdown-toc-construction-de-la-réponse-de-base">Construction de la réponse de base</a></li>
+  <li><a href="#exemple-de-requête" id="markdown-toc-exemple-de-requête">Exemple de requête</a></li>
+  <li><a href="#nomenclatures" id="markdown-toc-nomenclatures">Nomenclatures</a></li>
+  <li><a href="#validateur-ressources" id="markdown-toc-validateur-ressources">Validateur ressources</a></li>
 </ul>
 
 </div>
-<p>Liste des ressources à utiliser par cas d’usage</p>
+<!-- Création de rendez-vous -->
+<h3 id="caractéristiques-de-lapi">Caractéristiques de l’API</h3>
 
-<h3 id="ps-à-titre-individuel">PS à titre individuel</h3>
+<table>
+<tbody>
+<tr>
+  <td width="25%"><p><strong>Endpoint</strong></p></td>
+  <td><p>&nbsp;</p></td>
+</tr>
+<tr>
+  <td width="25%"><p><strong>Header</strong></p></td>
+  <td><p>Accept: application/json+fhir</p></td>
+</tr>
+<tr>
+  <td width="25%"><p><strong>Encodage</strong></p></td>
+  <td><p>UTF-8</p></td>
+</tr>
+<tr>
+  <td width="25%"><p><strong>Version FHIR</strong></p></td>
+  <td><p>4.0.1</p></td>
+</tr>
+<tr>
+  <td width="25%"><p><strong>Version package</strong></p></td>
+  <td><p>&nbsp;</p></td>
+</tr>
+<tr>
+  <td width="25%"><p><strong>Publication</strong></p></td>
+  <td><p>&nbsp;</p></td>
+</tr>
+</tbody>
+</table>
 
-<p>Liste des ressources (profils,paramètres de recherche, terminologies, exemples) à utiliser dans le cadre du cas d’usage PS à titre individuel (y compris les ressources communes aux autres cas d’usage)</p>
+<h3 id="construction-de-la-requête-de-base">Construction de la requête de base</h3>
 
-<table class="grid"><tr><td style="background-color: #eeeeee">Id</td><td style="background-color: #eeeeee">Type</td><td style="background-color: #eeeeee">Description</td></tr><tr><td><div><p><a href="Practitioner-ExamplePractitioner.html">ExamplePractitioner</a></p>
-</div></td><td>Practitioner</td><td> </td></tr><tr><td><div><p><a href="PractitionerRole-ExamplePractitionerRoleAgregateur.html">ExamplePractitionerRoleAgregateur</a></p>
-</div></td><td>PractitionerRole</td><td> </td></tr><tr><td><div><p><a href="Schedule-ExampleSchedule.html">ExampleSchedule</a></p>
-</div></td><td>Schedule</td><td> </td></tr><tr><td><div><p><a href="StructureDefinition-BundleAgregateur.html">BundleAgregateur</a></p>
-</div></td><td>StructureDefinition</td><td>Profil de Bundle qui représente le flux de réponse contenant les créneaux disponibles dans le cadre du service d'agrégation de créneaux de la plateforme SAS (Service d'accès aux soins)</td></tr><tr><td><div><p><a href="StructureDefinition-FrAppointmentSAS.html">FrAppointmentSAS</a></p>
-</div></td><td>StructureDefinition</td><td>Profil de Appointment, dérivé de FrAppointment, pour le cas d'usage prise de RDV de la plateforme SAS (Service d'accès aux soins)</td></tr><tr><td><div><p><a href="StructureDefinition-FrLocationAgregateur.html">FrLocationAgregateur</a></p>
-</div></td><td>StructureDefinition</td><td>Profil de Location, dérivé de FrLocation, pour le service d'agrégation de créneaux de la plateforme SAS (Service d'accès aux soins)</td></tr><tr><td><div><p><a href="StructureDefinition-FrPractitionerAgregateur.html">FrPractitionerAgregateur</a></p>
-</div></td><td>StructureDefinition</td><td>Profil de Practitioner, dérivé de FrPractitioner, pour le service d'agrégation de créneaux de la plateforme SAS (Service d'accès aux soins)</td></tr><tr><td><div><p><a href="StructureDefinition-FrPractitionerRoleExerciceAgregateur.html">FrPractitionerRoleExerciceAgregateur</a></p>
-</div></td><td>StructureDefinition</td><td>Profil de PractitionerRole, dérivé de FrPractitionerRoleExercice, pour le service d'agrégation de créneaux de la plateforme SAS (Service d'accès aux soins)</td></tr><tr><td><div><p><a href="StructureDefinition-FrScheduleAgregateur.html">FrScheduleAgregateur</a></p>
-</div></td><td>StructureDefinition</td><td>Profil de Schedule, dérivé de FrSchedule, pour le service d'agrégation de créneaux de la plateforme SAS (Service d'accès aux soins)</td></tr><tr><td><div><p><a href="StructureDefinition-FrSlotAgregateur.html">FrSlotAgregateur</a></p>
-</div></td><td>StructureDefinition</td><td>Profil de Slot, dérivé de FrSlot, pour le service d'agrégation de créneaux de la plateforme SAS (Service d'accès aux soins)</td></tr><tr><td><div><p><a href="ValueSet-sas-valueset-appointmentreason.html">sas-valueset-appointmentreason</a></p>
-</div></td><td>ValueSet</td><td>Appointment reason SAS</td></tr><tr><td><div><p><a href="ValueSet-sas-valueset-categorieetablissement.html">sas-valueset-categorieetablissement</a></p>
-</div></td><td>ValueSet</td><td>Catégorie d'établissement utilisée dans contexte SAS - CPTS dans un premier temps</td></tr><tr><td><div><p><a href="ValueSet-sas-valueset-typeconsultation.html">sas-valueset-typeconsultation</a></p>
-</div></td><td>ValueSet</td><td>Type de consultations SAS</td></tr><tr><td><div><p><a href="ValueSet-sas-valueset-typeidentifiant.html">sas-valueset-typeidentifiant</a></p>
-</div></td><td>ValueSet</td><td>Type d'identifiant SAS</td></tr></table>
+<table>
+<tbody>
+<tr>
+  <td width="25%"><p><strong>Interaction FHIR</strong></p></td>
+  <td><p>Create<a href="#_ftn1" name="_ftnref1">[1]</a></p></td>
+</tr>
+<tr>
+  <td width="25%"><p><strong>Méthode http associée</strong></p></td>
+  <td><p>POST</p></td>
+</tr>
+<tr>
+  <td width="25%"><p><strong>Ressource créée</strong></p></td>
+  <td><p>Appointment</p></td>
+</tr>
+<tr>
+  <td width="25%"><p><strong>Construction requête de base</strong></p></td>
+  <td><p><code>POST[base]/Appointment{?_format=[mime-type]}</code></p></td>
+</tr>
+</tbody>
+</table>
+<p><a href="#_ftnref1" name="_ftn1">[1]</a> <a href="https://www.hl7.org/fhir/http.html#create">https://www.hl7.org/fhir/http.html#create</a> et <a href="https://www.hl7.org/fhir/http.html#general">https://www.hl7.org/fhir/http.html#general</a></p>
 
-<h3 id="cpts">CPTS</h3>
+<h3 id="construction-de-la-réponse-de-base">Construction de la réponse de base</h3>
 
-<p>Liste des ressources (profils,paramètres de recherche, terminologies, exemples) à utiliser dans le cadre du cas d’usage CPTS</p>
+<h4 id="réponse-de-base--succès">Réponse de base – Succès</h4>
 
-<table class="grid"><tr><td style="background-color: #eeeeee">Id</td><td style="background-color: #eeeeee">Type</td><td style="background-color: #eeeeee">Description</td></tr><tr><td><div><p><a href="Bundle-ExampleBundleCPTS.html">ExampleBundleCPTS</a></p>
-</div></td><td>Bundle</td><td> </td></tr><tr><td><div><p><a href="HealthcareService-ExampleHealthcareServiceCPTS.html">ExampleHealthcareServiceCPTS</a></p>
-</div></td><td>HealthcareService</td><td> </td></tr><tr><td><div><p><a href="Organization-ExampleOrgaCPTS.html">ExampleOrgaCPTS</a></p>
-</div></td><td>Organization</td><td> </td></tr><tr><td><div><p><a href="SearchParameter-cptsslot-sp-servicetype.html">cptsslot-sp-servicetype</a></p>
-</div></td><td>SearchParameter</td><td>Paramètre de recherche sur le service type qui mime le paramètre R5. Permet de rechercher ou d'inclure la ressource reférencée HealthCare Service</td></tr><tr><td><div><p><a href="Slot-ExampleSlotCPTS.html">ExampleSlotCPTS</a></p>
-</div></td><td>Slot</td><td> </td></tr><tr><td><div><p><a href="StructureDefinition-sas-cpts-bundle-aggregator.html">sas-cpts-bundle-aggregator</a></p>
-</div></td><td>StructureDefinition</td><td>Bundle Agrégateur SAS CPTS</td></tr><tr><td><div><p><a href="StructureDefinition-sas-cpts-healthcareservice-aggregator.html">sas-cpts-healthcareservice-aggregator</a></p>
-</div></td><td>StructureDefinition</td><td>Profil dérivé de FrHealthcareService pour le cas d'usage agrégateur CPTS</td></tr><tr><td><div><p><a href="StructureDefinition-sas-cpts-organization-aggregator.html">sas-cpts-organization-aggregator</a></p>
-</div></td><td>StructureDefinition</td><td>Profil dérivé de FrOrganization pour le cas d'usage agrégateur CPTS</td></tr><tr><td><div><p><a href="StructureDefinition-sas-cpts-slot-aggregator.html">sas-cpts-slot-aggregator</a></p>
-</div></td><td>StructureDefinition</td><td>Profil de Slot, dérivé de FrSlot, pour le service d'agrégation de créneaux de la plateforme SAS (Service d'accès aux soins), dans le cadre du cas d'usage CPTS</td></tr><tr><td><div><p><a href="StructureDefinition-sas-cpts-slot-servicetype-aggregator.html">sas-cpts-slot-servicetype-aggregator</a></p>
-</div></td><td>StructureDefinition</td><td>Extension créée afin de permettre la reference à la ressource HealthcareService. Cette extension implemente l'élément serviceType de R5 https://hl7.org/fhir/slot-definitions.html#Slot.serviceType</td></tr><tr><td><div><p><a href="ValueSet-sas-cpts-valueset-typecreneau.html">sas-cpts-valueset-typecreneau</a></p>
-</div></td><td>ValueSet</td><td>Type de Créneaux SAS CPTS</td></tr></table>
+<p>Lien vers la spécification FHIR : <a href="https://www.hl7.org/fhir/bundle.html">https://www.hl7.org/fhir/bundle.html</a></p>
 
-<h3 id="sos-médecins">SOS Médecins</h3>
+<p>Si la création est un succès, le serveur répond :</p>
 
-<p>Liste des ressources (profils,paramètres de recherche, terminologies, exemples) à utiliser dans le cadre du cas d’usage SOS Médecins</p>
+<ul>
+  <li>Un header avec un code 201 Created HTTP</li>
+  <li>Un header Location incluant l’ID de la ressource créée par le serveur <code class="language-plaintext highlighter-rouge">Location: [base]/Appointment/12345</code></li>
+</ul>
 
-<table class="grid"><tr><td style="background-color: #eeeeee">Id</td><td style="background-color: #eeeeee">Type</td><td style="background-color: #eeeeee">Description</td></tr><tr><td><div><p><a href="StructureDefinition-sas-sos-appointment.html">sas-sos-appointment</a></p>
-</div></td><td>StructureDefinition</td><td>Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS (Service d’accès aux soins), dans le cadre du cas d’usage SOS Médecins</td></tr><tr><td><div><p><a href="StructureDefinition-sas-sos-bundle-aggregator.html">sas-sos-bundle-aggregator</a></p>
-</div></td><td>StructureDefinition</td><td>Bundle Agrégateur SAS SOS</td></tr><tr><td><div><p><a href="StructureDefinition-sas-sos-location-aggregator.html">sas-sos-location-aggregator</a></p>
-</div></td><td>StructureDefinition</td><td>Profil de Location, dérivé de FrLocation, pour le service d’agrégation de créneaux de la plateforme SAS (Service d’accès aux soins), dans le cadre du cas d’usage SOS Médecins</td></tr><tr><td><div><p><a href="StructureDefinition-sas-sos-organization-aggregator.html">sas-sos-organization-aggregator</a></p>
-</div></td><td>StructureDefinition</td><td>Profil d'Organization, dérivé de FrOrganization, pour le service d’agrégation de créneaux de la plateforme SAS (Service d’accès aux soins), dans le cadre du cas d’usage SOS Médecins</td></tr><tr><td><div><p><a href="StructureDefinition-sas-sos-schedule-aggregator.html">sas-sos-schedule-aggregator</a></p>
-</div></td><td>StructureDefinition</td><td>Profil de Schedule, dérivé de FrSchedule, pour le service d’agrégation de créneaux de la plateforme SAS (Service d’accès aux soins), dans le cadre du cas d’usage SOS Médecins</td></tr><tr><td><div><p><a href="StructureDefinition-sas-sos-slot-aggregator.html">sas-sos-slot-aggregator</a></p>
-</div></td><td>StructureDefinition</td><td>Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS (Service d’accès aux soins), dans le cadre du cas d’usage SOS Médecins</td></tr><tr><td><div><p><a href="ValueSet-sas-sos-valueset-participant-status.html">sas-sos-valueset-participant-status</a></p>
-</div></td><td>ValueSet</td><td>Statut du participant RDV SAS SOS</td></tr><tr><td><div><p><a href="ValueSet-sas-sos-valueset-typecreneau.html">sas-sos-valueset-typecreneau</a></p>
-</div></td><td>ValueSet</td><td>Type de Créneaux SAS SOS</td></tr></table>
+<p>Plus de précision sur la spécification FHIR :
+<a href="https://www.hl7.org/fhir/http.html">https://www.hl7.org/fhir/http.html</a></p>
+
+<h4 id="réponse-de-base--echec">Réponse de base – Echec</h4>
+
+<p>Lien vers la spécification FHIR :
+<a href="https://www.hl7.org/fhir/operationoutcome.html">https://www.hl7.org/fhir/operationoutcome.html</a></p>
+
+<p>Si la recherche échoue, le serveur doit répondre :</p>
+
+<ul>
+  <li>
+    <p>Un header avec un un code erreur HTTP 4XX ou 5XX</p>
+  </li>
+  <li>
+    <p>Un body contenant une ressource OperationOutcome[^3] qui donne les
+détails sur la raison de l’échec</p>
+  </li>
+</ul>
+
+<p>À titre d’information, les codes erreurs classiques sont les suivants :</p>
+<ul>
+  <li>400 (Bad request) – Le format de la requête FHIR transmise est incorrect</li>
+  <li>422 (Unprocessable Entity) – L’action demandée ne peut pas être réalisée à cause d’une règle interne à l’application.</li>
+</ul>
+
+<p>Plus de précision sur la spécification FHIR :
+<a href="https://www.hl7.org/fhir/http.html">https://www.hl7.org/fhir/http.html</a></p>
+
+<h3 id="exemple-de-requête">Exemple de requête</h3>
+
+<p><strong>Requête :</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">post[BASE]/Appointment</code></p>
+
+<p><strong>Corps de la requête :</strong></p>
+
+<p>La requête ci-dessous correspond à la transmission d’un RDV pris par le régulateur avec un identifiant national 3456780581/11242343 avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h.</p>
+
+<details>
+  <summary>Déplier pour accéder au détail de l'exemple de réponse complète au format json</summary>
+  <pre>
+{
+  "resourceType": "Appointment",
+  "id": "1",
+  "meta": {
+    "profile": [
+      "http://interopsante.org/fhir/StructureDefinition/FrAppointmentSAS"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "urn:oid:1.1.111.1.11.1.1.1",
+      "value": "b6e39355-8a61-4556-b340-36f7b95fec6a"
+    }
+  ],
+  "extension": [
+    {
+      "url": "http://interopsante.org/fhir/StructureDefinition/FrAppointmentOperator",
+      "valueReference": {
+        "identifier": {
+          "type": {
+            "coding": [
+              {
+                "system": "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
+                "code": "IDNPS"
+              }
+            ]
+          },
+          "system": "urn:oid:1.2.250.1.71.4.2.1",
+          "value": "3456780581/11242343"
+        }
+      }
+    }
+  ],
+  "status": "booked",
+  "start": "2022-09-04T14:00:00+01:00",
+  "end": "2022-09-04T14:15:00+01:00",
+  "participant": [
+    {
+      "actor": {
+        "identifier": {
+          "type": {
+            "coding": [
+              {
+                "system": "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
+                "code": "IDNPS"
+              }
+            ]
+          },
+          "system": "urn:oid:1.2.250.1.71.4.2.1",
+          "value": "810100050075"
+        }
+      },
+      "status": "accepted"
+    }
+  ]
+}
+  </pre>
+</details>
+<p><br /></p>
+
+<h3 id="nomenclatures">Nomenclatures</h3>
+
+<p>Cette section détaille les nomenclatures à utiliser afin de renseigner les différents éléments codifiés de la requête.</p>
+<ul>
+  <li><strong>ID : 1 – Identifiant technique du RDV :</strong>
+    <ul>
+      <li>Un identifiant technique unique par RDV est attendu. Cet ID est défini par la solution logicielle éditeur et peut prendre la forme d’un UUID par exemple. Les échanges s’appuieront sur cet ID pour les requêtes de mises à jour (interaction conditional update).</li>
+    </ul>
+  </li>
+  <li><strong>ID : 2 – Autorité d’affectation de la solution logicielle éditeur :</strong>
+    <ul>
+      <li>Ce champ est une valeur fixe, valorisé soit par une URL soit par un OID. Si l’éditeur possède un OID propre à sa solution logicielle il est attendu que celui-ci soit transmis, sinon il est demandé de définir une URL propre à la solution éditeur.</li>
+    </ul>
+  </li>
+  <li><strong>ID : 3 – URL de l’extension AppointmentOperator pour la référence au régulateur :</strong>
+    <ul>
+      <li>Ce champ est une valeur fixe, valorisé à <code class="language-plaintext highlighter-rouge">http://interopsante.org/fhir/StructureDefinition/FrAppointmentOperator</code>.</li>
+    </ul>
+  </li>
+  <li><strong>ID : 4, 5, 6 – Identification du régulateur ayant pris le RDV pour le patient :</strong>
+    <ul>
+      <li>Il s’agit de l’identifiant communiqué par la plateforme numérique SAS dans l’interface INT_R02 “Gestion des comptes régulateurs”. Deux combinaisons sont possibles pour ces trois champs selon que le régulateur possède ou non un identifiant national.</li>
+      <li>Lorsque le régulateur a un identifiant national, les différents champs seront valorisés comme suit (1) :
+        <ul>
+          <li>Valeur de l’identifiant (ID 4) : Identifiant national avec préfixe ;</li>
+          <li>Autorité d’affectation (ID 5) : urn:oid:1.2.250.1.71.4.2.1 ;</li>
+          <li>Type d’identifiant (ID 6) : le champ <code class="language-plaintext highlighter-rouge">type.coding.code</code> est valorisé à <code class="language-plaintext highlighter-rouge">IDNPS</code> et <code class="language-plaintext highlighter-rouge">type.coding.system</code> à <code class="language-plaintext highlighter-rouge">http://interopsante.org/fhir/CodeSystem/fr-v2-0203</code>.</li>
+        </ul>
+      </li>
+      <li>Lorsque le régulateur n’a pas d’identifiant national, nous utiliserons un ID technique SAS, les différents champs seront valorisés comme suit :
+        <ul>
+          <li>Valeur de l’identifiant (ID 4) : Identifiant technique SAS avec un format de type UUID ;</li>
+          <li>Autorité d’affectation (ID 5) : urn:oid:1.2.250.1.213.3.6 ;</li>
+          <li>Type d’identifiant (ID 6) : le champ type.coding.code est valorisé à <code class="language-plaintext highlighter-rouge">INTRN</code> et <code class="language-plaintext highlighter-rouge">type.coding.system</code> à <code class="language-plaintext highlighter-rouge">http://interopsante.org/fhir/CodeSystem/fr-v2-0203</code>.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>ID : 7 – Statut du RDV :</strong>
+    <ul>
+      <li>L’utilisation de la nomenclature standard AppointmentStatus (<a href="http://hl7.org/fhir/appointmentstatus">http://hl7.org/fhir/appointmentstatus</a>) est attendue. La plateforme numérique SAS exploite à date les valeurs suivantes :
+        <ul>
+          <li>BOOKED : RDV pris et confirmé</li>
+          <li>FULFILLED : RDV honoré</li>
+          <li>NOSHOW : RDV non honoré</li>
+          <li>CANCELLED : RDV annulé</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>ID : 10, 11, 12 – Identification du PS effecteur de soins :</strong>
+    <ul>
+      <li>Les champs attendus doivent être valorisés comme suit (1) :
+        <ul>
+          <li>Valeur de l’identifiant (ID 10) : RPPS avec préfixe “8” ou ADELI avec préfixe “0”</li>
+          <li>Autorité d’affectation (ID 11) : urn:oid:1.2.250.1.71.4.2.1</li>
+          <li>Type d’identifiant (ID 12) : le champ <code class="language-plaintext highlighter-rouge">type.coding.code</code> est valorisé à <code class="language-plaintext highlighter-rouge">IDNPS</code> et <code class="language-plaintext highlighter-rouge">type.coding.system</code> à <code class="language-plaintext highlighter-rouge">http://interopsante.org/fhir/CodeSystem/fr-v2-0203</code></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>ID : 13 – Statut d’acceptation du RDV par le PS effecteur de soins :</strong>
+    <ul>
+      <li>L’utilisation de la nomenclature standard Appointmentparticipantstatus (<a href="http://hl7.org/fhir/ValueSet/participationstatus">http://hl7.org/fhir/ValueSet/participationstatus</a>) est attendue. La plateforme numérique SAS ne récupérant que les RDV avec acceptation automatique et tacite du médecin effecteur de soins, ce champ aura systématiquement la valeur « accepted ».</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="validateur-ressources">Validateur ressources</h3>
+<p>Un validateur mis à disposition des développeurs dans le cadre du projet SAS offre la possibilité de tester le format des requêtes POST et PUT à générer. Il permet de vérifier que les requêtes sont correctement formatées, que l’ensemble des informations obligatoires sont bien présentes et que les données codifiées exploitent les bonnes nomenclatures.
+Pour que le validateur puisse effectuer correctement les contrôles au niveau de la structure, il est nécessaire de renseigner pour le resourceType <code class="language-plaintext highlighter-rouge">Appointment</code>, le meta.profile <code class="language-plaintext highlighter-rouge">URL</code> ci-après :</p>
+<ul>
+  <li>http://sas.fr/fhir/StructureDefinition/FrAppointmentSAS</li>
+</ul>
+
+<p>Ci-dessous un exemple :</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"resourceType": "Appointment",
+"id": "1",
+"meta": {
+  "profile": [
+    "http://interopsante.org/fhir/StructureDefinition/FrAppointmentSAS"
+  ]
+},
+</code></pre></div></div>
+
+<p>Le validateur est disponible sur l’espace de test de l’ANS : <a href="https://interop.esante.gouv.fr/EVSClient/fhir/validator.seam?extension=SAS&amp;standard=FHIR+%28SAS%29&amp;type=FHIR&amp;cid=750">https://interop.esante.gouv.fr/EVSClient/fhir/validator.seam?extension=SAS&amp;standard=FHIR+%28SAS%29&amp;type=FHIR&amp;cid=750</a>. Pour faciliter les tests et conserver l’historique, nous vous recommandons de créer votre compte sur la plateforme.
+Afin de tester un fichier, il suffit de sélectionner le format <code class="language-plaintext highlighter-rouge">JSON</code>, d’ajouter le fichier via le bouton <code class="language-plaintext highlighter-rouge">Add…</code>, de sélectionner le modèle <code class="language-plaintext highlighter-rouge">FrAppointmentSAS</code> puis de cliquer sur <code class="language-plaintext highlighter-rouge">valider</code> :</p>
+
+<table align="center">
+    <tr>
+        <td align="center">
+            <div class="figure">
+                <img src="validateur_rendez_vous_1.png" alt="Accès au validateur rendez-vous" title="Accès au validateur rendez-vous" />
+            </div>
+        </td>    
+    </tr>
+    <tr>
+        <td align="center">
+            <b>Figure 3 - Accès au validateur rendez-vous</b>
+        </td>
+    </tr>
+</table>
+
+<p>Vous obtiendrez alors un rapport de test mettant en valeur les erreurs bloquantes et les différents warning :</p>
+
+<table align="center">
+    <tr>
+        <td align="center">
+            <div class="figure">
+                <img src="validateur_rendez_vous_2.png" alt="Rapport validateur rendez-vous" title="Rapport validateur rendez-vous" />
+            </div>
+        </td>    
+    </tr>
+    <tr>
+        <td align="center">
+            <b>Figure 4 - Rapport validateur rendez-vous</b>
+        </td>
+    </tr>
+</table>
 
 
 
@@ -300,7 +542,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             <tr>
               <td style="text-align:left">&#xA0;
 
-                <a href="specifications_techniques-cpts-maj_rdv.html">&lt;prev</a>
+                <a href="specifications_techniques-ps-recherche_creneaux.html">&lt;prev</a>
 
               </td>
               <td style="text-align:center">
@@ -308,7 +550,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="autres_ressources.html">next&gt;</a>
+                <a href="specifications_techniques-ps-maj_rdv.html">next&gt;</a>
 
               </td>
             </tr>

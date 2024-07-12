@@ -43,8 +43,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"9.27"}
-    h3,h4,h5,h6{--heading-prefix:"9.27"}</style>
+    <style type="text/css">h2{--heading-prefix:"11.27"}
+    h3,h4,h5,h6{--heading-prefix:"11.27"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -101,16 +101,28 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="specifications_techniques-ps-recherche_creneaux.html">01 - PS - Recherche des créneaux</a>
+        ----PS----
       </li>
       <li>
-        <a href="specifications_techniques-cpts-recherche_creneaux.html">02 - CPTS - Recherche des créneaux</a>
+        <a href="specifications_techniques-ps-recherche_creneaux.html">PS - Recherche des créneaux</a>
       </li>
       <li>
-        <a href="specifications_techniques-tous-creation_rdv.html">11 - Tous - Création de rendez-vous</a>
+        <a href="specifications_techniques-ps-creation_rdv.html">PS - Création de rendez-vous</a>
       </li>
       <li>
-        <a href="specifications_techniques-tous-maj_rdv.html">12 - Tous - Mise à jour de rendez-vous</a>
+        <a href="specifications_techniques-ps-maj_rdv.html">PS - Mise à jour de rendez-vous</a>
+      </li>
+      <li>
+        ---CPTS---
+      </li>
+      <li>
+        <a href="specifications_techniques-cpts-recherche_creneaux.html">CPTS - Recherche des créneaux</a>
+      </li>
+      <li>
+        <a href="specifications_techniques-cpts-creation_rdv.html">CPTS - Création de rendez-vous</a>
+      </li>
+      <li>
+        <a href="specifications_techniques-cpts-maj_rdv.html">CPTS - Mise à jour de rendez-vous</a>
       </li>
     </ul>
   </li>
@@ -265,7 +277,7 @@
         &lt;/meta&gt;
         &lt;<a href="http://hl7.org/fhir/R4/slot.html#Slot.text">text</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
-          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;Slot_ExampleSlotCPTS&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: Slot ExampleSlotCPTS&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;ExampleSlotCPTS&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcExampleSlotCPTS&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcExampleSlotCPTS-fr-FR&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;serviceType&lt;/b&gt;: &lt;span title=&quot;Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode AMB}&quot;&gt;ambulatory&lt;/span&gt;, &lt;span title=&quot;Codes:{https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/TRE_R66-CategorieEtablissement 604}&quot;&gt;604&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;schedule&lt;/b&gt;: &lt;a href=&quot;Schedule-ExampleSchedule.html&quot;&gt;Schedule&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Free&lt;/p&gt;&lt;p&gt;&lt;b&gt;start&lt;/b&gt;: 2024-06-12 16:40:00+0200&lt;/p&gt;&lt;p&gt;&lt;b&gt;end&lt;/b&gt;: 2024-06-12 17:00:00+0200&lt;/p&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;Slot_ExampleSlotCPTS&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: Slot ExampleSlotCPTS&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;ExampleSlotCPTS&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcExampleSlotCPTS&quot;&gt; &lt;/a&gt;&lt;a name=&quot;ExampleSlotCPTS-fr-FR&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;serviceType&lt;/b&gt;: &lt;span title=&quot;Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode AMB}&quot;&gt;ambulatory&lt;/span&gt;, &lt;span title=&quot;Codes:{https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/TRE_R66-CategorieEtablissement 604}&quot;&gt;604&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;schedule&lt;/b&gt;: &lt;a href=&quot;Schedule-ExampleSchedule.html&quot;&gt;Schedule&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Free&lt;/p&gt;&lt;p&gt;&lt;b&gt;start&lt;/b&gt;: 2024-06-12 16:40:00+0200&lt;/p&gt;&lt;p&gt;&lt;b&gt;end&lt;/b&gt;: 2024-06-12 17:00:00+0200&lt;/p&gt;&lt;/div&gt;<a name="end-xhtml"></a>
         &lt;/text&gt;
         &lt;<a href="http://hl7.org/fhir/R4/slot.html#Slot.serviceType">serviceType</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
@@ -307,7 +319,7 @@
         &lt;/meta&gt;
         &lt;<a href="http://hl7.org/fhir/R4/schedule.html#Schedule.text">text</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
-          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;Schedule_ExampleSchedule&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: Schedule ExampleSchedule&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;ExampleSchedule&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcExampleSchedule&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcExampleSchedule-fr-FR&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;actor&lt;/b&gt;: &lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;Practitioner-ExamplePractitioner.html&quot;&gt;Practitioner Pierre Foret &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;PractitionerRole-ExamplePractitionerRoleAgregateur.html&quot;&gt;PractitionerRole: telecom = ph: +33561855977&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;Schedule_ExampleSchedule&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: Schedule ExampleSchedule&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;ExampleSchedule&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcExampleSchedule&quot;&gt; &lt;/a&gt;&lt;a name=&quot;ExampleSchedule-fr-FR&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;actor&lt;/b&gt;: &lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;Practitioner-ExamplePractitioner.html&quot;&gt;Practitioner Pierre Foret &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;PractitionerRole-ExamplePractitionerRoleAgregateur.html&quot;&gt;PractitionerRole: telecom = ph: +33561855977&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
         &lt;/text&gt;
         &lt;<a href="http://hl7.org/fhir/R4/schedule.html#Schedule.actor">actor</a>&gt;<a href="Practitioner-ExamplePractitioner.html" style="color: Maroon">&#x1F517;</a> 
           &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Practitioner/ExamplePractitioner&quot;/&gt;
@@ -331,7 +343,7 @@
         &lt;/meta&gt;
         &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.text">text</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
-          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;Practitioner_ExamplePractitioner&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: Practitioner ExamplePractitioner&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;ExamplePractitioner&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcExamplePractitioner&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcExamplePractitioner-fr-FR&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: Identifiant National de Professionnel de Santé/810002909371&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Pierre Foret &lt;/p&gt;&lt;/div&gt;
+          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;Practitioner_ExamplePractitioner&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: Practitioner ExamplePractitioner&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;ExamplePractitioner&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcExamplePractitioner&quot;&gt; &lt;/a&gt;&lt;a name=&quot;ExamplePractitioner-fr-FR&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: Identifiant National de Professionnel de Santé/810002909371&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Pierre Foret &lt;/p&gt;&lt;/div&gt;
         &lt;/text&gt;
         &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.identifier">identifier</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>&gt;
@@ -363,7 +375,7 @@
         &lt;/meta&gt;
         &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.text">text</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
-          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;PractitionerRole_ExamplePractitionerRoleAgregateur&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: PractitionerRole ExamplePractitionerRoleAgregateur&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;ExamplePractitionerRoleAgregateur&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcExamplePractitionerRoleAgregateur&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcExamplePractitionerRoleAgregateur-fr-FR&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;practitioner&lt;/b&gt;: &lt;a href=&quot;Practitioner-ExamplePractitioner.html&quot;&gt;Practitioner Pierre Foret &lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;organization&lt;/b&gt;: Identifier: 412345678912345&lt;/p&gt;&lt;p&gt;&lt;b&gt;location&lt;/b&gt;: &lt;a href=&quot;#hcExamplePractitionerRoleAgregateur/ExampleLocation&quot;&gt;Location: identifier = INTRN&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: &lt;a href=&quot;tel:+33561855977&quot;&gt;+33561855977&lt;/a&gt;&lt;/p&gt;&lt;hr/&gt;&lt;blockquote&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: Location  #ExampleLocation&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;ExamplePractitionerRoleAgregateur/ExampleLocation&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcExamplePractitionerRoleAgregateur/ExampleLocation&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcExamplePractitionerRoleAgregateur/ExampleLocation-fr-FR&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: INTRN/123456789&lt;/p&gt;&lt;p&gt;&lt;b&gt;address&lt;/b&gt;: 25 CHEMIN DE MOUNESTIE Aussonne 31840 &lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;
+          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;PractitionerRole_ExamplePractitionerRoleAgregateur&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: PractitionerRole ExamplePractitionerRoleAgregateur&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;ExamplePractitionerRoleAgregateur&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcExamplePractitionerRoleAgregateur&quot;&gt; &lt;/a&gt;&lt;a name=&quot;ExamplePractitionerRoleAgregateur-fr-FR&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;practitioner&lt;/b&gt;: &lt;a href=&quot;Practitioner-ExamplePractitioner.html&quot;&gt;Practitioner Pierre Foret &lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;organization&lt;/b&gt;: Identifier: 412345678912345&lt;/p&gt;&lt;p&gt;&lt;b&gt;location&lt;/b&gt;: &lt;a href=&quot;#hcExamplePractitionerRoleAgregateur/ExampleLocation&quot;&gt;Location: identifier = INTRN&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: &lt;a href=&quot;tel:+33561855977&quot;&gt;+33561855977&lt;/a&gt;&lt;/p&gt;&lt;hr/&gt;&lt;blockquote&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: Location  #ExampleLocation&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;ExamplePractitionerRoleAgregateur/ExampleLocation&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcExamplePractitionerRoleAgregateur/ExampleLocation&quot;&gt; &lt;/a&gt;&lt;a name=&quot;ExamplePractitionerRoleAgregateur/ExampleLocation-fr-FR&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: INTRN/123456789&lt;/p&gt;&lt;p&gt;&lt;b&gt;address&lt;/b&gt;: 25 CHEMIN DE MOUNESTIE Aussonne 31840 &lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;
         &lt;/text&gt;
         &lt;<a href="http://hl7.org/fhir/R4/location.html#Location">contained</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/location.html#Location">Location</a>&gt;
@@ -420,7 +432,7 @@
         &lt;/meta&gt;
         &lt;<a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.text">text</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
-          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;HealthcareService_ExampleHealthcareServiceCPTS&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: HealthcareService ExampleHealthcareServiceCPTS&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;ExampleHealthcareServiceCPTS&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcExampleHealthcareServiceCPTS&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcExampleHealthcareServiceCPTS-fr-FR&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;providedBy&lt;/b&gt;: &lt;a href=&quot;Organization-ExampleOrgaCPTS.html&quot;&gt;Organization CPTS AXE MAJEUR&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
+          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;HealthcareService_ExampleHealthcareServiceCPTS&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: HealthcareService ExampleHealthcareServiceCPTS&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;ExampleHealthcareServiceCPTS&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcExampleHealthcareServiceCPTS&quot;&gt; &lt;/a&gt;&lt;a name=&quot;ExampleHealthcareServiceCPTS-fr-FR&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;providedBy&lt;/b&gt;: &lt;a href=&quot;Organization-ExampleOrgaCPTS.html&quot;&gt;Organization CPTS AXE MAJEUR&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
         &lt;/text&gt;
         &lt;<a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.providedBy">providedBy</a>&gt;<a href="Organization-ExampleOrgaCPTS.html" style="color: Maroon">&#x1F517;</a> 
           &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Organization/ExampleOrgaCPTS&quot;/&gt;
@@ -439,7 +451,7 @@
         &lt;/meta&gt;
         &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.text">text</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
-          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;Organization_ExampleOrgaCPTS&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: Organization ExampleOrgaCPTS&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;ExampleOrgaCPTS&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcExampleOrgaCPTS&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcExampleOrgaCPTS-fr-FR&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: Identification nationale de structure définie par l’ASIP-SANTE dans le CI_SIS/1950047225&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: CPTS AXE MAJEUR&lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: &lt;a href=&quot;tel:+33102030405&quot;&gt;+33102030405&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
+          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;Organization_ExampleOrgaCPTS&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: Organization ExampleOrgaCPTS&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;ExampleOrgaCPTS&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcExampleOrgaCPTS&quot;&gt; &lt;/a&gt;&lt;a name=&quot;ExampleOrgaCPTS-fr-FR&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: Identification nationale de structure définie par l’ASIP-SANTE dans le CI_SIS/1950047225&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: CPTS AXE MAJEUR&lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: &lt;a href=&quot;tel:+33102030405&quot;&gt;+33102030405&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
         &lt;/text&gt;
         &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.identifier">identifier</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>&gt;
@@ -506,7 +518,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jul 10, 2024 12:30+0000">2024-07-10</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jul 12, 2024 15:20+0000">2024-07-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
