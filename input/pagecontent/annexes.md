@@ -13,7 +13,7 @@ Hypothèses retenues pour l'estimation :
 - Contingence = 15%
 - Nb recherches dans la plateforme numérique SAS par appel = 4
 
-### Correspondance des environnements ANS/SAS et éditeurs
+## Correspondance des environnements ANS/SAS et éditeurs
 
 Dans le cadre de la recette connectée avec la plateforme numérique SAS, nous avons trois environnements qui sont mis à disposition : Recette, Pré-production et Production.
 En fonction du nombre d'environnements identifiés côté éditeur nous pouvons avoir les configurations suivantes :
