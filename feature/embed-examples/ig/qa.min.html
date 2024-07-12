@@ -36,13 +36,37 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for SAS</h1>
- <p>Generated Fri Jul 12 16:49:13 UTC 2024, FHIR version 4.0.1 for ans.fhir.fr.sas#1.0.0-ballot (canonical = <a href="https://interop.esante.gouv.fr/ig/fhir/sas">https://interop.esante.gouv.fr/ig/fhir/sas</a> (<a href="https://interop.esante.gouv.fr/ig/fhir/sas/history.html">history</a>)). See <a href="qa.html">Full QA Report</a></p>
+ <p>Generated Fri Jul 12 17:12:11 UTC 2024, FHIR version 4.0.1 for ans.fhir.fr.sas#1.0.0-ballot (canonical = <a href="https://interop.esante.gouv.fr/ig/fhir/sas">https://interop.esante.gouv.fr/ig/fhir/sas</a> (<a href="https://interop.esante.gouv.fr/ig/fhir/sas/history.html">history</a>)). See <a href="qa.html">Full QA Report</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
  <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.6.16</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = ans.fhir.fr.sas, Canonical = https://interop.esante.gouv.fr/ig/fhir/sas</td></tr>
  <tr><td>Realm Check for n/a:</td><td><span style="color: maroon; font-weight: bold"></span><ul><li>n/a</li></ul></td></tr>
- <tr><td>Publication Request:</td><td><ul><li>Version 1.0.0-ballot has already been published <img src="icon-warning.png" height="16px" width="16px"/></li>
-<li>Publication Request is for version v1.0.0-ballot which is already published <img src="icon-error.gif" height="16px" width="16px"/></li>
+ <tr><td>Publication Request:</td><td><table class="grid">
+ <tr><td>package-id</d><td>ans.fhir.fr.sas</td></tr>
+ <tr><td>version</d><td>1.0.0-ballot</td></tr>
+ <tr><td>path</d><td>https://interop.esante.gouv.fr/ig/fhir/sas/1.0.0-ballot</td></tr>
+ <tr><td>Pub-Mode</d><td>milestone</td></tr>
+ <tr><td>status</d><td>ballot</td></tr>
+ <tr><td>Release-Label</d><td>ci-build</td></tr>
+ <tr><td>sequence</d><td>trial-use</td></tr>
+ <tr><td>desc</d><td>Publication 1.0.0-ballot du guide d'implémentation Service d'accès aux soins</td></tr>
+ <tr><td>descmd</d><td><p><strong>Release 1.0.0-ballot de l'Implémentation Guide Service d'Accès aux Soins.</strong></p>
+<p>[Modifications apportées dans cette release] (https://github.com/ansforge/IG-fhir-service-acces-aux-soins/milestone/3?closed=1) :</p>
+<ul>
+<li>Mise au format guide d'implémentation FHIR à partir des spécifications PDF existantes (Spécifications agrégation de créneaux et prise de RDV). Première version de ce guide d'implémentation.</li>
+<li>Ajout des ressources de conformité de la spécification agrégation de créneaux SOS Médecins, sans la partie narrative</li>
+<li>Ajout de la spécification correspondant au cas d'usage CPTS (ressources de conformité et partie narrative)</li>
+</ul>
+</td></tr>
+ <tr><td>first</d><td>true</td></tr>
+ <tr><td>category</d><td>Care Planning</td></tr>
+ <tr><td>title</d><td>Service d'Accès aux Soins</td></tr>
+ <tr><td>introduction</d><td>Le guide d'implémentation SAS décrit les spécifications à mettre en oeuvre par les éditeurs réalisant des travaux d'interopérabilité avec la plateforme numérique du SAS</td></tr>
+ <tr><td>ci-build</d><td>https://ansforge.github.io/IG-fhir/service-acces-aux-soins/main/ig</td></tr>
+</table>
+<ul><li>Error fetching package-list from https://interop.esante.gouv.fr/ig/fhir/sas: Service Temporarily Unavailable <img src="icon-error.gif" height="16px" width="16px"/></li>
+<li>This release is labelled as a milestone, so should not have a patch version (1.0.0-ballot) <img src="icon-warning.png" height="16px" width="16px"/></li>
+<li>descmd cannot contain a ' <img src="icon-error.gif" height="16px" width="16px"/></li>
 </ul>
 </td></tr>
  <tr><td>Supressed Messages:</td><td><a href="#suppressed">19 Suppressed Issues</a>
@@ -108,7 +132,7 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
 </ul>
 </td></tr>
  <tr><td>Modifier Extensions:</td><td><span style="color: grey">(none)</span></td></tr>
- <tr><td>Previous Version Comparison:</td><td> </td></tr>
+ <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at https://interop.esante.gouv.fr/ig/fhir/sas (Problem #1 with package-list.json at https://interop.esante.gouv.fr/ig/fhir/sas: Service Temporarily Unavailable)</td></tr>
  <tr><td>IPA Comparison:</td><td> n/a</td></tr>
  <tr><td>IPS Comparison:</td><td> n/a</td></tr>
  <tr><td>Summary:</td><td> errors = 17, warn = 34, info = 53, broken links = 0</td></tr>
