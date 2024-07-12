@@ -71,7 +71,7 @@ Si la création est un succès, le serveur répond :
 Plus de précision sur la spécification FHIR :
 <https://www.hl7.org/fhir/http.html>
 
-#### Réponse de base -- Echec
+##### Réponse de base -- Echec
 
 Lien vers la spécification FHIR :
 <https://www.hl7.org/fhir/operationoutcome.html>
