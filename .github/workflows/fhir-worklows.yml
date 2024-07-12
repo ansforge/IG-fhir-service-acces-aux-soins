@@ -14,10 +14,11 @@ jobs:
 
       - name: Copy "all" to "use cases" specs
         run: |
-          cp "./igSource/input/pagecontent/specifications_techniques-tous-creation_rdv.md" "./igSource/input/pagecontent/specifications_techniques-ps-creation_rdv.md"
-          cp "./igSource/input/pagecontent/specifications_techniques-tous-creation_rdv.md" "./igSource/input/pagecontent/specifications_techniques-cpts-creation_rdv.md"
-          cp "./igSource/input/pagecontent/specifications_techniques-tous-maj_rdv.md" "./igSource/input/pagecontent/specifications_techniques-ps-maj_rdv.md"
-          cp "./igSource/input/pagecontent/specifications_techniques-tous-maj_rdv.md" "./igSource/input/pagecontent/specifications_techniques-cpts-maj_rdv.md"
+             path_spec="./igSource/input/pagecontent"
+             for lines in $(cat "${path_spec}/specifications_techniques.txt"); do
+               files=(${lines//;/ })
+               cp "${path_spec}/${files[0]}" "${path_spec}/${files[1]}"
+             done
 
       - uses: ansforge/IG-workflows@v0.2.0
         with:      
