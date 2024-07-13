@@ -26,17 +26,17 @@ Les opérations de la plateforme SAS sont réalisées au moyen d'API FHIR.
 
 #### PS à titre individuel
 
-- [Spécifications fonctionnelles](./specifications_fonctionnelles.html)
-- Spécifications techniques :
-  - [Recherche de créneaux](./specifications_techniques-ps-recherche_creneaux.html)
-  - [Gestion de rendez-vous](./specifications_techniques-ps-gestion_rdv.html)
+1. [Spécifications fonctionnelles](./specifications_fonctionnelles.html)
+2. Spécifications techniques :
+  a. [Recherche de créneaux](./specifications_techniques-ps-recherche_creneaux.html)
+  b. [Gestion de rendez-vous](./specifications_techniques-ps-gestion_rdv.html)
 
 #### CPTS
 
-- [Spécifications fonctionnelles](./specifications_fonctionnelles.html)
-- Spécifications techniques :
-  - [Recherche de créneaux](./specifications_techniques-cpts-recherche_creneaux.html)
-  - [Gestion de rendez-vous](./specifications_techniques-cpts-gestion_rdv.html)
+1. [Spécifications fonctionnelles](./specifications_fonctionnelles.html)
+2. Spécifications techniques :
+  a. [Recherche de créneaux](./specifications_techniques-cpts-recherche_creneaux.html)
+  b. [Gestion de rendez-vous](./specifications_techniques-cpts-gestion_rdv.html)
 
 ### Dépendances
  
