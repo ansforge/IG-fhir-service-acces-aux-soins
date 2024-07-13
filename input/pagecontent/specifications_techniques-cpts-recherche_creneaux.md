@@ -150,6 +150,50 @@ Par ailleurs, en complément des ressources Slot, afin de récupérer l'ensemble
 - `_include=Slot:service-type-reference` indique qu'il est nécessaire de transmettre les ressources HealthcareService associées aux Slot pour la transmission d'un créneau CPTS. La présence de cette ressource est nécessaire pour permettre de faire le lien entre le créneau (Slot) et les ressources Organization associées.
 - `_include:iterate=HealthcareService:organization` indique qu'il est nécessaire de transmettre les ressources Organization référencées dans les ressources HealthcareService transmises.
 
+### Exemple de requête
+
+La requête ci-dessous correspond à une recherche de créneaux disponibles entre le 12 juin 2024 à 16h20 et le 15 juin 2024 à 16h20 pour les PS correspondant aux RPPS préfixés : 810002909371, 810001288385.
+
+**Requête :**
+
+`get[BASE]/Slot?_include=Slot:schedule&_include:iterate=Schedule:actor&_include=Slot:service-type-reference&_include:iterate=HealthcareService:organization&start=ge2024-06-12T16:20:00.000+02:00&start=le2024-06-15T16:20:00.000+02:00&schedule.actor:Practitioner.identifier=urn:oid:1.2.250.1.71.4.2.1|810002909371,urn:oid:1.2.250.1.71.4.2.1|810001288385&status=free`
+
+**Réponse simplifiée :**
+
+<details>
+  <summary>Déplier pour accéder au détail de l'exemple de réponse simplifiée</summary>
+  <pre>
+HTTP 200 OK
+  resourceType: Bundle
+  type: searchset
+  total: 1
+  Slot1
+  Schedule1
+  Practitioner1
+  PractitionerRole1
+  HealthcareService1
+  Organization1
+  </pre>
+</details>
+<br>
+
+**Corps de la réponse complète :**
+
+La réponse ci-dessous correspond à :
+1 créneau disponible avec Docteur Pierre FORET (RPPS : 810002909371)
+  - au 25 chemin de mounestie (31840) associé à la CPTS Axe Majeur (FINESS : 1950047225) 
+  - le 12 juin 2024 de 16h40 à 17h ayant les caractéristiques suivantes :
+    - Avec prise de RDV, 
+    - Visible du grand public et de la structure CPTS, 
+    - Au cabinet
+    - Pour le motif `Consultation`
+    - Téléphone de la CPTS : 0102030405
+
+Pour consulter l'exemple en plein écran, cliquer [ici](./Bundle-ExampleBundleCPTS.html).
+
+<iframe src="./Bundle-ExampleBundleCPTS.json" width="100%" height="300" style="border: 1px solid #cccccc; border-radius: 4px; background: #f5f2f0;" scrolling="yes"></iframe>
+<br>
+
 ### Nomenclatures
 
 Cette section détaille les nomenclatures à utiliser afin de renseigner les différents éléments codifiés de la réponse.
@@ -251,48 +295,4 @@ Vous obtiendrez alors un rapport de test mettant en valeur les erreurs bloquante
         </td>
     </tr>
 </table>
-
-### Exemple de requête
-
-La requête ci-dessous correspond à une recherche de créneaux disponibles entre le 12 juin 2024 à 16h20 et le 15 juin 2024 à 16h20 pour les PS correspondant aux RPPS préfixés : 810002909371, 810001288385.
-
-**Requête :**
-
-`get[BASE]/Slot?_include=Slot:schedule&_include:iterate=Schedule:actor&_include=Slot:service-type-reference&_include:iterate=HealthcareService:organization&start=ge2024-06-12T16:20:00.000+02:00&start=le2024-06-15T16:20:00.000+02:00&schedule.actor:Practitioner.identifier=urn:oid:1.2.250.1.71.4.2.1|810002909371,urn:oid:1.2.250.1.71.4.2.1|810001288385&status=free`
-
-**Réponse simplifiée :**
-
-<details>
-  <summary>Déplier pour accéder au détail de l'exemple de réponse simplifiée</summary>
-  <pre>
-HTTP 200 OK
-  resourceType: Bundle
-  type: searchset
-  total: 1
-  Slot1
-  Schedule1
-  Practitioner1
-  PractitionerRole1
-  HealthcareService1
-  Organization1
-  </pre>
-</details>
-<br>
-
-**Corps de la réponse complète :**
-
-La réponse ci-dessous correspond à :
-1 créneau disponible avec Docteur Pierre FORET (RPPS : 810002909371)
-  - au 25 chemin de mounestie (31840) associé à la CPTS Axe Majeur (FINESS : 1950047225) 
-  - le 12 juin 2024 de 16h40 à 17h ayant les caractéristiques suivantes :
-    - Avec prise de RDV, 
-    - Visible du grand public et de la structure CPTS, 
-    - Au cabinet
-    - Pour le motif `Consultation`
-    - Téléphone de la CPTS : 0102030405
-
-Pour consulter l'exemple en plein écran, cliquer [ici](./Bundle-ExampleBundleCPTS.html).
-
-<iframe src="./Bundle-ExampleBundleCPTS.json" width="100%" height="300" style="border: 1px solid #cccccc; border-radius: 4px; background: #f5f2f0;" scrolling="yes"></iframe>
 <br><br>
-

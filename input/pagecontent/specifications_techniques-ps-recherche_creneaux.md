@@ -148,6 +148,675 @@ Par ailleurs, en complément des ressources Slot, afin de récupérer l'ensemble
 - `_include=Slot:schedule` indique qu'il est nécessaire de transmettre les ressources Schedule associées aux Slot. La présence de cette ressource est nécessaire pour permettre de faire le lien entre le créneau (Slot) et les ressources Practitioner et PractitionerRole associées.
 - `_include:iterate=Schedule:actor` indique qu'il est nécessaire de transmettre les ressources actor référencées dans les ressources Schedule transmises. En particulier, les ressources Practitioner et PractitionerRole (incluant la ressource Location dans une élément "contained") sont attendues.
 
+### Exemple de requête
+
+La requête ci-dessous correspond à une recherche de créneaux disponibles entre le 02 janvier 2021 à 10h et le 06 janvier 2021 à 10h pour les PS correspondant aux RPPS préfixés : 810101288385, 800001288385 ou 810106738385.
+
+**Requête :**
+
+`get[BASE]/Slot?_include=Slot:schedule&_include:iterate=Schedule:actor&start=ge2021-01-02T10:00:00&start=le2021-01-06T10:00:00&schedule.actor:Practitioner.identifier=urn:oid:1.2.250.1.71.4.2.1|810101288385, urn:oid:1.2.250.1.71.4.2.1|800001288385,urn:oid:1.2.250.1.71.4.2.1|810106738385&status=free`
+
+**Réponse simplifiée :**
+
+<details>
+  <summary>Déplier pour accéder au détail de l'exemple de réponse simplifiée</summary>
+  <pre>
+HTTP 200 OK
+  resourceType: Bundle
+  type: searchset
+  total: 4
+  Slot1 (match)
+  Schedule1
+  Practitioner1
+  PractitionerRole1
+  Slot2 (match)
+  Schedule2
+  Practitioner2
+  PractitionerRole2
+  Slot3 (match)
+  Schedule3
+  Practitioner3
+  PractitionerRole3
+  Slot4 (match)
+  Schedule4
+  Practitioner4
+  PractitionerRole4
+  </pre>
+</details>
+<br>
+
+**Corps de la réponse complète :**
+
+La réponse ci-dessous correspond à :
+1. 2 créneaux disponibles pour Docteur Sébastien THOMAS (RPPS : 810100050075)
+  - 1 créneau au 1 rue Mme Delmas (47000). L'ID de la structure associée est 1810004421. Le 5 novembre 2021 de 9h à 9h30 ayant les caractéristiques suivantes :
+    - Avec prise de RDV,
+    - Visible du grand public,
+    - Au cabinet ou en téléconsultation
+    - Pour le motif `Visite de contrôle`
+    - Les spécialités codifiées associées sont SM54, SM05 et la spécialité non codifiée associée est `Médecine générale (polyvalente)`
+  - 1 créneau au 30 rue Mme Delmas (47000). L'ID de la structure associée est 1810004956. Le 5 novembre 2021 de 11h à 11h30 ayant les caractéristiques suivantes :
+    - Sans prise de RDV,
+    - Visible des professionnels,
+    - Au cabinet,
+    - Pour le motif `Visite urgente`
+    - La spécialité non codifiée associée est `Médecine générale (polyvalente)`
+1. 2 créneaux disponibles pour Médecin Guillaume MARCEL (RPPS : 810002673899) au 1 rue Mme Delmas (47000). L'ID de la structure associée est 1810004421
+  - 1 créneau le 4 novembre 2021 de 14h20 à 14h40 ayant les caractéristiques suivantes :
+    - Avec prise de RDV,
+    - Visible des professionnels et du grand public,
+    - En téléconsultation
+    - Pour le motif `Visite de contrôle`
+    - La spécialité non codifiée associée est `Pneumologie`
+  - 1 créneau le 4 novembre 2021 de 14h40 à 15h00 ayant les caractéristiques suivantes :
+    - Avec prise de RDV,
+    - Visible des professionnels et du grand public,
+    - A domicile
+    - Pour le motif `Visite de contrôle` et `Consultation de suivi pneumologique`
+    - Les spécialités non codifiées associées sont `Pneumologie` et `Médecine générale (polyvalente)`
+
+<details>
+  <summary>Déplier pour accéder au détail de l'exemple de réponse complète au format json</summary>
+  <pre>
+{
+  "resourceType": "Bundle",
+  "id": "8cbb33dc-779e-45e9-a5f6-ea66101288c5",
+  "meta": {
+    "profile": [
+      "http://sas.fr/fhir/StructureDefinition/BundleAgregateur"
+    ]
+  },
+  "type": "searchset",
+  "total": 4,
+  "link": [
+    {
+      "relation": "self",
+      "url": "https://exemple.com/ans-sas/Slot/?_include=Slot:schedule&_include:iterate=Schedule:actor&status=free&start=ge2021-11-04T14:19:35.760+00:00&start=le2021-11-06T23:59:59.999+00:00&schedule.actor:Practitioner.identifier=urn:oid:1.2.250.1.71.4.2.1%7C810002673899,urn:oid:1.2.250.1.71.4.2.1%7C810100050075&_count=1000"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "https://exemple.com/ans-sas/Slot/1636102800",
+      "resource": {
+        "resourceType": "Slot",
+        "id": "1636102800",
+        "meta": {
+          "profile": [
+            "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"
+          ],
+          "security": [
+            {
+              "system": "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
+              "code": "PUBLIC"
+            }
+          ]
+        },
+        "serviceType": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "AMB"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "VR"
+              }
+            ]
+          },
+          {
+            "text": "Visite de contrôle"
+          }
+        ],
+        "specialty": [
+          {
+            "coding": [
+              {
+                "code": "SM54",
+                "system": "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "code": "SM05",
+                "system": "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"
+              }
+            ]
+          },
+          {
+            "text": "Médecine générale (polyvalente)"
+          }
+        ],
+        "appointmentType": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0276",
+              "code": "ROUTINE"
+            }
+          ]
+        },
+        "schedule": {
+          "reference": "Schedule/8b24a507-89bd-49f6-ad5a-f703163abde4"
+        },
+        "status": "free",
+        "start": "2021-11-05T09:00:00.000+00:00",
+        "end": "2021-11-05T09:30:00.000+00:00",
+        "comment": "https://exemple.com/rdv/com/"
+      }
+    },
+    {
+      "fullUrl": "https://exemple.interop/fhir/Schedule/8b24a507-89bd-49f6-ad5a-f703163abde4",
+      "resource": {
+        "resourceType": "Schedule",
+        "id": "8b24a507-89bd-49f6-ad5a-f703163abde4",
+        "meta": {
+          "profile": [
+            "http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"
+          ]
+        },
+        "actor": [
+          {
+            "reference": "Practitioner/2fd27ae6-06b9-41d3-9fb7-b840da8d3296"
+          },
+          {
+            "reference": "PractitionerRole/8d704bd7-d4a6-4b6d-807f-d7402342f247"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://exemple.interop/fhir/Practitioner/2fd27ae6-06b9-41d3-9fb7-b840da8d3296",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "2fd27ae6-06b9-41d3-9fb7-b840da8d3296",
+        "meta": {
+          "profile": [
+            "http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur"
+          ]
+        },
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
+                  "code": "IDNPS"
+                }
+              ]
+            },
+            "system": "urn:oid:1.2.250.1.71.4.2.1",
+            "value": "810100050075"
+          }
+        ],
+        "name": [
+          {
+            "family": "THOMAS",
+            "given": [
+              "Sébastien"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://exemple.interop/fhir/PractitionerRole/8d704bd7-d4a6-4b6d-807f-d7402342f247",
+      "resource": {
+        "resourceType": "PractitionerRole",
+        "id": "8d704bd7-d4a6-4b6d-807f-d7402342f247",
+        "meta": {
+          "profile": [
+            "http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "Location",
+            "id": "1",
+            "meta": {
+              "profile": [
+                "http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur"
+              ]
+            },
+            "identifier": [
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type",
+                      "code": "INTRN"
+                    }
+                  ]
+                },
+                "system": "urn:oid 1.1.111.1.111.1.1.1",
+                "value": "1"
+              }
+            ],
+            "address": {
+              "line": [
+                "1 rue Mme DELMAS"
+              ],
+              "city": "AGEN",
+              "postalCode": "47000"
+            }
+          }
+        ],
+        "practitioner": {
+          "reference": "Practitioner/2fd27ae6-06b9-41d3-9fb7-b840da8d3296"
+        },
+        "organization": {
+          "identifier": {
+            "system": "urn:oid:1.2.250.1.71.4.2.2",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
+                  "code": "IDNST"
+                }
+              ]
+            },
+            "value": "1810004421"
+          }
+        },
+        "location": [
+          {
+            "reference": "#1"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://exemple.com/ans-sas/Slot/1636110000",
+      "resource": {
+        "resourceType": "Slot",
+        "id": "1636110000",
+        "meta": {
+          "profile": [
+            "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"
+          ],
+          "security": [
+            {
+              "system": "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
+              "code": "PRO"
+            }
+          ]
+        },
+        "serviceType": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "AMB"
+              }
+            ]
+          },
+          {
+            "text": "Visite urgente"
+          }
+        ],
+        "specialty": [
+          {
+            "text": "Médecine générale (polyvalente)"
+          }
+        ],
+        "appointmentType": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0276",
+              "code": "WALKIN"
+            }
+          ]
+        },
+        "schedule": {
+          "reference": "Schedule/abbe2be1-a05e-4329-b20b-180f76ac8b2b"
+        },
+        "status": "free",
+        "start": "2021-11-05T11:00:00.000+00:00",
+        "end": "2021-11-05T11:30:00.000+00:00"
+      }
+    },
+    {
+      "fullUrl": "https://exemple.interop/fhir/Schedule/abbe2be1-a05e-4329-b20b-180f76ac8b2b",
+      "resource": {
+        "resourceType": "Schedule",
+        "id": "abbe2be1-a05e-4329-b20b-180f76ac8b2b",
+        "meta": {
+          "profile": [
+            "http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"
+          ]
+        },
+        "actor": [
+          {
+            "reference": "Practitioner/2fd27ae6-06b9-41d3-9fb7-b840da8d3296"
+          },
+          {
+            "reference": "PractitionerRole/fdad395b-c5e6-4b59-b81b-ca10d31eba8b"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://exemple.interop/fhir/PractitionerRole/fdad395b-c5e6-4b59-b81b-ca10d31eba8b",
+      "resource": {
+        "resourceType": "PractitionerRole",
+        "id": "fdad395b-c5e6-4b59-b81b-ca10d31eba8b",
+        "meta": {
+          "profile": [
+            "http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "Location",
+            "id": "2",
+            "meta": {
+              "profile": [
+                "http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur"
+              ]
+            },
+            "identifier": [
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type",
+                      "code": "INTRN"
+                    }
+                  ]
+                },
+                "system": "urn:oid: 1.1.111.1.111.1.1.1",
+                "value": "2"
+              }
+            ],
+            "address": {
+              "line": [
+                "30 rue Mme DELMAS"
+              ],
+              "city": "AGEN",
+              "postalCode": "47000"
+            }
+          }
+        ],
+        "practitioner": {
+          "reference": "Practitioner/2fd27ae6-06b9-41d3-9fb7-b840da8d3296"
+        },
+        "organization": {
+          "identifier": {
+            "system": "urn:oid:1.2.250.1.71.4.2.2",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
+                  "code": "IDNST"
+                }
+              ]
+            },
+            "value": "1810004956"
+          }
+        },
+        "location": [
+          {
+            "reference": "#2"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://exemple.com/ans-sas/Slot/1636035600",
+      "resource": {
+        "resourceType": "Slot",
+        "id": "1636035600",
+        "meta": {
+          "profile": [
+            "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"
+          ],
+          "security": [
+            {
+              "system": "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
+              "code": "PUBLIC"
+            },
+            {
+              "system": "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
+              "code": "PRO"
+            }
+          ]
+        },
+        "serviceType": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "VR"
+              }
+            ]
+          },
+          {
+            "text": "Visite de contrôle"
+          },
+          {
+            "text": "Consultation de suivi pneumologie"
+          }
+        ],
+        "specialty": [
+          {
+            "text": "Pneumologie"
+          }
+        ],
+        "appointmentType": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0276",
+              "code": "ROUTINE"
+            }
+          ]
+        },
+        "schedule": {
+          "reference": "Schedule/a0e524f4-14e8-4791-8e95-1a6f2aa2ec80"
+        },
+        "status": "free",
+        "start": "2021-11-04T14:20:00.000+00:00",
+        "end": "2021-11-04T14:40:00.000+00:00",
+        "comment": "https://exemple.com/rdv/com/"
+      }
+    },
+    {
+      "fullUrl": "https://exemple.interop/fhir/Schedule/a0e524f4-14e8-4791-8e95-1a6f2aa2ec80",
+      "resource": {
+        "resourceType": "Schedule",
+        "id": "a0e524f4-14e8-4791-8e95-1a6f2aa2ec80",
+        "meta": {
+          "profile": [
+            "http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"
+          ]
+        },
+        "actor": [
+          {
+            "reference": "Practitioner/813222df-d939-47fb-b294-144320dc7c5c"
+          },
+          {
+            "reference": "PractitionerRole/ac7aeb0a-51cb-409d-8374-d5198c67520c"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://exemple.interop/fhir/Practitioner/813222df-d939-47fb-b294-144320dc7c5c",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "813222df-d939-47fb-b294-144320dc7c5c",
+        "meta": {
+          "profile": [
+            "http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur"
+          ]
+        },
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
+                  "code": "IDNPS"
+                }
+              ]
+            },
+            "system": "urn:oid:1.2.250.1.71.4.2.1",
+            "value": "810002673899"
+          }
+        ],
+        "name": [
+          {
+            "family": "MARCEL",
+            "given": [
+              "Guillaume"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://exemple.interop/fhir/PractitionerRole/ac7aeb0a-51cb-409d-8374-d5198c67520c",
+      "resource": {
+        "resourceType": "PractitionerRole",
+        "id": "ac7aeb0a-51cb-409d-8374-d5198c67520c",
+        "meta": {
+          "profile": [
+            "http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "Location",
+            "id": "1",
+            "meta": {
+              "profile": [
+                "http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur"
+              ]
+            },
+            "identifier": [
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type",
+                      "code": "INTRN"
+                    }
+                  ]
+                },
+                "system": "urn:oid:1.1.111.1.111.1.1.1",
+                "value": "1"
+              }
+            ],
+            "address": {
+              "line": [
+                "1 rue Mme DELMAS"
+              ],
+              "city": "AGEN",
+              "postalCode": "47000"
+            }
+          }
+        ],
+        "practitioner": {
+          "reference": "Practitioner/813222df-d939-47fb-b294-144320dc7c5c"
+        },
+        "organization": {
+          "identifier": {
+            "system": "urn:oid:1.2.250.1.71.4.2.2",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
+                  "code": "IDNST"
+                }
+              ]
+            },
+            "value": "1810004421"
+          }
+        },
+        "location": [
+          {
+            "reference": "#1"
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+33658913859"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://exemple.com/ans-sas/Slot/1636036800",
+      "resource": {
+        "resourceType": "Slot",
+        "id": "1636036800",
+        "meta": {
+          "profile": [
+            "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"
+          ],
+          "security": [
+            {
+              "system": "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
+              "code": "PUBLIC"
+            },
+            {
+              "system": "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
+              "code": "PRO"
+            }
+          ]
+        },
+        "serviceType": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "HH"
+              }
+            ]
+          },
+          {
+            "text": "Visite de contrôle"
+          },
+          {
+            "text": "Consultation de suivi pneumologique"
+          }
+        ],
+        "specialty": [
+          {
+            "text": "Pneumologie"
+          },
+          {
+            "text": "Médecine générale (polyvalente)"
+          }
+        ],
+        "appointmentType": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0276",
+              "code": "ROUTINE"
+            }
+          ]
+        },
+        "schedule": {
+          "reference": "Schedule/a0e524f4-14e8-4791-8e95-1a6f2aa2ec80"
+        },
+        "status": "free",
+        "start": "2021-11-04T14:40:00.000+00:00",
+        "end": "2021-11-04T15:00:00.000+00:00",
+        "comment": "https://exemple.com/rdv/com/"
+      }
+    }
+  ]
+}
+  </pre>
+</details>
+<br>
+
 ### Nomenclatures
 
 Cette section détaille les nomenclatures à utiliser afin de renseigner les différents éléments codifiés de la réponse.
@@ -228,76 +897,4 @@ Vous obtiendrez alors un rapport de test mettant en valeur les erreurs bloquante
         </td>
     </tr>
 </table>
-
-### Exemple de requête
-
-La requête ci-dessous correspond à une recherche de créneaux disponibles entre le 02 janvier 2021 à 10h et le 06 janvier 2021 à 10h pour les PS correspondant aux RPPS préfixés : 810101288385, 800001288385 ou 810106738385.
-
-**Requête :**
-
-`get[BASE]/Slot?_include=Slot:schedule&_include:iterate=Schedule:actor&start=ge2021-01-02T10:00:00&start=le2021-01-06T10:00:00&schedule.actor:Practitioner.identifier=urn:oid:1.2.250.1.71.4.2.1|810101288385, urn:oid:1.2.250.1.71.4.2.1|800001288385,urn:oid:1.2.250.1.71.4.2.1|810106738385&status=free`
-
-**Réponse simplifiée :**
-
-<details>
-  <summary>Déplier pour accéder au détail de l'exemple de réponse simplifiée</summary>
-  <pre>
-HTTP 200 OK
-  resourceType: Bundle
-  type: searchset
-  total: 4
-  Slot1 (match)
-  Schedule1
-  Practitioner1
-  PractitionerRole1
-  Slot2 (match)
-  Schedule2
-  Practitioner2
-  PractitionerRole2
-  Slot3 (match)
-  Schedule3
-  Practitioner3
-  PractitionerRole3
-  Slot4 (match)
-  Schedule4
-  Practitioner4
-  PractitionerRole4
-  </pre>
-</details>
-<br>
-
-**Corps de la réponse complète :**
-
-La réponse ci-dessous correspond à :
-1. 2 créneaux disponibles pour Docteur Sébastien THOMAS (RPPS : 810100050075)
-  - 1 créneau au 1 rue Mme Delmas (47000). L'ID de la structure associée est 1810004421. Le 5 novembre 2021 de 9h à 9h30 ayant les caractéristiques suivantes :
-    - Avec prise de RDV,
-    - Visible du grand public,
-    - Au cabinet ou en téléconsultation
-    - Pour le motif `Visite de contrôle`
-    - Les spécialités codifiées associées sont SM54, SM05 et la spécialité non codifiée associée est `Médecine générale (polyvalente)`
-  - 1 créneau au 30 rue Mme Delmas (47000). L'ID de la structure associée est 1810004956. Le 5 novembre 2021 de 11h à 11h30 ayant les caractéristiques suivantes :
-    - Sans prise de RDV,
-    - Visible des professionnels,
-    - Au cabinet,
-    - Pour le motif `Visite urgente`
-    - La spécialité non codifiée associée est `Médecine générale (polyvalente)`
-1. 2 créneaux disponibles pour Médecin Guillaume MARCEL (RPPS : 810002673899) au 1 rue Mme Delmas (47000). L'ID de la structure associée est 1810004421
-  - 1 créneau le 4 novembre 2021 de 14h20 à 14h40 ayant les caractéristiques suivantes :
-    - Avec prise de RDV,
-    - Visible des professionnels et du grand public,
-    - En téléconsultation
-    - Pour le motif `Visite de contrôle`
-    - La spécialité non codifiée associée est `Pneumologie`
-  - 1 créneau le 4 novembre 2021 de 14h40 à 15h00 ayant les caractéristiques suivantes :
-    - Avec prise de RDV,
-    - Visible des professionnels et du grand public,
-    - A domicile
-    - Pour le motif `Visite de contrôle` et `Consultation de suivi pneumologique`
-    - Les spécialités non codifiées associées sont `Pneumologie` et `Médecine générale (polyvalente)`
-
-Pour consulter l'exemple en plein écran, cliquer [ici](./StructureDefinition-BundleAgregateur.html).
-
-<iframe src="./StructureDefinition-BundleAgregateur.json" width="100%" height="300" style="border:2px solid black;" scrolling="yes"></iframe>
 <br><br>
-
