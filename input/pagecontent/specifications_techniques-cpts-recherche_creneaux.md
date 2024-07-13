@@ -292,6 +292,6 @@ La réponse ci-dessous correspond à :
     - Téléphone de la CPTS : 0102030405
 
 
-<iframe src="https://interop.esante.gouv.fr/ig/fhir/sas/Bundle-ExampleBundleCPTS.json" width="100%" height="300" style="border: 1px solid #cccccc; border-radius: 4px; background: #f5f2f0;" scrolling="yes"></iframe>
+<iframe src="./Bundle-ExampleBundleCPTS.json" width="100%" height="300" style="border: 1px solid #cccccc; border-radius: 4px; background: #f5f2f0;" scrolling="yes"></iframe>
 <br><br>
 
