@@ -25,21 +25,17 @@ Les opérations de la plateforme SAS sont réalisées au moyen d'API FHIR.
 
 #### PS à titre individuel
 
-- [Spécifications fonctionnelles](./specifications_fonctionnelles.html)
-- [Spécifications techniques - Recherche de créneaux](./specifications_techniques-ps-recherche_creneaux.html)
-
-**Spécifications partagées avec les autres cas d'usage :**
-- [Spécifications techniques - Création de rendez-vous](./specifications_techniques-tous-creation_rdv.html)
-- [Spécifications techniques - Mise à jour de rendez-vous](./specifications_techniques-tous-maj_rdv.html)
+1. [Spécifications fonctionnelles](./specifications_fonctionnelles.html)
+2. Spécifications techniques :
+   - [Recherche de créneaux](./specifications_techniques-ps-recherche_creneaux.html)
+   - [Gestion de rendez-vous](./specifications_techniques-ps-gestion_rdv.html)
 
 #### CPTS
 
-- [Spécifications fonctionnelles](./specifications_fonctionnelles.html)
-- [Spécifications techniques - Recherche de créneaux](./specifications_techniques-cpts-recherche_creneaux.html)
-
-**Spécifications partagées avec les autres cas d'usage :**
-- [Spécifications techniques - Création de rendez-vous](./specifications_techniques-tous-creation_rdv.html)
-- [Spécifications techniques - Mise à jour de rendez-vous](./specifications_techniques-tous-maj_rdv.html)
+1. [Spécifications fonctionnelles](./specifications_fonctionnelles.html)
+2. Spécifications techniques :
+   - [Recherche de créneaux](./specifications_techniques-cpts-recherche_creneaux.html)
+   - [Gestion de rendez-vous](./specifications_techniques-cpts-gestion_rdv.html)
 
 ### Dépendances
  
