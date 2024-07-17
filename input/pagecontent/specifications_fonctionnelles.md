@@ -48,7 +48,7 @@ Le schéma ci-dessous illustre les échanges à mettre en oeuvre entre la platef
     <p>{% include recherche_creneaux_2.svg %}</p>
 </div>
 
-#### Scructure de la réponse
+#### Structure de la réponse
 
 La structure de réponse attendue inclut l’ensemble des créneaux de disponibilités correspondant à la requête réalisée par la plateforme numérique SAS.
 1 à n créneaux de consultation (Slot) peuvent être rattachés à 1 agenda (Schedule) qui représente 1 lieu de consultation (PractitionerRole), lui-même rattaché à 1 PS (Practitioner). Si des créneaux de consultation sont proposés pour plusieurs lieux de consultation, on aura autant d’agendas (Schedule) que de lieux de consultation (PractitionerRole).
@@ -105,3 +105,4 @@ Le schéma ci-dessous illustre l'échange à mettre en oeuvre :
 <div class="figure" style="width:100%;" align ="center">
     <p>{% include mise_a_jour_rendez_vous.svg %}</p>
 </div>
+<br><br>
