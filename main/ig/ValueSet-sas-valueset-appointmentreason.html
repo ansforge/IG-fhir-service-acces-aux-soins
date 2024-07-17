@@ -99,16 +99,22 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="specifications_techniques-ps-recherche_creneaux.html">01 - PS - Recherche des créneaux</a>
+        ________ PS indiv. ________
       </li>
       <li>
-        <a href="specifications_techniques-cpts-recherche_creneaux.html">02 - CPTS - Recherche des créneaux</a>
+        <a href="specifications_techniques-ps-recherche_creneaux.html">PS indiv. - Recherche des créneaux</a>
       </li>
       <li>
-        <a href="specifications_techniques-tous-creation_rdv.html">11 - Tous - Création de rendez-vous</a>
+        <a href="specifications_techniques-ps-gestion_rdv.html">PS indiv. - Gestion de rendez-vous</a>
       </li>
       <li>
-        <a href="specifications_techniques-tous-maj_rdv.html">12 - Tous - Mise à jour de rendez-vous</a>
+        _________ CPTS _________
+      </li>
+      <li>
+        <a href="specifications_techniques-cpts-recherche_creneaux.html">CPTS - Recherche des créneaux</a>
+      </li>
+      <li>
+        <a href="specifications_techniques-cpts-gestion_rdv.html">CPTS - Gestion de rendez-vous</a>
       </li>
     </ul>
   </li>
@@ -249,7 +255,7 @@
         
           Draft
           
-            as of 2024-07-12
+            as of 2024-07-17
           
         
       </td>
@@ -273,11 +279,7 @@
   <p>
     <b>References</b>
   </p>
-  
-<ul>
- <li><a href="StructureDefinition-sas-cpts-slot-aggregator.html">FrSlotAgregateurCPTS</a></li>
- <li><a href="StructureDefinition-sas-sos-slot-aggregator.html">FrSlotAgregateurSOS</a></li>
-</ul>
+   <p>Error loading /home/runner/.fhir/packages/hl7.terminology.r4#6.0.0/package/NamingSystem-v3-loinc.json: Unknown NamingSystemIdentifierType code '?'</p>
 
 
   <!-- insert intro if present -->
@@ -290,14 +292,14 @@
 <!-- Content Logical Definition heading in the fragment -->
   <h3>Logical Definition (CLD)</h3>
 <div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet sas-valueset-appointmentreason</b></p><a name="sas-valueset-appointmentreason"> </a><a name="hcsas-valueset-appointmentreason"> </a><a name="sas-valueset-appointmentreason-und"> </a>
-<ul><li>Include these codes as defined in <a href="http://terminology.hl7.org/5.5.0/CodeSystem-v2-0276.html"><code>http://terminology.hl7.org/CodeSystem/v2-0276</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href="http://terminology.hl7.org/5.5.0/CodeSystem-v2-0276.html#v2-0276-ROUTINE">ROUTINE</a></td><td>Créneau avec prise de RDV possible</td><td>Routine appointment - default if not valued</td></tr><tr><td><a href="http://terminology.hl7.org/5.5.0/CodeSystem-v2-0276.html#v2-0276-WALKIN">WALKIN</a></td><td>Créneau sans prise de RDV possible à domicile</td><td>A previously unscheduled walk-in visit</td></tr></table></li></ul></div>
+<ul><li>Include these codes as defined in <a href="http://terminology.hl7.org/6.0.0/CodeSystem-v2-0276.html"><code>http://terminology.hl7.org/CodeSystem/v2-0276</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href="http://terminology.hl7.org/6.0.0/CodeSystem-v2-0276.html#v2-0276-ROUTINE">ROUTINE</a></td><td>Créneau avec prise de RDV possible</td><td>Routine appointment - default if not valued</td></tr><tr><td><a href="http://terminology.hl7.org/6.0.0/CodeSystem-v2-0276.html#v2-0276-WALKIN">WALKIN</a></td><td>Créneau sans prise de RDV possible à domicile</td><td>A previously unscheduled walk-in visit</td></tr></table></li></ul></div>
 
   <p>&#160;</p>
   <a name="expansion"> </a>
   <h3 id="expansion">Expansion</h3>
 
-  <div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet </b></p><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on <a href="http://terminology.hl7.org/5.5.0/CodeSystem-v2-0276.html">codesystem appointmentReason v2.0.0 (CodeSystem)</a></p><p>This value set contains 2 concepts</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap"><a name="null-x-http---terminology.hl7.org-CodeSystem-v2-0276-ROUTINE"> </a>  <a href="http://terminology.hl7.org/5.5.0/CodeSystem-v2-0276.html#v2-0276-ROUTINE">ROUTINE</a></td><td>http://terminology.hl7.org/CodeSystem/v2-0276</td><td>Créneau avec prise de RDV possible</td><td><div><p>Routine appointment - default if not valued</p>
-</div></td></tr><tr><td style="white-space:nowrap"><a name="null-x-http---terminology.hl7.org-CodeSystem-v2-0276-WALKIN"> </a>  <a href="http://terminology.hl7.org/5.5.0/CodeSystem-v2-0276.html#v2-0276-WALKIN">WALKIN</a></td><td>http://terminology.hl7.org/CodeSystem/v2-0276</td><td>Créneau sans prise de RDV possible à domicile</td><td><div><p>A previously unscheduled walk-in visit</p>
+  <div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet </b></p><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on <a href="http://terminology.hl7.org/6.0.0/CodeSystem-v2-0276.html">codesystem appointmentReason v2.0.0 (CodeSystem)</a></p><p>This value set contains 2 concepts</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap"><a name="null-x-http---terminology.hl7.org-CodeSystem-v2-0276-ROUTINE"> </a>  <a href="http://terminology.hl7.org/6.0.0/CodeSystem-v2-0276.html#v2-0276-ROUTINE">ROUTINE</a></td><td>http://terminology.hl7.org/CodeSystem/v2-0276</td><td>Créneau avec prise de RDV possible</td><td><div><p>Routine appointment - default if not valued</p>
+</div></td></tr><tr><td style="white-space:nowrap"><a name="null-x-http---terminology.hl7.org-CodeSystem-v2-0276-WALKIN"> </a>  <a href="http://terminology.hl7.org/6.0.0/CodeSystem-v2-0276.html#v2-0276-WALKIN">WALKIN</a></td><td>http://terminology.hl7.org/CodeSystem/v2-0276</td><td>Créneau sans prise de RDV possible à domicile</td><td><div><p>A previously unscheduled walk-in visit</p>
 </div></td></tr></table></div>
 
   <hr/>
@@ -379,7 +381,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jul 12, 2024 14:55+0000">2024-07-12</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jul 17, 2024 06:26+0000">2024-07-17</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

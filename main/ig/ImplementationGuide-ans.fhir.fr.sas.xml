@@ -10,7 +10,7 @@
   <name value="SAS"/>
   <title value="Service d'Accès aux Soins"/>
   <status value="draft"/>
-  <date value="2024-07-12T14:55:46+00:00"/>
+  <date value="2024-07-17T06:26:56+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -35,7 +35,7 @@
     </extension>
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
-    <version value="5.5.0"/>
+    <version value="6.0.0"/>
   </dependsOn>
   <dependsOn id="hl7ext">
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
@@ -861,7 +861,15 @@
           <valueUrl value="specifications_techniques-ps-recherche_creneaux.html"/>
         </extension>
         <nameUrl value="specifications_techniques-ps-recherche_creneaux.html"/>
-        <title value="01 - PS - Recherche des créneaux"/>
+        <title value="PS indiv. - Recherche des créneaux"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="specifications_techniques-ps-gestion_rdv.html"/>
+        </extension>
+        <nameUrl value="specifications_techniques-ps-gestion_rdv.html"/>
+        <title value="PS indiv. - Gestion de rendez-vous"/>
         <generation value="markdown"/>
       </page>
       <page>
@@ -869,23 +877,15 @@
           <valueUrl value="specifications_techniques-cpts-recherche_creneaux.html"/>
         </extension>
         <nameUrl value="specifications_techniques-cpts-recherche_creneaux.html"/>
-        <title value="02 - CPTS - Recherche des créneaux"/>
+        <title value="CPTS - Recherche des créneaux"/>
         <generation value="markdown"/>
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="specifications_techniques-tous-creation_rdv.html"/>
+          <valueUrl value="specifications_techniques-cpts-gestion_rdv.html"/>
         </extension>
-        <nameUrl value="specifications_techniques-tous-creation_rdv.html"/>
-        <title value="11 - Tous - Création de rendez-vous"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="specifications_techniques-tous-maj_rdv.html"/>
-        </extension>
-        <nameUrl value="specifications_techniques-tous-maj_rdv.html"/>
-        <title value="12 - Tous - Mise à jour de rendez-vous"/>
+        <nameUrl value="specifications_techniques-cpts-gestion_rdv.html"/>
+        <title value="CPTS - Gestion de rendez-vous"/>
         <generation value="markdown"/>
       </page>
       <page>

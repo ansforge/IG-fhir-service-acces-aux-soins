@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "SAS"] ; # 
   fhir:title [ fhir:v "Service d'Accès aux Soins"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-07-12T14:55:46+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-07-17T06:26:56+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -47,7 +47,7 @@
        fhir:link <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
      ] ;
      fhir:packageId [ fhir:v "hl7.terminology.r4" ] ;
-     fhir:version [ fhir:v "5.5.0" ]
+     fhir:version [ fhir:v "6.0.0" ]
   ] [
      fhir:id [ fhir:v "hl7ext" ] ;
      fhir:extension ( [
@@ -990,7 +990,15 @@
            fhir:value [ fhir:v "specifications_techniques-ps-recherche_creneaux.html"^^xsd:anyURI ]
          ] ) ;
          fhir:name [ fhir:v "specifications_techniques-ps-recherche_creneaux.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "01 - PS - Recherche des créneaux" ] ;
+         fhir:title [ fhir:v "PS indiv. - Recherche des créneaux" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "specifications_techniques-ps-gestion_rdv.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "specifications_techniques-ps-gestion_rdv.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "PS indiv. - Gestion de rendez-vous" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
@@ -998,23 +1006,15 @@
            fhir:value [ fhir:v "specifications_techniques-cpts-recherche_creneaux.html"^^xsd:anyURI ]
          ] ) ;
          fhir:name [ fhir:v "specifications_techniques-cpts-recherche_creneaux.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "02 - CPTS - Recherche des créneaux" ] ;
+         fhir:title [ fhir:v "CPTS - Recherche des créneaux" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "specifications_techniques-tous-creation_rdv.html"^^xsd:anyURI ]
+           fhir:value [ fhir:v "specifications_techniques-cpts-gestion_rdv.html"^^xsd:anyURI ]
          ] ) ;
-         fhir:name [ fhir:v "specifications_techniques-tous-creation_rdv.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "11 - Tous - Création de rendez-vous" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "specifications_techniques-tous-maj_rdv.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "specifications_techniques-tous-maj_rdv.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "12 - Tous - Mise à jour de rendez-vous" ] ;
+         fhir:name [ fhir:v "specifications_techniques-cpts-gestion_rdv.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "CPTS - Gestion de rendez-vous" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
