@@ -20,14 +20,10 @@ Plus d'information sur le site dédié du ministère https://esante.gouv.fr/sas
 L'objectif de ce projet est de définir les profils qui doivent être implémentés par les éditeurs de solution de prise de rendez-vous en ligne pour exposer les créneaux disponibles et informer la plateforme des rendez-vous pris.
 Les opérations de la plateforme SAS sont réalisées au moyen d'API FHIR.
 
-Les ressources profilées pour ce cas d'usage spécifique sont :
-- BundleAgregateur
-- FrLocationAgregateur
-- FrPractitionerAgregateur
-- FrPractitionerRoleExerciceAgregateur
-- FrScheduleAgregateur
-- FrSlotAgregateur
-- FrAppointmentSAS
+Les ressources sont profilées pour les différents cas d'usage :
+- PS à titre individuel
+- CPTS
+- SOS Médecins
 
 # CI/CD
 Les pipelines de ce repository permettent : 
@@ -41,7 +37,7 @@ Les pipelines de ce repository permettent :
 Faire la PR sur la branche main.
 
 # Notes
-Ce repository "IG-service-acces-aux-soins " a été créé à partir du repo "IG-modele" de l'organisation GitHub ANS : <https://github.com/ansforge/IG-modele>.
+Ce repository "IG-fhir-service-acces-aux-soins " a été créé à partir du repo "IG-modele" de l'organisation GitHub ANS : <https://github.com/ansforge/IG-modele>.
 
 Un commentaire ? Une remarque ? Utilisez les GitHub [issues](https://github.com/ansforge/IG-service-acces-aux-soins/issues) pour indiquer vos propositions d'amélioration et de correction.
 

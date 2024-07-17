@@ -40,3 +40,4 @@ Les opérations de la plateforme SAS sont réalisées au moyen d'API FHIR.
 ### Dépendances
  
 {% include dependency-table.xhtml %}
+<br><br>

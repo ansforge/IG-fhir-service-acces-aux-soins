@@ -14,3 +14,5 @@ Ensemble des ressources téléchargeables :
 * [XML Definitions (zip)](definitions.xml.zip)
 * [XML Exemples (zip)](examples.ttl.zip)
 * [Turtle Définitions](definitions.ttl.zip)
+
+<br><br>
