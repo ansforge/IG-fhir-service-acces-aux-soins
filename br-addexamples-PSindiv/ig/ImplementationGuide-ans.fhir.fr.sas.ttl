@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "SAS"] ; # 
   fhir:title [ fhir:v "Service d'Accès aux Soins"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-07-17T09:43:13+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-07-17T11:59:52+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -669,7 +669,37 @@
          fhir:reference [ fhir:v "Practitioner/ExamplePractitioner" ]
        ] ;
        fhir:name [ fhir:v "ExamplePractitioner" ] ;
-       fhir:description [ fhir:v "Exemple practitioner flux agrégateur" ] ;
+       fhir:description [ fhir:v "Exemple 1 practitioner flux agrégateur" ] ;
+       fhir:example [
+         fhir:v "http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur"^^xsd:anyURI ;
+         fhir:link <http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Practitioner" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/ExamplePractitioner2> ;
+         fhir:reference [ fhir:v "Practitioner/ExamplePractitioner2" ]
+       ] ;
+       fhir:name [ fhir:v "ExamplePractitioner2" ] ;
+       fhir:description [ fhir:v "Exemple 2 practitioner flux agrégateur" ] ;
+       fhir:example [
+         fhir:v "http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur"^^xsd:anyURI ;
+         fhir:link <http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Practitioner" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/ExamplePractitioner3> ;
+         fhir:reference [ fhir:v "Practitioner/ExamplePractitioner3" ]
+       ] ;
+       fhir:name [ fhir:v "ExamplePractitioner3" ] ;
+       fhir:description [ fhir:v "Exemple 3 practitioner flux agrégateur" ] ;
        fhir:example [
          fhir:v "http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur"^^xsd:anyURI ;
          fhir:link <http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur>
@@ -684,7 +714,52 @@
          fhir:reference [ fhir:v "PractitionerRole/ExamplePractitionerRoleAgregateur" ]
        ] ;
        fhir:name [ fhir:v "ExamplePractitionerRoleAgregateur" ] ;
-       fhir:description [ fhir:v "Exemple PractitionerRole flux agrégateur" ] ;
+       fhir:description [ fhir:v "Exemple 1 PractitionerRole flux agrégateur" ] ;
+       fhir:example [
+         fhir:v "http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"^^xsd:anyURI ;
+         fhir:link <http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "PractitionerRole" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/PractitionerRole/ExamplePractitionerRoleAgregateur2> ;
+         fhir:reference [ fhir:v "PractitionerRole/ExamplePractitionerRoleAgregateur2" ]
+       ] ;
+       fhir:name [ fhir:v "ExamplePractitionerRoleAgregateur2" ] ;
+       fhir:description [ fhir:v "Exemple 2 PractitionerRole flux agrégateur" ] ;
+       fhir:example [
+         fhir:v "http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"^^xsd:anyURI ;
+         fhir:link <http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "PractitionerRole" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/PractitionerRole/ExamplePractitionerRoleAgregateur3> ;
+         fhir:reference [ fhir:v "PractitionerRole/ExamplePractitionerRoleAgregateur3" ]
+       ] ;
+       fhir:name [ fhir:v "ExamplePractitionerRoleAgregateur3" ] ;
+       fhir:description [ fhir:v "Exemple 3 PractitionerRole flux agrégateur" ] ;
+       fhir:example [
+         fhir:v "http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"^^xsd:anyURI ;
+         fhir:link <http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "PractitionerRole" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/PractitionerRole/ExamplePractitionerRoleAgregateur4> ;
+         fhir:reference [ fhir:v "PractitionerRole/ExamplePractitionerRoleAgregateur4" ]
+       ] ;
+       fhir:name [ fhir:v "ExamplePractitionerRoleAgregateur4" ] ;
+       fhir:description [ fhir:v "Exemple 4 PractitionerRole flux agrégateur" ] ;
        fhir:example [
          fhir:v "http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"^^xsd:anyURI ;
          fhir:link <http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur>
