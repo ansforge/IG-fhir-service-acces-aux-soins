@@ -44,20 +44,9 @@ Les échanges reposent sur des **webservices se basant sur l'API REST du standar
 
 Le schéma ci-dessous illustre les échanges à mettre en oeuvre entre la plateforme numérique SAS, et les différentes solutions interfacées :
 
-<table align="center">
-    <tr>
-        <td align ="center">
-            <div class="figure">
-                <img src="recherche_creneaux_2.png" alt="Flux recherche de créneaux" title="Flux recherche de créneaux">
-            </div>
-        </td>    
-    </tr>
-    <tr>
-        <td align ="center">
-            <b>Figure 2 - Flux recherche de créneaux</b>
-        </td>
-    </tr>
-</table>
+<div class="figure" style="width:100%;" align ="center">
+    <p>{% include recherche_creneaux_2.svg %}</p>
+</div>
 
 #### Scructure de la réponse
 
@@ -103,20 +92,9 @@ Pour la mise en place de ce flux, il est nécessaire de s'assurer d'une technolo
 Lorsqu'un régulateur prend RDV pour un patient au sein de la solution logicielle éditeur, celle-ci transmet une requête de création de RDV.
 Le schéma ci-dessous illustre l'échange à mettre en oeuvre :
 
-<table align="center">
-    <tr>
-        <td align ="center">
-            <div class="figure">
-                <img src="creation_rendez_vous_2.png" alt="Flux création de rendez-vous" title="Flux création de rendez-vous">
-            </div>
-        </td>    
-    </tr>
-    <tr>
-        <td align ="center">
-            <b>Figure 4 - Flux création de rendez-vous</b>
-        </td>
-    </tr>
-</table>
+<div class="figure" style="width:100%;" align ="center">
+    <p>{% include creation_rendez_vous_2.svg %}</p>
+</div>
 
 #### Mise à jour de rendez-vous
 
@@ -124,17 +102,6 @@ Le schéma ci-dessous illustre l'échange à mettre en oeuvre :
 La mise à jour des données du RDV peut porter sur chacun des éléments de la ressource transmise (dates du créneau, PS effecteurs des soins, statut du RDV, etc.).
 Le schéma ci-dessous illustre l'échange à mettre en oeuvre :
 
-<table align="center">
-    <tr>
-        <td align ="center">
-            <div class="figure">
-                <img src="mise_a_jour_rendez_vous.png" alt="Flux mise à jour de rendez-vous" title="Flux mise à jour de rendez-vous">
-            </div>
-        </td>    
-    </tr>
-    <tr>
-        <td align ="center">
-            <b>Figure 5 - Flux mise à jour de rendez-vous</b>
-        </td>
-    </tr>
-</table>
+<div class="figure" style="width:100%;" align ="center">
+    <p>{% include mise_a_jour_rendez_vous.svg %}</p>
+</div>
