@@ -1,7 +1,7 @@
 
 Instance: ExamplePractitionerRoleAgregateur
 InstanceOf: FrPractitionerRoleExerciceAgregateur
-Description: "Exemple PractitionerRole flux agrégateur"
+Description: "Exemple 1 PractitionerRole flux agrégateur"
 Usage: #example
 
 * contained[+] = ExampleLocation
