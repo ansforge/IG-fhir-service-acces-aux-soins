@@ -1,0 +1,14 @@
+
+Instance: ExampleSlotPSIndiv2
+InstanceOf: FrSlotAgregateur
+Description: "Exemple 2 ressource slot PS indiv"
+Usage: #example
+
+* meta.security = $JDV-J165-TypeCreneau-SAS#PRO
+* serviceType[+].coding = $v3-ActCode#AMB
+* serviceType[+].text = "Visite urgente"
+* specialty[+].text = "Médecine générale (polyvalente)"
+* appointmentType[+].coding = $v2-0276#WALKIN
+* schedule = Reference(ExampleSchedule2)
+* start = "2021-11-05T11:00:00.000+00:00"
+* end = "2021-11-05T11:30:00.000+00:00"
