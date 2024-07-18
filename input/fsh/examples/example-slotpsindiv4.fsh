@@ -4,8 +4,8 @@ InstanceOf: FrSlotAgregateur
 Description: "Exemple 4 ressource slot PS indiv"
 Usage: #example
 
-* meta.security[+] = $JDV-J165-TypeCreneau-SAS#PUBLIC
-* meta.security[+] = $JDV-J165-TypeCreneau-SAS#PRO
+* meta.security[+] = https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau#PUBLIC
+* meta.security[+] = https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau#PRO
 * serviceType[+].coding = $v3-ActCode#HH
 * serviceType[+].text = "Visite de contrôle"
 * serviceType[+].text = "Consultation de suivi pneumologie"

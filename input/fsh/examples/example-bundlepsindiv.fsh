@@ -28,9 +28,6 @@ Usage: #example
 * entry[FrScheduleAgregateur][+].resource = ExampleSchedule2
 * entry[FrScheduleAgregateur][=].fullUrl = "https://exemple.com/ans-sas/Schedule/ExampleSchedule2"
 
-* entry[FrPractitionerAgregateur][+].resource = ExamplePractitioner2
-* entry[FrPractitionerAgregateur][=].fullUrl = "https://exemple.com/ans-sas/Practitioner/ExamplePractitioner2"
-
 * entry[FrPractitionerRoleExerciceAgregateur][+].resource = ExamplePractitionerRoleAgregateur3
 * entry[FrPractitionerRoleExerciceAgregateur][=].fullUrl = "https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur3"
 
@@ -48,12 +45,3 @@ Usage: #example
 
 * entry[FrSlotAgregateur][+].resource = ExampleSlotPSIndiv4
 * entry[FrSlotAgregateur][=].fullUrl = "https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv4"
-
-* entry[FrScheduleAgregateur][+].resource = ExampleSchedule3
-* entry[FrScheduleAgregateur][=].fullUrl = "https://exemple.com/ans-sas/Schedule/ExampleSchedule3"
-
-* entry[FrPractitionerAgregateur][+].resource = ExamplePractitioner3
-* entry[FrPractitionerAgregateur][=].fullUrl = "https://exemple.com/ans-sas/Practitioner/ExamplePractitioner3"
-
-* entry[FrPractitionerRoleExerciceAgregateur][+].resource = ExamplePractitionerRoleAgregateur4
-* entry[FrPractitionerRoleExerciceAgregateur][=].fullUrl = "https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur4"
