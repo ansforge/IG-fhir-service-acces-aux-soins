@@ -13,4 +13,6 @@ Usage: #example
 * organization.identifier.value = "1810004421"
  
 * location = Reference(ExampleLocation3)
+* telecom[0].system =  #phone
+* telecom[0].value = "+33658913859"
 

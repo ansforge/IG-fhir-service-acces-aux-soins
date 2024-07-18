@@ -8,7 +8,7 @@ Usage: #example
 * meta.security[+] = https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau#PRO
 * serviceType[+].coding = $v3-ActCode#HH
 * serviceType[+].text = "Visite de contrôle"
-* serviceType[+].text = "Consultation de suivi pneumologie"
+* serviceType[+].text = "Consultation de suivi pneumologique"
 * specialty[+].text = "Pneumologie"
 * specialty[+].text = "Médecine générale (polyvalente)"
 * appointmentType[+].coding = $v2-0276#ROUTINE
