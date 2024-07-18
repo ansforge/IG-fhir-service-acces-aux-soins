@@ -1,6 +1,6 @@
 
 Instance: ExampleBundlePSIndiv
-InstanceOf: BundleAgregateurCPTS
+InstanceOf: BundleAgregateur
 Description: "Exemple Bundle PS indiv"
 Usage: #example
 
