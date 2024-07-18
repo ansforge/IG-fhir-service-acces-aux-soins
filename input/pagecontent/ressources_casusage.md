@@ -12,12 +12,12 @@ where Id not like '%sos%' and  Id not like '%cpts%' and Id not like 'Example%'an
 Liste des ressources (profils,paramètres de recherche, terminologies, exemples) à utiliser dans le cadre du cas d'usage CPTS
 
 {% sql SELECT '[' || Id ||']('||Type||'-' || id || '.html)' as "Id", Type, IFNULL(Description,' ') as "Description" from Resources
-where Id like '%cpts%' %}
+where Id like '%cpts%'and Id not like 'Example%' %}
 
 ### SOS Médecins
 
 Liste des ressources (profils,paramètres de recherche, terminologies, exemples) à utiliser dans le cadre du cas d'usage SOS Médecins
 
 {% sql SELECT '[' || Id ||']('||Type||'-' || id || '.html)' as "Id", Type, IFNULL(Description,' ') as "Description" from Resources
-where Id like '%sos%'  %}
+where Id like '%sos%' and Id not like 'Example%' %}
 
