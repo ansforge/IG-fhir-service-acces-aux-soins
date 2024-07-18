@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "SAS"] ; # 
   fhir:title [ fhir:v "Service d'Accès aux Soins"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-07-17T11:59:52+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-07-18T08:12:53+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -632,6 +632,21 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Bundle/ExampleBundlePSIndiv> ;
+         fhir:reference [ fhir:v "Bundle/ExampleBundlePSIndiv" ]
+       ] ;
+       fhir:name [ fhir:v "ExampleBundlePSIndiv" ] ;
+       fhir:description [ fhir:v "Exemple Bundle PS indiv" ] ;
+       fhir:example [
+         fhir:v "http://sas.fr/fhir/StructureDefinition/BundleAgregateur"^^xsd:anyURI ;
+         fhir:link <http://sas.fr/fhir/StructureDefinition/BundleAgregateur>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "HealthcareService" ]
        ] ) ;
        fhir:reference [
@@ -782,6 +797,51 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Schedule" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Schedule/ExampleSchedule1> ;
+         fhir:reference [ fhir:v "Schedule/ExampleSchedule1" ]
+       ] ;
+       fhir:name [ fhir:v "ExampleSchedule1" ] ;
+       fhir:description [ fhir:v "Exemple 1 ressource schedule" ] ;
+       fhir:example [
+         fhir:v "http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"^^xsd:anyURI ;
+         fhir:link <http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Schedule" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Schedule/ExampleSchedule2> ;
+         fhir:reference [ fhir:v "Schedule/ExampleSchedule2" ]
+       ] ;
+       fhir:name [ fhir:v "ExampleSchedule2" ] ;
+       fhir:description [ fhir:v "Exemple 2 ressource schedule" ] ;
+       fhir:example [
+         fhir:v "http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"^^xsd:anyURI ;
+         fhir:link <http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Schedule" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Schedule/ExampleSchedule3> ;
+         fhir:reference [ fhir:v "Schedule/ExampleSchedule3" ]
+       ] ;
+       fhir:name [ fhir:v "ExampleSchedule3" ] ;
+       fhir:description [ fhir:v "Exemple 3 ressource schedule" ] ;
+       fhir:example [
+         fhir:v "http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"^^xsd:anyURI ;
+         fhir:link <http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "Slot" ]
        ] ) ;
        fhir:reference [
@@ -793,6 +853,66 @@
        fhir:example [
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Slot" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Slot/ExampleSlotPSIndiv1> ;
+         fhir:reference [ fhir:v "Slot/ExampleSlotPSIndiv1" ]
+       ] ;
+       fhir:name [ fhir:v "ExampleSlotPSIndiv1" ] ;
+       fhir:description [ fhir:v "Exemple 1 ressource slot PS indiv" ] ;
+       fhir:example [
+         fhir:v "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"^^xsd:anyURI ;
+         fhir:link <http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Slot" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Slot/ExampleSlotPSIndiv2> ;
+         fhir:reference [ fhir:v "Slot/ExampleSlotPSIndiv2" ]
+       ] ;
+       fhir:name [ fhir:v "ExampleSlotPSIndiv2" ] ;
+       fhir:description [ fhir:v "Exemple 2 ressource slot PS indiv" ] ;
+       fhir:example [
+         fhir:v "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"^^xsd:anyURI ;
+         fhir:link <http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Slot" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Slot/ExampleSlotPSIndiv3> ;
+         fhir:reference [ fhir:v "Slot/ExampleSlotPSIndiv3" ]
+       ] ;
+       fhir:name [ fhir:v "ExampleSlotPSIndiv3" ] ;
+       fhir:description [ fhir:v "Exemple 3 ressource slot PS indiv" ] ;
+       fhir:example [
+         fhir:v "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"^^xsd:anyURI ;
+         fhir:link <http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Slot" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Slot/ExampleSlotPSIndiv4> ;
+         fhir:reference [ fhir:v "Slot/ExampleSlotPSIndiv4" ]
+       ] ;
+       fhir:name [ fhir:v "ExampleSlotPSIndiv4" ] ;
+       fhir:description [ fhir:v "Exemple 4 ressource slot PS indiv" ] ;
+       fhir:example [
+         fhir:v "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"^^xsd:anyURI ;
+         fhir:link <http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur>
        ]
      ] [
        fhir:extension ( [
