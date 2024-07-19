@@ -1,12 +1,12 @@
 SAS : Validation Results
 =========================================
 
-err = 17, warn = 38, info = 83
+err = 19, warn = 38, info = 83
 IG Publisher Version: 1.6.18
-Generated Fri Jul 19 11:25:47 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.sas#1.0.0-ballot (canonical = https://interop.esante.gouv.fr/ig/fhir/sas)
+Generated Fri Jul 19 11:43:51 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.sas#1.0.0-ballot (canonical = https://interop.esante.gouv.fr/ig/fhir/sas)
  Build Errors : 1 / 5 / 0
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundleCPTS : 0 / 6 / 27
- /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundlePSIndiv : 0 / 9 / 57
+ /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundlePSIndiv : 1 / 9 / 57
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/HealthcareService-ExampleHealthcareServiceCPTS : 0 / 0 / 1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.sas : 0 / 0 / 1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Organization-ExampleOrgaCPTS : 0 / 0 / 2
@@ -23,7 +23,7 @@ Generated Fri Jul 19 11:25:47 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.sas#1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Schedule-ExampleSchedule3 : 0 / 0 / 1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/SearchParameter-cptsslot-sp-servicetype : 0 / 0 / 1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Slot-ExampleSlotCPTS : 0 / 0 / 3
- /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Slot-ExampleSlotPSIndiv1 : 0 / 0 / 2
+ /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Slot-ExampleSlotPSIndiv1 : 1 / 0 / 2
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Slot-ExampleSlotPSIndiv2 : 0 / 0 / 2
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Slot-ExampleSlotPSIndiv3 : 0 / 0 / 3
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Slot-ExampleSlotPSIndiv4 : 0 / 0 / 3
@@ -75,6 +75,7 @@ WARNING: Bundle/ExampleBundleCPTS: Bundle.entry[5]: This is not a matching resou
 WARNING: Bundle/ExampleBundleCPTS: Bundle: SearchSet bundles should have search modes on the entries
 == fsh-generated/resources/Bundle-ExampleBundlePSIndiv.json ==
 INFORMATION: Bundle/ExampleBundlePSIndiv: Bundle.entry[0].resource/*Slot/ExampleSlotPSIndiv1*/.serviceType[2]: This element does not match any known slice defined in the profile http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur|1.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+ERROR: Bundle/ExampleBundlePSIndiv: Bundle.entry[0].resource/*Slot/ExampleSlotPSIndiv1*/.specialty[2]: No code provided, and a code is required from the value set 'fr-practitioner-specialty' (http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1)
 INFORMATION: Bundle/ExampleBundlePSIndiv: Bundle.entry[2].resource/*Practitioner/ExamplePractitioner2*/.identifier[0].type: Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-v2-0203|1.0.1
 INFORMATION: Bundle/ExampleBundlePSIndiv: Bundle.entry[3].resource/*PractitionerRole/ExamplePractitionerRoleAgregateur2*/.contained[0]/*Location/ExampleLocation3*/.identifier[0].type: Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type|1.0.1
 INFORMATION: Bundle/ExampleBundlePSIndiv: Bundle.entry[3].resource/*PractitionerRole/ExamplePractitionerRoleAgregateur2*/.organization.identifier.type: Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-v2-0203|1.0.1
@@ -128,6 +129,7 @@ INFORMATION: Slot/ExampleSlotCPTS: Slot.serviceType[1]: This element does not ma
 INFORMATION: Slot/ExampleSlotCPTS: Slot.serviceType[1].coding[0]: A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/TRE_R66-CategorieEtablissement' could not be found, so the code cannot be validated
 == fsh-generated/resources/Slot-ExampleSlotPSIndiv1.json ==
 INFORMATION: Slot/ExampleSlotPSIndiv1: Slot.serviceType[2]: This element does not match any known slice defined in the profile http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur|1.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+ERROR: Slot/ExampleSlotPSIndiv1: Slot.specialty[2]: No code provided, and a code is required from the value set 'fr-practitioner-specialty' (http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1)
 == fsh-generated/resources/Slot-ExampleSlotPSIndiv2.json ==
 INFORMATION: Slot/ExampleSlotPSIndiv2: Slot.serviceType[1]: This element does not match any known slice defined in the profile http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur|1.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
 == fsh-generated/resources/Slot-ExampleSlotPSIndiv3.json ==
