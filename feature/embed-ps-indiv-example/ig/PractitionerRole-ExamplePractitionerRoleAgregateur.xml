@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PractitionerRole xmlns="http://hl7.org/fhir">
+  <id value="ExamplePractitionerRoleAgregateur"/>
+  <meta>
+    <profile value="http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: PractitionerRole ExamplePractitionerRoleAgregateur</b></p><a name="ExamplePractitionerRoleAgregateur"> </a><a name="hcExamplePractitionerRoleAgregateur"> </a><a name="ExamplePractitionerRoleAgregateur-fr-FR"> </a><p><b>practitioner</b>: <a href="Practitioner-ExamplePractitioner.html">Practitioner Pierre Foret </a></p><p><b>organization</b>: Identifier: 412345678912345</p><p><b>location</b>: <a href="#hcExamplePractitionerRoleAgregateur/ExampleLocation">Location: identifier = Identifiant interne</a></p><p><b>telecom</b>: <a href="tel:+33561855977">+33561855977</a></p><hr/><blockquote><p class="res-header-id"><b>Generated Narrative: Location  #ExampleLocation</b></p><a name="ExamplePractitionerRoleAgregateur/ExampleLocation"> </a><a name="hcExamplePractitionerRoleAgregateur/ExampleLocation"> </a><a name="ExamplePractitionerRoleAgregateur/ExampleLocation-fr-FR"> </a><p><b>identifier</b>: Identifiant interne/123456789</p><p><b>address</b>: 25 CHEMIN DE MOUNESTIE Aussonne 31840 </p></blockquote></div>
+  </text>
+  <contained>
+    <Location>
+      <id value="ExampleLocation"/>
+      <meta>
+        <profile value="http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur"/>
+      </meta>
+      <identifier>
+        <type>
+          <coding>
+            <system value="http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"/>
+            <code value="INTRN"/>
+          </coding>
+        </type>
+        <system value="https://editeur.com"/>
+        <value value="123456789"/>
+      </identifier>
+      <address>
+        <line value="25 CHEMIN DE MOUNESTIE"/>
+        <city value="Aussonne"/>
+        <postalCode value="31840"/>
+      </address>
+    </Location>
+  </contained>
+  <practitioner>
+    <reference value="Practitioner/ExamplePractitioner"/>
+  </practitioner>
+  <organization>
+    <identifier>
+      <value value="412345678912345"/>
+    </identifier>
+  </organization>
+  <location>
+    <reference value="#ExampleLocation"/>
+  </location>
+  <telecom>
+    <system value="phone"/>
+    <value value="+33561855977"/>
+  </telecom>
+</PractitionerRole>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Slot xmlns="http://hl7.org/fhir">
+  <id value="ExampleSlotPSIndiv2"/>
+  <meta>
+    <profile value="http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"/>
+    <security>
+      <system value="https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"/>
+      <code value="PRO"/>
+    </security>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Slot ExampleSlotPSIndiv2</b></p><a name="ExampleSlotPSIndiv2"> </a><a name="hcExampleSlotPSIndiv2"> </a><a name="ExampleSlotPSIndiv2-fr-FR"> </a><p><b>serviceType</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode AMB}">ambulatory</span>, <span title="Codes:">Visite urgente</span></p><p><b>specialty</b>: <span title="Codes:{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM54}">Médecine générale (SM)</span></p><p><b>appointmentType</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0276 WALKIN}">A previously unscheduled walk-in visit</span></p><p><b>schedule</b>: <a href="Schedule-ExampleSchedule2.html">Schedule</a></p><p><b>status</b>: Free</p><p><b>start</b>: 2021-11-05 11:00:00+0000</p><p><b>end</b>: 2021-11-05 11:30:00+0000</p></div>
+  </text>
+  <serviceType>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+      <code value="AMB"/>
+    </coding>
+  </serviceType>
+  <serviceType>
+    <text value="Visite urgente"/>
+  </serviceType>
+  <specialty>
+    <coding>
+      <system value="https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"/>
+      <code value="SM54"/>
+    </coding>
+  </specialty>
+  <appointmentType>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0276"/>
+      <code value="WALKIN"/>
+    </coding>
+  </appointmentType>
+  <schedule>
+    <reference value="Schedule/ExampleSchedule2"/>
+  </schedule>
+  <status value="free"/>
+  <start value="2021-11-05T11:00:00.000+00:00"/>
+  <end value="2021-11-05T11:30:00.000+00:00"/>
+</Slot>
