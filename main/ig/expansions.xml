@@ -1,11 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="c09ba529-fba7-4d20-b152-32e31d91a4dd"/>
+  <id value="74cd9eee-0044-441d-8281-6a958122b67d"/>
   <meta>
-    <lastUpdated value="2024-07-18T16:11:48.660+00:00"/>
+    <lastUpdated value="2024-07-19T13:28:45.469+00:00"/>
   </meta>
   <type value="collection"/>
+  <entry>
+    <fullUrl value="https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-cpts-valueset-typecreneau"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p class="res-header-id">
+              <b>Generated Narrative: ValueSet </b>
+            </p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="https://interop.esante.gouv.fr/ig/nos/1.2.0/CodeSystem-TRE-R314-TypeCreneau.html">codesystem TRE_R314-TypeCreneau v1.2.0 (CodeSystem)</a>
+            </p>
+            <p>This value set contains 3 concepts</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau-PUBLIC"> </a>  
+                  <a href="https://interop.esante.gouv.fr/ig/nos/1.2.0/CodeSystem-TRE-R314-TypeCreneau.html#TRE-R314-TypeCreneau-PUBLIC">PUBLIC</a>
+                </td>
+                <td>https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau</td>
+                <td>Créneau accessible par le grand public</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau-SNP"> </a>  
+                  <a href="https://interop.esante.gouv.fr/ig/nos/1.2.0/CodeSystem-TRE-R314-TypeCreneau.html#TRE-R314-TypeCreneau-SNP">SNP</a>
+                </td>
+                <td>https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau</td>
+                <td>Créneau accessible par les Régulateurs et Organisateurs de Soins Non Programmés</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau-PRO"> </a>  
+                  <a href="https://interop.esante.gouv.fr/ig/nos/1.2.0/CodeSystem-TRE-R314-TypeCreneau.html#TRE-R314-TypeCreneau-PRO">PRO</a>
+                </td>
+                <td>https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau</td>
+                <td>Créneau accessible par les professionnels de santé</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-cpts-valueset-typecreneau"/>
+        <version value="1.0.0-ballot"/>
+        <name value="TypeCreneauSASCPTS"/>
+        <title value="Type créneaux SAS CPTS"/>
+        <status value="draft"/>
+        <date value="2024-07-19T13:28:45+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="FR"/>
+            <display value="FRANCE"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:14f1e24f-f410-4a6c-b194-6073905dfa6f"/>
+          <timestamp value="2024-07-19T13:29:29+00:00"/>
+          <total value="3"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau|1.2.0"/>
+          </parameter>
+          <contains>
+            <system value="https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"/>
+            <code value="PUBLIC"/>
+            <display value="Créneau accessible par le grand public"/>
+          </contains>
+          <contains>
+            <system value="https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"/>
+            <code value="SNP"/>
+            <display value="Créneau accessible par les Régulateurs et Organisateurs de Soins Non Programmés"/>
+          </contains>
+          <contains>
+            <system value="https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"/>
+            <code value="PRO"/>
+            <display value="Créneau accessible par les professionnels de santé"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
   <entry>
     <fullUrl value="https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-sos-valueset-participant-status"/>
     <resource>
@@ -71,7 +177,7 @@
         <name value="ParticipantStatusSASSOS"/>
         <title value="Statut participant SAS SOS"/>
         <status value="draft"/>
-        <date value="2024-07-18T16:11:48+00:00"/>
+        <date value="2024-07-19T13:28:45+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -80,8 +186,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:43e73077-3493-4579-901c-6f24cda4d7bf"/>
-          <timestamp value="2024-07-18T16:12:29+00:00"/>
+          <identifier value="urn:uuid:718a39c9-8f33-4772-9c4d-adeaf45db70d"/>
+          <timestamp value="2024-07-19T13:29:29+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -115,6 +221,99 @@
     </resource>
   </entry>
   <entry>
+    <fullUrl value="https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-sos-valueset-typecreneau"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p class="res-header-id">
+              <b>Generated Narrative: ValueSet </b>
+            </p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="https://interop.esante.gouv.fr/ig/nos/1.2.0/CodeSystem-TRE-R314-TypeCreneau.html">codesystem TRE_R314-TypeCreneau v1.2.0 (CodeSystem)</a>
+            </p>
+            <p>This value set contains 2 concepts</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau-PUBLIC"> </a>  
+                  <a href="https://interop.esante.gouv.fr/ig/nos/1.2.0/CodeSystem-TRE-R314-TypeCreneau.html#TRE-R314-TypeCreneau-PUBLIC">PUBLIC</a>
+                </td>
+                <td>https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau</td>
+                <td>Créneau accessible par le grand public</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau-SNP"> </a>  
+                  <a href="https://interop.esante.gouv.fr/ig/nos/1.2.0/CodeSystem-TRE-R314-TypeCreneau.html#TRE-R314-TypeCreneau-SNP">SNP</a>
+                </td>
+                <td>https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau</td>
+                <td>Créneau accessible par les Régulateurs et Organisateurs de Soins Non Programmés</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-sos-valueset-typecreneau"/>
+        <version value="1.0.0-ballot"/>
+        <name value="TypeCreneauSASSOS"/>
+        <title value="Type créneaux SAS SOS"/>
+        <status value="draft"/>
+        <date value="2024-07-19T13:28:45+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="FR"/>
+            <display value="FRANCE"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:70c166c1-b686-43e1-bac1-d4aa606c1795"/>
+          <timestamp value="2024-07-19T13:29:29+00:00"/>
+          <total value="2"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau|1.2.0"/>
+          </parameter>
+          <contains>
+            <system value="https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"/>
+            <code value="PUBLIC"/>
+            <display value="Créneau accessible par le grand public"/>
+          </contains>
+          <contains>
+            <system value="https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"/>
+            <code value="SNP"/>
+            <display value="Créneau accessible par les Régulateurs et Organisateurs de Soins Non Programmés"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
     <fullUrl value="https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-appointmentreason"/>
     <resource>
       <ValueSet>
@@ -125,7 +324,7 @@
               <b>Generated Narrative: ValueSet </b>
             </p>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
-              <a href="http://terminology.hl7.org/6.0.0/CodeSystem-v2-0276.html">codesystem appointmentReason v2.0.0 (CodeSystem)</a>
+              <a href="http://terminology.hl7.org/5.3.0/CodeSystem-v2-0276.html">codesystem appointmentReason v2.1.0 (CodeSystem)</a>
             </p>
             <p>This value set contains 2 concepts</p>
             <table class="codes">
@@ -146,7 +345,7 @@
               <tr>
                 <td style="white-space:nowrap">
                   <a name="x-http://terminology.hl7.org/CodeSystem/v2-0276-ROUTINE"> </a>  
-                  <a href="http://terminology.hl7.org/6.0.0/CodeSystem-v2-0276.html#v2-0276-ROUTINE">ROUTINE</a>
+                  <a href="http://terminology.hl7.org/5.3.0/CodeSystem-v2-0276.html#v2-0276-ROUTINE">ROUTINE</a>
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/v2-0276</td>
                 <td>Créneau avec prise de RDV possible</td>
@@ -160,7 +359,7 @@
               <tr>
                 <td style="white-space:nowrap">
                   <a name="x-http://terminology.hl7.org/CodeSystem/v2-0276-WALKIN"> </a>  
-                  <a href="http://terminology.hl7.org/6.0.0/CodeSystem-v2-0276.html#v2-0276-WALKIN">WALKIN</a>
+                  <a href="http://terminology.hl7.org/5.3.0/CodeSystem-v2-0276.html#v2-0276-WALKIN">WALKIN</a>
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/v2-0276</td>
                 <td>Créneau sans prise de RDV possible à domicile</td>
@@ -179,7 +378,7 @@
         <name value="AppointmentReasonSAS"/>
         <title value="Appointment reason SAS"/>
         <status value="draft"/>
-        <date value="2024-07-18T16:11:48+00:00"/>
+        <date value="2024-07-19T13:28:45+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -188,8 +387,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:78a5bcb2-1bc0-44d5-b06d-d6daf496b28f"/>
-          <timestamp value="2024-07-18T16:12:29+00:00"/>
+          <identifier value="urn:uuid:1923f562-7fe0-4bb2-b59f-4baa7f07172f"/>
+          <timestamp value="2024-07-19T13:29:29+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -206,7 +405,7 @@
           </parameter>
           <parameter>
             <name value="used-codesystem"/>
-            <valueUri value="http://terminology.hl7.org/CodeSystem/v2-0276|2.0.0"/>
+            <valueUri value="http://terminology.hl7.org/CodeSystem/v2-0276|2.1.0"/>
           </parameter>
           <contains>
             <system value="http://terminology.hl7.org/CodeSystem/v2-0276"/>
@@ -301,7 +500,7 @@
         <name value="TypeConsultationSAS"/>
         <title value="Type consultation SAS"/>
         <status value="draft"/>
-        <date value="2024-07-18T16:11:48+00:00"/>
+        <date value="2024-07-19T13:28:45+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -310,8 +509,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:2d7bce34-da7d-435c-bfc8-eca40b827406"/>
-          <timestamp value="2024-07-18T16:12:29+00:00"/>
+          <identifier value="urn:uuid:a71b4de0-2b0e-40bd-a286-69b1448406ce"/>
+          <timestamp value="2024-07-19T13:29:29+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -399,7 +598,7 @@
         <name value="TypeIdentifiantSAS"/>
         <title value="Type identifiant SAS"/>
         <status value="draft"/>
-        <date value="2024-07-18T16:11:48+00:00"/>
+        <date value="2024-07-19T13:28:45+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -408,8 +607,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:11dec95f-4740-4793-b149-4ad95755ede5"/>
-          <timestamp value="2024-07-18T16:12:29+00:00"/>
+          <identifier value="urn:uuid:5333ada1-f906-4a98-861e-f2ae692c648b"/>
+          <timestamp value="2024-07-19T13:29:29+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>

@@ -1,0 +1,51 @@
+{
+  "resourceType" : "PractitionerRole",
+  "id" : "ExamplePractitionerRoleAgregateur3",
+  "meta" : {
+    "profile" : ["http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole ExamplePractitionerRoleAgregateur3</b></p><a name=\"ExamplePractitionerRoleAgregateur3\"> </a><a name=\"hcExamplePractitionerRoleAgregateur3\"> </a><a name=\"ExamplePractitionerRoleAgregateur3-fr-FR\"> </a><p><b>practitioner</b>: <a href=\"Practitioner-ExamplePractitioner2.html\">Practitioner Sébastien THOMAS </a></p><p><b>organization</b>: Identifier: Identification nationale de structure définie par l’ASIP-SANTE dans le CI_SIS/1810004956</p><p><b>location</b>: <a href=\"#hcExamplePractitionerRoleAgregateur3/ExampleLocation2\">Location: identifier = Identifiant interne</a></p><hr/><blockquote><p class=\"res-header-id\"><b>Generated Narrative: Location  #ExampleLocation2</b></p><a name=\"ExamplePractitionerRoleAgregateur3/ExampleLocation2\"> </a><a name=\"hcExamplePractitionerRoleAgregateur3/ExampleLocation2\"> </a><a name=\"ExamplePractitionerRoleAgregateur3/ExampleLocation2-fr-FR\"> </a><p><b>identifier</b>: Identifiant interne/2</p><p><b>address</b>: 30 rue Mme DELMAS AGEN 47000 </p></blockquote></div>"
+  },
+  "contained" : [{
+    "resourceType" : "Location",
+    "id" : "ExampleLocation2",
+    "meta" : {
+      "profile" : ["http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur"]
+    },
+    "identifier" : [{
+      "type" : {
+        "coding" : [{
+          "system" : "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type",
+          "code" : "INTRN"
+        }]
+      },
+      "system" : "urn:oid:1.1.111.1.111.1.1.1",
+      "value" : "2"
+    }],
+    "address" : {
+      "line" : ["30 rue Mme DELMAS"],
+      "city" : "AGEN",
+      "postalCode" : "47000"
+    }
+  }],
+  "practitioner" : {
+    "reference" : "Practitioner/ExamplePractitioner2"
+  },
+  "organization" : {
+    "identifier" : {
+      "type" : {
+        "coding" : [{
+          "system" : "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
+          "code" : "IDNST"
+        }]
+      },
+      "system" : "urn:oid:1.2.250.1.71.4.2.2",
+      "value" : "1810004956"
+    }
+  },
+  "location" : [{
+    "reference" : "#ExampleLocation2"
+  }]
+}

@@ -10,7 +10,7 @@
   <name value="SAS"/>
   <title value="Service d'Accès aux Soins"/>
   <status value="draft"/>
-  <date value="2024-07-18T16:11:48+00:00"/>
+  <date value="2024-07-19T13:28:45+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -49,6 +49,11 @@
     <uri value="http://fhir.org/packages/hl7.fhir.fr.core/ImplementationGuide/hl7.fhir.fr.core"/>
     <packageId value="hl7.fhir.fr.core"/>
     <version value="1.1.0"/>
+  </dependsOn>
+  <dependsOn id="ans_fr_nos">
+    <uri value="https://interop.esante.gouv.fr/ig/nos/ImplementationGuide/ans.fr.nos"/>
+    <packageId value="ans.fr.nos"/>
+    <version value="1.2.0"/>
   </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -549,6 +554,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/ExampleBundlePSIndiv"/>
+      </reference>
+      <name value="ExampleBundlePSIndiv"/>
+      <description value="Exemple Bundle PS indiv"/>
+      <exampleCanonical value="http://sas.fr/fhir/StructureDefinition/BundleAgregateur"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="HealthcareService"/>
       </extension>
       <reference>
@@ -577,7 +593,29 @@
         <reference value="Practitioner/ExamplePractitioner"/>
       </reference>
       <name value="ExamplePractitioner"/>
-      <description value="Exemple practitioner flux agrégateur"/>
+      <description value="Exemple 1 practitioner flux agrégateur"/>
+      <exampleCanonical value="http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/ExamplePractitioner2"/>
+      </reference>
+      <name value="ExamplePractitioner2"/>
+      <description value="Exemple 2 practitioner flux agrégateur"/>
+      <exampleCanonical value="http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/ExamplePractitioner3"/>
+      </reference>
+      <name value="ExamplePractitioner3"/>
+      <description value="Exemple 3 practitioner flux agrégateur"/>
       <exampleCanonical value="http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur"/>
     </resource>
     <resource>
@@ -588,7 +626,40 @@
         <reference value="PractitionerRole/ExamplePractitionerRoleAgregateur"/>
       </reference>
       <name value="ExamplePractitionerRoleAgregateur"/>
-      <description value="Exemple PractitionerRole flux agrégateur"/>
+      <description value="Exemple 1 PractitionerRole flux agrégateur"/>
+      <exampleCanonical value="http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PractitionerRole"/>
+      </extension>
+      <reference>
+        <reference value="PractitionerRole/ExamplePractitionerRoleAgregateur2"/>
+      </reference>
+      <name value="ExamplePractitionerRoleAgregateur2"/>
+      <description value="Exemple 2 PractitionerRole flux agrégateur"/>
+      <exampleCanonical value="http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PractitionerRole"/>
+      </extension>
+      <reference>
+        <reference value="PractitionerRole/ExamplePractitionerRoleAgregateur3"/>
+      </reference>
+      <name value="ExamplePractitionerRoleAgregateur3"/>
+      <description value="Exemple 3 PractitionerRole flux agrégateur"/>
+      <exampleCanonical value="http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PractitionerRole"/>
+      </extension>
+      <reference>
+        <reference value="PractitionerRole/ExamplePractitionerRoleAgregateur4"/>
+      </reference>
+      <name value="ExamplePractitionerRoleAgregateur4"/>
+      <description value="Exemple 4 PractitionerRole flux agrégateur"/>
       <exampleCanonical value="http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"/>
     </resource>
     <resource>
@@ -604,6 +675,39 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Schedule"/>
+      </extension>
+      <reference>
+        <reference value="Schedule/ExampleSchedule1"/>
+      </reference>
+      <name value="ExampleSchedule1"/>
+      <description value="Exemple 1 ressource schedule"/>
+      <exampleCanonical value="http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Schedule"/>
+      </extension>
+      <reference>
+        <reference value="Schedule/ExampleSchedule2"/>
+      </reference>
+      <name value="ExampleSchedule2"/>
+      <description value="Exemple 2 ressource schedule"/>
+      <exampleCanonical value="http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Schedule"/>
+      </extension>
+      <reference>
+        <reference value="Schedule/ExampleSchedule3"/>
+      </reference>
+      <name value="ExampleSchedule3"/>
+      <description value="Exemple 3 ressource schedule"/>
+      <exampleCanonical value="http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Slot"/>
       </extension>
       <reference>
@@ -612,6 +716,50 @@
       <name value="ExampleSlotCPTS"/>
       <description value="Exemple ressource slot CPTS"/>
       <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Slot"/>
+      </extension>
+      <reference>
+        <reference value="Slot/ExampleSlotPSIndiv1"/>
+      </reference>
+      <name value="ExampleSlotPSIndiv1"/>
+      <description value="Exemple 1 ressource slot PS indiv"/>
+      <exampleCanonical value="http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Slot"/>
+      </extension>
+      <reference>
+        <reference value="Slot/ExampleSlotPSIndiv2"/>
+      </reference>
+      <name value="ExampleSlotPSIndiv2"/>
+      <description value="Exemple 2 ressource slot PS indiv"/>
+      <exampleCanonical value="http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Slot"/>
+      </extension>
+      <reference>
+        <reference value="Slot/ExampleSlotPSIndiv3"/>
+      </reference>
+      <name value="ExampleSlotPSIndiv3"/>
+      <description value="Exemple 3 ressource slot PS indiv"/>
+      <exampleCanonical value="http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Slot"/>
+      </extension>
+      <reference>
+        <reference value="Slot/ExampleSlotPSIndiv4"/>
+      </reference>
+      <name value="ExampleSlotPSIndiv4"/>
+      <description value="Exemple 4 ressource slot PS indiv"/>
+      <exampleCanonical value="http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

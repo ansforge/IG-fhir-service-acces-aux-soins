@@ -10,7 +10,7 @@
   "name" : "SAS",
   "title" : "Service d'Accès aux Soins",
   "status" : "draft",
-  "date" : "2024-07-18T16:11:48+00:00",
+  "date" : "2024-07-19T13:28:45+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -54,6 +54,12 @@
     "uri" : "http://fhir.org/packages/hl7.fhir.fr.core/ImplementationGuide/hl7.fhir.fr.core",
     "packageId" : "hl7.fhir.fr.core",
     "version" : "1.1.0"
+  },
+  {
+    "id" : "ans_fr_nos",
+    "uri" : "https://interop.esante.gouv.fr/ig/nos/ImplementationGuide/ans.fr.nos",
+    "packageId" : "ans.fr.nos",
+    "version" : "1.2.0"
   }],
   "definition" : {
     "extension" : [{
@@ -719,6 +725,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/ExampleBundlePSIndiv"
+      },
+      "name" : "ExampleBundlePSIndiv",
+      "description" : "Exemple Bundle PS indiv",
+      "exampleCanonical" : "http://sas.fr/fhir/StructureDefinition/BundleAgregateur"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "HealthcareService"
       }],
       "reference" : {
@@ -749,7 +767,31 @@
         "reference" : "Practitioner/ExamplePractitioner"
       },
       "name" : "ExamplePractitioner",
-      "description" : "Exemple practitioner flux agrégateur",
+      "description" : "Exemple 1 practitioner flux agrégateur",
+      "exampleCanonical" : "http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Practitioner"
+      }],
+      "reference" : {
+        "reference" : "Practitioner/ExamplePractitioner2"
+      },
+      "name" : "ExamplePractitioner2",
+      "description" : "Exemple 2 practitioner flux agrégateur",
+      "exampleCanonical" : "http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Practitioner"
+      }],
+      "reference" : {
+        "reference" : "Practitioner/ExamplePractitioner3"
+      },
+      "name" : "ExamplePractitioner3",
+      "description" : "Exemple 3 practitioner flux agrégateur",
       "exampleCanonical" : "http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur"
     },
     {
@@ -761,7 +803,43 @@
         "reference" : "PractitionerRole/ExamplePractitionerRoleAgregateur"
       },
       "name" : "ExamplePractitionerRoleAgregateur",
-      "description" : "Exemple PractitionerRole flux agrégateur",
+      "description" : "Exemple 1 PractitionerRole flux agrégateur",
+      "exampleCanonical" : "http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PractitionerRole"
+      }],
+      "reference" : {
+        "reference" : "PractitionerRole/ExamplePractitionerRoleAgregateur2"
+      },
+      "name" : "ExamplePractitionerRoleAgregateur2",
+      "description" : "Exemple 2 PractitionerRole flux agrégateur",
+      "exampleCanonical" : "http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PractitionerRole"
+      }],
+      "reference" : {
+        "reference" : "PractitionerRole/ExamplePractitionerRoleAgregateur3"
+      },
+      "name" : "ExamplePractitionerRoleAgregateur3",
+      "description" : "Exemple 3 PractitionerRole flux agrégateur",
+      "exampleCanonical" : "http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PractitionerRole"
+      }],
+      "reference" : {
+        "reference" : "PractitionerRole/ExamplePractitionerRoleAgregateur4"
+      },
+      "name" : "ExamplePractitionerRoleAgregateur4",
+      "description" : "Exemple 4 PractitionerRole flux agrégateur",
       "exampleCanonical" : "http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"
     },
     {
@@ -779,6 +857,42 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Schedule"
+      }],
+      "reference" : {
+        "reference" : "Schedule/ExampleSchedule1"
+      },
+      "name" : "ExampleSchedule1",
+      "description" : "Exemple 1 ressource schedule",
+      "exampleCanonical" : "http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Schedule"
+      }],
+      "reference" : {
+        "reference" : "Schedule/ExampleSchedule2"
+      },
+      "name" : "ExampleSchedule2",
+      "description" : "Exemple 2 ressource schedule",
+      "exampleCanonical" : "http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Schedule"
+      }],
+      "reference" : {
+        "reference" : "Schedule/ExampleSchedule3"
+      },
+      "name" : "ExampleSchedule3",
+      "description" : "Exemple 3 ressource schedule",
+      "exampleCanonical" : "http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Slot"
       }],
       "reference" : {
@@ -787,6 +901,54 @@
       "name" : "ExampleSlotCPTS",
       "description" : "Exemple ressource slot CPTS",
       "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Slot"
+      }],
+      "reference" : {
+        "reference" : "Slot/ExampleSlotPSIndiv1"
+      },
+      "name" : "ExampleSlotPSIndiv1",
+      "description" : "Exemple 1 ressource slot PS indiv",
+      "exampleCanonical" : "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Slot"
+      }],
+      "reference" : {
+        "reference" : "Slot/ExampleSlotPSIndiv2"
+      },
+      "name" : "ExampleSlotPSIndiv2",
+      "description" : "Exemple 2 ressource slot PS indiv",
+      "exampleCanonical" : "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Slot"
+      }],
+      "reference" : {
+        "reference" : "Slot/ExampleSlotPSIndiv3"
+      },
+      "name" : "ExampleSlotPSIndiv3",
+      "description" : "Exemple 3 ressource slot PS indiv",
+      "exampleCanonical" : "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Slot"
+      }],
+      "reference" : {
+        "reference" : "Slot/ExampleSlotPSIndiv4"
+      },
+      "name" : "ExampleSlotPSIndiv4",
+      "description" : "Exemple 4 ressource slot PS indiv",
+      "exampleCanonical" : "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"
     },
     {
       "extension" : [{
