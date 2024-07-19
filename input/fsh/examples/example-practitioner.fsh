@@ -1,7 +1,7 @@
 
 Instance: ExamplePractitioner
 InstanceOf: FrPractitionerAgregateur
-Description: "Exemple practitioner flux agrégateur"
+Description: "Exemple 1 practitioner flux agrégateur"
 Usage: #example
 
 * identifier.value = "810002909371"
