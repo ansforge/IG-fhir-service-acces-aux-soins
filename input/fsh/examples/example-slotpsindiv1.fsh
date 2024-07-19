@@ -10,7 +10,7 @@ Usage: #example
 * serviceType[+].text = "Visite de contrôle"
 * specialty[+].coding = https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale#SM54
 * specialty[+].coding = https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale#SM05
-* specialty[+].text = "Médecine générale (polyvalente)"
+* specialty[=].text = "Médecine générale"
 * appointmentType[+].coding = $v2-0276#ROUTINE
 * schedule = Reference(ExampleSchedule1)
 * start = "2021-11-05T09:00:00.000+00:00"

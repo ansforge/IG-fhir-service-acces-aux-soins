@@ -9,8 +9,9 @@ Usage: #example
 * serviceType[+].coding = $v3-ActCode#HH
 * serviceType[+].text = "Visite de contrôle"
 * serviceType[+].text = "Consultation de suivi pneumologique"
-* specialty[+].text = "Pneumologie"
-* specialty[+].text = "Médecine générale (polyvalente)"
+* specialty[+].coding = https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale#SM41
+* specialty[+].coding = https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale#SM54
+* specialty[=].text = "Pneumologie"
 * appointmentType[+].coding = $v2-0276#ROUTINE
 * schedule = Reference(ExampleSchedule3)
 * start = "2021-11-04T14:40:00.000+00:00"
