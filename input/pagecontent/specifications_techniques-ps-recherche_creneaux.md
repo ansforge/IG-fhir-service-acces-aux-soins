@@ -194,7 +194,7 @@ La réponse ci-dessous correspond à :
     - Visible du grand public,
     - Au cabinet ou en téléconsultation
     - Pour le motif `Visite de contrôle`
-    - Les spécialités codifiées associées sont SM54, SM05. La spécialité non codifée associée est `Médecine générale polyvalente`. 
+    - Les spécialités codifiées associées sont SM54, SM05.
   - 1 créneau au 30 rue Mme Delmas (47000). L'ID de la structure associée est 1810004956. Le 5 novembre 2021 de 11h à 11h30 ayant les caractéristiques suivantes :
     - Sans prise de RDV,
     - Visible des professionnels,
