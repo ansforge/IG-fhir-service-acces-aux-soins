@@ -1,0 +1,74 @@
+@startuml
+
+hide circle
+
+package "Objets d'agenda" as OA #text:red {
+
+ class Schedule #line:red {
+   [[actor]] [1..*]
+ }
+
+ class Slot #line:red {
+   [[Schedule schedule]]  [1..1]
+ }
+
+ class Appointment #line:red {
+   [[slot]] [0..*] \n
+   [[participant.actor]] [1..*]
+ }
+
+ class AppointmentResponse #line:black {
+   [[appointment]] [1..1]
+ }
+
+}
+     
+package "Ressources d'agenda" as RA #text:blue{
+
+ class Patient #line:black
+
+ class RelatedPerson #line:black
+
+ class Practitioner #line:blue
+
+ class PractitionerRole #line:blue{
+ [[practitioner]]  [0..1]
+ }
+    
+
+ class Organization #line:blue
+
+ class HealthcareService #line:blue {
+ [[providedBy]]  [0..1]
+ }
+
+ class Device #line:black
+   
+ class Location #line:blue
+
+ PractitionerRole --> Practitioner
+   HealthcareService --> Organization
+}
+
+
+
+Schedule <-- Slot
+Slot <-- Appointment
+Appointment <-- AppointmentResponse
+
+Schedule --> Patient
+Schedule --> RelatedPerson
+Schedule --> Practitioner
+Schedule --> PractitionerRole
+Schedule --> HealthcareService
+Schedule --> Device
+Schedule --> Location
+
+legend bottom
+    <#GhostWhite,#GhostWhite>|        |= __Légende__ |
+    |<#red>| Objets d'agendas GAP exploités|
+    |<#blue>| Ressources d'agendas GAP exploitées|
+    |<#black>| Ressources GAP non exploitées|
+endlegend
+
+@enduml

@@ -21,6 +21,15 @@ Plus d'information sur le site dédié du ministère : <https://esante.gouv.fr/s
 L'objectif de ce projet est de définir les profils qui doivent être implémentés par les éditeurs de solution de prise de rendez-vous en ligne pour exposer les créneaux disponibles et informer la plateforme des rendez-vous pris.
 Les opérations de la plateforme SAS sont réalisées au moyen d'API FHIR.
 
+Les flux s'appuie sur le volet Gestion d'agendas Partagés du CI-SIS (GAP). https://esante.gouv.fr/volet-gestion-dagendas-partages
+
+Le schéma ci-dessous présente une vue d'ensemnle simplifiée (certaines ré&férences entre ressources n'apparaissent pas) des ressources utilisées dans le cadre du projet SAS;
+
+<div class="figure" style="width:100%;" align ="center">
+    <p>{% include ressources-exploitees-fhir.svg %}</p>
+</div>
+
+
 ### Cas d'usage
 
 #### PS à titre individuel
