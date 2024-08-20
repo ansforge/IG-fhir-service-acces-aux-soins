@@ -23,7 +23,7 @@ Les opérations de la plateforme SAS sont réalisées au moyen d'API FHIR.
 
 Les flux s'appuie sur le volet Gestion d'agendas Partagés du CI-SIS (GAP). <https://esante.gouv.fr/volet-gestion-dagendas-partages>
 
-Le schéma ci-dessous présente une vue d'ensemnle simplifiée (certaines ré&férences entre ressources n'apparaissent pas) des ressources utilisées dans le cadre du projet SAS;
+Le schéma ci-dessous présente une vue d'ensemble simplifiée (certaines références entre ressources n'apparaissent pas) des ressources utilisées dans le cadre du projet SAS.
 
 <div class="figure" style="width:100%;" align ="center">
     <p>{% include schema_global_ressources_GAP.svg %}</p>
