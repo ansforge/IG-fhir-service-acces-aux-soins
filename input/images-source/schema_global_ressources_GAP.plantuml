@@ -1,24 +1,26 @@
 @startuml
 
 hide circle
+hide empty members
+skinparam linetype ortho
 
 package "Objets d'agenda" as OA #text:red {
 
  class Schedule #line:red {
-   [[actor]] [1..*]
+   actor [1..*]
  }
 
  class Slot #line:red {
-   [[Schedule schedule]]  [1..1]
+   schedule [1..1]
  }
 
  class Appointment #line:red {
-   [[slot]] [0..*] \n
-   [[participant.actor]] [1..*]
+   slot [0..*]
+   participant.actor [1..*]
  }
 
  class AppointmentResponse #line:black {
-   [[appointment]] [1..1]
+   appointment [1..1]
  }
 
 }
@@ -32,37 +34,37 @@ package "Ressources d'agenda" as RA #text:blue{
  class Practitioner #line:blue
 
  class PractitionerRole #line:blue{
- [[practitioner]]  [0..1]
+    practitioner [0..1]
  }
     
 
  class Organization #line:blue
 
  class HealthcareService #line:blue {
- [[providedBy]]  [0..1]
+  providedBy [0..1]
  }
 
  class Device #line:black
    
  class Location #line:blue
 
- PractitionerRole --> Practitioner
-   HealthcareService --> Organization
+ PractitionerRole -[#blue]--> Practitioner
+   HealthcareService -[#blue]--> Organization
 }
 
 
 
-Schedule <-- Slot
-Slot <-- Appointment
-Appointment <-- AppointmentResponse
+Schedule  <---[#red] Slot
+Slot <---[#red] Appointment
+Appointment <--[#black] AppointmentResponse
 
-Schedule --> Patient
-Schedule --> RelatedPerson
-Schedule --> Practitioner
-Schedule --> PractitionerRole
-Schedule --> HealthcareService
-Schedule --> Device
-Schedule --> Location
+Schedule -[#black]--> Patient
+Schedule -[#black]--> RelatedPerson
+Schedule -[#red]--> Practitioner
+Schedule -[#red]--> PractitionerRole
+Schedule -[#red]--> HealthcareService
+Schedule -[#black]--> Device
+Schedule -[#red]--> Location
 
 legend bottom
     <#GhostWhite,#GhostWhite>|        |= __Légende__ |
