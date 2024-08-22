@@ -21,8 +21,8 @@ Usage: #example
 * entry[practitionerRole].resource = ExamplePractitionerRoleAgregateur
 * entry[practitionerRole].fullUrl = "https://<base_URl>/PractitionerRole/ExamplePractitionerRoleAgregateur"
 
-* entry[healthcareserviceCPTS].resource = ExampleHealthcareServiceCPTS
+* entry[healthcareserviceCPTS].resource = ExampleHealthcareServiceCPTS1
 * entry[healthcareserviceCPTS].fullUrl = "https://<base_URl>/HealthcareService/ExampleHealthcareServiceCPTS"
 
-* entry[organizationAgregateurCPTS].resource = ExampleOrgaCPTS
+* entry[organizationAgregateurCPTS].resource = ExampleOrgaCPTS1
 * entry[organizationAgregateurCPTS].fullUrl = "https://<base_URl>/Organization/ExampleOrgaCPTS"
