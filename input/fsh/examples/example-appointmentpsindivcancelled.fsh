@@ -3,7 +3,7 @@ InstanceOf: FrAppointmentSAS
 Description: "Exemple RDV PS indiv cancelled"
 Usage: #example
 
-* id = "1"
+* id = "2"
 * identifier.system = "urn:oid:1.1.111.1.11.1.1.1"
 * identifier.value = "b6e39355-8a61-4556-b340-36f7b95fec6a"
 * extension[appointmentOperator].valueReference.identifier.type.coding = http://interopsante.org/fhir/CodeSystem/fr-v2-0203#IDNPS
