@@ -20,7 +20,7 @@ jobs:
                cp "${path_spec}/${files[0]}" "${path_spec}/${files[1]}"
              done
 
-      - uses: ansforge/IG-workflows@v0.2.0
+      - uses: ansforge/IG-workflows@main
         with:      
           bake: "true"
           nos: "true"
@@ -29,3 +29,4 @@ jobs:
           repo_ig: "./igSource"   
           github_page: "true"
           github_page_token: ${{ secrets.ANS_IG_API_TOKEN  }}
+          ig-publisher-version: 1.6.20
