@@ -1,6 +1,6 @@
-Instance: ExampleAppointment
+Instance: ExampleAppointmentCancelled
 InstanceOf: FrAppointmentSAS
-Description: "Exemple RDV PS indiv booked"
+Description: "Exemple RDV PS indiv cancelled"
 Usage: #example
 
 * id = "1"
