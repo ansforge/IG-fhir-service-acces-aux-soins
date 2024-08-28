@@ -3,22 +3,17 @@ Parent: FrPractitioner
 Id: FrPractitionerRegul
 Description: "Profil de Practitioner, dérivé de FrPractitioner, pour la gestion des comptes régulateurs de la plateforme SAS (Service d'accès aux soins)"
 
-<<<<<<< Updated upstream
-* identifier 1..
 
-* identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "type.coding"
-=======
 * meta.source =  "urn:oid:1.2.250.1.213.3.6"
 
 * identifier 1..
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
->>>>>>> Stashed changes
 * identifier ^slicing.rules = #open
 * identifier contains
     IdentifiantNatPS 0..1 and
     IdentifiantInterne 0..1 
+    
 * identifier[IdentifiantNatPS].type = $fr-v2-0203#IDNPS
 * identifier[IdentifiantNatPS].system = "urn:oid:1.2.250.1.71.4.2.1"
 * identifier[IdentifiantNatPS].value 1..1
