@@ -1,4 +1,4 @@
-Instance: ExampleAppointment
+Instance: ExampleAppointmentBooked
 InstanceOf: FrAppointmentSAS
 Description: "Exemple RDV PS indiv booked"
 Usage: #example
