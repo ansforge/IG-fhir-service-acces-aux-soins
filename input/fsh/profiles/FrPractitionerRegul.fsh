@@ -8,12 +8,12 @@ Description: "Profil de Practitioner, dérivé de FrPractitioner, pour la gestio
 
 * identifier 1..
 * identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.discriminator.path = "type.coding"
 * identifier ^slicing.rules = #open
 * identifier contains
     IdentifiantNatPS 0..1 and
     IdentifiantInterne 0..1 
-    
+
 * identifier[IdentifiantNatPS].type = $fr-v2-0203#IDNPS
 * identifier[IdentifiantNatPS].system = "urn:oid:1.2.250.1.71.4.2.1"
 * identifier[IdentifiantNatPS].value 1..1
