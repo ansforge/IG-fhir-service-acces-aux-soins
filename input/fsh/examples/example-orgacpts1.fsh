@@ -1,6 +1,6 @@
-Instance: ExampleOrgaCPTS
+Instance: ExampleOrgaCPTS1
 InstanceOf: FrOrganizationAgregateurCPTS
-Description: "Exemple d'organisation CPTS"
+Description: "Exemple d'organisation CPTS 1"
 Usage: #example
 
 
