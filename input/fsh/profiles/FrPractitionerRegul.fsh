@@ -8,7 +8,7 @@ Description: "Profil de Practitioner, dérivé de FrPractitioner, pour la gestio
 
 * identifier 1..
 * identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "type.coding"
+* identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open
 * identifier contains
     IdentifiantNatPS 0..1 and
