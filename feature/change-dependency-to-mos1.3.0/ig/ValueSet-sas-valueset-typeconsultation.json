@@ -1,0 +1,47 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "sas-valueset-typeconsultation",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet sas-valueset-typeconsultation</b></p><a name=\"sas-valueset-typeconsultation\"> </a><a name=\"hcsas-valueset-typeconsultation\"> </a><a name=\"sas-valueset-typeconsultation-fr-FR\"> </a><ul><li>Include these codes as defined in <a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActCode.html\"><code>http://terminology.hl7.org/CodeSystem/v3-ActCode</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActCode.html#v3-ActCode-AMB\">AMB</a></td><td>Consultation au cabinet</td><td>A comprehensive term for health care provided in a healthcare facility (e.g. a practitioneraTMs office, clinic setting, or hospital) on a nonresident basis. The term ambulatory usually implies that the patient has come to the location and is not assigned to a bed. Sometimes referred to as an outpatient encounter.</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActCode.html#v3-ActCode-HH\">HH</a></td><td>Consultation à domicile</td><td>Healthcare encounter that takes place in the residence of the patient or a designee</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActCode.html#v3-ActCode-VR\">VR</a></td><td>Téléconsultation</td><td>A patient encounter where the patient and the practitioner(s) are not in the same physical location. Examples include telephone conference, email exchange, robotic surgery, and televideo conference.</td></tr></table></li></ul></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-typeconsultation",
+  "version" : "1.0.0-ballot",
+  "name" : "TypeConsultationSAS",
+  "title" : "Type consultation SAS",
+  "status" : "draft",
+  "date" : "2024-08-30T15:25:32+00:00",
+  "publisher" : "ANS",
+  "contact" : [{
+    "name" : "ANS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Type de consultations SAS",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "concept" : [{
+        "code" : "AMB",
+        "display" : "Consultation au cabinet"
+      },
+      {
+        "code" : "HH",
+        "display" : "Consultation à domicile"
+      },
+      {
+        "code" : "VR",
+        "display" : "Téléconsultation"
+      }]
+    }]
+  }
+}
