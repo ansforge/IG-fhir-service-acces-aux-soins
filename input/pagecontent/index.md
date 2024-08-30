@@ -34,7 +34,7 @@ Le schéma ci-dessous présente une vue d'ensemble simplifiée (certaines réfé
 
 Les travaux menés avec les industriels ont pour objectifs principaux : 
 - D'agréger et mettre en visibilité de l'offre de soins sur le territoire national et de permettre à la régulation d'apporter une réponse aux patients pour les SNP
-- De fludifier le parcours du régulateur au sein d'un écosystème d'outils complexes
+- De fluidifier le parcours du régulateur au sein d'un écosystème d'outils complexes
 
      <div class="figure">
       <img src="schema_cas_usage.png" alt="Schéma cas d'usage" title="Schéma cas d'usage">
