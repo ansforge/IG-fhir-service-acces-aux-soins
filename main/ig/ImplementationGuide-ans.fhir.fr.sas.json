@@ -10,7 +10,7 @@
   "name" : "SAS",
   "title" : "Service d'Accès aux Soins",
   "status" : "draft",
-  "date" : "2024-08-29T13:19:54+00:00",
+  "date" : "2024-08-30T15:18:37+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -845,6 +845,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Practitioner"
+      }],
+      "reference" : {
+        "reference" : "Practitioner/ExamplePractitionerRegul"
+      },
+      "name" : "ExamplePractitionerRegul",
+      "description" : "Exemple 1 practitioner flux régulateur",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "PractitionerRole"
       }],
       "reference" : {
@@ -1104,6 +1116,18 @@
       },
       "name" : "FrPractitionerAgregateur",
       "description" : "Profil de Practitioner, dérivé de FrPractitioner, pour le service d'agrégation de créneaux de la plateforme SAS (Service d'accès aux soins)",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/FrPractitionerRegul"
+      },
+      "name" : "FrPractitionerRegul",
+      "description" : "Profil de Practitioner, dérivé de FrPractitioner, pour la gestion des comptes régulateurs de la plateforme SAS (Service d'accès aux soins)",
       "exampleBoolean" : false
     },
     {

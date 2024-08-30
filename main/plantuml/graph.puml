@@ -66,6 +66,23 @@ package IG #DDDDDD{
              Practitioner.name.given => [None..None]
         } 
 
+        class FrPractitionerRegul{
+
+             Practitioner => [None..None]
+             Practitioner.meta.source => [None..None]
+             Practitioner.identifier => [1..None]
+             Practitioner.identifier:IdentifiantNatPS => [0..1]
+             Practitioner.identifier:IdentifiantNatPS.type => [None..None]
+             Practitioner.identifier:IdentifiantNatPS.system => [None..None]
+             Practitioner.identifier:IdentifiantInterne => [0..1]
+             Practitioner.identifier:IdentifiantInterne.type => [None..None]
+             Practitioner.identifier:IdentifiantInterne.system => [None..None]
+             Practitioner.active => [1..None]
+             Practitioner.name.family => [1..None]
+             Practitioner.name.given => [1..1]
+             Practitioner.telecom.system => [None..None]
+        } 
+
         class FrPractitionerRoleExerciceAgregateur{
 
              PractitionerRole.contained => [1..None]
@@ -295,6 +312,10 @@ package "Ressources de base" #palegreen {
  class "http://interopsante.org/fhir/StructureDefinition/FrPractitioner" as  class9c7338635efde0683609aa872d6f0df2 
 
     class9c7338635efde0683609aa872d6f0df2 --> FrPractitionerAgregateur
+
+ class "http://interopsante.org/fhir/StructureDefinition/FrPractitioner" as  class9c7338635efde0683609aa872d6f0df2 
+
+    class9c7338635efde0683609aa872d6f0df2 --> FrPractitionerRegul
 
  class "http://interopsante.org/fhir/StructureDefinition/FrPractitionerRoleExercice" as  class73920bd04935d0e883dcf7188fa9fd22 
 
