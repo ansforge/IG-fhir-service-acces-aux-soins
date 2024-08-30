@@ -1,7 +1,7 @@
 SAS : Validation Results
 =========================================
 
-err = 17, warn = 40, info = 93
+err = 17, warn = 40, info = 105
 $--
 Generated $--. FHIR version $-- for ans.fhir.fr.sas#$-- (canonical = https://interop.esante.gouv.fr/ig/fhir/sas)
  Build Errors : 1 / 5 / 0
@@ -17,6 +17,7 @@ Generated $--. FHIR version $-- for ans.fhir.fr.sas#$-- (canonical = https://int
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Practitioner-ExamplePractitioner : 0 / 0 / 2
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Practitioner-ExamplePractitioner2 : 0 / 0 / 2
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Practitioner-ExamplePractitioner3 : 0 / 0 / 2
+ /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Practitioner-ExamplePractitionerRegul : 0 / 0 / 3
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/PractitionerRole-ExamplePractitionerRoleAgregateur : 0 / 0 / 4
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/PractitionerRole-ExamplePractitionerRoleAgregateur2 : 0 / 0 / 5
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/PractitionerRole-ExamplePractitionerRoleAgregateur3 : 0 / 0 / 5
@@ -36,6 +37,7 @@ Generated $--. FHIR version $-- for ans.fhir.fr.sas#$-- (canonical = https://int
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/StructureDefinition-FrAppointmentSAS : 2 / 0 / 8
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/StructureDefinition-FrLocationAgregateur : 2 / 1 / 3
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/StructureDefinition-FrPractitionerAgregateur : 2 / 0 / 7
+ /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/StructureDefinition-FrPractitionerRegul : 0 / 0 / 11
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/StructureDefinition-FrPractitionerRoleExerciceAgregateur : 2 / 0 / 7
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/StructureDefinition-FrScheduleAgregateur : 2 / 0 / 3
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/StructureDefinition-FrSlotAgregateur : 2 / 0 / 2
@@ -126,6 +128,9 @@ INFORMATION: Practitioner/ExamplePractitioner: Practitioner.identifier[0].type: 
 INFORMATION: Practitioner/ExamplePractitioner2: Practitioner.identifier[0].type: Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-v2-0203|1.0.1
 == fsh-generated/resources/Practitioner-ExamplePractitioner3.json ==
 INFORMATION: Practitioner/ExamplePractitioner3: Practitioner.identifier[0].type: Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-v2-0203|1.0.1
+== fsh-generated/resources/Practitioner-ExamplePractitionerRegul.json ==
+INFORMATION: Practitioner/ExamplePractitionerRegul: Practitioner.identifier[0]: This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul|1.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Practitioner/ExamplePractitionerRegul: Practitioner.identifier[0].type: Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-v2-0203|1.0.1
 == fsh-generated/resources/PractitionerRole-ExamplePractitionerRoleAgregateur.json ==
 INFORMATION: PractitionerRole/ExamplePractitionerRoleAgregateur: PractitionerRole.contained[0]/*Location/ExampleLocation*/.identifier[0].type: Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type|1.0.1
 == fsh-generated/resources/PractitionerRole-ExamplePractitionerRoleAgregateur2.json ==
@@ -188,6 +193,17 @@ INFORMATION: StructureDefinition/FrPractitionerAgregateur: StructureDefinition.s
 INFORMATION: StructureDefinition/FrPractitionerAgregateur: StructureDefinition.snapshot.element[176].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 INFORMATION: StructureDefinition/FrPractitionerAgregateur: StructureDefinition.differential.element[1].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-v2-0203|1.0.1
 ERROR: /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/StructureDefinition-FrPractitionerAgregateur: URL Mismatch https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerAgregateur vs http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur
+== fsh-generated/resources/StructureDefinition-FrPractitionerRegul.json ==
+INFORMATION: StructureDefinition/FrPractitionerRegul: StructureDefinition.snapshot.element[35].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+INFORMATION: StructureDefinition/FrPractitionerRegul: StructureDefinition.snapshot.element[41].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-v2-0203|1.0.1
+INFORMATION: StructureDefinition/FrPractitionerRegul: StructureDefinition.snapshot.element[55].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+INFORMATION: StructureDefinition/FrPractitionerRegul: StructureDefinition.snapshot.element[61].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-v2-0203|1.0.1
+INFORMATION: StructureDefinition/FrPractitionerRegul: StructureDefinition.snapshot.element[75].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+INFORMATION: StructureDefinition/FrPractitionerRegul: StructureDefinition.snapshot.element[88].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+INFORMATION: StructureDefinition/FrPractitionerRegul: StructureDefinition.snapshot.element[97].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+INFORMATION: StructureDefinition/FrPractitionerRegul: StructureDefinition.snapshot.element[224].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+INFORMATION: StructureDefinition/FrPractitionerRegul: StructureDefinition.differential.element[4].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-v2-0203|1.0.1
+INFORMATION: StructureDefinition/FrPractitionerRegul: StructureDefinition.differential.element[7].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-v2-0203|1.0.1
 == fsh-generated/resources/StructureDefinition-FrPractitionerRoleExerciceAgregateur.json ==
 ERROR: StructureDefinition.where(url = 'http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur'): Conformance resource /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/StructureDefinition-FrPractitionerRoleExerciceAgregateur.json - the canonical URL (https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRoleExerciceAgregateur) does not match the URL (http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur)
 INFORMATION: StructureDefinition/FrPractitionerRoleExerciceAgregateur: StructureDefinition.snapshot.element[17].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk

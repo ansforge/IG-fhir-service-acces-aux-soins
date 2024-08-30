@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "SAS"] ; # 
   fhir:title [ fhir:v "Service d'Accès aux Soins"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-08-30T15:25:32+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-08-30T15:45:48+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -790,6 +790,21 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Practitioner" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/ExamplePractitionerRegul> ;
+         fhir:reference [ fhir:v "Practitioner/ExamplePractitionerRegul" ]
+       ] ;
+       fhir:name [ fhir:v "ExamplePractitionerRegul" ] ;
+       fhir:description [ fhir:v "Exemple 1 practitioner flux régulateur" ] ;
+       fhir:example [
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "PractitionerRole" ]
        ] ) ;
        fhir:reference [
@@ -1092,6 +1107,18 @@
        ] ;
        fhir:name [ fhir:v "FrPractitionerAgregateur" ] ;
        fhir:description [ fhir:v "Profil de Practitioner, dérivé de FrPractitioner, pour le service d'agrégation de créneaux de la plateforme SAS (Service d'accès aux soins)" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul> ;
+         fhir:reference [ fhir:v "StructureDefinition/FrPractitionerRegul" ]
+       ] ;
+       fhir:name [ fhir:v "FrPractitionerRegul" ] ;
+       fhir:description [ fhir:v "Profil de Practitioner, dérivé de FrPractitioner, pour la gestion des comptes régulateurs de la plateforme SAS (Service d'accès aux soins)" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [

@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = 1, errors = 17, warn = 40, info = 93-->
+<!-- broken links = 1, errors = 17, warn = 40, info = 105-->
 <head>
   <title>SAS : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
@@ -36,7 +36,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for SAS</h1>
- <p>Generated Fri Aug 30 15:26:42 UTC 2024, FHIR version 4.0.1 for ans.fhir.fr.sas#1.0.0-ballot (canonical = <a href="https://interop.esante.gouv.fr/ig/fhir/sas">https://interop.esante.gouv.fr/ig/fhir/sas</a> (<a href="https://interop.esante.gouv.fr/ig/fhir/sas/history.html">history</a>)). See <a href="qa.html">Full QA Report</a></p>
+ <p>Generated Fri Aug 30 15:47:02 UTC 2024, FHIR version 4.0.1 for ans.fhir.fr.sas#1.0.0-ballot (canonical = <a href="https://interop.esante.gouv.fr/ig/fhir/sas">https://interop.esante.gouv.fr/ig/fhir/sas</a> (<a href="https://interop.esante.gouv.fr/ig/fhir/sas/history.html">history</a>)). See <a href="qa.html">Full QA Report</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
  <tr><td>Publisher Version:</td><td><span style="background-color: #ffcccc">IG Publisher Version: v1.6.20, which is out of date. The current version is v1.6.22 <a href="https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar">Download Latest</a></span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = ans.fhir.fr.sas, Canonical = https://interop.esante.gouv.fr/ig/fhir/sas</td></tr>
@@ -63,7 +63,7 @@
  <tr><td>Draft Dependencies:</td><td><ul>
   <li>
 hl7.fhir.fr.core#1.1.0:     <a href="https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&amp;canonical=http://interopsante.org/fhir/CodeSystem/fr-v2-0203">fr-v2-0203</a>
- (25 uses),     <a href="https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&amp;canonical=http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type">fr-location-identifier-type</a>
+ (30 uses),     <a href="https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&amp;canonical=http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type">fr-location-identifier-type</a>
  (17 uses),     <a href="https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&amp;canonical=http://interopsante.org/fhir/ValueSet/fr-organization-identifier-type">fr-organization-identifier-type</a>
  (2 uses),     <a href="https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&amp;canonical=http://interopsante.org/fhir/CodeSystem/fr-v2-3307">fr-v2-3307</a>
  (4 uses)
@@ -71,11 +71,11 @@ hl7.fhir.fr.core#1.1.0:     <a href="https://simplifier.net/resolve?scope=hl7.fh
   <li>
 hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-parameter-code.html">GuideParameterCode</a>
  (15 uses),     <a href="http://hl7.org/fhir/R4/valueset-languages.html">CommonLanguages</a>
- (19 uses),     <a href="http://hl7.org/fhir/R4/appointment.html">Appointment</a>
+ (21 uses),     <a href="http://hl7.org/fhir/R4/appointment.html">Appointment</a>
  (8 uses),     <a href="http://hl7.org/fhir/R4/relatedperson.html">RelatedPerson</a>
  (4 uses),     <a href="http://hl7.org/fhir/R4/researchsubject.html">ResearchSubject</a>
  (12 uses),     <a href="http://hl7.org/fhir/R4/organization.html">Organization</a>
- (23 uses),     <a href="http://hl7.org/fhir/R4/valueset-appointmentstatus.html">AppointmentStatus</a>
+ (27 uses),     <a href="http://hl7.org/fhir/R4/valueset-appointmentstatus.html">AppointmentStatus</a>
  (2 uses),     <a href="http://hl7.org/fhir/R4/valueset-appointment-cancellation-reason.html">AppointmentCancellationReason</a>
  (2 uses),     <a href="http://hl7.org/fhir/R4/valueset-service-category.html">ServiceCategory</a>
  (8 uses),     <a href="http://hl7.org/fhir/R4/valueset-service-type.html">ServiceType</a>
@@ -87,14 +87,14 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
  (2 uses),     <a href="http://hl7.org/fhir/R4/valueset-encounter-participant-type.html">ParticipantType</a>
  (2 uses),     <a href="http://hl7.org/fhir/R4/device.html">Device</a>
  (4 uses),     <a href="http://hl7.org/fhir/R4/practitionerrole.html">PractitionerRole</a>
- (39 uses),     <a href="http://hl7.org/fhir/R4/valueset-participantrequired.html">ParticipantRequired</a>
+ (46 uses),     <a href="http://hl7.org/fhir/R4/valueset-participantrequired.html">ParticipantRequired</a>
  (2 uses),     <a href="http://hl7.org/fhir/R4/valueset-participationstatus.html">ParticipationStatus</a>
  (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-location-status.html">LocationStatus</a>
  (2 uses),     <a href="http://hl7.org/fhir/R4/valueset-location-mode.html">LocationMode</a>
  (2 uses),     <a href="http://hl7.org/fhir/R4/endpoint.html">Endpoint</a>
  (6 uses),     <a href="http://hl7.org/fhir/R4/practitioner.html">Practitioner</a>
- (2 uses),     <a href="http://hl7.org/fhir/R4/valueset-common-tags.html">CommonTags</a>
- (3 uses),     <a href="http://hl7.org/fhir/R4/valueset-slotstatus.html">SlotStatus</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/valueset-common-tags.html">CommonTags</a>
+ (4 uses),     <a href="http://hl7.org/fhir/R4/valueset-slotstatus.html">SlotStatus</a>
  (4 uses),     <a href="http://hl7.org/fhir/R4/valueset-service-provision-conditions.html">ServiceProvisionConditions</a>
  (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-program.html">Program</a>
  (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-service-referral-method.html">ReferralMethod</a>
@@ -106,7 +106,7 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
   </li>
   <li>
 hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureDefinition-resource-sort.html">ResourceSortExt</a>
- (51 uses)
+ (53 uses)
   </li>
 </ul>
 </td></tr>
@@ -114,7 +114,7 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
  <tr><td>Previous Version Comparison:</td><td> </td></tr>
  <tr><td>IPA Comparison:</td><td> n/a</td></tr>
  <tr><td>IPS Comparison:</td><td> n/a</td></tr>
- <tr><td>Summary:</td><td> errors = 17, warn = 40, info = 93, broken links = 1</td></tr>
+ <tr><td>Summary:</td><td> errors = 17, warn = 40, info = 105, broken links = 1</td></tr>
 </table>
  <table class="grid">
    <tr>
@@ -959,6 +959,9 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
      <td><a href="Practitioner-ExamplePractitioner3.html">fsh-generated/resources/Practitioner-ExamplePractitioner3.json</a></td><td><b>Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-v2-0203|1.0.1</b></td>
    </tr>
    <tr style="background-color: #fffff2">
+     <td><a href="Practitioner-ExamplePractitionerRegul.html">fsh-generated/resources/Practitioner-ExamplePractitionerRegul.json</a></td><td><b>Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-v2-0203|1.0.1</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
      <td><a href="PractitionerRole-ExamplePractitionerRoleAgregateur.html">fsh-generated/resources/PractitionerRole-ExamplePractitionerRoleAgregateur.json</a></td><td><b>Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type|1.0.1</b></td>
    </tr>
    <tr style="background-color: #fffff2">
@@ -990,6 +993,18 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
    </tr>
    <tr style="background-color: #fffff2">
      <td><a href="StructureDefinition-FrPractitionerAgregateur.html">fsh-generated/resources/StructureDefinition-FrPractitionerAgregateur.json</a></td><td><b>Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-v2-0203|1.0.1</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="StructureDefinition-FrPractitionerRegul.html">fsh-generated/resources/StructureDefinition-FrPractitionerRegul.json</a></td><td><b>Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-v2-0203|1.0.1</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="StructureDefinition-FrPractitionerRegul.html">fsh-generated/resources/StructureDefinition-FrPractitionerRegul.json</a></td><td><b>Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-v2-0203|1.0.1</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="StructureDefinition-FrPractitionerRegul.html">fsh-generated/resources/StructureDefinition-FrPractitionerRegul.json</a></td><td><b>Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-v2-0203|1.0.1</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="StructureDefinition-FrPractitionerRegul.html">fsh-generated/resources/StructureDefinition-FrPractitionerRegul.json</a></td><td><b>Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-v2-0203|1.0.1</b></td>
    </tr>
    <tr style="background-color: #fffff2">
      <td><a href="StructureDefinition-FrPractitionerRoleExerciceAgregateur.html">fsh-generated/resources/StructureDefinition-FrPractitionerRoleExerciceAgregateur.json</a></td><td><b>Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-v2-0203|1.0.1</b></td>
@@ -1081,6 +1096,24 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
    </tr>
    <tr style="background-color: #fffff2">
      <td><a href="StructureDefinition-FrPractitionerAgregateur.html">fsh-generated/resources/StructureDefinition-FrPractitionerAgregateur.json</a></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="StructureDefinition-FrPractitionerRegul.html">fsh-generated/resources/StructureDefinition-FrPractitionerRegul.json</a></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="StructureDefinition-FrPractitionerRegul.html">fsh-generated/resources/StructureDefinition-FrPractitionerRegul.json</a></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="StructureDefinition-FrPractitionerRegul.html">fsh-generated/resources/StructureDefinition-FrPractitionerRegul.json</a></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="StructureDefinition-FrPractitionerRegul.html">fsh-generated/resources/StructureDefinition-FrPractitionerRegul.json</a></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="StructureDefinition-FrPractitionerRegul.html">fsh-generated/resources/StructureDefinition-FrPractitionerRegul.json</a></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="StructureDefinition-FrPractitionerRegul.html">fsh-generated/resources/StructureDefinition-FrPractitionerRegul.json</a></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
    </tr>
    <tr style="background-color: #fffff2">
      <td><a href="StructureDefinition-FrPractitionerRoleExerciceAgregateur.html">fsh-generated/resources/StructureDefinition-FrPractitionerRoleExerciceAgregateur.json</a></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
