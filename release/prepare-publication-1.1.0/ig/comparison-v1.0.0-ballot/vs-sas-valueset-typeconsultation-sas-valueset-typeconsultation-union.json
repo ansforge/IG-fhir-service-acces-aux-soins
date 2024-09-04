@@ -1,0 +1,32 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "5caa3d7e-631e-402d-bfa4-4fb324b1c5c9-80",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/5caa3d7e-631e-402d-bfa4-4fb324b1c5c9-80",
+  "name" : "UnionTypeConsultationSASAndTypeConsultationSAS",
+  "title" : "Union of Type consultation SAS And Type consultation SAS",
+  "status" : "draft",
+  "date" : "2024-09-04T16:00:59+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "concept" : [{
+        "code" : "AMB",
+        "display" : "Consultation au cabinet"
+      },
+      {
+        "code" : "HH",
+        "display" : "Consultation à domicile"
+      },
+      {
+        "code" : "VR",
+        "display" : "Téléconsultation"
+      }]
+    }]
+  }
+}
