@@ -20,7 +20,7 @@ jobs:
                cp "${path_spec}/${files[0]}" "${path_spec}/${files[1]}"
              done
          
-      - uses: ansforge/IG-workflows@nriss-patch-1
+      - uses: ansforge/IG-workflows@v0.2.0
         with:      
           repo_ig: "./igSource"   
           github_page: "true"
@@ -31,3 +31,4 @@ jobs:
           publish_repo: "ansforge/IG-website-release"
           publish_repo_token :  ${{ secrets.ANS_IG_API_TOKEN }} 
           publish_path_outpout : "./IG-website-release/www/ig/fhir"
+          ig-publisher-version: 1.6.20
