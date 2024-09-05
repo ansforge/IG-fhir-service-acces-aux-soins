@@ -7,7 +7,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>BundleAgregateur - Service d'Accès aux Soins v1.1.0-trial-use</title>
+    <title>BundleAgregateur - Service d'Accès aux Soins v1.0.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -60,7 +60,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Service d&#39;Accès aux Soins</span>
             <br/>
-            <span style="display:inline-block;">1.1.0-trial-use - ci-build
+            <span style="display:inline-block;">1.0.0 - trial-use
 
 
 
@@ -191,7 +191,7 @@
           <div class="inner-wrapper">
 
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Service d'Accès aux Soins - Local Development build (v1.1.0-trial-use) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/fhir/sas/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Service d'Accès aux Soins - Local Development build (v1.0.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/fhir/sas/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -275,13 +275,13 @@
 
   </h2>
 
-  <table class="colsd">
+  <table class="colsi">
 
     <tr>
       <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://sas.fr/fhir/StructureDefinition/BundleAgregateur<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://sas.fr/fhir/StructureDefinition/BundleAgregateur"/></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">1.1.0-trial-use<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://sas.fr/fhir/StructureDefinition/BundleAgregateur|1.1.0-trial-use"/></span>
+      <span class="copy-text">1.0.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://sas.fr/fhir/StructureDefinition/BundleAgregateur|1.0.0"/></span>
       </td>
     </tr>
 
@@ -295,9 +295,9 @@
 
       <td colspan="4">
         
-          Draft
+          Active
           
-            as of 2024-09-04
+            as of 2024-09-05
           
         
       </td>
@@ -916,7 +916,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <tr><td>bdl-11</td><td>error</td><td>Bundle</td><td>A document must have a Composition as the first resource<br/>: type = 'document' implies entry.first().resource.is(Composition)</td><td></td></tr>
 <tr><td>bdl-12</td><td>error</td><td>Bundle</td><td>A message must have a MessageHeader as the first resource<br/>: type = 'message' implies entry.first().resource.is(MessageHeader)</td><td></td></tr>
 <tr><td>ele-1</td><td>error</td><td>**ALL** elements</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td>Bundle.entry.modifierExtension, Bundle.entry.search.modifierExtension, Bundle.entry.request.modifierExtension, Bundle.entry.response.modifierExtension, Bundle.entry:FrSlotAgregateur.modifierExtension, Bundle.entry:FrSlotAgregateur.search.modifierExtension, Bundle.entry:FrSlotAgregateur.request.modifierExtension, Bundle.entry:FrSlotAgregateur.response.modifierExtension, Bundle.entry:FrScheduleAgregateur.modifierExtension, Bundle.entry:FrScheduleAgregateur.search.modifierExtension, Bundle.entry:FrScheduleAgregateur.request.modifierExtension, Bundle.entry:FrScheduleAgregateur.response.modifierExtension, Bundle.entry:FrPractitionerAgregateur.modifierExtension, Bundle.entry:FrPractitionerAgregateur.search.modifierExtension, Bundle.entry:FrPractitionerAgregateur.request.modifierExtension, Bundle.entry:FrPractitionerAgregateur.response.modifierExtension, Bundle.entry:FrPractitionerRoleExerciceAgregateur.modifierExtension, Bundle.entry:FrPractitionerRoleExerciceAgregateur.search.modifierExtension, Bundle.entry:FrPractitionerRoleExerciceAgregateur.request.modifierExtension, Bundle.entry:FrPractitionerRoleExerciceAgregateur.response.modifierExtension</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
+<tr><td>ext-1</td><td>error</td><td>**ALL** elements</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
 </table>
 
           
@@ -2101,7 +2101,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <tr><td>bdl-11</td><td>error</td><td>Bundle</td><td>A document must have a Composition as the first resource<br/>: type = 'document' implies entry.first().resource.is(Composition)</td><td></td></tr>
 <tr><td>bdl-12</td><td>error</td><td>Bundle</td><td>A message must have a MessageHeader as the first resource<br/>: type = 'message' implies entry.first().resource.is(MessageHeader)</td><td></td></tr>
 <tr><td>ele-1</td><td>error</td><td>**ALL** elements</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td>Bundle.link.extension, Bundle.link.modifierExtension, Bundle.entry.extension, Bundle.entry.modifierExtension, Bundle.entry.search.extension, Bundle.entry.search.modifierExtension, Bundle.entry.request.extension, Bundle.entry.request.modifierExtension, Bundle.entry.response.extension, Bundle.entry.response.modifierExtension, Bundle.entry:FrSlotAgregateur.extension, Bundle.entry:FrSlotAgregateur.modifierExtension, Bundle.entry:FrSlotAgregateur.search.extension, Bundle.entry:FrSlotAgregateur.search.modifierExtension, Bundle.entry:FrSlotAgregateur.request.extension, Bundle.entry:FrSlotAgregateur.request.modifierExtension, Bundle.entry:FrSlotAgregateur.response.extension, Bundle.entry:FrSlotAgregateur.response.modifierExtension, Bundle.entry:FrScheduleAgregateur.extension, Bundle.entry:FrScheduleAgregateur.modifierExtension, Bundle.entry:FrScheduleAgregateur.search.extension, Bundle.entry:FrScheduleAgregateur.search.modifierExtension, Bundle.entry:FrScheduleAgregateur.request.extension, Bundle.entry:FrScheduleAgregateur.request.modifierExtension, Bundle.entry:FrScheduleAgregateur.response.extension, Bundle.entry:FrScheduleAgregateur.response.modifierExtension, Bundle.entry:FrPractitionerAgregateur.extension, Bundle.entry:FrPractitionerAgregateur.modifierExtension, Bundle.entry:FrPractitionerAgregateur.search.extension, Bundle.entry:FrPractitionerAgregateur.search.modifierExtension, Bundle.entry:FrPractitionerAgregateur.request.extension, Bundle.entry:FrPractitionerAgregateur.request.modifierExtension, Bundle.entry:FrPractitionerAgregateur.response.extension, Bundle.entry:FrPractitionerAgregateur.response.modifierExtension, Bundle.entry:FrPractitionerRoleExerciceAgregateur.extension, Bundle.entry:FrPractitionerRoleExerciceAgregateur.modifierExtension, Bundle.entry:FrPractitionerRoleExerciceAgregateur.search.extension, Bundle.entry:FrPractitionerRoleExerciceAgregateur.search.modifierExtension, Bundle.entry:FrPractitionerRoleExerciceAgregateur.request.extension, Bundle.entry:FrPractitionerRoleExerciceAgregateur.request.modifierExtension, Bundle.entry:FrPractitionerRoleExerciceAgregateur.response.extension, Bundle.entry:FrPractitionerRoleExerciceAgregateur.response.modifierExtension</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
+<tr><td>ext-1</td><td>error</td><td>**ALL** elements</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
 </table>
 
           
@@ -2891,7 +2891,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <tr><td>bdl-11</td><td>error</td><td>Bundle</td><td>A document must have a Composition as the first resource<br/>: type = 'document' implies entry.first().resource.is(Composition)</td><td></td></tr>
 <tr><td>bdl-12</td><td>error</td><td>Bundle</td><td>A message must have a MessageHeader as the first resource<br/>: type = 'message' implies entry.first().resource.is(MessageHeader)</td><td></td></tr>
 <tr><td>ele-1</td><td>error</td><td>**ALL** elements</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td>Bundle.entry.modifierExtension, Bundle.entry.search.modifierExtension, Bundle.entry.request.modifierExtension, Bundle.entry.response.modifierExtension, Bundle.entry:FrSlotAgregateur.modifierExtension, Bundle.entry:FrSlotAgregateur.search.modifierExtension, Bundle.entry:FrSlotAgregateur.request.modifierExtension, Bundle.entry:FrSlotAgregateur.response.modifierExtension, Bundle.entry:FrScheduleAgregateur.modifierExtension, Bundle.entry:FrScheduleAgregateur.search.modifierExtension, Bundle.entry:FrScheduleAgregateur.request.modifierExtension, Bundle.entry:FrScheduleAgregateur.response.modifierExtension, Bundle.entry:FrPractitionerAgregateur.modifierExtension, Bundle.entry:FrPractitionerAgregateur.search.modifierExtension, Bundle.entry:FrPractitionerAgregateur.request.modifierExtension, Bundle.entry:FrPractitionerAgregateur.response.modifierExtension, Bundle.entry:FrPractitionerRoleExerciceAgregateur.modifierExtension, Bundle.entry:FrPractitionerRoleExerciceAgregateur.search.modifierExtension, Bundle.entry:FrPractitionerRoleExerciceAgregateur.request.modifierExtension, Bundle.entry:FrPractitionerRoleExerciceAgregateur.response.modifierExtension</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
+<tr><td>ext-1</td><td>error</td><td>**ALL** elements</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
 </table>
 
           
@@ -4076,7 +4076,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <tr><td>bdl-11</td><td>error</td><td>Bundle</td><td>A document must have a Composition as the first resource<br/>: type = 'document' implies entry.first().resource.is(Composition)</td><td></td></tr>
 <tr><td>bdl-12</td><td>error</td><td>Bundle</td><td>A message must have a MessageHeader as the first resource<br/>: type = 'message' implies entry.first().resource.is(MessageHeader)</td><td></td></tr>
 <tr><td>ele-1</td><td>error</td><td>**ALL** elements</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td>Bundle.link.extension, Bundle.link.modifierExtension, Bundle.entry.extension, Bundle.entry.modifierExtension, Bundle.entry.search.extension, Bundle.entry.search.modifierExtension, Bundle.entry.request.extension, Bundle.entry.request.modifierExtension, Bundle.entry.response.extension, Bundle.entry.response.modifierExtension, Bundle.entry:FrSlotAgregateur.extension, Bundle.entry:FrSlotAgregateur.modifierExtension, Bundle.entry:FrSlotAgregateur.search.extension, Bundle.entry:FrSlotAgregateur.search.modifierExtension, Bundle.entry:FrSlotAgregateur.request.extension, Bundle.entry:FrSlotAgregateur.request.modifierExtension, Bundle.entry:FrSlotAgregateur.response.extension, Bundle.entry:FrSlotAgregateur.response.modifierExtension, Bundle.entry:FrScheduleAgregateur.extension, Bundle.entry:FrScheduleAgregateur.modifierExtension, Bundle.entry:FrScheduleAgregateur.search.extension, Bundle.entry:FrScheduleAgregateur.search.modifierExtension, Bundle.entry:FrScheduleAgregateur.request.extension, Bundle.entry:FrScheduleAgregateur.request.modifierExtension, Bundle.entry:FrScheduleAgregateur.response.extension, Bundle.entry:FrScheduleAgregateur.response.modifierExtension, Bundle.entry:FrPractitionerAgregateur.extension, Bundle.entry:FrPractitionerAgregateur.modifierExtension, Bundle.entry:FrPractitionerAgregateur.search.extension, Bundle.entry:FrPractitionerAgregateur.search.modifierExtension, Bundle.entry:FrPractitionerAgregateur.request.extension, Bundle.entry:FrPractitionerAgregateur.request.modifierExtension, Bundle.entry:FrPractitionerAgregateur.response.extension, Bundle.entry:FrPractitionerAgregateur.response.modifierExtension, Bundle.entry:FrPractitionerRoleExerciceAgregateur.extension, Bundle.entry:FrPractitionerRoleExerciceAgregateur.modifierExtension, Bundle.entry:FrPractitionerRoleExerciceAgregateur.search.extension, Bundle.entry:FrPractitionerRoleExerciceAgregateur.search.modifierExtension, Bundle.entry:FrPractitionerRoleExerciceAgregateur.request.extension, Bundle.entry:FrPractitionerRoleExerciceAgregateur.request.modifierExtension, Bundle.entry:FrPractitionerRoleExerciceAgregateur.response.extension, Bundle.entry:FrPractitionerRoleExerciceAgregateur.response.modifierExtension</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
+<tr><td>ext-1</td><td>error</td><td>**ALL** elements</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
 </table>
 
           
@@ -4367,7 +4367,7 @@ Summary
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0-trial-use based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 4, 2024 16:00+0000">2024-09-04</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 5, 2024 10:11+0000">2024-09-05</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
