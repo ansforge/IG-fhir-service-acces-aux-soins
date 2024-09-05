@@ -8,9 +8,18 @@ jobs:
   run-release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:      
           path: igSource
+
+      - name: Copy "all" to "use cases" specs
+        run: |
+             path_spec="./igSource/input/pagecontent"
+             for lines in $(cat "${path_spec}/specifications_techniques.txt"); do
+               files=(${lines//;/ })
+               cp "${path_spec}/${files[0]}" "${path_spec}/${files[1]}"
+             done
+         
       - uses: ansforge/IG-workflows@main
         with:      
           repo_ig: "./igSource"   
