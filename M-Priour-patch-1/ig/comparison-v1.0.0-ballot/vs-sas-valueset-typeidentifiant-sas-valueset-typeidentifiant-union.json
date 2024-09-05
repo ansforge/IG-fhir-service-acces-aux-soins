@@ -1,0 +1,28 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "dfa6b1b7-caee-4b19-8f01-f1b6000845b8-83",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/dfa6b1b7-caee-4b19-8f01-f1b6000845b8-83",
+  "name" : "UnionTypeIdentifiantSASAndTypeIdentifiantSAS",
+  "title" : "Union of Type identifiant SAS And Type identifiant SAS",
+  "status" : "draft",
+  "date" : "2024-09-05T15:41:07+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "concept" : [{
+        "code" : "IDNPS",
+        "display" : "Identifiant National de Professionnel de Santé"
+      },
+      {
+        "code" : "INTRN",
+        "display" : "Identifiant interne"
+      }]
+    }]
+  }
+}
