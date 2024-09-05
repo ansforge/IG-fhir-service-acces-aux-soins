@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Appointment xmlns="http://hl7.org/fhir">
+  <id value="2"/>
+  <meta>
+    <profile value="http://sas.fr/fhir/StructureDefinition/FrAppointmentSAS"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Appointment 2</b></p><a name="2"> </a><a name="hc2"> </a><a name="2-fr-FR"> </a><p><b>identifier</b>: <code>urn:oid:1.1.111.1.11.1.1.1</code>/b6e39355-8a61-4556-b340-36f7b95fec6a</p><p><b>status</b>: Cancelled</p><p><b>start</b>: 2022-09-04 14:00:00+0100</p><p><b>end</b>: 2022-09-04 14:15:00+0100</p><h3>Participants</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Actor</b></td><td><b>Status</b></td></tr><tr><td style="display: none">*</td><td>Identifier: Identifiant National de Professionnel de Santé/810100050075</td><td>Accepted</td></tr></table></div>
+  </text>
+  <extension url="http://interopsante.org/fhir/StructureDefinition/FrAppointmentOperator">
+    <valueReference>
+      <identifier>
+        <type>
+          <coding>
+            <system value="http://interopsante.org/fhir/CodeSystem/fr-v2-0203"/>
+            <code value="IDNPS"/>
+          </coding>
+        </type>
+        <system value="urn:oid:1.2.250.1.71.4.2.1"/>
+        <value value="3456780581/11242343"/>
+      </identifier>
+    </valueReference>
+  </extension>
+  <identifier>
+    <system value="urn:oid:1.1.111.1.11.1.1.1"/>
+    <value value="b6e39355-8a61-4556-b340-36f7b95fec6a"/>
+  </identifier>
+  <status value="cancelled"/>
+  <start value="2022-09-04T14:00:00+01:00"/>
+  <end value="2022-09-04T14:15:00+01:00"/>
+  <participant>
+    <actor>
+      <identifier>
+        <type>
+          <coding>
+            <system value="http://interopsante.org/fhir/CodeSystem/fr-v2-0203"/>
+            <code value="IDNPS"/>
+          </coding>
+        </type>
+        <system value="urn:oid:1.2.250.1.71.4.2.1"/>
+        <value value="810100050075"/>
+      </identifier>
+    </actor>
+    <status value="accepted"/>
+  </participant>
+</Appointment>
