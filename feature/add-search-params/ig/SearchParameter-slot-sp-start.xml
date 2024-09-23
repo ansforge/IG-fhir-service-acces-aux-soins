@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SearchParameter xmlns="http://hl7.org/fhir">
+  <id value="slot-sp-start"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: SearchParameter slot-sp-start</b></p><a name="slot-sp-start"> </a><a name="hcslot-sp-start"> </a><a name="slot-sp-start-fr-FR"> </a><h2>SPDateDebutSlot</h2><p>Parameter <code>start</code>:<code>date</code></p><div><p>Paramètre de recherche date de début d'un créneau (date de début supérieure ou égale à &lt;date1&gt; et inférieure ou égale à &lt;date2&gt;)</p>
+</div><table class="grid"><tr><td>Resource</td><td><a href="http://hl7.org/fhir/R4/slot.html">Slot</a></td></tr><tr><td>Expression</td><td><code>Slot.start</code></td></tr><tr><td>Processing Mode</td><td>Normal</td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd: The parameter may repeat in order to specify multiple values that must all be true</li><li>multipleOr: The parameter may only have one value (no comma separators)</li></ul></td></tr><tr><td>Comparators</td><td>Allowed: ge, le</td></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/fhir/sas/SearchParameter/slot-sp-start"/>
+  <version value="1.0.0"/>
+  <name value="SPDateDebutSlot"/>
+  <status value="active"/>
+  <date value="2024-09-23T13:12:58+00:00"/>
+  <publisher value="ANS"/>
+  <contact>
+    <name value="ANS"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Paramètre de recherche date de début d'un créneau (date de début supérieure ou égale à &lt;date1&gt; et inférieure ou égale à &lt;date2&gt;)"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="FRANCE"/>
+    </coding>
+  </jurisdiction>
+  <code value="start"/>
+  <base value="Slot"/>
+  <type value="date"/>
+  <expression value="Slot.start"/>
+  <xpathUsage value="normal"/>
+  <multipleOr value="false"/>
+  <multipleAnd value="true"/>
+  <comparator value="ge"/>
+  <comparator value="le"/>
+</SearchParameter>
