@@ -172,7 +172,7 @@
 
             <a href="#bottom">bottom</a>
 
-          | <a href="SearchParameter-cptsslot-sp-servicetype.html">next&gt;</a>
+          | <a href="CapabilityStatement-SAS-Consommateur.html">next&gt;</a>
 
           </span>
 
@@ -206,19 +206,22 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
    <p>Contents:</p>
    <ul>
       <li>
-         <a href="#1">Behavior: Search Parameters</a>
+         <a href="#1">Behavior: Capability Statements</a>
       </li>
       <li>
-         <a href="#2">Structures: Resource Profiles</a>
+         <a href="#2">Behavior: Search Parameters</a>
       </li>
       <li>
-         <a href="#3">Structures: Extension Definitions</a>
+         <a href="#3">Structures: Resource Profiles</a>
       </li>
       <li>
-         <a href="#4">Terminology: Value Sets</a>
+         <a href="#4">Structures: Extension Definitions</a>
       </li>
       <li>
-         <a href="#5">Example: Example Instances</a>
+         <a href="#5">Terminology: Value Sets</a>
+      </li>
+      <li>
+         <a href="#6">Example: Example Instances</a>
       </li>
    </ul>
 </div>
@@ -227,6 +230,68 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
      xmlns:f="http://hl7.org/fhir">
    <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
    <a name="1"> </a>
+   <h3>Behavior: Capability Statements </h3>
+    <p>The following artifacts define the specific capabilities that different types of systems are expected to have in order to comply with this implementation guide.  Systems conforming to this implementation guide are expected to declare conformance to one or more of the following capability statements.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CapabilityStatement-SAS-Consommateur.html"
+                  title="CapabilityStatement/SAS-Consommateur">Profil SAS consommateur de créneaux</a>
+            </td>
+            <td>
+<p>Un consommateur consulte les créneaux mis à disposition par un gestionnaire d’agenda. La platefome numérique SAS joue le rôle de consommateur et affiche les créneaux récupérés</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CapabilityStatement-SAS-GestionnaireAgenda-CPTS.html"
+                  title="CapabilityStatement/SAS-GestionnaireAgenda-CPTS">Profil SAS gestionnaire d'agenda CPTS</a>
+            </td>
+            <td>
+<p>Un gestionnaire d’agenda met à disposition d’un consommateur des créneaux de disponibilité. Cas d’usage CPTS</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CapabilityStatement-SAS-GestionnaireAgenda-PsIndiv.html"
+                  title="CapabilityStatement/SAS-GestionnaireAgenda-PsIndiv">Profil SAS gestionnaire d'agenda PS Indiv</a>
+            </td>
+            <td>
+<p>Un gestionnaire d’agenda met à disposition d’un consommateur des créneaux de disponibilité. Cas d’usage PS à titre individuel</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CapabilityStatement-SAS-GestionnaireAgenda-RDV.html"
+                  title="CapabilityStatement/SAS-GestionnaireAgenda-RDV">Profil SAS gestionnaire d'agenda RDV</a>
+            </td>
+            <td>
+<p>Un gestionnaire d’agenda reçoit des rendez-vous envoyés par un déclarant de rendez-vous. La platefome numérique SAS joue le rôle de gestionnaire d’agenda et stocke les rendez-vous récupérés</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CapabilityStatement-SAS-GestionnaireAgenda-SOS.html"
+                  title="CapabilityStatement/SAS-GestionnaireAgenda-SOS">Profil SAS gestionnaire d'agenda SOS</a>
+            </td>
+            <td>
+<p>Un gestionnaire d’agenda met à disposition d’un consommateur des créneaux de disponibilité. Cas d’usage SOS médecins</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CapabilityStatement-SAS-GestionnaireStructure.html"
+                  title="CapabilityStatement/SAS-GestionnaireStructure">Profil SAS gestionnaire de structure</a>
+            </td>
+            <td>
+<p>Un gestionnaire de structure gère les ressources transmises par les déclarants de ressource</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="2"> </a>
    <h3>Behavior: Search Parameters </h3>
     <p>These define the properties by which a RESTful server can be searched.  They can also be used for sorting and including related resources.</p>
 <table class="grid">
@@ -252,7 +317,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
       </tbody>
    </table>
-   <a name="2"> </a>
+   <a name="3"> </a>
    <h3>Structures: Resource Profiles </h3>
     <p>These define constraints on FHIR resources for systems conforming to this implementation guide.</p>
 <table class="grid">
@@ -422,7 +487,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
       </tbody>
    </table>
-   <a name="3"> </a>
+   <a name="4"> </a>
    <h3>Structures: Extension Definitions </h3>
     <p>These define constraints on FHIR data types for systems conforming to this implementation guide.</p>
 <table class="grid">
@@ -439,7 +504,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
       </tbody>
    </table>
-   <a name="4"> </a>
+   <a name="5"> </a>
    <h3>Terminology: Value Sets </h3>
     <p>These define sets of codes used by systems conforming to this implementation guide.</p>
 <table class="grid">
@@ -510,7 +575,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
       </tbody>
    </table>
-   <a name="5"> </a>
+   <a name="6"> </a>
    <h3>Example: Example Instances </h3>
     <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.</p>
 <table class="grid">
@@ -769,7 +834,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="SearchParameter-cptsslot-sp-servicetype.html">next&gt;</a>
+                <a href="CapabilityStatement-SAS-Consommateur.html">next&gt;</a>
 
               </td>
             </tr>
@@ -779,7 +844,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Sep 23, 2024 14:06+0000">2024-09-23</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Oct 9, 2024 16:41+0000">2024-10-09</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

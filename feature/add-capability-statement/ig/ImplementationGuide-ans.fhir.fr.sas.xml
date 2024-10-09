@@ -10,7 +10,7 @@
   <name value="SAS"/>
   <title value="Service d'Accès aux Soins"/>
   <status value="active"/>
-  <date value="2024-09-23T14:06:21+00:00"/>
+  <date value="2024-10-09T16:41:58+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -990,6 +990,72 @@
       </reference>
       <name value="FrSlotAgregateurSOS"/>
       <description value="Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS (Service d’accès aux soins), dans le cadre du cas d’usage SOS Médecins"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/SAS-Consommateur"/>
+      </reference>
+      <name value="Profil SAS consommateur de créneaux"/>
+      <description value="Un consommateur consulte les créneaux mis à disposition par un gestionnaire d’agenda. La platefome numérique SAS joue le rôle de consommateur et affiche les créneaux récupérés"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/SAS-GestionnaireAgenda-CPTS"/>
+      </reference>
+      <name value="Profil SAS gestionnaire d'agenda CPTS"/>
+      <description value="Un gestionnaire d'agenda met à disposition d'un consommateur des créneaux de disponibilité. Cas d'usage CPTS"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/SAS-GestionnaireAgenda-PsIndiv"/>
+      </reference>
+      <name value="Profil SAS gestionnaire d'agenda PS Indiv"/>
+      <description value="Un gestionnaire d'agenda met à disposition d'un consommateur des créneaux de disponibilité. Cas d'usage PS à titre individuel"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/SAS-GestionnaireAgenda-RDV"/>
+      </reference>
+      <name value="Profil SAS gestionnaire d'agenda RDV"/>
+      <description value="Un gestionnaire d'agenda reçoit des rendez-vous envoyés par un déclarant de rendez-vous. La platefome numérique SAS joue le rôle de gestionnaire d'agenda et stocke les rendez-vous récupérés"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/SAS-GestionnaireAgenda-SOS"/>
+      </reference>
+      <name value="Profil SAS gestionnaire d'agenda SOS"/>
+      <description value="Un gestionnaire d'agenda met à disposition d'un consommateur des créneaux de disponibilité. Cas d'usage SOS médecins"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/SAS-GestionnaireStructure"/>
+      </reference>
+      <name value="Profil SAS gestionnaire de structure"/>
+      <description value="Un gestionnaire de structure gère les ressources transmises par les déclarants de ressource"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "SAS"] ; # 
   fhir:title [ fhir:v "Service d'Accès aux Soins"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2024-09-23T14:06:21+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-10-09T16:41:58+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -1191,6 +1191,78 @@
        ] ;
        fhir:name [ fhir:v "FrSlotAgregateurSOS" ] ;
        fhir:description [ fhir:v "Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS (Service d’accès aux soins), dans le cadre du cas d’usage SOS Médecins" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CapabilityStatement" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/CapabilityStatement/SAS-Consommateur> ;
+         fhir:reference [ fhir:v "CapabilityStatement/SAS-Consommateur" ]
+       ] ;
+       fhir:name [ fhir:v "Profil SAS consommateur de créneaux" ] ;
+       fhir:description [ fhir:v "Un consommateur consulte les créneaux mis à disposition par un gestionnaire d’agenda. La platefome numérique SAS joue le rôle de consommateur et affiche les créneaux récupérés" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CapabilityStatement" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/CapabilityStatement/SAS-GestionnaireAgenda-CPTS> ;
+         fhir:reference [ fhir:v "CapabilityStatement/SAS-GestionnaireAgenda-CPTS" ]
+       ] ;
+       fhir:name [ fhir:v "Profil SAS gestionnaire d'agenda CPTS" ] ;
+       fhir:description [ fhir:v "Un gestionnaire d'agenda met à disposition d'un consommateur des créneaux de disponibilité. Cas d'usage CPTS" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CapabilityStatement" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/CapabilityStatement/SAS-GestionnaireAgenda-PsIndiv> ;
+         fhir:reference [ fhir:v "CapabilityStatement/SAS-GestionnaireAgenda-PsIndiv" ]
+       ] ;
+       fhir:name [ fhir:v "Profil SAS gestionnaire d'agenda PS Indiv" ] ;
+       fhir:description [ fhir:v "Un gestionnaire d'agenda met à disposition d'un consommateur des créneaux de disponibilité. Cas d'usage PS à titre individuel" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CapabilityStatement" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/CapabilityStatement/SAS-GestionnaireAgenda-RDV> ;
+         fhir:reference [ fhir:v "CapabilityStatement/SAS-GestionnaireAgenda-RDV" ]
+       ] ;
+       fhir:name [ fhir:v "Profil SAS gestionnaire d'agenda RDV" ] ;
+       fhir:description [ fhir:v "Un gestionnaire d'agenda reçoit des rendez-vous envoyés par un déclarant de rendez-vous. La platefome numérique SAS joue le rôle de gestionnaire d'agenda et stocke les rendez-vous récupérés" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CapabilityStatement" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/CapabilityStatement/SAS-GestionnaireAgenda-SOS> ;
+         fhir:reference [ fhir:v "CapabilityStatement/SAS-GestionnaireAgenda-SOS" ]
+       ] ;
+       fhir:name [ fhir:v "Profil SAS gestionnaire d'agenda SOS" ] ;
+       fhir:description [ fhir:v "Un gestionnaire d'agenda met à disposition d'un consommateur des créneaux de disponibilité. Cas d'usage SOS médecins" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CapabilityStatement" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/CapabilityStatement/SAS-GestionnaireStructure> ;
+         fhir:reference [ fhir:v "CapabilityStatement/SAS-GestionnaireStructure" ]
+       ] ;
+       fhir:name [ fhir:v "Profil SAS gestionnaire de structure" ] ;
+       fhir:description [ fhir:v "Un gestionnaire de structure gère les ressources transmises par les déclarants de ressource" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
