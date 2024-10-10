@@ -29,7 +29,7 @@ Usage: #definition
 * rest.searchParam[=].documentation = "Permet d'inclure les ressources qui font référence à la ressource recherchée dans le résultat"
 
 //CPTS
-* rest.resource[1].type = #Slot
+* rest.resource[0].type = #Slot
 * rest.resource[=].profile = Canonical(sas-cpts-slot-aggregator)
 * rest.resource[=].interaction[0].code = #read
 * rest.resource[=].interaction[+].code = #search-type
@@ -44,7 +44,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].documentation = "Recherche d'une disponibilité sur la date et l'heure de début de disponibilité souhaité"
 
 
-* rest.resource[2].type = #Schedule
+* rest.resource[1].type = #Schedule
 * rest.resource[=].profile = "http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"
 * rest.resource[=].interaction[0].code = #read
 * rest.resource[=].interaction[+].code = #search-type
@@ -54,7 +54,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[=].documentation = "Permet de rechercher un agenda par acteur - praticien dans ce cas"
 
-* rest.resource[3].type = #Practitioner
+* rest.resource[2].type = #Practitioner
 * rest.resource[=].profile = "http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur"
 * rest.resource[=].interaction[0].code = #read
 * rest.resource[=].interaction[+].code = #search-type
