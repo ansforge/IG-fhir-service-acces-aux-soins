@@ -1,8 +1,8 @@
 ﻿{
   "openapi": "3.0.2",
   "info": {
-    "title": "Profil SAS gestionnaire d\u0027agenda RDV",
-    "description": "Un gestionnaire d\u0027agenda reçoit des rendez-vous envoyés par un déclarant de rendez-vous. La platefome numérique SAS joue le rôle de gestionnaire d\u0027agenda et stocke les rendez-vous récupérés",
+    "title": "Profil SAS gestionnaire d\u0027agenda RDV SOS",
+    "description": "Un gestionnaire d\u0027agenda reçoit des rendez-vous SOS envoyés par un déclarant de rendez-vous. La platefome numérique SAS joue le rôle de gestionnaire d\u0027agenda et stocke les rendez-vous récupérés",
     "license": {
       "name": "Creative Commons Zero v1.0 Universal",
       "url": "http://spdx.org/licenses/CC0-1.0.html"
@@ -14,7 +14,7 @@
     }
   },
   "externalDocs": {
-    "url": "https://interop.esante.gouv.fr/ig/fhir/sas/CapabilityStatement/SAS-GestionnaireAgenda-RDV",
+    "url": "https://interop.esante.gouv.fr/ig/fhir/sas/CapabilityStatement/SAS-GestionnaireAgenda-RDVSOS",
     "description": "FHIR CapabilityStatement"
   },
   "paths": {
@@ -146,18 +146,6 @@
           },
           {
             "$ref": "#/components/parameters/elements"
-          },
-          {
-            "$ref": "#/components/parameters/summary"
-          },
-          {
-            "$ref": "#/components/parameters/format"
-          },
-          {
-            "$ref": "#/components/parameters/pretty"
-          },
-          {
-            "$ref": "#/components/parameters/elements"
           }
         ]
       }
@@ -225,21 +213,6 @@
           }
         },
         "parameters": [
-          {
-            "$ref": "#/components/parameters/rid"
-          },
-          {
-            "$ref": "#/components/parameters/summary"
-          },
-          {
-            "$ref": "#/components/parameters/format"
-          },
-          {
-            "$ref": "#/components/parameters/pretty"
-          },
-          {
-            "$ref": "#/components/parameters/elements"
-          },
           {
             "$ref": "#/components/parameters/rid"
           },

@@ -10,7 +10,7 @@
   <name value="SAS"/>
   <title value="Service d'Accès aux Soins"/>
   <status value="active"/>
-  <date value="2024-10-09T16:41:58+00:00"/>
+  <date value="2024-10-10T14:44:21+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -997,10 +997,32 @@
         <valueString value="CapabilityStatement"/>
       </extension>
       <reference>
-        <reference value="CapabilityStatement/SAS-Consommateur"/>
+        <reference value="CapabilityStatement/SAS-Consommateur-psindiv"/>
       </reference>
       <name value="Profil SAS consommateur de créneaux"/>
-      <description value="Un consommateur consulte les créneaux mis à disposition par un gestionnaire d’agenda. La platefome numérique SAS joue le rôle de consommateur et affiche les créneaux récupérés"/>
+      <description value="Un consommateur consulte les créneaux ps indiv mis à disposition par un gestionnaire d’agenda. La platefome numérique SAS joue le rôle de consommateur et affiche les créneaux récupérés"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/SAS-Consommateur-CPTS"/>
+      </reference>
+      <name value="Profil SAS consommateur de créneaux CPTS"/>
+      <description value="Un consommateur consulte les créneaux CPTS mis à disposition par un gestionnaire d’agenda. La platefome numérique SAS joue le rôle de consommateur et affiche les créneaux récupérés"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/SAS-Consommateur-SOS"/>
+      </reference>
+      <name value="Profil SAS consommateur de créneaux SOS"/>
+      <description value="Un consommateur consulte les créneaux SOS mis à disposition par un gestionnaire d’agenda. La platefome numérique SAS joue le rôle de consommateur et affiche les créneaux récupérés"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1030,10 +1052,21 @@
         <valueString value="CapabilityStatement"/>
       </extension>
       <reference>
-        <reference value="CapabilityStatement/SAS-GestionnaireAgenda-RDV"/>
+        <reference value="CapabilityStatement/SAS-GestionnaireAgenda-RDVpsindiv"/>
       </reference>
-      <name value="Profil SAS gestionnaire d'agenda RDV"/>
-      <description value="Un gestionnaire d'agenda reçoit des rendez-vous envoyés par un déclarant de rendez-vous. La platefome numérique SAS joue le rôle de gestionnaire d'agenda et stocke les rendez-vous récupérés"/>
+      <name value="Profil SAS gestionnaire d'agenda RDV ps indiv"/>
+      <description value="Un gestionnaire d'agenda reçoit des rendez-vous ps indiv envoyés par un déclarant de rendez-vous. La platefome numérique SAS joue le rôle de gestionnaire d'agenda et stocke les rendez-vous récupérés"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/SAS-GestionnaireAgenda-RDVSOS"/>
+      </reference>
+      <name value="Profil SAS gestionnaire d'agenda RDV SOS"/>
+      <description value="Un gestionnaire d'agenda reçoit des rendez-vous SOS envoyés par un déclarant de rendez-vous. La platefome numérique SAS joue le rôle de gestionnaire d'agenda et stocke les rendez-vous récupérés"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
