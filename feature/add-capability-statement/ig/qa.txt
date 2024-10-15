@@ -1,19 +1,19 @@
 SAS : Validation Results
 =========================================
 
-err = 31, warn = 41, info = 106
-IG Publisher Version: 1.6.20 Out of date - current version is 1.6.29
-Generated Thu Oct 10 14:45:38 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.sas#1.0.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/sas)
+err = 23, warn = 41, info = 106
+IG Publisher Version: 1.6.20 Out of date - current version is 1.6.31
+Generated Tue Oct 15 07:11:29 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.sas#1.0.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/sas)
  Build Errors : 1 / 5 / 0
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Appointment-1 : 0 / 0 / 3
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Appointment-2 : 0 / 0 / 3
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundleCPTS : 0 / 10 / 28
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundlePSIndiv : 0 / 9 / 57
- /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/CapabilityStatement-SAS-Consommateur-CPTS : 2 / 0 / 1
- /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/CapabilityStatement-SAS-Consommateur-SOS : 3 / 0 / 1
- /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/CapabilityStatement-SAS-Consommateur-psindiv : 2 / 0 / 1
- /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/CapabilityStatement-SAS-GestionnaireAgenda-CPTS : 2 / 0 / 1
- /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/CapabilityStatement-SAS-GestionnaireAgenda-PsIndiv : 2 / 0 / 1
+ /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/CapabilityStatement-SAS-Consommateur-CPTS : 0 / 0 / 1
+ /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/CapabilityStatement-SAS-Consommateur-SOS : 1 / 0 / 1
+ /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/CapabilityStatement-SAS-Consommateur-psindiv : 0 / 0 / 1
+ /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/CapabilityStatement-SAS-GestionnaireAgenda-CPTS : 1 / 0 / 1
+ /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/CapabilityStatement-SAS-GestionnaireAgenda-PsIndiv : 1 / 0 / 1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/CapabilityStatement-SAS-GestionnaireAgenda-RDVSOS : 0 / 0 / 1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/CapabilityStatement-SAS-GestionnaireAgenda-RDVpsindiv : 0 / 0 / 1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/CapabilityStatement-SAS-GestionnaireAgenda-SOS : 3 / 0 / 1
@@ -126,21 +126,13 @@ WARNING: Bundle/ExampleBundlePSIndiv: Bundle.entry[9]: This is not a matching re
 WARNING: Bundle/ExampleBundlePSIndiv: Bundle.entry[10]: This is not a matching resource type for the specified search (is a search mode needed?) (PractitionerRole expecting [Slot])
 WARNING: Bundle/ExampleBundlePSIndiv: Bundle: SearchSet bundles should have search modes on the entries
 == fsh-generated/resources/CapabilityStatement-SAS-Consommateur-CPTS.json ==
-ERROR: CapabilityStatement/SAS-Consommateur-CPTS: CapabilityStatement.rest[0].searchParam[0].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-include' does not resolve
-ERROR: CapabilityStatement/SAS-Consommateur-CPTS: CapabilityStatement.rest[0].searchParam[1].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-revinclude' does not resolve
 == fsh-generated/resources/CapabilityStatement-SAS-Consommateur-SOS.json ==
 ERROR: CapabilityStatement/SAS-Consommateur-SOS: CapabilityStatement.rest[0].resource[0].searchParam[0].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-has' does not resolve
-ERROR: CapabilityStatement/SAS-Consommateur-SOS: CapabilityStatement.rest[0].searchParam[0].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-include' does not resolve
-ERROR: CapabilityStatement/SAS-Consommateur-SOS: CapabilityStatement.rest[0].searchParam[1].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-revinclude' does not resolve
 == fsh-generated/resources/CapabilityStatement-SAS-Consommateur-psindiv.json ==
-ERROR: CapabilityStatement/SAS-Consommateur-psindiv: CapabilityStatement.rest[0].searchParam[0].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-include' does not resolve
-ERROR: CapabilityStatement/SAS-Consommateur-psindiv: CapabilityStatement.rest[0].searchParam[1].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-revinclude' does not resolve
 == fsh-generated/resources/CapabilityStatement-SAS-GestionnaireAgenda-CPTS.json ==
 ERROR: CapabilityStatement/SAS-GestionnaireAgenda-CPTS: CapabilityStatement.rest[0].searchParam[0].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-include' does not resolve
-ERROR: CapabilityStatement/SAS-GestionnaireAgenda-CPTS: CapabilityStatement.rest[0].searchParam[1].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-revinclude' does not resolve
 == fsh-generated/resources/CapabilityStatement-SAS-GestionnaireAgenda-PsIndiv.json ==
 ERROR: CapabilityStatement/SAS-GestionnaireAgenda-PsIndiv: CapabilityStatement.rest[0].searchParam[0].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-include' does not resolve
-ERROR: CapabilityStatement/SAS-GestionnaireAgenda-PsIndiv: CapabilityStatement.rest[0].searchParam[1].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-revinclude' does not resolve
 == fsh-generated/resources/CapabilityStatement-SAS-GestionnaireAgenda-RDVSOS.json ==
 == fsh-generated/resources/CapabilityStatement-SAS-GestionnaireAgenda-RDVpsindiv.json ==
 == fsh-generated/resources/CapabilityStatement-SAS-GestionnaireAgenda-SOS.json ==

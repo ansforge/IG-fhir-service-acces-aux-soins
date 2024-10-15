@@ -115,14 +115,12 @@
     }],
     "searchParam" : [{
       "name" : "_include",
-      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-include",
-      "type" : "token",
+      "type" : "reference",
       "documentation" : "Permet d'inclure des ressources référencées par la ressource recherchée dans le résultat"
     },
     {
       "name" : "_revinclude",
-      "definition" : "http://hl7.org/fhir/SearchParameter/Resource-revinclude",
-      "type" : "token",
+      "type" : "reference",
       "documentation" : "Permet d'inclure les ressources qui font référence à la ressource recherchée dans le résultat"
     }]
   }]
