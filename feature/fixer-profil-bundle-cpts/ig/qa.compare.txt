@@ -1,13 +1,13 @@
 SAS : Validation Results
 =========================================
 
-err = 17, warn = 41, info = 106
+err = 17, warn = 37, info = 105
 $--
 Generated $--. FHIR version $-- for ans.fhir.fr.sas#$-- (canonical = https://interop.esante.gouv.fr/ig/fhir/sas)
  Build Errors : 1 / 5 / 0
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Appointment-1 : 0 / 0 / 3
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Appointment-2 : 0 / 0 / 3
- /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundleCPTS : 0 / 10 / 28
+ /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundleCPTS : 0 / 6 / 27
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundlePSIndiv : 0 / 9 / 57
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/HealthcareService-ExampleHealthcareServiceCPTS1 : 0 / 0 / 1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/HealthcareService-ExampleHealthcareServiceCPTS2 : 0 / 0 / 1
@@ -77,14 +77,9 @@ INFORMATION: Appointment/2: Appointment.participant[0].actor.identifier.type: Re
 == fsh-generated/resources/Bundle-ExampleBundleCPTS.json ==
 INFORMATION: Bundle/ExampleBundleCPTS: Bundle.entry[0].resource.serviceType[1]: This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Bundle/ExampleBundleCPTS: Bundle.entry[0].resource.serviceType[1].coding[0]: A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/TRE_R66-CategorieEtablissement' could not be found, so the code cannot be validated
-WARNING: Bundle/ExampleBundleCPTS: Bundle.entry[0].resource.serviceType[1].extension[0].value.ofType(Reference): Entry 4 matches the reference HealthcareService/ExampleHealthcareServiceCPTS1 by type and id but it's fullUrl https://<base_URl>/HealthcareService/ExampleHealthcareServiceCPTS does not match the full target URL https://<base_URl>/HealthcareService/ExampleHealthcareServiceCPTS1 by Bundle resolution rules
 INFORMATION: Bundle/ExampleBundleCPTS: Bundle.entry[0].resource/*Slot/ExampleSlotCPTS1*/.serviceType[1].coding[0]: A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/TRE_R66-CategorieEtablissement' could not be found, so the code cannot be validated
-WARNING: Bundle/ExampleBundleCPTS: Bundle.entry[0].resource/*Slot/ExampleSlotCPTS1*/.serviceType[1].extension[0].value.ofType(Reference): Entry 4 matches the reference HealthcareService/ExampleHealthcareServiceCPTS1 by type and id but it's fullUrl https://<base_URl>/HealthcareService/ExampleHealthcareServiceCPTS does not match the full target URL https://<base_URl>/HealthcareService/ExampleHealthcareServiceCPTS1 by Bundle resolution rules
 INFORMATION: Bundle/ExampleBundleCPTS: Bundle.entry[2].resource/*Practitioner/ExamplePractitioner*/.identifier[0].type: Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-v2-0203|1.0.1
 INFORMATION: Bundle/ExampleBundleCPTS: Bundle.entry[3].resource/*PractitionerRole/ExamplePractitionerRoleAgregateur*/.contained[0]/*Location/ExampleLocation*/.identifier[0].type: Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type|1.0.1
-WARNING: Bundle/ExampleBundleCPTS: Bundle.entry[4].resource.providedBy: Entry 5 matches the reference Organization/ExampleOrgaCPTS1 by type and id but it's fullUrl https://<base_URl>/Organization/ExampleOrgaCPTS does not match the full target URL https://<base_URl>/Organization/ExampleOrgaCPTS1 by Bundle resolution rules
-WARNING: Bundle/ExampleBundleCPTS: Bundle.entry[4].resource/*HealthcareService/ExampleHealthcareServiceCPTS1*/.providedBy: Entry 5 matches the reference Organization/ExampleOrgaCPTS1 by type and id but it's fullUrl https://<base_URl>/Organization/ExampleOrgaCPTS does not match the full target URL https://<base_URl>/Organization/ExampleOrgaCPTS1 by Bundle resolution rules
-INFORMATION: Bundle/ExampleBundleCPTS: Bundle.entry[5].resource.identifier[0].type: Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type|1.0.1
 INFORMATION: Bundle/ExampleBundleCPTS: Bundle.entry[5].resource/*Organization/ExampleOrgaCPTS1*/.identifier[0].type: Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type|1.0.1
 WARNING: Bundle/ExampleBundleCPTS: Bundle.entry[1]: This is not a matching resource type for the specified search (is a search mode needed?) (Schedule expecting [Slot])
 WARNING: Bundle/ExampleBundleCPTS: Bundle.entry[2]: This is not a matching resource type for the specified search (is a search mode needed?) (Practitioner expecting [Slot])
