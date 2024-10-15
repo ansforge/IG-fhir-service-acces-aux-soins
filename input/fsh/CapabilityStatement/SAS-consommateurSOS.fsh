@@ -19,13 +19,11 @@ Usage: #definition
 
 //Paramètres de recherches commun
 * rest.searchParam[+].name = "_include"
-* rest.searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-include"
-* rest.searchParam[=].type = #token
+* rest.searchParam[=].type = #reference
 * rest.searchParam[=].documentation = "Permet d'inclure des ressources référencées par la ressource recherchée dans le résultat"
 
 * rest.searchParam[+].name = "_revinclude"
-* rest.searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-revinclude"
-* rest.searchParam[=].type = #token
+* rest.searchParam[=].type = #reference
 * rest.searchParam[=].documentation = "Permet d'inclure les ressources qui font référence à la ressource recherchée dans le résultat"
 
 //SOS Médecin
