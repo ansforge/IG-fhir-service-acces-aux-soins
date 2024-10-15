@@ -1,0 +1,48 @@
+{
+  "resourceType" : "PractitionerRole",
+  "id" : "ExamplePractitionerRoleAgregateur",
+  "meta" : {
+    "profile" : ["http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole ExamplePractitionerRoleAgregateur</b></p><a name=\"ExamplePractitionerRoleAgregateur\"> </a><a name=\"hcExamplePractitionerRoleAgregateur\"> </a><a name=\"ExamplePractitionerRoleAgregateur-fr-FR\"> </a><p><b>practitioner</b>: <a href=\"Practitioner-ExamplePractitioner.html\">Practitioner Pierre Foret </a></p><p><b>organization</b>: Identifier: 412345678912345</p><p><b>location</b>: <a href=\"#hcExamplePractitionerRoleAgregateur/ExampleLocation\">Location: identifier = Identifiant interne</a></p><p><b>telecom</b>: <a href=\"tel:+33561855977\">+33561855977</a></p><hr/><blockquote><p class=\"res-header-id\"><b>Generated Narrative: Location  #ExampleLocation</b></p><a name=\"ExamplePractitionerRoleAgregateur/ExampleLocation\"> </a><a name=\"hcExamplePractitionerRoleAgregateur/ExampleLocation\"> </a><a name=\"ExamplePractitionerRoleAgregateur/ExampleLocation-fr-FR\"> </a><p><b>identifier</b>: Identifiant interne/123456789</p><p><b>address</b>: 25 CHEMIN DE MOUNESTIE Aussonne 31840 </p></blockquote></div>"
+  },
+  "contained" : [{
+    "resourceType" : "Location",
+    "id" : "ExampleLocation",
+    "meta" : {
+      "profile" : ["http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur"]
+    },
+    "identifier" : [{
+      "type" : {
+        "coding" : [{
+          "system" : "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type",
+          "code" : "INTRN"
+        }]
+      },
+      "system" : "https://editeur.com",
+      "value" : "123456789"
+    }],
+    "address" : {
+      "line" : ["25 CHEMIN DE MOUNESTIE"],
+      "city" : "Aussonne",
+      "postalCode" : "31840"
+    }
+  }],
+  "practitioner" : {
+    "reference" : "Practitioner/ExamplePractitioner"
+  },
+  "organization" : {
+    "identifier" : {
+      "value" : "412345678912345"
+    }
+  },
+  "location" : [{
+    "reference" : "#ExampleLocation"
+  }],
+  "telecom" : [{
+    "system" : "phone",
+    "value" : "+33561855977"
+  }]
+}

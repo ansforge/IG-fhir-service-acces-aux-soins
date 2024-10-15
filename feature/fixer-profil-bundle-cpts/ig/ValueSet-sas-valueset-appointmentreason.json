@@ -1,0 +1,43 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "sas-valueset-appointmentreason",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet sas-valueset-appointmentreason</b></p><a name=\"sas-valueset-appointmentreason\"> </a><a name=\"hcsas-valueset-appointmentreason\"> </a><a name=\"sas-valueset-appointmentreason-fr-FR\"> </a><ul><li>Include these codes as defined in <a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v2-0276.html\"><code>http://terminology.hl7.org/CodeSystem/v2-0276</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v2-0276.html#v2-0276-ROUTINE\">ROUTINE</a></td><td>Créneau avec prise de RDV possible</td><td>Routine appointment - default if not valued</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v2-0276.html#v2-0276-WALKIN\">WALKIN</a></td><td>Créneau sans prise de RDV possible à domicile</td><td>A previously unscheduled walk-in visit</td></tr></table></li></ul></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-appointmentreason",
+  "version" : "1.0.0",
+  "name" : "AppointmentReasonSAS",
+  "title" : "Appointment reason SAS",
+  "status" : "active",
+  "date" : "2024-10-15T07:43:43+00:00",
+  "publisher" : "ANS",
+  "contact" : [{
+    "name" : "ANS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Appointment reason SAS",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0276",
+      "concept" : [{
+        "code" : "ROUTINE",
+        "display" : "Créneau avec prise de RDV possible"
+      },
+      {
+        "code" : "WALKIN",
+        "display" : "Créneau sans prise de RDV possible à domicile"
+      }]
+    }]
+  }
+}
