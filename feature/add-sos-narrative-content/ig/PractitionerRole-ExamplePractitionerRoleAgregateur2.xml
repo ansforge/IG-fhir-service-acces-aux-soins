@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PractitionerRole xmlns="http://hl7.org/fhir">
+  <id value="ExamplePractitionerRoleAgregateur2"/>
+  <meta>
+    <profile value="http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: PractitionerRole ExamplePractitionerRoleAgregateur2</b></p><a name="ExamplePractitionerRoleAgregateur2"> </a><a name="hcExamplePractitionerRoleAgregateur2"> </a><a name="ExamplePractitionerRoleAgregateur2-fr-FR"> </a><p><b>practitioner</b>: <a href="Practitioner-ExamplePractitioner2.html">Practitioner Sébastien THOMAS </a></p><p><b>organization</b>: Identifier: Identification nationale de structure définie par l’ASIP-SANTE dans le CI_SIS/1810004421</p><p><b>location</b>: <a href="#hcExamplePractitionerRoleAgregateur2/ExampleLocation3">Location: identifier = Identifiant interne</a></p><hr/><blockquote><p class="res-header-id"><b>Generated Narrative: Location  #ExampleLocation3</b></p><a name="ExamplePractitionerRoleAgregateur2/ExampleLocation3"> </a><a name="hcExamplePractitionerRoleAgregateur2/ExampleLocation3"> </a><a name="ExamplePractitionerRoleAgregateur2/ExampleLocation3-fr-FR"> </a><p><b>identifier</b>: Identifiant interne/1</p><p><b>address</b>: 1 rue Mme DELMAS AGEN 47000 </p></blockquote></div>
+  </text>
+  <contained>
+    <Location>
+      <id value="ExampleLocation3"/>
+      <meta>
+        <profile value="http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur"/>
+      </meta>
+      <identifier>
+        <type>
+          <coding>
+            <system value="http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"/>
+            <code value="INTRN"/>
+          </coding>
+        </type>
+        <system value="urn:oid:1.1.111.1.111.1.1.1"/>
+        <value value="1"/>
+      </identifier>
+      <address>
+        <line value="1 rue Mme DELMAS"/>
+        <city value="AGEN"/>
+        <postalCode value="47000"/>
+      </address>
+    </Location>
+  </contained>
+  <practitioner>
+    <reference value="Practitioner/ExamplePractitioner2"/>
+  </practitioner>
+  <organization>
+    <identifier>
+      <type>
+        <coding>
+          <system value="http://interopsante.org/fhir/CodeSystem/fr-v2-0203"/>
+          <code value="IDNST"/>
+        </coding>
+      </type>
+      <system value="urn:oid:1.2.250.1.71.4.2.2"/>
+      <value value="1810004421"/>
+    </identifier>
+  </organization>
+  <location>
+    <reference value="#ExampleLocation3"/>
+  </location>
+</PractitionerRole>
