@@ -97,8 +97,6 @@ La structure de réponse attendue inclut l’ensemble des créneaux de consultat
 
 Le schéma ci-dessous présente une synthèse de la structure attendue :
 
-Le schéma ci-dessous présente une synthèse de la structure attendue :
-
 <div class="figure" style="width:100%;" align ="center">
     <p>{% include ressources-exploitees-fhir-sos.svg %}</p>
 </div>
