@@ -11,6 +11,8 @@ Pour les cas d'usage couverts par ces API :
 ### Agrégateur - Recherche de créneaux
 
 #### Description du cas d'usage
+
+##### PS à titre individuel - CPTS
 L'objectif de cette interface est de permettre l'agrégation des créneaux de disponibilités des solutions logicielles d'agenda avec prise de RDV dans la plateforme numérique SAS :
 - Flux <font color='blue'><b>INT_R01</b></font> : solution d'agenda pour les **PS à titre individuel**
 - Flux <font color='red'><b>INT_R04</b></font> : solution d'agenda pour les **PS appartenant à une ou plusieurs CPTS**
@@ -21,24 +23,50 @@ Le schéma de présentation générale ci-dessous illustre ce cas d'usage :
     <tr>
         <td align ="center">
             <div class="figure">
-                <img src="recherche_creneaux_1.png" width="80%" height="80%" alt="Présentation recherche de créneaux" title="Présentation recherche de créneaux">
+                <img src="recherche_creneaux_1.png" width="80%" height="80%" alt="Présentation recherche de créneaux" title="Présentation recherche de créneaux PS. indiv - CPTS ">
             </div>
         </td>    
     </tr>
     <tr>
         <td align ="center">
-            <b>Figure 1 - Présentation recherche de créneaux</b>
+            <b>Figure 1 - Présentation recherche de créneaux PS indiv. - CPTS </b>
         </td>
     </tr>
 </table>
 
 Les créneaux de disponibilités sont renseignés par les professionnels effecteurs de soins ou délégataires dans leur solution logicielle d'agenda. Le flux décrit ci-dessous permet de récupérer et d'afficher dans la plateforme numérique SAS les créneaux selon les modalités définies lors des Groupes de Travail en bilatérales avec l'ANS.
-Lors d'une recherche d'offre de soins sur la plateforme numérique SAS, le moteur de recherche va s'appuyer sur les référentiels nationaux pour identifier l'offre correspondant aux critères de recherche. Une liste de 1 à 25 RPPS/ADELI est envoyée aux solutions logicielles éditeurs pour identifier les créneaux de disponibilités des professionnels de santé (PS) correspondants. Les types de créneaux remontés dans la plateforme sont :
+Lors d'une recherche d'offre de soins sur la plateforme numérique SAS, le moteur de recherche va s'appuyer sur les référentiels nationaux pour identifier l'offre correspondant aux critères de recherche. Une **liste de 1 à 25 RPPS/ADELI** est envoyée aux solutions logicielles éditeurs pour identifier les créneaux de disponibilités des professionnels de santé (PS) correspondants. Les types de créneaux remontés dans la plateforme sont :
 - Les créneaux visibles du grand public hors ceux réservés pour la patientèle
 - Les créneaux visibles des professionnels de santé hors ceux de structures
 - Les créneaux dédiés au SAS, le cas échéant
 - Les créneaux visibles des structures de type CPTS
 
+##### SOS médecins
+L’objectif de cette interface est de permettre l’agrégation des créneaux de disponibilités dans la plateforme numérique SAS des professionnels de santé exerçants au sein d’une association SOS Médecins. Ces créneaux sont renseignés dans un logiciel de gestion d’agenda avec prise de rendez-vous.
+
+Le schéma de présentation générale ci-dessous illustre ce cas d’usage :
+
+<table align="center">
+    <tr>
+        <td align ="center">
+            <div class="figure">
+                <img src="recherche_creneaux_2.png" width="80%" height="80%" alt="Présentation recherche de créneaux" title="Présentation recherche de créneaux SOS médecins">
+            </div>
+        </td>    
+    </tr>
+    <tr>
+        <td align ="center">
+            <b>Figure 2 - Présentation recherche de créneaux SOS médecins </b>
+        </td>
+    </tr>
+</table>
+
+Les créneaux de disponibilités des Points Fixes de Garde (PFG), lieux de consultation SOS Médecins, sont renseignés par les associations dans les solutions logicielles d’agendas. Le flux décrit ci-dessous permet de récupérer et d’afficher dans la plateforme numérique SAS les créneaux selon les modalités définies lors des Groupes de Travail en bilatérales avec l’ANS.
+Lors d’une recherche d’offre de soins sur la plateforme numérique SAS, le moteur de recherche va s’appuyer sur les référentiels nationaux enrichis pour identifier l’offre de soins correspondant aux critères de recherche. Une **liste de 1 à 10 SIRET**, identifiant national de structure (IDNST) d’une association SOS Médecins, est envoyée aux solutions logicielles éditeurs pour identifier les créneaux de disponibilités des Points Fixes de Garde (PFG) correspondants. Les types de créneaux remontés dans la plateforme sont :
+-	Les créneaux visibles du grand public
+-	Les créneaux dédiés au SAS, le cas échéant
+
+##### Format commun des échanges 
 L'agrégateur de créneaux fait intervenir de nombreux acteurs, pour la plupart externes au SAS. Il est donc nécessaire de s'assurer d'une technologie commune aux différentes plateformes.
 Les échanges reposent sur des **webservices se basant sur l'API REST du standard HL7 FHIR (R4)**.
 
@@ -50,6 +78,7 @@ Le schéma ci-dessous illustre les échanges à mettre en oeuvre entre la platef
 
 #### Structure de la réponse
 
+##### PS à titre individuel - CPTS
 La structure de réponse attendue inclut l’ensemble des créneaux de disponibilités correspondant à la requête réalisée par la plateforme numérique SAS.
 1 à n créneaux de consultation (Slot) peuvent être rattachés à 1 agenda (Schedule) qui représente 1 lieu de consultation (PractitionerRole), lui-même rattaché à 1 PS (Practitioner). Si des créneaux de consultation sont proposés pour plusieurs lieux de consultation, on aura autant d’agendas (Schedule) que de lieux de consultation (PractitionerRole).
 
@@ -62,6 +91,17 @@ Le schéma ci-dessous présente une synthèse de la structure attendue :
     <p>{% include ressources-exploitees-fhir.svg %}</p>
 </div>
 
+##### SOS médecins
+La structure de réponse attendue inclut l’ensemble des créneaux de consultation disponibles correspondant à la requête réalisée par la plateforme numérique SAS.
+1 à n créneaux de consultation (Slot) peuvent être rattachés à 1 agenda (Schedule) qui représente 1 point fixe de garde (Location), lui-même rattaché à 1 association SOS Médecins (Organization). Si des créneaux de consultation sont proposés pour plusieurs PFG, on aura autant d’agendas (Schedule) que de PFG (Location).
+
+Le schéma ci-dessous présente une synthèse de la structure attendue :
+
+Le schéma ci-dessous présente une synthèse de la structure attendue :
+
+<div class="figure" style="width:100%;" align ="center">
+    <p>{% include ressources-exploitees-fhir-sos.svg %}</p>
+</div>
 
 ### Gestion des informations rendez-vous
 
