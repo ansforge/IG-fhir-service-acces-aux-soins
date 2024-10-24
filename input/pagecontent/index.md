@@ -64,6 +64,13 @@ L'offre de soins à mettre à disposition inclut les volets
    - [Recherche de créneaux](./specifications_techniques-cpts-recherche_creneaux.html)
    - [Gestion de rendez-vous](./specifications_techniques-cpts-gestion_rdv.html)
 
+#### SOS médecins
+
+1. [Spécifications fonctionnelles](./specifications_fonctionnelles.html#sos-médecins)
+2. Spécifications techniques :
+   - [Recherche de créneaux](./specifications_techniques-sos-recherche_creneaux.html)
+   - [Gestion de rendez-vous](./specifications_techniques-ps-gestion_rdv.html)
+
 ### Dépendances
  
 {% include dependency-table.xhtml %}
