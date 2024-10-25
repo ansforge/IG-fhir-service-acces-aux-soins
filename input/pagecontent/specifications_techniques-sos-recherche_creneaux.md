@@ -190,7 +190,7 @@ HTTP 200 OK
 **Corps de la réponse complète :**
 
 La réponse ci-dessous correspond à :
-1. 2 créneaux disponibles via l’association SOS Médecins de Rennes (SIRET : 334173748400020) :
+- 2 créneaux disponibles via l’association SOS Médecins de Rennes (SIRET : 334173748400020) :
   - 1 créneau au PFG : Centre de consultation Rennes Nord :
     - Adresse : 320 avenue Général George Patton (35700)
     - ID du PFG : 1111111111
@@ -202,7 +202,6 @@ La réponse ci-dessous correspond à :
     - Avec prise de RDV
     - Type de créneau : visible du grand public et réservé SAS
     - Type de consultation : au cabinet ou en téléconsultation
-    
   - 1 créneau au PFG : Centre de consultation Rennes Cleunay :
     - Adresse : 320 avenue Général George Patton (35700)
     - Adresse : 106 rue Eugène Pottier (35000)
@@ -215,7 +214,7 @@ La réponse ci-dessous correspond à :
     - Avec prise de RDV
     - Type de créneau : visible du grand public
     - Type de consultation : au cabinet
-1. 2 créneaux disponibles via l’association SOS Médecins Lorient et agglomération (SIRET : 392080466300010) :
+- 2 créneaux disponibles via l’association SOS Médecins Lorient et agglomération (SIRET : 392080466300010) :
   - Les 2 créneaux sont rattachés au PFG : Centre de consultation Lorient :
     - Adresse : 12 impasse Royer Dubail (56100)
     - ID du PFG : 3333333333
