@@ -45,11 +45,11 @@ Cette requête s'appuie sur le flux 3A du volet d'agenda partagé du [CI-SIS vol
 </tr>
 <tr>
   <td width="25%"><p><strong>Ressource recherchée</strong></p></td>
-  <td><p>Slot</p></td>
+  <td><p>Schedule</p></td>
 </tr>
 <tr>
   <td width="25%"><p><strong>Construction requête de base</strong></p></td>
-  <td><p><code>GET[base]/Slot{?[parameters]{&amp;_format=[mime-type]}}</code></p></td>
+  <td><p><code>GET[base]/Schedule{?[parameters]{&amp;_format=[mime-type]}}</code></p></td>
 </tr>
 </tbody>
 </table>
@@ -89,7 +89,7 @@ Si la recherche échoue, le serveur doit répondre :
 
 -   Un header avec un un code erreur HTTP 4XX ou 5XX
 
--   Un body contenant une ressource OperationOutcome[^3] qui donne les
+-   Un body contenant une ressource OperationOutcome qui donne les
     détails sur la raison de l'échec
 
 Remarque : l'échec d'une recherche est la non-possibilité d'exécuter la
@@ -128,7 +128,7 @@ Plus de précision sur la spécification FHIR :
 <tr>
   <td><p>3</p></td>
   <td><p>Liste des identifiants nationaux de structure des associations SOS Médecins(SIRET avec préfixe correspondant)</p></td>
-  <td><p>schedule.actor<br>:Practitioner.identifier</p></td>
+  <td><p>actor:Location<br>.organization.identifier</p></td>
   <td><p>token</p></td>
   <td><p>Oui</p></td>
   <td><p>1..25</p></td>
@@ -202,6 +202,7 @@ La réponse ci-dessous correspond à :
     - Avec prise de RDV
     - Type de créneau : visible du grand public et réservé SAS
     - Type de consultation : au cabinet ou en téléconsultation
+    
   - 1 créneau au PFG : Centre de consultation Rennes Cleunay :
     - Adresse : 320 avenue Général George Patton (35700)
     - Adresse : 106 rue Eugène Pottier (35000)
