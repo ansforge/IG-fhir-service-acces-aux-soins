@@ -278,11 +278,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </tr>
 <tr>
   <td width="25%"><p><strong>Ressource recherchée</strong></p></td>
-  <td><p>Slot</p></td>
+  <td><p>Schedule</p></td>
 </tr>
 <tr>
   <td width="25%"><p><strong>Construction requête de base</strong></p></td>
-  <td><p><code>GET[base]/Slot{?[parameters]{&amp;_format=[mime-type]}}</code></p></td>
+  <td><p><code>GET[base]/Schedule{?[parameters]{&amp;_format=[mime-type]}}</code></p></td>
 </tr>
 </tbody>
 </table>
@@ -330,7 +330,7 @@ peut être exécutée. Il peut il y avoir 0 à n correspondances.</p>
     <p>Un header avec un un code erreur HTTP 4XX ou 5XX</p>
   </li>
   <li>
-    <p>Un body contenant une ressource OperationOutcome[^3] qui donne les
+    <p>Un body contenant une ressource OperationOutcome qui donne les
 détails sur la raison de l’échec</p>
   </li>
 </ul>
@@ -371,7 +371,7 @@ Plus de précision sur la spécification FHIR :
 <tr>
   <td><p>3</p></td>
   <td><p>Liste des identifiants nationaux de structure des associations SOS Médecins(SIRET avec préfixe correspondant)</p></td>
-  <td><p>schedule.actor<br />:Practitioner.identifier</p></td>
+  <td><p>actor:Location<br />.organization.identifier</p></td>
   <td><p>token</p></td>
   <td><p>Oui</p></td>
   <td><p>1..25</p></td>
@@ -450,8 +450,14 @@ HTTP 200 OK
       <li>Jours et horaires d’ouverture du PFG : du mardi au dimanche de 8h00 à 19h00</li>
       <li>Avec prise de RDV</li>
       <li>Type de créneau : visible du grand public et réservé SAS</li>
-      <li>Type de consultation : au cabinet ou en téléconsultation
-      - 1 créneau au PFG : Centre de consultation Rennes Cleunay :</li>
+      <li>Type de consultation : au cabinet ou en téléconsultation</li>
+    </ul>
+  </li>
+</ol>
+
+<ul>
+  <li>1 créneau au PFG : Centre de consultation Rennes Cleunay :
+    <ul>
       <li>Adresse : 320 avenue Général George Patton (35700)</li>
       <li>Adresse : 106 rue Eugène Pottier (35000)</li>
       <li>ID du PFG : 2222222222</li>
@@ -462,13 +468,11 @@ HTTP 200 OK
       <li>Jours et horaires d’ouverture du PFG : du lundi au jeudi de 9h00 à 21h00</li>
       <li>Avec prise de RDV</li>
       <li>Type de créneau : visible du grand public</li>
-      <li>Type de consultation : au cabinet</li>
+      <li>Type de consultation : au cabinet
+      1. 2 créneaux disponibles via l’association SOS Médecins Lorient et agglomération (SIRET : 392080466300010) :</li>
     </ul>
   </li>
-  <li>2 créneaux disponibles via l’association SOS Médecins Lorient et agglomération (SIRET : 392080466300010) :
-    <ul>
-      <li>Les 2 créneaux sont rattachés au PFG : Centre de consultation Lorient :</li>
-    </ul>
+  <li>Les 2 créneaux sont rattachés au PFG : Centre de consultation Lorient :
     <ul>
       <li>Adresse : 12 impasse Royer Dubail (56100)</li>
       <li>ID du PFG : 3333333333</li>
@@ -493,7 +497,7 @@ HTTP 200 OK
       <li>Type de consultation : au cabinet</li>
     </ul>
   </li>
-</ol>
+</ul>
 
 <p>Pour consulter l’exemple en plein écran, cliquer <a href="./Bundle-ExampleBundlePSIndiv.html">ici</a>.</p>
 
@@ -688,7 +692,7 @@ Afin de tester un fichier, il suffit de sélectionner le format <code class="lan
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Oct 25, 2024 13:17+0000">2024-10-25</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Oct 25, 2024 13:48+0000">2024-10-25</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
