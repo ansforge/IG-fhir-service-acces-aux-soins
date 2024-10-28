@@ -234,7 +234,7 @@ La réponse ci-dessous correspond à :
 
 Pour consulter l'exemple en plein écran, cliquer [ici](./Bundle-ExampleBundleAgregateurSOS.html).
 
-<iframe src="./Bundle-ExampleBundlePSIndiv.json" width="100%" height="300" style="border: 1px solid #cccccc; border-radius: 4px; background: #f5f2f0;" scrolling="yes"></iframe>
+<iframe src="./Bundle-ExampleBundleAgregateurSOS.json" width="100%" height="300" style="border: 1px solid #cccccc; border-radius: 4px; background: #f5f2f0;" scrolling="yes"></iframe>
 <br>
 
 ### Nomenclatures
