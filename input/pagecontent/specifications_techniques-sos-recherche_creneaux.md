@@ -169,20 +169,17 @@ HTTP 200 OK
   total: 4
   Slot1 (match)
   Schedule1
-  Practitioner1
-  PractitionerRole1
+  Location1
+  Organization1
   Slot2 (match)
   Schedule2
-  Practitioner2
-  PractitionerRole2
+  Location2
+  Organization2
   Slot3 (match)
   Schedule3
-  Practitioner3
-  PractitionerRole3
+  Location3
+  Organization3
   Slot4 (match)
-  Schedule4
-  Practitioner4
-  PractitionerRole4
   </pre>
 </details>
 <br>
@@ -235,7 +232,7 @@ La réponse ci-dessous correspond à :
       - Type de créneau : visible du grand public
       - Type de consultation : au cabinet
 
-Pour consulter l'exemple en plein écran, cliquer [ici](./Bundle-ExampleBundlePSIndiv.html).
+Pour consulter l'exemple en plein écran, cliquer [ici](./Bundle-ExampleBundleAgregateurSOS.html).
 
 <iframe src="./Bundle-ExampleBundlePSIndiv.json" width="100%" height="300" style="border: 1px solid #cccccc; border-radius: 4px; background: #f5f2f0;" scrolling="yes"></iframe>
 <br>
@@ -302,7 +299,7 @@ Ci-dessous un exemple :
 "id": "8cbb33dc-779e-45e9-a5f6-ea66101288c5",
 "meta": {
   "profile": [
-    "http://sas.fr/fhir/StructureDefinition/BundleAgregateur"
+    "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-bundle-aggregator"
   ]
 },
 ```
