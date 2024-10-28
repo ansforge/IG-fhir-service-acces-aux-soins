@@ -10,7 +10,7 @@
   <name value="SAS"/>
   <title value="Service d'Accès aux Soins"/>
   <status value="active"/>
-  <date value="2024-10-25T13:59:32+00:00"/>
+  <date value="2024-10-28T17:17:54+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -568,6 +568,17 @@
         <valueString value="Bundle"/>
       </extension>
       <reference>
+        <reference value="Bundle/ExampleBundleAgregateurSOS"/>
+      </reference>
+      <name value="ExampleBundleAgregateurSOS"/>
+      <description value="Exemple Bundle SOS"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-bundle-aggregator"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
         <reference value="Bundle/ExampleBundleCPTS"/>
       </reference>
       <name value="ExampleBundleCPTS"/>
@@ -609,6 +620,39 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Location"/>
+      </extension>
+      <reference>
+        <reference value="Location/1111111111"/>
+      </reference>
+      <name value="ExampleLocationSOS1"/>
+      <description value="Exemple 1 location flux agrégateur sos"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Location"/>
+      </extension>
+      <reference>
+        <reference value="Location/2222222222"/>
+      </reference>
+      <name value="ExampleLocationSOS2"/>
+      <description value="Exemple 2 location flux agrégateur sos"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Location"/>
+      </extension>
+      <reference>
+        <reference value="Location/3333333333"/>
+      </reference>
+      <name value="ExampleLocationSOS3"/>
+      <description value="Exemple 3 location flux agrégateur sos"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Organization"/>
       </extension>
       <reference>
@@ -628,6 +672,28 @@
       <name value="ExampleOrgaCPTS2"/>
       <description value="Exemple d'organisation CPTS 2"/>
       <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-organization-aggregator"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/ExampleOrgaSOS1"/>
+      </reference>
+      <name value="ExampleOrgaSOS1"/>
+      <description value="Exemple d'organisation SOS 1"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/ExampleOrgaSOS2"/>
+      </reference>
+      <name value="ExampleOrgaSOS2"/>
+      <description value="Exemple d'organisation SOS 1"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -763,6 +829,39 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Schedule"/>
+      </extension>
+      <reference>
+        <reference value="Schedule/ExampleScheduleSOS1"/>
+      </reference>
+      <name value="ExampleScheduleSOS1"/>
+      <description value="Exemple 1 ressource schedule sos"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Schedule"/>
+      </extension>
+      <reference>
+        <reference value="Schedule/ExampleScheduleSOS2"/>
+      </reference>
+      <name value="ExampleScheduleSOS2"/>
+      <description value="Exemple 2 ressource schedule sos"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Schedule"/>
+      </extension>
+      <reference>
+        <reference value="Schedule/ExampleScheduleSOS3"/>
+      </reference>
+      <name value="ExampleScheduleSOS3"/>
+      <description value="Exemple 3 ressource schedule sos"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Slot"/>
       </extension>
       <reference>
@@ -826,6 +925,50 @@
       <name value="ExampleSlotPSIndiv4"/>
       <description value="Exemple 4 ressource slot PS indiv"/>
       <exampleCanonical value="http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Slot"/>
+      </extension>
+      <reference>
+        <reference value="Slot/ExampleSlotSOS1"/>
+      </reference>
+      <name value="ExampleSlotSOS1"/>
+      <description value="Exemple 1 ressource slot sos"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Slot"/>
+      </extension>
+      <reference>
+        <reference value="Slot/ExampleSlotSOS2"/>
+      </reference>
+      <name value="ExampleSlotSOS2"/>
+      <description value="Exemple 2 ressource slot sos"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Slot"/>
+      </extension>
+      <reference>
+        <reference value="Slot/ExampleSlotSOS3"/>
+      </reference>
+      <name value="ExampleSlotSOS3"/>
+      <description value="Exemple 3 ressource slot sos"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Slot"/>
+      </extension>
+      <reference>
+        <reference value="Slot/ExampleSlotSOS4"/>
+      </reference>
+      <name value="ExampleSlotSOS4"/>
+      <description value="Exemple 4 ressource slot sos"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
