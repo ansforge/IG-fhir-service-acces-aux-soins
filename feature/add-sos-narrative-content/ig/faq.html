@@ -254,7 +254,6 @@ urn:oid:1.2.250.1.71.4.2.2 = IDNST</p>
 <p>Les ressources locations doivent être contenues <code class="language-plaintext highlighter-rouge">contained</code> dans la ressource <code class="language-plaintext highlighter-rouge">PractitionerRole</code> associée. Par ailleurs, au niveau de la ressource <code class="language-plaintext highlighter-rouge">PractitionerRole</code>, la référence vers la ressource <code class="language-plaintext highlighter-rouge">Location</code> doit être indiquée.</p>
 
 <h4 id="quelle-est-la-ressource-discriminante-au-niveau-de-la-structure-du-fichier-de-réponse-json-">Quelle est la ressource discriminante au niveau de la structure du fichier de réponse JSON ?</h4>
-
 <p>Il est attendu dans le fichier de réponse JSON d’avoir 1 ressource <code class="language-plaintext highlighter-rouge">Schedule</code> pour 1 ressource <code class="language-plaintext highlighter-rouge">PractitionerRole</code>. Cela se traduit par le fait d’avoir 1 agenda pour 1 lieu de consultation. Dans la structure du fichier de réponse, un PS aura ainsi autant d’agendas que de lieux de consultation.</p>
 
 <h4 id="quelles-sont-les-ressources-à-transmettre-lorsquun-créneau-de-disponibilité-transmis-est-mis-en-visibilité-dune-ou-plusieurs-cpts-">Quelles sont les ressources à transmettre lorsqu’un créneau de disponibilité transmis est mis en visibilité d’une ou plusieurs CPTS ?</h4>
@@ -614,7 +613,6 @@ Dans la structure du fichier de réponse, si un créneau est associé à plusieu
 <p>Il est attendu l’URL de redirection vers l’agenda du point fixe de garde (PFG) et dans la mesure du possible vers le créneau sélectionné directement.</p>
 
 <h4 id="quelle-est-la-ressource-discriminante-au-niveau-de-la-structure-du-fichier-de-réponse-json--1">Quelle est la ressource discriminante au niveau de la structure du fichier de réponse JSON ?</h4>
-
 <p>Il est attendu dans le fichier de réponse JSON d’avoir 1 ressource Schedule pour 1 ressource Location. Cela se traduit par le fait d’avoir 1 agenda pour 1 point fixe de garde (lieu de consultation). Dans la structure du fichier de réponse, une association SOS Médecins aura ainsi autant d’agendas que de points fixes de garde (PFG).</p>
 
 <h4 id="quelles-sont-les-principales-erreurs-rencontrées-au-cours-des-tests--1">Quelles sont les principales erreurs rencontrées au cours des tests ?</h4>
@@ -779,7 +777,7 @@ Dans les spécifications <strong>SAS_SPEC INT_R02_Gestion des comptes régulateu
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Oct 29, 2024 11:09+0000">2024-10-29</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Oct 29, 2024 11:27+0000">2024-10-29</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
