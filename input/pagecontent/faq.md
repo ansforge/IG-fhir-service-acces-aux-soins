@@ -25,7 +25,6 @@ Il est attendu l'URL de redirection vers l'agenda du PS concerné et non l'URL d
 Les ressources locations doivent être contenues `contained` dans la ressource `PractitionerRole` associée. Par ailleurs, au niveau de la ressource `PractitionerRole`, la référence vers la ressource `Location` doit être indiquée.
 
 #### Quelle est la ressource discriminante au niveau de la structure du fichier de réponse JSON ?
-
 Il est attendu dans le fichier de réponse JSON d'avoir 1 ressource `Schedule` pour 1 ressource `PractitionerRole`. Cela se traduit par le fait d’avoir 1 agenda pour 1 lieu de consultation. Dans la structure du fichier de réponse, un PS aura ainsi autant d'agendas que de lieux de consultation.
 
 #### Quelles sont les ressources à transmettre lorsqu'un créneau de disponibilité transmis est mis en visibilité d'une ou plusieurs CPTS ?
@@ -371,6 +370,7 @@ Les éditeurs ont la possibilité de récupérer les référentiels nationaux de
 </table>
 
 
+
 ### Agrégateur SOS Médecins
 
 #### Quel est le format à utiliser afin de transmettre un OID dans un élément `System` ?
@@ -386,7 +386,6 @@ Les éléments `identifier.system`, `identifier.type` et `identifier.value` sont
 Il est attendu l’URL de redirection vers l’agenda du point fixe de garde (PFG) et dans la mesure du possible vers le créneau sélectionné directement.
 
 #### Quelle est la ressource discriminante au niveau de la structure du fichier de réponse JSON ?
-
 Il est attendu dans le fichier de réponse JSON d’avoir 1 ressource Schedule pour 1 ressource Location. Cela se traduit par le fait d’avoir 1 agenda pour 1 point fixe de garde (lieu de consultation). Dans la structure du fichier de réponse, une association SOS Médecins aura ainsi autant d’agendas que de points fixes de garde (PFG).
 
 #### Quelles sont les principales erreurs rencontrées au cours des tests ?
