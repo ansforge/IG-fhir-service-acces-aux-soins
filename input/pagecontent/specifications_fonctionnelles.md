@@ -41,7 +41,7 @@ Lors d'une recherche d'offre de soins sur la plateforme numérique SAS, le moteu
 - Les créneaux dédiés au SAS, le cas échéant
 - Les créneaux visibles des structures de type CPTS
 
-##### SOS médecins
+##### SOS Médecins
 L’objectif de cette interface est de permettre l’agrégation des créneaux de disponibilités dans la plateforme numérique SAS des professionnels de santé exerçants au sein d’une association SOS Médecins. Ces créneaux sont renseignés dans un logiciel de gestion d’agenda avec prise de rendez-vous.
 
 Le schéma de présentation générale ci-dessous illustre ce cas d’usage :
@@ -50,13 +50,13 @@ Le schéma de présentation générale ci-dessous illustre ce cas d’usage :
     <tr>
         <td align ="center">
             <div class="figure">
-                <img src="recherche_creneaux_2.png" width="80%" height="80%" alt="Présentation recherche de créneaux" title="Présentation recherche de créneaux SOS médecins">
+                <img src="recherche_creneaux_2.png" width="80%" height="80%" alt="Présentation recherche de créneaux" title="Présentation recherche de créneaux SOS Médecins">
             </div>
         </td>    
     </tr>
     <tr>
         <td align ="center">
-            <b>Figure 2 - Présentation recherche de créneaux SOS médecins </b>
+            <b>Figure 2 - Présentation recherche de créneaux SOS Médecins </b>
         </td>
     </tr>
 </table>
@@ -91,7 +91,7 @@ Le schéma ci-dessous présente une synthèse de la structure attendue :
     <p>{% include ressources-exploitees-fhir.svg %}</p>
 </div>
 
-##### SOS médecins
+##### SOS Médecins
 La structure de réponse attendue inclut l’ensemble des créneaux de consultation disponibles correspondant à la requête réalisée par la plateforme numérique SAS.
 1 à n créneaux de consultation (Slot) peuvent être rattachés à 1 agenda (Schedule) qui représente 1 point fixe de garde (Location), lui-même rattaché à 1 association SOS Médecins (Organization). Si des créneaux de consultation sont proposés pour plusieurs PFG, on aura autant d’agendas (Schedule) que de PFG (Location).
 
