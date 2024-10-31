@@ -156,7 +156,8 @@ La requête ci-dessous correspond à une recherche de créneaux disponibles entr
 
 **Requête :**
 
-`get[BASE]/Schedule?_revinclude=Slot:schedule&_include=Schedule:actor:Location&_include:iterate=Location:organization&_has:Slot:schedule:start=ge2023-08-18T10:00:00+02:00&_has:Slot:schedule:start=le2023-08-20T09:00:00+02:00&_has:Slot:schedule:status=free&actor:Location.organization.identifier=urn:oid:1.2.250.1.71.4.2.27C334173748400020,urn:oid:1.2.250.1.71.4.2.2%7C340426662900033`
+<code>get[BASE]/Schedule?_revinclude=Slot:schedule&_include=Schedule:actor:Location&_include:iterate=Location:organization&_has:Slot:schedule:start=ge2023-08-18T10:00:00+02:00&_has:Slot:schedule:start=le2023-08-20T09:00:00+02:00&_has:Slot:schedule:status=free&actor:Location.organization.identifier=urn:oid:1.2.250.1.71.4.2.27C334173748400020<br>,urn:oid:1.2.250.1.71.4.2.2%7C340426662900033</code>
+
 
 **Réponse simplifiée :**
 

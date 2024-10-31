@@ -69,7 +69,7 @@ L'offre de soins à mettre à disposition inclut les volets
 1. [Spécifications fonctionnelles](./specifications_fonctionnelles.html#sos-médecins)
 2. Spécifications techniques :
    - [Recherche de créneaux](./specifications_techniques-sos-recherche_creneaux.html)
-   - [Gestion de rendez-vous](./specifications_techniques-ps-gestion_rdv.html)
+   - [Gestion de rendez-vous](./specifications_techniques-sos-gestion_rdv.html)
 
 ### Dépendances
  

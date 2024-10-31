@@ -20,3 +20,5 @@ Usage: #example
 * hoursOfOperation.daysOfWeek[+] = #fri
 * hoursOfOperation.daysOfWeek[+] = #sat
 * hoursOfOperation.daysOfWeek[+] = #sun
+* hoursOfOperation.openingTime = "08:00:00"
+* hoursOfOperation.closingTime = "19:00:00"
