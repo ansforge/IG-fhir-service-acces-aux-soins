@@ -4,9 +4,9 @@ InstanceOf: FrLocationAgregateurSOS
 Description: "Exemple 2 location flux agrégateur sos"
 Usage: #example
 
-* id = "22222222222"
+* id = "2222222222"
 * identifier.system = "https://editeur.com"
-* identifier.value = "22222222222"
+* identifier.value = "2222222222"
 * name = "Centre de consultation Rennes Cleunay"
 * telecom[0].system =  #phone
 * telecom[0].value = "+33145249912"
