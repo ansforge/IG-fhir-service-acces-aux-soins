@@ -1,20 +1,20 @@
 SAS : Validation Results
 =========================================
 
-err = 18, warn = 44, info = 116
+err = 17, warn = 43, info = 115
 $--
 Generated $--. FHIR version $-- for ans.fhir.fr.sas#$-- (canonical = https://interop.esante.gouv.fr/ig/fhir/sas)
- Build Errors : 1 / 6 / 0
+ Build Errors : 0 / 6 / 0
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Appointment-1 : 0 / 0 / 3
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Appointment-2 : 0 / 0 / 3
- /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundleAgregateurSOS : 1 / 11 / 43
+ /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundleAgregateurSOS : 0 / 10 / 42
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundleCPTS : 0 / 6 / 27
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundlePSIndiv : 0 / 9 / 57
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/HealthcareService-ExampleHealthcareServiceCPTS1 : 0 / 0 / 1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/HealthcareService-ExampleHealthcareServiceCPTS2 : 0 / 0 / 1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.sas : 0 / 0 / 2
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Location-1111111111 : 0 / 0 / 2
- /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Location-22222222222 : 0 / 0 / 2
+ /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Location-2222222222 : 0 / 0 / 2
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Location-3333333333 : 0 / 0 / 2
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Organization-ExampleOrgaCPTS1 : 0 / 0 / 2
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Organization-ExampleOrgaCPTS2 : 0 / 0 / 2
@@ -75,7 +75,6 @@ Generated $--. FHIR version $-- for ans.fhir.fr.sas#$-- (canonical = https://int
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/ValueSet-sas-valueset-typeidentifiant : 0 / 1 / 1
 </table>
 == n/a ==
-ERROR: /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/output/index.html#/html/body/div/div/div/div/div/blockquote/p/a at Line 272, column 184: The link 'https://interop.esante.gouv.fr/ig/fhir/sas' for "https://interop.esante.gouv.fr/ig/fhir/sas" cannot be resolved
 WARNING: /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/output/specifications_techniques-cpts-gestion_rdv.html: The html source has duplicate anchor Ids: _ftn1,_ftnref1
 WARNING: /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/output/specifications_techniques-ps-gestion_rdv.html: The html source has duplicate anchor Ids: _ftn1,_ftnref1
 WARNING: /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/output/specifications_techniques-sos-gestion_rdv.html: The html source has duplicate anchor Ids: _ftn1,_ftnref1
@@ -91,9 +90,7 @@ INFORMATION: Appointment/2: Appointment.participant[0].actor.identifier.type: Re
 == fsh-generated/resources/Bundle-ExampleBundleAgregateurSOS.json ==
 INFORMATION: Bundle/ExampleBundleAgregateurSOS: Bundle.entry[2].resource/*Location/1111111111*/.identifier[0].type: Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type|1.0.1
 INFORMATION: Bundle/ExampleBundleAgregateurSOS: Bundle.entry[3].resource/*Organization/ExampleOrgaSOS1*/.identifier[0].type: Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type|1.0.1
-WARNING: Bundle/ExampleBundleAgregateurSOS: Bundle.entry[5].resource/*Schedule/ExampleScheduleSOS2*/.actor[0]: Entry 6 matches the reference Location/22222222222 by type and id but it's fullUrl https://exemple.com/ans-sas/Location/2222222222 does not match the full target URL https://exemple.com/ans-sas/Location/22222222222 by Bundle resolution rules
-INFORMATION: Bundle/ExampleBundleAgregateurSOS: Bundle.entry[6].resource.identifier[0].type: Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type|1.0.1
-INFORMATION: Bundle/ExampleBundleAgregateurSOS: Bundle.entry[6].resource/*Location/22222222222*/.identifier[0].type: Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type|1.0.1
+INFORMATION: Bundle/ExampleBundleAgregateurSOS: Bundle.entry[6].resource/*Location/2222222222*/.identifier[0].type: Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type|1.0.1
 INFORMATION: Bundle/ExampleBundleAgregateurSOS: Bundle.entry[9].resource/*Location/3333333333*/.identifier[0].type: Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type|1.0.1
 INFORMATION: Bundle/ExampleBundleAgregateurSOS: Bundle.entry[10].resource/*Organization/ExampleOrgaSOS2*/.identifier[0].type: Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type|1.0.1
 WARNING: Bundle/ExampleBundleAgregateurSOS: Bundle.entry[0]: This is not a matching resource type for the specified search (is a search mode needed?) (Slot expecting [Schedule])
@@ -106,7 +103,6 @@ WARNING: Bundle/ExampleBundleAgregateurSOS: Bundle.entry[9]: This is not a match
 WARNING: Bundle/ExampleBundleAgregateurSOS: Bundle.entry[10]: This is not a matching resource type for the specified search (is a search mode needed?) (Organization expecting [Schedule])
 WARNING: Bundle/ExampleBundleAgregateurSOS: Bundle.entry[11]: This is not a matching resource type for the specified search (is a search mode needed?) (Slot expecting [Schedule])
 WARNING: Bundle/ExampleBundleAgregateurSOS: Bundle: SearchSet bundles should have search modes on the entries
-ERROR: Bundle/ExampleBundleAgregateurSOS: Bundle.entry[0]: The fullUrl 'https://exemple.com/ans-sas/Location/2222222222' looks like a RESTful server URL, so it must end with the correct type and id (/Location/22222222222)
 == fsh-generated/resources/Bundle-ExampleBundleCPTS.json ==
 INFORMATION: Bundle/ExampleBundleCPTS: Bundle.entry[0].resource.serviceType[1]: This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Bundle/ExampleBundleCPTS: Bundle.entry[0].resource.serviceType[1].coding[0]: A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/TRE_R66-CategorieEtablissement' could not be found, so the code cannot be validated
@@ -150,8 +146,8 @@ WARNING: Bundle/ExampleBundlePSIndiv: Bundle: SearchSet bundles should have sear
 INFORMATION: ImplementationGuide/ans.fhir.fr.sas: ImplementationGuide.definition.resource[61].description: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 == fsh-generated/resources/Location-1111111111.json ==
 INFORMATION: Location/1111111111: Location.identifier[0].type: Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type|1.0.1
-== fsh-generated/resources/Location-22222222222.json ==
-INFORMATION: Location/22222222222: Location.identifier[0].type: Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type|1.0.1
+== fsh-generated/resources/Location-2222222222.json ==
+INFORMATION: Location/2222222222: Location.identifier[0].type: Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type|1.0.1
 == fsh-generated/resources/Location-3333333333.json ==
 INFORMATION: Location/3333333333: Location.identifier[0].type: Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type|1.0.1
 == fsh-generated/resources/Organization-ExampleOrgaCPTS1.json ==
