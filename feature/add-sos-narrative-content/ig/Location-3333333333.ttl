@@ -16,7 +16,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Location 3333333333</b></p><a name=\"3333333333\"> </a><a name=\"hc3333333333\"> </a><a name=\"3333333333-fr-FR\"> </a><p><b>identifier</b>: Identifiant interne/3333333333</p><p><b>name</b>: Centre de consultation Lorient</p><p><b>telecom</b>: <a href=\"tel:+33139555992\">+33139555992</a></p><p><b>address</b>: 12 impasse Royer Dubail LORIENT 56100 </p><p><b>managingOrganization</b>: <a href=\"Organization-ExampleOrgaSOS2.html\">Organization SOS Médecins Lorient et agglomération</a></p><blockquote><p><b>hoursOfOperation</b></p><p><b>daysOfWeek</b>: Tuesday, Thursday, Saturday</p></blockquote></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Location 3333333333</b></p><a name=\"3333333333\"> </a><a name=\"hc3333333333\"> </a><a name=\"3333333333-fr-FR\"> </a><p><b>identifier</b>: Identifiant interne/3333333333</p><p><b>name</b>: Centre de consultation Lorient</p><p><b>telecom</b>: <a href=\"tel:+33139555992\">+33139555992</a></p><p><b>address</b>: 12 impasse Royer Dubail LORIENT 56100 </p><p><b>managingOrganization</b>: <a href=\"Organization-ExampleOrgaSOS2.html\">Organization SOS Médecins Lorient et agglomération</a></p><blockquote><p><b>hoursOfOperation</b></p><p><b>daysOfWeek</b>: Tuesday, Thursday, Saturday</p><p><b>openingTime</b>: 11:00:00</p><p><b>closingTime</b>: 18:00:00</p></blockquote></div>"
   ] ; # 
   fhir:identifier ( [
      fhir:type [
@@ -43,7 +43,9 @@
      fhir:reference [ fhir:v "Organization/ExampleOrgaSOS2" ]
   ] ; # 
   fhir:hoursOfOperation ( [
-     fhir:daysOfWeek ( [ fhir:v "tue" ] [ fhir:v "thu" ] [ fhir:v "sat" ] )
+     fhir:daysOfWeek ( [ fhir:v "tue" ] [ fhir:v "thu" ] [ fhir:v "sat" ] ) ;
+     fhir:openingTime [ fhir:v "11:00:00"^^xsd:time ] ;
+     fhir:closingTime [ fhir:v "18:00:00"^^xsd:time ]
   ] ) . # 
 
 # -------------------------------------------------------------------------------------

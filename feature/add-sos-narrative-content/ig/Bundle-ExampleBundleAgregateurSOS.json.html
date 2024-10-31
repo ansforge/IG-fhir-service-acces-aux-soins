@@ -364,7 +364,7 @@
         },
         "<a href="http://hl7.org/fhir/R4/location.html#Location.text">text</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Location_1111111111\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Location 1111111111&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;1111111111\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc1111111111\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;1111111111-fr-FR\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: Identifiant interne/1111111111&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Centre de consultation Rennes Nord&lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: &lt;a href=\&quot;tel:+33193246789\&quot;&gt;+33193246789&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;address&lt;/b&gt;: 320 avenue Général Georges Patton RENNES 35700 &lt;/p&gt;&lt;p&gt;&lt;b&gt;managingOrganization&lt;/b&gt;: &lt;a href=\&quot;Organization-ExampleOrgaSOS1.html\&quot;&gt;Organization SOS Médecins de Rennes&lt;/a&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;hoursOfOperation&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;daysOfWeek&lt;/b&gt;: Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;"
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Location_1111111111\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Location 1111111111&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;1111111111\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc1111111111\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;1111111111-fr-FR\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: Identifiant interne/1111111111&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Centre de consultation Rennes Nord&lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: &lt;a href=\&quot;tel:+33193246789\&quot;&gt;+33193246789&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;address&lt;/b&gt;: 320 avenue Général Georges Patton RENNES 35700 &lt;/p&gt;&lt;p&gt;&lt;b&gt;managingOrganization&lt;/b&gt;: &lt;a href=\&quot;Organization-ExampleOrgaSOS1.html\&quot;&gt;Organization SOS Médecins de Rennes&lt;/a&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;hoursOfOperation&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;daysOfWeek&lt;/b&gt;: Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday&lt;/p&gt;&lt;p&gt;&lt;b&gt;openingTime&lt;/b&gt;: 08:00:00&lt;/p&gt;&lt;p&gt;&lt;b&gt;closingTime&lt;/b&gt;: 19:00:00&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;"
         },
         "<a href="http://hl7.org/fhir/R4/location.html#Location.identifier">identifier</a>" : [
           {
@@ -406,7 +406,9 @@
               "fri",
               "sat",
               "sun"
-            ]
+            ],
+            "<a href="http://hl7.org/fhir/R4/location.html#Location.hoursOfOperation.openingTime">openingTime</a>" : "08:00:00",
+            "<a href="http://hl7.org/fhir/R4/location.html#Location.hoursOfOperation.closingTime">closingTime</a>" : "19:00:00"
           }
         ]
       }
@@ -501,11 +503,11 @@
         },
         "<a href="http://hl7.org/fhir/R4/schedule.html#Schedule.text">text</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Schedule_ExampleScheduleSOS2\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Schedule ExampleScheduleSOS2&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExampleScheduleSOS2\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExampleScheduleSOS2\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;ExampleScheduleSOS2-fr-FR\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;actor&lt;/b&gt;: &lt;a href=\&quot;Location-2222222222.html\&quot;&gt;Location Centre de consultation Rennes Cleunay&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;"
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Schedule_ExampleScheduleSOS2\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Schedule ExampleScheduleSOS2&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExampleScheduleSOS2\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExampleScheduleSOS2\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;ExampleScheduleSOS2-fr-FR\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;actor&lt;/b&gt;: &lt;a href=\&quot;Location-22222222222.html\&quot;&gt;Location Centre de consultation Rennes Cleunay&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;"
         },
         "<a href="http://hl7.org/fhir/R4/schedule.html#Schedule.actor">actor</a>" : [
           {
-            <a href="Location-2222222222.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Location/2222222222"
+            <a href="Location-22222222222.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Location/22222222222"
           }
         ]
       }
@@ -514,7 +516,7 @@
       "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "https://exemple.com/ans-sas/Location/2222222222",
       "<a href="http://hl7.org/fhir/R4/location.html#Location">resource</a>" : {
         "<a href="http://hl7.org/fhir/R4/location.html">resourceType</a>" : "Location",
-        "<a href="http://hl7.org/fhir/R4/location.html#Location.id">id</a>" : "2222222222",
+        "<a href="http://hl7.org/fhir/R4/location.html#Location.id">id</a>" : "22222222222",
         "<a href="http://hl7.org/fhir/R4/location.html#Location.meta">meta</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
             <a href="StructureDefinition-sas-sos-location-aggregator.html" style="color: Maroon">&#x1F517;</a> "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator"
@@ -522,7 +524,7 @@
         },
         "<a href="http://hl7.org/fhir/R4/location.html#Location.text">text</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Location_2222222222\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Location 2222222222&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;2222222222\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc2222222222\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;2222222222-fr-FR\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: Identifiant interne/2222222222&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Centre de consultation Rennes Cleunay&lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: &lt;a href=\&quot;tel:+33145249912\&quot;&gt;+33145249912&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;address&lt;/b&gt;: 320 avenue Général Georges Patton RENNES 35700 &lt;/p&gt;&lt;p&gt;&lt;b&gt;managingOrganization&lt;/b&gt;: &lt;a href=\&quot;Organization-ExampleOrgaSOS1.html\&quot;&gt;Organization SOS Médecins de Rennes&lt;/a&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;hoursOfOperation&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;daysOfWeek&lt;/b&gt;: Monday, Tuesday, Wednesday, Thursday&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;"
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Location_22222222222\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Location 22222222222&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;22222222222\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc22222222222\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;22222222222-fr-FR\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: Identifiant interne/22222222222&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Centre de consultation Rennes Cleunay&lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: &lt;a href=\&quot;tel:+33145249912\&quot;&gt;+33145249912&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;address&lt;/b&gt;: 106 rue Eugène Pottier RENNES 35000 &lt;/p&gt;&lt;p&gt;&lt;b&gt;managingOrganization&lt;/b&gt;: &lt;a href=\&quot;Organization-ExampleOrgaSOS1.html\&quot;&gt;Organization SOS Médecins de Rennes&lt;/a&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;hoursOfOperation&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;daysOfWeek&lt;/b&gt;: Monday, Tuesday, Wednesday, Thursday&lt;/p&gt;&lt;p&gt;&lt;b&gt;openingTime&lt;/b&gt;: 09:00:00&lt;/p&gt;&lt;p&gt;&lt;b&gt;closingTime&lt;/b&gt;: 21:00:00&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;"
         },
         "<a href="http://hl7.org/fhir/R4/location.html#Location.identifier">identifier</a>" : [
           {
@@ -535,7 +537,7 @@
               ]
             },
             "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "https://editeur.com",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "2222222222"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "22222222222"
           }
         ],
         "<a href="http://hl7.org/fhir/R4/location.html#Location.name">name</a>" : "Centre de consultation Rennes Cleunay",
@@ -547,10 +549,10 @@
         ],
         "<a href="http://hl7.org/fhir/R4/location.html#Location.address">address</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.line">line</a>" : [
-            "320 avenue Général Georges Patton"
+            "106 rue Eugène Pottier"
           ],
           "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.city">city</a>" : "RENNES",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.postalCode">postalCode</a>" : "35700"
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.postalCode">postalCode</a>" : "35000"
         },
         "<a href="http://hl7.org/fhir/R4/location.html#Location.managingOrganization">managingOrganization</a>" : {
           <a href="Organization-ExampleOrgaSOS1.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Organization/ExampleOrgaSOS1"
@@ -562,7 +564,9 @@
               "tue",
               "wed",
               "thu"
-            ]
+            ],
+            "<a href="http://hl7.org/fhir/R4/location.html#Location.hoursOfOperation.openingTime">openingTime</a>" : "09:00:00",
+            "<a href="http://hl7.org/fhir/R4/location.html#Location.hoursOfOperation.closingTime">closingTime</a>" : "21:00:00"
           }
         ]
       }
@@ -647,7 +651,7 @@
         },
         "<a href="http://hl7.org/fhir/R4/location.html#Location.text">text</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Location_3333333333\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Location 3333333333&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;3333333333\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc3333333333\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;3333333333-fr-FR\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: Identifiant interne/3333333333&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Centre de consultation Lorient&lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: &lt;a href=\&quot;tel:+33139555992\&quot;&gt;+33139555992&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;address&lt;/b&gt;: 12 impasse Royer Dubail LORIENT 56100 &lt;/p&gt;&lt;p&gt;&lt;b&gt;managingOrganization&lt;/b&gt;: &lt;a href=\&quot;Organization-ExampleOrgaSOS2.html\&quot;&gt;Organization SOS Médecins Lorient et agglomération&lt;/a&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;hoursOfOperation&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;daysOfWeek&lt;/b&gt;: Tuesday, Thursday, Saturday&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;"
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Location_3333333333\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Location 3333333333&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;3333333333\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc3333333333\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;3333333333-fr-FR\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: Identifiant interne/3333333333&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Centre de consultation Lorient&lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: &lt;a href=\&quot;tel:+33139555992\&quot;&gt;+33139555992&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;address&lt;/b&gt;: 12 impasse Royer Dubail LORIENT 56100 &lt;/p&gt;&lt;p&gt;&lt;b&gt;managingOrganization&lt;/b&gt;: &lt;a href=\&quot;Organization-ExampleOrgaSOS2.html\&quot;&gt;Organization SOS Médecins Lorient et agglomération&lt;/a&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;hoursOfOperation&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;daysOfWeek&lt;/b&gt;: Tuesday, Thursday, Saturday&lt;/p&gt;&lt;p&gt;&lt;b&gt;openingTime&lt;/b&gt;: 11:00:00&lt;/p&gt;&lt;p&gt;&lt;b&gt;closingTime&lt;/b&gt;: 18:00:00&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;"
         },
         "<a href="http://hl7.org/fhir/R4/location.html#Location.identifier">identifier</a>" : [
           {
@@ -686,7 +690,9 @@
               "tue",
               "thu",
               "sat"
-            ]
+            ],
+            "<a href="http://hl7.org/fhir/R4/location.html#Location.hoursOfOperation.openingTime">openingTime</a>" : "11:00:00",
+            "<a href="http://hl7.org/fhir/R4/location.html#Location.hoursOfOperation.closingTime">closingTime</a>" : "18:00:00"
           }
         ]
       }
@@ -816,7 +822,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Oct 29, 2024 11:27+0000">2024-10-29</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Oct 31, 2024 09:13+0000">2024-10-31</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

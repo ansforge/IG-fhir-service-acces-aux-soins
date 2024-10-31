@@ -130,7 +130,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Location_1111111111\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Location 1111111111</b></p><a name=\"1111111111\"> </a><a name=\"hc1111111111\"> </a><a name=\"1111111111-fr-FR\"> </a><p><b>identifier</b>: Identifiant interne/1111111111</p><p><b>name</b>: Centre de consultation Rennes Nord</p><p><b>telecom</b>: <a href=\"tel:+33193246789\">+33193246789</a></p><p><b>address</b>: 320 avenue Général Georges Patton RENNES 35700 </p><p><b>managingOrganization</b>: <a href=\"Organization-ExampleOrgaSOS1.html\">Organization SOS Médecins de Rennes</a></p><blockquote><p><b>hoursOfOperation</b></p><p><b>daysOfWeek</b>: Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday</p></blockquote></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Location_1111111111\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Location 1111111111</b></p><a name=\"1111111111\"> </a><a name=\"hc1111111111\"> </a><a name=\"1111111111-fr-FR\"> </a><p><b>identifier</b>: Identifiant interne/1111111111</p><p><b>name</b>: Centre de consultation Rennes Nord</p><p><b>telecom</b>: <a href=\"tel:+33193246789\">+33193246789</a></p><p><b>address</b>: 320 avenue Général Georges Patton RENNES 35700 </p><p><b>managingOrganization</b>: <a href=\"Organization-ExampleOrgaSOS1.html\">Organization SOS Médecins de Rennes</a></p><blockquote><p><b>hoursOfOperation</b></p><p><b>daysOfWeek</b>: Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday</p><p><b>openingTime</b>: 08:00:00</p><p><b>closingTime</b>: 19:00:00</p></blockquote></div>"
   ] ; # 
   fhir:identifier ( [
      fhir:type [
@@ -157,7 +157,9 @@
      fhir:reference [ fhir:v "Organization/ExampleOrgaSOS1" ]
   ] ; # 
   fhir:hoursOfOperation ( [
-     fhir:daysOfWeek ( [ fhir:v "tue" ] [ fhir:v "wed" ] [ fhir:v "thu" ] [ fhir:v "fri" ] [ fhir:v "sat" ] [ fhir:v "sun" ] )
+     fhir:daysOfWeek ( [ fhir:v "tue" ] [ fhir:v "wed" ] [ fhir:v "thu" ] [ fhir:v "fri" ] [ fhir:v "sat" ] [ fhir:v "sun" ] ) ;
+     fhir:openingTime [ fhir:v "08:00:00"^^xsd:time ] ;
+     fhir:closingTime [ fhir:v "19:00:00"^^xsd:time ]
   ] ) . # 
 
 <https://exemple.com/ans-sas/Organization/ExampleOrgaSOS1> a fhir:Organization ;
@@ -231,15 +233,15 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Schedule_ExampleScheduleSOS2\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Schedule ExampleScheduleSOS2</b></p><a name=\"ExampleScheduleSOS2\"> </a><a name=\"hcExampleScheduleSOS2\"> </a><a name=\"ExampleScheduleSOS2-fr-FR\"> </a><p><b>actor</b>: <a href=\"Location-2222222222.html\">Location Centre de consultation Rennes Cleunay</a></p></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Schedule_ExampleScheduleSOS2\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Schedule ExampleScheduleSOS2</b></p><a name=\"ExampleScheduleSOS2\"> </a><a name=\"hcExampleScheduleSOS2\"> </a><a name=\"ExampleScheduleSOS2-fr-FR\"> </a><p><b>actor</b>: <a href=\"Location-22222222222.html\">Location Centre de consultation Rennes Cleunay</a></p></div>"
   ] ; # 
   fhir:actor ( [
-     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Location/2222222222> ;
-     fhir:reference [ fhir:v "Location/2222222222" ]
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Location/22222222222> ;
+     fhir:reference [ fhir:v "Location/22222222222" ]
   ] ) . # 
 
 <https://exemple.com/ans-sas/Location/2222222222> a fhir:Location ;
-  fhir:id [ fhir:v "2222222222"] ; # 
+  fhir:id [ fhir:v "22222222222"] ; # 
   fhir:meta [
      fhir:profile ( [
        fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator"^^xsd:anyURI ;
@@ -248,7 +250,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Location_2222222222\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Location 2222222222</b></p><a name=\"2222222222\"> </a><a name=\"hc2222222222\"> </a><a name=\"2222222222-fr-FR\"> </a><p><b>identifier</b>: Identifiant interne/2222222222</p><p><b>name</b>: Centre de consultation Rennes Cleunay</p><p><b>telecom</b>: <a href=\"tel:+33145249912\">+33145249912</a></p><p><b>address</b>: 320 avenue Général Georges Patton RENNES 35700 </p><p><b>managingOrganization</b>: <a href=\"Organization-ExampleOrgaSOS1.html\">Organization SOS Médecins de Rennes</a></p><blockquote><p><b>hoursOfOperation</b></p><p><b>daysOfWeek</b>: Monday, Tuesday, Wednesday, Thursday</p></blockquote></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Location_22222222222\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Location 22222222222</b></p><a name=\"22222222222\"> </a><a name=\"hc22222222222\"> </a><a name=\"22222222222-fr-FR\"> </a><p><b>identifier</b>: Identifiant interne/22222222222</p><p><b>name</b>: Centre de consultation Rennes Cleunay</p><p><b>telecom</b>: <a href=\"tel:+33145249912\">+33145249912</a></p><p><b>address</b>: 106 rue Eugène Pottier RENNES 35000 </p><p><b>managingOrganization</b>: <a href=\"Organization-ExampleOrgaSOS1.html\">Organization SOS Médecins de Rennes</a></p><blockquote><p><b>hoursOfOperation</b></p><p><b>daysOfWeek</b>: Monday, Tuesday, Wednesday, Thursday</p><p><b>openingTime</b>: 09:00:00</p><p><b>closingTime</b>: 21:00:00</p></blockquote></div>"
   ] ; # 
   fhir:identifier ( [
      fhir:type [
@@ -258,7 +260,7 @@
        ] )
      ] ;
      fhir:system [ fhir:v "https://editeur.com"^^xsd:anyURI ] ;
-     fhir:value [ fhir:v "2222222222" ]
+     fhir:value [ fhir:v "22222222222" ]
   ] ) ; # 
   fhir:name [ fhir:v "Centre de consultation Rennes Cleunay"] ; # 
   fhir:telecom ( [
@@ -266,16 +268,18 @@
      fhir:value [ fhir:v "+33145249912" ]
   ] ) ; # 
   fhir:address [
-     fhir:line ( [ fhir:v "320 avenue Général Georges Patton" ] ) ;
+     fhir:line ( [ fhir:v "106 rue Eugène Pottier" ] ) ;
      fhir:city [ fhir:v "RENNES" ] ;
-     fhir:postalCode [ fhir:v "35700" ]
+     fhir:postalCode [ fhir:v "35000" ]
   ] ; # 
   fhir:managingOrganization [
      fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Organization/ExampleOrgaSOS1> ;
      fhir:reference [ fhir:v "Organization/ExampleOrgaSOS1" ]
   ] ; # 
   fhir:hoursOfOperation ( [
-     fhir:daysOfWeek ( [ fhir:v "mon" ] [ fhir:v "tue" ] [ fhir:v "wed" ] [ fhir:v "thu" ] )
+     fhir:daysOfWeek ( [ fhir:v "mon" ] [ fhir:v "tue" ] [ fhir:v "wed" ] [ fhir:v "thu" ] ) ;
+     fhir:openingTime [ fhir:v "09:00:00"^^xsd:time ] ;
+     fhir:closingTime [ fhir:v "21:00:00"^^xsd:time ]
   ] ) . # 
 
 <https://exemple.com/ans-sas/Slot/ExampleSlotSOS3> a fhir:Slot ;
@@ -342,7 +346,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Location_3333333333\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Location 3333333333</b></p><a name=\"3333333333\"> </a><a name=\"hc3333333333\"> </a><a name=\"3333333333-fr-FR\"> </a><p><b>identifier</b>: Identifiant interne/3333333333</p><p><b>name</b>: Centre de consultation Lorient</p><p><b>telecom</b>: <a href=\"tel:+33139555992\">+33139555992</a></p><p><b>address</b>: 12 impasse Royer Dubail LORIENT 56100 </p><p><b>managingOrganization</b>: <a href=\"Organization-ExampleOrgaSOS2.html\">Organization SOS Médecins Lorient et agglomération</a></p><blockquote><p><b>hoursOfOperation</b></p><p><b>daysOfWeek</b>: Tuesday, Thursday, Saturday</p></blockquote></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Location_3333333333\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Location 3333333333</b></p><a name=\"3333333333\"> </a><a name=\"hc3333333333\"> </a><a name=\"3333333333-fr-FR\"> </a><p><b>identifier</b>: Identifiant interne/3333333333</p><p><b>name</b>: Centre de consultation Lorient</p><p><b>telecom</b>: <a href=\"tel:+33139555992\">+33139555992</a></p><p><b>address</b>: 12 impasse Royer Dubail LORIENT 56100 </p><p><b>managingOrganization</b>: <a href=\"Organization-ExampleOrgaSOS2.html\">Organization SOS Médecins Lorient et agglomération</a></p><blockquote><p><b>hoursOfOperation</b></p><p><b>daysOfWeek</b>: Tuesday, Thursday, Saturday</p><p><b>openingTime</b>: 11:00:00</p><p><b>closingTime</b>: 18:00:00</p></blockquote></div>"
   ] ; # 
   fhir:identifier ( [
      fhir:type [
@@ -369,7 +373,9 @@
      fhir:reference [ fhir:v "Organization/ExampleOrgaSOS2" ]
   ] ; # 
   fhir:hoursOfOperation ( [
-     fhir:daysOfWeek ( [ fhir:v "tue" ] [ fhir:v "thu" ] [ fhir:v "sat" ] )
+     fhir:daysOfWeek ( [ fhir:v "tue" ] [ fhir:v "thu" ] [ fhir:v "sat" ] ) ;
+     fhir:openingTime [ fhir:v "11:00:00"^^xsd:time ] ;
+     fhir:closingTime [ fhir:v "18:00:00"^^xsd:time ]
   ] ) . # 
 
 <https://exemple.com/ans-sas/Organization/ExampleOrgaSOS2> a fhir:Organization ;
