@@ -9,8 +9,7 @@ Usage: #definition
 * description = "Un gestionnaire d'agenda reçoit des rendez-vous SOS envoyés par un déclarant de rendez-vous. La platefome numérique SAS joue le rôle de gestionnaire d'agenda et stocke les rendez-vous récupérés"
 * kind = #requirements
 * fhirVersion = #4.0.1
-* format[0] = #application/fhir+xml
-* format[+] = #application/fhir+json
+* format[0] = #application/fhir+json
 * implementationGuide = "https://interop.esante.gouv.fr/ig/fhir/sas"
 * rest.mode = #server
 * rest.documentation = "Réception des création et mises à jour de RDV SOS"

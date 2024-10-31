@@ -9,8 +9,7 @@ Usage: #definition
 * description = "Un gestionnaire de structure gère les ressources transmises par les déclarants de ressource"
 * kind = #requirements
 * fhirVersion = #4.0.1
-* format[0] = #application/fhir+xml
-* format[+] = #application/fhir+json
+* format[0] = #application/fhir+json
 * implementationGuide = "https://interop.esante.gouv.fr/ig/fhir/sas"
 * rest.mode = #server
 * rest.documentation = "Réception des création et mises à jour de comptes practitioner"

@@ -9,8 +9,7 @@ Usage: #definition
 * description = "Un consommateur consulte les créneaux SOS mis à disposition par un gestionnaire d’agenda. La platefome numérique SAS joue le rôle de consommateur et affiche les créneaux récupérés"
 * kind = #requirements
 * fhirVersion = #4.0.1
-* format[0] = #application/fhir+xml
-* format[+] = #application/fhir+json
+* format[0] = #application/fhir+json
 * implementationGuide = "https://interop.esante.gouv.fr/ig/fhir/sas"
 * rest.mode = #client
 * rest.documentation = "Consultation de créneaux SOS"

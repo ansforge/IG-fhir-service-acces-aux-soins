@@ -9,8 +9,7 @@ Usage: #definition
 * description = "Un gestionnaire d'agenda met à disposition d'un consommateur des créneaux de disponibilité. Cas d'usage PS à titre individuel"
 * kind = #requirements
 * fhirVersion = #4.0.1
-* format[0] = #application/fhir+xml
-* format[+] = #application/fhir+json
+* format[0] = #application/fhir+json
 * implementationGuide = "https://interop.esante.gouv.fr/ig/fhir/sas"
 * rest.mode = #server
 * rest.documentation = "Mise à disposition de créneaux de disponibilité PS. Indiv"
