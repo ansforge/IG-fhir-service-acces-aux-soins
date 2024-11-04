@@ -16,13 +16,6 @@ Usage: #definition
 * rest.security.cors = false
 * rest.security.description = "L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S\n) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes\nd’information de santé (CI-SIS)"
 
-//Paramètres de recherches commun
-* rest.searchParam[+].name = "_include"
-* rest.searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-include"
-* rest.searchParam[=].type = #token
-* rest.searchParam[=].documentation = "Permet d'inclure des ressources référencées par la ressource recherchée dans le résultat"
-
-//PS. indiv
 * rest.resource[0].type = #Slot
 * rest.resource[=].profile = "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"
 * rest.resource[=].interaction[0].code = #read
