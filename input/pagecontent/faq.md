@@ -401,7 +401,7 @@ Le tableau ci-dessous présente les erreurs rencontrées de manière récurrente
 </tr>
 <tr>
   <td><p>1</p></td>
-  <td><p>Gestion des préfixes des ID de <br>dStructure</p></td>
+  <td><p>Gestion des préfixes des ID de <br>Structure</p></td>
   <td>
     <p>Quel que soit le format de l'ID renseigné au niveau de la solution logicielle (préfixé ou pas) :<br>
     <ul>
