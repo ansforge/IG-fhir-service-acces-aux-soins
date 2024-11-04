@@ -10,7 +10,7 @@
   "name" : "SAS",
   "title" : "Service d'Accès aux Soins",
   "status" : "active",
-  "date" : "2024-11-04T17:05:23+00:00",
+  "date" : "2024-11-04T17:44:00+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -740,6 +740,18 @@
         "valueString" : "Bundle"
       }],
       "reference" : {
+        "reference" : "Bundle/ExampleBundleAgregateurSOS"
+      },
+      "name" : "ExampleBundleAgregateurSOS",
+      "description" : "Exemple Bundle SOS",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-bundle-aggregator"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
         "reference" : "Bundle/ExampleBundleCPTS"
       },
       "name" : "ExampleBundleCPTS",
@@ -785,6 +797,42 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Location"
+      }],
+      "reference" : {
+        "reference" : "Location/1111111111"
+      },
+      "name" : "ExampleLocationSOS1",
+      "description" : "Exemple 1 location flux agrégateur sos",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Location"
+      }],
+      "reference" : {
+        "reference" : "Location/2222222222"
+      },
+      "name" : "ExampleLocationSOS2",
+      "description" : "Exemple 2 location flux agrégateur sos",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Location"
+      }],
+      "reference" : {
+        "reference" : "Location/3333333333"
+      },
+      "name" : "ExampleLocationSOS3",
+      "description" : "Exemple 3 location flux agrégateur sos",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Organization"
       }],
       "reference" : {
@@ -805,6 +853,30 @@
       "name" : "ExampleOrgaCPTS2",
       "description" : "Exemple d'organisation CPTS 2",
       "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-organization-aggregator"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/ExampleOrgaSOS1"
+      },
+      "name" : "ExampleOrgaSOS1",
+      "description" : "Exemple d'organisation SOS 1",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/ExampleOrgaSOS2"
+      },
+      "name" : "ExampleOrgaSOS2",
+      "description" : "Exemple d'organisation SOS 1",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator"
     },
     {
       "extension" : [{
@@ -953,6 +1025,42 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Schedule"
+      }],
+      "reference" : {
+        "reference" : "Schedule/ExampleScheduleSOS1"
+      },
+      "name" : "ExampleScheduleSOS1",
+      "description" : "Exemple 1 ressource schedule sos",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Schedule"
+      }],
+      "reference" : {
+        "reference" : "Schedule/ExampleScheduleSOS2"
+      },
+      "name" : "ExampleScheduleSOS2",
+      "description" : "Exemple 2 ressource schedule sos",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Schedule"
+      }],
+      "reference" : {
+        "reference" : "Schedule/ExampleScheduleSOS3"
+      },
+      "name" : "ExampleScheduleSOS3",
+      "description" : "Exemple 3 ressource schedule sos",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Slot"
       }],
       "reference" : {
@@ -1021,6 +1129,54 @@
       "name" : "ExampleSlotPSIndiv4",
       "description" : "Exemple 4 ressource slot PS indiv",
       "exampleCanonical" : "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Slot"
+      }],
+      "reference" : {
+        "reference" : "Slot/ExampleSlotSOS1"
+      },
+      "name" : "ExampleSlotSOS1",
+      "description" : "Exemple 1 ressource slot sos",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Slot"
+      }],
+      "reference" : {
+        "reference" : "Slot/ExampleSlotSOS2"
+      },
+      "name" : "ExampleSlotSOS2",
+      "description" : "Exemple 2 ressource slot sos",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Slot"
+      }],
+      "reference" : {
+        "reference" : "Slot/ExampleSlotSOS3"
+      },
+      "name" : "ExampleSlotSOS3",
+      "description" : "Exemple 3 ressource slot sos",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Slot"
+      }],
+      "reference" : {
+        "reference" : "Slot/ExampleSlotSOS4"
+      },
+      "name" : "ExampleSlotSOS4",
+      "description" : "Exemple 4 ressource slot sos",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator"
     },
     {
       "extension" : [{
@@ -1454,6 +1610,24 @@
         }],
         "nameUrl" : "specifications_techniques-cpts-gestion_rdv.html",
         "title" : "CPTS - Gestion de rendez-vous",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "specifications_techniques-sos-recherche_creneaux.html"
+        }],
+        "nameUrl" : "specifications_techniques-sos-recherche_creneaux.html",
+        "title" : "SOS Médecins - Recherche des créneaux",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "specifications_techniques-sos-gestion_rdv.html"
+        }],
+        "nameUrl" : "specifications_techniques-sos-gestion_rdv.html",
+        "title" : "SOS Médecins - Gestion de rendez-vous",
         "generation" : "markdown"
       },
       {
