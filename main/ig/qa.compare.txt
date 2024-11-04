@@ -1,7 +1,7 @@
 SAS : Validation Results
 =========================================
 
-err = 17, warn = 37, info = 105
+err = 19, warn = 37, info = 105
 $--
 Generated $--. FHIR version $-- for ans.fhir.fr.sas#$-- (canonical = https://interop.esante.gouv.fr/ig/fhir/sas)
  Build Errors : 1 / 5 / 0
@@ -9,6 +9,15 @@ Generated $--. FHIR version $-- for ans.fhir.fr.sas#$-- (canonical = https://int
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Appointment-2 : 0 / 0 / 3
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundleCPTS : 0 / 6 / 27
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundlePSIndiv : 0 / 9 / 57
+ /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/CapabilityStatement-SAS-Consommateur-CPTS : 0 / 0 / 1
+ /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/CapabilityStatement-SAS-Consommateur-SOS : 1 / 0 / 1
+ /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/CapabilityStatement-SAS-Consommateur-psindiv : 0 / 0 / 1
+ /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/CapabilityStatement-SAS-GestionnaireAgenda-CPTS : 0 / 0 / 1
+ /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/CapabilityStatement-SAS-GestionnaireAgenda-PsIndiv : 0 / 0 / 1
+ /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/CapabilityStatement-SAS-GestionnaireAgenda-RDVSOS : 0 / 0 / 1
+ /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/CapabilityStatement-SAS-GestionnaireAgenda-RDVpsindiv : 0 / 0 / 1
+ /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/CapabilityStatement-SAS-GestionnaireAgenda-SOS : 1 / 0 / 1
+ /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/CapabilityStatement-SAS-GestionnaireStructure : 0 / 0 / 1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/HealthcareService-ExampleHealthcareServiceCPTS1 : 0 / 0 / 1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/HealthcareService-ExampleHealthcareServiceCPTS2 : 0 / 0 / 1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.sas : 0 / 0 / 2
@@ -111,10 +120,21 @@ WARNING: Bundle/ExampleBundlePSIndiv: Bundle.entry[8]: This is not a matching re
 WARNING: Bundle/ExampleBundlePSIndiv: Bundle.entry[9]: This is not a matching resource type for the specified search (is a search mode needed?) (Practitioner expecting [Slot])
 WARNING: Bundle/ExampleBundlePSIndiv: Bundle.entry[10]: This is not a matching resource type for the specified search (is a search mode needed?) (PractitionerRole expecting [Slot])
 WARNING: Bundle/ExampleBundlePSIndiv: Bundle: SearchSet bundles should have search modes on the entries
+== fsh-generated/resources/CapabilityStatement-SAS-Consommateur-CPTS.json ==
+== fsh-generated/resources/CapabilityStatement-SAS-Consommateur-SOS.json ==
+ERROR: CapabilityStatement/SAS-Consommateur-SOS: CapabilityStatement.rest[0].resource[0].searchParam[0].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-has' does not resolve
+== fsh-generated/resources/CapabilityStatement-SAS-Consommateur-psindiv.json ==
+== fsh-generated/resources/CapabilityStatement-SAS-GestionnaireAgenda-CPTS.json ==
+== fsh-generated/resources/CapabilityStatement-SAS-GestionnaireAgenda-PsIndiv.json ==
+== fsh-generated/resources/CapabilityStatement-SAS-GestionnaireAgenda-RDVSOS.json ==
+== fsh-generated/resources/CapabilityStatement-SAS-GestionnaireAgenda-RDVpsindiv.json ==
+== fsh-generated/resources/CapabilityStatement-SAS-GestionnaireAgenda-SOS.json ==
+ERROR: CapabilityStatement/SAS-GestionnaireAgenda-SOS: CapabilityStatement.rest[0].resource[0].searchParam[0].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-has' does not resolve
+== fsh-generated/resources/CapabilityStatement-SAS-GestionnaireStructure.json ==
 == fsh-generated/resources/HealthcareService-ExampleHealthcareServiceCPTS1.json ==
 == fsh-generated/resources/HealthcareService-ExampleHealthcareServiceCPTS2.json ==
 == fsh-generated/resources/ImplementationGuide-ans.fhir.fr.sas.json ==
-INFORMATION: ImplementationGuide/ans.fhir.fr.sas: ImplementationGuide.definition.resource[48].description: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+INFORMATION: ImplementationGuide/ans.fhir.fr.sas: ImplementationGuide.definition.resource[57].description: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 == fsh-generated/resources/Organization-ExampleOrgaCPTS1.json ==
 INFORMATION: Organization/ExampleOrgaCPTS1: Organization.identifier[0].type: Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type|1.0.1
 == fsh-generated/resources/Organization-ExampleOrgaCPTS2.json ==
