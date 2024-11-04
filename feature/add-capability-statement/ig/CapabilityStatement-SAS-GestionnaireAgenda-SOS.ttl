@@ -139,23 +139,6 @@
          fhir:type [ fhir:v "token" ] ;
          fhir:documentation [ fhir:v "Recherche d'une structure par identifiant - SIRET dans ce cas" ]
        ] )
-     ] ) ;
-     fhir:searchParam ( [
-       fhir:name [ fhir:v "_include" ] ;
-       fhir:definition [
-         fhir:v "http://hl7.org/fhir/SearchParameter/Resource-include"^^xsd:anyURI ;
-         fhir:link <http://hl7.org/fhir/SearchParameter/Resource-include>
-       ] ;
-       fhir:type [ fhir:v "token" ] ;
-       fhir:documentation [ fhir:v "Permet d'inclure des ressources référencées par la ressource recherchée dans le résultat" ]
-     ] [
-       fhir:name [ fhir:v "_revinclude" ] ;
-       fhir:definition [
-         fhir:v "http://hl7.org/fhir/SearchParameter/Resource-revinclude"^^xsd:anyURI ;
-         fhir:link <http://hl7.org/fhir/SearchParameter/Resource-revinclude>
-       ] ;
-       fhir:type [ fhir:v "token" ] ;
-       fhir:documentation [ fhir:v "Permet d'inclure les ressources qui font référence à la ressource recherchée dans le résultat" ]
      ] )
   ] ) . # 
 
