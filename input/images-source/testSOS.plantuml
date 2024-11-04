@@ -1,0 +1,68 @@
+@startuml
+
+hide circle
+hide empty members
+skinparam linetype ortho
+
+class Slot #line:red {
+   start
+   end
+   status
+   meta.security
+   schedule [*..1]
+ }
+
+ class Schedule #line:red {
+  
+   Location [1..*]
+ }
+
+ 
+
+ class Location #line:red {
+   slot [0..*]
+   participant.actor [1..*]
+ }
+
+ class Organization #line:black {
+   appointment [1..1]
+ }
+
+     
+package "Ressources d'agenda" as RA #text:blue{
+
+ class Patient #line:black
+
+ class RelatedPerson #line:black
+
+ class Practitioner #line:blue
+
+ class PractitionerRole #line:blue{
+    practitioner [0..1]
+ }
+    
+
+ class Organization #line:blue
+
+ class HealthcareService #line:blue {
+  providedBy [0..1]
+ }
+
+ class Device #line:black
+   
+ class Location #line:blue
+
+ PractitionerRole -[#blue]--> Practitioner
+   HealthcareService -[#blue]--> Organization
+}
+
+
+
+legend bottom
+    <#GhostWhite,#GhostWhite>|        |= __Légende__ |
+    |<#red>| Objets d'agendas GAP exploités|
+    |<#blue>| Ressources d'agendas GAP exploitées|
+    |<#black>| Ressources GAP non exploitées|
+endlegend
+
+@enduml

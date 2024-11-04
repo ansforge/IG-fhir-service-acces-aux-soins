@@ -1,6 +1,6 @@
 Cette section regroupe les réponses aux questions les plus fréquemment posées au cours des travaux de développements menés par les éditeurs, et les tests d'intégration.
 
-### Agrégateur
+### Agrégateur PS à titre individuel - CPTS
 
 #### Quel est le format à utiliser afin de transmettre un OID dans un élément `System` ?
 
@@ -25,7 +25,6 @@ Il est attendu l'URL de redirection vers l'agenda du PS concerné et non l'URL d
 Les ressources locations doivent être contenues `contained` dans la ressource `PractitionerRole` associée. Par ailleurs, au niveau de la ressource `PractitionerRole`, la référence vers la ressource `Location` doit être indiquée.
 
 #### Quelle est la ressource discriminante au niveau de la structure du fichier de réponse JSON ?
-
 Il est attendu dans le fichier de réponse JSON d'avoir 1 ressource `Schedule` pour 1 ressource `PractitionerRole`. Cela se traduit par le fait d’avoir 1 agenda pour 1 lieu de consultation. Dans la structure du fichier de réponse, un PS aura ainsi autant d'agendas que de lieux de consultation.
 
 #### Quelles sont les ressources à transmettre lorsqu'un créneau de disponibilité transmis est mis en visibilité d'une ou plusieurs CPTS ?
@@ -337,7 +336,7 @@ Les éditeurs ont la possibilité de récupérer les référentiels nationaux de
       ]
     },
     "type": "searchset",
-    "total": 4,
+    "total": 0,
     "link": [
       {
         "relation": "self",
@@ -366,6 +365,138 @@ Les éditeurs ont la possibilité de récupérer les référentiels nationaux de
     On est dans la configuration du flux d'agrégation de disponibilités INT_R01 (PS à titre individuel) qui a déjà été implémenté par l'éditeur.
     </p>
   </td>
+</tr>
+</tbody>
+</table>
+
+
+
+### Agrégateur SOS Médecins
+
+#### Quel est le format à utiliser afin de transmettre un OID dans un élément `System` ?
+
+L’OID doit être précédé du préfixe `urn:oid:`, comme dans l’exemple suivant : "system":  "urn:oid:1.2.250.1.71.4.2.2" (pour les IDNST).
+
+#### Quels champs de l’élément identifier des ressources FrLocation et FrOrganization sont obligatoires ? 
+
+Les éléments `identifier.system`, `identifier.type` et `identifier.value` sont obligatoires.
+
+#### Quelle URL doit être transmise dans l’élément `comment` ?
+
+Il est attendu l’URL de redirection vers l’agenda du point fixe de garde (PFG) et dans la mesure du possible vers le créneau sélectionné directement.
+
+#### Quelle est la ressource discriminante au niveau de la structure du fichier de réponse JSON ?
+Il est attendu dans le fichier de réponse JSON d’avoir 1 ressource Schedule pour 1 ressource Location. Cela se traduit par le fait d’avoir 1 agenda pour 1 point fixe de garde (lieu de consultation). Dans la structure du fichier de réponse, une association SOS Médecins aura ainsi autant d’agendas que de points fixes de garde (PFG).
+
+#### Quelles sont les principales erreurs rencontrées au cours des tests ?
+
+Le tableau ci-dessous présente les erreurs rencontrées de manière récurrente lors de la phase de recette connectée. Il est recommandé de porter une attention particulière à cette section :
+
+<table>
+<tbody>
+<tr>
+  <td width="5%"><p><strong>ID</strong></p></td>
+  <td width="30%"><p><strong>Description</strong></p></td>
+  <td><p><strong>Comportement attendu</strong></p></td>
+</tr>
+<tr>
+  <td><p>1</p></td>
+  <td><p>Gestion des préfixes des ID de <br>Structure</p></td>
+  <td>
+    <p>Quel que soit le format de l'ID renseigné au niveau de la solution logicielle (préfixé ou pas) :<br>
+    <ul>
+      <li>Les créneaux associés aux PFG doivent remonter</li>
+      <li>Les ID renseignés dans la réponse sont bien préfixés.</li>
+    </ul>
+    Rappel concernant les préfixes attendus :<br><br>
+    Pour les ID nationaux de structure :<br>
+    <ul>
+      <li>Préfixe "0" pour les identifiants de cabinet ADELI</li>
+      <li>Préfixe "1" pour les FINESS</li>
+      <li>Préfixe "3" pour les SIRET</li>
+      <li>Préfixe "4" pour les identifiants de cabinet RPPS</li>
+    </ul>
+    </p>
+  </td>
+</tr>
+<tr>
+  <td><p>2</p></td>
+  <td><p>Format du numéro de téléphone</p></td>
+  <td>
+    <p>Une logique corrigeant le format du numéro de téléphone renseigné dans la solution logicielle doit être mise en oeuvre.<br>
+    Rappel du format attendu : <strong>+33XXXXXXXXX</strong>
+    <code><pre>
+      "telecom": [
+        {
+          "system": "phone",
+          "value": "+33XXXXXXXXX"
+        }
+      ]
+    </pre></code>
+    </p>
+  </td>
+</tr>
+  <td><p>3</p></td>
+  <td><p>Type de créneau</p></td>
+  <td><p>L'ensemble des types associés aux créneaux doivent être transmis, sous forme codifiée, au niveau de l'élément meta.security. Pour le cas d’usage SOS Médecins, les codes applicables sont : PUBLIC et SNP<br>
+  Exemple :
+  <code><pre>
+    "resourceType": "Slot",
+    "id": "1636036800",
+    "meta": {
+      "profile": [
+        "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator"
+      ],
+      "security": [
+        {
+          "system": "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
+          "code": "PUBLIC"
+        },
+        {
+          "system": "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
+          "code": "SNP"
+        }
+      ]
+    },
+  </pre></code>
+  </p>
+  </td>
+</tr>
+<tr>
+  <td><p>4</p></td>
+  <td><p>Gestion des multiples PFG</p></td>
+  <td><p>Lorsqu’une association SOS Médecins dispose de créneaux associés à différents PFG, il est attendu que l’ensemble des créneaux soient remontés et soient associés au bon PFG.</p></td>
+</tr>
+<tr>
+  <td><p>5</p></td>
+  <td><p>Gestion de l'absence de créneaux pour une<br>association SOS Médecins</p></td>
+  <td><p>Lorsqu’aucun créneau n’est disponible ou qu’aucune association SOS Médecins de la recherche n’est présent dans la solution logicielle, un bundle de réponse vide est attendu<br>
+  Exemple :
+  <code><pre>
+    "resourceType": "Bundle",
+    "id": "8cbb33dc-779e-45e9-a5f6-ea66101288c5",
+    "meta": {
+      "profile": [
+        "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-bundle-aggregator"
+      ]
+    },
+    "type": "searchset",
+    "total": 0,
+    "link": [
+      {
+        "relation": "self",
+        "url": "https://editeur.fr/Schedule?_revinclude=Slot:schedule&_include=Schedule:actor:Location&_include:iterate=Location:organization&_has:Slot:schedule:start=ge2023-08-18T09:00:00+02:00&_has:Slot:schedule:start=le2023-08-20T08:00:00+02:00&_has:Slot:schedule:status=free&actor:Location.organization.identifier=urn:oid:1.2.250.1.71.4.2.2%7C334173748400020,urn:oid:1.2.250.1.71.4.2.2%7C392080466300010&_count=1000"
+      }
+    ],
+  </pre></code>
+  </p>
+  </td>
+</tr>
+<tr>
+  <td><p>6</p></td>
+  <td><p>Eléments vide</p></td>
+  <td><p>Lorsqu'une information optionnelle n'est pas renseignée dans la solution logicielle, l'élément correspondant ne doit pas être transmis au niveau de la réponse. Il ne faut pas transmettre un élément vide.</p></td>
+</tr>
 </tr>
 </tbody>
 </table>
