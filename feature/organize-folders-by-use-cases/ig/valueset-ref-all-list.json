@@ -1,0 +1,958 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/address-type",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "AddressType",
+      "title" : "AddressType",
+      "description" : "The type of an address (physical / postal).",
+      "systems" : ["http://hl7.org/fhir/address-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.69"],
+      "sources" : ["2.16.840.1.113883.4.642.3.69"],
+      "uses" : {
+      },
+      "StructureDefinition-FrLocationAgregateur.html" : "FrLocationAgregateur",
+      "StructureDefinition-sas-sos-location-aggregator.html" : "FrLocationAgregateurSOS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/address-use",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "AddressUse",
+      "title" : "AddressUse",
+      "description" : "The use of an address.",
+      "systems" : ["http://hl7.org/fhir/address-use"],
+      "oids" : ["2.16.840.1.113883.4.642.3.67"],
+      "sources" : ["2.16.840.1.113883.4.642.3.67"],
+      "uses" : {
+      },
+      "StructureDefinition-FrLocationAgregateur.html" : "FrLocationAgregateur",
+      "StructureDefinition-sas-sos-location-aggregator.html" : "FrLocationAgregateurSOS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/administrative-gender",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "AdministrativeGender",
+      "title" : "AdministrativeGender",
+      "description" : "The gender of a person used for administrative purposes.",
+      "systems" : ["http://hl7.org/fhir/administrative-gender"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1"],
+      "uses" : {
+      },
+      "StructureDefinition-FrPractitionerRegul.html" : "FrPractitionerRegul",
+      "StructureDefinition-FrPractitionerAgregateur.html" : "FrPractitionerAgregateur"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/appointment-cancellation-reason",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "AppointmentCancellationReason",
+      "title" : "Appointment cancellation reason",
+      "description" : "This example value set defines a set of reasons for the cancellation of an appointment.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.1381"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1381"],
+      "uses" : {
+      },
+      "StructureDefinition-sas-sos-appointment.html" : "FrAppointmentSASSOS",
+      "StructureDefinition-FrAppointmentSAS.html" : "FrAppointmentSAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/appointmentstatus",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "AppointmentStatus",
+      "title" : "AppointmentStatus",
+      "description" : "The free/busy status of an appointment.",
+      "systems" : ["http://hl7.org/fhir/appointmentstatus"],
+      "oids" : ["2.16.840.1.113883.4.642.3.484"],
+      "sources" : ["2.16.840.1.113883.4.642.3.484"],
+      "uses" : {
+      },
+      "StructureDefinition-sas-sos-appointment.html" : "FrAppointmentSASSOS",
+      "StructureDefinition-FrAppointmentSAS.html" : "FrAppointmentSAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/bundle-type",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "BundleType",
+      "title" : "BundleType",
+      "description" : "Indicates the purpose of a bundle - how it is intended to be used.",
+      "systems" : ["http://hl7.org/fhir/bundle-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.620"],
+      "sources" : ["2.16.840.1.113883.4.642.3.620"],
+      "uses" : {
+      },
+      "StructureDefinition-BundleAgregateur.html" : "BundleAgregateur",
+      "StructureDefinition-sas-cpts-bundle-aggregator.html" : "BundleAgregateurCPTS",
+      "StructureDefinition-sas-sos-bundle-aggregator.html" : "BundleAgregateurSOS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/common-tags",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CommonTags",
+      "title" : "Common Tags",
+      "description" : "Common Tag Codes defined by FHIR project",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/common-tags"],
+      "oids" : ["2.16.840.1.113883.4.642.3.79"],
+      "sources" : ["2.16.840.1.113883.4.642.3.79"],
+      "uses" : {
+      },
+      "StructureDefinition-FrPractitionerRegul.html" : "FrPractitionerRegul",
+      "StructureDefinition-sas-cpts-slot-aggregator.html" : "FrSlotAgregateurCPTS",
+      "StructureDefinition-sas-sos-slot-aggregator.html" : "FrSlotAgregateurSOS",
+      "StructureDefinition-FrSlotAgregateur.html" : "FrSlotAgregateur"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/contact-point-system",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "ContactPointSystem",
+      "title" : "ContactPointSystem",
+      "description" : "Telecommunications form for contact point.",
+      "systems" : ["http://hl7.org/fhir/contact-point-system"],
+      "oids" : ["2.16.840.1.113883.4.642.3.71"],
+      "sources" : ["2.16.840.1.113883.4.642.3.71"],
+      "uses" : {
+      },
+      "StructureDefinition-FrPractitionerRegul.html" : "FrPractitionerRegul",
+      "StructureDefinition-FrPractitionerAgregateur.html" : "FrPractitionerAgregateur"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/contact-point-use",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "ContactPointUse",
+      "title" : "ContactPointUse",
+      "description" : "Use of contact point.",
+      "systems" : ["http://hl7.org/fhir/contact-point-use"],
+      "oids" : ["2.16.840.1.113883.4.642.3.73"],
+      "sources" : ["2.16.840.1.113883.4.642.3.73"],
+      "uses" : {
+      },
+      "StructureDefinition-FrPractitionerRegul.html" : "FrPractitionerRegul",
+      "StructureDefinition-FrPractitionerAgregateur.html" : "FrPractitionerAgregateur"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/contactentity-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ContactEntityType",
+      "title" : "Contact entity type",
+      "description" : "This example value set defines a set of codes that can be used to indicate the purpose for which you would contact a contact party.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/contactentity-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.416"],
+      "sources" : ["2.16.840.1.113883.4.642.3.416"],
+      "uses" : {
+      },
+      "StructureDefinition-sas-cpts-organization-aggregator.html" : "FrOrganizationAgregateurCPTS",
+      "StructureDefinition-sas-sos-organization-aggregator.html" : "FrOrganizationAgregateurSOS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/days-of-week",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "DaysOfWeek",
+      "title" : "DaysOfWeek",
+      "description" : "The days of the week.",
+      "systems" : ["http://hl7.org/fhir/days-of-week"],
+      "oids" : ["2.16.840.1.113883.4.642.3.512"],
+      "sources" : ["2.16.840.1.113883.4.642.3.512"],
+      "uses" : {
+      },
+      "StructureDefinition-FrLocationAgregateur.html" : "FrLocationAgregateur",
+      "StructureDefinition-sas-sos-location-aggregator.html" : "FrLocationAgregateurSOS",
+      "StructureDefinition-sas-cpts-healthcareservice-aggregator.html" : "FrHealthcareServiceAgregateurCPTS",
+      "StructureDefinition-FrPractitionerRoleExerciceAgregateur.html" : "FrPractitionerRoleExerciceAgregateur"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/encounter-participant-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ParticipantType",
+      "title" : "Participant type",
+      "description" : "This value set defines a set of codes that can be used to indicate how an individual participates in an encounter.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/participant-type",
+        "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.250"],
+      "sources" : ["2.16.840.1.113883.4.642.3.250"],
+      "uses" : {
+      },
+      "StructureDefinition-sas-sos-appointment.html" : "FrAppointmentSASSOS",
+      "StructureDefinition-FrAppointmentSAS.html" : "FrAppointmentSAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/encounter-reason",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "EncounterReasonCodes",
+      "title" : "Encounter Reason Codes",
+      "description" : "This examples value set defines the set of codes that can be used to indicate reasons for an encounter.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.261"],
+      "sources" : ["2.16.840.1.113883.4.642.3.261"],
+      "uses" : {
+      },
+      "StructureDefinition-sas-sos-appointment.html" : "FrAppointmentSASSOS",
+      "StructureDefinition-FrAppointmentSAS.html" : "FrAppointmentSAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/http-verb",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "HTTPVerb",
+      "title" : "HTTPVerb",
+      "description" : "HTTP verbs (in the HTTP command line). See [HTTP rfc](https://tools.ietf.org/html/rfc7231) for details.",
+      "systems" : ["http://hl7.org/fhir/http-verb"],
+      "oids" : ["2.16.840.1.113883.4.642.3.624"],
+      "sources" : ["2.16.840.1.113883.4.642.3.624"],
+      "uses" : {
+      },
+      "StructureDefinition-BundleAgregateur.html" : "BundleAgregateur",
+      "StructureDefinition-sas-cpts-bundle-aggregator.html" : "BundleAgregateurCPTS",
+      "StructureDefinition-sas-sos-bundle-aggregator.html" : "BundleAgregateurSOS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/identifier-type",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "Identifier Type Codes",
+      "title" : "IdentifierType",
+      "description" : "A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0203"],
+      "oids" : ["2.16.840.1.113883.4.642.3.45"],
+      "sources" : ["2.16.840.1.113883.4.642.3.45"],
+      "uses" : {
+      },
+      "StructureDefinition-FrScheduleAgregateur.html" : "FrScheduleAgregateur",
+      "StructureDefinition-sas-cpts-slot-aggregator.html" : "FrSlotAgregateurCPTS",
+      "StructureDefinition-sas-sos-appointment.html" : "FrAppointmentSASSOS",
+      "StructureDefinition-sas-sos-schedule-aggregator.html" : "FrScheduleAgregateurSOS",
+      "StructureDefinition-sas-sos-slot-aggregator.html" : "FrSlotAgregateurSOS",
+      "StructureDefinition-sas-cpts-healthcareservice-aggregator.html" : "FrHealthcareServiceAgregateurCPTS",
+      "StructureDefinition-FrAppointmentSAS.html" : "FrAppointmentSAS",
+      "StructureDefinition-FrPractitionerRoleExerciceAgregateur.html" : "FrPractitionerRoleExerciceAgregateur",
+      "StructureDefinition-FrSlotAgregateur.html" : "FrSlotAgregateur"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/identifier-use",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "IdentifierUse",
+      "title" : "IdentifierUse",
+      "description" : "Identifies the purpose for this identifier, if known .",
+      "systems" : ["http://hl7.org/fhir/identifier-use"],
+      "oids" : ["2.16.840.1.113883.4.642.3.57"],
+      "sources" : ["2.16.840.1.113883.4.642.3.57"],
+      "uses" : {
+      },
+      "StructureDefinition-sas-cpts-organization-aggregator.html" : "FrOrganizationAgregateurCPTS",
+      "StructureDefinition-sas-sos-appointment.html" : "FrAppointmentSASSOS",
+      "StructureDefinition-sas-sos-schedule-aggregator.html" : "FrScheduleAgregateurSOS",
+      "StructureDefinition-sas-sos-slot-aggregator.html" : "FrSlotAgregateurSOS",
+      "StructureDefinition-FrLocationAgregateur.html" : "FrLocationAgregateur",
+      "StructureDefinition-FrAppointmentSAS.html" : "FrAppointmentSAS",
+      "StructureDefinition-FrPractitionerRegul.html" : "FrPractitionerRegul",
+      "StructureDefinition-FrScheduleAgregateur.html" : "FrScheduleAgregateur",
+      "StructureDefinition-sas-cpts-slot-aggregator.html" : "FrSlotAgregateurCPTS",
+      "StructureDefinition-FrPractitionerAgregateur.html" : "FrPractitionerAgregateur",
+      "StructureDefinition-sas-sos-organization-aggregator.html" : "FrOrganizationAgregateurSOS",
+      "StructureDefinition-sas-sos-location-aggregator.html" : "FrLocationAgregateurSOS",
+      "StructureDefinition-sas-cpts-healthcareservice-aggregator.html" : "FrHealthcareServiceAgregateurCPTS",
+      "StructureDefinition-FrPractitionerRoleExerciceAgregateur.html" : "FrPractitionerRoleExerciceAgregateur",
+      "StructureDefinition-FrSlotAgregateur.html" : "FrSlotAgregateur"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/languages",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CommonLanguages",
+      "title" : "Common Languages",
+      "description" : "This value set includes common codes from BCP-47 (http://tools.ietf.org/html/bcp47)",
+      "systems" : ["urn:ietf:bcp:47"],
+      "oids" : ["2.16.840.1.113883.4.642.3.20"],
+      "sources" : ["2.16.840.1.113883.4.642.3.20"],
+      "uses" : {
+      },
+      "StructureDefinition-sas-cpts-organization-aggregator.html" : "FrOrganizationAgregateurCPTS",
+      "StructureDefinition-sas-sos-appointment.html" : "FrAppointmentSASSOS",
+      "StructureDefinition-sas-sos-schedule-aggregator.html" : "FrScheduleAgregateurSOS",
+      "StructureDefinition-BundleAgregateur.html" : "BundleAgregateur",
+      "StructureDefinition-sas-sos-slot-aggregator.html" : "FrSlotAgregateurSOS",
+      "StructureDefinition-FrLocationAgregateur.html" : "FrLocationAgregateur",
+      "StructureDefinition-FrAppointmentSAS.html" : "FrAppointmentSAS",
+      "StructureDefinition-sas-sos-bundle-aggregator.html" : "BundleAgregateurSOS",
+      "StructureDefinition-FrPractitionerRegul.html" : "FrPractitionerRegul",
+      "StructureDefinition-FrScheduleAgregateur.html" : "FrScheduleAgregateur",
+      "StructureDefinition-sas-cpts-slot-aggregator.html" : "FrSlotAgregateurCPTS",
+      "StructureDefinition-FrPractitionerAgregateur.html" : "FrPractitionerAgregateur",
+      "StructureDefinition-sas-sos-organization-aggregator.html" : "FrOrganizationAgregateurSOS",
+      "StructureDefinition-sas-cpts-bundle-aggregator.html" : "BundleAgregateurCPTS",
+      "StructureDefinition-sas-sos-location-aggregator.html" : "FrLocationAgregateurSOS",
+      "StructureDefinition-sas-cpts-healthcareservice-aggregator.html" : "FrHealthcareServiceAgregateurCPTS",
+      "StructureDefinition-FrPractitionerRoleExerciceAgregateur.html" : "FrPractitionerRoleExerciceAgregateur",
+      "StructureDefinition-FrSlotAgregateur.html" : "FrSlotAgregateur"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/location-mode",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "LocationMode",
+      "title" : "LocationMode",
+      "description" : "Indicates whether a resource instance represents a specific location or a class of locations.",
+      "systems" : ["http://hl7.org/fhir/location-mode"],
+      "oids" : ["2.16.840.1.113883.4.642.3.330"],
+      "sources" : ["2.16.840.1.113883.4.642.3.330"],
+      "uses" : {
+      },
+      "StructureDefinition-FrLocationAgregateur.html" : "FrLocationAgregateur",
+      "StructureDefinition-sas-sos-location-aggregator.html" : "FrLocationAgregateurSOS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/location-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "LocationStatus",
+      "title" : "LocationStatus",
+      "description" : "Indicates whether the location is still in use.",
+      "systems" : ["http://hl7.org/fhir/location-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.332"],
+      "sources" : ["2.16.840.1.113883.4.642.3.332"],
+      "uses" : {
+      },
+      "StructureDefinition-FrLocationAgregateur.html" : "FrLocationAgregateur",
+      "StructureDefinition-sas-sos-location-aggregator.html" : "FrLocationAgregateurSOS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/name-use",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "NameUse",
+      "title" : "NameUse",
+      "description" : "The use of a human name.",
+      "systems" : ["http://hl7.org/fhir/name-use"],
+      "oids" : ["2.16.840.1.113883.4.642.3.65"],
+      "sources" : ["2.16.840.1.113883.4.642.3.65"],
+      "uses" : {
+      },
+      "StructureDefinition-FrPractitionerRegul.html" : "FrPractitionerRegul",
+      "StructureDefinition-FrPractitionerAgregateur.html" : "FrPractitionerAgregateur"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/organization-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "OrganizationType",
+      "title" : "Organization type",
+      "description" : "This example value set defines a set of codes that can be used to indicate a type of organization.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/organization-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.414"],
+      "sources" : ["2.16.840.1.113883.4.642.3.414"],
+      "uses" : {
+      },
+      "StructureDefinition-sas-cpts-organization-aggregator.html" : "FrOrganizationAgregateurCPTS",
+      "StructureDefinition-sas-sos-organization-aggregator.html" : "FrOrganizationAgregateurSOS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/participantrequired",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ParticipantRequired",
+      "title" : "ParticipantRequired",
+      "description" : "Is the Participant required to attend the appointment.",
+      "systems" : ["http://hl7.org/fhir/participantrequired"],
+      "oids" : ["2.16.840.1.113883.4.642.3.488"],
+      "sources" : ["2.16.840.1.113883.4.642.3.488"],
+      "uses" : {
+      },
+      "StructureDefinition-sas-sos-appointment.html" : "FrAppointmentSASSOS",
+      "StructureDefinition-FrAppointmentSAS.html" : "FrAppointmentSAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/participationstatus",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ParticipationStatus",
+      "title" : "ParticipationStatus",
+      "description" : "The Participation status of an appointment.",
+      "systems" : ["http://hl7.org/fhir/participationstatus"],
+      "oids" : ["2.16.840.1.113883.4.642.3.486"],
+      "sources" : ["2.16.840.1.113883.4.642.3.486"],
+      "uses" : {
+      },
+      "StructureDefinition-FrAppointmentSAS.html" : "FrAppointmentSAS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/program",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "Program",
+      "title" : "Program",
+      "description" : "This value set defines an example set of codes that could be can be used to classify groupings of service-types/specialties.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/program"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1383"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1383"],
+      "uses" : {
+      },
+      "StructureDefinition-sas-cpts-healthcareservice-aggregator.html" : "FrHealthcareServiceAgregateurCPTS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/resource-types",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "ResourceType",
+      "title" : "ResourceType",
+      "description" : "One of the resource types defined as part of this version of FHIR.",
+      "systems" : ["http://hl7.org/fhir/resource-types"],
+      "oids" : ["2.16.840.1.113883.4.642.3.27"],
+      "sources" : ["2.16.840.1.113883.4.642.3.27"],
+      "uses" : {
+      },
+      "StructureDefinition-sas-sos-appointment.html" : "FrAppointmentSASSOS",
+      "StructureDefinition-sas-sos-schedule-aggregator.html" : "FrScheduleAgregateurSOS",
+      "StructureDefinition-FrLocationAgregateur.html" : "FrLocationAgregateur",
+      "StructureDefinition-sas-sos-location-aggregator.html" : "FrLocationAgregateurSOS",
+      "StructureDefinition-FrAppointmentSAS.html" : "FrAppointmentSAS",
+      "StructureDefinition-FrPractitionerRoleExerciceAgregateur.html" : "FrPractitionerRoleExerciceAgregateur"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/search-entry-mode",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "SearchEntryMode",
+      "title" : "SearchEntryMode",
+      "description" : "Why an entry is in the result set - whether it's included as a match or because of an _include requirement, or to convey information or warning information about the search process.",
+      "systems" : ["http://hl7.org/fhir/search-entry-mode"],
+      "oids" : ["2.16.840.1.113883.4.642.3.622"],
+      "sources" : ["2.16.840.1.113883.4.642.3.622"],
+      "uses" : {
+      },
+      "StructureDefinition-BundleAgregateur.html" : "BundleAgregateur",
+      "StructureDefinition-sas-cpts-bundle-aggregator.html" : "BundleAgregateurCPTS",
+      "StructureDefinition-sas-sos-bundle-aggregator.html" : "BundleAgregateurSOS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/security-labels",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "All Security Labels",
+      "title" : "SecurityLabels",
+      "description" : "A single value set for all security labels defined by FHIR.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "http://terminology.hl7.org/CodeSystem/v3-ActUSPrivacyLaw",
+        "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.47"],
+      "sources" : ["2.16.840.1.113883.4.642.3.47"],
+      "uses" : {
+      },
+      "StructureDefinition-FrPractitionerRegul.html" : "FrPractitionerRegul"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/service-category",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ServiceCategory",
+      "title" : "Service category",
+      "description" : "This value set defines an example set of codes that can be used to classify groupings of service-types/specialties.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/service-category"],
+      "oids" : ["2.16.840.1.113883.4.642.3.516"],
+      "sources" : ["2.16.840.1.113883.4.642.3.516"],
+      "uses" : {
+      },
+      "StructureDefinition-FrScheduleAgregateur.html" : "FrScheduleAgregateur",
+      "StructureDefinition-sas-cpts-slot-aggregator.html" : "FrSlotAgregateurCPTS",
+      "StructureDefinition-sas-sos-appointment.html" : "FrAppointmentSASSOS",
+      "StructureDefinition-sas-sos-schedule-aggregator.html" : "FrScheduleAgregateurSOS",
+      "StructureDefinition-sas-sos-slot-aggregator.html" : "FrSlotAgregateurSOS",
+      "StructureDefinition-sas-cpts-healthcareservice-aggregator.html" : "FrHealthcareServiceAgregateurCPTS",
+      "StructureDefinition-FrAppointmentSAS.html" : "FrAppointmentSAS",
+      "StructureDefinition-FrSlotAgregateur.html" : "FrSlotAgregateur"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/service-provision-conditions",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ServiceProvisionConditions",
+      "title" : "ServiceProvisionConditions",
+      "description" : "The code(s) that detail the conditions under which the healthcare service is available/offered.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/service-provision-conditions"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.514"],
+      "sources" : ["2.16.840.1.113883.4.642.3.514"],
+      "uses" : {
+      },
+      "StructureDefinition-sas-cpts-healthcareservice-aggregator.html" : "FrHealthcareServiceAgregateurCPTS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/service-referral-method",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ReferralMethod",
+      "title" : "ReferralMethod",
+      "description" : "The methods of referral can be used when referring to a specific HealthCareService resource.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/service-referral-method"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.510"],
+      "sources" : ["2.16.840.1.113883.4.642.3.510"],
+      "uses" : {
+      },
+      "StructureDefinition-sas-cpts-healthcareservice-aggregator.html" : "FrHealthcareServiceAgregateurCPTS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/service-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ServiceType",
+      "title" : "Service type",
+      "description" : "This value set defines an example set of codes of service-types.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/service-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.518"],
+      "sources" : ["2.16.840.1.113883.4.642.3.518"],
+      "uses" : {
+      },
+      "StructureDefinition-FrScheduleAgregateur.html" : "FrScheduleAgregateur",
+      "StructureDefinition-sas-cpts-slot-aggregator.html" : "FrSlotAgregateurCPTS",
+      "StructureDefinition-sas-sos-appointment.html" : "FrAppointmentSASSOS",
+      "StructureDefinition-sas-sos-schedule-aggregator.html" : "FrScheduleAgregateurSOS",
+      "StructureDefinition-sas-sos-slot-aggregator.html" : "FrSlotAgregateurSOS",
+      "StructureDefinition-sas-cpts-healthcareservice-aggregator.html" : "FrHealthcareServiceAgregateurCPTS",
+      "StructureDefinition-FrAppointmentSAS.html" : "FrAppointmentSAS",
+      "StructureDefinition-FrSlotAgregateur.html" : "FrSlotAgregateur"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/slotstatus",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SlotStatus",
+      "title" : "SlotStatus",
+      "description" : "The free/busy status of the slot.",
+      "systems" : ["http://hl7.org/fhir/slotstatus"],
+      "oids" : ["2.16.840.1.113883.4.642.3.482"],
+      "sources" : ["2.16.840.1.113883.4.642.3.482"],
+      "uses" : {
+      },
+      "StructureDefinition-sas-cpts-slot-aggregator.html" : "FrSlotAgregateurCPTS",
+      "StructureDefinition-sas-sos-slot-aggregator.html" : "FrSlotAgregateurSOS",
+      "StructureDefinition-FrSlotAgregateur.html" : "FrSlotAgregateur"
+    },
+    {
+      "url" : "http://interopsante.org/fhir/ValueSet/fr-location-identifier-type",
+      "version" : "1.0.1",
+      "status" : "active",
+      "name" : "fr-location-identifier-type",
+      "title" : null,
+      "description" : "A coded type for a location | Jeu de valeurs des types d'identifiant de lieu.",
+      "systems" : [
+        "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"
+      ],
+      "oids" : ["2.16.840.1.113883.2.8.1.3.18"],
+      "sources" : ["2.16.840.1.113883.2.8.1.3.18"],
+      "uses" : {
+      },
+      "StructureDefinition-FrLocationAgregateur.html" : "FrLocationAgregateur",
+      "StructureDefinition-sas-sos-location-aggregator.html" : "FrLocationAgregateurSOS"
+    },
+    {
+      "url" : "http://interopsante.org/fhir/ValueSet/fr-location-physical-type",
+      "version" : "1.0.1",
+      "status" : "active",
+      "name" : "fr-location-physical-type",
+      "title" : null,
+      "description" : "French location physical type | Types de lieux physiques pour la France",
+      "systems" : [
+        "http://interopsante.org/fhir/CodeSystem/fr-location-physical-type"
+      ],
+      "oids" : ["2.16.840.1.113883.2.8.1.3.20"],
+      "sources" : ["2.16.840.1.113883.2.8.1.3.20"],
+      "uses" : {
+      },
+      "StructureDefinition-FrLocationAgregateur.html" : "FrLocationAgregateur",
+      "StructureDefinition-sas-sos-location-aggregator.html" : "FrLocationAgregateurSOS"
+    },
+    {
+      "url" : "http://interopsante.org/fhir/ValueSet/fr-location-type",
+      "version" : "1.0.1",
+      "status" : "active",
+      "name" : "fr-location-type",
+      "title" : null,
+      "description" : "A role for a location | Jeu de valeurs du rôle joué par un lieu",
+      "systems" : ["http://interopsante.org/fhir/CodeSystem/fr-location-type"],
+      "oids" : ["2.16.840.1.113883.2.8.1.3.19"],
+      "sources" : ["2.16.840.1.113883.2.8.1.3.19"],
+      "uses" : {
+      },
+      "StructureDefinition-FrLocationAgregateur.html" : "FrLocationAgregateur",
+      "StructureDefinition-sas-sos-location-aggregator.html" : "FrLocationAgregateurSOS"
+    },
+    {
+      "url" : "http://interopsante.org/fhir/ValueSet/fr-organization-identifier-type",
+      "version" : "1.0.1",
+      "status" : "active",
+      "name" : "fr-organization-identifier-type",
+      "title" : null,
+      "description" : "A coded type for an identifier that can be used to determine which identifier to use for    a specific purpose (Organizations).",
+      "systems" : ["http://interopsante.org/CodeSystem/fr-v2-0203"],
+      "oids" : ["2.16.840.1.113883.2.8.1.3.3"],
+      "sources" : ["2.16.840.1.113883.2.8.1.3.3"],
+      "uses" : {
+      },
+      "StructureDefinition-sas-cpts-organization-aggregator.html" : "FrOrganizationAgregateurCPTS",
+      "StructureDefinition-sas-sos-organization-aggregator.html" : "FrOrganizationAgregateurSOS"
+    },
+    {
+      "url" : "http://interopsante.org/fhir/ValueSet/fr-organization-type",
+      "version" : "1.0.1",
+      "status" : "active",
+      "name" : "fr-organization-type",
+      "title" : null,
+      "description" : "Organization types | Types de structures",
+      "systems" : ["http://interopsante.org/fhir/CodeSystem/fr-v2-3307"],
+      "oids" : ["2.16.840.1.113883.2.8.1.3.22"],
+      "sources" : ["2.16.840.1.113883.2.8.1.3.22"],
+      "uses" : {
+      },
+      "StructureDefinition-sas-cpts-organization-aggregator.html" : "FrOrganizationAgregateurCPTS",
+      "StructureDefinition-sas-sos-organization-aggregator.html" : "FrOrganizationAgregateurSOS"
+    },
+    {
+      "url" : "http://interopsante.org/fhir/ValueSet/fr-practioner-identifier-type",
+      "version" : "1.0.1",
+      "status" : "active",
+      "name" : "fr-practioner-identifier-type",
+      "title" : null,
+      "description" : "A coded type for an identifier that can be used to determine which identifier to use for    a specific purpose (providers identification)",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_G08-TypeIdentifiantPersonne/FHIR/TRE-G08-TypeIdentifiantPersonne",
+        "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
+        "http://terminology.hl7.org/CodeSystem/v2-0203"
+      ],
+      "oids" : ["2.16.840.1.113883.2.8.1.3.2"],
+      "sources" : ["2.16.840.1.113883.2.8.1.3.2"],
+      "uses" : {
+      },
+      "StructureDefinition-FrPractitionerRegul.html" : "FrPractitionerRegul",
+      "StructureDefinition-FrPractitionerAgregateur.html" : "FrPractitionerAgregateur"
+    },
+    {
+      "url" : "http://interopsante.org/fhir/ValueSet/fr-practioner-role-exercice",
+      "version" : "1.0.1",
+      "status" : "active",
+      "name" : "fr-practioner-role-exercice",
+      "title" : null,
+      "description" : "Value set specifying the role of the practitioner for the organization | Jeu de valeurs permettant de coder le rôle (la situation d'exercice) du PS dans le contexte d'une organisation.",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R85-RolePriseCharge/FHIR/TRE-R85-RolePriseCharge",
+        "https://mos.esante.gouv.fr/NOS/TRE_R21-Fonction/FHIR/TRE-R21-Fonction",
+        "https://mos.esante.gouv.fr/NOS/TRE_R96-AutreFonctionSanitaire/FHIR/TRE-R96-AutreFonctionSanitaire"
+      ],
+      "oids" : ["2.16.840.1.113883.2.8.1.3.14"],
+      "sources" : ["2.16.840.1.113883.2.8.1.3.14"],
+      "uses" : {
+      },
+      "StructureDefinition-FrPractitionerRoleExerciceAgregateur.html" : "FrPractitionerRoleExerciceAgregateur"
+    },
+    {
+      "url" : "http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty",
+      "version" : "1.0.1",
+      "status" : "active",
+      "name" : "fr-practitioner-specialty",
+      "title" : null,
+      "description" : "The modalities of exercice of the practitioner, registered by an official organization for a period of time.",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-FrScheduleAgregateur.html" : "FrScheduleAgregateur",
+      "StructureDefinition-sas-cpts-slot-aggregator.html" : "FrSlotAgregateurCPTS",
+      "StructureDefinition-sas-sos-appointment.html" : "FrAppointmentSASSOS",
+      "StructureDefinition-sas-sos-schedule-aggregator.html" : "FrScheduleAgregateurSOS",
+      "StructureDefinition-sas-sos-slot-aggregator.html" : "FrSlotAgregateurSOS",
+      "StructureDefinition-sas-cpts-healthcareservice-aggregator.html" : "FrHealthcareServiceAgregateurCPTS",
+      "StructureDefinition-FrAppointmentSAS.html" : "FrAppointmentSAS",
+      "StructureDefinition-FrPractitionerRoleExerciceAgregateur.html" : "FrPractitionerRoleExerciceAgregateur",
+      "StructureDefinition-FrSlotAgregateur.html" : "FrSlotAgregateur"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v2-0116",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "Hl7VSBedStatus",
+      "title" : "hl7VS-bedStatus",
+      "description" : "Value Set of codes that specify the state of a bed in an inpatient setting, and is used to determine if a patient may be assigned to it or not.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0116"],
+      "oids" : ["2.16.840.1.113883.21.51"],
+      "sources" : ["2.16.840.1.113883.21.51"],
+      "uses" : {
+      },
+      "StructureDefinition-FrLocationAgregateur.html" : "FrLocationAgregateur",
+      "StructureDefinition-sas-sos-location-aggregator.html" : "FrLocationAgregateurSOS"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v2-0276",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "Hl7VSAppointmentReasonCodes",
+      "title" : "hl7VS-appointmentReasonCodes",
+      "description" : "Value Set of codes that describe the kind of appointment or the reason why an appointment has been scheduled.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0276"],
+      "oids" : ["2.16.840.1.113883.21.181"],
+      "sources" : ["2.16.840.1.113883.21.181"],
+      "uses" : {
+      },
+      "StructureDefinition-sas-cpts-slot-aggregator.html" : "FrSlotAgregateurCPTS",
+      "StructureDefinition-sas-sos-appointment.html" : "FrAppointmentSASSOS",
+      "StructureDefinition-sas-sos-slot-aggregator.html" : "FrSlotAgregateurSOS",
+      "StructureDefinition-FrAppointmentSAS.html" : "FrAppointmentSAS",
+      "StructureDefinition-FrSlotAgregateur.html" : "FrSlotAgregateur"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v2-2.7-0360",
+      "version" : "0360",
+      "status" : "active",
+      "name" : "v2.0360.2.7",
+      "title" : "v2 table 0360, Version 2.7",
+      "description" : "FHIR Value set/code system definition for HL7 v2 table 0360 ver 2.9 ( Degree/License/Certificate)",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0360|2.7"],
+      "uses" : {
+      },
+      "StructureDefinition-FrPractitionerRegul.html" : "FrPractitionerRegul",
+      "StructureDefinition-FrPractitionerAgregateur.html" : "FrPractitionerAgregateur"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ActEncounterCode",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "ActEncounterCode",
+      "title" : "ActEncounterCode",
+      "description" : "Domain provides codes that qualify the ActEncounterClass (ENC)",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+      "oids" : ["2.16.840.1.113883.1.11.13955"],
+      "sources" : ["2.16.840.1.113883.1.11.13955"],
+      "uses" : {
+      },
+      "StructureDefinition-sas-cpts-slot-aggregator.html" : "FrSlotAgregateurCPTS",
+      "StructureDefinition-FrSlotAgregateur.html" : "FrSlotAgregateur"
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-cpts-valueset-typecreneau",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "TypeCreneauSASCPTS",
+      "title" : "Type créneaux SAS CPTS",
+      "description" : "Type de Créneaux SAS CPTS",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-sas-cpts-slot-aggregator.html" : "FrSlotAgregateurCPTS"
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-sos-valueset-participant-status",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "ParticipantStatusSASSOS",
+      "title" : "Statut participant SAS SOS",
+      "description" : "Statut du participant RDV SAS SOS",
+      "systems" : ["http://hl7.org/fhir/participationstatus"],
+      "uses" : {
+      },
+      "StructureDefinition-sas-sos-appointment.html" : "FrAppointmentSASSOS"
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-sos-valueset-typecreneau",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "TypeCreneauSASSOS",
+      "title" : "Type créneaux SAS SOS",
+      "description" : "Type de Créneaux SAS SOS",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-sas-sos-slot-aggregator.html" : "FrSlotAgregateurSOS"
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-appointmentreason",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "AppointmentReasonSAS",
+      "title" : "Appointment reason SAS",
+      "description" : "Appointment reason SAS",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0276"],
+      "uses" : {
+      },
+      "StructureDefinition-sas-cpts-slot-aggregator.html" : "FrSlotAgregateurCPTS",
+      "StructureDefinition-sas-sos-slot-aggregator.html" : "FrSlotAgregateurSOS"
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-categorieetablissement",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "CategorieEtablissementSAS",
+      "title" : "Catégorie établissement SAS",
+      "description" : "Catégorie d'établissement utilisée dans contexte SAS - CPTS dans un premier temps",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/TRE_R66-CategorieEtablissement"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-sas-cpts-slot-aggregator.html" : "FrSlotAgregateurCPTS"
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-typeconsultation",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "TypeConsultationSAS",
+      "title" : "Type consultation SAS",
+      "description" : "Type de consultations SAS",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+      "uses" : {
+      },
+      "StructureDefinition-sas-sos-slot-aggregator.html" : "FrSlotAgregateurSOS"
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-typeidentifiant",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "TypeIdentifiantSAS",
+      "title" : "Type identifiant SAS",
+      "description" : "Type d'identifiant SAS",
+      "systems" : ["http://interopsante.org/fhir/CodeSystem/fr-v2-0203"],
+      "uses" : {
+      },
+      "StructureDefinition-sas-sos-appointment.html" : "FrAppointmentSASSOS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J101-SecteurActivite-RASS/FHIR/JDV-J101-SecteurActivite-RASS",
+      "version" : "1.3.0",
+      "status" : "active",
+      "name" : "JDV_J101-SecteurActivite-RASS",
+      "title" : null,
+      "description" : "Secteurs d'activité des établissements avec la même activité dans le RASS",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite"
+      ],
+      "oids" : ["1.2.250.1.213.1.6.1.169"],
+      "sources" : ["1.2.250.1.213.1.6.1.169"],
+      "uses" : {
+      },
+      "StructureDefinition-sas-cpts-organization-aggregator.html" : "FrOrganizationAgregateurCPTS",
+      "StructureDefinition-sas-sos-organization-aggregator.html" : "FrOrganizationAgregateurSOS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J105-EnsembleDiplome-RASS/FHIR/JDV-J105-EnsembleDiplome-RASS",
+      "version" : "1.3.0",
+      "status" : "active",
+      "name" : "JDV_J105-EnsembleDiplome-RASS",
+      "title" : null,
+      "description" : "Ensemble des diplômes et qualifications du RASS",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R48-DiplomeEtatFrancais/FHIR/TRE-R48-DiplomeEtatFrancais",
+        "https://mos.esante.gouv.fr/NOS/TRE_R55-CertificatEtudeSpeciale/FHIR/TRE-R55-CertificatEtudeSpeciale",
+        "https://mos.esante.gouv.fr/NOS/TRE_R54-DiplomeUniversiteInterUniversitaire/FHIR/TRE-R54-DiplomeUniversiteInterUniversitaire",
+        "https://mos.esante.gouv.fr/NOS/TRE_R50-DESCGroupe1Diplome/FHIR/TRE-R50-DESCGroupe1Diplome",
+        "https://mos.esante.gouv.fr/NOS/TRE_R226-Dip2iemeCycleNQ/FHIR/TRE-R226-Dip2iemeCycleNQ",
+        "https://mos.esante.gouv.fr/NOS/TRE_R49-DiplomeEtudeSpecialisee/FHIR/TRE-R49-DiplomeEtudeSpecialisee",
+        "https://mos.esante.gouv.fr/NOS/TRE_R52-CapaciteDiplome/FHIR/TRE-R52-CapaciteDiplome",
+        "https://mos.esante.gouv.fr/NOS/TRE_R51-DESCGroupe2Diplome/FHIR/TRE-R51-DESCGroupe2Diplome",
+        "https://mos.esante.gouv.fr/NOS/TRE_R36-AutreDiplomeObtenu/FHIR/TRE-R36-AutreDiplomeObtenu",
+        "https://mos.esante.gouv.fr/NOS/TRE_R58-AutreTypeDiplome/FHIR/TRE-R58-AutreTypeDiplome",
+        "https://mos.esante.gouv.fr/NOS/TRE_R348-FormationSpecialiseeTransversale/FHIR/TRE-R348-FormationSpecialiseeTransversale",
+        "https://mos.esante.gouv.fr/NOS/TRE_R56-Attestation/FHIR/TRE-R56-Attestation",
+        "https://mos.esante.gouv.fr/NOS/TRE_R53-DiplomePaysEEE/FHIR/TRE-R53-DiplomePaysEEE",
+        "https://mos.esante.gouv.fr/NOS/TRE_R57-DiplomeEuropeenEtudeSpecialisee/FHIR/TRE-R57-DiplomeEuropeenEtudeSpecialisee"
+      ],
+      "oids" : ["1.2.250.1.213.1.6.1.173"],
+      "sources" : ["1.2.250.1.213.1.6.1.173"],
+      "uses" : {
+      },
+      "StructureDefinition-FrPractitionerRegul.html" : "FrPractitionerRegul",
+      "StructureDefinition-FrPractitionerAgregateur.html" : "FrPractitionerAgregateur"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J129-CategorieEtablissement-RASS/FHIR/JDV-J129-CategorieEtablissement-RASS",
+      "version" : "1.3.0",
+      "status" : "active",
+      "name" : "JDV_J129-CategorieEtablissement-RASS",
+      "title" : null,
+      "description" : "Catégorie d'établissement du RASS",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement"
+      ],
+      "oids" : ["1.2.250.1.213.1.6.1.215"],
+      "sources" : ["1.2.250.1.213.1.6.1.215"],
+      "uses" : {
+      },
+      "StructureDefinition-sas-cpts-organization-aggregator.html" : "FrOrganizationAgregateurCPTS",
+      "StructureDefinition-sas-sos-organization-aggregator.html" : "FrOrganizationAgregateurSOS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J165-TypeCreneau-SAS/FHIR/JDV-J165-TypeCreneau-SAS",
+      "version" : "1.3.0",
+      "status" : "active",
+      "name" : "JDV_J165-TypeCreneau-SAS",
+      "title" : null,
+      "description" : "Type de créneaux de soins définis par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV selon la visibilité associée",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"
+      ],
+      "oids" : ["1.2.250.1.213.3.4.10"],
+      "sources" : ["1.2.250.1.213.3.4.10"],
+      "uses" : {
+      },
+      "StructureDefinition-FrSlotAgregateur.html" : "FrSlotAgregateur"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J78-Civilite-RASS/FHIR/JDV-J78-Civilite-RASS",
+      "version" : "1.3.0",
+      "status" : "active",
+      "name" : "JDV_J78-Civilite-RASS",
+      "title" : null,
+      "description" : "Civilités des personnes physiques du RASS",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R81-Civilite/FHIR/TRE-R81-Civilite"
+      ],
+      "oids" : ["1.2.250.1.213.1.6.1.146"],
+      "sources" : ["1.2.250.1.213.1.6.1.146"],
+      "uses" : {
+      },
+      "StructureDefinition-FrPractitionerRegul.html" : "FrPractitionerRegul",
+      "StructureDefinition-FrPractitionerAgregateur.html" : "FrPractitionerAgregateur"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J79-CiviliteExercice-RASS/FHIR/JDV-J79-CiviliteExercice-RASS",
+      "version" : "1.3.0",
+      "status" : "active",
+      "name" : "JDV_J79-CiviliteExercice-RASS",
+      "title" : null,
+      "description" : "Civilités d'exercice d'un professionnel du RASS",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R11-CiviliteExercice/FHIR/TRE-R11-CiviliteExercice"
+      ],
+      "oids" : ["1.2.250.1.213.1.6.1.147"],
+      "sources" : ["1.2.250.1.213.1.6.1.147"],
+      "uses" : {
+      },
+      "StructureDefinition-FrPractitionerRegul.html" : "FrPractitionerRegul",
+      "StructureDefinition-FrPractitionerAgregateur.html" : "FrPractitionerAgregateur"
+    }
+  ]
+}
