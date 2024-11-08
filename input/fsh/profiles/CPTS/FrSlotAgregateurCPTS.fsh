@@ -18,7 +18,6 @@ Description: "Profil de Slot, dérivé de FrSlot, pour le service d'agrégation 
 * serviceType[TypeConsultation].extension[sas-servicetype-r5] 0..0
 
 * serviceType[referencecpts] from sas-valueset-categorieetablissement
-//* serviceType[referencecpts] = https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/TRE_R66-CategorieEtablissement#604
 * serviceType[referencecpts].extension[sas-servicetype-r5] 1..1
 * serviceType[referencecpts].extension[sas-servicetype-r5].valueReference only Reference(FrHealthcareServiceAgregateurCPTS)
 
