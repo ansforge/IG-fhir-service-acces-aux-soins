@@ -1,0 +1,27 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/sas/HealthcareService/ExampleHealthcareServiceCPTS1> a fhir:HealthcareService ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ExampleHealthcareServiceCPTS1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-healthcareservice-aggregator"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-healthcareservice-aggregator>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: HealthcareService ExampleHealthcareServiceCPTS1</b></p><a name=\"ExampleHealthcareServiceCPTS1\"> </a><a name=\"hcExampleHealthcareServiceCPTS1\"> </a><a name=\"ExampleHealthcareServiceCPTS1-fr-FR\"> </a><p><b>providedBy</b>: <a href=\"Organization-ExampleOrgaCPTS1.html\">Organization CPTS AXE MAJEUR</a></p></div>"
+  ] ; # 
+  fhir:providedBy [
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Organization/ExampleOrgaCPTS1> ;
+     fhir:reference [ fhir:v "Organization/ExampleOrgaCPTS1" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+
