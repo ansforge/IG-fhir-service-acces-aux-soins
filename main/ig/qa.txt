@@ -1,14 +1,14 @@
 SAS : Validation Results
 =========================================
 
-err = 19, warn = 103, info = 106
+err = 19, warn = 103, info = 108
 IG Publisher Version: 1.6.20 Out of date - current version is 1.7.2
-Generated Mon Nov 18 14:05:47 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.sas#1.0.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/sas)
+Generated Mon Nov 18 15:34:08 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.sas#1.0.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/sas)
  Build Errors : 1 / 6 / 0
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Appointment-1 : 0 / 1 / 3
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Appointment-2 : 0 / 1 / 3
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundleAgregateurSOS : 0 / 22 / 42
- /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundleCPTS : 0 / 12 / 24
+ /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundleCPTS : 0 / 12 / 25
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundlePSIndiv : 0 / 21 / 57
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/CapabilityStatement-SAS-Consommateur-CPTS : 0 / 0 / 1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/CapabilityStatement-SAS-Consommateur-SOS : 1 / 0 / 1
@@ -46,7 +46,7 @@ Generated Mon Nov 18 14:05:47 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.sas#1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Schedule-ExampleScheduleSOS3 : 0 / 1 / 1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/SearchParameter-cptsslot-sp-servicetype : 0 / 0 / 1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/SearchParameter-slot-sp-start : 0 / 1 / 1
- /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Slot-ExampleSlotCPTS1 : 0 / 1 / 1
+ /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Slot-ExampleSlotCPTS1 : 0 / 1 / 2
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Slot-ExampleSlotCPTS2 : 0 / 1 / 1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Slot-ExampleSlotPSIndiv1 : 0 / 1 / 2
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Slot-ExampleSlotPSIndiv2 : 0 / 1 / 2
@@ -128,6 +128,7 @@ WARNING: Bundle/ExampleBundleAgregateurSOS: Bundle.entry[10]: This is not a matc
 WARNING: Bundle/ExampleBundleAgregateurSOS: Bundle.entry[11]: This is not a matching resource type for the specified search (is a search mode needed?) (Slot expecting [Schedule])
 WARNING: Bundle/ExampleBundleAgregateurSOS: Bundle: SearchSet bundles should have search modes on the entries
 == fsh-generated/resources/Bundle-ExampleBundleCPTS.json ==
+INFORMATION: Bundle/ExampleBundleCPTS: Bundle.entry[0].resource.serviceType[2]: This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 WARNING: Bundle/ExampleBundleCPTS: Bundle.entry[0].resource: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 WARNING: Bundle/ExampleBundleCPTS: Bundle.entry[1].resource/*Schedule/ExampleSchedule*/: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 INFORMATION: Bundle/ExampleBundleCPTS: Bundle.entry[2].resource/*Practitioner/ExamplePractitioner*/.identifier[0].type: Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-v2-0203|1.0.1
@@ -259,6 +260,7 @@ WARNING: Schedule/ExampleScheduleSOS3: Schedule: Constraint failed: dom-6: 'A re
 == fsh-generated/resources/SearchParameter-slot-sp-start.json ==
 WARNING: SearchParameter/slot-sp-start: SearchParameter.description: The markdown contains content that appears to be an embedded HTML tag starting at 'Pa'. This will (or SHOULD) be escaped by the presentation layer. The content should be checked to confirm that this is the desired behaviour
 == fsh-generated/resources/Slot-ExampleSlotCPTS1.json ==
+INFORMATION: Slot/ExampleSlotCPTS1: Slot.serviceType[2]: This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 WARNING: Slot/ExampleSlotCPTS1: Slot: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 == fsh-generated/resources/Slot-ExampleSlotCPTS2.json ==
 WARNING: Slot/ExampleSlotCPTS2: Slot: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
