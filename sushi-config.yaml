@@ -16,7 +16,16 @@ jurisdiction: urn:iso:std:iso:3166#FR "FRANCE"
 
 parameters:
     shownav: 'true'
-
+    no-narrative: 
+    - 'Appointment/*'
+    - 'Bundle/*'
+    - 'HealthcareService/*'
+    - 'Location/*'
+    - 'Organization/*'
+    - 'Practitioner/*'
+    - 'Schedule/*'
+    - 'Slot/*'
+    
 dependencies:
     hl7.fhir.fr.core: 1.1.0
     hl7.fhir.extensions.r5: 4.0.1
