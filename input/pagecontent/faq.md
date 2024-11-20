@@ -501,7 +501,30 @@ Le tableau ci-dessous présente les erreurs rencontrées de manière récurrente
 </tbody>
 </table>
 
-### Rendez-vous
+### Gestion des comptes régulateurs
+
+Cette section regroupe les réponses aux questions les plus fréquemment posées au cours des travaux de développements menés par les éditeurs, et les tests d’intégration.
+
+**Pourrions-nous avoir un exemple d’appel dans le cas d’une modification de l’identifiant d’un compte régulateur ?**
+L’exemple ci-dessous concerne la modification de l’identifiant du compte du régulateur Jules MARIUS, initialement associé à l’ID technique SAS `b6e39355-8a61-4556-b340-36f7b95fec6a`. La valorisation de l’élément `identifier.value` à `810002673899` indique le nouvel identifiant à prendre en compte.
+
+<code><pre>curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.213.3.6|b6e39355-8a61-4556-b340-36f7b95fec6a
+-H 'Accept: application/json+fhir' -d
+‘{"resourceType":"Practitioner","id":"1","meta":{"profile":["http://interopsante.org/fhir/StructureDefinition/FrPractitioner"],"source":"urn:oid:1.2.250.1.213.3.6"},"identifier":[{"type":{"coding":[{"system":"http://interopsante.org/fhir/CodeSystem/fr-v2-0203","code":"IDNPS"}]},"system":"urn:oid:1.2.250.1.71.4.2.1","value":"810002673899"}],"active":true,"name":[{"family":"MARIUS","given":["Jules"]}],"telecom":[{"system":"email","value":"jules.marius@test.com"}]}'
+</pre></code>
+
+**Pourrions-nous avoir un exemple d’appel dans le cas d’une modification de l’identifiant d’un compte régulateur ?**
+L’exemple ci-dessous concerne la désactivation du compte du régulateur Jules MARIUS. La valorisation de l’élément `active` à `false` indique que le compte doit être désactivé.
+
+<code><pre>curl -X PUT EDITEUR.fr/Practitioner?identifier= urn:oid:1.2.250.1.71.4.2.1|810002673899
+-H 'Accept: application/json+fhir' -d
+‘{"resourceType":"Practitioner","id":"1","meta":{"profile":["http://interopsante.org/fhir/StructureDefinition/FrPractitioner"],"source":"urn:oid:1.2.250.1.213.3.6"},"identifier":[{"type":{"coding":[{"system":"http://interopsante.org/fhir/CodeSystem/fr-v2-0203","code":"IDNPS"}]},"system":"urn:oid:1.2.250.1.71.4.2.1","value":"810002673899"}],"active":false,"name":[{"family":"MARIUS","given":["Jules"]}],"telecom":[{"system":"email","value":"jules.marius@test.com"}]}'
+</pre></code>
+
+**Est-il nécessaire d’utiliser un nouveau endpoint pour la création des comptes régulateurs dans la solution logicielle éditeur ?**
+Non, le endpoint attendu pour l’envoi des requêtes POST et PUT relatif à la gestion des comptes régulateurs doit être le même que celui transmis et utilisé pour le flux d’agrégation de créneaux de disponibilités.
+
+### Gestion des RDV
 
 #### Comment faire la distinction entre un ID national et un ID technique ?
 
