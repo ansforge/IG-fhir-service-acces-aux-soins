@@ -129,14 +129,22 @@ Le schéma ci-dessous illustre l'échange à mettre en oeuvre :
     <p>{% include gestion_compte_regulateur_put.svg %}</p>
 </div>
 
+
 Afin de limiter le nombre d’appels émis vers les solutions logicielles éditeurs, et éviter d’avoir à gérer des créations ou mises à jour massives de comptes (batch d’initialisation, reprise, etc.), les mécaniques suivantes ont été mises en œuvre pour le déclenchement des requêtes :
 - Pour la création ou modification de compte, le déclenchement de la requête est lié à la connexion de l’utilisateur à la plateforme numérique SAS. Lors de la connexion du régulateur, un contrôle est effectué afin d’identifier si des actions sont à mener dans les solutions logicielles éditeurs. Dans le cas où des solutions sont identifiées, les requêtes correspondantes sont émises et l’état du compte est mis à jour dans la plateforme numérique SAS.
 - Pour la suppression ou retrait d’habilitation uniquement, le déclenchement de la requête est émis instantanément.
 Le schéma ci-dessous illustre les éléments décrits ci-dessus :
 
-<div class="figure" style="width:100%;" align ="center">
-    <p>{% include mecanisme_transmission_regulateurs.png %}</p>
-</div>
+
+<table align="center">
+    <tr>
+        <td align ="center">
+            <div class="figure">
+                <img src="mecanisme_transmission_regulateurs.png" width="80%" height="80%">
+            </div>
+        </td>    
+    </tr>
+</table>
 
 ### Gestion des informations rendez-vous
 
