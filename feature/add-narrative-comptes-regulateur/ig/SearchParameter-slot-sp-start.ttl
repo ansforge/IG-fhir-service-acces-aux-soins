@@ -1,0 +1,46 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/sas/SearchParameter/slot-sp-start> a fhir:SearchParameter ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "slot-sp-start"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: SearchParameter slot-sp-start</b></p><a name=\"slot-sp-start\"> </a><a name=\"hcslot-sp-start\"> </a><a name=\"slot-sp-start-fr-FR\"> </a><h2>SPDateDebutSlot</h2><p>Parameter <code>start</code>:<code>date</code></p><div><p>Paramètre de recherche date de début d'un créneau (date de début supérieure ou égale à &lt;date1&gt; et inférieure ou égale à &lt;date2&gt;)</p>\n</div><table class=\"grid\"><tr><td>Resource</td><td><a href=\"http://hl7.org/fhir/R4/slot.html\">Slot</a></td></tr><tr><td>Expression</td><td><code>Slot.start</code></td></tr><tr><td>Processing Mode</td><td>Normal</td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd: The parameter may repeat in order to specify multiple values that must all be true</li><li>multipleOr: The parameter may only have one value (no comma separators)</li></ul></td></tr><tr><td>Comparators</td><td>Allowed: ge, le</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/SearchParameter/slot-sp-start"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.0.0"] ; # 
+  fhir:name [ fhir:v "SPDateDebutSlot"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2024-11-20T08:18:14+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "ANS"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "ANS" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://esante.gouv.fr" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Paramètre de recherche date de début d'un créneau (date de début supérieure ou égale à <date1> et inférieure ou égale à <date2>)"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "FR" ] ;
+       fhir:display [ fhir:v "FRANCE" ]
+     ] )
+  ] ) ; # 
+  fhir:code [ fhir:v "start"] ; # 
+  fhir:base ( [ fhir:v "Slot"] ) ; # 
+  fhir:type [ fhir:v "date"] ; # 
+  fhir:expression [ fhir:v "Slot.start"] ; # 
+  fhir:xpathUsage [ fhir:v "normal"] ; # 
+  fhir:multipleOr [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:multipleAnd [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:comparator ( [ fhir:v "ge"] [ fhir:v "le"] ) . # 
+
+# -------------------------------------------------------------------------------------
+
