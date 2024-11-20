@@ -41,8 +41,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"10.2"}
-    h3,h4,h5,h6{--heading-prefix:"10.2"}</style>
+    <style type="text/css">h2{--heading-prefix:"11.2"}
+    h3,h4,h5,h6{--heading-prefix:"11.2"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -103,6 +103,9 @@
       </li>
       <li>
         <a href="specifications_techniques-ps-recherche_creneaux.html">PS indiv. - Recherche des créneaux</a>
+      </li>
+      <li>
+        <a href="specifications_techniques-ps-gestion_regulateur.html">PS indiv. - Gestion des comptes régulateurs</a>
       </li>
       <li>
         <a href="specifications_techniques-ps-gestion_rdv.html">PS indiv. - Gestion de rendez-vous</a>
@@ -223,7 +226,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul id="markdown-toc">
   <li><a href="#agrégateur-ps-à-titre-individuel---cpts" id="markdown-toc-agrégateur-ps-à-titre-individuel---cpts">Agrégateur PS à titre individuel - CPTS</a></li>
   <li><a href="#agrégateur-sos-médecins" id="markdown-toc-agrégateur-sos-médecins">Agrégateur SOS Médecins</a></li>
-  <li><a href="#rendez-vous" id="markdown-toc-rendez-vous">Rendez-vous</a></li>
+  <li><a href="#gestion-des-comptes-régulateurs" id="markdown-toc-gestion-des-comptes-régulateurs">Gestion des comptes régulateurs</a></li>
+  <li><a href="#gestion-des-rdv" id="markdown-toc-gestion-des-rdv">Gestion des RDV</a></li>
 </ul>
 
 </div>
@@ -728,7 +732,30 @@ Dans la structure du fichier de réponse, si un créneau est associé à plusieu
 </tbody>
 </table>
 
-<h3 id="rendez-vous">Rendez-vous</h3>
+<h3 id="gestion-des-comptes-régulateurs">Gestion des comptes régulateurs</h3>
+
+<p>Cette section regroupe les réponses aux questions les plus fréquemment posées au cours des travaux de développements menés par les éditeurs, et les tests d’intégration.</p>
+
+<p><strong>Pourrions-nous avoir un exemple d’appel dans le cas d’une modification de l’identifiant d’un compte régulateur ?</strong>
+L’exemple ci-dessous concerne la modification de l’identifiant du compte du régulateur Jules MARIUS, initialement associé à l’ID technique SAS <code class="language-plaintext highlighter-rouge">b6e39355-8a61-4556-b340-36f7b95fec6a</code>. La valorisation de l’élément <code class="language-plaintext highlighter-rouge">identifier.value</code> à <code class="language-plaintext highlighter-rouge">810002673899</code> indique le nouvel identifiant à prendre en compte.</p>
+
+<p><code>&lt;pre&gt;curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.213.3.6|b6e39355-8a61-4556-b340-36f7b95fec6a
+-H 'Accept: application/json+fhir' -d
+‘{"resourceType":"Practitioner","id":"1","meta":{"profile":["http://interopsante.org/fhir/StructureDefinition/FrPractitioner"],"source":"urn:oid:1.2.250.1.213.3.6"},"identifier":[{"type":{"coding":[{"system":"http://interopsante.org/fhir/CodeSystem/fr-v2-0203","code":"IDNPS"}]},"system":"urn:oid:1.2.250.1.71.4.2.1","value":"810002673899"}],"active":true,"name":[{"family":"MARIUS","given":["Jules"]}],"telecom":[{"system":"email","value":"jules.marius@test.com"}]}'
+&lt;/pre&gt;</code></p>
+
+<p><strong>Pourrions-nous avoir un exemple d’appel dans le cas d’une modification de l’identifiant d’un compte régulateur ?</strong>
+L’exemple ci-dessous concerne la désactivation du compte du régulateur Jules MARIUS. La valorisation de l’élément <code class="language-plaintext highlighter-rouge">active</code> à <code class="language-plaintext highlighter-rouge">false</code> indique que le compte doit être désactivé.</p>
+
+<p><code>&lt;pre&gt;curl -X PUT EDITEUR.fr/Practitioner?identifier= urn:oid:1.2.250.1.71.4.2.1|810002673899
+-H 'Accept: application/json+fhir' -d
+‘{"resourceType":"Practitioner","id":"1","meta":{"profile":["http://interopsante.org/fhir/StructureDefinition/FrPractitioner"],"source":"urn:oid:1.2.250.1.213.3.6"},"identifier":[{"type":{"coding":[{"system":"http://interopsante.org/fhir/CodeSystem/fr-v2-0203","code":"IDNPS"}]},"system":"urn:oid:1.2.250.1.71.4.2.1","value":"810002673899"}],"active":false,"name":[{"family":"MARIUS","given":["Jules"]}],"telecom":[{"system":"email","value":"jules.marius@test.com"}]}'
+&lt;/pre&gt;</code></p>
+
+<p><strong>Est-il nécessaire d’utiliser un nouveau endpoint pour la création des comptes régulateurs dans la solution logicielle éditeur ?</strong>
+Non, le endpoint attendu pour l’envoi des requêtes POST et PUT relatif à la gestion des comptes régulateurs doit être le même que celui transmis et utilisé pour le flux d’agrégation de créneaux de disponibilités.</p>
+
+<h3 id="gestion-des-rdv">Gestion des RDV</h3>
 
 <h4 id="comment-faire-la-distinction-entre-un-id-national-et-un-id-technique-">Comment faire la distinction entre un ID national et un ID technique ?</h4>
 
@@ -777,7 +804,7 @@ Dans les spécifications <strong>SAS_SPEC INT_R02_Gestion des comptes régulateu
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Nov 20, 2024 08:18+0000">2024-11-20</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Nov 20, 2024 17:30+0000">2024-11-20</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
