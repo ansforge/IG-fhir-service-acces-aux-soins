@@ -1,4 +1,4 @@
-<!-- Gestion de rendez-vous -->
+<!-- Gestion régulateurs -->
 
 ### Caractéristiques de l'API
 
@@ -113,7 +113,7 @@ Pour consulter l'exemple en plein écran, cliquer [ici](./Practitioner-ExamplePr
 <tbody>
 <tr>
   <td width="25%"><p><strong>Interaction FHIR</strong></p></td>
-  <td><p>Conditional update<a href="#_ftn1" name="_ftnref1">[1]</a></p></td>
+  <td><p>Conditional update<a href="#_ftn1" name="_ftnref1">[2]</a></p></td>
 </tr>
 <tr>
   <td width="25%"><p><strong>Méthode http associée</strong></p></td>
@@ -129,7 +129,7 @@ Pour consulter l'exemple en plein écran, cliquer [ici](./Practitioner-ExamplePr
 </tr>
 </tbody>
 </table>
-<p><a href="#_ftnref1" name="_ftn1">[1]</a> <a href="https://www.hl7.org/fhir/http.html#cond-update">https://www.hl7.org/fhir/http.html#cond-update</a> et <a href="https://www.hl7.org/fhir/http.html#general">https://www.hl7.org/fhir/http.html#general</a></p>
+<p><a href="#_ftnref2" name="_ftn2">[2]</a> <a href="https://www.hl7.org/fhir/http.html#cond-update">https://www.hl7.org/fhir/http.html#cond-update</a> et <a href="https://www.hl7.org/fhir/http.html#general">https://www.hl7.org/fhir/http.html#general</a></p>
 
 #### Construction de la réponse de base
 
@@ -145,6 +145,7 @@ Si la création est un succès, le serveur répond :
 Plus de précision sur la spécification FHIR :
 <https://www.hl7.org/fhir/http.html>
 
+
 ##### Réponse de base -- Echec
 
 Lien vers la spécification FHIR :
@@ -154,15 +155,14 @@ Si la recherche échoue, le serveur doit répondre :
 
 -   Un header avec un un code erreur HTTP 4XX ou 5XX
 
--   Un body contenant une ressource OperationOutcome[^3] qui donne les
+-   Un body contenant une ressource OperationOutcome[3] qui donne les
     détails sur la raison de l'échec
 
 À titre d'information, les codes erreurs classiques sont les suivants :
 - 400 (Bad request) – Le format de la requête FHIR transmise est incorrect
 - 422 (Unprocessable Entity) – L'action demandée ne peut pas être réalisée à cause d’une règle interne à l’application.
 
-Plus de précision sur la spécification FHIR :
-<https://www.hl7.org/fhir/http.html>
+<p><a href="#_ftnref3" name="_ftn3">[3]</a> <a href="https://www.hl7.org/fhir/operationoutcome.html"><https://www.hl7.org/fhir/operationoutcome.html></a></p>
 
 
 ### Règles de gestion

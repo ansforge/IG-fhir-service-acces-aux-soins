@@ -216,7 +216,7 @@ Les éditeurs ont la possibilité de récupérer les référentiels nationaux de
           "code": "CPTS"
         }
       ]
-    },
+    }
   </pre></code>
   </p>
   </td>
@@ -255,7 +255,7 @@ Les éditeurs ont la possibilité de récupérer les référentiels nationaux de
           {
             "text": "Pédiatrie"
           }
-        ],
+        ]
       </pre></code>
     </p>
   </td>
@@ -267,46 +267,91 @@ Les éditeurs ont la possibilité de récupérer les référentiels nationaux de
   - Le type de soins correspondant aux structures de CPTS<br>
   Exemple :
   <code><pre>
-        "serviceType": [
+    "resourceType" : "Slot",
+    "id" : "ExampleSlotCPTS2",
+    "meta" : {
+      "profile" : [
+        🔗 "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator"
+      ],
+      "security" : [
+        {
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
+          "code" : "PUBLIC"
+        },
+        {
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
+          "code" : "CPTS"
+        }
+      ]
+    },
+    "serviceType" : [
+      {
+        "coding" : [
           {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-                "code": "VR"
-              }
-            ]
-          },
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-                "code": "AMB"
-              }
-            ]
-          },
-          {
-            "text": "Suivi médical"
-          },
-          {
-            "text": "Pédiatrie"
-          },
-          {
-            "coding": [
-              {
-                "system": "https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement",
-                "code": "604"
-              }
-            ],
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType",
-                "valueReference": {
-                  "reference": "HealthcareService/e9e31708-9550-4197-8c32-ae541b6a5cbd"
-                }
-              }
-            ]
-          },
+            "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+            "code" : "AMB"
+          }
         ],
+        "text" : "Visite de contrôle"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType",
+            "valueReference" : {
+              🔗 "reference" : "HealthcareService/ExampleHealthcareServiceCPTS1"
+            }
+          }
+        ],
+        "coding" : [
+          {
+            "system" : "https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement",
+            "code" : "604"
+          }
+        ]
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType",
+            "valueReference" : {
+              🔗 "reference" : "HealthcareService/ExampleHealthcareServiceCPTS2"
+            }
+          }
+        ],
+        "coding" : [
+          {
+            "system" : "https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement",
+            "code" : "604"
+          }
+        ]
+      }
+    ],
+    "specialty" : [
+      {
+        "coding" : [
+          {
+            "system" : "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
+            "code" : "SM54"
+          }
+        ]
+      }
+    ],
+    "appointmentType" : {
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/v2-0276",
+          "code" : "ROUTINE"
+        }
+      ]
+    },
+    "schedule" : {
+      🔗 "reference" : "Schedule/ExampleSchedule"
+    },
+    "status" : "free",
+    "start" : "2024-06-12T16:40:00.000+02:00",
+    "end" : "2024-06-12T17:00:00.000+02:00",
+    "comment" : "https://exemple.com/rdv/com/"
   </pre></code>
   - Il sera également attendu de transmettre les ressources HealthcareService et Organization correspondantes (cf. tableau de valeur et nomenclature 2.3.1 et 2.3.2)
   </p>
@@ -342,7 +387,7 @@ Les éditeurs ont la possibilité de récupérer les référentiels nationaux de
         "relation": "self",
         "url": "https://exemple.com/ans-sas/Slot/?_include=Slot:schedule&_include:iterate=Schedule:actor&status=free&start=ge2021-11-04T14:19:35.760+00:00&start=le2021-11-06T23:59:59.999+00:00&schedule.actor:Practitioner.identifier=urn:oid:1.2.250.1.71.4.2.1%7C810002673899,urn:oid:1.2.250.1.71.4.2.1%7C810100050075&_count=1000"
       }
-    ],
+    ]
   </pre></code>
   </p>
   </td>
@@ -355,7 +400,12 @@ Les éditeurs ont la possibilité de récupérer les référentiels nationaux de
 <tr>
   <td><p>10</p></td>
   <td><p>Créneau mis en visibilité de 2 CPTS</p></td>
-  <td><p><i>à venir</i></p></td>
+  <td><p><i>Lorsqu’un créneau est mis en visibilité de plusieurs CPTS, les ressources associées pour faire le lien avec chacune de ces CPTS sont attendues :  <br>
+  Exemple :
+  <code><pre>
+
+  </pre></code>
+  </i></p></td>
 </tr>
 <tr>
   <td><p>11</p></td>
@@ -457,7 +507,7 @@ Le tableau ci-dessous présente les erreurs rencontrées de manière récurrente
           "code": "SNP"
         }
       ]
-    },
+    }
   </pre></code>
   </p>
   </td>
@@ -487,7 +537,7 @@ Le tableau ci-dessous présente les erreurs rencontrées de manière récurrente
         "relation": "self",
         "url": "https://editeur.fr/Schedule?_revinclude=Slot:schedule&_include=Schedule:actor:Location&_include:iterate=Location:organization&_has:Slot:schedule:start=ge2023-08-18T09:00:00+02:00&_has:Slot:schedule:start=le2023-08-20T08:00:00+02:00&_has:Slot:schedule:status=free&actor:Location.organization.identifier=urn:oid:1.2.250.1.71.4.2.2%7C334173748400020,urn:oid:1.2.250.1.71.4.2.2%7C392080466300010&_count=1000"
       }
-    ],
+    ]
   </pre></code>
   </p>
   </td>
@@ -508,17 +558,95 @@ Cette section regroupe les réponses aux questions les plus fréquemment posées
 **Pourrions-nous avoir un exemple d’appel dans le cas d’une modification de l’identifiant d’un compte régulateur ?**
 L’exemple ci-dessous concerne la modification de l’identifiant du compte du régulateur Jules MARIUS, initialement associé à l’ID technique SAS `b6e39355-8a61-4556-b340-36f7b95fec6a`. La valorisation de l’élément `identifier.value` à `810002673899` indique le nouvel identifiant à prendre en compte.
 
-<code><pre>curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.213.3.6|b6e39355-8a61-4556-b340-36f7b95fec6a
--H 'Accept: application/json+fhir' -d
-‘{"resourceType":"Practitioner","id":"1","meta":{"profile":["http://interopsante.org/fhir/StructureDefinition/FrPractitioner"],"source":"urn:oid:1.2.250.1.213.3.6"},"identifier":[{"type":{"coding":[{"system":"http://interopsante.org/fhir/CodeSystem/fr-v2-0203","code":"IDNPS"}]},"system":"urn:oid:1.2.250.1.71.4.2.1","value":"810002673899"}],"active":true,"name":[{"family":"MARIUS","given":["Jules"]}],"telecom":[{"system":"email","value":"jules.marius@test.com"}]}'
+<ins>Requête</ins>
+curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.213.3.6|b6e39355-8a61-4556-b340-36f7b95fec6a -H 'Accept: application/json+fhir' -d
+
+<ins>Résultat</ins>
+<code><pre>
+    "resourceType": "Practitioner",
+    "id": "1",
+    "meta": {
+        "profile": [
+            "http://interopsante.org/fhir/StructureDefinition/FrPractitioner"
+        ],
+        "source": "urn:oid:1.2.250.1.213.3.6"
+    },
+    "identifier": [
+        {
+            "type": {
+                "coding": [
+                    {
+                        "system": "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
+                        "code": "IDNPS"
+                    }
+                ]
+            },
+            "system": "urn:oid:1.2.250.1.71.4.2.1",
+            "value": "810002673899"
+        }
+    ],
+    "active": true,
+    "name": [
+        {
+            "family": "MARIUS",
+            "given": [
+                "Jules"
+            ]
+        }
+    ],
+    "telecom": [
+        {
+            "system": "email",
+            "value": "jules.marius@test.com"
+        }
+    ]
 </pre></code>
 
 **Pourrions-nous avoir un exemple d’appel dans le cas d’une modification de l’identifiant d’un compte régulateur ?**
 L’exemple ci-dessous concerne la désactivation du compte du régulateur Jules MARIUS. La valorisation de l’élément `active` à `false` indique que le compte doit être désactivé.
 
-<code><pre>curl -X PUT EDITEUR.fr/Practitioner?identifier= urn:oid:1.2.250.1.71.4.2.1|810002673899
--H 'Accept: application/json+fhir' -d
-‘{"resourceType":"Practitioner","id":"1","meta":{"profile":["http://interopsante.org/fhir/StructureDefinition/FrPractitioner"],"source":"urn:oid:1.2.250.1.213.3.6"},"identifier":[{"type":{"coding":[{"system":"http://interopsante.org/fhir/CodeSystem/fr-v2-0203","code":"IDNPS"}]},"system":"urn:oid:1.2.250.1.71.4.2.1","value":"810002673899"}],"active":false,"name":[{"family":"MARIUS","given":["Jules"]}],"telecom":[{"system":"email","value":"jules.marius@test.com"}]}'
+<ins>Requête</ins>
+curl -X PUT EDITEUR.fr/Practitioner?identifier= urn:oid:1.2.250.1.71.4.2.1|810002673899 -H 'Accept: application/json+fhir' -d
+
+<ins>Résultat</ins>
+<code><pre>
+    "resourceType": "Practitioner",
+    "id": "1",
+    "meta": {
+        "profile": [
+            "http://interopsante.org/fhir/StructureDefinition/FrPractitioner"
+        ],
+        "source": "urn:oid:1.2.250.1.213.3.6"
+    },
+    "identifier": [
+        {
+            "type": {
+                "coding": [
+                    {
+                        "system": "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
+                        "code": "IDNPS"
+                    }
+                ]
+            },
+            "system": "urn:oid:1.2.250.1.71.4.2.1",
+            "value": "810002673899"
+        }
+    ],
+    "active": false,
+    "name": [
+        {
+            "family": "MARIUS",
+            "given": [
+                "Jules"
+            ]
+        }
+    ],
+    "telecom": [
+        {
+            "system": "email",
+            "value": "jules.marius@test.com"
+        }
+    ]
 </pre></code>
 
 **Est-il nécessaire d’utiliser un nouveau endpoint pour la création des comptes régulateurs dans la solution logicielle éditeur ?**
