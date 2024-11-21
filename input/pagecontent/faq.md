@@ -602,8 +602,8 @@ L’exemple ci-dessous concerne la modification de l’identifiant du compte du 
 curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.213.3.6|b6e39355-8a61-4556-b340-36f7b95fec6a -H 'Accept: application/json+fhir' -d
 
 <ins>Résultat</ins>
-<code><pre>
-"resourceType": "Practitioner",
+<code>
+  `{"resourceType": "Practitioner",
     "id": "1",
     "meta": {
         "profile": [
@@ -639,8 +639,8 @@ curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.213.3.6|b6e3935
             "system": "email",
             "value": "jules.marius@test.com"
         }
-    ]
-</pre></code>
+    ]}`  
+</code>
 
 **Pourrions-nous avoir un exemple d’appel dans le cas d’une modification de l’identifiant d’un compte régulateur ?**
 
@@ -650,8 +650,8 @@ L’exemple ci-dessous concerne la désactivation du compte du régulateur Jules
 curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.71.4.2.1|810002673899 -H 'Accept: application/json+fhir' -d
 
 <ins>Résultat</ins>
-<code>
-    "resourceType": "Practitioner",
+<code><pre>
+    {"resourceType": "Practitioner",
     "id": "1",
     "meta": {
         "profile": [
@@ -687,7 +687,8 @@ curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.71.4.2.1|810002
             "system": "email",
             "value": "jules.marius@test.com"
         }
-    ]
+    ]}
+</pre>
 </code>
 
 **Est-il nécessaire d’utiliser un nouveau endpoint pour la création des comptes régulateurs dans la solution logicielle éditeur ?**
