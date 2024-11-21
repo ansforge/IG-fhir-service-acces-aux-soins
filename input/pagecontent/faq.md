@@ -267,7 +267,98 @@ Les éditeurs ont la possibilité de récupérer les référentiels nationaux de
   - Le type de soins correspondant aux structures de CPTS<br>
   Exemple :
   <code><pre>
-    "resourceType" : "Slot",
+      "serviceType": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "VR"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "AMB"
+              }
+            ]
+          },
+          {
+            "text": "Suivi médical"
+          },
+          {
+            "text": "Pédiatrie"
+          },
+          {
+            "coding": [
+              {
+                "system": "https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement",
+                "code": "604"
+              }
+            ],
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType",
+                "valueReference": {
+                  "reference": "HealthcareService/e9e31708-9550-4197-8c32-ae541b6a5cbd"
+                }
+              }
+            ]
+          }
+        ]
+  </pre></code>
+  - Il sera également attendu de transmettre les ressources HealthcareService et Organization correspondantes (cf. tableau de valeur et nomenclature 2.3.1 et 2.3.2)
+  </p>
+  </td>
+</tr>
+<tr>
+  <td><p>6</p></td>
+  <td><p>Gestion des multiples lieux<br>de consultation</p></td>
+  <td><p>Lorsqu'un PS dispose de créneaux associés à différents lieux de consultation, il est attendu que l'ensemble des créneaux soient remontés, et soient associés au bon lieu de consultation.</p></td>
+</tr>
+<tr>
+  <td><p>7</p></td>
+  <td><p>Gestion des multiples PS</p></td>
+  <td><p>Lorsqu'une recherche est faite sur plusieurs PS ayant des créneaux disponibles dans la solution logicielle, il est attendu que l'ensemble des créneaux soient remontés, et soient associés au bon PS.</p></td>
+</tr>
+<tr>
+  <td><p>8</p></td>
+  <td><p>Gestion de l'absence de créneaux<br>et agenda PS</p></td>
+  <td><p>Lorsqu'aucun créneau n'est disponible ou qu'aucun des PS de la recherche n'est présent dans la solution logicielle, un bundle de réponse vide est attendu.<br>
+  Exemple :
+  <code><pre>
+    "resourceType": "Bundle",
+    "id": "8cbb33dc-779e-45e9-a5f6-ea66101288c5",
+    "meta": {
+      "profile": [
+        "http://sas.fr/fhir/StructureDefinition/BundleAgregateur"
+      ]
+    },
+    "type": "searchset",
+    "total": 0,
+    "link": [
+      {
+        "relation": "self",
+        "url": "https://exemple.com/ans-sas/Slot/?_include=Slot:schedule&_include:iterate=Schedule:actor&status=free&start=ge2021-11-04T14:19:35.760+00:00&start=le2021-11-06T23:59:59.999+00:00&schedule.actor:Practitioner.identifier=urn:oid:1.2.250.1.71.4.2.1%7C810002673899,urn:oid:1.2.250.1.71.4.2.1%7C810100050075&_count=1000"
+      }
+    ]
+  </pre></code>
+  </p>
+  </td>
+</tr>
+<tr>
+  <td><p>9</p></td>
+  <td><p>Eléments vide</p></td>
+  <td><p>Lorsqu'une information optionnelle n'est pas renseignée dans la solution logicielle, l'élément correspondant ne doit pas être transmis au niveau de la réponse. Il ne faut pas transmettre un élément vide.</p></td>
+</tr>
+<tr>
+  <td><p>10</p></td>
+  <td><p>Créneau mis en visibilité de 2 CPTS</p></td>
+  <td><p><i>Lorsqu’un créneau est mis en visibilité de plusieurs CPTS, les ressources associées pour faire le lien avec chacune de ces CPTS sont attendues :  <br>
+  Exemple :
+  <code><pre>
+  "resourceType" : "Slot",
     "id" : "ExampleSlotCPTS2",
     "meta" : {
       "profile" : [
@@ -352,58 +443,6 @@ Les éditeurs ont la possibilité de récupérer les référentiels nationaux de
     "start" : "2024-06-12T16:40:00.000+02:00",
     "end" : "2024-06-12T17:00:00.000+02:00",
     "comment" : "https://exemple.com/rdv/com/"
-  </pre></code>
-  - Il sera également attendu de transmettre les ressources HealthcareService et Organization correspondantes (cf. tableau de valeur et nomenclature 2.3.1 et 2.3.2)
-  </p>
-  </td>
-</tr>
-<tr>
-  <td><p>6</p></td>
-  <td><p>Gestion des multiples lieux<br>de consultation</p></td>
-  <td><p>Lorsqu'un PS dispose de créneaux associés à différents lieux de consultation, il est attendu que l'ensemble des créneaux soient remontés, et soient associés au bon lieu de consultation.</p></td>
-</tr>
-<tr>
-  <td><p>7</p></td>
-  <td><p>Gestion des multiples PS</p></td>
-  <td><p>Lorsqu'une recherche est faite sur plusieurs PS ayant des créneaux disponibles dans la solution logicielle, il est attendu que l'ensemble des créneaux soient remontés, et soient associés au bon PS.</p></td>
-</tr>
-<tr>
-  <td><p>8</p></td>
-  <td><p>Gestion de l'absence de créneaux<br>et agenda PS</p></td>
-  <td><p>Lorsqu'aucun créneau n'est disponible ou qu'aucun des PS de la recherche n'est présent dans la solution logicielle, un bundle de réponse vide est attendu.<br>
-  Exemple :
-  <code><pre>
-    "resourceType": "Bundle",
-    "id": "8cbb33dc-779e-45e9-a5f6-ea66101288c5",
-    "meta": {
-      "profile": [
-        "http://sas.fr/fhir/StructureDefinition/BundleAgregateur"
-      ]
-    },
-    "type": "searchset",
-    "total": 0,
-    "link": [
-      {
-        "relation": "self",
-        "url": "https://exemple.com/ans-sas/Slot/?_include=Slot:schedule&_include:iterate=Schedule:actor&status=free&start=ge2021-11-04T14:19:35.760+00:00&start=le2021-11-06T23:59:59.999+00:00&schedule.actor:Practitioner.identifier=urn:oid:1.2.250.1.71.4.2.1%7C810002673899,urn:oid:1.2.250.1.71.4.2.1%7C810100050075&_count=1000"
-      }
-    ]
-  </pre></code>
-  </p>
-  </td>
-</tr>
-<tr>
-  <td><p>9</p></td>
-  <td><p>Eléments vide</p></td>
-  <td><p>Lorsqu'une information optionnelle n'est pas renseignée dans la solution logicielle, l'élément correspondant ne doit pas être transmis au niveau de la réponse. Il ne faut pas transmettre un élément vide.</p></td>
-</tr>
-<tr>
-  <td><p>10</p></td>
-  <td><p>Créneau mis en visibilité de 2 CPTS</p></td>
-  <td><p><i>Lorsqu’un créneau est mis en visibilité de plusieurs CPTS, les ressources associées pour faire le lien avec chacune de ces CPTS sont attendues :  <br>
-  Exemple :
-  <code><pre>
-
   </pre></code>
   </i></p></td>
 </tr>
@@ -606,10 +645,10 @@ curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.213.3.6|b6e3935
 L’exemple ci-dessous concerne la désactivation du compte du régulateur Jules MARIUS. La valorisation de l’élément `active` à `false` indique que le compte doit être désactivé.
 
 <ins>Requête</ins>
-curl -X PUT EDITEUR.fr/Practitioner?identifier= urn:oid:1.2.250.1.71.4.2.1|810002673899 -H 'Accept: application/json+fhir' -d
+curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.71.4.2.1|810002673899 -H 'Accept: application/json+fhir' -d
 
 <ins>Résultat</ins>
-<code><pre>
+<code>
     "resourceType": "Practitioner",
     "id": "1",
     "meta": {
@@ -647,7 +686,7 @@ curl -X PUT EDITEUR.fr/Practitioner?identifier= urn:oid:1.2.250.1.71.4.2.1|81000
             "value": "jules.marius@test.com"
         }
     ]
-</pre></code>
+</code>
 
 **Est-il nécessaire d’utiliser un nouveau endpoint pour la création des comptes régulateurs dans la solution logicielle éditeur ?**
 Non, le endpoint attendu pour l’envoi des requêtes POST et PUT relatif à la gestion des comptes régulateurs doit être le même que celui transmis et utilisé pour le flux d’agrégation de créneaux de disponibilités.
