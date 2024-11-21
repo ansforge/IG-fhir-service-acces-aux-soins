@@ -839,8 +839,8 @@ Dans la structure du fichier de réponse, si un créneau est associé à plusieu
 curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.213.3.6|b6e39355-8a61-4556-b340-36f7b95fec6a -H ‘Accept: application/json+fhir’ -d</p>
 
 <p><ins>Résultat</ins>
-<code>&lt;pre&gt;
-"resourceType": "Practitioner",
+<code>
+  `{"resourceType": "Practitioner",
     "id": "1",
     "meta": {
         "profile": [
@@ -876,8 +876,8 @@ curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.213.3.6|b6e3935
             "system": "email",
             "value": "jules.marius@test.com"
         }
-    ]
-&lt;/pre&gt;</code></p>
+    ]}`  
+</code></p>
 
 <p><strong>Pourrions-nous avoir un exemple d’appel dans le cas d’une modification de l’identifiant d’un compte régulateur ?</strong></p>
 
@@ -887,8 +887,8 @@ curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.213.3.6|b6e3935
 curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.71.4.2.1|810002673899 -H ‘Accept: application/json+fhir’ -d</p>
 
 <p><ins>Résultat</ins>
-<code>
-    "resourceType": "Practitioner",
+<code>&lt;pre&gt;
+    {"resourceType": "Practitioner",
     "id": "1",
     "meta": {
         "profile": [
@@ -924,7 +924,8 @@ curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.71.4.2.1|810002
             "system": "email",
             "value": "jules.marius@test.com"
         }
-    ]
+    ]}
+&lt;/pre&gt;
 </code></p>
 
 <p><strong>Est-il nécessaire d’utiliser un nouveau endpoint pour la création des comptes régulateurs dans la solution logicielle éditeur ?</strong></p>
@@ -980,7 +981,7 @@ Dans les spécifications <strong>SAS_SPEC INT_R02_Gestion des comptes régulateu
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Nov 21, 2024 16:14+0000">2024-11-21</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Nov 21, 2024 17:02+0000">2024-11-21</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
