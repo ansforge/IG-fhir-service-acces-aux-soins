@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "SAS"] ; # 
   fhir:title [ fhir:v "Service d'Accès aux Soins"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2024-11-21T17:02:54+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-11-26T17:16:10+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -1027,11 +1027,41 @@
          fhir:value [ fhir:v "Practitioner" ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/ExamplePractitionerRegul> ;
-         fhir:reference [ fhir:v "Practitioner/ExamplePractitionerRegul" ]
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/ExamplePractitionerRegul1> ;
+         fhir:reference [ fhir:v "Practitioner/ExamplePractitionerRegul1" ]
        ] ;
-       fhir:name [ fhir:v "ExamplePractitionerRegul" ] ;
+       fhir:name [ fhir:v "ExamplePractitionerRegul1" ] ;
        fhir:description [ fhir:v "Exemple 1 practitioner flux régulateur" ] ;
+       fhir:example [
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Practitioner" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/1> ;
+         fhir:reference [ fhir:v "Practitioner/1" ]
+       ] ;
+       fhir:name [ fhir:v "ExamplePractitionerRegul2" ] ;
+       fhir:description [ fhir:v "Exemple 2 practitioner flux régulateur" ] ;
+       fhir:example [
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Practitioner" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/2> ;
+         fhir:reference [ fhir:v "Practitioner/2" ]
+       ] ;
+       fhir:name [ fhir:v "ExamplePractitionerRegul3" ] ;
+       fhir:description [ fhir:v "Exemple 3 practitioner flux régulateur" ] ;
        fhir:example [
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul>
