@@ -4,7 +4,7 @@ InstanceOf: FrPractitionerRegul
 Description: "Exemple 3 practitioner flux régulateur"
 Usage: #example
 
-* id = "1"
+* id = "2"
 * identifier.type = $fr-v2-0203#IDNPS
 * identifier.system = "urn:oid:1.2.250.1.71.4.2.1"
 * identifier.value = "810002673899"
