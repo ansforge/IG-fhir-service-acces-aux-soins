@@ -525,6 +525,7 @@ Le tableau ci-dessous présente les erreurs rencontrées de manière récurrente
     </p>
   </td>
 </tr>
+<tr>
   <td><p>3</p></td>
   <td><p>Type de créneau</p></td>
   <td><p>L'ensemble des types associés aux créneaux doivent être transmis, sous forme codifiée, au niveau de l'élément meta.security. Pour le cas d’usage SOS Médecins, les codes applicables sont : PUBLIC et SNP<br>

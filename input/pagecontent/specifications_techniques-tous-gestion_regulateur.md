@@ -155,15 +155,12 @@ Si la recherche échoue, le serveur doit répondre :
 
 -   Un header avec un un code erreur HTTP 4XX ou 5XX
 
--   Un body contenant une ressource OperationOutcome[3] qui donne les
+-   Un body contenant une ressource OperationOutcome qui donne les
     détails sur la raison de l'échec
 
 À titre d'information, les codes erreurs classiques sont les suivants :
 - 400 (Bad request) – Le format de la requête FHIR transmise est incorrect
 - 422 (Unprocessable Entity) – L'action demandée ne peut pas être réalisée à cause d’une règle interne à l’application.
-
-<p><a href="#_ftnref3" name="_ftn3">[3]</a> <a href="https://www.hl7.org/fhir/operationoutcome.html"><https://www.hl7.org/fhir/operationoutcome.html></a></p>
-
 
 ### Règles de gestion
 
