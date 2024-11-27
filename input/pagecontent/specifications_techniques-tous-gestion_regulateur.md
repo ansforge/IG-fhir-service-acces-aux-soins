@@ -102,7 +102,7 @@ La requête ci-dessous correspond à la création ou mise à jour du compte de S
 
 Pour consulter l'exemple en plein écran, cliquer [ici](./Practitioner-ExamplePractitionerRegul1.json.html).
 
-<iframe src="./Practitioner-ExamplePractitionerRegul.json" width="100%" height="300" style="border: 1px solid #cccccc; border-radius: 4px; background: #f5f2f0;" scrolling="yes"></iframe>
+<iframe src="./Practitioner-ExamplePractitionerRegul1.json" width="100%" height="300" style="border: 1px solid #cccccc; border-radius: 4px; background: #f5f2f0;" scrolling="yes"></iframe>
 <br>
 
 ### Mise à jour d'un compte régulateur
