@@ -613,7 +613,7 @@ L’exemple ci-dessous concerne la désactivation du compte du régulateur Jules
 curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.71.4.2.1|810002673899 -H 'Accept: application/json+fhir' -d
 
 <ins>Résultat</ins>
-<iframe src="./Practitioner-2.json" width="100%" style="border: 1px solid #cccccc; border-radius: 4px; background: #f5f2f0;" scrolling="yes"></iframe>
+<iframe src="./Practitioner-2.json" width="100%" allow="fullscreen" style="border: 1px solid #cccccc; border-radius: 4px; background: #f5f2f0;" scrolling="yes"></iframe>
 <br>
 
 **Est-il nécessaire d’utiliser un nouveau endpoint pour la création des comptes régulateurs dans la solution logicielle éditeur ?**
