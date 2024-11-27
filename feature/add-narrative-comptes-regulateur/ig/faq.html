@@ -263,7 +263,7 @@ urn:oid:1.2.250.1.71.4.2.2 = IDNST</p>
 
 <p>Les ressources locations doivent être contenues <code class="language-plaintext highlighter-rouge">contained</code> dans la ressource <code class="language-plaintext highlighter-rouge">PractitionerRole</code> associée. Par ailleurs, au niveau de la ressource <code class="language-plaintext highlighter-rouge">PractitionerRole</code>, la référence vers la ressource <code class="language-plaintext highlighter-rouge">Location</code> doit être indiquée.</p>
 
-<h4 id="quelle-est-la-ressource-discriminante-au-niveau-de-la-structure-du-fichier-de-réponse-json-">Quelle est la ressource discriminante au niveau de la structure du fichier de réponse JSON ?</h4>
+<h4 id="quelle-est-la-ressource-discriminante-au-niveau-de-la-structure-de-réponse-json-">Quelle est la ressource discriminante au niveau de la structure de réponse JSON ?</h4>
 <p>Il est attendu dans le fichier de réponse JSON d’avoir 1 ressource <code class="language-plaintext highlighter-rouge">Schedule</code> pour 1 ressource <code class="language-plaintext highlighter-rouge">PractitionerRole</code>. Cela se traduit par le fait d’avoir 1 agenda pour 1 lieu de consultation. Dans la structure du fichier de réponse, un PS aura ainsi autant d’agendas que de lieux de consultation.</p>
 
 <h4 id="quelles-sont-les-ressources-à-transmettre-lorsquun-créneau-de-disponibilité-transmis-est-mis-en-visibilité-dune-ou-plusieurs-cpts-">Quelles sont les ressources à transmettre lorsqu’un créneau de disponibilité transmis est mis en visibilité d’une ou plusieurs CPTS ?</h4>
@@ -420,7 +420,7 @@ Dans la structure du fichier de réponse, si un créneau est associé à plusieu
       },
       {
         "text": "ORL"
-      },
+      }]
   </pre></code>
   </p>
   </td>
@@ -500,7 +500,7 @@ Dans la structure du fichier de réponse, si un créneau est associé à plusieu
   </td>
 </tr>
 <tr>
-  <td><p>&nbsp;</p></td>
+  <td><p>6</p></td>
   <td><p>Créneau de type CPTS</p></td>
   <td><p>Dans le cas d'un créneau mis en visibilité d'une (ou plusieurs) CPTS, des données supplémentaires sont à renseigner au sein de la ressource Slot, au niveau du serviceType.<br />
   - Le type de soins correspondant aux structures de CPTS<br />
@@ -552,17 +552,17 @@ Dans la structure du fichier de réponse, si un créneau est associé à plusieu
   </td>
 </tr>
 <tr>
-  <td><p>6</p></td>
+  <td><p>7</p></td>
   <td><p>Gestion des multiples lieux<br />de consultation</p></td>
   <td><p>Lorsqu'un PS dispose de créneaux associés à différents lieux de consultation, il est attendu que l'ensemble des créneaux soient remontés, et soient associés au bon lieu de consultation.</p></td>
 </tr>
 <tr>
-  <td><p>7</p></td>
+  <td><p>8</p></td>
   <td><p>Gestion des multiples PS</p></td>
   <td><p>Lorsqu'une recherche est faite sur plusieurs PS ayant des créneaux disponibles dans la solution logicielle, il est attendu que l'ensemble des créneaux soient remontés, et soient associés au bon PS.</p></td>
 </tr>
 <tr>
-  <td><p>8</p></td>
+  <td><p>9</p></td>
   <td><p>Gestion de l'absence de créneaux<br />et agenda PS</p></td>
   <td><p>Lorsqu'aucun créneau n'est disponible ou qu'aucun des PS de la recherche n'est présent dans la solution logicielle, un bundle de réponse vide est attendu.<br />
   Exemple :
@@ -587,12 +587,12 @@ Dans la structure du fichier de réponse, si un créneau est associé à plusieu
   </td>
 </tr>
 <tr>
-  <td><p>9</p></td>
+  <td><p>10</p></td>
   <td><p>Eléments vide</p></td>
   <td><p>Lorsqu'une information optionnelle n'est pas renseignée dans la solution logicielle, l'élément correspondant ne doit pas être transmis au niveau de la réponse. Il ne faut pas transmettre un élément vide.</p></td>
 </tr>
 <tr>
-  <td><p>10</p></td>
+  <td><p>11</p></td>
   <td><p>Créneau mis en visibilité de 2 CPTS</p></td>
   <td><p>Lorsqu’un créneau est mis en visibilité de plusieurs CPTS, les ressources associées pour faire le lien avec chacune de ces CPTS sont attendues :  <br />
   Exemple :
@@ -686,7 +686,7 @@ Dans la structure du fichier de réponse, si un créneau est associé à plusieu
   </p></td>
 </tr>
 <tr>
-  <td><p>11</p></td>
+  <td><p>12</p></td>
   <td><p>Créneau non rattaché à une CPTS</p></td>
   <td><p>
     Si pour une ressource Slot, le type de créneau ne contient pas la valorisation `CPTS` (ID 14) mais uniquement PUBLIC, PRO et/ou SNP, alors aucune donnée supplémentaire n’est attendue.<br />
@@ -711,7 +711,7 @@ Dans la structure du fichier de réponse, si un créneau est associé à plusieu
 
 <p>Il est attendu l’URL de redirection vers l’agenda du point fixe de garde (PFG) et dans la mesure du possible vers le créneau sélectionné directement.</p>
 
-<h4 id="quelle-est-la-ressource-discriminante-au-niveau-de-la-structure-du-fichier-de-réponse-json--1">Quelle est la ressource discriminante au niveau de la structure du fichier de réponse JSON ?</h4>
+<h4 id="quelle-est-la-ressource-discriminante-au-niveau-de-la-structure-de-réponse-json--1">Quelle est la ressource discriminante au niveau de la structure de réponse JSON ?</h4>
 <p>Il est attendu dans le fichier de réponse JSON d’avoir 1 ressource Schedule pour 1 ressource Location. Cela se traduit par le fait d’avoir 1 agenda pour 1 point fixe de garde (lieu de consultation). Dans la structure du fichier de réponse, une association SOS Médecins aura ainsi autant d’agendas que de points fixes de garde (PFG).</p>
 
 <h4 id="quelles-sont-les-principales-erreurs-rencontrées-au-cours-des-tests--1">Quelles sont les principales erreurs rencontrées au cours des tests ?</h4>
@@ -850,7 +850,7 @@ curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.213.3.6|b6e3935
 curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.71.4.2.1|810002673899 -H ‘Accept: application/json+fhir’ -d</p>
 
 <p><ins>Résultat</ins></p>
-<iframe src="./Practitioner-2.json" width="100%" allow="fullscreen" style="border: 1px solid #cccccc; border-radius: 4px; background: #f5f2f0;" scrolling="yes"></iframe>
+<iframe src="./Practitioner-2.json" width="100%" height="300" style="border: 1px solid #cccccc; border-radius: 4px; background: #f5f2f0;" scrolling="yes"></iframe>
 <p><br /></p>
 
 <p><strong>Est-il nécessaire d’utiliser un nouveau endpoint pour la création des comptes régulateurs dans la solution logicielle éditeur ?</strong></p>
@@ -906,7 +906,7 @@ Dans les spécifications <strong>SAS_SPEC INT_R02_Gestion des comptes régulateu
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Nov 27, 2024 09:36+0000">2024-11-27</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Nov 27, 2024 09:56+0000">2024-11-27</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
