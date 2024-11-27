@@ -100,7 +100,7 @@ Plus de précision sur la spécification FHIR :
 
 La requête ci-dessous correspond à la création ou mise à jour du compte de Sébastien LORIDON, dont l’identifiant national est `3456780581/11242343` et le mail `sebastien.loridon@test.com`.
 
-Pour consulter l'exemple en plein écran, cliquer [ici](./Practitioner-ExamplePractitionerRegul.json.html).
+Pour consulter l'exemple en plein écran, cliquer [ici](./Practitioner-ExamplePractitionerRegul1.json.html).
 
 <iframe src="./Practitioner-ExamplePractitionerRegul.json" width="100%" height="300" style="border: 1px solid #cccccc; border-radius: 4px; background: #f5f2f0;" scrolling="yes"></iframe>
 <br>
@@ -113,7 +113,7 @@ Pour consulter l'exemple en plein écran, cliquer [ici](./Practitioner-ExamplePr
 <tbody>
 <tr>
   <td width="25%"><p><strong>Interaction FHIR</strong></p></td>
-  <td><p>Conditional update<a href="#_ftn1" name="_ftnref1">[2]</a></p></td>
+  <td><p>Conditional update<a href="#_ftn2" name="_ftnref2">[2]</a></p></td>
 </tr>
 <tr>
   <td width="25%"><p><strong>Méthode http associée</strong></p></td>

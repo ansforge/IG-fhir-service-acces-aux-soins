@@ -24,7 +24,7 @@ Il est attendu l'URL de redirection vers l'agenda du PS concerné et non l'URL d
 
 Les ressources locations doivent être contenues `contained` dans la ressource `PractitionerRole` associée. Par ailleurs, au niveau de la ressource `PractitionerRole`, la référence vers la ressource `Location` doit être indiquée.
 
-#### Quelle est la ressource discriminante au niveau de la structure du fichier de réponse JSON ?
+#### Quelle est la ressource discriminante au niveau de la structure de réponse JSON ?
 Il est attendu dans le fichier de réponse JSON d'avoir 1 ressource `Schedule` pour 1 ressource `PractitionerRole`. Cela se traduit par le fait d’avoir 1 agenda pour 1 lieu de consultation. Dans la structure du fichier de réponse, un PS aura ainsi autant d'agendas que de lieux de consultation.
 
 #### Quelles sont les ressources à transmettre lorsqu'un créneau de disponibilité transmis est mis en visibilité d'une ou plusieurs CPTS ?
@@ -181,7 +181,7 @@ Les éditeurs ont la possibilité de récupérer les référentiels nationaux de
       },
       {
         "text": "ORL"
-      },
+      }]
   </pre></code>
   </p>
   </td>
@@ -261,7 +261,7 @@ Les éditeurs ont la possibilité de récupérer les référentiels nationaux de
   </td>
 </tr>
 <tr>
-  <td><p>&nbsp;</p></td>
+  <td><p>6</p></td>
   <td><p>Créneau de type CPTS</p></td>
   <td><p>Dans le cas d'un créneau mis en visibilité d'une (ou plusieurs) CPTS, des données supplémentaires sont à renseigner au sein de la ressource Slot, au niveau du serviceType.<br>
   - Le type de soins correspondant aux structures de CPTS<br>
@@ -313,17 +313,17 @@ Les éditeurs ont la possibilité de récupérer les référentiels nationaux de
   </td>
 </tr>
 <tr>
-  <td><p>6</p></td>
+  <td><p>7</p></td>
   <td><p>Gestion des multiples lieux<br>de consultation</p></td>
   <td><p>Lorsqu'un PS dispose de créneaux associés à différents lieux de consultation, il est attendu que l'ensemble des créneaux soient remontés, et soient associés au bon lieu de consultation.</p></td>
 </tr>
 <tr>
-  <td><p>7</p></td>
+  <td><p>8</p></td>
   <td><p>Gestion des multiples PS</p></td>
   <td><p>Lorsqu'une recherche est faite sur plusieurs PS ayant des créneaux disponibles dans la solution logicielle, il est attendu que l'ensemble des créneaux soient remontés, et soient associés au bon PS.</p></td>
 </tr>
 <tr>
-  <td><p>8</p></td>
+  <td><p>9</p></td>
   <td><p>Gestion de l'absence de créneaux<br>et agenda PS</p></td>
   <td><p>Lorsqu'aucun créneau n'est disponible ou qu'aucun des PS de la recherche n'est présent dans la solution logicielle, un bundle de réponse vide est attendu.<br>
   Exemple :
@@ -348,12 +348,12 @@ Les éditeurs ont la possibilité de récupérer les référentiels nationaux de
   </td>
 </tr>
 <tr>
-  <td><p>9</p></td>
+  <td><p>10</p></td>
   <td><p>Eléments vide</p></td>
   <td><p>Lorsqu'une information optionnelle n'est pas renseignée dans la solution logicielle, l'élément correspondant ne doit pas être transmis au niveau de la réponse. Il ne faut pas transmettre un élément vide.</p></td>
 </tr>
 <tr>
-  <td><p>10</p></td>
+  <td><p>11</p></td>
   <td><p>Créneau mis en visibilité de 2 CPTS</p></td>
   <td><p>Lorsqu’un créneau est mis en visibilité de plusieurs CPTS, les ressources associées pour faire le lien avec chacune de ces CPTS sont attendues :  <br>
   Exemple :
@@ -447,7 +447,7 @@ Les éditeurs ont la possibilité de récupérer les référentiels nationaux de
   </p></td>
 </tr>
 <tr>
-  <td><p>11</p></td>
+  <td><p>12</p></td>
   <td><p>Créneau non rattaché à une CPTS</p></td>
   <td><p>
     Si pour une ressource Slot, le type de créneau ne contient pas la valorisation `CPTS` (ID 14) mais uniquement PUBLIC, PRO et/ou SNP, alors aucune donnée supplémentaire n’est attendue.<br>
@@ -474,7 +474,7 @@ Les éléments `identifier.system`, `identifier.type` et `identifier.value` sont
 
 Il est attendu l’URL de redirection vers l’agenda du point fixe de garde (PFG) et dans la mesure du possible vers le créneau sélectionné directement.
 
-#### Quelle est la ressource discriminante au niveau de la structure du fichier de réponse JSON ?
+#### Quelle est la ressource discriminante au niveau de la structure de réponse JSON ?
 Il est attendu dans le fichier de réponse JSON d’avoir 1 ressource Schedule pour 1 ressource Location. Cela se traduit par le fait d’avoir 1 agenda pour 1 point fixe de garde (lieu de consultation). Dans la structure du fichier de réponse, une association SOS Médecins aura ainsi autant d’agendas que de points fixes de garde (PFG).
 
 #### Quelles sont les principales erreurs rencontrées au cours des tests ?
@@ -613,7 +613,7 @@ L’exemple ci-dessous concerne la désactivation du compte du régulateur Jules
 curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.71.4.2.1|810002673899 -H 'Accept: application/json+fhir' -d
 
 <ins>Résultat</ins>
-<iframe src="./Practitioner-2.json" width="100%" allow="fullscreen" style="border: 1px solid #cccccc; border-radius: 4px; background: #f5f2f0;" scrolling="yes"></iframe>
+<iframe src="./Practitioner-2.json" width="100%" height="300" style="border: 1px solid #cccccc; border-radius: 4px; background: #f5f2f0;" scrolling="yes"></iframe>
 <br>
 
 **Est-il nécessaire d’utiliser un nouveau endpoint pour la création des comptes régulateurs dans la solution logicielle éditeur ?**
