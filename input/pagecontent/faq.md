@@ -586,7 +586,6 @@ Le tableau ci-dessous présente les erreurs rencontrées de manière récurrente
   <td><p>Eléments vide</p></td>
   <td><p>Lorsqu'une information optionnelle n'est pas renseignée dans la solution logicielle, l'élément correspondant ne doit pas être transmis au niveau de la réponse. Il ne faut pas transmettre un élément vide.</p></td>
 </tr>
-</tr>
 </tbody>
 </table>
 
