@@ -168,7 +168,7 @@ Cette section détaille les règles de gestion à utiliser au niveau des éléme
 - **ID : 1 – Identifiant national du régulateur :**
   - Le régulateur n’a potentiellement pas d’identifiant national à date ou n’a pas rattaché son identifiant national à son compte SAS. Par défaut il aura un ID technique SAS. Lorsque l’ajout ou le rattachement de l’identifiant national sera effectué, l’information sera transmise dans une requête de mise à jour.
 - **ID : 2 – Autorité d'affectation :**
-  - CLorsque l’identifiant transmis est un ID national, le champ est valorisé à `urn:oid:1.2.250.1.71.4.2.1`. Lorsque l’identifiant transmis est un ID technique SAS, il est valorisé à `urn:oid:1.2.250.1.213.3.6`.
+  - Lorsque l’identifiant transmis est un ID national, le champ est valorisé à `urn:oid:1.2.250.1.71.4.2.1`. Lorsque l’identifiant transmis est un ID technique SAS, il est valorisé à `urn:oid:1.2.250.1.213.3.6`.
 - **ID : 3 – Type d'identifiant :**
   - Lorsque l’identifiant transmis est un ID national, le champ type.coding.code est valorisé à `IDNPS`. Lorsque l’identifiant transmis est un ID technique SAS, il est valorisé à `INTRN`.
 - **ID : 4 – Habilitation (active ou non) :**

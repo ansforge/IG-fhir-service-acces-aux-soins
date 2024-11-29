@@ -625,6 +625,6 @@ Non, le endpoint attendu pour l’envoi des requêtes POST et PUT relatif à la 
 #### Comment faire la distinction entre un ID national et un ID technique ?
 
 Un ID national possède une structure bien définie dont les spécificités sont explicitées ici. Un identifiant technique SAS prendra la forme d'un UUID (ex. b6e39355-8a61-4556-b340-36f7b95fec6a) où une REGEX peut-être implémentée côté éditeur.
-Dans les spécifications **SAS_SPEC INT_R02_Gestion des comptes régulateurs**, au sein de la requête, les champs `identifier.system` (autorité d'affectation) et `identifier.type` (type d'identifiant) permettent d'indiquer s'il s'agit d'un identifiant technique SAS ou d'un identifiant national.
+Cf. [règles de gestion comptes régulateurs](./specifications_techniques-ps-gestion_regulateur.html#r%C3%A8gles-de-gestion), au sein de la requête, les champs `identifier.system` (autorité d'affectation) et `identifier.type` (type d'identifiant) permettent d'indiquer s'il s'agit d'un identifiant technique SAS ou d'un identifiant national.
 <br><br>
 
