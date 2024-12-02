@@ -99,10 +99,7 @@ Plus de précision sur la spécification FHIR :
 
 La requête ci-dessous correspond à la création ou mise à jour du compte de Sébastien LORIDON, dont l’identifiant national est `3456780581/11242343` et le mail `sebastien.loridon@test.com`.
 
-Pour consulter l'exemple en plein écran, cliquer [ici](./Practitioner-ExamplePractitionerRegul1.json.html).
-
-<iframe src="./Practitioner-ExamplePractitionerRegul1.json" width="100%" height="300" style="border: 1px solid #cccccc; border-radius: 4px; background: #f5f2f0;" scrolling="yes"></iframe>
-<br>
+{%include Practitioner-ExamplePractitionerRegul1-json-html.xhtml%}
 
 ### Mise à jour d'un compte régulateur
 
