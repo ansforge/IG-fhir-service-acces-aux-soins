@@ -215,7 +215,10 @@ La réponse ci-dessous correspond à :
     - Pour le motif `Visite de contrôle` et `Consultation de suivi pneumologique`
     - Les spécialités codifiées associées sont SM41 et SM54
 
-{%include Bundle-ExampleBundlePSIndiv-json-html.xhtml%}
+Pour consulter l'exemple en plein écran, cliquer [ici](./Bundle-ExampleBundlePSIndiv.html).
+
+<iframe src="./Bundle-ExampleBundlePSIndiv.json" width="100%" height="300" style="border: 1px solid #cccccc; border-radius: 4px; background: #f5f2f0;" scrolling="yes"></iframe>
+<br>
 
 ### Nomenclatures
 
