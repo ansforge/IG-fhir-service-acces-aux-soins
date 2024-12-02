@@ -607,7 +607,7 @@ curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.213.3.6|b6e3935
 <iframe src="./ExamplePractitionerRegul2.json" width="100%" height="300" style="border: 1px solid #cccccc; border-radius: 4px; background: #f5f2f0;" scrolling="yes"></iframe>
 <br>
 
-Practitioner-1
+{%include Practitioner-ExamplePractitionerRegul2-json.html%}
 
 **Pourrions-nous avoir un exemple d’appel dans le cas d’une modification de l’identifiant d’un compte régulateur ?**
 
