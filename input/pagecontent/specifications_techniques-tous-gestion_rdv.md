@@ -100,10 +100,7 @@ Plus de précision sur la spécification FHIR :
 
 La requête ci-dessous correspond à la transmission d'un RDV pris par le régulateur avec un identifiant national 3456780581/11242343 avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h.
 
-Pour consulter l'exemple en plein écran, cliquer [ici](./Appointment-1.json.html).
-
-<iframe src="./Appointment-1.json" width="100%" height="300" style="border: 1px solid #cccccc; border-radius: 4px; background: #f5f2f0;" scrolling="yes"></iframe>
-<br>
+{%include Appointment-1-json-html.xhtml%}
 
 ### Mise à jour de rendez-vous
 
@@ -174,10 +171,7 @@ Plus de précision sur la spécification FHIR :
 
 La requête ci-dessous correspond à la transmission d’un RDV pris par le régulateur avec un identifiant national 3456780581/11242343 avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h, dont le statut est annulé.
 
-Pour consulter l'exemple en plein écran, cliquer [ici](./Appointment-2.json.html).
-
-<iframe src="./Appointment-2.json" width="100%" height="300" style="border: 1px solid #cccccc; border-radius: 4px; background: #f5f2f0;" scrolling="yes"></iframe>
-<br>
+{%include Appointment-2-json-html.xhtml%}
 
 ### Nomenclatures
 
