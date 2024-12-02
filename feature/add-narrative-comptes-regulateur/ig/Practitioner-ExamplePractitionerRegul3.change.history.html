@@ -1,3 +1,5 @@
+<!-- layouts\layout-changehistory.html -->
+<!-- get modelType -->
 
 
 <?xml version="1.0" encoding="UTF-8"?>
@@ -5,7 +7,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>ExamplePractitionerRegul3 - TTL Representation - Service d'Accès aux Soins v1.0.0</title>
+    <title> - Service d'Accès aux Soins v1.0.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -43,8 +45,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"14.57"}
-    h3,h4,h5,h6{--heading-prefix:"14.57"}</style>
+    <style type="text/css">h2{--heading-prefix:""}
+    h3,h4,h5,h6{--heading-prefix:""}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -184,15 +186,11 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>ExamplePractitionerRegul3</b></li>
+          
 
           <span style="float:right;">
 
-            <a href="Practitioner-2.json.html">&lt;prev</a> | 
-
             <a href="#bottom">bottom</a>
-
-          | <a href="PractitionerRole-ExamplePractitionerRoleAgregateur.html">next&gt;</a>
 
           </span>
 
@@ -206,9 +204,10 @@
         <div class="row">
           <div class="inner-wrapper">
 
-<div style="counter-reset: section 9" class="col-12">
-<!--ReleaseHeader--><p id="publish-box">Service d'Accès aux Soins - Local Development build (v1.0.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/fhir/sas/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
 
+<div style="counter-reset: section 10" class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Service d'Accès aux Soins - Local Development build (v1.0.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/fhir/sas/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  
 
 
 
@@ -220,28 +219,28 @@
 <ul class="nav nav-tabs">
 
   <li>
-    <a href="Practitioner-2.html">Narrative Content</a>
+    <a href="Practitioner-ExamplePractitionerRegul3.html">Narrative Content</a>
   </li>
 
 
 
   
     <li>
-      <a href="Practitioner-2.xml.html">XML</a>
+      <a href="Practitioner-ExamplePractitionerRegul3.xml.html">XML</a>
     </li>
   
 
 
   
     <li>
-      <a href="Practitioner-2.json.html">JSON</a>
+      <a href="Practitioner-ExamplePractitionerRegul3.json.html">JSON</a>
     </li>
   
 
 
   
-    <li class="active">
-      <a href="#">TTL</a>
+    <li>
+      <a href="Practitioner-ExamplePractitionerRegul3.ttl.html">TTL</a>
     </li>
   
 
@@ -250,63 +249,14 @@
 </ul>
 
 
-<a name="root"> </a>
+  <a name="root"> </a>
+  <h2 id="root">: Practitioner/ExamplePractitionerRegul3 - Change History</h2>
+  <p>History of changes for ExamplePractitionerRegul3 .</p>
 
-
-<h2 id="root">: ExamplePractitionerRegul3 - TTL Representation</h2>
-
-
-<p><a href="Practitioner-2.ttl" no-download="true">Raw ttl</a> | <a href="Practitioner-2.ttl" download>Download</a></p>
-
-  <!-- insert intro if present -->
   
-
-
-
-  <pre class="rdf" style="white-space: pre; overflow: hidden"><code class="language-turtle">
-@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
-@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
-@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
-@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
-
-# - resource -------------------------------------------------------------------
-
- a fhir:Practitioner ;
-  <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot ;
-  <a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;2&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.meta">fhir:meta</a> [
-    ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul&gt;     ] )
-  ] ; # 
-  <a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.identifier">fhir:identifier</a> ( [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">fhir:type</a> [
-      ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://interopsante.org/fhir/CodeSystem/fr-v2-0203&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;IDNPS&quot; ]       ] )     ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;urn:oid:1.2.250.1.71.4.2.1&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;810002673899&quot; ]
-  ] ) ; # 
-  <a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.active">fhir:active</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:v</a> &quot;false&quot;^^xsd:boolean] ; # 
-  <a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.name">fhir:name</a> ( [
-<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.family">fhir:family</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;MARIUS&quot; ] ;
-    ( <a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">fhir:given</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Jules&quot; ] )
-  ] ) ; # 
-  <a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.telecom">fhir:telecom</a> ( [
-<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;email&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;jules.marius@test.com&quot; ]
-  ] ) . # 
-
-</code></pre>
-
-
-
-  <!-- insert notes if present -->
-  
-
-
 
 </div>
+
         </div>  <!-- /inner-wrapper -->
       </div>  <!-- /row -->
     </div>  <!-- /container -->
@@ -314,6 +264,8 @@
 
   <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
   <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/tabs.js"> </script>
 
 <script type="text/javascript" src="assets/js/window-hash.js"> </script>
   <a name="bottom"> </a>
@@ -326,7 +278,7 @@
             <tr>
               <td style="text-align:left">&#xA0;
 
-                <a href="Practitioner-2.json.html">&lt;prev</a>
+                <span style="visibility:hidden">&lt;prev</span>
 
               </td>
               <td style="text-align:center">
@@ -334,7 +286,7 @@
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="PractitionerRole-ExamplePractitionerRoleAgregateur.html">next&gt;</a>
+                <span style="visibility:hidden">next&gt;</span>
 
               </td>
             </tr>
@@ -344,7 +296,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Nov 29, 2024 11:08+0000">2024-11-29</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Dec 2, 2024 13:27+0000">2024-12-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
