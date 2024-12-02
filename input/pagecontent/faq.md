@@ -153,12 +153,14 @@ Les éditeurs ont la possibilité de récupérer les référentiels nationaux de
     <p>Une logique corrigeant le format du numéro de téléphone renseigné dans la solution logicielle doit être mise en oeuvre.<br>
     Rappel du format attendu : <strong>+33XXXXXXXXX</strong>
     <code><pre>
-      "telecom": [
+      {
+        "telecom": [
         {
           "system": "phone",
           "value": "+33XXXXXXXXX"
         }
       ]
+      }
     </pre></code>
     </p>
   </td>
@@ -602,8 +604,10 @@ L’exemple ci-dessous concerne la modification de l’identifiant du compte du 
 curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.213.3.6|b6e39355-8a61-4556-b340-36f7b95fec6a -H 'Accept: application/json+fhir' -d
 
 <ins>Résultat</ins>
-<iframe src="./Practitioner-1.json" width="100%" height="300" style="border: 1px solid #cccccc; border-radius: 4px; background: #f5f2f0;" scrolling="yes"></iframe>
+<iframe src="./ExamplePractitionerRegul2.json" width="100%" height="300" style="border: 1px solid #cccccc; border-radius: 4px; background: #f5f2f0;" scrolling="yes"></iframe>
 <br>
+
+Practitioner-1
 
 **Pourrions-nous avoir un exemple d’appel dans le cas d’une modification de l’identifiant d’un compte régulateur ?**
 
@@ -613,7 +617,7 @@ L’exemple ci-dessous concerne la désactivation du compte du régulateur Jules
 curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.71.4.2.1|810002673899 -H 'Accept: application/json+fhir' -d
 
 <ins>Résultat</ins>
-<iframe src="./Practitioner-2.json" width="100%" height="300" style="border: 1px solid #cccccc; border-radius: 4px; background: #f5f2f0;" scrolling="yes"></iframe>
+<iframe src="./ExamplePractitionerRegul3.json" width="100%" height="300" style="border: 1px solid #cccccc; border-radius: 4px; background: #f5f2f0;" scrolling="yes"></iframe>
 <br>
 
 **Est-il nécessaire d’utiliser un nouveau endpoint pour la création des comptes régulateurs dans la solution logicielle éditeur ?**

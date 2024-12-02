@@ -103,7 +103,6 @@ Le schéma ci-dessous présente une synthèse de la structure attendue :
 </div>
 
 ### Gestion des comptes régulateurs
-
 L’objectif de cette interface, flux INT_R02, est de permettre la gestion automatisée des comptes régulateurs 
 SAS qui auront besoin d’accéder aux solutions logicielles de prise de RDV dans le cadre de leurs fonctions. 
 Cela prend en compte la création, la modification ou la suppression des comptes identifiés.
