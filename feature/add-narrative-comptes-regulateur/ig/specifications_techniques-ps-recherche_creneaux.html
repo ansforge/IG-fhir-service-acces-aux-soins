@@ -481,10 +481,619 @@ HTTP 200 OK
   </li>
 </ol>
 
-<p>Pour consulter l’exemple en plein écran, cliquer <a href="./Bundle-ExampleBundlePSIndiv.html">ici</a>.</p>
-
-<iframe src="./Bundle-ExampleBundlePSIndiv.json" width="100%" height="300" style="border: 1px solid #cccccc; border-radius: 4px; background: #f5f2f0;" scrolling="yes"></iframe>
-<p><br /></p>
+<pre class="json" style="white-space: pre; text-wrap: nowrap;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">
+{
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle">resourceType</a>" : "Bundle",
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.id">id</a>" : "ExampleBundlePSIndiv",
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      <a href="StructureDefinition-BundleAgregateur.html" style="color: Maroon">&#x1F517;</a> "http://sas.fr/fhir/StructureDefinition/BundleAgregateur"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.type">type</a>" : "searchset",
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.total">total</a>" : 4,
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.link">link</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.link.relation">relation</a>" : "self",
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.link.url">url</a>" : "https://exemple.com/ans-sas/Slot/?_include=Slot:schedule&amp;_include:iterate=Schedule:actor&amp;status=free&amp;start=ge2021-11-04T14:19:35.760+00:00&amp;start=le2021-11-06T23:59:59.999+00:00&amp;schedule.actor:Practitioner.identifier=urn:oid:1.2.250.1.71.4.2.1%7C810002673899,urn:oid:1.2.250.1.71.4.2.1%7C810100050075&amp;_count=1000"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv1",
+      "<a href="http://hl7.org/fhir/R4/slot.html#Slot">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/slot.html">resourceType</a>" : "Slot",
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.id">id</a>" : "ExampleSlotPSIndiv1",
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            <a href="StructureDefinition-FrSlotAgregateur.html" style="color: Maroon">&#x1F517;</a> "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"
+          ],
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.security">security</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "PUBLIC"
+            }
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.serviceType">serviceType</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "AMB"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "VR"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Visite de contrôle"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.specialty">specialty</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "SM54"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "SM05"
+              }
+            ]
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.appointmentType">appointmentType</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/v2-0276",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "ROUTINE"
+            }
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.schedule">schedule</a>" : {
+          <a href="Schedule-ExampleSchedule1.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Schedule/ExampleSchedule1"
+        },
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.status">status</a>" : "free",
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.start">start</a>" : "2021-11-05T09:00:00.000+00:00",
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.end">end</a>" : "2021-11-05T09:30:00.000+00:00",
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.comment">comment</a>" : "https://exemple.com/rdv/com/"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "https://exemple.com/ans-sas/Schedule/ExampleSchedule1",
+      "<a href="http://hl7.org/fhir/R4/schedule.html#Schedule">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/schedule.html">resourceType</a>" : "Schedule",
+        "<a href="http://hl7.org/fhir/R4/schedule.html#Schedule.id">id</a>" : "ExampleSchedule1",
+        "<a href="http://hl7.org/fhir/R4/schedule.html#Schedule.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            <a href="StructureDefinition-FrScheduleAgregateur.html" style="color: Maroon">&#x1F517;</a> "http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/schedule.html#Schedule.actor">actor</a>" : [
+          {
+            <a href="Practitioner-ExamplePractitioner2.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Practitioner/ExamplePractitioner2"
+          },
+          {
+            <a href="PractitionerRole-ExamplePractitionerRoleAgregateur2.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "PractitionerRole/ExamplePractitionerRoleAgregateur2"
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "https://exemple.com/ans-sas/Practitioner/ExamplePractitioner2",
+      "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/practitioner.html">resourceType</a>" : "Practitioner",
+        "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.id">id</a>" : "ExamplePractitioner2",
+        "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            <a href="StructureDefinition-FrPractitionerAgregateur.html" style="color: Maroon">&#x1F517;</a> "http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.identifier">identifier</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "IDNPS"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:oid:1.2.250.1.71.4.2.1",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "810100050075"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.name">name</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.family">family</a>" : "THOMAS",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">given</a>" : [
+              "Sébastien"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur2",
+      "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/practitionerrole.html">resourceType</a>" : "PractitionerRole",
+        "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.id">id</a>" : "ExamplePractitionerRoleAgregateur2",
+        "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            <a href="StructureDefinition-FrPractitionerRoleExerciceAgregateur.html" style="color: Maroon">&#x1F517;</a> "http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/location.html#Location">contained</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/location.html">resourceType</a>" : "Location",
+            "<a href="http://hl7.org/fhir/R4/location.html#Location.id">id</a>" : "ExampleLocation3",
+            "<a href="http://hl7.org/fhir/R4/location.html#Location.meta">meta</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+                <a href="StructureDefinition-FrLocationAgregateur.html" style="color: Maroon">&#x1F517;</a> "http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur"
+              ]
+            },
+            "<a href="http://hl7.org/fhir/R4/location.html#Location.identifier">identifier</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>" : {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                    {
+                      "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type",
+                      "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "INTRN"
+                    }
+                  ]
+                },
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:oid:1.1.111.1.111.1.1.1",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "1"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/location.html#Location.address">address</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.line">line</a>" : [
+                "1 rue Mme DELMAS"
+              ],
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.city">city</a>" : "AGEN",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.postalCode">postalCode</a>" : "47000"
+            }
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.practitioner">practitioner</a>" : {
+          <a href="Practitioner-ExamplePractitioner2.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Practitioner/ExamplePractitioner2"
+        },
+        "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.organization">organization</a>" : {
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.identifier">identifier</a>" : {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "IDNST"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:oid:1.2.250.1.71.4.2.2",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "1810004421"
+          }
+        },
+        "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.location">location</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "#ExampleLocation3"
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv2",
+      "<a href="http://hl7.org/fhir/R4/slot.html#Slot">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/slot.html">resourceType</a>" : "Slot",
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.id">id</a>" : "ExampleSlotPSIndiv2",
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            <a href="StructureDefinition-FrSlotAgregateur.html" style="color: Maroon">&#x1F517;</a> "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"
+          ],
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.security">security</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "PRO"
+            }
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.serviceType">serviceType</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "AMB"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Visite urgente"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.specialty">specialty</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "SM54"
+              }
+            ]
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.appointmentType">appointmentType</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/v2-0276",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "WALKIN"
+            }
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.schedule">schedule</a>" : {
+          <a href="Schedule-ExampleSchedule2.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Schedule/ExampleSchedule2"
+        },
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.status">status</a>" : "free",
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.start">start</a>" : "2021-11-05T11:00:00.000+00:00",
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.end">end</a>" : "2021-11-05T11:30:00.000+00:00"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "https://exemple.com/ans-sas/Schedule/ExampleSchedule2",
+      "<a href="http://hl7.org/fhir/R4/schedule.html#Schedule">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/schedule.html">resourceType</a>" : "Schedule",
+        "<a href="http://hl7.org/fhir/R4/schedule.html#Schedule.id">id</a>" : "ExampleSchedule2",
+        "<a href="http://hl7.org/fhir/R4/schedule.html#Schedule.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            <a href="StructureDefinition-FrScheduleAgregateur.html" style="color: Maroon">&#x1F517;</a> "http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/schedule.html#Schedule.actor">actor</a>" : [
+          {
+            <a href="Practitioner-ExamplePractitioner2.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Practitioner/ExamplePractitioner2"
+          },
+          {
+            <a href="PractitionerRole-ExamplePractitionerRoleAgregateur3.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "PractitionerRole/ExamplePractitionerRoleAgregateur3"
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur3",
+      "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/practitionerrole.html">resourceType</a>" : "PractitionerRole",
+        "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.id">id</a>" : "ExamplePractitionerRoleAgregateur3",
+        "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            <a href="StructureDefinition-FrPractitionerRoleExerciceAgregateur.html" style="color: Maroon">&#x1F517;</a> "http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/location.html#Location">contained</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/location.html">resourceType</a>" : "Location",
+            "<a href="http://hl7.org/fhir/R4/location.html#Location.id">id</a>" : "ExampleLocation2",
+            "<a href="http://hl7.org/fhir/R4/location.html#Location.meta">meta</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+                <a href="StructureDefinition-FrLocationAgregateur.html" style="color: Maroon">&#x1F517;</a> "http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur"
+              ]
+            },
+            "<a href="http://hl7.org/fhir/R4/location.html#Location.identifier">identifier</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>" : {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                    {
+                      "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type",
+                      "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "INTRN"
+                    }
+                  ]
+                },
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:oid:1.1.111.1.111.1.1.1",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "2"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/location.html#Location.address">address</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.line">line</a>" : [
+                "30 rue Mme DELMAS"
+              ],
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.city">city</a>" : "AGEN",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.postalCode">postalCode</a>" : "47000"
+            }
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.practitioner">practitioner</a>" : {
+          <a href="Practitioner-ExamplePractitioner2.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Practitioner/ExamplePractitioner2"
+        },
+        "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.organization">organization</a>" : {
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.identifier">identifier</a>" : {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "IDNST"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:oid:1.2.250.1.71.4.2.2",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "1810004956"
+          }
+        },
+        "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.location">location</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "#ExampleLocation2"
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv3",
+      "<a href="http://hl7.org/fhir/R4/slot.html#Slot">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/slot.html">resourceType</a>" : "Slot",
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.id">id</a>" : "ExampleSlotPSIndiv3",
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            <a href="StructureDefinition-FrSlotAgregateur.html" style="color: Maroon">&#x1F517;</a> "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"
+          ],
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.security">security</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "PUBLIC"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "PRO"
+            }
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.serviceType">serviceType</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "VR"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Visite de contrôle"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Consultation de suivi pneumologie"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.specialty">specialty</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "SM41"
+              }
+            ]
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.appointmentType">appointmentType</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/v2-0276",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "ROUTINE"
+            }
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.schedule">schedule</a>" : {
+          <a href="Schedule-ExampleSchedule3.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Schedule/ExampleSchedule3"
+        },
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.status">status</a>" : "free",
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.start">start</a>" : "2021-11-04T14:20:00.000+00:00",
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.end">end</a>" : "2021-11-04T14:40:00.000+00:00",
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.comment">comment</a>" : "https://exemple.com/rdv/com/"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "https://exemple.com/ans-sas/Schedule/ExampleSchedule3",
+      "<a href="http://hl7.org/fhir/R4/schedule.html#Schedule">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/schedule.html">resourceType</a>" : "Schedule",
+        "<a href="http://hl7.org/fhir/R4/schedule.html#Schedule.id">id</a>" : "ExampleSchedule3",
+        "<a href="http://hl7.org/fhir/R4/schedule.html#Schedule.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            <a href="StructureDefinition-FrScheduleAgregateur.html" style="color: Maroon">&#x1F517;</a> "http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/schedule.html#Schedule.actor">actor</a>" : [
+          {
+            <a href="Practitioner-ExamplePractitioner3.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Practitioner/ExamplePractitioner3"
+          },
+          {
+            <a href="PractitionerRole-ExamplePractitionerRoleAgregateur4.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "PractitionerRole/ExamplePractitionerRoleAgregateur4"
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "https://exemple.com/ans-sas/Practitioner/ExamplePractitioner3",
+      "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/practitioner.html">resourceType</a>" : "Practitioner",
+        "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.id">id</a>" : "ExamplePractitioner3",
+        "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            <a href="StructureDefinition-FrPractitionerAgregateur.html" style="color: Maroon">&#x1F517;</a> "http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.identifier">identifier</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "IDNPS"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:oid:1.2.250.1.71.4.2.1",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "810002673899"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.name">name</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.family">family</a>" : "MARCEL",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">given</a>" : [
+              "Guillaume"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur4",
+      "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/practitionerrole.html">resourceType</a>" : "PractitionerRole",
+        "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.id">id</a>" : "ExamplePractitionerRoleAgregateur4",
+        "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            <a href="StructureDefinition-FrPractitionerRoleExerciceAgregateur.html" style="color: Maroon">&#x1F517;</a> "http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/location.html#Location">contained</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/location.html">resourceType</a>" : "Location",
+            "<a href="http://hl7.org/fhir/R4/location.html#Location.id">id</a>" : "ExampleLocation3",
+            "<a href="http://hl7.org/fhir/R4/location.html#Location.meta">meta</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+                <a href="StructureDefinition-FrLocationAgregateur.html" style="color: Maroon">&#x1F517;</a> "http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur"
+              ]
+            },
+            "<a href="http://hl7.org/fhir/R4/location.html#Location.identifier">identifier</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>" : {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                    {
+                      "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type",
+                      "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "INTRN"
+                    }
+                  ]
+                },
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:oid:1.1.111.1.111.1.1.1",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "1"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/location.html#Location.address">address</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.line">line</a>" : [
+                "1 rue Mme DELMAS"
+              ],
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.city">city</a>" : "AGEN",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.postalCode">postalCode</a>" : "47000"
+            }
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.practitioner">practitioner</a>" : {
+          <a href="Practitioner-ExamplePractitioner3.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Practitioner/ExamplePractitioner3"
+        },
+        "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.organization">organization</a>" : {
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.identifier">identifier</a>" : {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "IDNST"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:oid:1.2.250.1.71.4.2.2",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "1810004421"
+          }
+        },
+        "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.location">location</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "#ExampleLocation3"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.telecom">telecom</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "phone",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "+33658913859"
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv4",
+      "<a href="http://hl7.org/fhir/R4/slot.html#Slot">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/slot.html">resourceType</a>" : "Slot",
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.id">id</a>" : "ExampleSlotPSIndiv4",
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            <a href="StructureDefinition-FrSlotAgregateur.html" style="color: Maroon">&#x1F517;</a> "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"
+          ],
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.security">security</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "PUBLIC"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "PRO"
+            }
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.serviceType">serviceType</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "HH"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Visite de contrôle"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Consultation de suivi pneumologique"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.specialty">specialty</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "SM41"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "SM54"
+              }
+            ]
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.appointmentType">appointmentType</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/v2-0276",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "ROUTINE"
+            }
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.schedule">schedule</a>" : {
+          <a href="Schedule-ExampleSchedule3.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Schedule/ExampleSchedule3"
+        },
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.status">status</a>" : "free",
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.start">start</a>" : "2021-11-04T14:40:00.000+00:00",
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.end">end</a>" : "2021-11-04T15:00:00.000+00:00",
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.comment">comment</a>" : "https://exemple.com/rdv/com/"
+      }
+    }
+  ]
+}</code></pre>
 
 <h3 id="nomenclatures">Nomenclatures</h3>
 
@@ -638,7 +1247,7 @@ Afin de tester un fichier, il suffit de sélectionner le format <code class="lan
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Dec 2, 2024 14:46+0000">2024-12-02</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Dec 2, 2024 15:01+0000">2024-12-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
