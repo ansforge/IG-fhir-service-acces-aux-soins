@@ -1,0 +1,40 @@
+{
+  "resourceType" : "Location",
+  "id" : "1111111111",
+  "meta" : {
+    "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator"]
+  },
+  "identifier" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type",
+        "code" : "INTRN"
+      }]
+    },
+    "system" : "https://editeur.com",
+    "value" : "1111111111"
+  }],
+  "name" : "Centre de consultation Rennes Nord",
+  "telecom" : [{
+    "system" : "phone",
+    "value" : "+33193246789"
+  }],
+  "address" : {
+    "line" : ["320 avenue Général Georges Patton"],
+    "city" : "RENNES",
+    "postalCode" : "35700"
+  },
+  "managingOrganization" : {
+    "reference" : "Organization/ExampleOrgaSOS1"
+  },
+  "hoursOfOperation" : [{
+    "daysOfWeek" : ["tue",
+    "wed",
+    "thu",
+    "fri",
+    "sat",
+    "sun"],
+    "openingTime" : "08:00:00",
+    "closingTime" : "19:00:00"
+  }]
+}

@@ -1,0 +1,48 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/sas/Location/3333333333> a fhir:Location ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "3333333333"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator>
+     ] )
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "INTRN" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "https://editeur.com"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "3333333333" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "Centre de consultation Lorient"] ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+33139555992" ]
+  ] ) ; # 
+  fhir:address [
+     fhir:line ( [ fhir:v "12 impasse Royer Dubail" ] ) ;
+     fhir:city [ fhir:v "LORIENT" ] ;
+     fhir:postalCode [ fhir:v "56100" ]
+  ] ; # 
+  fhir:managingOrganization [
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Organization/ExampleOrgaSOS2> ;
+     fhir:reference [ fhir:v "Organization/ExampleOrgaSOS2" ]
+  ] ; # 
+  fhir:hoursOfOperation ( [
+     fhir:daysOfWeek ( [ fhir:v "tue" ] [ fhir:v "thu" ] [ fhir:v "sat" ] ) ;
+     fhir:openingTime [ fhir:v "11:00:00"^^xsd:time ] ;
+     fhir:closingTime [ fhir:v "18:00:00"^^xsd:time ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

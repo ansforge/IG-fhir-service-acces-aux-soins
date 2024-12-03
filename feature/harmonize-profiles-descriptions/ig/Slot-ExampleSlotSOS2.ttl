@@ -1,0 +1,43 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/sas/Slot/ExampleSlotSOS2> a fhir:Slot ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ExampleSlotSOS2"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator>
+     ] ) ;
+     fhir:security ( [
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "PUBLIC" ]
+     ] )
+  ] ; # 
+  fhir:serviceType ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "AMB" ]
+     ] )
+  ] ) ; # 
+  fhir:appointmentType [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0276"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "ROUTINE" ]
+     ] )
+  ] ; # 
+  fhir:schedule [
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Schedule/ExampleScheduleSOS2> ;
+     fhir:reference [ fhir:v "Schedule/ExampleScheduleSOS2" ]
+  ] ; # 
+  fhir:status [ fhir:v "free"] ; # 
+  fhir:start [ fhir:v "2023-08-19T11:00:00.000+02:00"^^xsd:dateTime] ; # 
+  fhir:end [ fhir:v "2023-08-19T11:30:00.000+02:00"^^xsd:dateTime] ; # 
+  fhir:comment [ fhir:v "http://www.editeur.com/agenda-pfg/creneau2"] . # 
+
+# -------------------------------------------------------------------------------------
+

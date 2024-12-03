@@ -1,0 +1,43 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "sas-valueset-typeidentifiant",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet sas-valueset-typeidentifiant</b></p><a name=\"sas-valueset-typeidentifiant\"> </a><a name=\"hcsas-valueset-typeidentifiant\"> </a><a name=\"sas-valueset-typeidentifiant-fr-FR\"> </a><ul><li>Include these codes as defined in <a href=\"https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&amp;canonical=http://interopsante.org/fhir/CodeSystem/fr-v2-0203\"><code>http://interopsante.org/fhir/CodeSystem/fr-v2-0203</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&amp;canonical=http://interopsante.org/fhir/CodeSystem/fr-v2-0203.html#fr-v2-0203-IDNPS\">IDNPS</a></td><td>Identifiant National de Professionnel de Santé</td></tr><tr><td><a href=\"https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&amp;canonical=http://interopsante.org/fhir/CodeSystem/fr-v2-0203.html#fr-v2-0203-INTRN\">INTRN</a></td><td>Identifiant interne</td></tr></table></li></ul></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-typeidentifiant",
+  "version" : "1.0.0",
+  "name" : "TypeIdentifiantSAS",
+  "title" : "Type identifiant SAS",
+  "status" : "active",
+  "date" : "2024-12-03T16:53:35+00:00",
+  "publisher" : "ANS",
+  "contact" : [{
+    "name" : "ANS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Type d'identifiant SAS",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
+      "concept" : [{
+        "code" : "IDNPS",
+        "display" : "Identifiant National de Professionnel de Santé"
+      },
+      {
+        "code" : "INTRN",
+        "display" : "Identifiant interne"
+      }]
+    }]
+  }
+}
