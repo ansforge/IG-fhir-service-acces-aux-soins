@@ -127,6 +127,15 @@ La requête ci-dessous correspond à la création ou mise à jour du compte de S
 </table>
 <p><a href="#_ftnref2" name="_ftn2">[2]</a> <a href="https://www.hl7.org/fhir/http.html#cond-update">https://www.hl7.org/fhir/http.html#cond-update</a> et <a href="https://www.hl7.org/fhir/http.html#general">https://www.hl7.org/fhir/http.html#general</a></p>
 
+Cette requête de modification est donc de type `interaction conditional update`. Elle permet de mettre à jour une ressource sur la base d’un critère autre que l'`id` de la ressource
+
+En l’occurrence, les requêtes effectuées par le SAS se baseront sur l’élément « identifier » de la ressource à modifier. [ID] représente l’identifiant national ou technique de cette ressource.
+-   Lorsque l’identifiant transmis sera un ID national, il sera transmis au format `urn:oid:1.2.250.1.71.4.2.1|3456780581/11242343`, `3456780581/11242343` étant l’identifiant national préfixé
+-   Lorsque l’identifiant transmis sera un ID technique SAS, il sera transmis au format `urn:oid:1.2.250.1.213.3.6|b6e39355-8a61-4556-b340-36f7b95fec6a`, `b6e39355-8a61-4556-b340-36f7b95fec6a` étant l’identifiant technique SAS
+
+**Point d’attention** : dans le cas où le flux de mise à jour concerne une ressource non existante à date dans la solution logicielle éditeur, il est attendu que l’interface soit idempotente, réalise les contrôles nécessaires et se comporte comme si une requête de création avait été émise.
+**Point d’information** : l’ensemble des régulateurs ne sont pas équipés de carte CPx et n’ont donc pas tous un identifiant national à date. Des travaux sont en cours afin d’accompagner le déploiement de l’équipement nécessaire (lecteur de carte, cartes, etc.) aux régulateurs. C’est pour cette raison que nous utilisons de manière transitoire un identifiant technique SAS permettant d’identifier le régulateur de façon univoque (absence de collision, définition d’une autorité d’affectation, etc.).
+
 #### Construction de la réponse de base
 
 ##### Réponse de base -- Succès
@@ -156,6 +165,10 @@ Si la recherche échoue, le serveur doit répondre :
 À titre d'information, les codes erreurs classiques sont les suivants :
 - 400 (Bad request) – Le format de la requête FHIR transmise est incorrect
 - 422 (Unprocessable Entity) – L'action demandée ne peut pas être réalisée à cause d’une règle interne à l’application.
+
+### Suppression d'un compte régulateur
+
+Il n’y aura pas de requête spécifique pour la suppression de compte. Une suppression de compte côté plateforme numérique SAS est modélisée par une requête de type « mise à jour de compte » où l’on retire l’habilitation associée au compte.
 
 ### Règles de gestion
 
