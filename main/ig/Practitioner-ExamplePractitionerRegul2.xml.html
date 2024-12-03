@@ -5,7 +5,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>ExamplePractitionerRegul - XML Representation - Service d'Accès aux Soins v1.0.0</title>
+    <title>ExamplePractitionerRegul2 - XML Representation - Service d'Accès aux Soins v1.0.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -43,8 +43,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"11.55"}
-    h3,h4,h5,h6{--heading-prefix:"11.55"}</style>
+    <style type="text/css">h2{--heading-prefix:"14.56"}
+    h3,h4,h5,h6{--heading-prefix:"14.56"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -53,7 +53,12 @@
   </div>
   <div id="ans-nav" style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; ">
     <a id="hl7-logo" no-external="true" href="https://esante.gouv.fr/"><img height="50" alt="ANS Logo" src="assets/images/logo-ANS.svg"/></a>
+    <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
   </div>
+
+  <div id="ig-search">
+ </div>
+
 
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Service d&#39;Accès aux Soins</span>
@@ -107,6 +112,9 @@
         <a href="specifications_techniques-ps-recherche_creneaux.html">PS indiv. - Recherche des créneaux</a>
       </li>
       <li>
+        <a href="specifications_techniques-ps-gestion_regulateur.html">PS indiv. - Gestion des comptes régulateurs</a>
+      </li>
+      <li>
         <a href="specifications_techniques-ps-gestion_rdv.html">PS indiv. - Gestion de rendez-vous</a>
       </li>
       <li>
@@ -116,6 +124,9 @@
         <a href="specifications_techniques-cpts-recherche_creneaux.html">CPTS - Recherche des créneaux</a>
       </li>
       <li>
+        <a href="specifications_techniques-cpts-gestion_regulateur.html">CPTS - Gestion des comptes régulateurs</a>
+      </li>
+      <li>
         <a href="specifications_techniques-cpts-gestion_rdv.html">CPTS - Gestion de rendez-vous</a>
       </li>
       <li>
@@ -123,6 +134,9 @@
       </li>
       <li>
         <a href="specifications_techniques-sos-recherche_creneaux.html">SOS Médecins - Recherche des créneaux</a>
+      </li>
+      <li>
+        <a href="specifications_techniques-sos-gestion_regulateur.html">SOS Médecins - Gestion des comptes régulateurs</a>
       </li>
       <li>
         <a href="specifications_techniques-sos-gestion_rdv.html">SOS Médecins - Gestion de rendez-vous</a>
@@ -175,15 +189,15 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>ExamplePractitionerRegul</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>ExamplePractitionerRegul2</b></li>
 
           <span style="float:right;">
 
-            <a href="Practitioner-ExamplePractitionerRegul.html">&lt;prev</a> | 
+            <a href="Practitioner-ExamplePractitionerRegul2.html">&lt;prev</a> | 
 
             <a href="#bottom">bottom</a>
 
-          | <a href="Practitioner-ExamplePractitionerRegul.json.html">next&gt;</a>
+          | <a href="Practitioner-ExamplePractitionerRegul2.json.html">next&gt;</a>
 
           </span>
 
@@ -211,7 +225,7 @@
 <ul class="nav nav-tabs">
 
   <li>
-    <a href="Practitioner-ExamplePractitionerRegul.html">Narrative Content</a>
+    <a href="Practitioner-ExamplePractitionerRegul2.html">Narrative Content</a>
   </li>
 
 
@@ -225,14 +239,14 @@
 
   
     <li>
-      <a href="Practitioner-ExamplePractitionerRegul.json.html">JSON</a>
+      <a href="Practitioner-ExamplePractitionerRegul2.json.html">JSON</a>
     </li>
   
 
 
   
     <li>
-      <a href="Practitioner-ExamplePractitionerRegul.ttl.html">TTL</a>
+      <a href="Practitioner-ExamplePractitionerRegul2.ttl.html">TTL</a>
     </li>
   
 
@@ -244,10 +258,10 @@
 <a name="root"> </a>
 
 
-<h2 id="root">: ExamplePractitionerRegul - XML Representation</h2>
+<h2 id="root">: ExamplePractitionerRegul2 - XML Representation</h2>
 
 
-<p><a href="Practitioner-ExamplePractitionerRegul.xml" no-download="true">Raw xml</a> | <a href="Practitioner-ExamplePractitionerRegul.xml" download>Download</a></p>
+<p><a href="Practitioner-ExamplePractitionerRegul2.xml" no-download="true">Raw xml</a> | <a href="Practitioner-ExamplePractitionerRegul2.xml" download>Download</a></p>
 
   <!-- insert intro if present -->
   
@@ -257,7 +271,7 @@
   <pre class="xml" style="white-space: pre; text-wrap: nowrap;"><code class="language-xml" style="white-space: pre; text-wrap: nowrap;">
 
 &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner">Practitioner</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;ExamplePractitionerRegul&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;ExamplePractitionerRegul2&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.meta">meta</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul&quot;/&gt;
@@ -269,17 +283,17 @@
         &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;IDNPS&quot;/&gt;
       &lt;/coding&gt;
     &lt;/type&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;urn:oid:1.2.250.1.71.4.2.2&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;3456780581/11242343&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;urn:oid:1.2.250.1.71.4.2.1&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;810002673899&quot;/&gt;
   &lt;/identifier&gt;
   &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.active">active</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.name">name</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.family">family</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Loridon&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">given</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Sébastien&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.family">family</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;MARIUS&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">given</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Jules&quot;/&gt;
   &lt;/name&gt;
   &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.telecom">telecom</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;email&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;sebastien.loridon@test.com&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;jules.marius@test.com&quot;/&gt;
   &lt;/telecom&gt;
 &lt;/Practitioner&gt;</code></pre>
 
@@ -309,7 +323,7 @@
             <tr>
               <td style="text-align:left">&#xA0;
 
-                <a href="Practitioner-ExamplePractitionerRegul.html">&lt;prev</a>
+                <a href="Practitioner-ExamplePractitionerRegul2.html">&lt;prev</a>
 
               </td>
               <td style="text-align:center">
@@ -317,7 +331,7 @@
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="Practitioner-ExamplePractitionerRegul.json.html">next&gt;</a>
+                <a href="Practitioner-ExamplePractitionerRegul2.json.html">next&gt;</a>
 
               </td>
             </tr>
@@ -327,7 +341,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Dec 2, 2024 15:45+0000">2024-12-02</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Dec 3, 2024 14:08+0000">2024-12-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

@@ -10,7 +10,7 @@
   <name value="SAS"/>
   <title value="Service d'Accès aux Soins"/>
   <status value="active"/>
-  <date value="2024-12-02T15:45:18+00:00"/>
+  <date value="2024-12-03T14:08:49+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -861,10 +861,32 @@
         <valueString value="Practitioner"/>
       </extension>
       <reference>
-        <reference value="Practitioner/ExamplePractitionerRegul"/>
+        <reference value="Practitioner/ExamplePractitionerRegul1"/>
       </reference>
-      <name value="ExamplePractitionerRegul"/>
+      <name value="ExamplePractitionerRegul1"/>
       <description value="Exemple 1 practitioner flux régulateur"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/ExamplePractitionerRegul2"/>
+      </reference>
+      <name value="ExamplePractitionerRegul2"/>
+      <description value="Exemple 2 practitioner flux régulateur"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/ExamplePractitionerRegul3"/>
+      </reference>
+      <name value="ExamplePractitionerRegul3"/>
+      <description value="Exemple 3 practitioner flux régulateur"/>
       <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul"/>
     </resource>
     <resource>
@@ -1472,6 +1494,14 @@
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="specifications_techniques-ps-gestion_regulateur.html"/>
+        </extension>
+        <nameUrl value="specifications_techniques-ps-gestion_regulateur.html"/>
+        <title value="PS indiv. - Gestion des comptes régulateurs"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
           <valueUrl value="specifications_techniques-ps-gestion_rdv.html"/>
         </extension>
         <nameUrl value="specifications_techniques-ps-gestion_rdv.html"/>
@@ -1488,6 +1518,14 @@
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="specifications_techniques-cpts-gestion_regulateur.html"/>
+        </extension>
+        <nameUrl value="specifications_techniques-cpts-gestion_regulateur.html"/>
+        <title value="CPTS - Gestion des comptes régulateurs"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
           <valueUrl value="specifications_techniques-cpts-gestion_rdv.html"/>
         </extension>
         <nameUrl value="specifications_techniques-cpts-gestion_rdv.html"/>
@@ -1500,6 +1538,14 @@
         </extension>
         <nameUrl value="specifications_techniques-sos-recherche_creneaux.html"/>
         <title value="SOS Médecins - Recherche des créneaux"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="specifications_techniques-sos-gestion_regulateur.html"/>
+        </extension>
+        <nameUrl value="specifications_techniques-sos-gestion_regulateur.html"/>
+        <title value="SOS Médecins - Gestion des comptes régulateurs"/>
         <generation value="markdown"/>
       </page>
       <page>

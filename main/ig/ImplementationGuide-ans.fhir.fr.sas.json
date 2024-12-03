@@ -10,7 +10,7 @@
   "name" : "SAS",
   "title" : "Service d'Accès aux Soins",
   "status" : "active",
-  "date" : "2024-12-02T15:45:18+00:00",
+  "date" : "2024-12-03T14:08:49+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -1096,10 +1096,34 @@
         "valueString" : "Practitioner"
       }],
       "reference" : {
-        "reference" : "Practitioner/ExamplePractitionerRegul"
+        "reference" : "Practitioner/ExamplePractitionerRegul1"
       },
-      "name" : "ExamplePractitionerRegul",
+      "name" : "ExamplePractitionerRegul1",
       "description" : "Exemple 1 practitioner flux régulateur",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Practitioner"
+      }],
+      "reference" : {
+        "reference" : "Practitioner/ExamplePractitionerRegul2"
+      },
+      "name" : "ExamplePractitionerRegul2",
+      "description" : "Exemple 2 practitioner flux régulateur",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Practitioner"
+      }],
+      "reference" : {
+        "reference" : "Practitioner/ExamplePractitionerRegul3"
+      },
+      "name" : "ExamplePractitionerRegul3",
+      "description" : "Exemple 3 practitioner flux régulateur",
       "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul"
     },
     {
@@ -1764,6 +1788,15 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "specifications_techniques-ps-gestion_regulateur.html"
+        }],
+        "nameUrl" : "specifications_techniques-ps-gestion_regulateur.html",
+        "title" : "PS indiv. - Gestion des comptes régulateurs",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
           "valueUrl" : "specifications_techniques-ps-gestion_rdv.html"
         }],
         "nameUrl" : "specifications_techniques-ps-gestion_rdv.html",
@@ -1782,6 +1815,15 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "specifications_techniques-cpts-gestion_regulateur.html"
+        }],
+        "nameUrl" : "specifications_techniques-cpts-gestion_regulateur.html",
+        "title" : "CPTS - Gestion des comptes régulateurs",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
           "valueUrl" : "specifications_techniques-cpts-gestion_rdv.html"
         }],
         "nameUrl" : "specifications_techniques-cpts-gestion_rdv.html",
@@ -1795,6 +1837,15 @@
         }],
         "nameUrl" : "specifications_techniques-sos-recherche_creneaux.html",
         "title" : "SOS Médecins - Recherche des créneaux",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "specifications_techniques-sos-gestion_regulateur.html"
+        }],
+        "nameUrl" : "specifications_techniques-sos-gestion_regulateur.html",
+        "title" : "SOS Médecins - Gestion des comptes régulateurs",
         "generation" : "markdown"
       },
       {
