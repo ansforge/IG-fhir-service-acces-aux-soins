@@ -404,6 +404,16 @@ Le schéma ci-dessous illustre les éléments décrits ci-dessus :</li>
     </tr>
 </table>
 
+<p><strong>Autres règles de gestion fonctionnelles à prendre en compte par les éditeurs :</strong></p>
+<ul>
+  <li>A la création du compte, ne pas avoir d’étape « vérification du mail » ni de mail de confirmation de création de compte</li>
+  <li>L’ANS et l’éditeur conviendront du fonctionnement attendu pour la génération d’un mot de passe suite à la création du compte. L’attendu est de générer un mot de passe de manière automatisée (réinitialisable via la fonctionnalité « mot de passe oublié »)</li>
+  <li>La solution logicielle éditeur devra proposer un niveau d’habilitation dédié aux régulateurs et répondant aux besoins de la plateforme numérique SAS. L’utilisateur ne doit pouvoir en disposer que lorsqu’il se connecte via la plateforme numérique SAS (présence du paramètre origin=sas lors de la redirection). Si l’utilisateur se connecte par un autre biais, les fonctionnalités associées à cette habilitation ne doivent pas être disponibles</li>
+  <li>Lors de la première connexion, à la suite de la création du compte, le régulateur devra souscrire et valider individuellement les conditions contractuelles de l’éditeur préalablement transmises (CGU)</li>
+  <li>Il est attendu pour les éditeurs ayant implémenté le flux INT_R01 d’agrégation des créneaux de disponibilités, de réutiliser le endpoint et la sécurisation mTLS associée pour le flux INT_R02 de gestion des comptes régulateurs</li>
+  <li>Certains régulateurs n’ayant pas encore d’identifiant national à date, il est attendu que l’éditeur soit en mesure de gérer les comptes soit sur la base de l’identifiant national ou de l’identifiant technique SAS selon ce qui est transmis par la plateforme numérique SAS</li>
+</ul>
+
 <h3 id="gestion-des-informations-rendez-vous">Gestion des informations rendez-vous</h3>
 
 <p>L’objectif de cette interface, flux INT_R03, est de permettre la transmission des données liées à l’usage de la fonctionnalité de prise de RDV par les régulateurs provenant de la plateforme numérique SAS, dans les solutions logicielles d’agenda.
@@ -488,7 +498,7 @@ Le schéma ci-dessous illustre l’échange à mettre en oeuvre :</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Dec 3, 2024 15:42+0000">2024-12-03</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Dec 3, 2024 16:32+0000">2024-12-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
