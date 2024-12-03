@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Slot xmlns="http://hl7.org/fhir">
+  <id value="ExampleSlotSOS1"/>
+  <meta>
+    <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator"/>
+    <security>
+      <system value="https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"/>
+      <code value="PUBLIC"/>
+    </security>
+    <security>
+      <system value="https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"/>
+      <code value="SNP"/>
+    </security>
+  </meta>
+  <serviceType>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+      <code value="AMB"/>
+    </coding>
+  </serviceType>
+  <serviceType>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+      <code value="VR"/>
+    </coding>
+  </serviceType>
+  <appointmentType>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0276"/>
+      <code value="ROUTINE"/>
+    </coding>
+  </appointmentType>
+  <schedule>
+    <reference value="Schedule/ExampleScheduleSOS1"/>
+  </schedule>
+  <status value="free"/>
+  <start value="2023-08-18T09:00:00.000+02:00"/>
+  <end value="2023-08-18T09:30:00.000+02:00"/>
+  <comment value="http://www.editeur.com/agenda-pfg/creneau1"/>
+</Slot>

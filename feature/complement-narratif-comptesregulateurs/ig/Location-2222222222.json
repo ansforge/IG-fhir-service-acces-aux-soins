@@ -1,0 +1,38 @@
+{
+  "resourceType" : "Location",
+  "id" : "2222222222",
+  "meta" : {
+    "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator"]
+  },
+  "identifier" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type",
+        "code" : "INTRN"
+      }]
+    },
+    "system" : "https://editeur.com",
+    "value" : "2222222222"
+  }],
+  "name" : "Centre de consultation Rennes Cleunay",
+  "telecom" : [{
+    "system" : "phone",
+    "value" : "+33145249912"
+  }],
+  "address" : {
+    "line" : ["106 rue Eugène Pottier"],
+    "city" : "RENNES",
+    "postalCode" : "35000"
+  },
+  "managingOrganization" : {
+    "reference" : "Organization/ExampleOrgaSOS1"
+  },
+  "hoursOfOperation" : [{
+    "daysOfWeek" : ["mon",
+    "tue",
+    "wed",
+    "thu"],
+    "openingTime" : "09:00:00",
+    "closingTime" : "21:00:00"
+  }]
+}
