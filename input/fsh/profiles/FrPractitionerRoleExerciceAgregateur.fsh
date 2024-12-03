@@ -1,7 +1,7 @@
 Profile: FrPractitionerRoleExerciceAgregateur
 Parent: FrPractitionerRoleExercice
 Id: FrPractitionerRoleExerciceAgregateur
-Description: "Profil de PractitionerRole, dérivé de FrPractitionerRoleExercice, pour le service d'agrégation de créneaux de la plateforme SAS (Service d'accès aux soins)"
+Description: "Profil de PractitionerRole, dérivé de FrPractitionerRoleExercice, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS"
 * ^url = "http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"
 
 * contained 1..

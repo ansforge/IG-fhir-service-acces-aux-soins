@@ -1,7 +1,7 @@
 Profile: FrLocationAgregateur
 Parent: FrLocation
 Id: FrLocationAgregateur
-Description: "Profil de Location, dérivé de FrLocation, pour le service d'agrégation de créneaux de la plateforme SAS (Service d'accès aux soins)"
+Description: "Profil de Location, dérivé de FrLocation, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS"
 * ^url = "http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur"
 
 * address 1..

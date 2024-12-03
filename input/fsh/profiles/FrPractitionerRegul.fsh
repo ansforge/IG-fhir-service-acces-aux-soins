@@ -1,7 +1,7 @@
 Profile: FrPractitionerRegul
 Parent: FrPractitioner
 Id: FrPractitionerRegul
-Description: "Profil de Practitioner, dérivé de FrPractitioner, pour la gestion des comptes régulateurs de la plateforme SAS (Service d'accès aux soins)"
+Description: "Profil de Practitioner, dérivé de FrPractitioner, pour la gestion des comptes régulateurs de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS"
 
 
 * meta.source =  "urn:oid:1.2.250.1.213.3.6"

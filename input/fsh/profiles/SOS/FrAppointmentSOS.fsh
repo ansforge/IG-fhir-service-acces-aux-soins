@@ -1,7 +1,7 @@
 Profile: FrAppointmentSASSOS
 Parent: FrAppointment
 Id: sas-sos-appointment
-Description: "Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS (Service d’accès aux soins), dans le cadre du cas d’usage SOS Médecins"
+Description: "Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins"
 
 * extension ..1
 * extension[appointmentOperator] 1..

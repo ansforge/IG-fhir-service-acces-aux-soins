@@ -1,7 +1,7 @@
 Profile: FrSlotAgregateurCPTS
 Parent: FrSlot
 Id: sas-cpts-slot-aggregator
-Description: "Profil de Slot, dérivé de FrSlot, pour le service d'agrégation de créneaux de la plateforme SAS (Service d'accès aux soins), dans le cadre du cas d'usage CPTS"
+Description: "Profil de Slot, dérivé de FrSlot, pour le cas d'usage agrégateur de la plateforme SAS - cas d'usage CPTS"
 
 * meta.security from sas-cpts-valueset-typecreneau (required)
 * meta.security ^short = "type de créneau : public, pro, SNP, CPTS"
