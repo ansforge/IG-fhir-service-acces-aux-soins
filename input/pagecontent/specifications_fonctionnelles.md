@@ -1,6 +1,7 @@
 A ce jour, les API ont pour vocation de répondre aux cas d'usage suivants :
 1. Service exposé par une solution de prise de rendez-vous en ligne consommé par la plateforme SAS
   - Recherche de créneaux
+  - Gestion des comptes régulateurs
 1. Service exposé par la plateforme SAS consommé par une solution de prise de rendez-vous en ligne
   - Création de rendez-vous
   - Mise à jour de rendez-vous
@@ -100,6 +101,49 @@ Le schéma ci-dessous présente une synthèse de la structure attendue :
 <div class="figure" style="width:100%;" align ="center">
     <p>{% include ressources-exploitees-fhir-sos.svg %}</p>
 </div>
+
+### Gestion des comptes régulateurs
+L’objectif de cette interface, flux INT_R02, est de permettre la gestion automatisée des comptes régulateurs 
+SAS qui auront besoin d’accéder aux solutions logicielles de prise de RDV dans le cadre de leurs fonctions. 
+Cela prend en compte la création, la modification ou la suppression des comptes identifiés.
+
+Pour la mise en place de ce flux, il est nécessaire de s’assurer d’une technologie commune aux différentes 
+plateformes. Les échanges reposent sur des webservices se basant sur l’API REST du standard HL7 
+FHIR, et respectant les spécifications des flux 1a et 1b du volet d’agendas partagés du Cadre 
+d’Interopérabilité des Systèmes d’Information de Santé (CI-SIS).
+
+Lorsqu'un compte régulateur est créé dans la plateforme SAS, celle-ci transmet une requête de création de compte dans la solution logicielle éditeur.
+
+Le schéma ci-dessous illustre l'échange à mettre en oeuvre :
+
+<div class="figure" style="width:100%;" align ="center">
+    <p>{% include gestion_compte_regulateur_post.svg %}</p>
+</div>
+
+La modification de compte peut porter sur chacun des éléments de la ressource transmise (nom, prénom, mail, ID national,habilitation).
+
+Le schéma ci-dessous illustre l'échange à mettre en oeuvre :
+
+<div class="figure" style="width:100%;" align ="center">
+    <p>{% include gestion_compte_regulateur_put.svg %}</p>
+</div>
+
+
+Afin de limiter le nombre d’appels émis vers les solutions logicielles éditeurs, et éviter d’avoir à gérer des créations ou mises à jour massives de comptes (batch d’initialisation, reprise, etc.), les mécaniques suivantes ont été mises en œuvre pour le déclenchement des requêtes :
+- Pour la création ou modification de compte, le déclenchement de la requête est lié à la connexion de l’utilisateur à la plateforme numérique SAS. Lors de la connexion du régulateur, un contrôle est effectué afin d’identifier si des actions sont à mener dans les solutions logicielles éditeurs. Dans le cas où des solutions sont identifiées, les requêtes correspondantes sont émises et l’état du compte est mis à jour dans la plateforme numérique SAS.
+- Pour la suppression ou retrait d’habilitation uniquement, le déclenchement de la requête est émis instantanément.
+Le schéma ci-dessous illustre les éléments décrits ci-dessus :
+
+
+<table align="center">
+    <tr>
+        <td align ="center">
+            <div class="figure">
+                <img src="mecanisme_transmission_regulateurs.png" width="80%" height="80%">
+            </div>
+        </td>    
+    </tr>
+</table>
 
 ### Gestion des informations rendez-vous
 

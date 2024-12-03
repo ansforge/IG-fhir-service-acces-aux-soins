@@ -1,5 +1,5 @@
 
-Instance: ExamplePractitionerRegul
+Instance: ExamplePractitionerRegul1
 InstanceOf: FrPractitionerRegul
 Description: "Exemple 1 practitioner flux régulateur"
 Usage: #example
