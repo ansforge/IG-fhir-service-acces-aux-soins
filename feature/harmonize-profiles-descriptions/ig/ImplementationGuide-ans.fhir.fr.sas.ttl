@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "SAS"] ; # 
   fhir:title [ fhir:v "Service d'Accès aux Soins"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2024-12-03T16:53:35+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-12-03T17:09:46+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -716,7 +716,7 @@
          fhir:reference [ fhir:v "StructureDefinition/BundleAgregateur" ]
        ] ;
        fhir:name [ fhir:v "BundleAgregateur" ] ;
-       fhir:description [ fhir:v "Profil de Bundle qui représente le flux de réponse contenant les créneaux disponibles dans le cadre du service d'agrégation de créneaux de la plateforme SAS (Service d'accès aux soins)" ] ;
+       fhir:description [ fhir:v "Profil de Bundle qui représente le flux de réponse contenant les créneaux disponibles dans le cadre du service d'agrégation de créneaux de la plateforme SAS - Cas d'usage PS Indiv" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -728,7 +728,7 @@
          fhir:reference [ fhir:v "StructureDefinition/sas-cpts-bundle-aggregator" ]
        ] ;
        fhir:name [ fhir:v "BundleAgregateurCPTS" ] ;
-       fhir:description [ fhir:v "Bundle Agrégateur SAS CPTS" ] ;
+       fhir:description [ fhir:v "Profil de Bundle qui représente le flux de réponse contenant les créneaux disponibles dans le cadre du service d'agrégation de créneaux de la plateforme SAS - Cas d'usage CPTS" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -740,7 +740,7 @@
          fhir:reference [ fhir:v "StructureDefinition/sas-sos-bundle-aggregator" ]
        ] ;
        fhir:name [ fhir:v "BundleAgregateurSOS" ] ;
-       fhir:description [ fhir:v "Bundle Agrégateur SAS SOS" ] ;
+       fhir:description [ fhir:v "Profil de Bundle qui représente le flux de réponse contenant les créneaux disponibles dans le cadre du service d'agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -1391,7 +1391,7 @@
          fhir:reference [ fhir:v "StructureDefinition/FrAppointmentSAS" ]
        ] ;
        fhir:name [ fhir:v "FrAppointmentSAS" ] ;
-       fhir:description [ fhir:v "Profil de Appointment, dérivé de FrAppointment, pour le cas d'usage prise de RDV de la plateforme SAS (Service d'accès aux soins)" ] ;
+       fhir:description [ fhir:v "Profil de Appointment, dérivé de FrAppointment, pour le cas d'usage prise de RDV de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -1403,7 +1403,7 @@
          fhir:reference [ fhir:v "StructureDefinition/sas-sos-appointment" ]
        ] ;
        fhir:name [ fhir:v "FrAppointmentSASSOS" ] ;
-       fhir:description [ fhir:v "Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS (Service d’accès aux soins), dans le cadre du cas d’usage SOS Médecins" ] ;
+       fhir:description [ fhir:v "Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -1415,7 +1415,7 @@
          fhir:reference [ fhir:v "StructureDefinition/sas-cpts-healthcareservice-aggregator" ]
        ] ;
        fhir:name [ fhir:v "FrHealthcareServiceAgregateurCPTS" ] ;
-       fhir:description [ fhir:v "Profil dérivé de FrHealthcareService pour le cas d'usage agrégateur CPTS" ] ;
+       fhir:description [ fhir:v "Profil dérivé de FrHealthcareService pour le cas d'usage agrégateur de la plateforme SAS - cas d'usage CPTS" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -1427,7 +1427,7 @@
          fhir:reference [ fhir:v "StructureDefinition/FrLocationAgregateur" ]
        ] ;
        fhir:name [ fhir:v "FrLocationAgregateur" ] ;
-       fhir:description [ fhir:v "Profil de Location, dérivé de FrLocation, pour le service d'agrégation de créneaux de la plateforme SAS (Service d'accès aux soins)" ] ;
+       fhir:description [ fhir:v "Profil de Location, dérivé de FrLocation, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -1439,7 +1439,7 @@
          fhir:reference [ fhir:v "StructureDefinition/sas-sos-location-aggregator" ]
        ] ;
        fhir:name [ fhir:v "FrLocationAgregateurSOS" ] ;
-       fhir:description [ fhir:v "Profil de Location, dérivé de FrLocation, pour le service d’agrégation de créneaux de la plateforme SAS (Service d’accès aux soins), dans le cadre du cas d’usage SOS Médecins" ] ;
+       fhir:description [ fhir:v "Profil de Location, dérivé de FrLocation, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -1451,7 +1451,7 @@
          fhir:reference [ fhir:v "StructureDefinition/sas-cpts-organization-aggregator" ]
        ] ;
        fhir:name [ fhir:v "FrOrganizationAgregateurCPTS" ] ;
-       fhir:description [ fhir:v "Profil dérivé de FrOrganization pour le cas d'usage agrégateur CPTS" ] ;
+       fhir:description [ fhir:v "Profil dérivé de FrOrganization pour le cas d'usage agrégateur de la plateforme SAS - cas d'usage CPTS" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -1463,7 +1463,7 @@
          fhir:reference [ fhir:v "StructureDefinition/sas-sos-organization-aggregator" ]
        ] ;
        fhir:name [ fhir:v "FrOrganizationAgregateurSOS" ] ;
-       fhir:description [ fhir:v "Profil d'Organization, dérivé de FrOrganization, pour le service d’agrégation de créneaux de la plateforme SAS (Service d’accès aux soins), dans le cadre du cas d’usage SOS Médecins" ] ;
+       fhir:description [ fhir:v "Profil d'Organization, dérivé de FrOrganization, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -1475,7 +1475,7 @@
          fhir:reference [ fhir:v "StructureDefinition/FrPractitionerAgregateur" ]
        ] ;
        fhir:name [ fhir:v "FrPractitionerAgregateur" ] ;
-       fhir:description [ fhir:v "Profil de Practitioner, dérivé de FrPractitioner, pour le service d'agrégation de créneaux de la plateforme SAS (Service d'accès aux soins)" ] ;
+       fhir:description [ fhir:v "Profil de Practitioner, dérivé de FrPractitioner, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -1487,7 +1487,7 @@
          fhir:reference [ fhir:v "StructureDefinition/FrPractitionerRegul" ]
        ] ;
        fhir:name [ fhir:v "FrPractitionerRegul" ] ;
-       fhir:description [ fhir:v "Profil de Practitioner, dérivé de FrPractitioner, pour la gestion des comptes régulateurs de la plateforme SAS (Service d'accès aux soins)" ] ;
+       fhir:description [ fhir:v "Profil de Practitioner, dérivé de FrPractitioner, pour la gestion des comptes régulateurs de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -1499,7 +1499,7 @@
          fhir:reference [ fhir:v "StructureDefinition/FrPractitionerRoleExerciceAgregateur" ]
        ] ;
        fhir:name [ fhir:v "FrPractitionerRoleExerciceAgregateur" ] ;
-       fhir:description [ fhir:v "Profil de PractitionerRole, dérivé de FrPractitionerRoleExercice, pour le service d'agrégation de créneaux de la plateforme SAS (Service d'accès aux soins)" ] ;
+       fhir:description [ fhir:v "Profil de PractitionerRole, dérivé de FrPractitionerRoleExercice, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -1511,7 +1511,7 @@
          fhir:reference [ fhir:v "StructureDefinition/FrScheduleAgregateur" ]
        ] ;
        fhir:name [ fhir:v "FrScheduleAgregateur" ] ;
-       fhir:description [ fhir:v "Profil de Schedule, dérivé de FrSchedule, pour le service d'agrégation de créneaux de la plateforme SAS (Service d'accès aux soins)" ] ;
+       fhir:description [ fhir:v "Profil de Schedule, dérivé de FrSchedule, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -1523,7 +1523,7 @@
          fhir:reference [ fhir:v "StructureDefinition/sas-sos-schedule-aggregator" ]
        ] ;
        fhir:name [ fhir:v "FrScheduleAgregateurSOS" ] ;
-       fhir:description [ fhir:v "Profil de Schedule, dérivé de FrSchedule, pour le service d’agrégation de créneaux de la plateforme SAS (Service d’accès aux soins), dans le cadre du cas d’usage SOS Médecins" ] ;
+       fhir:description [ fhir:v "Profil de Schedule, dérivé de FrSchedule, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -1535,7 +1535,7 @@
          fhir:reference [ fhir:v "StructureDefinition/FrSlotAgregateur" ]
        ] ;
        fhir:name [ fhir:v "FrSlotAgregateur" ] ;
-       fhir:description [ fhir:v "Profil de Slot, dérivé de FrSlot, pour le service d'agrégation de créneaux de la plateforme SAS (Service d'accès aux soins)" ] ;
+       fhir:description [ fhir:v "Profil de Slot, dérivé de FrSlot, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -1547,7 +1547,7 @@
          fhir:reference [ fhir:v "StructureDefinition/sas-cpts-slot-aggregator" ]
        ] ;
        fhir:name [ fhir:v "FrSlotAgregateurCPTS" ] ;
-       fhir:description [ fhir:v "Profil de Slot, dérivé de FrSlot, pour le service d'agrégation de créneaux de la plateforme SAS (Service d'accès aux soins), dans le cadre du cas d'usage CPTS" ] ;
+       fhir:description [ fhir:v "Profil de Slot, dérivé de FrSlot, pour le cas d'usage agrégateur de la plateforme SAS - cas d'usage CPTS" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -1559,7 +1559,7 @@
          fhir:reference [ fhir:v "StructureDefinition/sas-sos-slot-aggregator" ]
        ] ;
        fhir:name [ fhir:v "FrSlotAgregateurSOS" ] ;
-       fhir:description [ fhir:v "Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS (Service d’accès aux soins), dans le cadre du cas d’usage SOS Médecins" ] ;
+       fhir:description [ fhir:v "Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
