@@ -1,7 +1,7 @@
 Profile: FrPractitionerAgregateur
 Parent: FrPractitioner
 Id: FrPractitionerAgregateur
-Description: "Profil de Practitioner, dérivé de FrPractitioner, pour le service d'agrégation de créneaux de la plateforme SAS (Service d'accès aux soins)"
+Description: "Profil de Practitioner, dérivé de FrPractitioner, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS"
 * ^url = "http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur"
 
 * identifier 1..

@@ -1,7 +1,7 @@
 Profile: BundleAgregateur
 Parent: Bundle
 Id: BundleAgregateur
-Description: "Profil de Bundle qui représente le flux de réponse contenant les créneaux disponibles dans le cadre du service d'agrégation de créneaux de la plateforme SAS (Service d'accès aux soins)"
+Description: "Profil de Bundle qui représente le flux de réponse contenant les créneaux disponibles dans le cadre du service d'agrégation de créneaux de la plateforme SAS - Cas d'usage PS Indiv"
 * ^url = "http://sas.fr/fhir/StructureDefinition/BundleAgregateur"
 
 

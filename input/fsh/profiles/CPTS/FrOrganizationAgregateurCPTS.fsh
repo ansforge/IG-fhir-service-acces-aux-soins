@@ -1,7 +1,7 @@
 Profile: FrOrganizationAgregateurCPTS
 Parent: FrOrganization
 Id: sas-cpts-organization-aggregator
-Description: "Profil dérivé de FrOrganization pour le cas d'usage agrégateur CPTS"
+Description: "Profil dérivé de FrOrganization pour le cas d'usage agrégateur de la plateforme SAS - cas d'usage CPTS"
 
 * identifier 1..1
 * identifier.type = $fr-location-identifier-type#IDNST

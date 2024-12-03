@@ -1,7 +1,7 @@
 Profile: BundleAgregateurCPTS
 Parent: Bundle
 Id: sas-cpts-bundle-aggregator
-Description: "Bundle Agrégateur SAS CPTS"
+Description: "Profil de Bundle qui représente le flux de réponse contenant les créneaux disponibles dans le cadre du service d'agrégation de créneaux de la plateforme SAS - Cas d'usage CPTS"
 * type = #searchset
 * total 1..
 * link 1..1

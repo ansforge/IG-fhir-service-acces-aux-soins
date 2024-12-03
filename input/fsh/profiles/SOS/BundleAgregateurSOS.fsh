@@ -1,7 +1,7 @@
 Profile: BundleAgregateurSOS
 Parent: Bundle
 Id: sas-sos-bundle-aggregator
-Description: "Bundle Agrégateur SAS SOS"
+Description: "Profil de Bundle qui représente le flux de réponse contenant les créneaux disponibles dans le cadre du service d'agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins"
 * type = #searchset
 * total 1..
 * link 1..1

@@ -1,7 +1,7 @@
 Profile: FrAppointmentSAS
 Parent: FrAppointment
 Id: FrAppointmentSAS
-Description: "Profil de Appointment, dérivé de FrAppointment, pour le cas d'usage prise de RDV de la plateforme SAS (Service d'accès aux soins)"
+Description: "Profil de Appointment, dérivé de FrAppointment, pour le cas d'usage prise de RDV de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS"
 * ^url = "http://sas.fr/fhir/StructureDefinition/FrAppointmentSAS"
 * ^version = "1.0.0"
 
