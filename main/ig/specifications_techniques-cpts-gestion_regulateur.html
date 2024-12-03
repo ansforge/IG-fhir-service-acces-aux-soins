@@ -238,6 +238,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#caractéristiques-de-lapi" id="markdown-toc-caractéristiques-de-lapi">Caractéristiques de l’API</a></li>
   <li><a href="#création-de-compte-régulateur" id="markdown-toc-création-de-compte-régulateur">Création de compte régulateur</a></li>
   <li><a href="#mise-à-jour-dun-compte-régulateur" id="markdown-toc-mise-à-jour-dun-compte-régulateur">Mise à jour d’un compte régulateur</a></li>
+  <li><a href="#suppression-dun-compte-régulateur" id="markdown-toc-suppression-dun-compte-régulateur">Suppression d’un compte régulateur</a></li>
   <li><a href="#règles-de-gestion" id="markdown-toc-règles-de-gestion">Règles de gestion</a></li>
 </ul>
 
@@ -415,6 +416,17 @@ détails sur la raison de l’échec</li>
 </table>
 <p><a href="#_ftnref2" name="_ftn2">[2]</a> <a href="https://www.hl7.org/fhir/http.html#cond-update">https://www.hl7.org/fhir/http.html#cond-update</a> et <a href="https://www.hl7.org/fhir/http.html#general">https://www.hl7.org/fhir/http.html#general</a></p>
 
+<p>Cette requête de modification est donc de type <code class="language-plaintext highlighter-rouge">interaction conditional update</code>. Elle permet de mettre à jour une ressource sur la base d’un critère autre que l’<code class="language-plaintext highlighter-rouge">id</code> de la ressource</p>
+
+<p>En l’occurrence, les requêtes effectuées par le SAS se baseront sur l’élément « identifier » de la ressource à modifier. [ID] représente l’identifiant national ou technique de cette ressource.</p>
+<ul>
+  <li>Lorsque l’identifiant transmis sera un ID national, il sera transmis au format <code class="language-plaintext highlighter-rouge">urn:oid:1.2.250.1.71.4.2.1|3456780581/11242343</code>, <code class="language-plaintext highlighter-rouge">3456780581/11242343</code> étant l’identifiant national préfixé</li>
+  <li>Lorsque l’identifiant transmis sera un ID technique SAS, il sera transmis au format <code class="language-plaintext highlighter-rouge">urn:oid:1.2.250.1.213.3.6|b6e39355-8a61-4556-b340-36f7b95fec6a</code>, <code class="language-plaintext highlighter-rouge">b6e39355-8a61-4556-b340-36f7b95fec6a</code> étant l’identifiant technique SAS</li>
+</ul>
+
+<p><strong>Point d’attention</strong> : dans le cas où le flux de mise à jour concerne une ressource non existante à date dans la solution logicielle éditeur, il est attendu que l’interface soit idempotente, réalise les contrôles nécessaires et se comporte comme si une requête de création avait été émise.
+<strong>Point d’information</strong> : l’ensemble des régulateurs ne sont pas équipés de carte CPx et n’ont donc pas tous un identifiant national à date. Des travaux sont en cours afin d’accompagner le déploiement de l’équipement nécessaire (lecteur de carte, cartes, etc.) aux régulateurs. C’est pour cette raison que nous utilisons de manière transitoire un identifiant technique SAS permettant d’identifier le régulateur de façon univoque (absence de collision, définition d’une autorité d’affectation, etc.).</p>
+
 <h4 id="construction-de-la-réponse-de-base-1">Construction de la réponse de base</h4>
 
 <h5 id="réponse-de-base--succès-1">Réponse de base – Succès</h5>
@@ -449,6 +461,10 @@ détails sur la raison de l’échec</li>
   <li>400 (Bad request) – Le format de la requête FHIR transmise est incorrect</li>
   <li>422 (Unprocessable Entity) – L’action demandée ne peut pas être réalisée à cause d’une règle interne à l’application.</li>
 </ul>
+
+<h3 id="suppression-dun-compte-régulateur">Suppression d’un compte régulateur</h3>
+
+<p>Il n’y aura pas de requête spécifique pour la suppression de compte. Une suppression de compte côté plateforme numérique SAS est modélisée par une requête de type « mise à jour de compte » où l’on retire l’habilitation associée au compte.</p>
 
 <h3 id="règles-de-gestion">Règles de gestion</h3>
 
@@ -522,7 +538,7 @@ détails sur la raison de l’échec</li>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Dec 3, 2024 14:08+0000">2024-12-03</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Dec 3, 2024 16:43+0000">2024-12-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
