@@ -1,0 +1,395 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/sas/Bundle/ExampleBundleAgregateurSOS> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ExampleBundleAgregateurSOS"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-bundle-aggregator"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-bundle-aggregator>
+     ] )
+  ] ; # 
+  fhir:type [ fhir:v "searchset"] ; # 
+  fhir:total [ fhir:v "4"^^xsd:nonNegativeInteger] ; # 
+  fhir:link ( [
+     fhir:relation [ fhir:v "self" ] ;
+     fhir:url [ fhir:v "https://editeur.fr/Schedule?_revinclude=Slot:schedule&_include=Schedule:actor:Location&_include:iterate=Location:organization&_has:Slot:schedule:start=ge2023-08-18T09:00:00+02:00&_has:Slot:schedule:start=le2023-08-20T08:00:00+02:00&_has:Slot:schedule:status=free&actor:Location.organization.identifier=urn:oid:1.2.250.1.71.4.2.2%7C334173748400020,urn:oid:1.2.250.1.71.4.2.2%7C392080466300010&_count=1000"^^xsd:anyURI ]
+  ] ) ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "https://exemple.com/ans-sas/Slot/ExampleSlotSOS1"^^xsd:anyURI ] ;
+     fhir:resource ( <https://exemple.com/ans-sas/Slot/ExampleSlotSOS1> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://exemple.com/ans-sas/Schedule/ExampleScheduleSOS1"^^xsd:anyURI ] ;
+     fhir:resource ( <https://exemple.com/ans-sas/Schedule/ExampleScheduleSOS1> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://exemple.com/ans-sas/Location/1111111111"^^xsd:anyURI ] ;
+     fhir:resource ( <https://exemple.com/ans-sas/Location/1111111111> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://exemple.com/ans-sas/Organization/ExampleOrgaSOS1"^^xsd:anyURI ] ;
+     fhir:resource ( <https://exemple.com/ans-sas/Organization/ExampleOrgaSOS1> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://exemple.com/ans-sas/Slot/ExampleSlotSOS2"^^xsd:anyURI ] ;
+     fhir:resource ( <https://exemple.com/ans-sas/Slot/ExampleSlotSOS2> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://exemple.com/ans-sas/Schedule/ExampleScheduleSOS2"^^xsd:anyURI ] ;
+     fhir:resource ( <https://exemple.com/ans-sas/Schedule/ExampleScheduleSOS2> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://exemple.com/ans-sas/Location/2222222222"^^xsd:anyURI ] ;
+     fhir:resource ( <https://exemple.com/ans-sas/Location/2222222222> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://exemple.com/ans-sas/Slot/ExampleSlotSOS3"^^xsd:anyURI ] ;
+     fhir:resource ( <https://exemple.com/ans-sas/Slot/ExampleSlotSOS3> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://exemple.com/ans-sas/Schedule/ExampleScheduleSOS3"^^xsd:anyURI ] ;
+     fhir:resource ( <https://exemple.com/ans-sas/Schedule/ExampleScheduleSOS3> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://exemple.com/ans-sas/Location/3333333333"^^xsd:anyURI ] ;
+     fhir:resource ( <https://exemple.com/ans-sas/Location/3333333333> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://exemple.com/ans-sas/Organization/ExampleOrgaSOS2"^^xsd:anyURI ] ;
+     fhir:resource ( <https://exemple.com/ans-sas/Organization/ExampleOrgaSOS2> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://exemple.com/ans-sas/Slot/ExampleSlotSOS4"^^xsd:anyURI ] ;
+     fhir:resource ( <https://exemple.com/ans-sas/Slot/ExampleSlotSOS4> )
+  ] ) . # 
+
+<https://exemple.com/ans-sas/Slot/ExampleSlotSOS1> a fhir:Slot ;
+  fhir:id [ fhir:v "ExampleSlotSOS1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator>
+     ] ) ;
+     fhir:security ( [
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "PUBLIC" ]
+     ] [
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "SNP" ]
+     ] )
+  ] ; # 
+  fhir:serviceType ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "AMB" ]
+     ] )
+  ] [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "VR" ]
+     ] )
+  ] ) ; # 
+  fhir:appointmentType [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0276"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "ROUTINE" ]
+     ] )
+  ] ; # 
+  fhir:schedule [
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Schedule/ExampleScheduleSOS1> ;
+     fhir:reference [ fhir:v "Schedule/ExampleScheduleSOS1" ]
+  ] ; # 
+  fhir:status [ fhir:v "free"] ; # 
+  fhir:start [ fhir:v "2023-08-18T09:00:00.000+02:00"^^xsd:dateTime] ; # 
+  fhir:end [ fhir:v "2023-08-18T09:30:00.000+02:00"^^xsd:dateTime] ; # 
+  fhir:comment [ fhir:v "http://www.editeur.com/agenda-pfg/creneau1"] . # 
+
+<https://exemple.com/ans-sas/Schedule/ExampleScheduleSOS1> a fhir:Schedule ;
+  fhir:id [ fhir:v "ExampleScheduleSOS1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator>
+     ] )
+  ] ; # 
+  fhir:actor ( [
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Location/1111111111> ;
+     fhir:reference [ fhir:v "Location/1111111111" ]
+  ] ) . # 
+
+<https://exemple.com/ans-sas/Location/1111111111> a fhir:Location ;
+  fhir:id [ fhir:v "1111111111"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator>
+     ] )
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "INTRN" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "https://editeur.com"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "1111111111" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "Centre de consultation Rennes Nord"] ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+33193246789" ]
+  ] ) ; # 
+  fhir:address [
+     fhir:line ( [ fhir:v "320 avenue Général Georges Patton" ] ) ;
+     fhir:city [ fhir:v "RENNES" ] ;
+     fhir:postalCode [ fhir:v "35700" ]
+  ] ; # 
+  fhir:managingOrganization [
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Organization/ExampleOrgaSOS1> ;
+     fhir:reference [ fhir:v "Organization/ExampleOrgaSOS1" ]
+  ] ; # 
+  fhir:hoursOfOperation ( [
+     fhir:daysOfWeek ( [ fhir:v "tue" ] [ fhir:v "wed" ] [ fhir:v "thu" ] [ fhir:v "fri" ] [ fhir:v "sat" ] [ fhir:v "sun" ] ) ;
+     fhir:openingTime [ fhir:v "08:00:00"^^xsd:time ] ;
+     fhir:closingTime [ fhir:v "19:00:00"^^xsd:time ]
+  ] ) . # 
+
+<https://exemple.com/ans-sas/Organization/ExampleOrgaSOS1> a fhir:Organization ;
+  fhir:id [ fhir:v "ExampleOrgaSOS1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator>
+     ] )
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "IDNST" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "urn:oid:1.2.250.1.71.4.2.2"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "334173748400020" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "SOS Médecins de Rennes"] . # 
+
+<https://exemple.com/ans-sas/Slot/ExampleSlotSOS2> a fhir:Slot ;
+  fhir:id [ fhir:v "ExampleSlotSOS2"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator>
+     ] ) ;
+     fhir:security ( [
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "PUBLIC" ]
+     ] )
+  ] ; # 
+  fhir:serviceType ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "AMB" ]
+     ] )
+  ] ) ; # 
+  fhir:appointmentType [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0276"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "ROUTINE" ]
+     ] )
+  ] ; # 
+  fhir:schedule [
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Schedule/ExampleScheduleSOS2> ;
+     fhir:reference [ fhir:v "Schedule/ExampleScheduleSOS2" ]
+  ] ; # 
+  fhir:status [ fhir:v "free"] ; # 
+  fhir:start [ fhir:v "2023-08-19T11:00:00.000+02:00"^^xsd:dateTime] ; # 
+  fhir:end [ fhir:v "2023-08-19T11:30:00.000+02:00"^^xsd:dateTime] ; # 
+  fhir:comment [ fhir:v "http://www.editeur.com/agenda-pfg/creneau2"] . # 
+
+<https://exemple.com/ans-sas/Schedule/ExampleScheduleSOS2> a fhir:Schedule ;
+  fhir:id [ fhir:v "ExampleScheduleSOS2"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator>
+     ] )
+  ] ; # 
+  fhir:actor ( [
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Location/2222222222> ;
+     fhir:reference [ fhir:v "Location/2222222222" ]
+  ] ) . # 
+
+<https://exemple.com/ans-sas/Location/2222222222> a fhir:Location ;
+  fhir:id [ fhir:v "2222222222"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator>
+     ] )
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "INTRN" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "https://editeur.com"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2222222222" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "Centre de consultation Rennes Cleunay"] ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+33145249912" ]
+  ] ) ; # 
+  fhir:address [
+     fhir:line ( [ fhir:v "106 rue Eugène Pottier" ] ) ;
+     fhir:city [ fhir:v "RENNES" ] ;
+     fhir:postalCode [ fhir:v "35000" ]
+  ] ; # 
+  fhir:managingOrganization [
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Organization/ExampleOrgaSOS1> ;
+     fhir:reference [ fhir:v "Organization/ExampleOrgaSOS1" ]
+  ] ; # 
+  fhir:hoursOfOperation ( [
+     fhir:daysOfWeek ( [ fhir:v "mon" ] [ fhir:v "tue" ] [ fhir:v "wed" ] [ fhir:v "thu" ] ) ;
+     fhir:openingTime [ fhir:v "09:00:00"^^xsd:time ] ;
+     fhir:closingTime [ fhir:v "21:00:00"^^xsd:time ]
+  ] ) . # 
+
+<https://exemple.com/ans-sas/Slot/ExampleSlotSOS3> a fhir:Slot ;
+  fhir:id [ fhir:v "ExampleSlotSOS3"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator>
+     ] ) ;
+     fhir:security ( [
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "PUBLIC" ]
+     ] )
+  ] ; # 
+  fhir:serviceType ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "VR" ]
+     ] )
+  ] ) ; # 
+  fhir:appointmentType [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0276"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "ROUTINE" ]
+     ] )
+  ] ; # 
+  fhir:schedule [
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Schedule/ExampleScheduleSOS3> ;
+     fhir:reference [ fhir:v "Schedule/ExampleScheduleSOS3" ]
+  ] ; # 
+  fhir:status [ fhir:v "free"] ; # 
+  fhir:start [ fhir:v "2023-08-18T14:20:00.000+02:00"^^xsd:dateTime] ; # 
+  fhir:end [ fhir:v "2023-08-18T14:40:00.000+02:00"^^xsd:dateTime] ; # 
+  fhir:comment [ fhir:v "http://www.editeur.com/agenda-pfg/creneau3"] . # 
+
+<https://exemple.com/ans-sas/Schedule/ExampleScheduleSOS3> a fhir:Schedule ;
+  fhir:id [ fhir:v "ExampleScheduleSOS3"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator>
+     ] )
+  ] ; # 
+  fhir:actor ( [
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Location/3333333333> ;
+     fhir:reference [ fhir:v "Location/3333333333" ]
+  ] ) . # 
+
+<https://exemple.com/ans-sas/Location/3333333333> a fhir:Location ;
+  fhir:id [ fhir:v "3333333333"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator>
+     ] )
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "INTRN" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "https://editeur.com"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "3333333333" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "Centre de consultation Lorient"] ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+33139555992" ]
+  ] ) ; # 
+  fhir:address [
+     fhir:line ( [ fhir:v "12 impasse Royer Dubail" ] ) ;
+     fhir:city [ fhir:v "LORIENT" ] ;
+     fhir:postalCode [ fhir:v "56100" ]
+  ] ; # 
+  fhir:managingOrganization [
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Organization/ExampleOrgaSOS2> ;
+     fhir:reference [ fhir:v "Organization/ExampleOrgaSOS2" ]
+  ] ; # 
+  fhir:hoursOfOperation ( [
+     fhir:daysOfWeek ( [ fhir:v "tue" ] [ fhir:v "thu" ] [ fhir:v "sat" ] ) ;
+     fhir:openingTime [ fhir:v "11:00:00"^^xsd:time ] ;
+     fhir:closingTime [ fhir:v "18:00:00"^^xsd:time ]
+  ] ) . # 
+
+<https://exemple.com/ans-sas/Organization/ExampleOrgaSOS2> a fhir:Organization ;
+  fhir:id [ fhir:v "ExampleOrgaSOS2"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator>
+     ] )
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "IDNST" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "urn:oid:1.2.250.1.71.4.2.2"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "392080466300010" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "SOS Médecins Lorient et agglomération"] . # 
+
+<https://exemple.com/ans-sas/Slot/ExampleSlotSOS4> a fhir:Slot ;
+  fhir:id [ fhir:v "ExampleSlotSOS4"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator>
+     ] ) ;
+     fhir:security ( [
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "PUBLIC" ]
+     ] )
+  ] ; # 
+  fhir:serviceType ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "AMB" ]
+     ] )
+  ] ) ; # 
+  fhir:appointmentType [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0276"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "ROUTINE" ]
+     ] )
+  ] ; # 
+  fhir:schedule [
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Schedule/ExampleScheduleSOS3> ;
+     fhir:reference [ fhir:v "Schedule/ExampleScheduleSOS3" ]
+  ] ; # 
+  fhir:status [ fhir:v "free"] ; # 
+  fhir:start [ fhir:v "2023-08-18T14:40:00.000+02:00"^^xsd:dateTime] ; # 
+  fhir:end [ fhir:v "2023-08-18T15:00:00.000+02:00"^^xsd:dateTime] ; # 
+  fhir:comment [ fhir:v "http://www.editeur.com/agenda-pfg/creneau4"] . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Location xmlns="http://hl7.org/fhir">
+  <id value="3333333333"/>
+  <meta>
+    <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator"/>
+  </meta>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"/>
+        <code value="INTRN"/>
+      </coding>
+    </type>
+    <system value="https://editeur.com"/>
+    <value value="3333333333"/>
+  </identifier>
+  <name value="Centre de consultation Lorient"/>
+  <telecom>
+    <system value="phone"/>
+    <value value="+33139555992"/>
+  </telecom>
+  <address>
+    <line value="12 impasse Royer Dubail"/>
+    <city value="LORIENT"/>
+    <postalCode value="56100"/>
+  </address>
+  <managingOrganization>
+    <reference value="Organization/ExampleOrgaSOS2"/>
+  </managingOrganization>
+  <hoursOfOperation>
+    <daysOfWeek value="tue"/>
+    <daysOfWeek value="thu"/>
+    <daysOfWeek value="sat"/>
+    <openingTime value="11:00:00"/>
+    <closingTime value="18:00:00"/>
+  </hoursOfOperation>
+</Location>
