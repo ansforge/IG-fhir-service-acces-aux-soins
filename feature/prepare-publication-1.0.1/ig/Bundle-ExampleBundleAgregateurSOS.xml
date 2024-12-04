@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="ExampleBundleAgregateurSOS"/>
+  <meta>
+    <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-bundle-aggregator"/>
+  </meta>
+  <type value="searchset"/>
+  <total value="4"/>
+  <link>
+    <relation value="self"/>
+    <url value="https://editeur.fr/Schedule?_revinclude=Slot:schedule&amp;_include=Schedule:actor:Location&amp;_include:iterate=Location:organization&amp;_has:Slot:schedule:start=ge2023-08-18T09:00:00+02:00&amp;_has:Slot:schedule:start=le2023-08-20T08:00:00+02:00&amp;_has:Slot:schedule:status=free&amp;actor:Location.organization.identifier=urn:oid:1.2.250.1.71.4.2.2%7C334173748400020,urn:oid:1.2.250.1.71.4.2.2%7C392080466300010&amp;_count=1000"/>
+  </link>
+  <entry>
+    <fullUrl value="https://exemple.com/ans-sas/Slot/ExampleSlotSOS1"/>
+    <resource>
+      <Slot>
+        <id value="ExampleSlotSOS1"/>
+        <meta>
+          <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator"/>
+          <security>
+            <system value="https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"/>
+            <code value="PUBLIC"/>
+          </security>
+          <security>
+            <system value="https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"/>
+            <code value="SNP"/>
+          </security>
+        </meta>
+        <serviceType>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+            <code value="AMB"/>
+          </coding>
+        </serviceType>
+        <serviceType>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+            <code value="VR"/>
+          </coding>
+        </serviceType>
+        <appointmentType>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0276"/>
+            <code value="ROUTINE"/>
+          </coding>
+        </appointmentType>
+        <schedule>
+          <reference value="Schedule/ExampleScheduleSOS1"/>
+        </schedule>
+        <status value="free"/>
+        <start value="2023-08-18T09:00:00.000+02:00"/>
+        <end value="2023-08-18T09:30:00.000+02:00"/>
+        <comment value="http://www.editeur.com/agenda-pfg/creneau1"/>
+      </Slot>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://exemple.com/ans-sas/Schedule/ExampleScheduleSOS1"/>
+    <resource>
+      <Schedule>
+        <id value="ExampleScheduleSOS1"/>
+        <meta>
+          <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator"/>
+        </meta>
+        <actor>
+          <reference value="Location/1111111111"/>
+        </actor>
+      </Schedule>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://exemple.com/ans-sas/Location/1111111111"/>
+    <resource>
+      <Location>
+        <id value="1111111111"/>
+        <meta>
+          <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator"/>
+        </meta>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"/>
+              <code value="INTRN"/>
+            </coding>
+          </type>
+          <system value="https://editeur.com"/>
+          <value value="1111111111"/>
+        </identifier>
+        <name value="Centre de consultation Rennes Nord"/>
+        <telecom>
+          <system value="phone"/>
+          <value value="+33193246789"/>
+        </telecom>
+        <address>
+          <line value="320 avenue Général Georges Patton"/>
+          <city value="RENNES"/>
+          <postalCode value="35700"/>
+        </address>
+        <managingOrganization>
+          <reference value="Organization/ExampleOrgaSOS1"/>
+        </managingOrganization>
+        <hoursOfOperation>
+          <daysOfWeek value="tue"/>
+          <daysOfWeek value="wed"/>
+          <daysOfWeek value="thu"/>
+          <daysOfWeek value="fri"/>
+          <daysOfWeek value="sat"/>
+          <daysOfWeek value="sun"/>
+          <openingTime value="08:00:00"/>
+          <closingTime value="19:00:00"/>
+        </hoursOfOperation>
+      </Location>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://exemple.com/ans-sas/Organization/ExampleOrgaSOS1"/>
+    <resource>
+      <Organization>
+        <id value="ExampleOrgaSOS1"/>
+        <meta>
+          <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator"/>
+        </meta>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"/>
+              <code value="IDNST"/>
+            </coding>
+          </type>
+          <system value="urn:oid:1.2.250.1.71.4.2.2"/>
+          <value value="334173748400020"/>
+        </identifier>
+        <name value="SOS Médecins de Rennes"/>
+      </Organization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://exemple.com/ans-sas/Slot/ExampleSlotSOS2"/>
+    <resource>
+      <Slot>
+        <id value="ExampleSlotSOS2"/>
+        <meta>
+          <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator"/>
+          <security>
+            <system value="https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"/>
+            <code value="PUBLIC"/>
+          </security>
+        </meta>
+        <serviceType>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+            <code value="AMB"/>
+          </coding>
+        </serviceType>
+        <appointmentType>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0276"/>
+            <code value="ROUTINE"/>
+          </coding>
+        </appointmentType>
+        <schedule>
+          <reference value="Schedule/ExampleScheduleSOS2"/>
+        </schedule>
+        <status value="free"/>
+        <start value="2023-08-19T11:00:00.000+02:00"/>
+        <end value="2023-08-19T11:30:00.000+02:00"/>
+        <comment value="http://www.editeur.com/agenda-pfg/creneau2"/>
+      </Slot>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://exemple.com/ans-sas/Schedule/ExampleScheduleSOS2"/>
+    <resource>
+      <Schedule>
+        <id value="ExampleScheduleSOS2"/>
+        <meta>
+          <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator"/>
+        </meta>
+        <actor>
+          <reference value="Location/2222222222"/>
+        </actor>
+      </Schedule>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://exemple.com/ans-sas/Location/2222222222"/>
+    <resource>
+      <Location>
+        <id value="2222222222"/>
+        <meta>
+          <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator"/>
+        </meta>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"/>
+              <code value="INTRN"/>
+            </coding>
+          </type>
+          <system value="https://editeur.com"/>
+          <value value="2222222222"/>
+        </identifier>
+        <name value="Centre de consultation Rennes Cleunay"/>
+        <telecom>
+          <system value="phone"/>
+          <value value="+33145249912"/>
+        </telecom>
+        <address>
+          <line value="106 rue Eugène Pottier"/>
+          <city value="RENNES"/>
+          <postalCode value="35000"/>
+        </address>
+        <managingOrganization>
+          <reference value="Organization/ExampleOrgaSOS1"/>
+        </managingOrganization>
+        <hoursOfOperation>
+          <daysOfWeek value="mon"/>
+          <daysOfWeek value="tue"/>
+          <daysOfWeek value="wed"/>
+          <daysOfWeek value="thu"/>
+          <openingTime value="09:00:00"/>
+          <closingTime value="21:00:00"/>
+        </hoursOfOperation>
+      </Location>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://exemple.com/ans-sas/Slot/ExampleSlotSOS3"/>
+    <resource>
+      <Slot>
+        <id value="ExampleSlotSOS3"/>
+        <meta>
+          <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator"/>
+          <security>
+            <system value="https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"/>
+            <code value="PUBLIC"/>
+          </security>
+        </meta>
+        <serviceType>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+            <code value="VR"/>
+          </coding>
+        </serviceType>
+        <appointmentType>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0276"/>
+            <code value="ROUTINE"/>
+          </coding>
+        </appointmentType>
+        <schedule>
+          <reference value="Schedule/ExampleScheduleSOS3"/>
+        </schedule>
+        <status value="free"/>
+        <start value="2023-08-18T14:20:00.000+02:00"/>
+        <end value="2023-08-18T14:40:00.000+02:00"/>
+        <comment value="http://www.editeur.com/agenda-pfg/creneau3"/>
+      </Slot>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://exemple.com/ans-sas/Schedule/ExampleScheduleSOS3"/>
+    <resource>
+      <Schedule>
+        <id value="ExampleScheduleSOS3"/>
+        <meta>
+          <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator"/>
+        </meta>
+        <actor>
+          <reference value="Location/3333333333"/>
+        </actor>
+      </Schedule>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://exemple.com/ans-sas/Location/3333333333"/>
+    <resource>
+      <Location>
+        <id value="3333333333"/>
+        <meta>
+          <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator"/>
+        </meta>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"/>
+              <code value="INTRN"/>
+            </coding>
+          </type>
+          <system value="https://editeur.com"/>
+          <value value="3333333333"/>
+        </identifier>
+        <name value="Centre de consultation Lorient"/>
+        <telecom>
+          <system value="phone"/>
+          <value value="+33139555992"/>
+        </telecom>
+        <address>
+          <line value="12 impasse Royer Dubail"/>
+          <city value="LORIENT"/>
+          <postalCode value="56100"/>
+        </address>
+        <managingOrganization>
+          <reference value="Organization/ExampleOrgaSOS2"/>
+        </managingOrganization>
+        <hoursOfOperation>
+          <daysOfWeek value="tue"/>
+          <daysOfWeek value="thu"/>
+          <daysOfWeek value="sat"/>
+          <openingTime value="11:00:00"/>
+          <closingTime value="18:00:00"/>
+        </hoursOfOperation>
+      </Location>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://exemple.com/ans-sas/Organization/ExampleOrgaSOS2"/>
+    <resource>
+      <Organization>
+        <id value="ExampleOrgaSOS2"/>
+        <meta>
+          <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator"/>
+        </meta>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"/>
+              <code value="IDNST"/>
+            </coding>
+          </type>
+          <system value="urn:oid:1.2.250.1.71.4.2.2"/>
+          <value value="392080466300010"/>
+        </identifier>
+        <name value="SOS Médecins Lorient et agglomération"/>
+      </Organization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://exemple.com/ans-sas/Slot/ExampleSlotSOS4"/>
+    <resource>
+      <Slot>
+        <id value="ExampleSlotSOS4"/>
+        <meta>
+          <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator"/>
+          <security>
+            <system value="https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"/>
+            <code value="PUBLIC"/>
+          </security>
+        </meta>
+        <serviceType>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+            <code value="AMB"/>
+          </coding>
+        </serviceType>
+        <appointmentType>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0276"/>
+            <code value="ROUTINE"/>
+          </coding>
+        </appointmentType>
+        <schedule>
+          <reference value="Schedule/ExampleScheduleSOS3"/>
+        </schedule>
+        <status value="free"/>
+        <start value="2023-08-18T14:40:00.000+02:00"/>
+        <end value="2023-08-18T15:00:00.000+02:00"/>
+        <comment value="http://www.editeur.com/agenda-pfg/creneau4"/>
+      </Slot>
+    </resource>
+  </entry>
+</Bundle>
