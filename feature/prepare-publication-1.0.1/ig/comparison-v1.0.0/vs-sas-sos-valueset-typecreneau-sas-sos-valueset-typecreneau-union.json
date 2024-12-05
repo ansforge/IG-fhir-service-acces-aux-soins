@@ -1,0 +1,28 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "71f756bf-5762-401a-be24-9cb9cef16641-74",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/71f756bf-5762-401a-be24-9cb9cef16641-74",
+  "name" : "UnionTypeCreneauSASSOSAndTypeCreneauSASSOS",
+  "title" : "Union of Type créneaux SAS SOS And Type créneaux SAS SOS",
+  "status" : "active",
+  "date" : "2024-12-05T09:23:56+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "concept" : [{
+        "code" : "PUBLIC",
+        "display" : "Créneau accessible par le grand public"
+      },
+      {
+        "code" : "SNP",
+        "display" : "Créneau accessible par les Régulateurs et Organisateurs de Soins Non Programmés"
+      }]
+    }]
+  }
+}

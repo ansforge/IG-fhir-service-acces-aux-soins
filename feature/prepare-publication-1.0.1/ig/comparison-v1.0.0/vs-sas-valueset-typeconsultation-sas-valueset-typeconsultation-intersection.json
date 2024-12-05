@@ -1,0 +1,32 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "71f756bf-5762-401a-be24-9cb9cef16641-84",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/71f756bf-5762-401a-be24-9cb9cef16641-84",
+  "name" : "IntersectionTypeConsultationSASAndTypeConsultationSAS",
+  "title" : "Intersection of Type consultation SAS And Type consultation SAS",
+  "status" : "active",
+  "date" : "2024-12-05T09:23:56+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "concept" : [{
+        "code" : "AMB",
+        "display" : "Consultation au cabinet"
+      },
+      {
+        "code" : "HH",
+        "display" : "Consultation à domicile"
+      },
+      {
+        "code" : "VR",
+        "display" : "Téléconsultation"
+      }]
+    }]
+  }
+}
