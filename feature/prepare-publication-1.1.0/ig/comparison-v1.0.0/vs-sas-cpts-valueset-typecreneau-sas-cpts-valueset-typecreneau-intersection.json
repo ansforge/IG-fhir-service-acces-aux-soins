@@ -1,0 +1,36 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "7755ab73-c370-4671-bee2-612ba91b2386-69",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/7755ab73-c370-4671-bee2-612ba91b2386-69",
+  "name" : "IntersectionTypeCreneauSASCPTSAndTypeCreneauSASCPTS",
+  "title" : "Intersection of Type créneaux SAS CPTS And Type créneaux SAS CPTS",
+  "status" : "active",
+  "date" : "2024-12-05T09:39:37+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "concept" : [{
+        "code" : "PUBLIC",
+        "display" : "Créneau accessible par le grand public"
+      },
+      {
+        "code" : "SNP",
+        "display" : "Créneau accessible par les Régulateurs et Organisateurs de Soins Non Programmés"
+      },
+      {
+        "code" : "PRO",
+        "display" : "Créneau accessible par les professionnels de santé"
+      },
+      {
+        "code" : "CPTS",
+        "display" : "Créneau accessible par les CPTS"
+      }]
+    }]
+  }
+}
