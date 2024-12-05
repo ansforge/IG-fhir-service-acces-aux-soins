@@ -1,6 +1,6 @@
 **Release 1.1.0-trial-use de l'Implémentation Guide Service d'Accès aux Soins.**
 
-[Modifications apportées dans cette release](https://github.com/ansforge/IG-fhir-service-acces-aux-soins/pulls?q=is%3Apr+is%3Aclosed+milestone%3A1.1.0-trial-use)
+[Modifications apportées dans cette release](https://github.com/ansforge/IG-fhir-service-acces-aux-soins/pulls?q=is%3Apr+is%3Aclosed+milestone%3A1.1.0-trial-implementation)
 
 * Ajout d'un capability statement en mode draft pour les différents profils
 * Cas d'usage CPTS : 
