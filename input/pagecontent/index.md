@@ -1,8 +1,8 @@
-<!--blockquote class="stu-note">
+<blockquote class="stu-note">
 <p>
   <b>Attention !</b> Cette version de l'Implementation Guide est en intégration continue et est soumise à des changements réguliers. La version officielle est accessible à l'adresse <a href="https://interop.esante.gouv.fr/ig/fhir/sas" target="_blank">https://interop.esante.gouv.fr/ig/fhir/sas</a>
 </p>
-</blockquote>-->
+</blockquote>
 
 <div class="figure" style="width:65%;">
     <img style="height: auto; width: 100%;" src="sas_logo.png" alt="Service d'Accès aux Soins (SAS)" title="Logo SAS">
