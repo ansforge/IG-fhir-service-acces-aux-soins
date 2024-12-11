@@ -1,0 +1,38 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/ExamplePractitionerRegul1> a fhir:Practitioner ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ExamplePractitionerRegul1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul>
+     ] )
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://interopsante.org/fhir/CodeSystem/fr-v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "IDNPS" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "urn:oid:1.2.250.1.71.4.2.2"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "3456780581/11242343" ]
+  ] ) ; # 
+  fhir:active [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Loridon" ] ;
+     fhir:given ( [ fhir:v "Sébastien" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "sebastien.loridon@test.com" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
