@@ -1,0 +1,67 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/sas/PractitionerRole/ExamplePractitionerRoleAgregateur3> a fhir:PractitionerRole ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ExamplePractitionerRoleAgregateur3"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"^^xsd:anyURI ;
+       fhir:link <http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole ExamplePractitionerRoleAgregateur3</b></p><a name=\"ExamplePractitionerRoleAgregateur3\"> </a><a name=\"hcExamplePractitionerRoleAgregateur3\"> </a><a name=\"ExamplePractitionerRoleAgregateur3-fr-FR\"> </a><p><b>practitioner</b>: <a href=\"Practitioner-ExamplePractitioner2.html\">Practitioner Sébastien THOMAS </a></p><p><b>organization</b>: Identifier: Identification nationale de structure définie par l’ASIP-SANTE dans le CI_SIS/1810004956</p><p><b>location</b>: <a href=\"#hcExamplePractitionerRoleAgregateur3/ExampleLocation2\">Location: identifier = Identifiant interne</a></p><hr/><blockquote><p class=\"res-header-id\"><b>Generated Narrative: Location  #ExampleLocation2</b></p><a name=\"ExamplePractitionerRoleAgregateur3/ExampleLocation2\"> </a><a name=\"hcExamplePractitionerRoleAgregateur3/ExampleLocation2\"> </a><a name=\"ExamplePractitionerRoleAgregateur3/ExampleLocation2-fr-FR\"> </a><p><b>identifier</b>: Identifiant interne/2</p><p><b>address</b>: 30 rue Mme DELMAS AGEN 47000 </p></blockquote></div>"
+  ] ; # 
+  fhir:contained ( [
+     a fhir:Location ;
+     fhir:id [ fhir:v "ExampleLocation2" ] ;
+     fhir:meta [
+       fhir:profile ( [
+         fhir:v "http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur"^^xsd:anyURI ;
+         fhir:link <http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur>
+       ] )
+     ] ;
+     fhir:identifier ( [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "INTRN" ]
+         ] )
+       ] ;
+       fhir:system [ fhir:v "urn:oid:1.1.111.1.111.1.1.1"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "2" ]
+     ] ) ;
+     fhir:address [
+       fhir:line ( [ fhir:v "30 rue Mme DELMAS" ] ) ;
+       fhir:city [ fhir:v "AGEN" ] ;
+       fhir:postalCode [ fhir:v "47000" ]
+     ]
+  ] ) ; # 
+  fhir:practitioner [
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/ExamplePractitioner2> ;
+     fhir:reference [ fhir:v "Practitioner/ExamplePractitioner2" ]
+  ] ; # 
+  fhir:organization [
+     fhir:identifier [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://interopsante.org/fhir/CodeSystem/fr-v2-0203"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "IDNST" ]
+         ] )
+       ] ;
+       fhir:system [ fhir:v "urn:oid:1.2.250.1.71.4.2.2"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "1810004956" ]
+     ]
+  ] ; # 
+  fhir:location ( [
+     fhir:reference [ fhir:v "#ExampleLocation2" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
