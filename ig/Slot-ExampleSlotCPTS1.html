@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>ExampleSlotCPTS1 - Service d'Accès aux Soins v1.0.0</title>
+    <title>ExampleSlotCPTS1 - Service d'Accès aux Soins v1.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -41,8 +41,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"9.48"}
-    h3,h4,h5,h6{--heading-prefix:"9.48"}</style>
+    <style type="text/css">h2{--heading-prefix:"14.69"}
+    h3,h4,h5,h6{--heading-prefix:"14.69"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -51,12 +51,17 @@
   </div>
   <div id="ans-nav" style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; ">
     <a id="hl7-logo" no-external="true" href="https://esante.gouv.fr/"><img height="50" alt="ANS Logo" src="assets/images/logo-ANS.svg"/></a>
+    <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
   </div>
+
+  <div id="ig-search">
+ </div>
+
 
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Service d&#39;Accès aux Soins</span>
             <br/>
-            <span style="display:inline-block;">1.0.0 - trial-use
+            <span style="display:inline-block;">1.1.0 - trial-implementation
 
 
 
@@ -105,6 +110,9 @@
         <a href="specifications_techniques-ps-recherche_creneaux.html">PS indiv. - Recherche des créneaux</a>
       </li>
       <li>
+        <a href="specifications_techniques-ps-gestion_regulateur.html">PS indiv. - Gestion des comptes régulateurs</a>
+      </li>
+      <li>
         <a href="specifications_techniques-ps-gestion_rdv.html">PS indiv. - Gestion de rendez-vous</a>
       </li>
       <li>
@@ -114,7 +122,22 @@
         <a href="specifications_techniques-cpts-recherche_creneaux.html">CPTS - Recherche des créneaux</a>
       </li>
       <li>
+        <a href="specifications_techniques-cpts-gestion_regulateur.html">CPTS - Gestion des comptes régulateurs</a>
+      </li>
+      <li>
         <a href="specifications_techniques-cpts-gestion_rdv.html">CPTS - Gestion de rendez-vous</a>
+      </li>
+      <li>
+        ________ SOS Médecins ________
+      </li>
+      <li>
+        <a href="specifications_techniques-sos-recherche_creneaux.html">SOS Médecins - Recherche des créneaux</a>
+      </li>
+      <li>
+        <a href="specifications_techniques-sos-gestion_regulateur.html">SOS Médecins - Gestion des comptes régulateurs</a>
+      </li>
+      <li>
+        <a href="specifications_techniques-sos-gestion_rdv.html">SOS Médecins - Gestion de rendez-vous</a>
       </li>
     </ul>
   </li>
@@ -168,7 +191,7 @@
 
           <span style="float:right;">
 
-            <a href="Schedule-ExampleSchedule3.ttl.html">&lt;prev</a> | 
+            <a href="Schedule-ExampleScheduleSOS3.ttl.html">&lt;prev</a> | 
 
             <a href="#bottom">bottom</a>
 
@@ -187,7 +210,7 @@
           <div class="inner-wrapper">
 
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Service d'Accès aux Soins - Local Development build (v1.0.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/fhir/sas/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Service d'Accès aux Soins - Local Development build (v1.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/fhir/sas/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
 
   
 
@@ -244,7 +267,7 @@
 
 
 
-  <div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Slot ExampleSlotCPTS1</b></p><a name="ExampleSlotCPTS1"> </a><a name="hcExampleSlotCPTS1"> </a><a name="ExampleSlotCPTS1-fr-FR"> </a><p><b>serviceType</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode AMB}">Visite de contrôle</span>, <span title="Codes:{https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/TRE_R66-CategorieEtablissement 604}">604</span></p><p><b>specialty</b>: <span title="Codes:{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM54}">Médecine générale (SM)</span></p><p><b>appointmentType</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0276 ROUTINE}">Routine appointment - default if not valued</span></p><p><b>schedule</b>: <a href="Schedule-ExampleSchedule.html">Schedule</a></p><p><b>status</b>: Free</p><p><b>start</b>: 2024-06-12 16:40:00+0200</p><p><b>end</b>: 2024-06-12 17:00:00+0200</p><p><b>comment</b>: https://exemple.com/rdv/com/</p></div>
+  <div><p class="res-header-id"><b>Generated Narrative: Slot ExampleSlotCPTS1</b></p><a name="ExampleSlotCPTS1"> </a><a name="hcExampleSlotCPTS1"> </a><a name="ExampleSlotCPTS1-und"> </a><p><b>serviceType</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode AMB}">ambulatory</span>, <span title="Codes:{https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement 604}">Communauté Professionnelle Territoriale de Santé (CPTS)</span>, <span title="Codes:">Visite de contrôle</span></p><p><b>specialty</b>: <span title="Codes:{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM54}">Médecine générale (SM)</span></p><p><b>appointmentType</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0276 ROUTINE}">Routine appointment - default if not valued</span></p><p><b>schedule</b>: <a href="Schedule-ExampleSchedule.html">Schedule</a></p><p><b>status</b>: Free</p><p><b>start</b>: 2024-06-12 16:40:00+0200</p><p><b>end</b>: 2024-06-12 17:00:00+0200</p><p><b>comment</b>: https://exemple.com/rdv/com/</p></div>
 
   
 
@@ -273,7 +296,7 @@
             <tr>
               <td style="text-align:left">&#xA0;
 
-                <a href="Schedule-ExampleSchedule3.ttl.html">&lt;prev</a>
+                <a href="Schedule-ExampleScheduleSOS3.ttl.html">&lt;prev</a>
 
               </td>
               <td style="text-align:center">
@@ -291,7 +314,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 5, 2024 14:31+0000">2024-09-05</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Dec 11, 2024 08:48+0000">2024-12-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

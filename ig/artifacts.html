@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Artifacts Summary - Service d'Accès aux Soins v1.0.0</title>
+    <title>Artifacts Summary - Service d'Accès aux Soins v1.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -41,8 +41,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"9"}
-    h3,h4,h5,h6{--heading-prefix:"9.0"}</style>
+    <style type="text/css">h2{--heading-prefix:"14"}
+    h3,h4,h5,h6{--heading-prefix:"14.0"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -51,12 +51,17 @@
   </div>
   <div id="ans-nav" style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; ">
     <a id="hl7-logo" no-external="true" href="https://esante.gouv.fr/"><img height="50" alt="ANS Logo" src="assets/images/logo-ANS.svg"/></a>
+    <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
   </div>
+
+  <div id="ig-search">
+ </div>
+
 
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Service d&#39;Accès aux Soins</span>
             <br/>
-            <span style="display:inline-block;">1.0.0 - trial-use
+            <span style="display:inline-block;">1.1.0 - trial-implementation
 
 
 
@@ -105,6 +110,9 @@
         <a href="specifications_techniques-ps-recherche_creneaux.html">PS indiv. - Recherche des créneaux</a>
       </li>
       <li>
+        <a href="specifications_techniques-ps-gestion_regulateur.html">PS indiv. - Gestion des comptes régulateurs</a>
+      </li>
+      <li>
         <a href="specifications_techniques-ps-gestion_rdv.html">PS indiv. - Gestion de rendez-vous</a>
       </li>
       <li>
@@ -114,7 +122,22 @@
         <a href="specifications_techniques-cpts-recherche_creneaux.html">CPTS - Recherche des créneaux</a>
       </li>
       <li>
+        <a href="specifications_techniques-cpts-gestion_regulateur.html">CPTS - Gestion des comptes régulateurs</a>
+      </li>
+      <li>
         <a href="specifications_techniques-cpts-gestion_rdv.html">CPTS - Gestion de rendez-vous</a>
+      </li>
+      <li>
+        ________ SOS Médecins ________
+      </li>
+      <li>
+        <a href="specifications_techniques-sos-recherche_creneaux.html">SOS Médecins - Recherche des créneaux</a>
+      </li>
+      <li>
+        <a href="specifications_techniques-sos-gestion_regulateur.html">SOS Médecins - Gestion des comptes régulateurs</a>
+      </li>
+      <li>
+        <a href="specifications_techniques-sos-gestion_rdv.html">SOS Médecins - Gestion de rendez-vous</a>
       </li>
     </ul>
   </li>
@@ -172,7 +195,7 @@
 
             <a href="#bottom">bottom</a>
 
-          | <a href="SearchParameter-cptsslot-sp-servicetype.html">next&gt;</a>
+          | <a href="CapabilityStatement-SAS-Consommateur-psindiv.html">next&gt;</a>
 
           </span>
 
@@ -194,7 +217,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Service d'Accès aux Soins - Local Development build (v1.0.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/fhir/sas/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Service d'Accès aux Soins - Local Development build (v1.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/fhir/sas/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Artifacts Summary</h2>
   
   
@@ -206,19 +229,22 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
    <p>Contents:</p>
    <ul>
       <li>
-         <a href="#1">Behavior: Search Parameters</a>
+         <a href="#1">Behavior: Capability Statements</a>
       </li>
       <li>
-         <a href="#2">Structures: Resource Profiles</a>
+         <a href="#2">Behavior: Search Parameters</a>
       </li>
       <li>
-         <a href="#3">Structures: Extension Definitions</a>
+         <a href="#3">Structures: Resource Profiles</a>
       </li>
       <li>
-         <a href="#4">Terminology: Value Sets</a>
+         <a href="#4">Structures: Extension Definitions</a>
       </li>
       <li>
-         <a href="#5">Example: Example Instances</a>
+         <a href="#5">Terminology: Value Sets</a>
+      </li>
+      <li>
+         <a href="#6">Example: Example Instances</a>
       </li>
    </ul>
 </div>
@@ -227,6 +253,95 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
      xmlns:f="http://hl7.org/fhir">
    <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
    <a name="1"> </a>
+   <h3>Behavior: Capability Statements </h3>
+    <p>The following artifacts define the specific capabilities that different types of systems are expected to have in order to comply with this implementation guide.  Systems conforming to this implementation guide are expected to declare conformance to one or more of the following capability statements.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CapabilityStatement-SAS-Consommateur-psindiv.html"
+                  title="CapabilityStatement/SAS-Consommateur-psindiv">Profil SAS consommateur de créneaux</a>
+            </td>
+            <td>
+<p>Un consommateur consulte les créneaux ps indiv mis à disposition par un gestionnaire d’agenda. La platefome numérique SAS joue le rôle de consommateur et affiche les créneaux récupérés</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CapabilityStatement-SAS-Consommateur-CPTS.html"
+                  title="CapabilityStatement/SAS-Consommateur-CPTS">Profil SAS consommateur de créneaux CPTS</a>
+            </td>
+            <td>
+<p>Un consommateur consulte les créneaux CPTS mis à disposition par un gestionnaire d’agenda. La platefome numérique SAS joue le rôle de consommateur et affiche les créneaux récupérés</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CapabilityStatement-SAS-Consommateur-SOS.html"
+                  title="CapabilityStatement/SAS-Consommateur-SOS">Profil SAS consommateur de créneaux SOS</a>
+            </td>
+            <td>
+<p>Un consommateur consulte les créneaux SOS mis à disposition par un gestionnaire d’agenda. La platefome numérique SAS joue le rôle de consommateur et affiche les créneaux récupérés</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CapabilityStatement-SAS-GestionnaireAgenda-CPTS.html"
+                  title="CapabilityStatement/SAS-GestionnaireAgenda-CPTS">Profil SAS gestionnaire d'agenda CPTS</a>
+            </td>
+            <td>
+<p>Un gestionnaire d’agenda met à disposition d’un consommateur des créneaux de disponibilité. Cas d’usage CPTS</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CapabilityStatement-SAS-GestionnaireAgenda-PsIndiv.html"
+                  title="CapabilityStatement/SAS-GestionnaireAgenda-PsIndiv">Profil SAS gestionnaire d'agenda PS Indiv</a>
+            </td>
+            <td>
+<p>Un gestionnaire d’agenda met à disposition d’un consommateur des créneaux de disponibilité. Cas d’usage PS à titre individuel</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CapabilityStatement-SAS-GestionnaireAgenda-RDVSOS.html"
+                  title="CapabilityStatement/SAS-GestionnaireAgenda-RDVSOS">Profil SAS gestionnaire d'agenda RDV SOS</a>
+            </td>
+            <td>
+<p>Un gestionnaire d’agenda reçoit des rendez-vous SOS envoyés par un déclarant de rendez-vous. La platefome numérique SAS joue le rôle de gestionnaire d’agenda et stocke les rendez-vous récupérés</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CapabilityStatement-SAS-GestionnaireAgenda-RDVpsindiv.html"
+                  title="CapabilityStatement/SAS-GestionnaireAgenda-RDVpsindiv">Profil SAS gestionnaire d'agenda RDV ps indiv</a>
+            </td>
+            <td>
+<p>Un gestionnaire d’agenda reçoit des rendez-vous ps indiv envoyés par un déclarant de rendez-vous. La platefome numérique SAS joue le rôle de gestionnaire d’agenda et stocke les rendez-vous récupérés</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CapabilityStatement-SAS-GestionnaireAgenda-SOS.html"
+                  title="CapabilityStatement/SAS-GestionnaireAgenda-SOS">Profil SAS gestionnaire d'agenda SOS</a>
+            </td>
+            <td>
+<p>Un gestionnaire d’agenda met à disposition d’un consommateur des créneaux de disponibilité. Cas d’usage SOS médecins</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CapabilityStatement-SAS-GestionnaireStructure.html"
+                  title="CapabilityStatement/SAS-GestionnaireStructure">Profil SAS gestionnaire de structure</a>
+            </td>
+            <td>
+<p>Un gestionnaire de structure gère les ressources transmises par les déclarants de ressource</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="2"> </a>
    <h3>Behavior: Search Parameters </h3>
     <p>These define the properties by which a RESTful server can be searched.  They can also be used for sorting and including related resources.</p>
 <table class="grid">
@@ -241,9 +356,18 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>Paramètre de recherche sur le service type qui mime le paramètre R5. Permet de rechercher ou d’inclure la ressource reférencée HealthCare Service</p>
 </td>
          </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="SearchParameter-slot-sp-start.html"
+                  title="SearchParameter/slot-sp-start">slot-sp-start</a>
+            </td>
+            <td>
+<p>Paramètre de recherche date de début d’un créneau (date de début supérieure ou égale à &lt;date1&gt; et inférieure ou égale à &lt;date2&gt;)</p>
+</td>
+         </tr>
       </tbody>
    </table>
-   <a name="2"> </a>
+   <a name="3"> </a>
    <h3>Structures: Resource Profiles </h3>
     <p>These define constraints on FHIR resources for systems conforming to this implementation guide.</p>
 <table class="grid">
@@ -255,7 +379,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/BundleAgregateur">BundleAgregateur</a>
             </td>
             <td>
-<p>Profil de Bundle qui représente le flux de réponse contenant les créneaux disponibles dans le cadre du service d’agrégation de créneaux de la plateforme SAS (Service d’accès aux soins)</p>
+<p>Profil de Bundle qui représente le flux de réponse contenant les créneaux disponibles dans le cadre du service d’agrégation de créneaux de la plateforme SAS - Cas d’usage PS Indiv</p>
 </td>
          </tr>
          <tr>
@@ -264,7 +388,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/sas-cpts-bundle-aggregator">BundleAgregateurCPTS</a>
             </td>
             <td>
-<p>Bundle Agrégateur SAS CPTS</p>
+<p>Profil de Bundle qui représente le flux de réponse contenant les créneaux disponibles dans le cadre du service d’agrégation de créneaux de la plateforme SAS - Cas d’usage CPTS</p>
 </td>
          </tr>
          <tr>
@@ -273,7 +397,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/sas-sos-bundle-aggregator">BundleAgregateurSOS</a>
             </td>
             <td>
-<p>Bundle Agrégateur SAS SOS</p>
+<p>Profil de Bundle qui représente le flux de réponse contenant les créneaux disponibles dans le cadre du service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins</p>
 </td>
          </tr>
          <tr>
@@ -282,7 +406,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/FrAppointmentSAS">FrAppointmentSAS</a>
             </td>
             <td>
-<p>Profil de Appointment, dérivé de FrAppointment, pour le cas d’usage prise de RDV de la plateforme SAS (Service d’accès aux soins)</p>
+<p>Profil de Appointment, dérivé de FrAppointment, pour le cas d’usage prise de RDV de la plateforme SAS - Commun cas d’usage PS Indiv et CPTS</p>
 </td>
          </tr>
          <tr>
@@ -291,7 +415,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/sas-sos-appointment">FrAppointmentSASSOS</a>
             </td>
             <td>
-<p>Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS (Service d’accès aux soins), dans le cadre du cas d’usage SOS Médecins</p>
+<p>Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins</p>
 </td>
          </tr>
          <tr>
@@ -300,7 +424,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/sas-cpts-healthcareservice-aggregator">FrHealthcareServiceAgregateurCPTS</a>
             </td>
             <td>
-<p>Profil dérivé de FrHealthcareService pour le cas d’usage agrégateur CPTS</p>
+<p>Profil dérivé de FrHealthcareService pour le cas d’usage agrégateur de la plateforme SAS - cas d’usage CPTS</p>
 </td>
          </tr>
          <tr>
@@ -309,7 +433,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/FrLocationAgregateur">FrLocationAgregateur</a>
             </td>
             <td>
-<p>Profil de Location, dérivé de FrLocation, pour le service d’agrégation de créneaux de la plateforme SAS (Service d’accès aux soins)</p>
+<p>Profil de Location, dérivé de FrLocation, pour le service d’agrégation de créneaux de la plateforme SAS - Commun cas d’usage PS Indiv et CPTS</p>
 </td>
          </tr>
          <tr>
@@ -318,7 +442,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/sas-sos-location-aggregator">FrLocationAgregateurSOS</a>
             </td>
             <td>
-<p>Profil de Location, dérivé de FrLocation, pour le service d’agrégation de créneaux de la plateforme SAS (Service d’accès aux soins), dans le cadre du cas d’usage SOS Médecins</p>
+<p>Profil de Location, dérivé de FrLocation, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins</p>
 </td>
          </tr>
          <tr>
@@ -327,7 +451,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/sas-cpts-organization-aggregator">FrOrganizationAgregateurCPTS</a>
             </td>
             <td>
-<p>Profil dérivé de FrOrganization pour le cas d’usage agrégateur CPTS</p>
+<p>Profil dérivé de FrOrganization pour le cas d’usage agrégateur de la plateforme SAS - cas d’usage CPTS</p>
 </td>
          </tr>
          <tr>
@@ -336,7 +460,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/sas-sos-organization-aggregator">FrOrganizationAgregateurSOS</a>
             </td>
             <td>
-<p>Profil d’Organization, dérivé de FrOrganization, pour le service d’agrégation de créneaux de la plateforme SAS (Service d’accès aux soins), dans le cadre du cas d’usage SOS Médecins</p>
+<p>Profil d’Organization, dérivé de FrOrganization, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins</p>
 </td>
          </tr>
          <tr>
@@ -345,7 +469,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/FrPractitionerAgregateur">FrPractitionerAgregateur</a>
             </td>
             <td>
-<p>Profil de Practitioner, dérivé de FrPractitioner, pour le service d’agrégation de créneaux de la plateforme SAS (Service d’accès aux soins)</p>
+<p>Profil de Practitioner, dérivé de FrPractitioner, pour le service d’agrégation de créneaux de la plateforme SAS - Commun cas d’usage PS Indiv et CPTS</p>
 </td>
          </tr>
          <tr>
@@ -354,7 +478,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/FrPractitionerRegul">FrPractitionerRegul</a>
             </td>
             <td>
-<p>Profil de Practitioner, dérivé de FrPractitioner, pour la gestion des comptes régulateurs de la plateforme SAS (Service d’accès aux soins)</p>
+<p>Profil de Practitioner, dérivé de FrPractitioner, pour la gestion des comptes régulateurs de la plateforme SAS - Commun cas d’usage PS Indiv et CPTS</p>
 </td>
          </tr>
          <tr>
@@ -363,7 +487,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/FrPractitionerRoleExerciceAgregateur">FrPractitionerRoleExerciceAgregateur</a>
             </td>
             <td>
-<p>Profil de PractitionerRole, dérivé de FrPractitionerRoleExercice, pour le service d’agrégation de créneaux de la plateforme SAS (Service d’accès aux soins)</p>
+<p>Profil de PractitionerRole, dérivé de FrPractitionerRoleExercice, pour le service d’agrégation de créneaux de la plateforme SAS - Commun cas d’usage PS Indiv et CPTS</p>
 </td>
          </tr>
          <tr>
@@ -372,7 +496,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/FrScheduleAgregateur">FrScheduleAgregateur</a>
             </td>
             <td>
-<p>Profil de Schedule, dérivé de FrSchedule, pour le service d’agrégation de créneaux de la plateforme SAS (Service d’accès aux soins)</p>
+<p>Profil de Schedule, dérivé de FrSchedule, pour le service d’agrégation de créneaux de la plateforme SAS - Commun cas d’usage PS Indiv et CPTS</p>
 </td>
          </tr>
          <tr>
@@ -381,7 +505,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/sas-sos-schedule-aggregator">FrScheduleAgregateurSOS</a>
             </td>
             <td>
-<p>Profil de Schedule, dérivé de FrSchedule, pour le service d’agrégation de créneaux de la plateforme SAS (Service d’accès aux soins), dans le cadre du cas d’usage SOS Médecins</p>
+<p>Profil de Schedule, dérivé de FrSchedule, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins</p>
 </td>
          </tr>
          <tr>
@@ -390,7 +514,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/FrSlotAgregateur">FrSlotAgregateur</a>
             </td>
             <td>
-<p>Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS (Service d’accès aux soins)</p>
+<p>Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS - Commun cas d’usage PS Indiv et CPTS</p>
 </td>
          </tr>
          <tr>
@@ -399,7 +523,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/sas-cpts-slot-aggregator">FrSlotAgregateurCPTS</a>
             </td>
             <td>
-<p>Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS (Service d’accès aux soins), dans le cadre du cas d’usage CPTS</p>
+<p>Profil de Slot, dérivé de FrSlot, pour le cas d’usage agrégateur de la plateforme SAS - cas d’usage CPTS</p>
 </td>
          </tr>
          <tr>
@@ -408,12 +532,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/sas-sos-slot-aggregator">FrSlotAgregateurSOS</a>
             </td>
             <td>
-<p>Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS (Service d’accès aux soins), dans le cadre du cas d’usage SOS Médecins</p>
+<p>Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins</p>
 </td>
          </tr>
       </tbody>
    </table>
-   <a name="3"> </a>
+   <a name="4"> </a>
    <h3>Structures: Extension Definitions </h3>
     <p>These define constraints on FHIR data types for systems conforming to this implementation guide.</p>
 <table class="grid">
@@ -430,7 +554,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
       </tbody>
    </table>
-   <a name="4"> </a>
+   <a name="5"> </a>
    <h3>Terminology: Value Sets </h3>
     <p>These define sets of codes used by systems conforming to this implementation guide.</p>
 <table class="grid">
@@ -501,7 +625,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
       </tbody>
    </table>
-   <a name="5"> </a>
+   <a name="6"> </a>
    <h3>Example: Example Instances </h3>
     <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.</p>
 <table class="grid">
@@ -521,6 +645,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>Exemple RDV PS indiv cancelled</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-ExampleBundleAgregateurSOS.html"
+                  title="Bundle/ExampleBundleAgregateurSOS">ExampleBundleAgregateurSOS</a>
+            </td>
+            <td>
+<p>Exemple Bundle SOS</p>
 </td>
          </tr>
          <tr>
@@ -560,6 +693,30 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Location-1111111111.html" title="Location/1111111111">ExampleLocationSOS1</a>
+            </td>
+            <td>
+<p>Exemple 1 location flux agrégateur sos</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Location-2222222222.html" title="Location/2222222222">ExampleLocationSOS2</a>
+            </td>
+            <td>
+<p>Exemple 2 location flux agrégateur sos</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Location-3333333333.html" title="Location/3333333333">ExampleLocationSOS3</a>
+            </td>
+            <td>
+<p>Exemple 3 location flux agrégateur sos</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Organization-ExampleOrgaCPTS1.html"
                   title="Organization/ExampleOrgaCPTS1">ExampleOrgaCPTS1</a>
             </td>
@@ -574,6 +731,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>Exemple d’organisation CPTS 2</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-ExampleOrgaSOS1.html"
+                  title="Organization/ExampleOrgaSOS1">ExampleOrgaSOS1</a>
+            </td>
+            <td>
+<p>Exemple d’organisation SOS 1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-ExampleOrgaSOS2.html"
+                  title="Organization/ExampleOrgaSOS2">ExampleOrgaSOS2</a>
+            </td>
+            <td>
+<p>Exemple d’organisation SOS 1</p>
 </td>
          </tr>
          <tr>
@@ -605,11 +780,29 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Practitioner-ExamplePractitionerRegul.html"
-                  title="Practitioner/ExamplePractitionerRegul">ExamplePractitionerRegul</a>
+               <a href="Practitioner-ExamplePractitionerRegul1.html"
+                  title="Practitioner/ExamplePractitionerRegul1">ExamplePractitionerRegul1</a>
             </td>
             <td>
 <p>Exemple 1 practitioner flux régulateur</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-ExamplePractitionerRegul2.html"
+                  title="Practitioner/ExamplePractitionerRegul2">ExamplePractitionerRegul2</a>
+            </td>
+            <td>
+<p>Exemple 2 practitioner flux régulateur</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-ExamplePractitionerRegul3.html"
+                  title="Practitioner/ExamplePractitionerRegul3">ExamplePractitionerRegul3</a>
+            </td>
+            <td>
+<p>Exemple 3 practitioner flux régulateur</p>
 </td>
          </tr>
          <tr>
@@ -682,6 +875,33 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Schedule-ExampleScheduleSOS1.html"
+                  title="Schedule/ExampleScheduleSOS1">ExampleScheduleSOS1</a>
+            </td>
+            <td>
+<p>Exemple 1 ressource schedule sos</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Schedule-ExampleScheduleSOS2.html"
+                  title="Schedule/ExampleScheduleSOS2">ExampleScheduleSOS2</a>
+            </td>
+            <td>
+<p>Exemple 2 ressource schedule sos</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Schedule-ExampleScheduleSOS3.html"
+                  title="Schedule/ExampleScheduleSOS3">ExampleScheduleSOS3</a>
+            </td>
+            <td>
+<p>Exemple 3 ressource schedule sos</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Slot-ExampleSlotCPTS1.html" title="Slot/ExampleSlotCPTS1">ExampleSlotCPTS1</a>
             </td>
             <td>
@@ -728,6 +948,38 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>Exemple 4 ressource slot PS indiv</p>
 </td>
          </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Slot-ExampleSlotSOS1.html" title="Slot/ExampleSlotSOS1">ExampleSlotSOS1</a>
+            </td>
+            <td>
+<p>Exemple 1 ressource slot sos</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Slot-ExampleSlotSOS2.html" title="Slot/ExampleSlotSOS2">ExampleSlotSOS2</a>
+            </td>
+            <td>
+<p>Exemple 2 ressource slot sos</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Slot-ExampleSlotSOS3.html" title="Slot/ExampleSlotSOS3">ExampleSlotSOS3</a>
+            </td>
+            <td>
+<p>Exemple 3 ressource slot sos</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Slot-ExampleSlotSOS4.html" title="Slot/ExampleSlotSOS4">ExampleSlotSOS4</a>
+            </td>
+            <td>
+<p>Exemple 4 ressource slot sos</p>
+</td>
+         </tr>
       </tbody>
    </table>
 </div>
@@ -760,7 +1012,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="SearchParameter-cptsslot-sp-servicetype.html">next&gt;</a>
+                <a href="CapabilityStatement-SAS-Consommateur-psindiv.html">next&gt;</a>
 
               </td>
             </tr>
@@ -770,7 +1022,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 5, 2024 14:31+0000">2024-09-05</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Dec 11, 2024 08:48+0000">2024-12-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

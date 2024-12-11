@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="1af1ba54-c713-4a07-8de2-f291ed3e1b13"/>
+  <id value="fa50a278-f57d-45bd-94f8-ab3daf2f7654"/>
   <meta>
-    <lastUpdated value="2024-09-05T14:31:22.775+00:00"/>
+    <lastUpdated value="2024-12-11T08:48:25.033+00:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -95,11 +95,11 @@
           </div>
         </text>
         <url value="https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-cpts-valueset-typecreneau"/>
-        <version value="1.0.0"/>
+        <version value="1.1.0"/>
         <name value="TypeCreneauSASCPTS"/>
         <title value="Type créneaux SAS CPTS"/>
         <status value="active"/>
-        <date value="2024-09-05T14:31:22+00:00"/>
+        <date value="2024-12-11T08:48:25+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -108,8 +108,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:5f325485-17f6-4eff-84f6-15483ee309cd"/>
-          <timestamp value="2024-09-05T14:32:14+00:00"/>
+          <identifier value="urn:uuid:ef4a45fb-7e46-430f-9712-be38d2550853"/>
+          <timestamp value="2024-12-11T08:49:13+00:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>
@@ -213,11 +213,11 @@
           </div>
         </text>
         <url value="https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-sos-valueset-participant-status"/>
-        <version value="1.0.0"/>
+        <version value="1.1.0"/>
         <name value="ParticipantStatusSASSOS"/>
         <title value="Statut participant SAS SOS"/>
         <status value="active"/>
-        <date value="2024-09-05T14:31:22+00:00"/>
+        <date value="2024-12-11T08:48:25+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -226,8 +226,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:8c2508bc-036f-4ade-a6c5-c7771dfe1284"/>
-          <timestamp value="2024-09-05T14:32:14+00:00"/>
+          <identifier value="urn:uuid:cbc0bbda-da41-47df-8a4b-ae85e74c6f2e"/>
+          <timestamp value="2024-12-11T08:49:13+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -325,11 +325,11 @@
           </div>
         </text>
         <url value="https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-sos-valueset-typecreneau"/>
-        <version value="1.0.0"/>
+        <version value="1.1.0"/>
         <name value="TypeCreneauSASSOS"/>
         <title value="Type créneaux SAS SOS"/>
         <status value="active"/>
-        <date value="2024-09-05T14:31:22+00:00"/>
+        <date value="2024-12-11T08:48:25+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -338,8 +338,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:588727ce-445c-43fd-a5ba-6f7f064eda1d"/>
-          <timestamp value="2024-09-05T14:32:14+00:00"/>
+          <identifier value="urn:uuid:77772c6a-4082-40c4-ab21-9bbf35cb58f1"/>
+          <timestamp value="2024-12-11T08:49:13+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -433,11 +433,11 @@
           </div>
         </text>
         <url value="https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-appointmentreason"/>
-        <version value="1.0.0"/>
+        <version value="1.1.0"/>
         <name value="AppointmentReasonSAS"/>
         <title value="Appointment reason SAS"/>
         <status value="active"/>
-        <date value="2024-09-05T14:31:22+00:00"/>
+        <date value="2024-12-11T08:48:25+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -446,8 +446,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:f753f130-c203-46b4-ac86-f944a938d8df"/>
-          <timestamp value="2024-09-05T14:32:14+00:00"/>
+          <identifier value="urn:uuid:39346a26-9a02-4ee6-8723-84b539aea48b"/>
+          <timestamp value="2024-12-11T08:49:13+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -475,6 +475,95 @@
             <system value="http://terminology.hl7.org/CodeSystem/v2-0276"/>
             <code value="WALKIN"/>
             <display value="Créneau sans prise de RDV possible à domicile"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-categorieetablissement"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p class="res-header-id">
+              <b>Generated Narrative: ValueSet </b>
+            </p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="https://interop.esante.gouv.fr/ig/nos/1.3.0/CodeSystem-TRE-R66-CategorieEtablissement.html">codesystem TRE_R66-CategorieEtablissement v1.3.0 (CodeSystem)</a>
+            </p>
+            <p>This value set contains 1 concepts</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement-604"> </a>  
+                  <a href="https://interop.esante.gouv.fr/ig/nos/1.3.0/CodeSystem-TRE-R66-CategorieEtablissement.html#TRE-R66-CategorieEtablissement-604">604</a>
+                </td>
+                <td>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement</td>
+                <td>CPTS</td>
+                <td>
+                  <div>
+                    <p>Les Communautés Professionnelles Territoriales de Santé (CPTS) ont été créées par la loi de modernisation de notre système de santé du 26 janvier 2016 (cf. articles Article L1434-12 et Article L1434-13 du code de la Santé Publique). Leur enregistrement est régi par l'instruction DGOS/DIR/DREES/DMSI/2020/12. Les CPTS sont un espace d'organisation et de coordination entre professionnels de santé et non pas des structures de soins : elles regroupent les professionnels de santé d'un même territoire qui souhaitent s'organiser - à leur initiative - autour d'un projet de santé pour répondre aux besoins de santé de la population. Les CPTS sont constituées entre des professionnels de santé, le cas échéant de maisons de santé, de centres de santé, de réseaux de santé, d'établissements de santé, d'établissements et de services médico-sociaux, des groupements de coopération sanitaire, et des groupements de coopération sociale et médicosociale. Grâce à l'accord conventionnel interprofessionnel (ACI) intervenu en 2019, les CPTS dont le projet de santé est validé par l'ARS sont enregistrés dans FINESS et peuvent bénéficier de financement de l'assurance maladie  Ne sont enregistrés dans FINESS que l'Entité Juridique et le siège social. Les établissements et professionnels constitutif d'une CPTS ne sont pas enregistrés dans FINESS.</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-categorieetablissement"/>
+        <version value="1.1.0"/>
+        <name value="CategorieEtablissementSAS"/>
+        <title value="Catégorie établissement SAS"/>
+        <status value="active"/>
+        <date value="2024-12-11T08:48:25+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="FR"/>
+            <display value="FRANCE"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:b5d4e7fd-7686-4238-8718-6a0ac19d3d1b"/>
+          <timestamp value="2024-12-11T08:49:13+00:00"/>
+          <total value="1"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|1.3.0"/>
+          </parameter>
+          <contains>
+            <system value="https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement"/>
+            <code value="604"/>
+            <display value="CPTS"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -555,11 +644,11 @@
           </div>
         </text>
         <url value="https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-typeconsultation"/>
-        <version value="1.0.0"/>
+        <version value="1.1.0"/>
         <name value="TypeConsultationSAS"/>
         <title value="Type consultation SAS"/>
         <status value="active"/>
-        <date value="2024-09-05T14:31:22+00:00"/>
+        <date value="2024-12-11T08:48:25+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -568,8 +657,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:86cdd879-5f7f-42f7-8bf1-c713dfa436be"/>
-          <timestamp value="2024-09-05T14:32:14+00:00"/>
+          <identifier value="urn:uuid:9a5eeccd-b6cb-4aab-8a72-821f0418e3ef"/>
+          <timestamp value="2024-12-11T08:49:13+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -653,11 +742,11 @@
           </div>
         </text>
         <url value="https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-typeidentifiant"/>
-        <version value="1.0.0"/>
+        <version value="1.1.0"/>
         <name value="TypeIdentifiantSAS"/>
         <title value="Type identifiant SAS"/>
         <status value="active"/>
-        <date value="2024-09-05T14:31:22+00:00"/>
+        <date value="2024-12-11T08:48:25+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -666,8 +755,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:7d8aefc9-bdf7-4246-a05c-0c4f2ed55a6f"/>
-          <timestamp value="2024-09-05T14:32:14+00:00"/>
+          <identifier value="urn:uuid:4f18decb-da48-45c9-9b8d-ffb91b0498bf"/>
+          <timestamp value="2024-12-11T08:49:13+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>

@@ -6,11 +6,11 @@
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide ans.fhir.fr.sas</b></p><a name="ans.fhir.fr.sas"> </a><a name="hcans.fhir.fr.sas"> </a><a name="ans.fhir.fr.sas-fr-FR"> </a><h2>SAS</h2><p>The official URL for this implementation guide is: </p><pre>https://interop.esante.gouv.fr/ig/fhir/sas/ImplementationGuide/ans.fhir.fr.sas</pre></div>
   </text>
   <url value="https://interop.esante.gouv.fr/ig/fhir/sas/ImplementationGuide/ans.fhir.fr.sas"/>
-  <version value="1.0.0"/>
+  <version value="1.1.0"/>
   <name value="SAS"/>
   <title value="Service d'Accès aux Soins"/>
   <status value="active"/>
-  <date value="2024-09-05T14:31:22+00:00"/>
+  <date value="2024-12-11T08:48:25+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -35,7 +35,7 @@
     </extension>
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
-    <version value="6.0.2"/>
+    <version value="6.1.0"/>
   </dependsOn>
   <dependsOn id="hl7ext">
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
@@ -69,7 +69,7 @@
         <valueString value="releaselabel"/>
       </extension>
       <extension url="value">
-        <valueString value="trial-use"/>
+        <valueString value="trial-implementation"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -78,6 +78,70 @@
       </extension>
       <extension url="value">
         <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="no-narrative"/>
+      </extension>
+      <extension url="value">
+        <valueString value="Appointment/*"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="no-narrative"/>
+      </extension>
+      <extension url="value">
+        <valueString value="Bundle/*"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="no-narrative"/>
+      </extension>
+      <extension url="value">
+        <valueString value="HealthcareService/*"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="no-narrative"/>
+      </extension>
+      <extension url="value">
+        <valueString value="Location/*"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="no-narrative"/>
+      </extension>
+      <extension url="value">
+        <valueString value="Organization/*"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="no-narrative"/>
+      </extension>
+      <extension url="value">
+        <valueString value="Practitioner/*"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="no-narrative"/>
+      </extension>
+      <extension url="value">
+        <valueString value="Schedule/*"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="no-narrative"/>
+      </extension>
+      <extension url="value">
+        <valueString value="Slot/*"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -280,7 +344,7 @@
         <valueCode value="releaselabel"/>
       </extension>
       <extension url="value">
-        <valueString value="trial-use"/>
+        <valueString value="trial-implementation"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -289,6 +353,70 @@
       </extension>
       <extension url="value">
         <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="no-narrative"/>
+      </extension>
+      <extension url="value">
+        <valueString value="Appointment/*"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="no-narrative"/>
+      </extension>
+      <extension url="value">
+        <valueString value="Bundle/*"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="no-narrative"/>
+      </extension>
+      <extension url="value">
+        <valueString value="HealthcareService/*"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="no-narrative"/>
+      </extension>
+      <extension url="value">
+        <valueString value="Location/*"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="no-narrative"/>
+      </extension>
+      <extension url="value">
+        <valueString value="Organization/*"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="no-narrative"/>
+      </extension>
+      <extension url="value">
+        <valueString value="Practitioner/*"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="no-narrative"/>
+      </extension>
+      <extension url="value">
+        <valueString value="Schedule/*"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="no-narrative"/>
+      </extension>
+      <extension url="value">
+        <valueString value="Slot/*"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -494,7 +622,7 @@
         <reference value="StructureDefinition/BundleAgregateur"/>
       </reference>
       <name value="BundleAgregateur"/>
-      <description value="Profil de Bundle qui représente le flux de réponse contenant les créneaux disponibles dans le cadre du service d'agrégation de créneaux de la plateforme SAS (Service d'accès aux soins)"/>
+      <description value="Profil de Bundle qui représente le flux de réponse contenant les créneaux disponibles dans le cadre du service d'agrégation de créneaux de la plateforme SAS - Cas d'usage PS Indiv"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -505,7 +633,7 @@
         <reference value="StructureDefinition/sas-cpts-bundle-aggregator"/>
       </reference>
       <name value="BundleAgregateurCPTS"/>
-      <description value="Bundle Agrégateur SAS CPTS"/>
+      <description value="Profil de Bundle qui représente le flux de réponse contenant les créneaux disponibles dans le cadre du service d'agrégation de créneaux de la plateforme SAS - Cas d'usage CPTS"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -516,7 +644,7 @@
         <reference value="StructureDefinition/sas-sos-bundle-aggregator"/>
       </reference>
       <name value="BundleAgregateurSOS"/>
-      <description value="Bundle Agrégateur SAS SOS"/>
+      <description value="Profil de Bundle qui représente le flux de réponse contenant les créneaux disponibles dans le cadre du service d'agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -568,6 +696,17 @@
         <valueString value="Bundle"/>
       </extension>
       <reference>
+        <reference value="Bundle/ExampleBundleAgregateurSOS"/>
+      </reference>
+      <name value="ExampleBundleAgregateurSOS"/>
+      <description value="Exemple Bundle SOS"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-bundle-aggregator"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
         <reference value="Bundle/ExampleBundleCPTS"/>
       </reference>
       <name value="ExampleBundleCPTS"/>
@@ -609,6 +748,39 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Location"/>
+      </extension>
+      <reference>
+        <reference value="Location/1111111111"/>
+      </reference>
+      <name value="ExampleLocationSOS1"/>
+      <description value="Exemple 1 location flux agrégateur sos"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Location"/>
+      </extension>
+      <reference>
+        <reference value="Location/2222222222"/>
+      </reference>
+      <name value="ExampleLocationSOS2"/>
+      <description value="Exemple 2 location flux agrégateur sos"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Location"/>
+      </extension>
+      <reference>
+        <reference value="Location/3333333333"/>
+      </reference>
+      <name value="ExampleLocationSOS3"/>
+      <description value="Exemple 3 location flux agrégateur sos"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Organization"/>
       </extension>
       <reference>
@@ -628,6 +800,28 @@
       <name value="ExampleOrgaCPTS2"/>
       <description value="Exemple d'organisation CPTS 2"/>
       <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-organization-aggregator"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/ExampleOrgaSOS1"/>
+      </reference>
+      <name value="ExampleOrgaSOS1"/>
+      <description value="Exemple d'organisation SOS 1"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/ExampleOrgaSOS2"/>
+      </reference>
+      <name value="ExampleOrgaSOS2"/>
+      <description value="Exemple d'organisation SOS 1"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -667,10 +861,32 @@
         <valueString value="Practitioner"/>
       </extension>
       <reference>
-        <reference value="Practitioner/ExamplePractitionerRegul"/>
+        <reference value="Practitioner/ExamplePractitionerRegul1"/>
       </reference>
-      <name value="ExamplePractitionerRegul"/>
+      <name value="ExamplePractitionerRegul1"/>
       <description value="Exemple 1 practitioner flux régulateur"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/ExamplePractitionerRegul2"/>
+      </reference>
+      <name value="ExamplePractitionerRegul2"/>
+      <description value="Exemple 2 practitioner flux régulateur"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/ExamplePractitionerRegul3"/>
+      </reference>
+      <name value="ExamplePractitionerRegul3"/>
+      <description value="Exemple 3 practitioner flux régulateur"/>
       <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul"/>
     </resource>
     <resource>
@@ -763,6 +979,39 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Schedule"/>
+      </extension>
+      <reference>
+        <reference value="Schedule/ExampleScheduleSOS1"/>
+      </reference>
+      <name value="ExampleScheduleSOS1"/>
+      <description value="Exemple 1 ressource schedule sos"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Schedule"/>
+      </extension>
+      <reference>
+        <reference value="Schedule/ExampleScheduleSOS2"/>
+      </reference>
+      <name value="ExampleScheduleSOS2"/>
+      <description value="Exemple 2 ressource schedule sos"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Schedule"/>
+      </extension>
+      <reference>
+        <reference value="Schedule/ExampleScheduleSOS3"/>
+      </reference>
+      <name value="ExampleScheduleSOS3"/>
+      <description value="Exemple 3 ressource schedule sos"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Slot"/>
       </extension>
       <reference>
@@ -829,13 +1078,57 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Slot"/>
+      </extension>
+      <reference>
+        <reference value="Slot/ExampleSlotSOS1"/>
+      </reference>
+      <name value="ExampleSlotSOS1"/>
+      <description value="Exemple 1 ressource slot sos"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Slot"/>
+      </extension>
+      <reference>
+        <reference value="Slot/ExampleSlotSOS2"/>
+      </reference>
+      <name value="ExampleSlotSOS2"/>
+      <description value="Exemple 2 ressource slot sos"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Slot"/>
+      </extension>
+      <reference>
+        <reference value="Slot/ExampleSlotSOS3"/>
+      </reference>
+      <name value="ExampleSlotSOS3"/>
+      <description value="Exemple 3 ressource slot sos"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Slot"/>
+      </extension>
+      <reference>
+        <reference value="Slot/ExampleSlotSOS4"/>
+      </reference>
+      <name value="ExampleSlotSOS4"/>
+      <description value="Exemple 4 ressource slot sos"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
         <reference value="StructureDefinition/FrAppointmentSAS"/>
       </reference>
       <name value="FrAppointmentSAS"/>
-      <description value="Profil de Appointment, dérivé de FrAppointment, pour le cas d'usage prise de RDV de la plateforme SAS (Service d'accès aux soins)"/>
+      <description value="Profil de Appointment, dérivé de FrAppointment, pour le cas d'usage prise de RDV de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -846,7 +1139,7 @@
         <reference value="StructureDefinition/sas-sos-appointment"/>
       </reference>
       <name value="FrAppointmentSASSOS"/>
-      <description value="Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS (Service d’accès aux soins), dans le cadre du cas d’usage SOS Médecins"/>
+      <description value="Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -857,7 +1150,7 @@
         <reference value="StructureDefinition/sas-cpts-healthcareservice-aggregator"/>
       </reference>
       <name value="FrHealthcareServiceAgregateurCPTS"/>
-      <description value="Profil dérivé de FrHealthcareService pour le cas d'usage agrégateur CPTS"/>
+      <description value="Profil dérivé de FrHealthcareService pour le cas d'usage agrégateur de la plateforme SAS - cas d'usage CPTS"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -868,7 +1161,7 @@
         <reference value="StructureDefinition/FrLocationAgregateur"/>
       </reference>
       <name value="FrLocationAgregateur"/>
-      <description value="Profil de Location, dérivé de FrLocation, pour le service d'agrégation de créneaux de la plateforme SAS (Service d'accès aux soins)"/>
+      <description value="Profil de Location, dérivé de FrLocation, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -879,7 +1172,7 @@
         <reference value="StructureDefinition/sas-sos-location-aggregator"/>
       </reference>
       <name value="FrLocationAgregateurSOS"/>
-      <description value="Profil de Location, dérivé de FrLocation, pour le service d’agrégation de créneaux de la plateforme SAS (Service d’accès aux soins), dans le cadre du cas d’usage SOS Médecins"/>
+      <description value="Profil de Location, dérivé de FrLocation, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -890,7 +1183,7 @@
         <reference value="StructureDefinition/sas-cpts-organization-aggregator"/>
       </reference>
       <name value="FrOrganizationAgregateurCPTS"/>
-      <description value="Profil dérivé de FrOrganization pour le cas d'usage agrégateur CPTS"/>
+      <description value="Profil dérivé de FrOrganization pour le cas d'usage agrégateur de la plateforme SAS - cas d'usage CPTS"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -901,7 +1194,7 @@
         <reference value="StructureDefinition/sas-sos-organization-aggregator"/>
       </reference>
       <name value="FrOrganizationAgregateurSOS"/>
-      <description value="Profil d'Organization, dérivé de FrOrganization, pour le service d’agrégation de créneaux de la plateforme SAS (Service d’accès aux soins), dans le cadre du cas d’usage SOS Médecins"/>
+      <description value="Profil d'Organization, dérivé de FrOrganization, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -912,7 +1205,7 @@
         <reference value="StructureDefinition/FrPractitionerAgregateur"/>
       </reference>
       <name value="FrPractitionerAgregateur"/>
-      <description value="Profil de Practitioner, dérivé de FrPractitioner, pour le service d'agrégation de créneaux de la plateforme SAS (Service d'accès aux soins)"/>
+      <description value="Profil de Practitioner, dérivé de FrPractitioner, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -923,7 +1216,7 @@
         <reference value="StructureDefinition/FrPractitionerRegul"/>
       </reference>
       <name value="FrPractitionerRegul"/>
-      <description value="Profil de Practitioner, dérivé de FrPractitioner, pour la gestion des comptes régulateurs de la plateforme SAS (Service d'accès aux soins)"/>
+      <description value="Profil de Practitioner, dérivé de FrPractitioner, pour la gestion des comptes régulateurs de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -934,7 +1227,7 @@
         <reference value="StructureDefinition/FrPractitionerRoleExerciceAgregateur"/>
       </reference>
       <name value="FrPractitionerRoleExerciceAgregateur"/>
-      <description value="Profil de PractitionerRole, dérivé de FrPractitionerRoleExercice, pour le service d'agrégation de créneaux de la plateforme SAS (Service d'accès aux soins)"/>
+      <description value="Profil de PractitionerRole, dérivé de FrPractitionerRoleExercice, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -945,7 +1238,7 @@
         <reference value="StructureDefinition/FrScheduleAgregateur"/>
       </reference>
       <name value="FrScheduleAgregateur"/>
-      <description value="Profil de Schedule, dérivé de FrSchedule, pour le service d'agrégation de créneaux de la plateforme SAS (Service d'accès aux soins)"/>
+      <description value="Profil de Schedule, dérivé de FrSchedule, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -956,7 +1249,7 @@
         <reference value="StructureDefinition/sas-sos-schedule-aggregator"/>
       </reference>
       <name value="FrScheduleAgregateurSOS"/>
-      <description value="Profil de Schedule, dérivé de FrSchedule, pour le service d’agrégation de créneaux de la plateforme SAS (Service d’accès aux soins), dans le cadre du cas d’usage SOS Médecins"/>
+      <description value="Profil de Schedule, dérivé de FrSchedule, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -967,7 +1260,7 @@
         <reference value="StructureDefinition/FrSlotAgregateur"/>
       </reference>
       <name value="FrSlotAgregateur"/>
-      <description value="Profil de Slot, dérivé de FrSlot, pour le service d'agrégation de créneaux de la plateforme SAS (Service d'accès aux soins)"/>
+      <description value="Profil de Slot, dérivé de FrSlot, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -978,7 +1271,7 @@
         <reference value="StructureDefinition/sas-cpts-slot-aggregator"/>
       </reference>
       <name value="FrSlotAgregateurCPTS"/>
-      <description value="Profil de Slot, dérivé de FrSlot, pour le service d'agrégation de créneaux de la plateforme SAS (Service d'accès aux soins), dans le cadre du cas d'usage CPTS"/>
+      <description value="Profil de Slot, dérivé de FrSlot, pour le cas d'usage agrégateur de la plateforme SAS - cas d'usage CPTS"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -989,7 +1282,106 @@
         <reference value="StructureDefinition/sas-sos-slot-aggregator"/>
       </reference>
       <name value="FrSlotAgregateurSOS"/>
-      <description value="Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS (Service d’accès aux soins), dans le cadre du cas d’usage SOS Médecins"/>
+      <description value="Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/SAS-Consommateur-psindiv"/>
+      </reference>
+      <name value="Profil SAS consommateur de créneaux"/>
+      <description value="Un consommateur consulte les créneaux ps indiv mis à disposition par un gestionnaire d’agenda. La platefome numérique SAS joue le rôle de consommateur et affiche les créneaux récupérés"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/SAS-Consommateur-CPTS"/>
+      </reference>
+      <name value="Profil SAS consommateur de créneaux CPTS"/>
+      <description value="Un consommateur consulte les créneaux CPTS mis à disposition par un gestionnaire d’agenda. La platefome numérique SAS joue le rôle de consommateur et affiche les créneaux récupérés"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/SAS-Consommateur-SOS"/>
+      </reference>
+      <name value="Profil SAS consommateur de créneaux SOS"/>
+      <description value="Un consommateur consulte les créneaux SOS mis à disposition par un gestionnaire d’agenda. La platefome numérique SAS joue le rôle de consommateur et affiche les créneaux récupérés"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/SAS-GestionnaireAgenda-CPTS"/>
+      </reference>
+      <name value="Profil SAS gestionnaire d'agenda CPTS"/>
+      <description value="Un gestionnaire d'agenda met à disposition d'un consommateur des créneaux de disponibilité. Cas d'usage CPTS"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/SAS-GestionnaireAgenda-PsIndiv"/>
+      </reference>
+      <name value="Profil SAS gestionnaire d'agenda PS Indiv"/>
+      <description value="Un gestionnaire d'agenda met à disposition d'un consommateur des créneaux de disponibilité. Cas d'usage PS à titre individuel"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/SAS-GestionnaireAgenda-RDVpsindiv"/>
+      </reference>
+      <name value="Profil SAS gestionnaire d'agenda RDV ps indiv"/>
+      <description value="Un gestionnaire d'agenda reçoit des rendez-vous ps indiv envoyés par un déclarant de rendez-vous. La platefome numérique SAS joue le rôle de gestionnaire d'agenda et stocke les rendez-vous récupérés"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/SAS-GestionnaireAgenda-RDVSOS"/>
+      </reference>
+      <name value="Profil SAS gestionnaire d'agenda RDV SOS"/>
+      <description value="Un gestionnaire d'agenda reçoit des rendez-vous SOS envoyés par un déclarant de rendez-vous. La platefome numérique SAS joue le rôle de gestionnaire d'agenda et stocke les rendez-vous récupérés"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/SAS-GestionnaireAgenda-SOS"/>
+      </reference>
+      <name value="Profil SAS gestionnaire d'agenda SOS"/>
+      <description value="Un gestionnaire d'agenda met à disposition d'un consommateur des créneaux de disponibilité. Cas d'usage SOS médecins"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/SAS-GestionnaireStructure"/>
+      </reference>
+      <name value="Profil SAS gestionnaire de structure"/>
+      <description value="Un gestionnaire de structure gère les ressources transmises par les déclarants de ressource"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1001,6 +1393,17 @@
       </reference>
       <name value="SASServiceTypeR5"/>
       <description value="Extension créée afin de permettre la reference à la ressource HealthcareService. Cette extension implemente l'élément serviceType de R5 https://hl7.org/fhir/slot-definitions.html#Slot.serviceType"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="SearchParameter"/>
+      </extension>
+      <reference>
+        <reference value="SearchParameter/slot-sp-start"/>
+      </reference>
+      <name value="slot-sp-start"/>
+      <description value="Paramètre de recherche date de début d'un créneau (date de début supérieure ou égale à &lt;date1&gt; et inférieure ou égale à &lt;date2&gt;)"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1091,6 +1494,14 @@
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="specifications_techniques-ps-gestion_regulateur.html"/>
+        </extension>
+        <nameUrl value="specifications_techniques-ps-gestion_regulateur.html"/>
+        <title value="PS indiv. - Gestion des comptes régulateurs"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
           <valueUrl value="specifications_techniques-ps-gestion_rdv.html"/>
         </extension>
         <nameUrl value="specifications_techniques-ps-gestion_rdv.html"/>
@@ -1107,10 +1518,42 @@
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="specifications_techniques-cpts-gestion_regulateur.html"/>
+        </extension>
+        <nameUrl value="specifications_techniques-cpts-gestion_regulateur.html"/>
+        <title value="CPTS - Gestion des comptes régulateurs"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
           <valueUrl value="specifications_techniques-cpts-gestion_rdv.html"/>
         </extension>
         <nameUrl value="specifications_techniques-cpts-gestion_rdv.html"/>
         <title value="CPTS - Gestion de rendez-vous"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="specifications_techniques-sos-recherche_creneaux.html"/>
+        </extension>
+        <nameUrl value="specifications_techniques-sos-recherche_creneaux.html"/>
+        <title value="SOS Médecins - Recherche des créneaux"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="specifications_techniques-sos-gestion_regulateur.html"/>
+        </extension>
+        <nameUrl value="specifications_techniques-sos-gestion_regulateur.html"/>
+        <title value="SOS Médecins - Gestion des comptes régulateurs"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="specifications_techniques-sos-gestion_rdv.html"/>
+        </extension>
+        <nameUrl value="specifications_techniques-sos-gestion_rdv.html"/>
+        <title value="SOS Médecins - Gestion de rendez-vous"/>
         <generation value="markdown"/>
       </page>
       <page>

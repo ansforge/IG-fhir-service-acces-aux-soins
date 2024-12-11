@@ -23,9 +23,6 @@
             <code value="PUBLIC"/>
           </security>
         </meta>
-        <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Slot_ExampleSlotPSIndiv1"> </a><p class="res-header-id"><b>Generated Narrative: Slot ExampleSlotPSIndiv1</b></p><a name="ExampleSlotPSIndiv1"> </a><a name="hcExampleSlotPSIndiv1"> </a><a name="ExampleSlotPSIndiv1-fr-FR"> </a><p><b>serviceType</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode AMB}">ambulatory</span>, <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode VR}">virtual</span>, <span title="Codes:">Visite de contrôle</span></p><p><b>specialty</b>: <span title="Codes:{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM54}">Médecine générale (SM)</span>, <span title="Codes:{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM05}">Chirurgie générale (SM)</span></p><p><b>appointmentType</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0276 ROUTINE}">Routine appointment - default if not valued</span></p><p><b>schedule</b>: <a href="Schedule-ExampleSchedule1.html">Schedule</a></p><p><b>status</b>: Free</p><p><b>start</b>: 2021-11-05 09:00:00+0000</p><p><b>end</b>: 2021-11-05 09:30:00+0000</p><p><b>comment</b>: https://exemple.com/rdv/com/</p></div>
-        </text>
         <serviceType>
           <coding>
             <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
@@ -77,9 +74,6 @@
         <meta>
           <profile value="http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"/>
         </meta>
-        <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Schedule_ExampleSchedule1"> </a><p class="res-header-id"><b>Generated Narrative: Schedule ExampleSchedule1</b></p><a name="ExampleSchedule1"> </a><a name="hcExampleSchedule1"> </a><a name="ExampleSchedule1-fr-FR"> </a><p><b>actor</b>: </p><ul><li><a href="Practitioner-ExamplePractitioner2.html">Practitioner Sébastien THOMAS </a></li><li><a href="PractitionerRole-ExamplePractitionerRoleAgregateur2.html">PractitionerRole</a></li></ul></div>
-        </text>
         <actor>
           <reference value="Practitioner/ExamplePractitioner2"/>
         </actor>
@@ -97,9 +91,6 @@
         <meta>
           <profile value="http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur"/>
         </meta>
-        <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Practitioner_ExamplePractitioner2"> </a><p class="res-header-id"><b>Generated Narrative: Practitioner ExamplePractitioner2</b></p><a name="ExamplePractitioner2"> </a><a name="hcExamplePractitioner2"> </a><a name="ExamplePractitioner2-fr-FR"> </a><p><b>identifier</b>: Identifiant National de Professionnel de Santé/810100050075</p><p><b>name</b>: Sébastien THOMAS </p></div>
-        </text>
         <identifier>
           <type>
             <coding>
@@ -125,9 +116,6 @@
         <meta>
           <profile value="http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"/>
         </meta>
-        <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="PractitionerRole_ExamplePractitionerRoleAgregateur2"> </a><p class="res-header-id"><b>Generated Narrative: PractitionerRole ExamplePractitionerRoleAgregateur2</b></p><a name="ExamplePractitionerRoleAgregateur2"> </a><a name="hcExamplePractitionerRoleAgregateur2"> </a><a name="ExamplePractitionerRoleAgregateur2-fr-FR"> </a><p><b>practitioner</b>: <a href="Practitioner-ExamplePractitioner2.html">Practitioner Sébastien THOMAS </a></p><p><b>organization</b>: Identifier: Identification nationale de structure définie par l’ASIP-SANTE dans le CI_SIS/1810004421</p><p><b>location</b>: <a href="#hcExamplePractitionerRoleAgregateur2/ExampleLocation3">Location: identifier = Identifiant interne</a></p><hr/><blockquote><p class="res-header-id"><b>Generated Narrative: Location  #ExampleLocation3</b></p><a name="ExamplePractitionerRoleAgregateur2/ExampleLocation3"> </a><a name="hcExamplePractitionerRoleAgregateur2/ExampleLocation3"> </a><a name="ExamplePractitionerRoleAgregateur2/ExampleLocation3-fr-FR"> </a><p><b>identifier</b>: Identifiant interne/1</p><p><b>address</b>: 1 rue Mme DELMAS AGEN 47000 </p></blockquote></div>
-        </text>
         <contained>
           <Location>
             <id value="ExampleLocation3"/>
@@ -184,9 +172,6 @@
             <code value="PRO"/>
           </security>
         </meta>
-        <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Slot_ExampleSlotPSIndiv2"> </a><p class="res-header-id"><b>Generated Narrative: Slot ExampleSlotPSIndiv2</b></p><a name="ExampleSlotPSIndiv2"> </a><a name="hcExampleSlotPSIndiv2"> </a><a name="ExampleSlotPSIndiv2-fr-FR"> </a><p><b>serviceType</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode AMB}">ambulatory</span>, <span title="Codes:">Visite urgente</span></p><p><b>specialty</b>: <span title="Codes:{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM54}">Médecine générale (SM)</span></p><p><b>appointmentType</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0276 WALKIN}">A previously unscheduled walk-in visit</span></p><p><b>schedule</b>: <a href="Schedule-ExampleSchedule2.html">Schedule</a></p><p><b>status</b>: Free</p><p><b>start</b>: 2021-11-05 11:00:00+0000</p><p><b>end</b>: 2021-11-05 11:30:00+0000</p></div>
-        </text>
         <serviceType>
           <coding>
             <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
@@ -225,9 +210,6 @@
         <meta>
           <profile value="http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"/>
         </meta>
-        <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Schedule_ExampleSchedule2"> </a><p class="res-header-id"><b>Generated Narrative: Schedule ExampleSchedule2</b></p><a name="ExampleSchedule2"> </a><a name="hcExampleSchedule2"> </a><a name="ExampleSchedule2-fr-FR"> </a><p><b>actor</b>: </p><ul><li><a href="Practitioner-ExamplePractitioner2.html">Practitioner Sébastien THOMAS </a></li><li><a href="PractitionerRole-ExamplePractitionerRoleAgregateur3.html">PractitionerRole</a></li></ul></div>
-        </text>
         <actor>
           <reference value="Practitioner/ExamplePractitioner2"/>
         </actor>
@@ -245,9 +227,6 @@
         <meta>
           <profile value="http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"/>
         </meta>
-        <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="PractitionerRole_ExamplePractitionerRoleAgregateur3"> </a><p class="res-header-id"><b>Generated Narrative: PractitionerRole ExamplePractitionerRoleAgregateur3</b></p><a name="ExamplePractitionerRoleAgregateur3"> </a><a name="hcExamplePractitionerRoleAgregateur3"> </a><a name="ExamplePractitionerRoleAgregateur3-fr-FR"> </a><p><b>practitioner</b>: <a href="Practitioner-ExamplePractitioner2.html">Practitioner Sébastien THOMAS </a></p><p><b>organization</b>: Identifier: Identification nationale de structure définie par l’ASIP-SANTE dans le CI_SIS/1810004956</p><p><b>location</b>: <a href="#hcExamplePractitionerRoleAgregateur3/ExampleLocation2">Location: identifier = Identifiant interne</a></p><hr/><blockquote><p class="res-header-id"><b>Generated Narrative: Location  #ExampleLocation2</b></p><a name="ExamplePractitionerRoleAgregateur3/ExampleLocation2"> </a><a name="hcExamplePractitionerRoleAgregateur3/ExampleLocation2"> </a><a name="ExamplePractitionerRoleAgregateur3/ExampleLocation2-fr-FR"> </a><p><b>identifier</b>: Identifiant interne/2</p><p><b>address</b>: 30 rue Mme DELMAS AGEN 47000 </p></blockquote></div>
-        </text>
         <contained>
           <Location>
             <id value="ExampleLocation2"/>
@@ -308,9 +287,6 @@
             <code value="PRO"/>
           </security>
         </meta>
-        <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Slot_ExampleSlotPSIndiv3"> </a><p class="res-header-id"><b>Generated Narrative: Slot ExampleSlotPSIndiv3</b></p><a name="ExampleSlotPSIndiv3"> </a><a name="hcExampleSlotPSIndiv3"> </a><a name="ExampleSlotPSIndiv3-fr-FR"> </a><p><b>serviceType</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode VR}">virtual</span>, <span title="Codes:">Visite de contrôle</span>, <span title="Codes:">Consultation de suivi pneumologie</span></p><p><b>specialty</b>: <span title="Codes:{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM41}">Pneumologie (SM)</span></p><p><b>appointmentType</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0276 ROUTINE}">Routine appointment - default if not valued</span></p><p><b>schedule</b>: <a href="Schedule-ExampleSchedule3.html">Schedule</a></p><p><b>status</b>: Free</p><p><b>start</b>: 2021-11-04 14:20:00+0000</p><p><b>end</b>: 2021-11-04 14:40:00+0000</p><p><b>comment</b>: https://exemple.com/rdv/com/</p></div>
-        </text>
         <serviceType>
           <coding>
             <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
@@ -353,9 +329,6 @@
         <meta>
           <profile value="http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"/>
         </meta>
-        <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Schedule_ExampleSchedule3"> </a><p class="res-header-id"><b>Generated Narrative: Schedule ExampleSchedule3</b></p><a name="ExampleSchedule3"> </a><a name="hcExampleSchedule3"> </a><a name="ExampleSchedule3-fr-FR"> </a><p><b>actor</b>: </p><ul><li><a href="Practitioner-ExamplePractitioner3.html">Practitioner Guillaume MARCEL </a></li><li><a href="PractitionerRole-ExamplePractitionerRoleAgregateur4.html">PractitionerRole: telecom = ph: +33658913859</a></li></ul></div>
-        </text>
         <actor>
           <reference value="Practitioner/ExamplePractitioner3"/>
         </actor>
@@ -373,9 +346,6 @@
         <meta>
           <profile value="http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur"/>
         </meta>
-        <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Practitioner_ExamplePractitioner3"> </a><p class="res-header-id"><b>Generated Narrative: Practitioner ExamplePractitioner3</b></p><a name="ExamplePractitioner3"> </a><a name="hcExamplePractitioner3"> </a><a name="ExamplePractitioner3-fr-FR"> </a><p><b>identifier</b>: Identifiant National de Professionnel de Santé/810002673899</p><p><b>name</b>: Guillaume MARCEL </p></div>
-        </text>
         <identifier>
           <type>
             <coding>
@@ -401,9 +371,6 @@
         <meta>
           <profile value="http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"/>
         </meta>
-        <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="PractitionerRole_ExamplePractitionerRoleAgregateur4"> </a><p class="res-header-id"><b>Generated Narrative: PractitionerRole ExamplePractitionerRoleAgregateur4</b></p><a name="ExamplePractitionerRoleAgregateur4"> </a><a name="hcExamplePractitionerRoleAgregateur4"> </a><a name="ExamplePractitionerRoleAgregateur4-fr-FR"> </a><p><b>practitioner</b>: <a href="Practitioner-ExamplePractitioner3.html">Practitioner Guillaume MARCEL </a></p><p><b>organization</b>: Identifier: Identification nationale de structure définie par l’ASIP-SANTE dans le CI_SIS/1810004421</p><p><b>location</b>: <a href="#hcExamplePractitionerRoleAgregateur4/ExampleLocation3">Location: identifier = Identifiant interne</a></p><p><b>telecom</b>: <a href="tel:+33658913859">+33658913859</a></p><hr/><blockquote><p class="res-header-id"><b>Generated Narrative: Location  #ExampleLocation3</b></p><a name="ExamplePractitionerRoleAgregateur4/ExampleLocation3"> </a><a name="hcExamplePractitionerRoleAgregateur4/ExampleLocation3"> </a><a name="ExamplePractitionerRoleAgregateur4/ExampleLocation3-fr-FR"> </a><p><b>identifier</b>: Identifiant interne/1</p><p><b>address</b>: 1 rue Mme DELMAS AGEN 47000 </p></blockquote></div>
-        </text>
         <contained>
           <Location>
             <id value="ExampleLocation3"/>
@@ -468,9 +435,6 @@
             <code value="PRO"/>
           </security>
         </meta>
-        <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Slot_ExampleSlotPSIndiv4"> </a><p class="res-header-id"><b>Generated Narrative: Slot ExampleSlotPSIndiv4</b></p><a name="ExampleSlotPSIndiv4"> </a><a name="hcExampleSlotPSIndiv4"> </a><a name="ExampleSlotPSIndiv4-fr-FR"> </a><p><b>serviceType</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode HH}">home health</span>, <span title="Codes:">Visite de contrôle</span>, <span title="Codes:">Consultation de suivi pneumologique</span></p><p><b>specialty</b>: <span title="Codes:{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM41}">Pneumologie (SM)</span>, <span title="Codes:{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM54}">Médecine générale (SM)</span></p><p><b>appointmentType</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0276 ROUTINE}">Routine appointment - default if not valued</span></p><p><b>schedule</b>: <a href="Schedule-ExampleSchedule3.html">Schedule</a></p><p><b>status</b>: Free</p><p><b>start</b>: 2021-11-04 14:40:00+0000</p><p><b>end</b>: 2021-11-04 15:00:00+0000</p><p><b>comment</b>: https://exemple.com/rdv/com/</p></div>
-        </text>
         <serviceType>
           <coding>
             <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>

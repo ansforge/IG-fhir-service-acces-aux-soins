@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>FAQ - Service d'Accès aux Soins v1.0.0</title>
+    <title>FAQ - Service d'Accès aux Soins v1.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -41,8 +41,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"8.2"}
-    h3,h4,h5,h6{--heading-prefix:"8.2"}</style>
+    <style type="text/css">h2{--heading-prefix:"13.2"}
+    h3,h4,h5,h6{--heading-prefix:"13.2"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -51,12 +51,17 @@
   </div>
   <div id="ans-nav" style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; ">
     <a id="hl7-logo" no-external="true" href="https://esante.gouv.fr/"><img height="50" alt="ANS Logo" src="assets/images/logo-ANS.svg"/></a>
+    <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
   </div>
+
+  <div id="ig-search">
+ </div>
+
 
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Service d&#39;Accès aux Soins</span>
             <br/>
-            <span style="display:inline-block;">1.0.0 - trial-use
+            <span style="display:inline-block;">1.1.0 - trial-implementation
 
 
 
@@ -105,6 +110,9 @@
         <a href="specifications_techniques-ps-recherche_creneaux.html">PS indiv. - Recherche des créneaux</a>
       </li>
       <li>
+        <a href="specifications_techniques-ps-gestion_regulateur.html">PS indiv. - Gestion des comptes régulateurs</a>
+      </li>
+      <li>
         <a href="specifications_techniques-ps-gestion_rdv.html">PS indiv. - Gestion de rendez-vous</a>
       </li>
       <li>
@@ -114,7 +122,22 @@
         <a href="specifications_techniques-cpts-recherche_creneaux.html">CPTS - Recherche des créneaux</a>
       </li>
       <li>
+        <a href="specifications_techniques-cpts-gestion_regulateur.html">CPTS - Gestion des comptes régulateurs</a>
+      </li>
+      <li>
         <a href="specifications_techniques-cpts-gestion_rdv.html">CPTS - Gestion de rendez-vous</a>
+      </li>
+      <li>
+        ________ SOS Médecins ________
+      </li>
+      <li>
+        <a href="specifications_techniques-sos-recherche_creneaux.html">SOS Médecins - Recherche des créneaux</a>
+      </li>
+      <li>
+        <a href="specifications_techniques-sos-gestion_regulateur.html">SOS Médecins - Gestion des comptes régulateurs</a>
+      </li>
+      <li>
+        <a href="specifications_techniques-sos-gestion_rdv.html">SOS Médecins - Gestion de rendez-vous</a>
       </li>
     </ul>
   </li>
@@ -194,7 +217,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Service d'Accès aux Soins - Local Development build (v1.0.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/fhir/sas/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Service d'Accès aux Soins - Local Development build (v1.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/fhir/sas/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>FAQ</h2>
   
 
@@ -212,14 +235,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#agrégateur" id="markdown-toc-agrégateur">Agrégateur</a></li>
-  <li><a href="#rendez-vous" id="markdown-toc-rendez-vous">Rendez-vous</a></li>
+  <li><a href="#agrégateur-ps-à-titre-individuel---cpts" id="markdown-toc-agrégateur-ps-à-titre-individuel---cpts">Agrégateur PS à titre individuel - CPTS</a></li>
+  <li><a href="#agrégateur-sos-médecins" id="markdown-toc-agrégateur-sos-médecins">Agrégateur SOS Médecins</a></li>
+  <li><a href="#gestion-des-comptes-régulateurs" id="markdown-toc-gestion-des-comptes-régulateurs">Gestion des comptes régulateurs</a></li>
+  <li><a href="#gestion-des-rdv" id="markdown-toc-gestion-des-rdv">Gestion des RDV</a></li>
 </ul>
 
 </div>
 <p>Cette section regroupe les réponses aux questions les plus fréquemment posées au cours des travaux de développements menés par les éditeurs, et les tests d’intégration.</p>
 
-<h3 id="agrégateur">Agrégateur</h3>
+<h3 id="agrégateur-ps-à-titre-individuel---cpts">Agrégateur PS à titre individuel - CPTS</h3>
 
 <h4 id="quel-est-le-format-à-utiliser-afin-de-transmettre-un-oid-dans-un-élément-system-">Quel est le format à utiliser afin de transmettre un OID dans un élément <code class="language-plaintext highlighter-rouge">System</code> ?</h4>
 
@@ -243,8 +268,7 @@ urn:oid:1.2.250.1.71.4.2.2 = IDNST</p>
 
 <p>Les ressources locations doivent être contenues <code class="language-plaintext highlighter-rouge">contained</code> dans la ressource <code class="language-plaintext highlighter-rouge">PractitionerRole</code> associée. Par ailleurs, au niveau de la ressource <code class="language-plaintext highlighter-rouge">PractitionerRole</code>, la référence vers la ressource <code class="language-plaintext highlighter-rouge">Location</code> doit être indiquée.</p>
 
-<h4 id="quelle-est-la-ressource-discriminante-au-niveau-de-la-structure-du-fichier-de-réponse-json-">Quelle est la ressource discriminante au niveau de la structure du fichier de réponse JSON ?</h4>
-
+<h4 id="quelle-est-la-ressource-discriminante-au-niveau-de-la-structure-de-réponse-json-">Quelle est la ressource discriminante au niveau de la structure de réponse JSON ?</h4>
 <p>Il est attendu dans le fichier de réponse JSON d’avoir 1 ressource <code class="language-plaintext highlighter-rouge">Schedule</code> pour 1 ressource <code class="language-plaintext highlighter-rouge">PractitionerRole</code>. Cela se traduit par le fait d’avoir 1 agenda pour 1 lieu de consultation. Dans la structure du fichier de réponse, un PS aura ainsi autant d’agendas que de lieux de consultation.</p>
 
 <h4 id="quelles-sont-les-ressources-à-transmettre-lorsquun-créneau-de-disponibilité-transmis-est-mis-en-visibilité-dune-ou-plusieurs-cpts-">Quelles sont les ressources à transmettre lorsqu’un créneau de disponibilité transmis est mis en visibilité d’une ou plusieurs CPTS ?</h4>
@@ -373,12 +397,14 @@ Dans la structure du fichier de réponse, si un créneau est associé à plusieu
     <p>Une logique corrigeant le format du numéro de téléphone renseigné dans la solution logicielle doit être mise en oeuvre.<br />
     Rappel du format attendu : <strong>+33XXXXXXXXX</strong>
     <code><pre>
-      "telecom": [
+      {
+        "telecom": [
         {
           "system": "phone",
           "value": "+33XXXXXXXXX"
         }
       ]
+      }
     </pre></code>
     </p>
   </td>
@@ -401,7 +427,7 @@ Dans la structure du fichier de réponse, si un créneau est associé à plusieu
       },
       {
         "text": "ORL"
-      },
+      }]
   </pre></code>
   </p>
   </td>
@@ -436,7 +462,7 @@ Dans la structure du fichier de réponse, si un créneau est associé à plusieu
           "code": "CPTS"
         }
       ]
-    },
+    }
   </pre></code>
   </p>
   </td>
@@ -475,19 +501,19 @@ Dans la structure du fichier de réponse, si un créneau est associé à plusieu
           {
             "text": "Pédiatrie"
           }
-        ],
+        ]
       </pre></code>
     </p>
   </td>
 </tr>
 <tr>
-  <td><p>&nbsp;</p></td>
+  <td><p>6</p></td>
   <td><p>Créneau de type CPTS</p></td>
   <td><p>Dans le cas d'un créneau mis en visibilité d'une (ou plusieurs) CPTS, des données supplémentaires sont à renseigner au sein de la ressource Slot, au niveau du serviceType.<br />
   - Le type de soins correspondant aux structures de CPTS<br />
   Exemple :
   <code><pre>
-        "serviceType": [
+      "serviceType": [
           {
             "coding": [
               {
@@ -525,25 +551,25 @@ Dans la structure du fichier de réponse, si un créneau est associé à plusieu
                 }
               }
             ]
-          },
-        ],
+          }
+        ]
   </pre></code>
   - Il sera également attendu de transmettre les ressources HealthcareService et Organization correspondantes (cf. tableau de valeur et nomenclature 2.3.1 et 2.3.2)
   </p>
   </td>
 </tr>
 <tr>
-  <td><p>6</p></td>
+  <td><p>7</p></td>
   <td><p>Gestion des multiples lieux<br />de consultation</p></td>
   <td><p>Lorsqu'un PS dispose de créneaux associés à différents lieux de consultation, il est attendu que l'ensemble des créneaux soient remontés, et soient associés au bon lieu de consultation.</p></td>
 </tr>
 <tr>
-  <td><p>7</p></td>
+  <td><p>8</p></td>
   <td><p>Gestion des multiples PS</p></td>
   <td><p>Lorsqu'une recherche est faite sur plusieurs PS ayant des créneaux disponibles dans la solution logicielle, il est attendu que l'ensemble des créneaux soient remontés, et soient associés au bon PS.</p></td>
 </tr>
 <tr>
-  <td><p>8</p></td>
+  <td><p>9</p></td>
   <td><p>Gestion de l'absence de créneaux<br />et agenda PS</p></td>
   <td><p>Lorsqu'aucun créneau n'est disponible ou qu'aucun des PS de la recherche n'est présent dans la solution logicielle, un bundle de réponse vide est attendu.<br />
   Exemple :
@@ -556,29 +582,118 @@ Dans la structure du fichier de réponse, si un créneau est associé à plusieu
       ]
     },
     "type": "searchset",
-    "total": 4,
+    "total": 0,
     "link": [
       {
         "relation": "self",
         "url": "https://exemple.com/ans-sas/Slot/?_include=Slot:schedule&amp;_include:iterate=Schedule:actor&amp;status=free&amp;start=ge2021-11-04T14:19:35.760+00:00&amp;start=le2021-11-06T23:59:59.999+00:00&amp;schedule.actor:Practitioner.identifier=urn:oid:1.2.250.1.71.4.2.1%7C810002673899,urn:oid:1.2.250.1.71.4.2.1%7C810100050075&amp;_count=1000"
       }
-    ],
+    ]
   </pre></code>
   </p>
   </td>
 </tr>
 <tr>
-  <td><p>9</p></td>
+  <td><p>10</p></td>
   <td><p>Eléments vide</p></td>
   <td><p>Lorsqu'une information optionnelle n'est pas renseignée dans la solution logicielle, l'élément correspondant ne doit pas être transmis au niveau de la réponse. Il ne faut pas transmettre un élément vide.</p></td>
 </tr>
 <tr>
-  <td><p>10</p></td>
+  <td><p>11</p></td>
   <td><p>Créneau mis en visibilité de 2 CPTS</p></td>
-  <td><p><i>à venir</i></p></td>
+  <td><p>Lorsqu’un créneau est mis en visibilité de plusieurs CPTS, les ressources associées pour faire le lien avec chacune de ces CPTS sont attendues :  <br />
+  Exemple :
+  <code><pre>
+  "resourceType" : "Slot",
+    "id" : "ExampleSlotCPTS2",
+    "meta" : {
+      "profile" : [
+        🔗 "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator"
+      ],
+      "security" : [
+        {
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
+          "code" : "PUBLIC"
+        },
+        {
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
+          "code" : "CPTS"
+        }
+      ]
+    },
+    "serviceType" : [
+      {
+        "coding" : [
+          {
+            "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+            "code" : "AMB"
+          }
+        ],
+        "text" : "Visite de contrôle"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType",
+            "valueReference" : {
+              🔗 "reference" : "HealthcareService/ExampleHealthcareServiceCPTS1"
+            }
+          }
+        ],
+        "coding" : [
+          {
+            "system" : "https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement",
+            "code" : "604"
+          }
+        ]
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType",
+            "valueReference" : {
+              🔗 "reference" : "HealthcareService/ExampleHealthcareServiceCPTS2"
+            }
+          }
+        ],
+        "coding" : [
+          {
+            "system" : "https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement",
+            "code" : "604"
+          }
+        ]
+      }
+    ],
+    "specialty" : [
+      {
+        "coding" : [
+          {
+            "system" : "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
+            "code" : "SM54"
+          }
+        ]
+      }
+    ],
+    "appointmentType" : {
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/v2-0276",
+          "code" : "ROUTINE"
+        }
+      ]
+    },
+    "schedule" : {
+      🔗 "reference" : "Schedule/ExampleSchedule"
+    },
+    "status" : "free",
+    "start" : "2024-06-12T16:40:00.000+02:00",
+    "end" : "2024-06-12T17:00:00.000+02:00",
+    "comment" : "https://exemple.com/rdv/com/"
+  </pre></code>
+  </p></td>
 </tr>
 <tr>
-  <td><p>11</p></td>
+  <td><p>12</p></td>
   <td><p>Créneau non rattaché à une CPTS</p></td>
   <td><p>
     Si pour une ressource Slot, le type de créneau ne contient pas la valorisation `CPTS` (ID 14) mais uniquement PUBLIC, PRO et/ou SNP, alors aucune donnée supplémentaire n’est attendue.<br />
@@ -589,12 +704,248 @@ Dans la structure du fichier de réponse, si un créneau est associé à plusieu
 </tbody>
 </table>
 
-<h3 id="rendez-vous">Rendez-vous</h3>
+<h3 id="agrégateur-sos-médecins">Agrégateur SOS Médecins</h3>
+
+<h4 id="quel-est-le-format-à-utiliser-afin-de-transmettre-un-oid-dans-un-élément-system--1">Quel est le format à utiliser afin de transmettre un OID dans un élément <code class="language-plaintext highlighter-rouge">System</code> ?</h4>
+
+<p>L’OID doit être précédé du préfixe <code class="language-plaintext highlighter-rouge">urn:oid:</code>, comme dans l’exemple suivant : “system”:  “urn:oid:1.2.250.1.71.4.2.2” (pour les IDNST).</p>
+
+<h4 id="quels-champs-de-lélément-identifier-des-ressources-frlocation-et-frorganization-sont-obligatoires-">Quels champs de l’élément identifier des ressources FrLocation et FrOrganization sont obligatoires ?</h4>
+
+<p>Les éléments <code class="language-plaintext highlighter-rouge">identifier.system</code>, <code class="language-plaintext highlighter-rouge">identifier.type</code> et <code class="language-plaintext highlighter-rouge">identifier.value</code> sont obligatoires.</p>
+
+<h4 id="quelle-url-doit-être-transmise-dans-lélément-comment--1">Quelle URL doit être transmise dans l’élément <code class="language-plaintext highlighter-rouge">comment</code> ?</h4>
+
+<p>Il est attendu l’URL de redirection vers l’agenda du point fixe de garde (PFG) et dans la mesure du possible vers le créneau sélectionné directement.</p>
+
+<h4 id="quelle-est-la-ressource-discriminante-au-niveau-de-la-structure-de-réponse-json--1">Quelle est la ressource discriminante au niveau de la structure de réponse JSON ?</h4>
+<p>Il est attendu dans le fichier de réponse JSON d’avoir 1 ressource Schedule pour 1 ressource Location. Cela se traduit par le fait d’avoir 1 agenda pour 1 point fixe de garde (lieu de consultation). Dans la structure du fichier de réponse, une association SOS Médecins aura ainsi autant d’agendas que de points fixes de garde (PFG).</p>
+
+<h4 id="quelles-sont-les-principales-erreurs-rencontrées-au-cours-des-tests--1">Quelles sont les principales erreurs rencontrées au cours des tests ?</h4>
+
+<p>Le tableau ci-dessous présente les erreurs rencontrées de manière récurrente lors de la phase de recette connectée. Il est recommandé de porter une attention particulière à cette section :</p>
+
+<table>
+<tbody>
+<tr>
+  <td width="5%"><p><strong>ID</strong></p></td>
+  <td width="30%"><p><strong>Description</strong></p></td>
+  <td><p><strong>Comportement attendu</strong></p></td>
+</tr>
+<tr>
+  <td><p>1</p></td>
+  <td><p>Gestion des préfixes des ID de <br />Structure</p></td>
+  <td>
+    <p>Quel que soit le format de l'ID renseigné au niveau de la solution logicielle (préfixé ou pas) :<br />
+    <ul>
+      <li>Les créneaux associés aux PFG doivent remonter</li>
+      <li>Les ID renseignés dans la réponse sont bien préfixés.</li>
+    </ul>
+    Rappel concernant les préfixes attendus :<br /><br />
+    Pour les ID nationaux de structure :<br />
+    <ul>
+      <li>Préfixe "0" pour les identifiants de cabinet ADELI</li>
+      <li>Préfixe "1" pour les FINESS</li>
+      <li>Préfixe "3" pour les SIRET</li>
+      <li>Préfixe "4" pour les identifiants de cabinet RPPS</li>
+    </ul>
+    </p>
+  </td>
+</tr>
+<tr>
+  <td><p>2</p></td>
+  <td><p>Format du numéro de téléphone</p></td>
+  <td>
+    <p>Une logique corrigeant le format du numéro de téléphone renseigné dans la solution logicielle doit être mise en oeuvre.<br />
+    Rappel du format attendu : <strong>+33XXXXXXXXX</strong>
+    <code><pre>
+      "telecom": [
+        {
+          "system": "phone",
+          "value": "+33XXXXXXXXX"
+        }
+      ]
+    </pre></code>
+    </p>
+  </td>
+</tr>
+<tr>
+  <td><p>3</p></td>
+  <td><p>Type de créneau</p></td>
+  <td><p>L'ensemble des types associés aux créneaux doivent être transmis, sous forme codifiée, au niveau de l'élément meta.security. Pour le cas d’usage SOS Médecins, les codes applicables sont : PUBLIC et SNP<br />
+  Exemple :
+  <code><pre>
+    "resourceType": "Slot",
+    "id": "1636036800",
+    "meta": {
+      "profile": [
+        "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator"
+      ],
+      "security": [
+        {
+          "system": "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
+          "code": "PUBLIC"
+        },
+        {
+          "system": "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
+          "code": "SNP"
+        }
+      ]
+    }
+  </pre></code>
+  </p>
+  </td>
+</tr>
+<tr>
+  <td><p>4</p></td>
+  <td><p>Gestion des multiples PFG</p></td>
+  <td><p>Lorsqu’une association SOS Médecins dispose de créneaux associés à différents PFG, il est attendu que l’ensemble des créneaux soient remontés et soient associés au bon PFG.</p></td>
+</tr>
+<tr>
+  <td><p>5</p></td>
+  <td><p>Gestion de l'absence de créneaux pour une<br />association SOS Médecins</p></td>
+  <td><p>Lorsqu’aucun créneau n’est disponible ou qu’aucune association SOS Médecins de la recherche n’est présent dans la solution logicielle, un bundle de réponse vide est attendu<br />
+  Exemple :
+  <code><pre>
+    "resourceType": "Bundle",
+    "id": "8cbb33dc-779e-45e9-a5f6-ea66101288c5",
+    "meta": {
+      "profile": [
+        "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-bundle-aggregator"
+      ]
+    },
+    "type": "searchset",
+    "total": 0,
+    "link": [
+      {
+        "relation": "self",
+        "url": "https://editeur.fr/Schedule?_revinclude=Slot:schedule&amp;_include=Schedule:actor:Location&amp;_include:iterate=Location:organization&amp;_has:Slot:schedule:start=ge2023-08-18T09:00:00+02:00&amp;_has:Slot:schedule:start=le2023-08-20T08:00:00+02:00&amp;_has:Slot:schedule:status=free&amp;actor:Location.organization.identifier=urn:oid:1.2.250.1.71.4.2.2%7C334173748400020,urn:oid:1.2.250.1.71.4.2.2%7C392080466300010&amp;_count=1000"
+      }
+    ]
+  </pre></code>
+  </p>
+  </td>
+</tr>
+<tr>
+  <td><p>6</p></td>
+  <td><p>Eléments vide</p></td>
+  <td><p>Lorsqu'une information optionnelle n'est pas renseignée dans la solution logicielle, l'élément correspondant ne doit pas être transmis au niveau de la réponse. Il ne faut pas transmettre un élément vide.</p></td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="gestion-des-comptes-régulateurs">Gestion des comptes régulateurs</h3>
+
+<p>Cette section regroupe les réponses aux questions les plus fréquemment posées au cours des travaux de développements menés par les éditeurs, et les tests d’intégration.</p>
+
+<p><strong>Pourrions-nous avoir un exemple d’appel dans le cas d’une modification de l’identifiant d’un compte régulateur ?</strong></p>
+
+<p>L’exemple ci-dessous concerne la modification de l’identifiant du compte du régulateur Jules MARIUS, initialement associé à l’ID technique SAS <code class="language-plaintext highlighter-rouge">b6e39355-8a61-4556-b340-36f7b95fec6a</code>. La valorisation de l’élément <code class="language-plaintext highlighter-rouge">identifier.value</code> à <code class="language-plaintext highlighter-rouge">810002673899</code> indique le nouvel identifiant à prendre en compte.</p>
+
+<p><ins>Requête</ins>
+curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.213.3.6|b6e39355-8a61-4556-b340-36f7b95fec6a -H ‘Accept: application/json+fhir’ -d</p>
+
+<p><ins>Résultat</ins></p>
+
+<pre class="json" style="white-space: pre; text-wrap: nowrap;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">
+{
+  "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner">resourceType</a>" : "Practitioner",
+  "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.id">id</a>" : "ExamplePractitionerRegul2",
+  "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      <a href="StructureDefinition-FrPractitionerRegul.html" style="color: Maroon">&#x1F517;</a> "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.identifier">identifier</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "IDNPS"
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:oid:1.2.250.1.71.4.2.1",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "810002673899"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.active">active</a>" : true,
+  "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.name">name</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.family">family</a>" : "MARIUS",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">given</a>" : [
+        "Jules"
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.telecom">telecom</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "email",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "jules.marius@test.com"
+    }
+  ]
+}</code></pre>
+
+<p><strong>Pourrions-nous avoir un exemple d’appel dans le cas d’une modification de l’identifiant d’un compte régulateur ?</strong></p>
+
+<p>L’exemple ci-dessous concerne la désactivation du compte du régulateur Jules MARIUS. La valorisation de l’élément <code class="language-plaintext highlighter-rouge">active</code> à <code class="language-plaintext highlighter-rouge">false</code> indique que le compte doit être désactivé.</p>
+
+<p><ins>Requête</ins>
+curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.71.4.2.1|810002673899 -H ‘Accept: application/json+fhir’ -d</p>
+
+<p><ins>Résultat</ins></p>
+
+<pre class="json" style="white-space: pre; text-wrap: nowrap;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">
+{
+  "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner">resourceType</a>" : "Practitioner",
+  "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.id">id</a>" : "ExamplePractitionerRegul3",
+  "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      <a href="StructureDefinition-FrPractitionerRegul.html" style="color: Maroon">&#x1F517;</a> "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.identifier">identifier</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "IDNPS"
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:oid:1.2.250.1.71.4.2.1",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "810002673899"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.active">active</a>" : false,
+  "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.name">name</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.family">family</a>" : "MARIUS",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">given</a>" : [
+        "Jules"
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.telecom">telecom</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "email",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "jules.marius@test.com"
+    }
+  ]
+}</code></pre>
+
+<p><strong>Est-il nécessaire d’utiliser un nouveau endpoint pour la création des comptes régulateurs dans la solution logicielle éditeur ?</strong></p>
+
+<p>Non, le endpoint attendu pour l’envoi des requêtes POST et PUT relatif à la gestion des comptes régulateurs doit être le même que celui transmis et utilisé pour le flux d’agrégation de créneaux de disponibilités.</p>
+
+<h3 id="gestion-des-rdv">Gestion des RDV</h3>
 
 <h4 id="comment-faire-la-distinction-entre-un-id-national-et-un-id-technique-">Comment faire la distinction entre un ID national et un ID technique ?</h4>
 
 <p>Un ID national possède une structure bien définie dont les spécificités sont explicitées ici. Un identifiant technique SAS prendra la forme d’un UUID (ex. b6e39355-8a61-4556-b340-36f7b95fec6a) où une REGEX peut-être implémentée côté éditeur.
-Dans les spécifications <strong>SAS_SPEC INT_R02_Gestion des comptes régulateurs</strong>, au sein de la requête, les champs <code class="language-plaintext highlighter-rouge">identifier.system</code> (autorité d’affectation) et <code class="language-plaintext highlighter-rouge">identifier.type</code> (type d’identifiant) permettent d’indiquer s’il s’agit d’un identifiant technique SAS ou d’un identifiant national.
+Cf. <a href="./specifications_techniques-ps-gestion_regulateur.html#r%C3%A8gles-de-gestion">règles de gestion comptes régulateurs</a>, au sein de la requête, les champs <code class="language-plaintext highlighter-rouge">identifier.system</code> (autorité d’affectation) et <code class="language-plaintext highlighter-rouge">identifier.type</code> (type d’identifiant) permettent d’indiquer s’il s’agit d’un identifiant technique SAS ou d’un identifiant national.
 <br /><br /></p>
 
 
@@ -638,7 +989,7 @@ Dans les spécifications <strong>SAS_SPEC INT_R02_Gestion des comptes régulateu
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 5, 2024 14:31+0000">2024-09-05</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Dec 11, 2024 08:48+0000">2024-12-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
