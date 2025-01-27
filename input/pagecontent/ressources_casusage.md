@@ -11,9 +11,9 @@ where Id not like '%sos%' and  Id not like '%cpts%' and Id not like 'Example%' a
   "query" : "select Id, Type, Description, Web from Resources where Id not like '%sos%' and  Id not like '%cpts%' and Id not like 'Example%' and Type in ('StructureDefinition', 'ValueSet', 'SearchParameter')",
   "class" : "lines",
   "columns" : [
-    { "name" : "Test", "type" : "link", "source" : "Id", "target" : "Web"},
-    { "name" : "Type", "type" : "markdown", "source" : "Type"},
-    { "name" : "Description", "type" : "markdown", "source" : "Description"}
+    { "title" : "Test", "type" : "link", "source" : "Id", "target" : "Web"},
+    { "title" : "Type", "type" : "markdown", "source" : "Type"},
+    { "title" : "Description", "type" : "markdown", "source" : "Description"}
   ]
 } %}
 
