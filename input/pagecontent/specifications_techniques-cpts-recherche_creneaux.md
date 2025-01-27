@@ -189,7 +189,7 @@ La réponse ci-dessous correspond à :
     - Pour le motif `Consultation`
     - Téléphone de la CPTS : 0102030405
 
-Pour consulter l'exemple en plein écran, cliquer [ici](./Bundle-ExampleBundleCPTS.html).
+Pour consulter l'exemple en plein écran, cliquer [ici](./Bundle-ExampleBundleCPTS1.html).
 
 <iframe src="./Bundle-ExampleBundleCPTS.json" width="100%" height="300" style="border: 1px solid #cccccc; border-radius: 4px; background: #f5f2f0;" scrolling="yes"></iframe>
 <br>

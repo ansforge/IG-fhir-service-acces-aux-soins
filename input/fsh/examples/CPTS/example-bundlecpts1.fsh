@@ -1,7 +1,7 @@
 
-Instance: ExampleBundleCPTS
+Instance: ExampleBundleCPTS1
 InstanceOf: BundleAgregateurCPTS
-Description: "Exemple Bundle CPTS"
+Description: "Exemple Bundle CPTS 1"
 Usage: #example
 
 * total = 1
