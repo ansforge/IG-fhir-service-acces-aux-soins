@@ -1,0 +1,168 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/slotstatus",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SlotStatus",
+      "title" : "SlotStatus",
+      "description" : "The free/busy status of the slot.",
+      "systems" : ["http://hl7.org/fhir/slotstatus"],
+      "oids" : ["2.16.840.1.113883.4.642.3.482"],
+      "sources" : ["2.16.840.1.113883.4.642.3.482"],
+      "uses" : {
+      },
+      "StructureDefinition-FrSlotAgregateur.html" : "FrSlotAgregateur"
+    },
+    {
+      "url" : "http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty",
+      "version" : "1.0.1",
+      "status" : "active",
+      "name" : "fr-practitioner-specialty",
+      "title" : null,
+      "description" : "The modalities of exercice of the practitioner, registered by an official organization for a period of time.",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-FrSlotAgregateur.html" : "FrSlotAgregateur"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v2-0276",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "Hl7VSAppointmentReasonCodes",
+      "title" : "hl7VS-appointmentReasonCodes",
+      "description" : "Value Set of codes that describe the kind of appointment or the reason why an appointment has been scheduled.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0276"],
+      "oids" : ["2.16.840.1.113883.21.181"],
+      "sources" : ["2.16.840.1.113883.21.181"],
+      "uses" : {
+      },
+      "StructureDefinition-FrSlotAgregateur.html" : "FrSlotAgregateur"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ActEncounterCode",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "ActEncounterCode",
+      "title" : "ActEncounterCode",
+      "description" : "Domain provides codes that qualify the ActEncounterClass (ENC)",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+      "oids" : ["2.16.840.1.113883.1.11.13955"],
+      "sources" : ["2.16.840.1.113883.1.11.13955"],
+      "uses" : {
+      },
+      "StructureDefinition-sas-cpts-slot-aggregator.html" : "FrSlotAgregateurCPTS",
+      "StructureDefinition-FrSlotAgregateur.html" : "FrSlotAgregateur"
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-cpts-valueset-typecreneau",
+      "version" : "1.1.0",
+      "status" : "active",
+      "name" : "TypeCreneauSASCPTS",
+      "title" : "Type créneaux SAS CPTS",
+      "description" : "Type de Créneaux SAS CPTS",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-sas-cpts-slot-aggregator.html" : "FrSlotAgregateurCPTS"
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-sos-valueset-participant-status",
+      "version" : "1.1.0",
+      "status" : "active",
+      "name" : "ParticipantStatusSASSOS",
+      "title" : "Statut participant SAS SOS",
+      "description" : "Statut du participant RDV SAS SOS",
+      "systems" : ["http://hl7.org/fhir/participationstatus"],
+      "uses" : {
+      },
+      "StructureDefinition-sas-sos-appointment.html" : "FrAppointmentSASSOS"
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-sos-valueset-typecreneau",
+      "version" : "1.1.0",
+      "status" : "active",
+      "name" : "TypeCreneauSASSOS",
+      "title" : "Type créneaux SAS SOS",
+      "description" : "Type de Créneaux SAS SOS",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-sas-sos-slot-aggregator.html" : "FrSlotAgregateurSOS"
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-appointmentreason",
+      "version" : "1.1.0",
+      "status" : "active",
+      "name" : "AppointmentReasonSAS",
+      "title" : "Appointment reason SAS",
+      "description" : "Appointment reason SAS",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0276"],
+      "uses" : {
+      },
+      "StructureDefinition-sas-cpts-slot-aggregator.html" : "FrSlotAgregateurCPTS",
+      "StructureDefinition-sas-sos-slot-aggregator.html" : "FrSlotAgregateurSOS"
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-categorieetablissement",
+      "version" : "1.1.0",
+      "status" : "active",
+      "name" : "CategorieEtablissementSAS",
+      "title" : "Catégorie établissement SAS",
+      "description" : "Catégorie d'établissement utilisée dans contexte SAS - CPTS dans un premier temps",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-sas-cpts-slot-aggregator.html" : "FrSlotAgregateurCPTS"
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-typeconsultation",
+      "version" : "1.1.0",
+      "status" : "active",
+      "name" : "TypeConsultationSAS",
+      "title" : "Type consultation SAS",
+      "description" : "Type de consultations SAS",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+      "uses" : {
+      },
+      "StructureDefinition-sas-sos-slot-aggregator.html" : "FrSlotAgregateurSOS"
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-typeidentifiant",
+      "version" : "1.1.0",
+      "status" : "active",
+      "name" : "TypeIdentifiantSAS",
+      "title" : "Type identifiant SAS",
+      "description" : "Type d'identifiant SAS",
+      "systems" : ["http://interopsante.org/fhir/CodeSystem/fr-v2-0203"],
+      "uses" : {
+      },
+      "StructureDefinition-sas-sos-appointment.html" : "FrAppointmentSASSOS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J165-TypeCreneau-SAS/FHIR/JDV-J165-TypeCreneau-SAS",
+      "version" : "1.3.0",
+      "status" : "active",
+      "name" : "JDV_J165-TypeCreneau-SAS",
+      "title" : null,
+      "description" : "Type de créneaux de soins définis par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV selon la visibilité associée",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"
+      ],
+      "oids" : ["1.2.250.1.213.3.4.10"],
+      "sources" : ["1.2.250.1.213.3.4.10"],
+      "uses" : {
+      },
+      "StructureDefinition-FrSlotAgregateur.html" : "FrSlotAgregateur"
+    }
+  ]
+}
