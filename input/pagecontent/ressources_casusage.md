@@ -13,7 +13,7 @@ where Id not like '%sos%' and  Id not like '%cpts%' and Id not like 'Example%' a
   "columns" : [
     { "name" : "Id", "type" : "link", "source" : "Id", "target" : "Web"},
     { "name" : "Type", "type" : "markdown", "source" : "Type"},
-    { "name" : "Description, "type" : "markdown", "source" : "Description"}
+    { "name" : "Description", "type" : "markdown", "source" : "Description"}
   ]
 } %}
 
