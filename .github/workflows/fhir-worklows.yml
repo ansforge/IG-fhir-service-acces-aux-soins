@@ -23,10 +23,8 @@ jobs:
       - uses: ansforge/IG-workflows@main
         with:      
           bake: "true"
-          nos: "false"
           validator_cli: "false"     
           generate_plantuml : "true"
           repo_ig: "./igSource"   
           github_page: "true"
           github_page_token: ${{ secrets.ANS_IG_API_TOKEN  }}
-          ig-publisher-version: 1.6.20
