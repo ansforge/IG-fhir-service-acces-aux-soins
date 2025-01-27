@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Location xmlns="http://hl7.org/fhir">
+  <id value="2222222222"/>
+  <meta>
+    <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator"/>
+  </meta>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"/>
+        <code value="INTRN"/>
+      </coding>
+    </type>
+    <system value="https://editeur.com"/>
+    <value value="2222222222"/>
+  </identifier>
+  <name value="Centre de consultation Rennes Cleunay"/>
+  <telecom>
+    <system value="phone"/>
+    <value value="+33145249912"/>
+  </telecom>
+  <address>
+    <line value="106 rue Eugène Pottier"/>
+    <city value="RENNES"/>
+    <postalCode value="35000"/>
+  </address>
+  <managingOrganization>
+    <reference value="Organization/ExampleOrgaSOS1"/>
+  </managingOrganization>
+  <hoursOfOperation>
+    <daysOfWeek value="mon"/>
+    <daysOfWeek value="tue"/>
+    <daysOfWeek value="wed"/>
+    <daysOfWeek value="thu"/>
+    <openingTime value="09:00:00"/>
+    <closingTime value="21:00:00"/>
+  </hoursOfOperation>
+</Location>

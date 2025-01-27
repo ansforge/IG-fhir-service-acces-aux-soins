@@ -1,0 +1,48 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/sas/Location/1111111111> a fhir:Location ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "1111111111"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator>
+     ] )
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "INTRN" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "https://editeur.com"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "1111111111" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "Centre de consultation Rennes Nord"] ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+33193246789" ]
+  ] ) ; # 
+  fhir:address [
+     fhir:line ( [ fhir:v "320 avenue Général Georges Patton" ] ) ;
+     fhir:city [ fhir:v "RENNES" ] ;
+     fhir:postalCode [ fhir:v "35700" ]
+  ] ; # 
+  fhir:managingOrganization [
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Organization/ExampleOrgaSOS1> ;
+     fhir:reference [ fhir:v "Organization/ExampleOrgaSOS1" ]
+  ] ; # 
+  fhir:hoursOfOperation ( [
+     fhir:daysOfWeek ( [ fhir:v "tue" ] [ fhir:v "wed" ] [ fhir:v "thu" ] [ fhir:v "fri" ] [ fhir:v "sat" ] [ fhir:v "sun" ] ) ;
+     fhir:openingTime [ fhir:v "08:00:00"^^xsd:time ] ;
+     fhir:closingTime [ fhir:v "19:00:00"^^xsd:time ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
