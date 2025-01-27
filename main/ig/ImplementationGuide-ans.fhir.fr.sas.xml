@@ -10,7 +10,7 @@
   <name value="SAS"/>
   <title value="Service d'Accès aux Soins"/>
   <status value="active"/>
-  <date value="2024-12-17T08:23:13+00:00"/>
+  <date value="2025-01-27T12:37:17+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -35,7 +35,7 @@
     </extension>
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
-    <version value="6.1.0"/>
+    <version value="6.2.0"/>
   </dependsOn>
   <dependsOn id="hl7ext">
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
@@ -329,7 +329,7 @@
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
-      <valueCode value="hl7.fhir.uv.tools#0.1.0"/>
+      <valueCode value="hl7.fhir.uv.tools.r4#0.3.0"/>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
@@ -707,10 +707,21 @@
         <valueString value="Bundle"/>
       </extension>
       <reference>
-        <reference value="Bundle/ExampleBundleCPTS"/>
+        <reference value="Bundle/ExampleBundleCPTS1"/>
       </reference>
-      <name value="ExampleBundleCPTS"/>
-      <description value="Exemple Bundle CPTS"/>
+      <name value="ExampleBundleCPTS1"/>
+      <description value="Exemple Bundle CPTS 1"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-bundle-aggregator"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/ExampleBundleCPTS2"/>
+      </reference>
+      <name value="ExampleBundleCPTS2"/>
+      <description value="Exemple Bundle CPTS 2"/>
       <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-bundle-aggregator"/>
     </resource>
     <resource>
