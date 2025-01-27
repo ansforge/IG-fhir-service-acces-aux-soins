@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Location xmlns="http://hl7.org/fhir">
+  <id value="1111111111"/>
+  <meta>
+    <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator"/>
+  </meta>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"/>
+        <code value="INTRN"/>
+      </coding>
+    </type>
+    <system value="https://editeur.com"/>
+    <value value="1111111111"/>
+  </identifier>
+  <name value="Centre de consultation Rennes Nord"/>
+  <telecom>
+    <system value="phone"/>
+    <value value="+33193246789"/>
+  </telecom>
+  <address>
+    <line value="320 avenue Général Georges Patton"/>
+    <city value="RENNES"/>
+    <postalCode value="35700"/>
+  </address>
+  <managingOrganization>
+    <reference value="Organization/ExampleOrgaSOS1"/>
+  </managingOrganization>
+  <hoursOfOperation>
+    <daysOfWeek value="tue"/>
+    <daysOfWeek value="wed"/>
+    <daysOfWeek value="thu"/>
+    <daysOfWeek value="fri"/>
+    <daysOfWeek value="sat"/>
+    <daysOfWeek value="sun"/>
+    <openingTime value="08:00:00"/>
+    <closingTime value="19:00:00"/>
+  </hoursOfOperation>
+</Location>

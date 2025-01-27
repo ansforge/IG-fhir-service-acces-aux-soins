@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="sas-sos-valueset-participant-status"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet sas-sos-valueset-participant-status</b></p><a name="sas-sos-valueset-participant-status"> </a><a name="hcsas-sos-valueset-participant-status"> </a><a name="sas-sos-valueset-participant-status-fr-FR"> </a><ul><li>Include these codes as defined in <a href="http://hl7.org/fhir/R4/codesystem-participationstatus.html"><code>http://hl7.org/fhir/participationstatus</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href="http://hl7.org/fhir/R4/codesystem-participationstatus.html#participationstatus-accepted">accepted</a></td><td>RDV accepté par le PS effecteur de soins</td><td>The participant has accepted the appointment.</td></tr><tr><td><a href="http://hl7.org/fhir/R4/codesystem-participationstatus.html#participationstatus-needs-action">needs-action</a></td><td>RDV en attente de confirmation par le PS effecteur de soins</td><td>The participant needs to indicate if they accept the appointment by changing this status to one of the other statuses.</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-sos-valueset-participant-status"/>
+  <version value="1.1.0"/>
+  <name value="ParticipantStatusSASSOS"/>
+  <title value="Statut participant SAS SOS"/>
+  <status value="active"/>
+  <date value="2025-01-27T12:59:14+00:00"/>
+  <publisher value="ANS"/>
+  <contact>
+    <name value="ANS"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Statut du participant RDV SAS SOS"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="FRANCE"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/participationstatus"/>
+      <concept>
+        <code value="accepted"/>
+        <display value="RDV accepté par le PS effecteur de soins"/>
+      </concept>
+      <concept>
+        <code value="needs-action"/>
+        <display value="RDV en attente de confirmation par le PS effecteur de soins"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>
