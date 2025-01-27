@@ -7,7 +7,6 @@ Liste des ressources (profils,paramètres de recherche, terminologies, exemples)
 {% sql SELECT '[' || Id ||']('||Type||'-' || id || '.html)' as "Id", Type, IFNULL(Description,' ') as "Description" from Resources
 where Id not like '%sos%' and  Id not like '%cpts%' and Id not like 'Example%' and Type in ('StructureDefinition', 'ValueSet', 'SearchParameter') %}
 
-TEST
 {% sql {
   "query" : "select Id, Type, Description, Web from Resources where Id not like '%sos%' and  Id not like '%cpts%' and Id not like 'Example%' and Type in ('StructureDefinition', 'ValueSet', 'SearchParameter')",
   "class" : "lines",
