@@ -388,41 +388,40 @@ d’Interopérabilité des Systèmes d’Information de Santé (CI-SIS).</p>
     <p><?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="149px" preserveAspectRatio="none" style="width:455px;height:149px;background:#FFFFFF;" version="1.1" viewBox="0 0 455 149" width="455px" zoomAndPan="magnify"><defs /><g><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="64" x2="64" y1="36.2969" y2="114.5625" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="377" x2="377" y1="36.2969" y2="114.5625" /><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="119" x="5" y="5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="105" x="12" y="24.9951">Plateforme SAS</text><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="119" x="5" y="113.5625" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="105" x="12" y="133.5576">Plateforme SAS</text><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="143" x="306" y="5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129" x="313" y="24.9951">Solution interfac&#233;e</text><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="143" x="306" y="113.5625" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129" x="313" y="133.5576">Solution interfac&#233;e</text><polygon fill="#181818" points="365.5,63.4297,375.5,67.4297,365.5,71.4297,369.5,67.4297" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="64.5" x2="371.5" y1="67.4297" y2="67.4297" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="53" x="71.5" y="62.3638">Requ&#234;te</text><text fill="#0000FF" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="232" x="128.5" y="62.3638">PUT Practitioner?identifier=[ID]</text><polygon fill="#181818" points="75.5,92.5625,65.5,96.5625,75.5,100.5625,71.5,96.5625" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="69.5" x2="376.5" y1="96.5625" y2="96.5625" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="55" x="81.5" y="91.4966">R&#233;ponse</text><text fill="#0000FF" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="53" x="140.5" y="91.4966">200 OK</text></g></svg></p>
 </div>
 
-<div class="mermaid">
-graph TD
- subgraph s1["Légende"]
-    direction LR
-        n11["Action SAS"]
-        n12["Action éditeur"]
-  end
-    n1["Gestionnaire de compte"] ---&gt; n10@{ label: "Suppression ou retrait d'habiliation" }
-    n10 --&gt; n5@{ label: "Envoi d'une requête POST ou PUT aux solutions logicielles conce" }
-    n2["Régulateur"] --&gt; n3["Connexion à la PTF numérique SAS"]
-    n3 --&gt; n4["Contrôle si des actions sont à mener"]
-    n4 -- OUI --&gt; n5
-    n5 --&gt; n6["Traitement de la requête et envoi de la réponse à la PTF numérique SAS"]
-    n6 --&gt; n7["Traitement de la réponse"]
-    n7 -- OK --&gt; n8@{ label: "Mise à jour de l'état du compte" }
-    n4 -- NON --&gt; n9@{ label: "Pas d'action" }
-    n7 -- KO --&gt; n10n9@{ label: "Pas d'action" }
-
-    n1@{ shape: text}
-    n10@{ shape: rect}
-    n5@{ shape: rect}
-    n2@{ shape: text}
-    n4@{ shape: diam}
-    n7@{ shape: diam}
-    n8@{ shape: rect}
-    style n12 fill:#FF6D00
-    style n6 fill:#FF6D00
-</div>
-
 <p>Afin de limiter le nombre d’appels émis vers les solutions logicielles éditeurs, et éviter d’avoir à gérer des créations ou mises à jour massives de comptes (batch d’initialisation, reprise, etc.), les mécaniques suivantes ont été mises en œuvre pour le déclenchement des requêtes :</p>
 <ul>
   <li>Pour la création ou modification de compte, le déclenchement de la requête est lié à la connexion de l’utilisateur à la plateforme numérique SAS. Lors de la connexion du régulateur, un contrôle est effectué afin d’identifier si des actions sont à mener dans les solutions logicielles éditeurs. Dans le cas où des solutions sont identifiées, les requêtes correspondantes sont émises et l’état du compte est mis à jour dans la plateforme numérique SAS.</li>
   <li>Pour la suppression ou retrait d’habilitation uniquement, le déclenchement de la requête est émis instantanément.
 Le schéma ci-dessous illustre les éléments décrits ci-dessus :</li>
 </ul>
+
+<pre><code class="language-mermaid">graph TD
+ subgraph s1["Légende"]
+    direction LR
+        n11["Action SAS"]
+        n12["Action éditeur"]
+  end
+n1["Gestionnaire de compte"] ---&gt; n10@{ label: "Suppression ou retrait d'habiliation" }
+n10 --&gt; n5@{ label: "Envoi d'une requête POST ou PUT aux solutions logicielles conce" }
+n2["Régulateur"] --&gt; n3["Connexion à la PTF numérique SAS"]
+n3 --&gt; n4["Contrôle si des actions sont à mener"]
+n4 -- OUI --&gt; n5
+n5 --&gt; n6["Traitement de la requête et envoi de la réponse à la PTF numérique SAS"]
+n6 --&gt; n7["Traitement de la réponse"]
+n7 -- OK --&gt; n8@{ label: "Mise à jour de l'état du compte" }
+n4 -- NON --&gt; n9@{ label: "Pas d'action" }
+n7 -- KO --&gt; n10n9@{ label: "Pas d'action" }
+
+n1@{ shape: text}
+n10@{ shape: rect}
+n5@{ shape: rect}
+n2@{ shape: text}
+n4@{ shape: diam}
+n7@{ shape: diam}
+n8@{ shape: rect}
+style n12 fill:#FF6D00
+style n6 fill:#FF6D00
+</code></pre>
 
 <table align="center">
     <tr>
@@ -528,7 +527,7 @@ Le schéma ci-dessous illustre l’échange à mettre en oeuvre :</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jan 29, 2025 15:48+0000">2025-01-29</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jan 29, 2025 16:02+0000">2025-01-29</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
