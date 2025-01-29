@@ -6,11 +6,11 @@ _HTTP encapsulé dans une liaison mTLS (1.2) avec autorité de certification IGC
 
 Il est du ressort du responsable de traitement du système cible de mettre en œuvre des dispositions de sécurité adaptées à son analyse de risques pour le service. En fonction de sa politique de sécurité, il peut choisir ou pas de mettre en œuvre les dispositions spécifiques décrites dans cette section. Les référentiels de sécurité édités par l’ANS fournissent des recommandations sur ce sujet.
 
-```mermaid
+<div class="mermaid">
 graph TD;
     A-->B;
     A-->C;
     B-->D;
     C-->D;
-```
+</div>
 
