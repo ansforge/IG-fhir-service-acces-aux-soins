@@ -129,44 +129,11 @@ Le schéma ci-dessous illustre l'échange à mettre en oeuvre :
 </div>
 
 <div class="mermaid">
-flowchart TD
- subgraph s1["Légende"]
-    direction LR
-        n11["Action SAS"]
-        n12["Action éditeur"]
-  end
-    n1["Gestionnaire de compte"] ---> n10@{ label: "Suppression ou retrait d'habiliation" }
-    n10 --> n5@{ label: "Envoi d'une requête POST ou PUT aux solutions logicielles conce" }
-    n2["Régulateur"] --> n3["Connexion à la PTF numérique SAS"]
-    n3 --> n4["Contrôle si des actions sont à mener"]
-    n4 -- OUI --> n5
-    n5 --> n6["Traitement de la requête et envoi de la réponse à la PTF numérique SAS"]
-    n6 --> n7["Traitement de la réponse"]
-    n7 -- OK --> n8@{ label: "Mise à jour de l'état du compte" }
-    n4 -- NON --> n9@{ label: "Pas d'action" }
-    n7 -- KO --> n10n9@{ label: "Pas d'action" }
-    n13["Sample Label"]
-
-    n1@{ shape: text}
-    n10@{ shape: rect}
-    n5@{ shape: rect}
-    n2@{ shape: text}
-    n4@{ shape: diam}
-    n7@{ shape: diam}
-    n8@{ shape: rect}
-    n13@{ icon: "fa:user", pos: "b"}
-    style n11 stroke:#000000
-    style n12 fill:#FF6D00
-    style n1 stroke:none
-    style n10 stroke:#000000
-    style n5 stroke:#000000
-    style n3 stroke:#000000
-    style n4 stroke:#000000
-    style n6 fill:#FF6D00
-    style n7 stroke:#000000
-    style n8 stroke:#000000
-    style n9 stroke:#000000
-    style n10n9 stroke:#000000
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
 </div>
 
 Afin de limiter le nombre d’appels émis vers les solutions logicielles éditeurs, et éviter d’avoir à gérer des créations ou mises à jour massives de comptes (batch d’initialisation, reprise, etc.), les mécaniques suivantes ont été mises en œuvre pour le déclenchement des requêtes :
