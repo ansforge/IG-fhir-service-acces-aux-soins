@@ -128,7 +128,7 @@ Le schéma ci-dessous illustre l'échange à mettre en oeuvre :
     <p>{% include gestion_compte_regulateur_put.svg %}</p>
 </div>
 
-```mermaid
+<div class="mermaid">
 flowchart TD
  subgraph s1["Légende"]
     direction LR
@@ -154,7 +154,7 @@ flowchart TD
     n4@{ shape: diam}
     n7@{ shape: diam}
     n8@{ shape: rect}
-    n13@{ icon: "fa:user", pos: "b"}
+    n13@{ icon: "mc:default", pos: "b"}
     style n11 stroke:#000000
     style n12 fill:#FF6D00
     style n1 stroke:none
@@ -167,7 +167,8 @@ flowchart TD
     style n8 stroke:#000000
     style n9 stroke:#000000
     style n10n9 stroke:#000000
-```
+
+</div>
 
 Afin de limiter le nombre d’appels émis vers les solutions logicielles éditeurs, et éviter d’avoir à gérer des créations ou mises à jour massives de comptes (batch d’initialisation, reprise, etc.), les mécaniques suivantes ont été mises en œuvre pour le déclenchement des requêtes :
 - Pour la création ou modification de compte, le déclenchement de la requête est lié à la connexion de l’utilisateur à la plateforme numérique SAS. Lors de la connexion du régulateur, un contrôle est effectué afin d’identifier si des actions sont à mener dans les solutions logicielles éditeurs. Dans le cas où des solutions sont identifiées, les requêtes correspondantes sont émises et l’état du compte est mis à jour dans la plateforme numérique SAS.
