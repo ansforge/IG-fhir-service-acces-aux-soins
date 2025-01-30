@@ -1,8 +1,7 @@
 Profile: FrSlotAgregateur
-Parent: FrSlot
-Id: FrSlotAgregateur
+Parent: fr-core-slot
+Id: sas-slot-aggregator
 Description: "Profil de Slot, dérivé de FrSlot, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS"
-* ^url = "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"
 
 * meta.security from $JDV-J165-TypeCreneau-SAS (required)
 * meta.security ^binding.description = "type de créneau : public, pro, SNP"

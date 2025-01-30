@@ -1,9 +1,7 @@
 Profile: FrAppointmentSAS
-Parent: FrAppointment
-Id: FrAppointmentSAS
+Parent: fr-core-appointment
+Id: sas-appointment
 Description: "Profil de Appointment, dérivé de FrAppointment, pour le cas d'usage prise de RDV de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS"
-* ^url = "http://sas.fr/fhir/StructureDefinition/FrAppointmentSAS"
-* ^version = "1.0.0"
 
 
 // Extension appointmentOperator provenant de FrAppointment

@@ -1,6 +1,6 @@
 Profile: FrPractitionerRegul
-Parent: FrPractitioner
-Id: FrPractitionerRegul
+Parent: sas-practitioner-aggregator
+Id: sas-practitioner-aggregator
 Description: "Profil de Practitioner, dérivé de FrPractitioner, pour la gestion des comptes régulateurs de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS"
 
 

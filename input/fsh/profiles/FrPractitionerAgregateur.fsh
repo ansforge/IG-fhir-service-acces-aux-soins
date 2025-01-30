@@ -1,8 +1,7 @@
 Profile: FrPractitionerAgregateur
-Parent: FrPractitioner
-Id: FrPractitionerAgregateur
+Parent: fr-core-practitioner
+Id: sas-practitioner-aggregator
 Description: "Profil de Practitioner, dérivé de FrPractitioner, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS"
-* ^url = "http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur"
 
 * identifier 1..
 * identifier.type = $fr-v2-0203#IDNPS

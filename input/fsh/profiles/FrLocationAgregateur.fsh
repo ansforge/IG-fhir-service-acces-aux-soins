@@ -1,8 +1,7 @@
 Profile: FrLocationAgregateur
-Parent: FrLocation
-Id: FrLocationAgregateur
+Parent: fr-core-location
+Id: sas-location-aggregator
 Description: "Profil de Location, dérivé de FrLocation, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS"
-* ^url = "http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur"
 
 * address 1..
 * address.line 1..1

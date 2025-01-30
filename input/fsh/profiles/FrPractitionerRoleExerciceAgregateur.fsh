@@ -1,8 +1,7 @@
 Profile: FrPractitionerRoleExerciceAgregateur
-Parent: FrPractitionerRoleExercice
-Id: FrPractitionerRoleExerciceAgregateur
+Parent: fr-core-practitioner-role
+Id: sas-practitioner-role-exercice-aggregator
 Description: "Profil de PractitionerRole, dérivé de FrPractitionerRoleExercice, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS"
-* ^url = "http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"
 
 * contained 1..
 * practitioner only Reference(FrPractitionerAgregateur)
