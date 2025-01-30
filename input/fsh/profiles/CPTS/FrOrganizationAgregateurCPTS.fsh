@@ -1,5 +1,5 @@
 Profile: FrOrganizationAgregateurCPTS
-Parent: FrOrganization
+Parent: fr-core-organization
 Id: sas-cpts-organization-aggregator
 Description: "Profil dérivé de FrOrganization pour le cas d'usage agrégateur de la plateforme SAS - cas d'usage CPTS"
 

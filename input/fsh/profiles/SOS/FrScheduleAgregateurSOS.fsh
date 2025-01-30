@@ -1,5 +1,5 @@
 Profile: FrScheduleAgregateurSOS
-Parent: FrSchedule
+Parent: fr-core-schedule
 Id: sas-sos-schedule-aggregator
 Description: "Profil de Schedule, dérivé de FrSchedule, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins"
 

@@ -1,5 +1,5 @@
 Profile: FrSlotAgregateurCPTS
-Parent: FrSlot
+Parent: fr-core-slot
 Id: sas-cpts-slot-aggregator
 Description: "Profil de Slot, dérivé de FrSlot, pour le cas d'usage agrégateur de la plateforme SAS - cas d'usage CPTS"
 

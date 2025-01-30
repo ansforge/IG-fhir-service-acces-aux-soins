@@ -1,5 +1,5 @@
 Profile: FrOrganizationAgregateurSOS
-Parent: FrOrganization
+Parent: fr-core-organization
 Id: sas-sos-organization-aggregator
 Description: "Profil d'Organization, dérivé de FrOrganization, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins"
 

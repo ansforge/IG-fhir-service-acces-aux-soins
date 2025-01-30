@@ -1,5 +1,5 @@
 Profile: FrHealthcareServiceAgregateurCPTS
-Parent: FrHealthcareService
+Parent: fr-core-healthcare-service
 Id: sas-cpts-healthcareservice-aggregator
 Description: "Profil dérivé de FrHealthcareService pour le cas d'usage agrégateur de la plateforme SAS - cas d'usage CPTS"
 

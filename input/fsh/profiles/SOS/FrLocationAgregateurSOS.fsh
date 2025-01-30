@@ -1,5 +1,5 @@
 Profile: FrLocationAgregateurSOS
-Parent: FrLocation
+Parent: fr-core-location
 Id: sas-sos-location-aggregator
 Description: "Profil de Location, dérivé de FrLocation, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins"
 
