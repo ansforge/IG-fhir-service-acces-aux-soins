@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Slot xmlns="http://hl7.org/fhir">
+  <id value="ExampleSlotPSIndiv2"/>
+  <meta>
+    <profile value="http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"/>
+    <security>
+      <system value="https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"/>
+      <code value="PRO"/>
+    </security>
+  </meta>
+  <serviceType>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+      <code value="AMB"/>
+    </coding>
+  </serviceType>
+  <serviceType>
+    <text value="Visite urgente"/>
+  </serviceType>
+  <specialty>
+    <coding>
+      <system value="https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"/>
+      <code value="SM54"/>
+    </coding>
+  </specialty>
+  <appointmentType>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0276"/>
+      <code value="WALKIN"/>
+    </coding>
+  </appointmentType>
+  <schedule>
+    <reference value="Schedule/ExampleSchedule2"/>
+  </schedule>
+  <status value="free"/>
+  <start value="2021-11-05T11:00:00.000+00:00"/>
+  <end value="2021-11-05T11:30:00.000+00:00"/>
+</Slot>
