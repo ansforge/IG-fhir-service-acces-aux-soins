@@ -2,17 +2,17 @@
   "resourceType" : "PractitionerRole",
   "id" : "ExamplePractitionerRoleAgregateur3",
   "meta" : {
-    "profile" : ["http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"]
+    "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-exercice-aggregator"]
   },
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole ExamplePractitionerRoleAgregateur3</b></p><a name=\"ExamplePractitionerRoleAgregateur3\"> </a><a name=\"hcExamplePractitionerRoleAgregateur3\"> </a><a name=\"ExamplePractitionerRoleAgregateur3-fr-FR\"> </a><p><b>practitioner</b>: <a href=\"Practitioner-ExamplePractitioner2.html\">Practitioner Sébastien THOMAS </a></p><p><b>organization</b>: Identifier: Identification nationale de structure définie par l’ASIP-SANTE dans le CI_SIS/1810004956</p><p><b>location</b>: <a href=\"#hcExamplePractitionerRoleAgregateur3/ExampleLocation2\">Location: identifier = Identifiant interne</a></p><hr/><blockquote><p class=\"res-header-id\"><b>Generated Narrative: Location #ExampleLocation2</b></p><a name=\"ExamplePractitionerRoleAgregateur3/ExampleLocation2\"> </a><a name=\"hcExamplePractitionerRoleAgregateur3/ExampleLocation2\"> </a><a name=\"ExamplePractitionerRoleAgregateur3/ExampleLocation2-fr-FR\"> </a><p><b>identifier</b>: Identifiant interne/2</p><p><b>address</b>: 30 rue Mme DELMAS AGEN 47000 </p></blockquote></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole ExamplePractitionerRoleAgregateur3</b></p><a name=\"ExamplePractitionerRoleAgregateur3\"> </a><a name=\"hcExamplePractitionerRoleAgregateur3\"> </a><a name=\"ExamplePractitionerRoleAgregateur3-fr-FR\"> </a><p><b>practitioner</b>: <a href=\"Practitioner-ExamplePractitioner2.html\">Practitioner Sébastien THOMAS </a></p><p><b>organization</b>: Identifier: Identification nationale de structure définie par l’ANS dans le CI_SIS/1810004956</p><p><b>location</b>: <a href=\"#hcExamplePractitionerRoleAgregateur3/ExampleLocation2\">Location: identifier = INTRN</a></p><hr/><blockquote><p class=\"res-header-id\"><b>Generated Narrative: Location #ExampleLocation2</b></p><a name=\"ExamplePractitionerRoleAgregateur3/ExampleLocation2\"> </a><a name=\"hcExamplePractitionerRoleAgregateur3/ExampleLocation2\"> </a><a name=\"ExamplePractitionerRoleAgregateur3/ExampleLocation2-fr-FR\"> </a><p><b>identifier</b>: INTRN/2</p><p><b>address</b>: 30 rue Mme DELMAS AGEN 47000 </p></blockquote></div>"
   },
   "contained" : [{
     "resourceType" : "Location",
     "id" : "ExampleLocation2",
     "meta" : {
-      "profile" : ["http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur"]
+      "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-location-aggregator"]
     },
     "identifier" : [{
       "type" : {
@@ -37,7 +37,7 @@
     "identifier" : {
       "type" : {
         "coding" : [{
-          "system" : "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
+          "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203",
           "code" : "IDNST"
         }]
       },

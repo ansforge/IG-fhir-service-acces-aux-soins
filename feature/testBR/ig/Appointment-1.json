@@ -2,10 +2,10 @@
   "resourceType" : "Appointment",
   "id" : "1",
   "meta" : {
-    "profile" : ["http://sas.fr/fhir/StructureDefinition/FrAppointmentSAS"]
+    "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment"]
   },
   "extension" : [{
-    "url" : "http://interopsante.org/fhir/StructureDefinition/FrAppointmentOperator",
+    "url" : "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment-operator",
     "valueReference" : {
       "identifier" : {
         "type" : {
@@ -31,7 +31,7 @@
       "identifier" : {
         "type" : {
           "coding" : [{
-            "system" : "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
+            "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203",
             "code" : "IDNPS"
           }]
         },

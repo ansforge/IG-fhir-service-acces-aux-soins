@@ -2,7 +2,7 @@
   "resourceType" : "Bundle",
   "id" : "ExampleBundlePSIndiv",
   "meta" : {
-    "profile" : ["http://sas.fr/fhir/StructureDefinition/BundleAgregateur"]
+    "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-aggregator"]
   },
   "type" : "searchset",
   "total" : 4,
@@ -16,7 +16,7 @@
       "resourceType" : "Slot",
       "id" : "ExampleSlotPSIndiv1",
       "meta" : {
-        "profile" : ["http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"],
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator"],
         "security" : [{
           "system" : "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
           "code" : "PUBLIC"
@@ -70,7 +70,7 @@
       "resourceType" : "Schedule",
       "id" : "ExampleSchedule1",
       "meta" : {
-        "profile" : ["http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"]
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-schedule-aggregator"]
       },
       "actor" : [{
         "reference" : "Practitioner/ExamplePractitioner2"
@@ -86,15 +86,9 @@
       "resourceType" : "Practitioner",
       "id" : "ExamplePractitioner2",
       "meta" : {
-        "profile" : ["http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur"]
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator"]
       },
       "identifier" : [{
-        "type" : {
-          "coding" : [{
-            "system" : "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
-            "code" : "IDNPS"
-          }]
-        },
         "system" : "urn:oid:1.2.250.1.71.4.2.1",
         "value" : "810100050075"
       }],
@@ -110,13 +104,13 @@
       "resourceType" : "PractitionerRole",
       "id" : "ExamplePractitionerRoleAgregateur2",
       "meta" : {
-        "profile" : ["http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"]
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-exercice-aggregator"]
       },
       "contained" : [{
         "resourceType" : "Location",
         "id" : "ExampleLocation3",
         "meta" : {
-          "profile" : ["http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur"]
+          "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-location-aggregator"]
         },
         "identifier" : [{
           "type" : {
@@ -141,7 +135,7 @@
         "identifier" : {
           "type" : {
             "coding" : [{
-              "system" : "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
+              "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203",
               "code" : "IDNST"
             }]
           },
@@ -160,7 +154,7 @@
       "resourceType" : "Slot",
       "id" : "ExampleSlotPSIndiv2",
       "meta" : {
-        "profile" : ["http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"],
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator"],
         "security" : [{
           "system" : "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
           "code" : "PRO"
@@ -201,7 +195,7 @@
       "resourceType" : "Schedule",
       "id" : "ExampleSchedule2",
       "meta" : {
-        "profile" : ["http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"]
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-schedule-aggregator"]
       },
       "actor" : [{
         "reference" : "Practitioner/ExamplePractitioner2"
@@ -217,13 +211,13 @@
       "resourceType" : "PractitionerRole",
       "id" : "ExamplePractitionerRoleAgregateur3",
       "meta" : {
-        "profile" : ["http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"]
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-exercice-aggregator"]
       },
       "contained" : [{
         "resourceType" : "Location",
         "id" : "ExampleLocation2",
         "meta" : {
-          "profile" : ["http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur"]
+          "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-location-aggregator"]
         },
         "identifier" : [{
           "type" : {
@@ -248,7 +242,7 @@
         "identifier" : {
           "type" : {
             "coding" : [{
-              "system" : "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
+              "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203",
               "code" : "IDNST"
             }]
           },
@@ -267,7 +261,7 @@
       "resourceType" : "Slot",
       "id" : "ExampleSlotPSIndiv3",
       "meta" : {
-        "profile" : ["http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"],
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator"],
         "security" : [{
           "system" : "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
           "code" : "PUBLIC"
@@ -316,7 +310,7 @@
       "resourceType" : "Schedule",
       "id" : "ExampleSchedule3",
       "meta" : {
-        "profile" : ["http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"]
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-schedule-aggregator"]
       },
       "actor" : [{
         "reference" : "Practitioner/ExamplePractitioner3"
@@ -332,15 +326,9 @@
       "resourceType" : "Practitioner",
       "id" : "ExamplePractitioner3",
       "meta" : {
-        "profile" : ["http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur"]
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator"]
       },
       "identifier" : [{
-        "type" : {
-          "coding" : [{
-            "system" : "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
-            "code" : "IDNPS"
-          }]
-        },
         "system" : "urn:oid:1.2.250.1.71.4.2.1",
         "value" : "810002673899"
       }],
@@ -356,13 +344,13 @@
       "resourceType" : "PractitionerRole",
       "id" : "ExamplePractitionerRoleAgregateur4",
       "meta" : {
-        "profile" : ["http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"]
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-exercice-aggregator"]
       },
       "contained" : [{
         "resourceType" : "Location",
         "id" : "ExampleLocation3",
         "meta" : {
-          "profile" : ["http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur"]
+          "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-location-aggregator"]
         },
         "identifier" : [{
           "type" : {
@@ -387,7 +375,7 @@
         "identifier" : {
           "type" : {
             "coding" : [{
-              "system" : "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
+              "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203",
               "code" : "IDNST"
             }]
           },
@@ -410,7 +398,7 @@
       "resourceType" : "Slot",
       "id" : "ExampleSlotPSIndiv4",
       "meta" : {
-        "profile" : ["http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"],
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator"],
         "security" : [{
           "system" : "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
           "code" : "PUBLIC"

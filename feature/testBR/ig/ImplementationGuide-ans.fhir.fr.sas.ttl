@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "SAS"] ; # 
   fhir:title [ fhir:v "Service d'Accès aux Soins"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2025-01-30T16:42:39+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-01-31T13:30:27+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -63,11 +63,11 @@
   ] [
      fhir:id [ fhir:v "hl7_fhir_fr_core" ] ;
      fhir:uri [
-       fhir:v "http://fhir.org/packages/hl7.fhir.fr.core/ImplementationGuide/hl7.fhir.fr.core"^^xsd:anyURI ;
-       fhir:link <http://fhir.org/packages/hl7.fhir.fr.core/ImplementationGuide/hl7.fhir.fr.core>
+       fhir:v "https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core"^^xsd:anyURI ;
+       fhir:link <https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core>
      ] ;
      fhir:packageId [ fhir:v "hl7.fhir.fr.core" ] ;
-     fhir:version [ fhir:v "1.1.0" ]
+     fhir:version [ fhir:v "2.1.0" ]
   ] [
      fhir:id [ fhir:v "ans_fr_nos" ] ;
      fhir:uri [
@@ -712,8 +712,8 @@
          fhir:value [ fhir:v "StructureDefinition:resource" ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/BundleAgregateur> ;
-         fhir:reference [ fhir:v "StructureDefinition/BundleAgregateur" ]
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-aggregator> ;
+         fhir:reference [ fhir:v "StructureDefinition/sas-bundle-aggregator" ]
        ] ;
        fhir:name [ fhir:v "BundleAgregateur" ] ;
        fhir:description [ fhir:v "Profil de Bundle qui représente le flux de réponse contenant les créneaux disponibles dans le cadre du service d'agrégation de créneaux de la plateforme SAS - Cas d'usage PS Indiv" ] ;
@@ -778,8 +778,8 @@
        fhir:name [ fhir:v "ExampleAppointmentBooked" ] ;
        fhir:description [ fhir:v "Exemple RDV PS indiv booked" ] ;
        fhir:example [
-         fhir:v "http://sas.fr/fhir/StructureDefinition/FrAppointmentSAS"^^xsd:anyURI ;
-         fhir:link <http://sas.fr/fhir/StructureDefinition/FrAppointmentSAS>
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment>
        ]
      ] [
        fhir:extension ( [
@@ -793,8 +793,8 @@
        fhir:name [ fhir:v "ExampleAppointmentCancelled" ] ;
        fhir:description [ fhir:v "Exemple RDV PS indiv cancelled" ] ;
        fhir:example [
-         fhir:v "http://sas.fr/fhir/StructureDefinition/FrAppointmentSAS"^^xsd:anyURI ;
-         fhir:link <http://sas.fr/fhir/StructureDefinition/FrAppointmentSAS>
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment>
        ]
      ] [
        fhir:extension ( [
@@ -853,8 +853,8 @@
        fhir:name [ fhir:v "ExampleBundlePSIndiv" ] ;
        fhir:description [ fhir:v "Exemple Bundle PS indiv" ] ;
        fhir:example [
-         fhir:v "http://sas.fr/fhir/StructureDefinition/BundleAgregateur"^^xsd:anyURI ;
-         fhir:link <http://sas.fr/fhir/StructureDefinition/BundleAgregateur>
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-aggregator"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-aggregator>
        ]
      ] [
        fhir:extension ( [
@@ -1003,8 +1003,8 @@
        fhir:name [ fhir:v "ExamplePractitioner" ] ;
        fhir:description [ fhir:v "Exemple 1 practitioner flux agrégateur" ] ;
        fhir:example [
-         fhir:v "http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur"^^xsd:anyURI ;
-         fhir:link <http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur>
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator>
        ]
      ] [
        fhir:extension ( [
@@ -1018,8 +1018,8 @@
        fhir:name [ fhir:v "ExamplePractitioner2" ] ;
        fhir:description [ fhir:v "Exemple 2 practitioner flux agrégateur" ] ;
        fhir:example [
-         fhir:v "http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur"^^xsd:anyURI ;
-         fhir:link <http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur>
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator>
        ]
      ] [
        fhir:extension ( [
@@ -1033,8 +1033,8 @@
        fhir:name [ fhir:v "ExamplePractitioner3" ] ;
        fhir:description [ fhir:v "Exemple 3 practitioner flux agrégateur" ] ;
        fhir:example [
-         fhir:v "http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur"^^xsd:anyURI ;
-         fhir:link <http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur>
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator>
        ]
      ] [
        fhir:extension ( [
@@ -1048,8 +1048,8 @@
        fhir:name [ fhir:v "ExamplePractitionerRegul1" ] ;
        fhir:description [ fhir:v "Exemple 1 practitioner flux régulateur" ] ;
        fhir:example [
-         fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul"^^xsd:anyURI ;
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul>
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator-regul"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator-regul>
        ]
      ] [
        fhir:extension ( [
@@ -1063,8 +1063,8 @@
        fhir:name [ fhir:v "ExamplePractitionerRegul2" ] ;
        fhir:description [ fhir:v "Exemple 2 practitioner flux régulateur" ] ;
        fhir:example [
-         fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul"^^xsd:anyURI ;
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul>
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator-regul"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator-regul>
        ]
      ] [
        fhir:extension ( [
@@ -1078,8 +1078,8 @@
        fhir:name [ fhir:v "ExamplePractitionerRegul3" ] ;
        fhir:description [ fhir:v "Exemple 3 practitioner flux régulateur" ] ;
        fhir:example [
-         fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul"^^xsd:anyURI ;
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul>
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator-regul"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator-regul>
        ]
      ] [
        fhir:extension ( [
@@ -1093,8 +1093,8 @@
        fhir:name [ fhir:v "ExamplePractitionerRoleAgregateur" ] ;
        fhir:description [ fhir:v "Exemple 1 PractitionerRole flux agrégateur" ] ;
        fhir:example [
-         fhir:v "http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"^^xsd:anyURI ;
-         fhir:link <http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur>
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-exercice-aggregator"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-exercice-aggregator>
        ]
      ] [
        fhir:extension ( [
@@ -1108,8 +1108,8 @@
        fhir:name [ fhir:v "ExamplePractitionerRoleAgregateur2" ] ;
        fhir:description [ fhir:v "Exemple 2 PractitionerRole flux agrégateur" ] ;
        fhir:example [
-         fhir:v "http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"^^xsd:anyURI ;
-         fhir:link <http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur>
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-exercice-aggregator"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-exercice-aggregator>
        ]
      ] [
        fhir:extension ( [
@@ -1123,8 +1123,8 @@
        fhir:name [ fhir:v "ExamplePractitionerRoleAgregateur3" ] ;
        fhir:description [ fhir:v "Exemple 3 PractitionerRole flux agrégateur" ] ;
        fhir:example [
-         fhir:v "http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"^^xsd:anyURI ;
-         fhir:link <http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur>
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-exercice-aggregator"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-exercice-aggregator>
        ]
      ] [
        fhir:extension ( [
@@ -1138,8 +1138,8 @@
        fhir:name [ fhir:v "ExamplePractitionerRoleAgregateur4" ] ;
        fhir:description [ fhir:v "Exemple 4 PractitionerRole flux agrégateur" ] ;
        fhir:example [
-         fhir:v "http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"^^xsd:anyURI ;
-         fhir:link <http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur>
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-exercice-aggregator"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-exercice-aggregator>
        ]
      ] [
        fhir:extension ( [
@@ -1153,8 +1153,8 @@
        fhir:name [ fhir:v "ExampleSchedule" ] ;
        fhir:description [ fhir:v "Exemple ressource schedule" ] ;
        fhir:example [
-         fhir:v "http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"^^xsd:anyURI ;
-         fhir:link <http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur>
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-schedule-aggregator"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-schedule-aggregator>
        ]
      ] [
        fhir:extension ( [
@@ -1168,8 +1168,8 @@
        fhir:name [ fhir:v "ExampleSchedule1" ] ;
        fhir:description [ fhir:v "Exemple 1 ressource schedule" ] ;
        fhir:example [
-         fhir:v "http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"^^xsd:anyURI ;
-         fhir:link <http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur>
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-schedule-aggregator"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-schedule-aggregator>
        ]
      ] [
        fhir:extension ( [
@@ -1183,8 +1183,8 @@
        fhir:name [ fhir:v "ExampleSchedule2" ] ;
        fhir:description [ fhir:v "Exemple 2 ressource schedule" ] ;
        fhir:example [
-         fhir:v "http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"^^xsd:anyURI ;
-         fhir:link <http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur>
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-schedule-aggregator"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-schedule-aggregator>
        ]
      ] [
        fhir:extension ( [
@@ -1198,8 +1198,8 @@
        fhir:name [ fhir:v "ExampleSchedule3" ] ;
        fhir:description [ fhir:v "Exemple 3 ressource schedule" ] ;
        fhir:example [
-         fhir:v "http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"^^xsd:anyURI ;
-         fhir:link <http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur>
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-schedule-aggregator"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-schedule-aggregator>
        ]
      ] [
        fhir:extension ( [
@@ -1288,8 +1288,8 @@
        fhir:name [ fhir:v "ExampleSlotPSIndiv1" ] ;
        fhir:description [ fhir:v "Exemple 1 ressource slot PS indiv" ] ;
        fhir:example [
-         fhir:v "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"^^xsd:anyURI ;
-         fhir:link <http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur>
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator>
        ]
      ] [
        fhir:extension ( [
@@ -1303,8 +1303,8 @@
        fhir:name [ fhir:v "ExampleSlotPSIndiv2" ] ;
        fhir:description [ fhir:v "Exemple 2 ressource slot PS indiv" ] ;
        fhir:example [
-         fhir:v "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"^^xsd:anyURI ;
-         fhir:link <http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur>
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator>
        ]
      ] [
        fhir:extension ( [
@@ -1318,8 +1318,8 @@
        fhir:name [ fhir:v "ExampleSlotPSIndiv3" ] ;
        fhir:description [ fhir:v "Exemple 3 ressource slot PS indiv" ] ;
        fhir:example [
-         fhir:v "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"^^xsd:anyURI ;
-         fhir:link <http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur>
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator>
        ]
      ] [
        fhir:extension ( [
@@ -1333,8 +1333,8 @@
        fhir:name [ fhir:v "ExampleSlotPSIndiv4" ] ;
        fhir:description [ fhir:v "Exemple 4 ressource slot PS indiv" ] ;
        fhir:example [
-         fhir:v "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"^^xsd:anyURI ;
-         fhir:link <http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur>
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator>
        ]
      ] [
        fhir:extension ( [
@@ -1402,8 +1402,8 @@
          fhir:value [ fhir:v "StructureDefinition:resource" ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrAppointmentSAS> ;
-         fhir:reference [ fhir:v "StructureDefinition/FrAppointmentSAS" ]
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment> ;
+         fhir:reference [ fhir:v "StructureDefinition/sas-appointment" ]
        ] ;
        fhir:name [ fhir:v "FrAppointmentSAS" ] ;
        fhir:description [ fhir:v "Profil de Appointment, dérivé de FrAppointment, pour le cas d'usage prise de RDV de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS" ] ;
@@ -1438,8 +1438,8 @@
          fhir:value [ fhir:v "StructureDefinition:resource" ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrLocationAgregateur> ;
-         fhir:reference [ fhir:v "StructureDefinition/FrLocationAgregateur" ]
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-location-aggregator> ;
+         fhir:reference [ fhir:v "StructureDefinition/sas-location-aggregator" ]
        ] ;
        fhir:name [ fhir:v "FrLocationAgregateur" ] ;
        fhir:description [ fhir:v "Profil de Location, dérivé de FrLocation, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS" ] ;
@@ -1486,8 +1486,8 @@
          fhir:value [ fhir:v "StructureDefinition:resource" ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerAgregateur> ;
-         fhir:reference [ fhir:v "StructureDefinition/FrPractitionerAgregateur" ]
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator> ;
+         fhir:reference [ fhir:v "StructureDefinition/sas-practitioner-aggregator" ]
        ] ;
        fhir:name [ fhir:v "FrPractitionerAgregateur" ] ;
        fhir:description [ fhir:v "Profil de Practitioner, dérivé de FrPractitioner, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS" ] ;
@@ -1498,8 +1498,8 @@
          fhir:value [ fhir:v "StructureDefinition:resource" ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul> ;
-         fhir:reference [ fhir:v "StructureDefinition/FrPractitionerRegul" ]
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator-regul> ;
+         fhir:reference [ fhir:v "StructureDefinition/sas-practitioner-aggregator-regul" ]
        ] ;
        fhir:name [ fhir:v "FrPractitionerRegul" ] ;
        fhir:description [ fhir:v "Profil de Practitioner, dérivé de FrPractitioner, pour la gestion des comptes régulateurs de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS" ] ;
@@ -1510,8 +1510,8 @@
          fhir:value [ fhir:v "StructureDefinition:resource" ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRoleExerciceAgregateur> ;
-         fhir:reference [ fhir:v "StructureDefinition/FrPractitionerRoleExerciceAgregateur" ]
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-exercice-aggregator> ;
+         fhir:reference [ fhir:v "StructureDefinition/sas-practitioner-role-exercice-aggregator" ]
        ] ;
        fhir:name [ fhir:v "FrPractitionerRoleExerciceAgregateur" ] ;
        fhir:description [ fhir:v "Profil de PractitionerRole, dérivé de FrPractitionerRoleExercice, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS" ] ;
@@ -1522,8 +1522,8 @@
          fhir:value [ fhir:v "StructureDefinition:resource" ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrScheduleAgregateur> ;
-         fhir:reference [ fhir:v "StructureDefinition/FrScheduleAgregateur" ]
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-schedule-aggregator> ;
+         fhir:reference [ fhir:v "StructureDefinition/sas-schedule-aggregator" ]
        ] ;
        fhir:name [ fhir:v "FrScheduleAgregateur" ] ;
        fhir:description [ fhir:v "Profil de Schedule, dérivé de FrSchedule, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS" ] ;
@@ -1546,8 +1546,8 @@
          fhir:value [ fhir:v "StructureDefinition:resource" ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrSlotAgregateur> ;
-         fhir:reference [ fhir:v "StructureDefinition/FrSlotAgregateur" ]
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator> ;
+         fhir:reference [ fhir:v "StructureDefinition/sas-slot-aggregator" ]
        ] ;
        fhir:name [ fhir:v "FrSlotAgregateur" ] ;
        fhir:description [ fhir:v "Profil de Slot, dérivé de FrSlot, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS" ] ;

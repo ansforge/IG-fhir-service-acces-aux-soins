@@ -3,9 +3,9 @@
 <Appointment xmlns="http://hl7.org/fhir">
   <id value="2"/>
   <meta>
-    <profile value="http://sas.fr/fhir/StructureDefinition/FrAppointmentSAS"/>
+    <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment"/>
   </meta>
-  <extension url="http://interopsante.org/fhir/StructureDefinition/FrAppointmentOperator">
+  <extension url="https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment-operator">
     <valueReference>
       <identifier>
         <type>
@@ -31,7 +31,7 @@
       <identifier>
         <type>
           <coding>
-            <system value="http://interopsante.org/fhir/CodeSystem/fr-v2-0203"/>
+            <system value="https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"/>
             <code value="IDNPS"/>
           </coding>
         </type>

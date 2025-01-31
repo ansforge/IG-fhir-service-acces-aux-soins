@@ -13,46 +13,16 @@
     }
   ],
   "profiles": {
-    "Bundle": [
-      {
-        "url": "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-bundle-aggregator",
-        "title": "BundleAgregateurSOS"
-      }
-    ],
     "Appointment": [
       {
         "url": "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-appointment",
         "title": "FrAppointmentSASSOS"
       }
     ],
-    "Location": [
+    "Bundle": [
       {
-        "url": "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator",
-        "title": "FrLocationAgregateurSOS"
-      }
-    ],
-    "Practitioner": [
-      {
-        "url": "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul",
-        "title": "FrPractitionerRegul"
-      }
-    ],
-    "PractitionerRole": [
-      {
-        "url": "http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur",
-        "title": "FrPractitionerRoleExerciceAgregateur"
-      }
-    ],
-    "Schedule": [
-      {
-        "url": "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator",
-        "title": "FrScheduleAgregateurSOS"
-      }
-    ],
-    "Slot": [
-      {
-        "url": "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator",
-        "title": "FrSlotAgregateurSOS"
+        "url": "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-bundle-aggregator",
+        "title": "BundleAgregateurSOS"
       }
     ],
     "HealthcareService": [
@@ -65,6 +35,40 @@
       {
         "url": "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator",
         "title": "FrOrganizationAgregateurSOS"
+      }
+    ],
+    "Slot": [
+      {
+        "url": "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator",
+        "title": "FrSlotAgregateurSOS"
+      }
+    ],
+    "Location": [
+      {
+        "url": "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator",
+        "title": "FrLocationAgregateurSOS"
+      }
+    ],
+    "Practitioner": [
+      {
+        "url": "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator",
+        "title": "FrPractitionerAgregateur"
+      },
+      {
+        "url": "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator-regul",
+        "title": "FrPractitionerRegul"
+      }
+    ],
+    "PractitionerRole": [
+      {
+        "url": "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-exercice-aggregator",
+        "title": "FrPractitionerRoleExerciceAgregateur"
+      }
+    ],
+    "Schedule": [
+      {
+        "url": "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator",
+        "title": "FrScheduleAgregateurSOS"
       }
     ]
   },
@@ -124,34 +128,37 @@
     "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
       "ImplementationGuide.definition.resource"
     ],
-    "http://interopsante.org/fhir/StructureDefinition/FrAddressInseeCode": [
+    "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-address-insee-code": [
       "Location.address"
     ],
-    "http://interopsante.org/fhir/StructureDefinition/FrAppointmentOperator": [
+    "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment-operator": [
       "Appointment"
     ],
-    "http://interopsante.org/fhir/StructureDefinition/FrContactPointEmailType": [
+    "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-contact-point-email-type": [
       "Practitioner.telecom"
     ],
-    "http://interopsante.org/fhir/StructureDefinition/FrLocationPartOfPositionRoom": [
+    "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-location-position-room": [
       "Location.partOf"
     ],
-    "http://interopsante.org/fhir/StructureDefinition/FrLocationUsePeriod": [
-      "Location"
-    ],
-    "http://interopsante.org/fhir/StructureDefinition/FrOrganizationDescription": [
+    "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization-description": [
       "Organization"
     ],
-    "http://interopsante.org/fhir/StructureDefinition/FrOrganizationShortName": [
+    "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization-short-name": [
       "Organization"
     ],
-    "http://interopsante.org/fhir/StructureDefinition/FrScheduleAvailabiltyTime": [
+    "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner-specialty": [
+      "Practitioner"
+    ],
+    "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-schedule-availability-time": [
       "Schedule"
     ],
-    "http://interopsante.org/fhir/StructureDefinition/FrServiceTypeDuration": [
+    "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-service-type-duration": [
       "HealthcareService",
       "PractitionerRole",
       "Schedule"
+    ],
+    "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-use-period": [
+      "Location"
     ]
   }
 }

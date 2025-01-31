@@ -12,21 +12,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.482"],
       "uses" : {
       },
-      "StructureDefinition-FrSlotAgregateur.html" : "FrSlotAgregateur"
-    },
-    {
-      "url" : "http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty",
-      "version" : "1.0.1",
-      "status" : "active",
-      "name" : "fr-practitioner-specialty",
-      "title" : null,
-      "description" : "The modalities of exercice of the practitioner, registered by an official organization for a period of time.",
-      "systems" : [
-        "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-FrSlotAgregateur.html" : "FrSlotAgregateur"
+      "StructureDefinition-sas-slot-aggregator.html" : "FrSlotAgregateur"
     },
     {
       "url" : "http://terminology.hl7.org/ValueSet/v2-0276",
@@ -40,7 +26,7 @@
       "sources" : ["2.16.840.1.113883.21.181"],
       "uses" : {
       },
-      "StructureDefinition-FrSlotAgregateur.html" : "FrSlotAgregateur"
+      "StructureDefinition-sas-slot-aggregator.html" : "FrSlotAgregateur"
     },
     {
       "url" : "http://terminology.hl7.org/ValueSet/v3-ActEncounterCode",
@@ -55,7 +41,21 @@
       "uses" : {
       },
       "StructureDefinition-sas-cpts-slot-aggregator.html" : "FrSlotAgregateurCPTS",
-      "StructureDefinition-FrSlotAgregateur.html" : "FrSlotAgregateur"
+      "StructureDefinition-sas-slot-aggregator.html" : "FrSlotAgregateur"
+    },
+    {
+      "url" : "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-practitioner-specialty",
+      "version" : "2.1.0",
+      "status" : "active",
+      "name" : "FRCoreValueSetPractitionerSpecialty",
+      "title" : "FR Core ValueSet Practitioner specialty",
+      "description" : "The modalities of exercice of the practitioner, registered by an official organization for a period of time.",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-sas-slot-aggregator.html" : "FrSlotAgregateur"
     },
     {
       "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-cpts-valueset-typecreneau",
@@ -143,7 +143,7 @@
       "name" : "TypeIdentifiantSAS",
       "title" : "Type identifiant SAS",
       "description" : "Type d'identifiant SAS",
-      "systems" : ["http://interopsante.org/fhir/CodeSystem/fr-v2-0203"],
+      "systems" : ["https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"],
       "uses" : {
       },
       "StructureDefinition-sas-sos-appointment.html" : "FrAppointmentSASSOS"
@@ -162,7 +162,7 @@
       "sources" : ["1.2.250.1.213.3.4.10"],
       "uses" : {
       },
-      "StructureDefinition-FrSlotAgregateur.html" : "FrSlotAgregateur"
+      "StructureDefinition-sas-slot-aggregator.html" : "FrSlotAgregateur"
     }
   ]
 }

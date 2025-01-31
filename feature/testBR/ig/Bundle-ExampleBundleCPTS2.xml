@@ -84,7 +84,7 @@
       <Schedule>
         <id value="ExampleSchedule"/>
         <meta>
-          <profile value="http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"/>
+          <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-schedule-aggregator"/>
         </meta>
         <actor>
           <reference value="Practitioner/ExamplePractitioner"/>
@@ -101,15 +101,9 @@
       <Practitioner>
         <id value="ExamplePractitioner"/>
         <meta>
-          <profile value="http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur"/>
+          <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator"/>
         </meta>
         <identifier>
-          <type>
-            <coding>
-              <system value="http://interopsante.org/fhir/CodeSystem/fr-v2-0203"/>
-              <code value="IDNPS"/>
-            </coding>
-          </type>
           <system value="urn:oid:1.2.250.1.71.4.2.1"/>
           <value value="810002909371"/>
         </identifier>
@@ -126,13 +120,13 @@
       <PractitionerRole>
         <id value="ExamplePractitionerRoleAgregateur"/>
         <meta>
-          <profile value="http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"/>
+          <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-exercice-aggregator"/>
         </meta>
         <contained>
           <Location>
             <id value="ExampleLocation"/>
             <meta>
-              <profile value="http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur"/>
+              <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-location-aggregator"/>
             </meta>
             <identifier>
               <type>
@@ -192,12 +186,6 @@
           <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-organization-aggregator"/>
         </meta>
         <identifier>
-          <type>
-            <coding>
-              <system value="http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"/>
-              <code value="IDNST"/>
-            </coding>
-          </type>
           <system value="urn:oid:1.2.250.1.71.4.2.2"/>
           <value value="1950047225"/>
         </identifier>
@@ -232,12 +220,6 @@
           <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-organization-aggregator"/>
         </meta>
         <identifier>
-          <type>
-            <coding>
-              <system value="http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"/>
-              <code value="IDNST"/>
-            </coding>
-          </type>
           <system value="urn:oid:1.2.250.1.71.4.2.2"/>
           <value value="1950046227"/>
         </identifier>

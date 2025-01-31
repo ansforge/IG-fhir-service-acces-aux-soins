@@ -3,7 +3,7 @@
 <Bundle xmlns="http://hl7.org/fhir">
   <id value="ExampleBundlePSIndiv"/>
   <meta>
-    <profile value="http://sas.fr/fhir/StructureDefinition/BundleAgregateur"/>
+    <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-aggregator"/>
   </meta>
   <type value="searchset"/>
   <total value="4"/>
@@ -17,7 +17,7 @@
       <Slot>
         <id value="ExampleSlotPSIndiv1"/>
         <meta>
-          <profile value="http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"/>
+          <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator"/>
           <security>
             <system value="https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"/>
             <code value="PUBLIC"/>
@@ -72,7 +72,7 @@
       <Schedule>
         <id value="ExampleSchedule1"/>
         <meta>
-          <profile value="http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"/>
+          <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-schedule-aggregator"/>
         </meta>
         <actor>
           <reference value="Practitioner/ExamplePractitioner2"/>
@@ -89,15 +89,9 @@
       <Practitioner>
         <id value="ExamplePractitioner2"/>
         <meta>
-          <profile value="http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur"/>
+          <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator"/>
         </meta>
         <identifier>
-          <type>
-            <coding>
-              <system value="http://interopsante.org/fhir/CodeSystem/fr-v2-0203"/>
-              <code value="IDNPS"/>
-            </coding>
-          </type>
           <system value="urn:oid:1.2.250.1.71.4.2.1"/>
           <value value="810100050075"/>
         </identifier>
@@ -114,13 +108,13 @@
       <PractitionerRole>
         <id value="ExamplePractitionerRoleAgregateur2"/>
         <meta>
-          <profile value="http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"/>
+          <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-exercice-aggregator"/>
         </meta>
         <contained>
           <Location>
             <id value="ExampleLocation3"/>
             <meta>
-              <profile value="http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur"/>
+              <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-location-aggregator"/>
             </meta>
             <identifier>
               <type>
@@ -146,7 +140,7 @@
           <identifier>
             <type>
               <coding>
-                <system value="http://interopsante.org/fhir/CodeSystem/fr-v2-0203"/>
+                <system value="https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"/>
                 <code value="IDNST"/>
               </coding>
             </type>
@@ -166,7 +160,7 @@
       <Slot>
         <id value="ExampleSlotPSIndiv2"/>
         <meta>
-          <profile value="http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"/>
+          <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator"/>
           <security>
             <system value="https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"/>
             <code value="PRO"/>
@@ -208,7 +202,7 @@
       <Schedule>
         <id value="ExampleSchedule2"/>
         <meta>
-          <profile value="http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"/>
+          <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-schedule-aggregator"/>
         </meta>
         <actor>
           <reference value="Practitioner/ExamplePractitioner2"/>
@@ -225,13 +219,13 @@
       <PractitionerRole>
         <id value="ExamplePractitionerRoleAgregateur3"/>
         <meta>
-          <profile value="http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"/>
+          <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-exercice-aggregator"/>
         </meta>
         <contained>
           <Location>
             <id value="ExampleLocation2"/>
             <meta>
-              <profile value="http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur"/>
+              <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-location-aggregator"/>
             </meta>
             <identifier>
               <type>
@@ -257,7 +251,7 @@
           <identifier>
             <type>
               <coding>
-                <system value="http://interopsante.org/fhir/CodeSystem/fr-v2-0203"/>
+                <system value="https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"/>
                 <code value="IDNST"/>
               </coding>
             </type>
@@ -277,7 +271,7 @@
       <Slot>
         <id value="ExampleSlotPSIndiv3"/>
         <meta>
-          <profile value="http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"/>
+          <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator"/>
           <security>
             <system value="https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"/>
             <code value="PUBLIC"/>
@@ -327,7 +321,7 @@
       <Schedule>
         <id value="ExampleSchedule3"/>
         <meta>
-          <profile value="http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"/>
+          <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-schedule-aggregator"/>
         </meta>
         <actor>
           <reference value="Practitioner/ExamplePractitioner3"/>
@@ -344,15 +338,9 @@
       <Practitioner>
         <id value="ExamplePractitioner3"/>
         <meta>
-          <profile value="http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur"/>
+          <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator"/>
         </meta>
         <identifier>
-          <type>
-            <coding>
-              <system value="http://interopsante.org/fhir/CodeSystem/fr-v2-0203"/>
-              <code value="IDNPS"/>
-            </coding>
-          </type>
           <system value="urn:oid:1.2.250.1.71.4.2.1"/>
           <value value="810002673899"/>
         </identifier>
@@ -369,13 +357,13 @@
       <PractitionerRole>
         <id value="ExamplePractitionerRoleAgregateur4"/>
         <meta>
-          <profile value="http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"/>
+          <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-exercice-aggregator"/>
         </meta>
         <contained>
           <Location>
             <id value="ExampleLocation3"/>
             <meta>
-              <profile value="http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur"/>
+              <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-location-aggregator"/>
             </meta>
             <identifier>
               <type>
@@ -401,7 +389,7 @@
           <identifier>
             <type>
               <coding>
-                <system value="http://interopsante.org/fhir/CodeSystem/fr-v2-0203"/>
+                <system value="https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"/>
                 <code value="IDNST"/>
               </coding>
             </type>
@@ -425,7 +413,7 @@
       <Slot>
         <id value="ExampleSlotPSIndiv4"/>
         <meta>
-          <profile value="http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"/>
+          <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator"/>
           <security>
             <system value="https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"/>
             <code value="PUBLIC"/>

@@ -10,17 +10,11 @@
   fhir:id [ fhir:v "ExamplePractitioner3"] ; # 
   fhir:meta [
      fhir:profile ( [
-       fhir:v "http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur"^^xsd:anyURI ;
-       fhir:link <http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur>
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator>
      ] )
   ] ; # 
   fhir:identifier ( [
-     fhir:type [
-       fhir:coding ( [
-         fhir:system [ fhir:v "http://interopsante.org/fhir/CodeSystem/fr-v2-0203"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "IDNPS" ]
-       ] )
-     ] ;
      fhir:system [ fhir:v "urn:oid:1.2.250.1.71.4.2.1"^^xsd:anyURI ] ;
      fhir:value [ fhir:v "810002673899" ]
   ] ) ; # 

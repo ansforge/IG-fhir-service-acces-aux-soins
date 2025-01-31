@@ -10,7 +10,7 @@
   <name value="SAS"/>
   <title value="Service d'Accès aux Soins"/>
   <status value="active"/>
-  <date value="2025-01-30T16:42:39+00:00"/>
+  <date value="2025-01-31T13:30:27+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -46,9 +46,9 @@
     <version value="5.1.0"/>
   </dependsOn>
   <dependsOn id="hl7_fhir_fr_core">
-    <uri value="http://fhir.org/packages/hl7.fhir.fr.core/ImplementationGuide/hl7.fhir.fr.core"/>
+    <uri value="https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core"/>
     <packageId value="hl7.fhir.fr.core"/>
-    <version value="1.1.0"/>
+    <version value="2.1.0"/>
   </dependsOn>
   <dependsOn id="ans_fr_nos">
     <uri value="https://interop.esante.gouv.fr/ig/nos/ImplementationGuide/ans.fr.nos"/>
@@ -619,7 +619,7 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/BundleAgregateur"/>
+        <reference value="StructureDefinition/sas-bundle-aggregator"/>
       </reference>
       <name value="BundleAgregateur"/>
       <description value="Profil de Bundle qui représente le flux de réponse contenant les créneaux disponibles dans le cadre du service d'agrégation de créneaux de la plateforme SAS - Cas d'usage PS Indiv"/>
@@ -678,7 +678,7 @@
       </reference>
       <name value="ExampleAppointmentBooked"/>
       <description value="Exemple RDV PS indiv booked"/>
-      <exampleCanonical value="http://sas.fr/fhir/StructureDefinition/FrAppointmentSAS"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -689,7 +689,7 @@
       </reference>
       <name value="ExampleAppointmentCancelled"/>
       <description value="Exemple RDV PS indiv cancelled"/>
-      <exampleCanonical value="http://sas.fr/fhir/StructureDefinition/FrAppointmentSAS"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -733,7 +733,7 @@
       </reference>
       <name value="ExampleBundlePSIndiv"/>
       <description value="Exemple Bundle PS indiv"/>
-      <exampleCanonical value="http://sas.fr/fhir/StructureDefinition/BundleAgregateur"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-aggregator"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -843,7 +843,7 @@
       </reference>
       <name value="ExamplePractitioner"/>
       <description value="Exemple 1 practitioner flux agrégateur"/>
-      <exampleCanonical value="http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -854,7 +854,7 @@
       </reference>
       <name value="ExamplePractitioner2"/>
       <description value="Exemple 2 practitioner flux agrégateur"/>
-      <exampleCanonical value="http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -865,7 +865,7 @@
       </reference>
       <name value="ExamplePractitioner3"/>
       <description value="Exemple 3 practitioner flux agrégateur"/>
-      <exampleCanonical value="http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -876,7 +876,7 @@
       </reference>
       <name value="ExamplePractitionerRegul1"/>
       <description value="Exemple 1 practitioner flux régulateur"/>
-      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator-regul"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -887,7 +887,7 @@
       </reference>
       <name value="ExamplePractitionerRegul2"/>
       <description value="Exemple 2 practitioner flux régulateur"/>
-      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator-regul"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -898,7 +898,7 @@
       </reference>
       <name value="ExamplePractitionerRegul3"/>
       <description value="Exemple 3 practitioner flux régulateur"/>
-      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator-regul"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -909,7 +909,7 @@
       </reference>
       <name value="ExamplePractitionerRoleAgregateur"/>
       <description value="Exemple 1 PractitionerRole flux agrégateur"/>
-      <exampleCanonical value="http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-exercice-aggregator"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -920,7 +920,7 @@
       </reference>
       <name value="ExamplePractitionerRoleAgregateur2"/>
       <description value="Exemple 2 PractitionerRole flux agrégateur"/>
-      <exampleCanonical value="http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-exercice-aggregator"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -931,7 +931,7 @@
       </reference>
       <name value="ExamplePractitionerRoleAgregateur3"/>
       <description value="Exemple 3 PractitionerRole flux agrégateur"/>
-      <exampleCanonical value="http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-exercice-aggregator"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -942,7 +942,7 @@
       </reference>
       <name value="ExamplePractitionerRoleAgregateur4"/>
       <description value="Exemple 4 PractitionerRole flux agrégateur"/>
-      <exampleCanonical value="http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-exercice-aggregator"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -953,7 +953,7 @@
       </reference>
       <name value="ExampleSchedule"/>
       <description value="Exemple ressource schedule"/>
-      <exampleCanonical value="http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-schedule-aggregator"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -964,7 +964,7 @@
       </reference>
       <name value="ExampleSchedule1"/>
       <description value="Exemple 1 ressource schedule"/>
-      <exampleCanonical value="http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-schedule-aggregator"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -975,7 +975,7 @@
       </reference>
       <name value="ExampleSchedule2"/>
       <description value="Exemple 2 ressource schedule"/>
-      <exampleCanonical value="http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-schedule-aggregator"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -986,7 +986,7 @@
       </reference>
       <name value="ExampleSchedule3"/>
       <description value="Exemple 3 ressource schedule"/>
-      <exampleCanonical value="http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-schedule-aggregator"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1052,7 +1052,7 @@
       </reference>
       <name value="ExampleSlotPSIndiv1"/>
       <description value="Exemple 1 ressource slot PS indiv"/>
-      <exampleCanonical value="http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1063,7 +1063,7 @@
       </reference>
       <name value="ExampleSlotPSIndiv2"/>
       <description value="Exemple 2 ressource slot PS indiv"/>
-      <exampleCanonical value="http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1074,7 +1074,7 @@
       </reference>
       <name value="ExampleSlotPSIndiv3"/>
       <description value="Exemple 3 ressource slot PS indiv"/>
-      <exampleCanonical value="http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1085,7 +1085,7 @@
       </reference>
       <name value="ExampleSlotPSIndiv4"/>
       <description value="Exemple 4 ressource slot PS indiv"/>
-      <exampleCanonical value="http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1136,7 +1136,7 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/FrAppointmentSAS"/>
+        <reference value="StructureDefinition/sas-appointment"/>
       </reference>
       <name value="FrAppointmentSAS"/>
       <description value="Profil de Appointment, dérivé de FrAppointment, pour le cas d'usage prise de RDV de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS"/>
@@ -1169,7 +1169,7 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/FrLocationAgregateur"/>
+        <reference value="StructureDefinition/sas-location-aggregator"/>
       </reference>
       <name value="FrLocationAgregateur"/>
       <description value="Profil de Location, dérivé de FrLocation, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS"/>
@@ -1213,7 +1213,7 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/FrPractitionerAgregateur"/>
+        <reference value="StructureDefinition/sas-practitioner-aggregator"/>
       </reference>
       <name value="FrPractitionerAgregateur"/>
       <description value="Profil de Practitioner, dérivé de FrPractitioner, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS"/>
@@ -1224,7 +1224,7 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/FrPractitionerRegul"/>
+        <reference value="StructureDefinition/sas-practitioner-aggregator-regul"/>
       </reference>
       <name value="FrPractitionerRegul"/>
       <description value="Profil de Practitioner, dérivé de FrPractitioner, pour la gestion des comptes régulateurs de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS"/>
@@ -1235,7 +1235,7 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/FrPractitionerRoleExerciceAgregateur"/>
+        <reference value="StructureDefinition/sas-practitioner-role-exercice-aggregator"/>
       </reference>
       <name value="FrPractitionerRoleExerciceAgregateur"/>
       <description value="Profil de PractitionerRole, dérivé de FrPractitionerRoleExercice, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS"/>
@@ -1246,7 +1246,7 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/FrScheduleAgregateur"/>
+        <reference value="StructureDefinition/sas-schedule-aggregator"/>
       </reference>
       <name value="FrScheduleAgregateur"/>
       <description value="Profil de Schedule, dérivé de FrSchedule, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS"/>
@@ -1268,7 +1268,7 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/FrSlotAgregateur"/>
+        <reference value="StructureDefinition/sas-slot-aggregator"/>
       </reference>
       <name value="FrSlotAgregateur"/>
       <description value="Profil de Slot, dérivé de FrSlot, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS"/>
