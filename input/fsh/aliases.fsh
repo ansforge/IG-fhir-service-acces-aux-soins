@@ -5,7 +5,7 @@ Alias: $JDV-J165-TypeCreneau-SAS = https://mos.esante.gouv.fr/NOS/JDV_J165-TypeC
 Alias: $v3-ActEncounterCode = http://terminology.hl7.org/ValueSet/v3-ActEncounterCode
 Alias: $fr-v2-0203 = https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203
 Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
-Alias: $fr-location-identifier-type = https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-location-identifier-type
+Alias: $fr-location-identifier-type = https://hl7.fr/ig/fhir/core/CodeSystem-fr-core-cs-location-identifier-type
 Alias: $v2-0276 = http://terminology.hl7.org/CodeSystem/v2-0276
 
 // ---- Extensions
