@@ -12,7 +12,7 @@ Description: "Profil de Appointment, dérivé de FrAppointment, pour le cas d'us
 * extension[appointmentOperator].valueReference.identifier 1..
 * extension[appointmentOperator].valueReference.identifier.type 1..
 * extension[appointmentOperator].valueReference.identifier.type.coding 1..1
-* extension[appointmentOperator].valueReference.identifier.type.coding.system = "$fr-v2-0203"
+* extension[appointmentOperator].valueReference.identifier.type.coding.system = $fr-v2-0203
 * extension[appointmentOperator].valueReference.identifier.type.coding.code 1..
 * extension[appointmentOperator].valueReference.identifier.system 1..
 * extension[appointmentOperator].valueReference.identifier.value 1..
