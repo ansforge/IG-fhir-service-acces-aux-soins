@@ -7,7 +7,7 @@ Description: "Profil de Practitioner, dérivé de FrPractitioner, pour la gestio
 * meta.source =  "urn:oid:1.2.250.1.213.3.6"
 
 * identifier 1..
-* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open
 * identifier contains
