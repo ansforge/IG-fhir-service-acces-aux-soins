@@ -11,11 +11,9 @@ Description: "Profil de Practitioner, dérivé de FrPractitioner, pour la gestio
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open
 * identifier contains
-    idNatPs 0..1 and
+    identifier[idNatPs] 0..1 and
     IdentifiantInterne 0..1 
 
-* identifier[idNatPs].type = $fr-v2-0203#IDNPS
-* identifier[idNatPs].system = "urn:oid:1.2.250.1.71.4.2.1"
 * identifier[idNatPs].value 1..1
 
 * identifier[IdentifiantInterne].type = $fr-v2-0203#INTRN
