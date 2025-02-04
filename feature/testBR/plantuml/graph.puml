@@ -166,6 +166,7 @@ package IG #DDDDDD{
              Slot.serviceType:TypeConsultation.coding.system => [1..None]
              Slot.specialty => [None..None]
              Slot.appointmentType => [None..None]
+             Slot.appointmentType.coding => [None..None]
              Slot.schedule => [None..None]
              Slot.status => [None..None]
              Slot.start => [None..None]
@@ -278,6 +279,14 @@ package IG #DDDDDD{
         class AppointmentReasonSAS  
 
      FrSlotAgregateurCPTS -[#black,dotted,thickness=2]-> AppointmentReasonSAS
+
+        class TypeConsultationSAS  
+
+     FrSlotAgregateur -[#black,dotted,thickness=2]-> TypeConsultationSAS
+
+        class AppointmentReasonSAS  
+
+     FrSlotAgregateur -[#black,dotted,thickness=2]-> AppointmentReasonSAS
 
         class TypeIdentifiantSAS  
 
