@@ -81,14 +81,8 @@ package IG #DDDDDD{
 
         class FrOrganizationAgregateurCPTS{
 
-             Organization.identifier => [1..1]
-             Organization.identifier.type => [None..None]
-             Organization.identifier.system => [None..None]
-             Organization.identifier:siren => [None..1]
-             Organization.identifier:siret => [None..1]
-             Organization.identifier:finess => [None..1]
-             Organization.identifier:adeliRang => [None..1]
-             Organization.identifier:rppsRang => [None..1]
+             Organization.identifier => [1..None]
+             Organization.identifier:idNatSt => [1..None]
              Organization.name => [None..None]
              Organization.telecom => [None..None]
         } 
@@ -223,18 +217,13 @@ package IG #DDDDDD{
 
         class FrOrganizationAgregateurSOS{
 
-             Organization.identifier => [1..1]
-             Organization.identifier.type => [None..None]
-             Organization.identifier.system => [None..None]
-             Organization.identifier:siren => [None..1]
-             Organization.identifier:siret => [None..1]
-             Organization.identifier:finess => [None..1]
-             Organization.identifier:adeliRang => [None..1]
-             Organization.identifier:rppsRang => [None..1]
+             Organization.identifier => [1..None]
+             Organization.identifier:idNatSt => [1..None]
         } 
 
         class FrScheduleAgregateurSOS{
 
+             Schedule.meta.profile:sas-sos-schedule-aggregator => [0..1]
              Schedule.actor => [None..None]
              Schedule.actor.reference => [1..None]
         } 

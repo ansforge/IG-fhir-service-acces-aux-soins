@@ -16,9 +16,15 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization ExampleOrgaCPTS1</b></p><a name=\"ExampleOrgaCPTS1\"> </a><a name=\"hcExampleOrgaCPTS1\"> </a><a name=\"ExampleOrgaCPTS1-fr-FR\"> </a><p><b>identifier</b>: <code>urn:oid:1.2.250.1.71.4.2.2</code>/1950047225</p><p><b>name</b>: CPTS AXE MAJEUR</p><p><b>telecom</b>: <a href=\"tel:+33102030405\">+33102030405</a></p></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization ExampleOrgaCPTS1</b></p><a name=\"ExampleOrgaCPTS1\"> </a><a name=\"hcExampleOrgaCPTS1\"> </a><a name=\"ExampleOrgaCPTS1-fr-FR\"> </a><p><b>identifier</b>: Identification nationale de structure définie par l’ANS dans le CI_SIS/1950047225</p><p><b>name</b>: CPTS AXE MAJEUR</p><p><b>telecom</b>: <a href=\"tel:+33102030405\">+33102030405</a></p></div>"
   ] ; # 
   fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "IDNST" ]
+       ] )
+     ] ;
      fhir:system [ fhir:v "urn:oid:1.2.250.1.71.4.2.2"^^xsd:anyURI ] ;
      fhir:value [ fhir:v "1950047225" ]
   ] ) ; # 
