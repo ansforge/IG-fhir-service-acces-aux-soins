@@ -92,7 +92,7 @@ Les codes ADELI, RPPS et IDNPS proviennent du system  https://hl7.fr/ig/fhir/cor
   </coding>
 </valueCodeableConcept>","","","",,"extensible","A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.","http://hl7.org/fhir/ValueSet/identifier-type","",,,,"Identifier.type",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","CX.5","Role.code or implied by context"
-"Practitioner.identifier:idNatPs.system","Practitioner.identifier.system","","","",0,1,"","","Y","uri {[]} {[]}
+"Practitioner.identifier:idNatPs.system","Practitioner.identifier.system","","","",1,1,"","","Y","uri {[]} {[]}
 ","The namespace for the identifier value","Establishes the namespace for the value - that is, a URL that describes a set values that are unique.","Identifier.system is always case sensitive.","There are many sets  of identifiers.  To perform matching of two identifiers, we need to know what set we're dealing with. The system identifies a particular set of unique identifiers.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""urn:oid:1.2.250.1.71.4.2.1""/>","<valueUri xmlns=""http://hl7.org/fhir"" value=""http://www.acme.com/identifiers/patient""/>","","",,,,,"",,,,"Identifier.system",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","CX.4 / EI-2-4","II.root or Role.id.root","./IdentifierType"
 "Practitioner.identifier:idNatPs.value","Practitioner.identifier.value","","","",1,1,"","","Y","string {[]} {[]}
