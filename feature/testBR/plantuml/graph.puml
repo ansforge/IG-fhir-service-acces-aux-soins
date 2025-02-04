@@ -10,6 +10,7 @@ package IG #DDDDDD{
         class FrAppointmentSAS{
 
              Appointment => [None..None]
+             Appointment.meta.profile:sas-appointment => [0..1]
              Appointment.extension => [1..None]
              Appointment.extension:appointmentOperator => <&plus>[1..None]
              Appointment.extension:appointmentOperator.value[x] => <&plus>[1..None]
@@ -109,6 +110,7 @@ package IG #DDDDDD{
 
         class FrLocationAgregateur{
 
+             Location.meta.profile:sas-appointment => [0..1]
              Location.address => [1..None]
              Location.address.line => [1..1]
              Location.address.city => [1..None]
@@ -119,6 +121,7 @@ package IG #DDDDDD{
 
              Practitioner => [None..None]
              Practitioner.meta.source => [None..None]
+             Practitioner.meta.profile:sas-practitioner-aggregator-regul => [0..1]
              Practitioner.identifier:IdentifiantInterne => [0..1]
              Practitioner.identifier:IdentifiantInterne.type => [None..None]
              Practitioner.identifier:IdentifiantInterne.system => [None..None]
@@ -130,6 +133,7 @@ package IG #DDDDDD{
 
         class FrPractitionerAgregateur{
 
+             Practitioner.meta.profile:sas-practitioner-aggregator => [0..1]
              Practitioner.identifier => [1..None]
              Practitioner.identifier.type => [None..None]
              Practitioner.identifier.type.coding => [None..1]
@@ -138,6 +142,7 @@ package IG #DDDDDD{
 
         class FrPractitionerRoleExerciceAgregateur{
 
+             PractitionerRole.meta.profile:sas-practitioner-role-exercice-aggregator => [0..1]
              PractitionerRole.contained => [1..None]
              PractitionerRole.practitioner => [None..None]
              PractitionerRole.organization.identifier => [None..None]
@@ -148,11 +153,13 @@ package IG #DDDDDD{
 
         class FrScheduleAgregateur{
 
+             Schedule.meta.profile:sas-schedule-aggregator => [0..1]
              Schedule.actor => [None..None]
         } 
 
         class FrSlotAgregateur{
 
+             Slot.meta.profile:sas-slot-aggregator => [0..1]
              Slot.meta.security => [None..None]
              Slot.serviceType => [None..None]
              Slot.serviceType:TypeConsultation => [0..*]
