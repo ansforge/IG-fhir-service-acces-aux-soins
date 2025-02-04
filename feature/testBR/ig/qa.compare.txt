@@ -1,7 +1,7 @@
 SAS : Validation Results
 =========================================
 
-err = 5, warn = 42, info = 48
+err = 5, warn = 41, info = 47
 $--
 Generated $--. FHIR version $-- for ans.fhir.fr.sas#$-- (canonical = https://interop.esante.gouv.fr/ig/fhir/sas)
  Build Errors : 0 / 8 / 0
@@ -22,7 +22,7 @@ Generated $--. FHIR version $-- for ans.fhir.fr.sas#$-- (canonical = https://int
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/CapabilityStatement-SAS-GestionnaireStructure : 0 / 0 / 1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/HealthcareService-ExampleHealthcareServiceCPTS1 : 0 / 0 / 1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/HealthcareService-ExampleHealthcareServiceCPTS2 : 0 / 0 / 1
- /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.sas : 0 / 0 / 2
+ /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.sas : 0 / 0 / 1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Location-1111111111 : 0 / 0 / 2
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Location-2222222222 : 0 / 0 / 2
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Location-3333333333 : 0 / 0 / 2
@@ -48,7 +48,7 @@ Generated $--. FHIR version $-- for ans.fhir.fr.sas#$-- (canonical = https://int
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Schedule-ExampleScheduleSOS2 : 0 / 0 / 1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Schedule-ExampleScheduleSOS3 : 0 / 0 / 1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/SearchParameter-cptsslot-sp-servicetype : 0 / 0 / 1
- /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/SearchParameter-slot-sp-start : 0 / 1 / 1
+ /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/SearchParameter-slot-sp-start : 0 / 0 / 1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Slot-ExampleSlotCPTS1 : 0 / 0 / 2
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Slot-ExampleSlotCPTS2 : 0 / 0 / 1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Slot-ExampleSlotPSIndiv1 : 0 / 0 / 2
@@ -163,7 +163,6 @@ ERROR: CapabilityStatement/SAS-GestionnaireAgenda-SOS: CapabilityStatement.rest[
 == fsh-generated/resources/HealthcareService-ExampleHealthcareServiceCPTS1.json ==
 == fsh-generated/resources/HealthcareService-ExampleHealthcareServiceCPTS2.json ==
 == fsh-generated/resources/ImplementationGuide-ans.fhir.fr.sas.json ==
-INFORMATION: ImplementationGuide/ans.fhir.fr.sas: ImplementationGuide.definition.resource[73].description: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 == fsh-generated/resources/Location-1111111111.json ==
 INFORMATION: Location/1111111111: Location.identifier[0].type: Reference to draft CodeSystem https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-identifier-type|2.1.0
 == fsh-generated/resources/Location-2222222222.json ==
@@ -197,7 +196,6 @@ INFORMATION: PractitionerRole/ExamplePractitionerRoleAgregateur4: PractitionerRo
 == fsh-generated/resources/Schedule-ExampleScheduleSOS3.json ==
 == fsh-generated/resources/SearchParameter-cptsslot-sp-servicetype.json ==
 == fsh-generated/resources/SearchParameter-slot-sp-start.json ==
-WARNING: SearchParameter/slot-sp-start: SearchParameter.description: The markdown contains content that appears to be an embedded HTML tag starting at 'Pa'. This will (or SHOULD) be escaped by the presentation layer. The content should be checked to confirm that this is the desired behaviour
 == fsh-generated/resources/Slot-ExampleSlotCPTS1.json ==
 INFORMATION: Slot/ExampleSlotCPTS1: Slot.serviceType[2]: This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 == fsh-generated/resources/Slot-ExampleSlotCPTS2.json ==
