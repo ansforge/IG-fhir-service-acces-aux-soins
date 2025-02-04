@@ -5,7 +5,7 @@ Description: "Profil d'Organization, dérivé de FrOrganization, pour le service
 
 
 * identifier[idNatSt] 1..1
-* identifier [idNatSt] obeys SIRET-invariant
+* identifier[idNatSt] obeys SIRET-invariant
 
 
 Invariant:   SIRET-invariant
