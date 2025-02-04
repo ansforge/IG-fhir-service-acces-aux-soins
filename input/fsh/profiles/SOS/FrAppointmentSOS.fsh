@@ -3,6 +3,10 @@ Parent: fr-core-appointment
 Id: sas-sos-appointment
 Description: "Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins"
 
+
+* meta.profile contains sas-sos-location-appointment 0..1
+* meta.profile[sas-sos-location-appointment] = Canonical(sas-sos-location-appointment)
+
 * extension ..1
 * extension[appointmentOperator] 1..
 * extension[appointmentOperator].value[x] only Reference

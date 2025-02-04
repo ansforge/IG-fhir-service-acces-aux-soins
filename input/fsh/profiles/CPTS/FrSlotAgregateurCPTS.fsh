@@ -3,6 +3,9 @@ Parent: fr-core-slot
 Id: sas-cpts-slot-aggregator
 Description: "Profil de Slot, dérivé de FrSlot, pour le cas d'usage agrégateur de la plateforme SAS - cas d'usage CPTS"
 
+* meta.profile contains sas-cpts-slot-aggregator 0..1
+* meta.profile[sas-cpts-slot-aggregator] = Canonical(sas-cpts-slot-aggregator)
+
 * meta.security from sas-cpts-valueset-typecreneau (required)
 * meta.security ^short = "type de créneau : public, pro, SNP, CPTS"
 
