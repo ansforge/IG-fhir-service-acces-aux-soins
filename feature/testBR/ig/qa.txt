@@ -1,9 +1,9 @@
 SAS : Validation Results
 =========================================
 
-err = 8, warn = 49, info = 148
+err = 5, warn = 49, info = 148
 IG Publisher Version: 1.8.10
-Generated Tue Feb 04 08:35:41 UTC 2025. FHIR version 4.0.1 for ans.fhir.fr.sas#1.1.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/sas)
+Generated Tue Feb 04 08:53:40 UTC 2025. FHIR version 4.0.1 for ans.fhir.fr.sas#1.1.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/sas)
  Build Errors : 0 / 8 / 0
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Appointment-1 : 0 / 0 / 2
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Appointment-2 : 0 / 0 / 2
@@ -33,9 +33,9 @@ Generated Tue Feb 04 08:35:41 UTC 2025. FHIR version 4.0.1 for ans.fhir.fr.sas#1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Practitioner-ExamplePractitioner : 0 / 0 / 2
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Practitioner-ExamplePractitioner2 : 0 / 0 / 2
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Practitioner-ExamplePractitioner3 : 0 / 0 / 2
- /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Practitioner-ExamplePractitionerRegul1 : 1 / 0 / 2
- /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Practitioner-ExamplePractitionerRegul2 : 1 / 0 / 2
- /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Practitioner-ExamplePractitionerRegul3 : 1 / 0 / 2
+ /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Practitioner-ExamplePractitionerRegul1 : 0 / 0 / 2
+ /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Practitioner-ExamplePractitionerRegul2 : 0 / 0 / 2
+ /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Practitioner-ExamplePractitionerRegul3 : 0 / 0 / 2
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/PractitionerRole-ExamplePractitionerRoleAgregateur : 0 / 0 / 6
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/PractitionerRole-ExamplePractitionerRoleAgregateur2 : 0 / 0 / 6
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/PractitionerRole-ExamplePractitionerRoleAgregateur3 : 0 / 0 / 6
@@ -244,13 +244,10 @@ INFORMATION: Practitioner/ExamplePractitioner2: Practitioner.meta.profile[0]: Th
 == fsh-generated/resources/Practitioner-ExamplePractitioner3.json ==
 INFORMATION: Practitioner/ExamplePractitioner3: Practitioner.meta.profile[0]: This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 == fsh-generated/resources/Practitioner-ExamplePractitionerRegul1.json ==
-ERROR: Practitioner/ExamplePractitionerRegul1: Practitioner.identifier[0]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [system] in profile Practitioner.identifier:identifier[idNatPs] - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator-regul|1.1.0 does not have fixed value, binding or existence assertions
 INFORMATION: Practitioner/ExamplePractitionerRegul1: Practitioner.meta.profile[0]: This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator-regul|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 == fsh-generated/resources/Practitioner-ExamplePractitionerRegul2.json ==
-ERROR: Practitioner/ExamplePractitionerRegul2: Practitioner.identifier[0]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [system] in profile Practitioner.identifier:identifier[idNatPs] - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator-regul|1.1.0 does not have fixed value, binding or existence assertions
 INFORMATION: Practitioner/ExamplePractitionerRegul2: Practitioner.meta.profile[0]: This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator-regul|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 == fsh-generated/resources/Practitioner-ExamplePractitionerRegul3.json ==
-ERROR: Practitioner/ExamplePractitionerRegul3: Practitioner.identifier[0]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [system] in profile Practitioner.identifier:identifier[idNatPs] - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator-regul|1.1.0 does not have fixed value, binding or existence assertions
 INFORMATION: Practitioner/ExamplePractitionerRegul3: Practitioner.meta.profile[0]: This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator-regul|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 == fsh-generated/resources/PractitionerRole-ExamplePractitionerRoleAgregateur.json ==
 INFORMATION: PractitionerRole/ExamplePractitionerRoleAgregateur: PractitionerRole.meta.profile[0]: This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-exercice-aggregator|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
@@ -337,7 +334,7 @@ INFORMATION: StructureDefinition.where(url = 'https://interop.esante.gouv.fr/ig/
 == fsh-generated/resources/StructureDefinition-sas-practitioner-aggregator.json ==
 INFORMATION: StructureDefinition/sas-practitioner-aggregator: StructureDefinition.snapshot.element[19].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 == fsh-generated/resources/StructureDefinition-sas-practitioner-aggregator-regul.json ==
-INFORMATION: StructureDefinition/sas-practitioner-aggregator-regul: StructureDefinition.snapshot.element[55].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+INFORMATION: StructureDefinition/sas-practitioner-aggregator-regul: StructureDefinition.snapshot.element[54].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 INFORMATION: StructureDefinition/sas-practitioner-aggregator-regul: StructureDefinition.snapshot.element[19].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 == fsh-generated/resources/StructureDefinition-sas-practitioner-role-exercice-aggregator.json ==
 INFORMATION: StructureDefinition/sas-practitioner-role-exercice-aggregator: StructureDefinition.snapshot.element[35].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
