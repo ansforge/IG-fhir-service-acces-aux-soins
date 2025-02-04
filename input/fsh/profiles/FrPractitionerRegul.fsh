@@ -6,16 +6,8 @@ Description: "Profil de Practitioner, dérivé de FrPractitioner, pour la gestio
 
 * meta.source =  "urn:oid:1.2.250.1.213.3.6"
 
-* identifier 1..
-* identifier ^slicing.discriminator.type = #pattern
-* identifier ^slicing.discriminator.path = "system"
-* identifier ^slicing.rules = #open
 * identifier contains
-    identifier[idNatPs] 0..1 and
     IdentifiantInterne 0..1 
-
-* identifier[idNatPs].value 1..1
-* identifier[idNatPs].system = "urn:oid:1.2.250.1.71.4.2.1"
 
 * identifier[IdentifiantInterne].type = $fr-v2-0203#INTRN
 * identifier[IdentifiantInterne].system = "urn:oid:1.2.250.1.213.3.6"
