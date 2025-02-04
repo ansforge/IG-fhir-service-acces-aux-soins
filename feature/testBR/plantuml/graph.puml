@@ -76,11 +76,13 @@ package IG #DDDDDD{
         class FrHealthcareServiceAgregateurCPTS{
 
              HealthcareService.id => [1..None]
+             HealthcareService.meta.profile:sas-cpts-healthcareservice-aggregator => [0..1]
              HealthcareService.providedBy => [1..None]
         } 
 
         class FrOrganizationAgregateurCPTS{
 
+             Organization.meta.profile:sas-cpts-organization-aggregator => [0..1]
              Organization.identifier => [1..None]
              Organization.identifier:idNatSt => [1..None]
              Organization.name => [None..None]
@@ -89,6 +91,7 @@ package IG #DDDDDD{
 
         class FrSlotAgregateurCPTS{
 
+             Slot.meta.profile:sas-cpts-slot-aggregator => [0..1]
              Slot.meta.security => [None..None]
              Slot.serviceType => [None..None]
              Slot.serviceType.extension:sas-servicetype-r5 => <&plus>[0..1]
@@ -166,6 +169,7 @@ package IG #DDDDDD{
         class FrAppointmentSASSOS{
 
              Appointment => [None..None]
+             Appointment.meta.profile:sas-sos-appointment => [0..1]
              Appointment.extension => [1..1]
              Appointment.extension:appointmentOperator => <&plus>[1..None]
              Appointment.extension:appointmentOperator.value[x] => <&plus>[None..None]
@@ -205,6 +209,7 @@ package IG #DDDDDD{
 
         class FrLocationAgregateurSOS{
 
+             Location.meta.profile:sas-sos-location-aggregator => [0..1]
              Location.identifier.type => [None..None]
              Location.name => [1..None]
              Location.address => [1..None]
@@ -217,6 +222,7 @@ package IG #DDDDDD{
 
         class FrOrganizationAgregateurSOS{
 
+             Organization.meta.profile:sas-sos-organization-aggregator => [0..1]
              Organization.identifier => [1..None]
              Organization.identifier:idNatSt => [1..None]
         } 
@@ -230,6 +236,7 @@ package IG #DDDDDD{
 
         class FrSlotAgregateurSOS{
 
+             Slot.meta.profile:sas-sos-slot-aggregator => [0..1]
              Slot.meta.security => [None..None]
              Slot.serviceType.coding => [None..None]
              Slot.appointmentType.coding => [None..None]
