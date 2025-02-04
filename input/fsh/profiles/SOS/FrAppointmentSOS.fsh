@@ -12,7 +12,7 @@ Description: "Profil de Slot, dérivé de FrSlot, pour le service d'agrégation 
 * extension[appointmentOperator].value[x] only Reference
 * extension[appointmentOperator].valueReference.identifier.type 1..
 * extension[appointmentOperator].valueReference.identifier.type.coding 1..1
-* extension[appointmentOperator].valueReference.identifier.type.coding from sas-valueset-typeidentifiant  (required)
+* extension[appointmentOperator].valueReference.identifier.type.coding from sas-valueset-typeidentifiant (required)
 * extension[appointmentOperator].valueReference.identifier.type.coding.code 1..
 * extension[appointmentOperator].valueReference.identifier.system 1..
 * extension[appointmentOperator].valueReference.identifier.value 1..
