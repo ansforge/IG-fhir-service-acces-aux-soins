@@ -1,7 +1,7 @@
 Profile: FrAppointmentSAS
 Parent: fr-core-appointment
 Id: sas-appointment
-Description: "Profil de Appointment, dérivé de FrAppointment, pour le cas d'usage prise de RDV de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS"
+Description: "Profil de Appointment, dérivé de FrAppointment, pour le cas d'usage prise de RDV de la plateforme SAS [Commun cas d'usage PS Indiv et CPTS]"
 
 * meta.profile contains sas-appointment 0..1
 * meta.profile[sas-appointment] = Canonical(sas-appointment)

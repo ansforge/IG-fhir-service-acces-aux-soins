@@ -1,7 +1,7 @@
 Profile: FrAppointmentSASSOS
 Parent: fr-core-appointment
 Id: sas-sos-appointment
-Description: "Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins"
+Description: "Profil de Slot, dérivé de FrSlot, pour le service d'agrégation de créneaux de la plateforme SAS [cas d'usage SOS Médecins]"
 
 
 * meta.profile contains sas-sos-appointment 0..1

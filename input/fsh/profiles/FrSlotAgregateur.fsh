@@ -1,7 +1,7 @@
 Profile: FrSlotAgregateur
 Parent: fr-core-slot
 Id: sas-slot-aggregator
-Description: "Profil de Slot, dérivé de FrSlot, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS"
+Description: "Profil de Slot, dérivé de FrSlot, pour le service d'agrégation de créneaux de la plateforme SAS [Commun cas d'usage PS Indiv et CPTS]"
 
 * meta.profile contains sas-slot-aggregator 0..1
 * meta.profile[sas-slot-aggregator] = Canonical(sas-slot-aggregator)

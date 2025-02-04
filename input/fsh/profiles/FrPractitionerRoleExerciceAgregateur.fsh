@@ -1,7 +1,7 @@
 Profile: FrPractitionerRoleExerciceAgregateur
 Parent: fr-core-practitioner-role
 Id: sas-practitioner-role-exercice-aggregator
-Description: "Profil de PractitionerRole, dérivé de FrPractitionerRoleExercice, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS"
+Description: "Profil de PractitionerRole, dérivé de FrPractitionerRoleExercice, pour le service d'agrégation de créneaux de la plateforme SAS [Commun cas d'usage PS Indiv et CPTS]"
 
 * meta.profile contains sas-practitioner-role-exercice-aggregator 0..1
 * meta.profile[sas-practitioner-role-exercice-aggregator] = Canonical(sas-practitioner-role-exercice-aggregator)

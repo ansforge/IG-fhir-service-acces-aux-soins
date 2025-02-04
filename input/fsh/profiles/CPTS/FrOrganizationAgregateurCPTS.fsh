@@ -1,7 +1,7 @@
 Profile: FrOrganizationAgregateurCPTS
 Parent: fr-core-organization
 Id: sas-cpts-organization-aggregator
-Description: "Profil dérivé de FrOrganization pour le cas d'usage agrégateur de la plateforme SAS - cas d'usage CPTS"
+Description: "Profil dérivé de FrOrganization pour le cas d'usage agrégateur de la plateforme SAS [cas d'usage CPTS]"
 
 * meta.profile contains sas-cpts-organization-aggregator 0..1
 * meta.profile[sas-cpts-organization-aggregator] = Canonical(sas-cpts-organization-aggregator)
