@@ -2,10 +2,7 @@ Instance: ExampleOrgaCPTS1
 InstanceOf: FrOrganizationAgregateurCPTS
 Description: "Exemple d'organisation CPTS 1"
 Usage: #example
-
-
-* identifier[0].system = "urn:oid:1.2.250.1.71.4.2.2"
-* identifier[0].value = "1950047225"
+* identifier[idNatSt].value = "1950047225"
 * name = "CPTS AXE MAJEUR"
 * telecom[0].system =  #phone
 * telecom[0].value = "+33102030405"
