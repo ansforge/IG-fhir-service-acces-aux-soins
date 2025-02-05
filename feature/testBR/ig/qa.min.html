@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = 1, errors = 5, warn = 41, info = 47-->
+<!-- broken links = 1, errors = 27, warn = 41, info = 35-->
 <head>
   <title>SAS : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
@@ -46,7 +46,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for SAS</h1>
- <p>Generated Tue Feb 04 16:02:02 UTC 2025, FHIR version 4.0.1 for ans.fhir.fr.sas#1.1.0 (canonical = <a href="https://interop.esante.gouv.fr/ig/fhir/sas">https://interop.esante.gouv.fr/ig/fhir/sas</a> (<a href="https://interop.esante.gouv.fr/ig/fhir/sas/history.html">history</a>)). See <a href="qa.html">Full QA Report</a></p>
+ <p>Generated Wed Feb 05 17:11:17 UTC 2025, FHIR version 4.0.1 for ans.fhir.fr.sas#1.1.0 (canonical = <a href="https://interop.esante.gouv.fr/ig/fhir/sas">https://interop.esante.gouv.fr/ig/fhir/sas</a> (<a href="https://interop.esante.gouv.fr/ig/fhir/sas/history.html">history</a>)). See <a href="qa.html">Full QA Report</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
  <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.8.10</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = ans.fhir.fr.sas, Canonical = https://interop.esante.gouv.fr/ig/fhir/sas</td></tr>
@@ -98,7 +98,7 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
  (2 uses),     <a href="http://hl7.org/fhir/R4/valueset-appointment-cancellation-reason.html">AppointmentCancellationReason</a>
  (2 uses),     <a href="http://hl7.org/fhir/R4/valueset-service-category.html">ServiceCategory</a>
  (8 uses),     <a href="http://hl7.org/fhir/R4/valueset-service-type.html">ServiceType</a>
- (8 uses),     <a href="http://hl7.org/fhir/R4/valueset-encounter-reason.html">EncounterReasonCodes</a>
+ (9 uses),     <a href="http://hl7.org/fhir/R4/valueset-encounter-reason.html">EncounterReasonCodes</a>
  (2 uses),     <a href="http://hl7.org/fhir/R4/condition.html">Condition</a>
  (2 uses),     <a href="http://hl7.org/fhir/R4/procedure.html">Procedure</a>
  (2 uses),     <a href="http://hl7.org/fhir/R4/immunizationrecommendation.html">ImmunizationRecommendation</a>
@@ -132,7 +132,7 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
  <tr><td>IPA Comparison:</td><td> n/a</td></tr>
  <tr><td>IPS Comparison:</td><td> n/a</td></tr>
  <tr><td>Validation Flags:</td><td> On: autoLoad; Off: hintAboutNonMustSupport, anyExtensionsAllowed, checkAggregation, showReferenceMessages, noExperimentalContent, displayWarnings</td></tr>
- <tr><td>Summary:</td><td> errors = 5, warn = 41, info = 47, broken links = 1.  <button onclick="toggleCodes()">Show Message Ids</button></td></tr>
+ <tr><td>Summary:</td><td> errors = 27, warn = 41, info = 35, broken links = 1.  <button onclick="toggleCodes()">Show Message Ids</button></td></tr>
 </table>
  <table class="grid">
    <tr>
@@ -150,14 +150,26 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
    <tr style="background-color: #EFFFEF">
      <td><a href="#_home_runner_work_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_fsh-generated_resources_Bundle-ExampleBundleCPTS2"><b>/home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundleCPTS2</b></a></td><td><b>0</b></td><td><b>8</b></td><td><b>1</b></td>
    </tr>
-   <tr style="background-color: #EFFFEF">
-     <td><a href="#_home_runner_work_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_fsh-generated_resources_Bundle-ExampleBundlePSIndiv"><b>/home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundlePSIndiv</b></a></td><td><b>0</b></td><td><b>9</b></td><td><b>9</b></td>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_home_runner_work_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_fsh-generated_resources_Bundle-ExampleBundlePSIndiv"><b>/home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundlePSIndiv</b></a></td><td><b>11</b></td><td><b>9</b></td><td><b>3</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><a href="#_home_runner_work_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_fsh-generated_resources_CapabilityStatement-SAS-Consommateur-SOS"><b>/home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/CapabilityStatement-SAS-Consommateur-SOS</b></a></td><td><b>1</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><a href="#_home_runner_work_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_fsh-generated_resources_CapabilityStatement-SAS-GestionnaireAgenda-SOS"><b>/home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/CapabilityStatement-SAS-GestionnaireAgenda-SOS</b></a></td><td><b>1</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_home_runner_work_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_fsh-generated_resources_Slot-ExampleSlotPSIndiv1"><b>/home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Slot-ExampleSlotPSIndiv1</b></a></td><td><b>3</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_home_runner_work_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_fsh-generated_resources_Slot-ExampleSlotPSIndiv2"><b>/home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Slot-ExampleSlotPSIndiv2</b></a></td><td><b>2</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_home_runner_work_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_fsh-generated_resources_Slot-ExampleSlotPSIndiv3"><b>/home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Slot-ExampleSlotPSIndiv3</b></a></td><td><b>3</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_home_runner_work_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_fsh-generated_resources_Slot-ExampleSlotPSIndiv4"><b>/home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Slot-ExampleSlotPSIndiv4</b></a></td><td><b>3</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><a href="#_home_runner_work_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_fsh-generated_resources_StructureDefinition-sas-cpts-slot-servicetype-aggregator"><b>/home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/StructureDefinition-sas-cpts-slot-servicetype-aggregator</b></a></td><td><b>3</b></td><td><b>0</b></td><td><b>0</b></td>
@@ -325,32 +337,47 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
-   <tr style="background-color: #ffffe6">
-     <td><b><a href="">Bundle&#8203;.entry[0]&#8203;.resource&#8203;/*Slot&#8203;/ExampleSlotPSIndiv1*&#8203;/&#8203;.serviceType[2] (l51&#8203;/c12)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl38" class="flip" onclick="flip('l38')">Show Reasoning</span><div id="l38" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Bundle.entry[0].resource/*Slot/ExampleSlotPSIndiv1*/.serviceType[2]: discriminator = true and coding.system.where(value = 'http://terminology.hl7.org/CodeSystem/v3-ActCode').exists()</li></ul></div> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Details_for__matching_against_Profile_</span></td>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle&#8203;.entry[0]&#8203;.resource&#8203;/*Slot&#8203;/ExampleSlotPSIndiv1*&#8203;/&#8203;.serviceType[0] (l35&#8203;/c12)</b></td><td><b>error</b></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SLICING_CANNOT_BE_EVALUATED</span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle&#8203;.entry[0]&#8203;.resource&#8203;/*Slot&#8203;/ExampleSlotPSIndiv1*&#8203;/&#8203;.serviceType[1] (l43&#8203;/c12)</b></td><td><b>error</b></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SLICING_CANNOT_BE_EVALUATED</span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle&#8203;.entry[0]&#8203;.resource&#8203;/*Slot&#8203;/ExampleSlotPSIndiv1*&#8203;/&#8203;.serviceType[2] (l51&#8203;/c12)</b></td><td><b>error</b></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SLICING_CANNOT_BE_EVALUATED</span></td>
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>Bundle&#8203;.entry[3]&#8203;.resource&#8203;/*PractitionerRole&#8203;/ExamplePractitionerRoleAgregateur2*&#8203;/&#8203;.contained[0]&#8203;/*Location&#8203;/ExampleLocation3*&#8203;/&#8203;.identifier[0]&#8203;.type (l172&#8203;/c18)</b></td><td><b>information</b></td><td><b>Reference to draft CodeSystem https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-identifier-type|2.1.0</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">MSG_DRAFT</span></td>
    </tr>
-   <tr style="background-color: #ffffe6">
-     <td><b><a href="">Bundle&#8203;.entry[4]&#8203;.resource&#8203;/*Slot&#8203;/ExampleSlotPSIndiv2*&#8203;/&#8203;.serviceType[1] (l227&#8203;/c12)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl40" class="flip" onclick="flip('l40')">Show Reasoning</span><div id="l40" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Bundle.entry[4].resource/*Slot/ExampleSlotPSIndiv2*/.serviceType[1]: discriminator = true and coding.system.where(value = 'http://terminology.hl7.org/CodeSystem/v3-ActCode').exists()</li></ul></div> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Details_for__matching_against_Profile_</span></td>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle&#8203;.entry[4]&#8203;.resource&#8203;/*Slot&#8203;/ExampleSlotPSIndiv2*&#8203;/&#8203;.serviceType[0] (l219&#8203;/c12)</b></td><td><b>error</b></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SLICING_CANNOT_BE_EVALUATED</span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle&#8203;.entry[4]&#8203;.resource&#8203;/*Slot&#8203;/ExampleSlotPSIndiv2*&#8203;/&#8203;.serviceType[1] (l227&#8203;/c12)</b></td><td><b>error</b></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SLICING_CANNOT_BE_EVALUATED</span></td>
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>Bundle&#8203;.entry[6]&#8203;.resource&#8203;/*PractitionerRole&#8203;/ExamplePractitionerRoleAgregateur3*&#8203;/&#8203;.contained[0]&#8203;/*Location&#8203;/ExampleLocation2*&#8203;/&#8203;.identifier[0]&#8203;.type (l313&#8203;/c18)</b></td><td><b>information</b></td><td><b>Reference to draft CodeSystem https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-identifier-type|2.1.0</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">MSG_DRAFT</span></td>
    </tr>
-   <tr style="background-color: #ffffe6">
-     <td><b><a href="">Bundle&#8203;.entry[7]&#8203;.resource&#8203;/*Slot&#8203;/ExampleSlotPSIndiv3*&#8203;/&#8203;.serviceType[1] (l372&#8203;/c12)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl42" class="flip" onclick="flip('l42')">Show Reasoning</span><div id="l42" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Bundle.entry[7].resource/*Slot/ExampleSlotPSIndiv3*/.serviceType[1]: discriminator = true and coding.system.where(value = 'http://terminology.hl7.org/CodeSystem/v3-ActCode').exists()</li></ul></div> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Details_for__matching_against_Profile_</span></td>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle&#8203;.entry[7]&#8203;.resource&#8203;/*Slot&#8203;/ExampleSlotPSIndiv3*&#8203;/&#8203;.serviceType[0] (l364&#8203;/c12)</b></td><td><b>error</b></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SLICING_CANNOT_BE_EVALUATED</span></td>
    </tr>
-   <tr style="background-color: #ffffe6">
-     <td><b><a href="">Bundle&#8203;.entry[7]&#8203;.resource&#8203;/*Slot&#8203;/ExampleSlotPSIndiv3*&#8203;/&#8203;.serviceType[2] (l375&#8203;/c12)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl43" class="flip" onclick="flip('l43')">Show Reasoning</span><div id="l43" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Bundle.entry[7].resource/*Slot/ExampleSlotPSIndiv3*/.serviceType[2]: discriminator = true and coding.system.where(value = 'http://terminology.hl7.org/CodeSystem/v3-ActCode').exists()</li></ul></div> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Details_for__matching_against_Profile_</span></td>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle&#8203;.entry[7]&#8203;.resource&#8203;/*Slot&#8203;/ExampleSlotPSIndiv3*&#8203;/&#8203;.serviceType[1] (l372&#8203;/c12)</b></td><td><b>error</b></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SLICING_CANNOT_BE_EVALUATED</span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle&#8203;.entry[7]&#8203;.resource&#8203;/*Slot&#8203;/ExampleSlotPSIndiv3*&#8203;/&#8203;.serviceType[2] (l375&#8203;/c12)</b></td><td><b>error</b></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SLICING_CANNOT_BE_EVALUATED</span></td>
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>Bundle&#8203;.entry[10]&#8203;.resource&#8203;/*PractitionerRole&#8203;/ExamplePractitionerRoleAgregateur4*&#8203;/&#8203;.contained[0]&#8203;/*Location&#8203;/ExampleLocation3*&#8203;/&#8203;.identifier[0]&#8203;.type (l488&#8203;/c18)</b></td><td><b>information</b></td><td><b>Reference to draft CodeSystem https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-identifier-type|2.1.0</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">MSG_DRAFT</span></td>
    </tr>
-   <tr style="background-color: #ffffe6">
-     <td><b><a href="">Bundle&#8203;.entry[11]&#8203;.resource&#8203;/*Slot&#8203;/ExampleSlotPSIndiv4*&#8203;/&#8203;.serviceType[1] (l553&#8203;/c12)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl45" class="flip" onclick="flip('l45')">Show Reasoning</span><div id="l45" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Bundle.entry[11].resource/*Slot/ExampleSlotPSIndiv4*/.serviceType[1]: discriminator = true and coding.system.where(value = 'http://terminology.hl7.org/CodeSystem/v3-ActCode').exists()</li></ul></div> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Details_for__matching_against_Profile_</span></td>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle&#8203;.entry[11]&#8203;.resource&#8203;/*Slot&#8203;/ExampleSlotPSIndiv4*&#8203;/&#8203;.serviceType[0] (l545&#8203;/c12)</b></td><td><b>error</b></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SLICING_CANNOT_BE_EVALUATED</span></td>
    </tr>
-   <tr style="background-color: #ffffe6">
-     <td><b><a href="">Bundle&#8203;.entry[11]&#8203;.resource&#8203;/*Slot&#8203;/ExampleSlotPSIndiv4*&#8203;/&#8203;.serviceType[2] (l556&#8203;/c12)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl46" class="flip" onclick="flip('l46')">Show Reasoning</span><div id="l46" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Bundle.entry[11].resource/*Slot/ExampleSlotPSIndiv4*/.serviceType[2]: discriminator = true and coding.system.where(value = 'http://terminology.hl7.org/CodeSystem/v3-ActCode').exists()</li></ul></div> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Details_for__matching_against_Profile_</span></td>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle&#8203;.entry[11]&#8203;.resource&#8203;/*Slot&#8203;/ExampleSlotPSIndiv4*&#8203;/&#8203;.serviceType[1] (l553&#8203;/c12)</b></td><td><b>error</b></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SLICING_CANNOT_BE_EVALUATED</span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle&#8203;.entry[11]&#8203;.resource&#8203;/*Slot&#8203;/ExampleSlotPSIndiv4*&#8203;/&#8203;.serviceType[2] (l556&#8203;/c12)</b></td><td><b>error</b></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SLICING_CANNOT_BE_EVALUATED</span></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle.entry[1] (l1/c2)</b></td><td><b>warning</b></td><td><b>This is not a matching resource type for the specified search (is a search mode needed?) (Schedule expecting [Slot])</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">BUNDLE_SEARCH_ENTRY_WRONG_RESOURCE_TYPE_NO_MODE</span></td>
@@ -407,9 +434,82 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
    </tr>
 </table>
 <hr/>
+<a name="_home_runner_work_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_fsh-generated_resources_Slot-ExampleSlotPSIndiv1"> </a>
+<h2><a href="Slot-ExampleSlotPSIndiv1.html">fsh-generated/resources/Slot-ExampleSlotPSIndiv1.json</a> <span id="svi7" class="toggle" onclick="toggle('vi7')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi7')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi7"><ul style="font-size: 7px"><li>Slot: Validated against <i>this.</i><a href="StructureDefinition-sas-slot-aggregator.html">FrSlotAgregateur</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Slot.serviceType[0] (l17/c6)</b></td><td><b>error</b></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SLICING_CANNOT_BE_EVALUATED</span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Slot.serviceType[1] (l25/c6)</b></td><td><b>error</b></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SLICING_CANNOT_BE_EVALUATED</span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Slot.serviceType[2] (l33/c6)</b></td><td><b>error</b></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SLICING_CANNOT_BE_EVALUATED</span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_fsh-generated_resources_Slot-ExampleSlotPSIndiv2"> </a>
+<h2><a href="Slot-ExampleSlotPSIndiv2.html">fsh-generated/resources/Slot-ExampleSlotPSIndiv2.json</a> <span id="svi8" class="toggle" onclick="toggle('vi8')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi8')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi8"><ul style="font-size: 7px"><li>Slot: Validated against <i>this.</i><a href="StructureDefinition-sas-slot-aggregator.html">FrSlotAgregateur</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Slot.serviceType[0] (l17/c6)</b></td><td><b>error</b></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SLICING_CANNOT_BE_EVALUATED</span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Slot.serviceType[1] (l25/c6)</b></td><td><b>error</b></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SLICING_CANNOT_BE_EVALUATED</span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_fsh-generated_resources_Slot-ExampleSlotPSIndiv3"> </a>
+<h2><a href="Slot-ExampleSlotPSIndiv3.html">fsh-generated/resources/Slot-ExampleSlotPSIndiv3.json</a> <span id="svi9" class="toggle" onclick="toggle('vi9')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi9')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi9"><ul style="font-size: 7px"><li>Slot: Validated against <i>this.</i><a href="StructureDefinition-sas-slot-aggregator.html">FrSlotAgregateur</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Slot.serviceType[0] (l21/c6)</b></td><td><b>error</b></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SLICING_CANNOT_BE_EVALUATED</span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Slot.serviceType[1] (l29/c6)</b></td><td><b>error</b></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SLICING_CANNOT_BE_EVALUATED</span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Slot.serviceType[2] (l32/c6)</b></td><td><b>error</b></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SLICING_CANNOT_BE_EVALUATED</span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_fsh-generated_resources_Slot-ExampleSlotPSIndiv4"> </a>
+<h2><a href="Slot-ExampleSlotPSIndiv4.html">fsh-generated/resources/Slot-ExampleSlotPSIndiv4.json</a> <span id="svi10" class="toggle" onclick="toggle('vi10')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi10')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi10"><ul style="font-size: 7px"><li>Slot: Validated against <i>this.</i><a href="StructureDefinition-sas-slot-aggregator.html">FrSlotAgregateur</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Slot.serviceType[0] (l21/c6)</b></td><td><b>error</b></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SLICING_CANNOT_BE_EVALUATED</span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Slot.serviceType[1] (l29/c6)</b></td><td><b>error</b></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SLICING_CANNOT_BE_EVALUATED</span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Slot.serviceType[2] (l32/c6)</b></td><td><b>error</b></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SLICING_CANNOT_BE_EVALUATED</span></td>
+   </tr>
+</table>
+<hr/>
 <a name="_home_runner_work_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_fsh-generated_resources_StructureDefinition-sas-cpts-slot-servicetype-aggregator"> </a>
-<h2><a href="StructureDefinition-sas-cpts-slot-servicetype-aggregator.html">fsh-generated/resources/StructureDefinition-sas-cpts-slot-servicetype-aggregator.json</a> <span id="svi7" class="toggle" onclick="toggle('vi7')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi7')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi7"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+<h2><a href="StructureDefinition-sas-cpts-slot-servicetype-aggregator.html">fsh-generated/resources/StructureDefinition-sas-cpts-slot-servicetype-aggregator.json</a> <span id="svi11" class="toggle" onclick="toggle('vi11')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi11')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi11"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -427,8 +527,8 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_fsh-generated_resources_StructureDefinition-sas-sos-appointment"> </a>
-<h2><a href="StructureDefinition-sas-sos-appointment.html">fsh-generated/resources/StructureDefinition-sas-sos-appointment.json</a> <span id="svi8" class="toggle" onclick="toggle('vi8')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi8')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi8"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+<h2><a href="StructureDefinition-sas-sos-appointment.html">fsh-generated/resources/StructureDefinition-sas-sos-appointment.json</a> <span id="svi12" class="toggle" onclick="toggle('vi12')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi12')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi12"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -600,43 +700,7 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
      <td><a href="Bundle-ExampleBundleCPTS1.html">fsh-generated/resources/Bundle-ExampleBundleCPTS1.json</a></td><td><b>This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
    </tr>
    <tr style="background-color: #fffff2">
-     <td><a href="Bundle-ExampleBundlePSIndiv.html">fsh-generated/resources/Bundle-ExampleBundlePSIndiv.json</a></td><td><b>This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
-   </tr>
-   <tr style="background-color: #fffff2">
-     <td><a href="Bundle-ExampleBundlePSIndiv.html">fsh-generated/resources/Bundle-ExampleBundlePSIndiv.json</a></td><td><b>This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
-   </tr>
-   <tr style="background-color: #fffff2">
-     <td><a href="Bundle-ExampleBundlePSIndiv.html">fsh-generated/resources/Bundle-ExampleBundlePSIndiv.json</a></td><td><b>This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
-   </tr>
-   <tr style="background-color: #fffff2">
-     <td><a href="Bundle-ExampleBundlePSIndiv.html">fsh-generated/resources/Bundle-ExampleBundlePSIndiv.json</a></td><td><b>This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
-   </tr>
-   <tr style="background-color: #fffff2">
-     <td><a href="Bundle-ExampleBundlePSIndiv.html">fsh-generated/resources/Bundle-ExampleBundlePSIndiv.json</a></td><td><b>This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
-   </tr>
-   <tr style="background-color: #fffff2">
-     <td><a href="Bundle-ExampleBundlePSIndiv.html">fsh-generated/resources/Bundle-ExampleBundlePSIndiv.json</a></td><td><b>This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
-   </tr>
-   <tr style="background-color: #fffff2">
      <td><a href="Slot-ExampleSlotCPTS1.html">fsh-generated/resources/Slot-ExampleSlotCPTS1.json</a></td><td><b>This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
-   </tr>
-   <tr style="background-color: #fffff2">
-     <td><a href="Slot-ExampleSlotPSIndiv1.html">fsh-generated/resources/Slot-ExampleSlotPSIndiv1.json</a></td><td><b>This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
-   </tr>
-   <tr style="background-color: #fffff2">
-     <td><a href="Slot-ExampleSlotPSIndiv2.html">fsh-generated/resources/Slot-ExampleSlotPSIndiv2.json</a></td><td><b>This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
-   </tr>
-   <tr style="background-color: #fffff2">
-     <td><a href="Slot-ExampleSlotPSIndiv3.html">fsh-generated/resources/Slot-ExampleSlotPSIndiv3.json</a></td><td><b>This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
-   </tr>
-   <tr style="background-color: #fffff2">
-     <td><a href="Slot-ExampleSlotPSIndiv3.html">fsh-generated/resources/Slot-ExampleSlotPSIndiv3.json</a></td><td><b>This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
-   </tr>
-   <tr style="background-color: #fffff2">
-     <td><a href="Slot-ExampleSlotPSIndiv4.html">fsh-generated/resources/Slot-ExampleSlotPSIndiv4.json</a></td><td><b>This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
-   </tr>
-   <tr style="background-color: #fffff2">
-     <td><a href="Slot-ExampleSlotPSIndiv4.html">fsh-generated/resources/Slot-ExampleSlotPSIndiv4.json</a></td><td><b>This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
    </tr>
 </table>
 <hr/>
@@ -756,6 +820,77 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
    </tr>
    <tr style="background-color: #fffff2">
      <td><a href="StructureDefinition-sas-sos-appointment.html">fsh-generated/resources/StructureDefinition-sas-sos-appointment.json</a></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="SLICING_CANNOT_BE_EVALUATED"> </a>
+<h2>SLICING_CANNOT_BE_EVALUATED</h2>
+ <table class="grid">
+   <tr style="background-color: #ffeeee">
+     <td><a href="Bundle-ExampleBundlePSIndiv.html">fsh-generated/resources/Bundle-ExampleBundlePSIndiv.json</a></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Bundle-ExampleBundlePSIndiv.html">fsh-generated/resources/Bundle-ExampleBundlePSIndiv.json</a></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Bundle-ExampleBundlePSIndiv.html">fsh-generated/resources/Bundle-ExampleBundlePSIndiv.json</a></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Bundle-ExampleBundlePSIndiv.html">fsh-generated/resources/Bundle-ExampleBundlePSIndiv.json</a></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Bundle-ExampleBundlePSIndiv.html">fsh-generated/resources/Bundle-ExampleBundlePSIndiv.json</a></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Bundle-ExampleBundlePSIndiv.html">fsh-generated/resources/Bundle-ExampleBundlePSIndiv.json</a></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Bundle-ExampleBundlePSIndiv.html">fsh-generated/resources/Bundle-ExampleBundlePSIndiv.json</a></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Bundle-ExampleBundlePSIndiv.html">fsh-generated/resources/Bundle-ExampleBundlePSIndiv.json</a></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Bundle-ExampleBundlePSIndiv.html">fsh-generated/resources/Bundle-ExampleBundlePSIndiv.json</a></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Bundle-ExampleBundlePSIndiv.html">fsh-generated/resources/Bundle-ExampleBundlePSIndiv.json</a></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Bundle-ExampleBundlePSIndiv.html">fsh-generated/resources/Bundle-ExampleBundlePSIndiv.json</a></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Slot-ExampleSlotPSIndiv1.html">fsh-generated/resources/Slot-ExampleSlotPSIndiv1.json</a></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Slot-ExampleSlotPSIndiv1.html">fsh-generated/resources/Slot-ExampleSlotPSIndiv1.json</a></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Slot-ExampleSlotPSIndiv1.html">fsh-generated/resources/Slot-ExampleSlotPSIndiv1.json</a></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Slot-ExampleSlotPSIndiv2.html">fsh-generated/resources/Slot-ExampleSlotPSIndiv2.json</a></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Slot-ExampleSlotPSIndiv2.html">fsh-generated/resources/Slot-ExampleSlotPSIndiv2.json</a></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Slot-ExampleSlotPSIndiv3.html">fsh-generated/resources/Slot-ExampleSlotPSIndiv3.json</a></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Slot-ExampleSlotPSIndiv3.html">fsh-generated/resources/Slot-ExampleSlotPSIndiv3.json</a></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Slot-ExampleSlotPSIndiv3.html">fsh-generated/resources/Slot-ExampleSlotPSIndiv3.json</a></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Slot-ExampleSlotPSIndiv4.html">fsh-generated/resources/Slot-ExampleSlotPSIndiv4.json</a></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Slot-ExampleSlotPSIndiv4.html">fsh-generated/resources/Slot-ExampleSlotPSIndiv4.json</a></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Slot-ExampleSlotPSIndiv4.html">fsh-generated/resources/Slot-ExampleSlotPSIndiv4.json</a></td><td><b>Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Slot.serviceType:motifConsultation - the discriminator https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator|1.1.0 does not have fixed value, binding or existence assertions</b></td>
    </tr>
 </table>
 <hr/>
