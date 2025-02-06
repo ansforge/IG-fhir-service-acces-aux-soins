@@ -10,7 +10,7 @@ Description: "Profil de Slot, dérivé de FrSlot, pour le service d'agrégation 
 * meta.security ^binding.description = "type de créneau : public, pro, SNP"
 
 * serviceType ^slicing.discriminator.type = #exists
-* serviceType ^slicing.discriminator.path = "serviceType.Coding"
+* serviceType ^slicing.discriminator.path = "coding"
 * serviceType ^slicing.rules = #open
 * serviceType contains TypeConsultation 0..3 and motifConsultation 0..*
 
