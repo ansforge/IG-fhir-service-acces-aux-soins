@@ -103,6 +103,10 @@ package IG #DDDDDD{
              Slot.serviceType:referencecpts.extension => [1..None]
              Slot.serviceType:referencecpts.extension:sas-servicetype-r5 => <&plus>[1..1]
              Slot.serviceType:referencecpts.extension:sas-servicetype-r5.value[x] => <&plus>[None..None]
+             Slot.serviceType:motifConsultation => [0..*]
+             Slot.serviceType:motifConsultation.extension:sas-servicetype-r5 => <&plus>[0..1]
+             Slot.serviceType:motifConsultation.coding => [None..0]
+             Slot.serviceType:motifConsultation.text => [1..None]
              Slot.appointmentType.coding => [None..None]
              Slot.schedule => [None..None]
              Slot.status => [None..None]
@@ -258,6 +262,7 @@ package IG #DDDDDD{
      }
      package extension #paleturquoise {
 
+     FrSlotAgregateurCPTS -[#black,dashed,thickness=2]-> SASServiceTypeR5
      FrSlotAgregateurCPTS -[#black,dashed,thickness=2]-> SASServiceTypeR5
      FrSlotAgregateurCPTS -[#black,dashed,thickness=2]-> SASServiceTypeR5
      FrSlotAgregateurCPTS -[#black,dashed,thickness=2]-> SASServiceTypeR5
