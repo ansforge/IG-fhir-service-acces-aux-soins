@@ -10,14 +10,14 @@ Description: "Profil de Slot, dérivé de FrSlot, pour le service d'agrégation 
 * meta.security ^binding.description = "type de créneau : public, pro, SNP"
 
 * serviceType ^slicing.discriminator.type = #value
-* serviceType ^slicing.discriminator.path = "$this"
-//* serviceType ^slicing.discriminator.path = "coding.exists()"
+* serviceType ^slicing.discriminator.path = "coding.exists()"
 * serviceType ^slicing.rules = #closed
 * serviceType contains TypeConsultation 0..3 and motifConsultation 0..*
 
+* serviceType[TypeConsultation].coding 1..1 
 * serviceType[TypeConsultation] from sas-valueset-typeconsultation (required)
 * serviceType[TypeConsultation] ^short = "blabla"
-* serviceType[TypeConsultation].coding 1..1
+
 
 * serviceType[motifConsultation].coding 0..0
 * serviceType[motifConsultation] ^short = "blabla"
