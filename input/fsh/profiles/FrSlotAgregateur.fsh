@@ -11,16 +11,15 @@ Description: "Profil de Slot, dérivé de FrSlot, pour le service d'agrégation 
 
 * serviceType ^slicing.discriminator.type = #exists
 * serviceType ^slicing.discriminator.path = "coding"
-* serviceType ^slicing.rules = #open
+* serviceType ^slicing.rules = #closed
 * serviceType contains TypeConsultation 0..3 and motifConsultation 0..*
 
 * serviceType[TypeConsultation].coding 1..1 
 * serviceType[TypeConsultation] from sas-valueset-typeconsultation (required)
-* serviceType[TypeConsultation] ^short = "blabla"
-
+* serviceType[TypeConsultation] ^short = "Slicing type de consultation structuré (au cabinet, à domicile, téléconsultation)"
 
 * serviceType[motifConsultation].coding 0..0
-* serviceType[motifConsultation] ^short = "blabla"
+* serviceType[motifConsultation] ^short = "Slicing type de consulatation pour motif en texte libre"
 * serviceType[motifConsultation].text 1..1
 
 * specialty ^binding.strength = #required
