@@ -9,8 +9,8 @@ Description: "Profil de Slot, dérivé de FrSlot, pour le service d'agrégation 
 * meta.security from $JDV-J165-TypeCreneau-SAS (required)
 * meta.security ^binding.description = "type de créneau : public, pro, SNP"
 
-* serviceType ^slicing.discriminator.type = #value
-* serviceType ^slicing.discriminator.path = "coding.exists()"
+* serviceType ^slicing.discriminator.type = #exists
+* serviceType ^slicing.discriminator.path = "serviceType.coding"
 * serviceType ^slicing.rules = #closed
 * serviceType contains TypeConsultation 0..3 and motifConsultation 0..*
 
