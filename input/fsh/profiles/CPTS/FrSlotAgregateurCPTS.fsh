@@ -15,7 +15,7 @@ Description: "Profil de Slot, dérivé de FrSlot, pour le cas d'usage agrégateu
 
 * serviceType.extension contains sas-cpts-slot-servicetype-aggregator named sas-servicetype-r5 0..1 
 
-* serviceType contains TypeConsultation 0..* and referencecpts 0..*
+* serviceType contains TypeConsultation 0..* and referencecpts 0..* and motifConsultation 0..*
 
 * serviceType[TypeConsultation] from $v3-ActEncounterCode (required)
 * serviceType[TypeConsultation].coding.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -24,6 +24,11 @@ Description: "Profil de Slot, dérivé de FrSlot, pour le cas d'usage agrégateu
 * serviceType[referencecpts] from sas-valueset-categorieetablissement
 * serviceType[referencecpts].extension[sas-servicetype-r5] 1..1
 * serviceType[referencecpts].extension[sas-servicetype-r5].valueReference only Reference(FrHealthcareServiceAgregateurCPTS)
+
+//Test
+* serviceType[motifConsultation].coding 0..0
+* serviceType[motifConsultation] ^short = "Slicing type de consultation pour motif en texte libre"
+* serviceType[motifConsultation].text 1..1
 
 * appointmentType.coding from sas-valueset-appointmentreason (required)
 * schedule only Reference(FrScheduleAgregateur)

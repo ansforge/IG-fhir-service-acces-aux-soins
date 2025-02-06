@@ -19,7 +19,7 @@ Description: "Profil de Slot, dérivé de FrSlot, pour le service d'agrégation 
 * serviceType[TypeConsultation] ^short = "Slicing type de consultation structuré (au cabinet, à domicile, téléconsultation)"
 
 * serviceType[motifConsultation].coding 0..0
-* serviceType[motifConsultation] ^short = "Slicing type de consulatation pour motif en texte libre"
+* serviceType[motifConsultation] ^short = "Slicing type de consultation pour motif en texte libre"
 * serviceType[motifConsultation].text 1..1
 
 * specialty ^binding.strength = #required
