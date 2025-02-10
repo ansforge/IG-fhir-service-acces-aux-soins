@@ -23,22 +23,40 @@
   ] ) ; # 
   fhir:entry ( [
      fhir:fullUrl [ fhir:v "https://<base_URl>/Slot/ExampleSlotCPTS1"^^xsd:anyURI ] ;
-     fhir:resource ( <https://<base_URl>/Slot/ExampleSlotCPTS1> )
+     fhir:resource ( <https://<base_URl>/Slot/ExampleSlotCPTS1> ) ;
+     fhir:search [
+       fhir:mode [ fhir:v "match" ]
+     ]
   ] [
      fhir:fullUrl [ fhir:v "https://<base_URl>/Schedule/ExampleSchedule"^^xsd:anyURI ] ;
-     fhir:resource ( <https://<base_URl>/Schedule/ExampleSchedule> )
+     fhir:resource ( <https://<base_URl>/Schedule/ExampleSchedule> ) ;
+     fhir:search [
+       fhir:mode [ fhir:v "include" ]
+     ]
   ] [
      fhir:fullUrl [ fhir:v "https://<base_URl>/Practitioner/ExamplePractitioner"^^xsd:anyURI ] ;
-     fhir:resource ( <https://<base_URl>/Practitioner/ExamplePractitioner> )
+     fhir:resource ( <https://<base_URl>/Practitioner/ExamplePractitioner> ) ;
+     fhir:search [
+       fhir:mode [ fhir:v "include" ]
+     ]
   ] [
      fhir:fullUrl [ fhir:v "https://<base_URl>/PractitionerRole/ExamplePractitionerRoleAgregateur"^^xsd:anyURI ] ;
-     fhir:resource ( <https://<base_URl>/PractitionerRole/ExamplePractitionerRoleAgregateur> )
+     fhir:resource ( <https://<base_URl>/PractitionerRole/ExamplePractitionerRoleAgregateur> ) ;
+     fhir:search [
+       fhir:mode [ fhir:v "include" ]
+     ]
   ] [
      fhir:fullUrl [ fhir:v "https://<base_URl>/HealthcareService/ExampleHealthcareServiceCPTS1"^^xsd:anyURI ] ;
-     fhir:resource ( <https://<base_URl>/HealthcareService/ExampleHealthcareServiceCPTS1> )
+     fhir:resource ( <https://<base_URl>/HealthcareService/ExampleHealthcareServiceCPTS1> ) ;
+     fhir:search [
+       fhir:mode [ fhir:v "include" ]
+     ]
   ] [
      fhir:fullUrl [ fhir:v "https://<base_URl>/Organization/ExampleOrgaCPTS1"^^xsd:anyURI ] ;
-     fhir:resource ( <https://<base_URl>/Organization/ExampleOrgaCPTS1> )
+     fhir:resource ( <https://<base_URl>/Organization/ExampleOrgaCPTS1> ) ;
+     fhir:search [
+       fhir:mode [ fhir:v "include" ]
+     ]
   ] ) . # 
 
 <https://<base_URl>/Slot/ExampleSlotCPTS1> a fhir:Slot ;

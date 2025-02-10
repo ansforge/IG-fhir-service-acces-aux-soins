@@ -1,15 +1,15 @@
 SAS : Validation Results
 =========================================
 
-err = 5, warn = 32, info = 33
+err = 5, warn = 8, info = 33
 $--
 Generated $--. FHIR version $-- for ans.fhir.fr.sas#$-- (canonical = https://interop.esante.gouv.fr/ig/fhir/sas)
  Build Errors : 0 / 8 / 0
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Appointment-1 : 0 / 0 / 1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Appointment-2 : 0 / 0 / 1
- /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundleAgregateurSOS : 0 / 10 / 40
- /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundleCPTS1 : 0 / 6 / 22
- /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundleCPTS2 : 0 / 8 / 28
+ /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundleAgregateurSOS : 0 / 0 / 40
+ /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundleCPTS1 : 0 / 0 / 22
+ /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundleCPTS2 : 0 / 0 / 28
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundlePSIndiv : 0 / 0 / 46
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/CapabilityStatement-SAS-Consommateur-CPTS : 0 / 0 / 1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/CapabilityStatement-SAS-Consommateur-SOS : 1 / 0 / 1
@@ -101,34 +101,10 @@ WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in 
 INFORMATION: Bundle/ExampleBundleAgregateurSOS: Bundle.entry[2].resource/*Location/1111111111*/.identifier[0].type: Reference to draft CodeSystem https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-identifier-type|2.1.0
 INFORMATION: Bundle/ExampleBundleAgregateurSOS: Bundle.entry[6].resource/*Location/2222222222*/.identifier[0].type: Reference to draft CodeSystem https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-identifier-type|2.1.0
 INFORMATION: Bundle/ExampleBundleAgregateurSOS: Bundle.entry[9].resource/*Location/3333333333*/.identifier[0].type: Reference to draft CodeSystem https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-identifier-type|2.1.0
-WARNING: Bundle/ExampleBundleAgregateurSOS: Bundle.entry[0]: This is not a matching resource type for the specified search (is a search mode needed?) (Slot expecting [Schedule])
-WARNING: Bundle/ExampleBundleAgregateurSOS: Bundle.entry[2]: This is not a matching resource type for the specified search (is a search mode needed?) (Location expecting [Schedule])
-WARNING: Bundle/ExampleBundleAgregateurSOS: Bundle.entry[3]: This is not a matching resource type for the specified search (is a search mode needed?) (Organization expecting [Schedule])
-WARNING: Bundle/ExampleBundleAgregateurSOS: Bundle.entry[4]: This is not a matching resource type for the specified search (is a search mode needed?) (Slot expecting [Schedule])
-WARNING: Bundle/ExampleBundleAgregateurSOS: Bundle.entry[6]: This is not a matching resource type for the specified search (is a search mode needed?) (Location expecting [Schedule])
-WARNING: Bundle/ExampleBundleAgregateurSOS: Bundle.entry[7]: This is not a matching resource type for the specified search (is a search mode needed?) (Slot expecting [Schedule])
-WARNING: Bundle/ExampleBundleAgregateurSOS: Bundle.entry[9]: This is not a matching resource type for the specified search (is a search mode needed?) (Location expecting [Schedule])
-WARNING: Bundle/ExampleBundleAgregateurSOS: Bundle.entry[10]: This is not a matching resource type for the specified search (is a search mode needed?) (Organization expecting [Schedule])
-WARNING: Bundle/ExampleBundleAgregateurSOS: Bundle.entry[11]: This is not a matching resource type for the specified search (is a search mode needed?) (Slot expecting [Schedule])
-WARNING: Bundle/ExampleBundleAgregateurSOS: Bundle: SearchSet bundles should have search modes on the entries
 == fsh-generated/resources/Bundle-ExampleBundleCPTS1.json ==
 INFORMATION: Bundle/ExampleBundleCPTS1: Bundle.entry[3].resource/*PractitionerRole/ExamplePractitionerRoleAgregateur*/.contained[0]/*Location/ExampleLocation*/.identifier[0].type: Reference to draft CodeSystem https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-identifier-type|2.1.0
-WARNING: Bundle/ExampleBundleCPTS1: Bundle.entry[1]: This is not a matching resource type for the specified search (is a search mode needed?) (Schedule expecting [Slot])
-WARNING: Bundle/ExampleBundleCPTS1: Bundle.entry[2]: This is not a matching resource type for the specified search (is a search mode needed?) (Practitioner expecting [Slot])
-WARNING: Bundle/ExampleBundleCPTS1: Bundle.entry[3]: This is not a matching resource type for the specified search (is a search mode needed?) (PractitionerRole expecting [Slot])
-WARNING: Bundle/ExampleBundleCPTS1: Bundle.entry[4]: This is not a matching resource type for the specified search (is a search mode needed?) (HealthcareService expecting [Slot])
-WARNING: Bundle/ExampleBundleCPTS1: Bundle.entry[5]: This is not a matching resource type for the specified search (is a search mode needed?) (Organization expecting [Slot])
-WARNING: Bundle/ExampleBundleCPTS1: Bundle: SearchSet bundles should have search modes on the entries
 == fsh-generated/resources/Bundle-ExampleBundleCPTS2.json ==
 INFORMATION: Bundle/ExampleBundleCPTS2: Bundle.entry[3].resource/*PractitionerRole/ExamplePractitionerRoleAgregateur*/.contained[0]/*Location/ExampleLocation*/.identifier[0].type: Reference to draft CodeSystem https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-identifier-type|2.1.0
-WARNING: Bundle/ExampleBundleCPTS2: Bundle.entry[1]: This is not a matching resource type for the specified search (is a search mode needed?) (Schedule expecting [Slot])
-WARNING: Bundle/ExampleBundleCPTS2: Bundle.entry[2]: This is not a matching resource type for the specified search (is a search mode needed?) (Practitioner expecting [Slot])
-WARNING: Bundle/ExampleBundleCPTS2: Bundle.entry[3]: This is not a matching resource type for the specified search (is a search mode needed?) (PractitionerRole expecting [Slot])
-WARNING: Bundle/ExampleBundleCPTS2: Bundle.entry[4]: This is not a matching resource type for the specified search (is a search mode needed?) (HealthcareService expecting [Slot])
-WARNING: Bundle/ExampleBundleCPTS2: Bundle.entry[5]: This is not a matching resource type for the specified search (is a search mode needed?) (Organization expecting [Slot])
-WARNING: Bundle/ExampleBundleCPTS2: Bundle.entry[6]: This is not a matching resource type for the specified search (is a search mode needed?) (HealthcareService expecting [Slot])
-WARNING: Bundle/ExampleBundleCPTS2: Bundle.entry[7]: This is not a matching resource type for the specified search (is a search mode needed?) (Organization expecting [Slot])
-WARNING: Bundle/ExampleBundleCPTS2: Bundle: SearchSet bundles should have search modes on the entries
 == fsh-generated/resources/Bundle-ExampleBundlePSIndiv.json ==
 INFORMATION: Bundle/ExampleBundlePSIndiv: Bundle.entry[3].resource/*PractitionerRole/ExamplePractitionerRoleAgregateur2*/.contained[0]/*Location/ExampleLocation3*/.identifier[0].type: Reference to draft CodeSystem https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-identifier-type|2.1.0
 INFORMATION: Bundle/ExampleBundlePSIndiv: Bundle.entry[6].resource/*PractitionerRole/ExamplePractitionerRoleAgregateur3*/.contained[0]/*Location/ExampleLocation2*/.identifier[0].type: Reference to draft CodeSystem https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-identifier-type|2.1.0
