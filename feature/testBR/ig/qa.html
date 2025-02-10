@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = 1, errors = 5, warn = 41, info = 33-->
+<!-- broken links = 1, errors = 5, warn = 32, info = 33-->
 <head>
   <title>SAS : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
@@ -46,9 +46,9 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for SAS</h1>
- <p>Generated Thu Feb 06 14:38:23 UTC 2025, FHIR version 4.0.1 for ans.fhir.fr.sas#1.1.0 (canonical = <a href="https://interop.esante.gouv.fr/ig/fhir/sas">https://interop.esante.gouv.fr/ig/fhir/sas</a> (<a href="https://interop.esante.gouv.fr/ig/fhir/sas/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a></p>
+ <p>Generated Mon Feb 10 09:14:10 UTC 2025, FHIR version 4.0.1 for ans.fhir.fr.sas#1.1.0 (canonical = <a href="https://interop.esante.gouv.fr/ig/fhir/sas">https://interop.esante.gouv.fr/ig/fhir/sas</a> (<a href="https://interop.esante.gouv.fr/ig/fhir/sas/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
- <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.8.10</span></td></tr>
+ <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.8.11</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = ans.fhir.fr.sas, Canonical = https://interop.esante.gouv.fr/ig/fhir/sas</td></tr>
  <tr><td>Realm Check for n/a:</td><td><span style="color: maroon; font-weight: bold"></span><ul><li>n/a</li></ul></td></tr>
  <tr><td>Language Info:</td><td>This IG has no language information</td></tr>
@@ -132,7 +132,7 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
  <tr><td>IPA Comparison:</td><td> n/a</td></tr>
  <tr><td>IPS Comparison:</td><td> n/a</td></tr>
  <tr><td>Validation Flags:</td><td> On: autoLoad; Off: hintAboutNonMustSupport, anyExtensionsAllowed, checkAggregation, showReferenceMessages, noExperimentalContent, displayWarnings</td></tr>
- <tr><td>Summary:</td><td> errors = 5, warn = 41, info = 33, broken links = 1.  <button onclick="toggleCodes()">Show Message Ids</button></td></tr>
+ <tr><td>Summary:</td><td> errors = 5, warn = 32, info = 33, broken links = 1.  <button onclick="toggleCodes()">Show Message Ids</button></td></tr>
 </table>
  <table class="grid">
    <tr>
@@ -157,7 +157,7 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
      <td><a href="#_home_runner_work_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_fsh-generated_resources_Bundle-ExampleBundleCPTS2"><b>/home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundleCPTS2</b></a></td><td><b>0</b></td><td><b>8</b></td><td><b>1</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
-     <td><a href="#_home_runner_work_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_fsh-generated_resources_Bundle-ExampleBundlePSIndiv"><b>/home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundlePSIndiv</b></a></td><td><b>0</b></td><td><b>9</b></td><td><b>3</b></td>
+     <td><a href="#_home_runner_work_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_fsh-generated_resources_Bundle-ExampleBundlePSIndiv"><b>/home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundlePSIndiv</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>3</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#_home_runner_work_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_fsh-generated_resources_CapabilityStatement-SAS-Consommateur-CPTS"><b>/home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/CapabilityStatement-SAS-Consommateur-CPTS</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
@@ -559,40 +559,13 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>Bundle&#8203;.entry[3]&#8203;.resource&#8203;/*PractitionerRole&#8203;/ExamplePractitionerRoleAgregateur2*&#8203;/&#8203;.contained[0]&#8203;/*Location&#8203;/ExampleLocation3*&#8203;/&#8203;.identifier[0]&#8203;.type (l172&#8203;/c18)</b></td><td><b>information</b></td><td><b>Reference to draft CodeSystem https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-identifier-type|2.1.0</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">MSG_DRAFT</span></td>
+     <td><b>Bundle&#8203;.entry[3]&#8203;.resource&#8203;/*PractitionerRole&#8203;/ExamplePractitionerRoleAgregateur2*&#8203;/&#8203;.contained[0]&#8203;/*Location&#8203;/ExampleLocation3*&#8203;/&#8203;.identifier[0]&#8203;.type (l181&#8203;/c18)</b></td><td><b>information</b></td><td><b>Reference to draft CodeSystem https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-identifier-type|2.1.0</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">MSG_DRAFT</span></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>Bundle&#8203;.entry[6]&#8203;.resource&#8203;/*PractitionerRole&#8203;/ExamplePractitionerRoleAgregateur3*&#8203;/&#8203;.contained[0]&#8203;/*Location&#8203;/ExampleLocation2*&#8203;/&#8203;.identifier[0]&#8203;.type (l313&#8203;/c18)</b></td><td><b>information</b></td><td><b>Reference to draft CodeSystem https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-identifier-type|2.1.0</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">MSG_DRAFT</span></td>
+     <td><b>Bundle&#8203;.entry[6]&#8203;.resource&#8203;/*PractitionerRole&#8203;/ExamplePractitionerRoleAgregateur3*&#8203;/&#8203;.contained[0]&#8203;/*Location&#8203;/ExampleLocation2*&#8203;/&#8203;.identifier[0]&#8203;.type (l331&#8203;/c18)</b></td><td><b>information</b></td><td><b>Reference to draft CodeSystem https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-identifier-type|2.1.0</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">MSG_DRAFT</span></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>Bundle&#8203;.entry[10]&#8203;.resource&#8203;/*PractitionerRole&#8203;/ExamplePractitionerRoleAgregateur4*&#8203;/&#8203;.contained[0]&#8203;/*Location&#8203;/ExampleLocation3*&#8203;/&#8203;.identifier[0]&#8203;.type (l488&#8203;/c18)</b></td><td><b>information</b></td><td><b>Reference to draft CodeSystem https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-identifier-type|2.1.0</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">MSG_DRAFT</span></td>
-   </tr>
-   <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[1] (l1/c2)</b></td><td><b>warning</b></td><td><b>This is not a matching resource type for the specified search (is a search mode needed?) (Schedule expecting [Slot])</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">BUNDLE_SEARCH_ENTRY_WRONG_RESOURCE_TYPE_NO_MODE</span></td>
-   </tr>
-   <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[2] (l1/c2)</b></td><td><b>warning</b></td><td><b>This is not a matching resource type for the specified search (is a search mode needed?) (Practitioner expecting [Slot])</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">BUNDLE_SEARCH_ENTRY_WRONG_RESOURCE_TYPE_NO_MODE</span></td>
-   </tr>
-   <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[3] (l1/c2)</b></td><td><b>warning</b></td><td><b>This is not a matching resource type for the specified search (is a search mode needed?) (PractitionerRole expecting [Slot])</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">BUNDLE_SEARCH_ENTRY_WRONG_RESOURCE_TYPE_NO_MODE</span></td>
-   </tr>
-   <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[5] (l1/c2)</b></td><td><b>warning</b></td><td><b>This is not a matching resource type for the specified search (is a search mode needed?) (Schedule expecting [Slot])</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">BUNDLE_SEARCH_ENTRY_WRONG_RESOURCE_TYPE_NO_MODE</span></td>
-   </tr>
-   <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[6] (l1/c2)</b></td><td><b>warning</b></td><td><b>This is not a matching resource type for the specified search (is a search mode needed?) (PractitionerRole expecting [Slot])</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">BUNDLE_SEARCH_ENTRY_WRONG_RESOURCE_TYPE_NO_MODE</span></td>
-   </tr>
-   <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[8] (l1/c2)</b></td><td><b>warning</b></td><td><b>This is not a matching resource type for the specified search (is a search mode needed?) (Schedule expecting [Slot])</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">BUNDLE_SEARCH_ENTRY_WRONG_RESOURCE_TYPE_NO_MODE</span></td>
-   </tr>
-   <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[9] (l1/c2)</b></td><td><b>warning</b></td><td><b>This is not a matching resource type for the specified search (is a search mode needed?) (Practitioner expecting [Slot])</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">BUNDLE_SEARCH_ENTRY_WRONG_RESOURCE_TYPE_NO_MODE</span></td>
-   </tr>
-   <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[10] (l1/c2)</b></td><td><b>warning</b></td><td><b>This is not a matching resource type for the specified search (is a search mode needed?) (PractitionerRole expecting [Slot])</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">BUNDLE_SEARCH_ENTRY_WRONG_RESOURCE_TYPE_NO_MODE</span></td>
-   </tr>
-   <tr style="background-color: #ffebcc">
-     <td><b>Bundle (l1/c2)</b></td><td><b>warning</b></td><td><b>SearchSet bundles should have search modes on the entries</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">BUNDLE_SEARCH_NO_MODE</span></td>
+     <td><b>Bundle&#8203;.entry[10]&#8203;.resource&#8203;/*PractitionerRole&#8203;/ExamplePractitionerRoleAgregateur4*&#8203;/&#8203;.contained[0]&#8203;/*Location&#8203;/ExampleLocation3*&#8203;/&#8203;.identifier[0]&#8203;.type (l518&#8203;/c18)</b></td><td><b>information</b></td><td><b>Reference to draft CodeSystem https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-identifier-type|2.1.0</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">MSG_DRAFT</span></td>
    </tr>
 </table>
 <hr/>
@@ -1112,13 +1085,13 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[46]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c131483)</b></td><td><b>information</b></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SECURITY_STRING_CONTENT_WARNING</span></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[46]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c131597)</b></td><td><b>information</b></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SECURITY_STRING_CONTENT_WARNING</span></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[57]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c148317)</b></td><td><b>information</b></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SECURITY_STRING_CONTENT_WARNING</span></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[57]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c148431)</b></td><td><b>information</b></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SECURITY_STRING_CONTENT_WARNING</span></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[99]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c205277)</b></td><td><b>information</b></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SECURITY_STRING_CONTENT_WARNING</span></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[99]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c205391)</b></td><td><b>information</b></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SECURITY_STRING_CONTENT_WARNING</span></td>
    </tr>
 </table>
 <hr/>
@@ -1161,10 +1134,10 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[22]&#8203;.slicing&#8203;.discriminator[0] (l1&#8203;/c50260)</b></td><td><b>information</b></td><td><b>The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_PATH_SLICING_DEPRECATED</span></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[22]&#8203;.slicing&#8203;.discriminator[0] (l1&#8203;/c50374)</b></td><td><b>information</b></td><td><b>The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_PATH_SLICING_DEPRECATED</span></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[89]&#8203;.slicing&#8203;.discriminator[0] (l1&#8203;/c135094)</b></td><td><b>information</b></td><td><b>The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_PATH_SLICING_DEPRECATED</span></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[89]&#8203;.slicing&#8203;.discriminator[0] (l1&#8203;/c135208)</b></td><td><b>information</b></td><td><b>The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_PATH_SLICING_DEPRECATED</span></td>
    </tr>
 </table>
 <hr/>
@@ -1177,10 +1150,10 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.differential&#8203;.element[2]&#8203;.slicing&#8203;.discriminator[0] (l1&#8203;/c152983)</b></td><td><b>information</b></td><td><b>The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_PATH_SLICING_DEPRECATED</span></td>
+     <td><b>StructureDefinition&#8203;.differential&#8203;.element[2]&#8203;.slicing&#8203;.discriminator[0] (l1&#8203;/c153097)</b></td><td><b>information</b></td><td><b>The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_PATH_SLICING_DEPRECATED</span></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[29]&#8203;.slicing&#8203;.discriminator[0] (l1&#8203;/c97351)</b></td><td><b>information</b></td><td><b>The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_PATH_SLICING_DEPRECATED</span></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[29]&#8203;.slicing&#8203;.discriminator[0] (l1&#8203;/c97465)</b></td><td><b>information</b></td><td><b>The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_PATH_SLICING_DEPRECATED</span></td>
    </tr>
 </table>
 <hr/>
@@ -1196,7 +1169,7 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
      <td><b>StructureDefinition&#8203;.where(url = 'http:&#8203;/&#8203;/hl7&#8203;.org&#8203;/fhir&#8203;/5&#8203;.0&#8203;/StructureDefinition&#8203;/extension-Slot&#8203;.serviceType')</b></td><td><b>error</b></td><td><b>Conformance resource /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/StructureDefinition-sas-cpts-slot-servicetype-aggregator.json - the canonical URL (https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-servicetype-aggregator) does not match the URL (http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">RESOURCE_CANONICAL_MISMATCH</span></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition (l1/c17159)</b></td><td><b>error</b></td><td><b>When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">VALIDATION_HL7_WG_NEEDED</span></td>
+     <td><b>StructureDefinition (l1/c17273)</b></td><td><b>error</b></td><td><b>When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">VALIDATION_HL7_WG_NEEDED</span></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>fsh-generated&#8203;/resources&#8203;/StructureDefinition-sas-cpts-slot-servicetype-aggregator</b></td><td><b>error</b></td><td><b>URL Mismatch https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-servicetype-aggregator vs http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
@@ -1225,7 +1198,7 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[20]&#8203;.slicing&#8203;.discriminator[0] (l1&#8203;/c51752)</b></td><td><b>information</b></td><td><b>The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_PATH_SLICING_DEPRECATED</span></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[20]&#8203;.slicing&#8203;.discriminator[0] (l1&#8203;/c51866)</b></td><td><b>information</b></td><td><b>The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_PATH_SLICING_DEPRECATED</span></td>
    </tr>
 </table>
 <hr/>
@@ -1238,10 +1211,10 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[55]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c109941)</b></td><td><b>information</b></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SECURITY_STRING_CONTENT_WARNING</span></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[55]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c110055)</b></td><td><b>information</b></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SECURITY_STRING_CONTENT_WARNING</span></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[20]&#8203;.slicing&#8203;.discriminator[0] (l1&#8203;/c64144)</b></td><td><b>information</b></td><td><b>The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_PATH_SLICING_DEPRECATED</span></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[20]&#8203;.slicing&#8203;.discriminator[0] (l1&#8203;/c64258)</b></td><td><b>information</b></td><td><b>The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_PATH_SLICING_DEPRECATED</span></td>
    </tr>
 </table>
 <hr/>
@@ -1254,7 +1227,7 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[36]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c82972)</b></td><td><b>information</b></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SECURITY_STRING_CONTENT_WARNING</span></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[36]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c83086)</b></td><td><b>information</b></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SECURITY_STRING_CONTENT_WARNING</span></td>
    </tr>
 </table>
 <hr/>
@@ -1287,10 +1260,10 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[46]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c114208)</b></td><td><b>information</b></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SECURITY_STRING_CONTENT_WARNING</span></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[46]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c114322)</b></td><td><b>information</b></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SECURITY_STRING_CONTENT_WARNING</span></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[57]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c131042)</b></td><td><b>information</b></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SECURITY_STRING_CONTENT_WARNING</span></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[57]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c131156)</b></td><td><b>information</b></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SECURITY_STRING_CONTENT_WARNING</span></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>StructureDefinition&#8203;.where(url = 'https:&#8203;/&#8203;/interop&#8203;.esante&#8203;.gouv&#8203;.fr&#8203;/ig&#8203;/fhir&#8203;/sas&#8203;/StructureDefinition&#8203;/sas-sos-appointment')</b></td><td><b>warning</b></td><td><b>The Implementation Guide contains no examples for this profile</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
@@ -1316,10 +1289,10 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[24]&#8203;.pattern&#8203;.ofType(CodeableConcept) (l1&#8203;/c64920)</b></td><td><b>information</b></td><td><b>Reference to draft CodeSystem https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-identifier-type|2.1.0</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">MSG_DRAFT</span></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[24]&#8203;.pattern&#8203;.ofType(CodeableConcept) (l1&#8203;/c65034)</b></td><td><b>information</b></td><td><b>Reference to draft CodeSystem https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-identifier-type|2.1.0</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">MSG_DRAFT</span></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.differential&#8203;.element[1]&#8203;.pattern&#8203;.ofType(CodeableConcept) (l1&#8203;/c136969)</b></td><td><b>information</b></td><td><b>Reference to draft CodeSystem https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-identifier-type|2.1.0</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">MSG_DRAFT</span></td>
+     <td><b>StructureDefinition&#8203;.differential&#8203;.element[1]&#8203;.pattern&#8203;.ofType(CodeableConcept) (l1&#8203;/c137083)</b></td><td><b>information</b></td><td><b>Reference to draft CodeSystem https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-identifier-type|2.1.0</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">MSG_DRAFT</span></td>
    </tr>
 </table>
 <hr/>
@@ -1332,10 +1305,10 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[22]&#8203;.slicing&#8203;.discriminator[0] (l1&#8203;/c46485)</b></td><td><b>information</b></td><td><b>The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_PATH_SLICING_DEPRECATED</span></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[22]&#8203;.slicing&#8203;.discriminator[0] (l1&#8203;/c46599)</b></td><td><b>information</b></td><td><b>The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_PATH_SLICING_DEPRECATED</span></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[89]&#8203;.slicing&#8203;.discriminator[0] (l1&#8203;/c131318)</b></td><td><b>information</b></td><td><b>The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_PATH_SLICING_DEPRECATED</span></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[89]&#8203;.slicing&#8203;.discriminator[0] (l1&#8203;/c131432)</b></td><td><b>information</b></td><td><b>The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_PATH_SLICING_DEPRECATED</span></td>
    </tr>
 </table>
 <hr/>
@@ -1534,30 +1507,6 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
    <tr style="background-color: #fff4ee">
      <td><a href="Bundle-ExampleBundleCPTS2.html">fsh-generated/resources/Bundle-ExampleBundleCPTS2.json</a></td><td><b>This is not a matching resource type for the specified search (is a search mode needed?) (Organization expecting [Slot])</b></td>
    </tr>
-   <tr style="background-color: #fff4ee">
-     <td><a href="Bundle-ExampleBundlePSIndiv.html">fsh-generated/resources/Bundle-ExampleBundlePSIndiv.json</a></td><td><b>This is not a matching resource type for the specified search (is a search mode needed?) (Schedule expecting [Slot])</b></td>
-   </tr>
-   <tr style="background-color: #fff4ee">
-     <td><a href="Bundle-ExampleBundlePSIndiv.html">fsh-generated/resources/Bundle-ExampleBundlePSIndiv.json</a></td><td><b>This is not a matching resource type for the specified search (is a search mode needed?) (Practitioner expecting [Slot])</b></td>
-   </tr>
-   <tr style="background-color: #fff4ee">
-     <td><a href="Bundle-ExampleBundlePSIndiv.html">fsh-generated/resources/Bundle-ExampleBundlePSIndiv.json</a></td><td><b>This is not a matching resource type for the specified search (is a search mode needed?) (PractitionerRole expecting [Slot])</b></td>
-   </tr>
-   <tr style="background-color: #fff4ee">
-     <td><a href="Bundle-ExampleBundlePSIndiv.html">fsh-generated/resources/Bundle-ExampleBundlePSIndiv.json</a></td><td><b>This is not a matching resource type for the specified search (is a search mode needed?) (Schedule expecting [Slot])</b></td>
-   </tr>
-   <tr style="background-color: #fff4ee">
-     <td><a href="Bundle-ExampleBundlePSIndiv.html">fsh-generated/resources/Bundle-ExampleBundlePSIndiv.json</a></td><td><b>This is not a matching resource type for the specified search (is a search mode needed?) (PractitionerRole expecting [Slot])</b></td>
-   </tr>
-   <tr style="background-color: #fff4ee">
-     <td><a href="Bundle-ExampleBundlePSIndiv.html">fsh-generated/resources/Bundle-ExampleBundlePSIndiv.json</a></td><td><b>This is not a matching resource type for the specified search (is a search mode needed?) (Schedule expecting [Slot])</b></td>
-   </tr>
-   <tr style="background-color: #fff4ee">
-     <td><a href="Bundle-ExampleBundlePSIndiv.html">fsh-generated/resources/Bundle-ExampleBundlePSIndiv.json</a></td><td><b>This is not a matching resource type for the specified search (is a search mode needed?) (Practitioner expecting [Slot])</b></td>
-   </tr>
-   <tr style="background-color: #fff4ee">
-     <td><a href="Bundle-ExampleBundlePSIndiv.html">fsh-generated/resources/Bundle-ExampleBundlePSIndiv.json</a></td><td><b>This is not a matching resource type for the specified search (is a search mode needed?) (PractitionerRole expecting [Slot])</b></td>
-   </tr>
 </table>
 <hr/>
 <a name="BUNDLE_SEARCH_NO_MODE"> </a>
@@ -1571,9 +1520,6 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
    </tr>
    <tr style="background-color: #fff4ee">
      <td><a href="Bundle-ExampleBundleCPTS2.html">fsh-generated/resources/Bundle-ExampleBundleCPTS2.json</a></td><td><b>SearchSet bundles should have search modes on the entries</b></td>
-   </tr>
-   <tr style="background-color: #fff4ee">
-     <td><a href="Bundle-ExampleBundlePSIndiv.html">fsh-generated/resources/Bundle-ExampleBundlePSIndiv.json</a></td><td><b>SearchSet bundles should have search modes on the entries</b></td>
    </tr>
 </table>
 <hr/>

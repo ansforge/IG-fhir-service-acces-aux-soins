@@ -1,5 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -10,14 +11,14 @@
   fhir:id [ fhir:v "ans.fhir.fr.sas"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide ans.fhir.fr.sas</b></p><a name=\"ans.fhir.fr.sas\"> </a><a name=\"hcans.fhir.fr.sas\"> </a><a name=\"ans.fhir.fr.sas-fr-FR\"> </a><h2>SAS</h2><p>The official URL for this implementation guide is: </p><pre>https://interop.esante.gouv.fr/ig/fhir/sas/ImplementationGuide/ans.fhir.fr.sas</pre></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide ans.fhir.fr.sas</b></p><a name=\"ans.fhir.fr.sas\"> </a><a name=\"hcans.fhir.fr.sas\"> </a><a name=\"ans.fhir.fr.sas-fr-FR\"> </a><h2>SAS</h2><p>The official URL for this implementation guide is: </p><pre>https://interop.esante.gouv.fr/ig/fhir/sas/ImplementationGuide/ans.fhir.fr.sas</pre></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/ImplementationGuide/ans.fhir.fr.sas"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "1.1.0"] ; # 
   fhir:name [ fhir:v "SAS"] ; # 
   fhir:title [ fhir:v "Service d'Accès aux Soins"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2025-02-06T14:37:01+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-02-10T09:11:56+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -40,7 +41,10 @@
      fhir:id [ fhir:v "hl7tx" ] ;
      fhir:extension ( [
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "Automatically added as a dependency - all IGs depend on HL7 Terminology" ]
+       fhir:value [
+         a fhir:markdown ;
+         fhir:v "Automatically added as a dependency - all IGs depend on HL7 Terminology"
+       ]
      ] ) ;
      fhir:uri [
        fhir:v "http://terminology.hl7.org/ImplementationGuide/hl7.terminology"^^xsd:anyURI ;
@@ -52,7 +56,10 @@
      fhir:id [ fhir:v "hl7ext" ] ;
      fhir:extension ( [
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack" ]
+       fhir:value [
+         a fhir:markdown ;
+         fhir:v "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"
+       ]
      ] ) ;
      fhir:uri [
        fhir:v "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"^^xsd:anyURI ;
@@ -81,479 +88,797 @@
      fhir:extension ( [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "copyrightyear" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "copyrightyear"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "2020+" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "2020+"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "releaselabel" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "releaselabel"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ci-build" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ci-build"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "shownav" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "shownav"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "autoload-resources" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "autoload-resources"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-liquid" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "path-liquid"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "template/liquid" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "template/liquid"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-liquid" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "path-liquid"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "input/liquid" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "input/liquid"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-qa" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "path-qa"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "temp/qa" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "temp/qa"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-temp" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "path-temp"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "temp/pages" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "temp/pages"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-output" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "path-output"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "output" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "output"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-suppressed-warnings" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "path-suppressed-warnings"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "input/ignoreWarnings.txt" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "input/ignoreWarnings.txt"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-history" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "path-history"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/history.html" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/history.html"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "template-html" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "template-html"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "template-page.html" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "template-page.html"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "template-md" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "template-md"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "template-page-md.html" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "template-page-md.html"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-contact" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "apply-contact"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-context" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "apply-context"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-copyright" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "apply-copyright"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-jurisdiction" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "apply-jurisdiction"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-license" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "apply-license"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-publisher" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "apply-publisher"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-version" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "apply-version"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-wg" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "apply-wg"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "active-tables" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "active-tables"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "fmm-definition" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "fmm-definition"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "http://hl7.org/fhir/versions.html#maturity" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "http://hl7.org/fhir/versions.html#maturity"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "propagate-status" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "propagate-status"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "excludelogbinaryformat" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "excludelogbinaryformat"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "tabbed-snapshots" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "tabbed-snapshots"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "hl7.fhir.uv.tools.r4#0.3.0" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "hl7.fhir.uv.tools.r4#0.3.0"
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "copyrightyear" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "copyrightyear"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "2020+" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "2020+"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "releaselabel" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "releaselabel"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ci-build" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ci-build"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "shownav" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "shownav"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "autoload-resources" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "autoload-resources"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-liquid" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "path-liquid"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "template/liquid" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "template/liquid"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-liquid" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "path-liquid"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "input/liquid" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "input/liquid"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-qa" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "path-qa"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "temp/qa" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "temp/qa"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-temp" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "path-temp"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "temp/pages" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "temp/pages"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-output" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "path-output"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "output" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "output"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-suppressed-warnings" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "path-suppressed-warnings"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "input/ignoreWarnings.txt" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "input/ignoreWarnings.txt"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-history" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "path-history"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/history.html" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/history.html"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "template-html" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "template-html"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "template-page.html" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "template-page.html"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "template-md" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "template-md"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "template-page-md.html" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "template-page-md.html"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-contact" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "apply-contact"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-context" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "apply-context"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-copyright" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "apply-copyright"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-jurisdiction" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "apply-jurisdiction"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-license" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "apply-license"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-publisher" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "apply-publisher"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-version" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "apply-version"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-wg" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "apply-wg"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "active-tables" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "active-tables"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "fmm-definition" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "fmm-definition"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "http://hl7.org/fhir/versions.html#maturity" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "http://hl7.org/fhir/versions.html#maturity"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "propagate-status" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "propagate-status"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "excludelogbinaryformat" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "excludelogbinaryformat"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "tabbed-snapshots" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "tabbed-snapshots"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] ) ;
      fhir:resource ( [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ValueSet" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-appointmentreason> ;
@@ -561,11 +886,17 @@
        ] ;
        fhir:name [ fhir:v "Appointment reason SAS" ] ;
        fhir:description [ fhir:v "Appointment reason SAS" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-aggregator> ;
@@ -573,11 +904,17 @@
        ] ;
        fhir:name [ fhir:v "BundleAgregateur" ] ;
        fhir:description [ fhir:v "Profil de Bundle qui représente le flux de réponse contenant les créneaux disponibles dans le cadre du service d'agrégation de créneaux de la plateforme SAS [Cas d'usage PS Indiv]" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-bundle-aggregator> ;
@@ -585,11 +922,17 @@
        ] ;
        fhir:name [ fhir:v "BundleAgregateurCPTS" ] ;
        fhir:description [ fhir:v "Profil de Bundle qui représente le flux de réponse contenant les créneaux disponibles dans le cadre du service d'agrégation de créneaux de la plateforme SAS - Cas d'usage CPTS" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-bundle-aggregator> ;
@@ -597,11 +940,17 @@
        ] ;
        fhir:name [ fhir:v "BundleAgregateurSOS" ] ;
        fhir:description [ fhir:v "Profil de Bundle qui représente le flux de réponse contenant les créneaux disponibles dans le cadre du service d'agrégation de créneaux de la plateforme SAS [cas d’usage SOS Médecins]" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ValueSet" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-categorieetablissement> ;
@@ -609,11 +958,17 @@
        ] ;
        fhir:name [ fhir:v "Catégorie établissement SAS" ] ;
        fhir:description [ fhir:v "Catégorie d'établissement utilisée dans contexte SAS - CPTS dans un premier temps" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "SearchParameter" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "SearchParameter"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/SearchParameter/cptsslot-sp-servicetype> ;
@@ -621,11 +976,17 @@
        ] ;
        fhir:name [ fhir:v "cptsslot-sp-servicetype" ] ;
        fhir:description [ fhir:v "Paramètre de recherche sur le service type qui mime le paramètre R5. Permet de rechercher ou d'inclure la ressource reférencée HealthCare Service" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Appointment" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Appointment"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Appointment/1> ;
@@ -634,13 +995,17 @@
        fhir:name [ fhir:v "ExampleAppointmentBooked" ] ;
        fhir:description [ fhir:v "Exemple RDV PS indiv booked" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Appointment" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Appointment"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Appointment/2> ;
@@ -649,13 +1014,17 @@
        fhir:name [ fhir:v "ExampleAppointmentCancelled" ] ;
        fhir:description [ fhir:v "Exemple RDV PS indiv cancelled" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Bundle" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Bundle/ExampleBundleAgregateurSOS> ;
@@ -664,13 +1033,17 @@
        fhir:name [ fhir:v "ExampleBundleAgregateurSOS" ] ;
        fhir:description [ fhir:v "Exemple Bundle SOS" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-bundle-aggregator"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-bundle-aggregator>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Bundle" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Bundle/ExampleBundleCPTS1> ;
@@ -679,13 +1052,17 @@
        fhir:name [ fhir:v "ExampleBundleCPTS1" ] ;
        fhir:description [ fhir:v "Exemple Bundle CPTS 1" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-bundle-aggregator"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-bundle-aggregator>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Bundle" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Bundle/ExampleBundleCPTS2> ;
@@ -694,13 +1071,17 @@
        fhir:name [ fhir:v "ExampleBundleCPTS2" ] ;
        fhir:description [ fhir:v "Exemple Bundle CPTS 2" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-bundle-aggregator"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-bundle-aggregator>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Bundle" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Bundle/ExampleBundlePSIndiv> ;
@@ -709,13 +1090,17 @@
        fhir:name [ fhir:v "ExampleBundlePSIndiv" ] ;
        fhir:description [ fhir:v "Exemple Bundle PS indiv" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-aggregator"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-aggregator>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "HealthcareService" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "HealthcareService"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/HealthcareService/ExampleHealthcareServiceCPTS1> ;
@@ -724,13 +1109,17 @@
        fhir:name [ fhir:v "ExampleHealthcareServiceCPTS1" ] ;
        fhir:description [ fhir:v "Exemple healthcare service CPTS 1" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-healthcareservice-aggregator"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-healthcareservice-aggregator>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "HealthcareService" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "HealthcareService"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/HealthcareService/ExampleHealthcareServiceCPTS2> ;
@@ -739,13 +1128,17 @@
        fhir:name [ fhir:v "ExampleHealthcareServiceCPTS2" ] ;
        fhir:description [ fhir:v "Exemple healthcare service CPTS 2" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-healthcareservice-aggregator"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-healthcareservice-aggregator>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Location" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Location"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Location/1111111111> ;
@@ -754,13 +1147,17 @@
        fhir:name [ fhir:v "ExampleLocationSOS1" ] ;
        fhir:description [ fhir:v "Exemple 1 location flux agrégateur sos" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Location" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Location"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Location/2222222222> ;
@@ -769,13 +1166,17 @@
        fhir:name [ fhir:v "ExampleLocationSOS2" ] ;
        fhir:description [ fhir:v "Exemple 2 location flux agrégateur sos" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Location" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Location"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Location/3333333333> ;
@@ -784,13 +1185,17 @@
        fhir:name [ fhir:v "ExampleLocationSOS3" ] ;
        fhir:description [ fhir:v "Exemple 3 location flux agrégateur sos" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Organization" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Organization"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Organization/ExampleOrgaCPTS1> ;
@@ -799,13 +1204,17 @@
        fhir:name [ fhir:v "ExampleOrgaCPTS1" ] ;
        fhir:description [ fhir:v "Exemple d'organisation CPTS 1" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-organization-aggregator"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-organization-aggregator>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Organization" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Organization"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Organization/ExampleOrgaCPTS2> ;
@@ -814,13 +1223,17 @@
        fhir:name [ fhir:v "ExampleOrgaCPTS2" ] ;
        fhir:description [ fhir:v "Exemple d'organisation CPTS 2" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-organization-aggregator"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-organization-aggregator>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Organization" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Organization"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Organization/ExampleOrgaSOS1> ;
@@ -829,13 +1242,17 @@
        fhir:name [ fhir:v "ExampleOrgaSOS1" ] ;
        fhir:description [ fhir:v "Exemple d'organisation SOS 1" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Organization" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Organization"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Organization/ExampleOrgaSOS2> ;
@@ -844,13 +1261,17 @@
        fhir:name [ fhir:v "ExampleOrgaSOS2" ] ;
        fhir:description [ fhir:v "Exemple d'organisation SOS 1" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Practitioner" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Practitioner"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/ExamplePractitioner> ;
@@ -859,13 +1280,17 @@
        fhir:name [ fhir:v "ExamplePractitioner" ] ;
        fhir:description [ fhir:v "Exemple 1 practitioner flux agrégateur" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Practitioner" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Practitioner"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/ExamplePractitioner2> ;
@@ -874,13 +1299,17 @@
        fhir:name [ fhir:v "ExamplePractitioner2" ] ;
        fhir:description [ fhir:v "Exemple 2 practitioner flux agrégateur" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Practitioner" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Practitioner"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/ExamplePractitioner3> ;
@@ -889,13 +1318,17 @@
        fhir:name [ fhir:v "ExamplePractitioner3" ] ;
        fhir:description [ fhir:v "Exemple 3 practitioner flux agrégateur" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Practitioner" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Practitioner"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/ExamplePractitionerRegul1> ;
@@ -904,13 +1337,17 @@
        fhir:name [ fhir:v "ExamplePractitionerRegul1" ] ;
        fhir:description [ fhir:v "Exemple 1 practitioner flux régulateur" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator-regul"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator-regul>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Practitioner" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Practitioner"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/ExamplePractitionerRegul2> ;
@@ -919,13 +1356,17 @@
        fhir:name [ fhir:v "ExamplePractitionerRegul2" ] ;
        fhir:description [ fhir:v "Exemple 2 practitioner flux régulateur" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator-regul"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator-regul>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Practitioner" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Practitioner"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/ExamplePractitionerRegul3> ;
@@ -934,13 +1375,17 @@
        fhir:name [ fhir:v "ExamplePractitionerRegul3" ] ;
        fhir:description [ fhir:v "Exemple 3 practitioner flux régulateur" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator-regul"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator-regul>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "PractitionerRole" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "PractitionerRole"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/PractitionerRole/ExamplePractitionerRoleAgregateur> ;
@@ -949,13 +1394,17 @@
        fhir:name [ fhir:v "ExamplePractitionerRoleAgregateur" ] ;
        fhir:description [ fhir:v "Exemple 1 PractitionerRole flux agrégateur" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-exercice-aggregator"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-exercice-aggregator>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "PractitionerRole" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "PractitionerRole"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/PractitionerRole/ExamplePractitionerRoleAgregateur2> ;
@@ -964,13 +1413,17 @@
        fhir:name [ fhir:v "ExamplePractitionerRoleAgregateur2" ] ;
        fhir:description [ fhir:v "Exemple 2 PractitionerRole flux agrégateur" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-exercice-aggregator"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-exercice-aggregator>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "PractitionerRole" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "PractitionerRole"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/PractitionerRole/ExamplePractitionerRoleAgregateur3> ;
@@ -979,13 +1432,17 @@
        fhir:name [ fhir:v "ExamplePractitionerRoleAgregateur3" ] ;
        fhir:description [ fhir:v "Exemple 3 PractitionerRole flux agrégateur" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-exercice-aggregator"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-exercice-aggregator>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "PractitionerRole" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "PractitionerRole"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/PractitionerRole/ExamplePractitionerRoleAgregateur4> ;
@@ -994,13 +1451,17 @@
        fhir:name [ fhir:v "ExamplePractitionerRoleAgregateur4" ] ;
        fhir:description [ fhir:v "Exemple 4 PractitionerRole flux agrégateur" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-exercice-aggregator"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-exercice-aggregator>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Schedule" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Schedule"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Schedule/ExampleSchedule> ;
@@ -1009,13 +1470,17 @@
        fhir:name [ fhir:v "ExampleSchedule" ] ;
        fhir:description [ fhir:v "Exemple ressource schedule" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-schedule-aggregator"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-schedule-aggregator>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Schedule" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Schedule"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Schedule/ExampleSchedule1> ;
@@ -1024,13 +1489,17 @@
        fhir:name [ fhir:v "ExampleSchedule1" ] ;
        fhir:description [ fhir:v "Exemple 1 ressource schedule" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-schedule-aggregator"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-schedule-aggregator>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Schedule" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Schedule"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Schedule/ExampleSchedule2> ;
@@ -1039,13 +1508,17 @@
        fhir:name [ fhir:v "ExampleSchedule2" ] ;
        fhir:description [ fhir:v "Exemple 2 ressource schedule" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-schedule-aggregator"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-schedule-aggregator>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Schedule" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Schedule"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Schedule/ExampleSchedule3> ;
@@ -1054,13 +1527,17 @@
        fhir:name [ fhir:v "ExampleSchedule3" ] ;
        fhir:description [ fhir:v "Exemple 3 ressource schedule" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-schedule-aggregator"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-schedule-aggregator>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Schedule" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Schedule"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Schedule/ExampleScheduleSOS1> ;
@@ -1069,13 +1546,17 @@
        fhir:name [ fhir:v "ExampleScheduleSOS1" ] ;
        fhir:description [ fhir:v "Exemple 1 ressource schedule sos" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Schedule" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Schedule"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Schedule/ExampleScheduleSOS2> ;
@@ -1084,13 +1565,17 @@
        fhir:name [ fhir:v "ExampleScheduleSOS2" ] ;
        fhir:description [ fhir:v "Exemple 2 ressource schedule sos" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Schedule" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Schedule"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Schedule/ExampleScheduleSOS3> ;
@@ -1099,13 +1584,17 @@
        fhir:name [ fhir:v "ExampleScheduleSOS3" ] ;
        fhir:description [ fhir:v "Exemple 3 ressource schedule sos" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Slot" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Slot"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Slot/ExampleSlotCPTS1> ;
@@ -1114,13 +1603,17 @@
        fhir:name [ fhir:v "ExampleSlotCPTS1" ] ;
        fhir:description [ fhir:v "Exemple ressource slot CPTS - une CPTS" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Slot" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Slot"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Slot/ExampleSlotCPTS2> ;
@@ -1129,13 +1622,17 @@
        fhir:name [ fhir:v "ExampleSlotCPTS2" ] ;
        fhir:description [ fhir:v "Exemple ressource slot CPTS - deux CPTS" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Slot" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Slot"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Slot/ExampleSlotPSIndiv1> ;
@@ -1144,13 +1641,17 @@
        fhir:name [ fhir:v "ExampleSlotPSIndiv1" ] ;
        fhir:description [ fhir:v "Exemple 1 ressource slot PS indiv" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Slot" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Slot"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Slot/ExampleSlotPSIndiv2> ;
@@ -1159,13 +1660,17 @@
        fhir:name [ fhir:v "ExampleSlotPSIndiv2" ] ;
        fhir:description [ fhir:v "Exemple 2 ressource slot PS indiv" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Slot" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Slot"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Slot/ExampleSlotPSIndiv3> ;
@@ -1174,13 +1679,17 @@
        fhir:name [ fhir:v "ExampleSlotPSIndiv3" ] ;
        fhir:description [ fhir:v "Exemple 3 ressource slot PS indiv" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Slot" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Slot"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Slot/ExampleSlotPSIndiv4> ;
@@ -1189,13 +1698,17 @@
        fhir:name [ fhir:v "ExampleSlotPSIndiv4" ] ;
        fhir:description [ fhir:v "Exemple 4 ressource slot PS indiv" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Slot" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Slot"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Slot/ExampleSlotSOS1> ;
@@ -1204,13 +1717,17 @@
        fhir:name [ fhir:v "ExampleSlotSOS1" ] ;
        fhir:description [ fhir:v "Exemple 1 ressource slot sos" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Slot" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Slot"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Slot/ExampleSlotSOS2> ;
@@ -1219,13 +1736,17 @@
        fhir:name [ fhir:v "ExampleSlotSOS2" ] ;
        fhir:description [ fhir:v "Exemple 2 ressource slot sos" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Slot" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Slot"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Slot/ExampleSlotSOS3> ;
@@ -1234,13 +1755,17 @@
        fhir:name [ fhir:v "ExampleSlotSOS3" ] ;
        fhir:description [ fhir:v "Exemple 3 ressource slot sos" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Slot" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Slot"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Slot/ExampleSlotSOS4> ;
@@ -1249,13 +1774,17 @@
        fhir:name [ fhir:v "ExampleSlotSOS4" ] ;
        fhir:description [ fhir:v "Exemple 4 ressource slot sos" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment> ;
@@ -1263,11 +1792,17 @@
        ] ;
        fhir:name [ fhir:v "FrAppointmentSAS" ] ;
        fhir:description [ fhir:v "Profil de Appointment, dérivé de FrAppointment, pour le cas d'usage prise de RDV de la plateforme SAS [Commun cas d'usage PS Indiv et CPTS]" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-appointment> ;
@@ -1275,11 +1810,17 @@
        ] ;
        fhir:name [ fhir:v "FrAppointmentSASSOS" ] ;
        fhir:description [ fhir:v "Profil de Slot, dérivé de FrSlot, pour le service d'agrégation de créneaux de la plateforme SAS [cas d'usage SOS Médecins]" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-healthcareservice-aggregator> ;
@@ -1287,11 +1828,17 @@
        ] ;
        fhir:name [ fhir:v "FrHealthcareServiceAgregateurCPTS" ] ;
        fhir:description [ fhir:v "Profil dérivé de FrHealthcareService pour le cas d'usage agrégateur de la plateforme SAS [Cas d'usage CPTS]" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-location-aggregator> ;
@@ -1299,11 +1846,17 @@
        ] ;
        fhir:name [ fhir:v "FrLocationAgregateur" ] ;
        fhir:description [ fhir:v "Profil de Location, dérivé de FrLocation, pour le service d'agrégation de créneaux de la plateforme SAS [Commun cas d'usage PS Indiv et CPTS]" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator> ;
@@ -1311,11 +1864,17 @@
        ] ;
        fhir:name [ fhir:v "FrLocationAgregateurSOS" ] ;
        fhir:description [ fhir:v "Profil de Location, dérivé de FrLocation, pour le service d'agrégation de créneaux de la plateforme SAS [cas d'usage SOS Médecins]" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-organization-aggregator> ;
@@ -1323,11 +1882,17 @@
        ] ;
        fhir:name [ fhir:v "FrOrganizationAgregateurCPTS" ] ;
        fhir:description [ fhir:v "Profil dérivé de FrOrganization pour le cas d'usage agrégateur de la plateforme SAS [cas d'usage CPTS]" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator> ;
@@ -1335,11 +1900,17 @@
        ] ;
        fhir:name [ fhir:v "FrOrganizationAgregateurSOS" ] ;
        fhir:description [ fhir:v "Profil d'Organization, dérivé de FrOrganization, pour le service d'agrégation de créneaux de la plateforme SAS [cas d'usage SOS Médecins]" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator> ;
@@ -1347,11 +1918,17 @@
        ] ;
        fhir:name [ fhir:v "FrPractitionerAgregateur" ] ;
        fhir:description [ fhir:v "Profil de Practitioner, dérivé de FrPractitioner, pour le service d'agrégation de créneaux de la plateforme SAS [Commun cas d'usage PS Indiv et CPTS]" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator-regul> ;
@@ -1359,11 +1936,17 @@
        ] ;
        fhir:name [ fhir:v "FrPractitionerRegul" ] ;
        fhir:description [ fhir:v "Profil de Practitioner, dérivé de FrPractitioner, pour la gestion des comptes régulateurs de la plateforme SAS [Commun cas d'usage PS Indiv et CPTS]" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-exercice-aggregator> ;
@@ -1371,11 +1954,17 @@
        ] ;
        fhir:name [ fhir:v "FrPractitionerRoleExerciceAgregateur" ] ;
        fhir:description [ fhir:v "Profil de PractitionerRole, dérivé de FrPractitionerRoleExercice, pour le service d'agrégation de créneaux de la plateforme SAS [Commun cas d'usage PS Indiv et CPTS]" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-schedule-aggregator> ;
@@ -1383,11 +1972,17 @@
        ] ;
        fhir:name [ fhir:v "FrScheduleAgregateur" ] ;
        fhir:description [ fhir:v "Profil de Schedule, dérivé de FrSchedule, pour le service d'agrégation de créneaux de la plateforme SAS [Commun cas d'usage PS Indiv et CPTS]" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator> ;
@@ -1395,11 +1990,17 @@
        ] ;
        fhir:name [ fhir:v "FrScheduleAgregateurSOS" ] ;
        fhir:description [ fhir:v "Profil de Schedule, dérivé de FrSchedule, pour le service d'agrégation de créneaux de la plateforme SAS [cas d'usage SOS Médecins]" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-slot-aggregator> ;
@@ -1407,11 +2008,17 @@
        ] ;
        fhir:name [ fhir:v "FrSlotAgregateur" ] ;
        fhir:description [ fhir:v "Profil de Slot, dérivé de FrSlot, pour le service d'agrégation de créneaux de la plateforme SAS [Commun cas d'usage PS Indiv et CPTS]" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator> ;
@@ -1419,11 +2026,17 @@
        ] ;
        fhir:name [ fhir:v "FrSlotAgregateurCPTS" ] ;
        fhir:description [ fhir:v "Profil de Slot, dérivé de FrSlot, pour le cas d'usage agrégateur de la plateforme SAS [cas d'usage CPTS]" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator> ;
@@ -1431,11 +2044,17 @@
        ] ;
        fhir:name [ fhir:v "FrSlotAgregateurSOS" ] ;
        fhir:description [ fhir:v "Profil de Slot, dérivé de FrSlot, pour le service d'agrégation de créneaux de la plateforme SAS [cas d'usage SOS Médecins]" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "CapabilityStatement" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CapabilityStatement"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/CapabilityStatement/SAS-Consommateur-psindiv> ;
@@ -1443,11 +2062,17 @@
        ] ;
        fhir:name [ fhir:v "Profil SAS consommateur de créneaux" ] ;
        fhir:description [ fhir:v "Un consommateur consulte les créneaux ps indiv mis à disposition par un gestionnaire d’agenda. La platefome numérique SAS joue le rôle de consommateur et affiche les créneaux récupérés" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "CapabilityStatement" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CapabilityStatement"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/CapabilityStatement/SAS-Consommateur-CPTS> ;
@@ -1455,11 +2080,17 @@
        ] ;
        fhir:name [ fhir:v "Profil SAS consommateur de créneaux CPTS" ] ;
        fhir:description [ fhir:v "Un consommateur consulte les créneaux CPTS mis à disposition par un gestionnaire d’agenda. La platefome numérique SAS joue le rôle de consommateur et affiche les créneaux récupérés" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "CapabilityStatement" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CapabilityStatement"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/CapabilityStatement/SAS-Consommateur-SOS> ;
@@ -1467,11 +2098,17 @@
        ] ;
        fhir:name [ fhir:v "Profil SAS consommateur de créneaux SOS" ] ;
        fhir:description [ fhir:v "Un consommateur consulte les créneaux SOS mis à disposition par un gestionnaire d’agenda. La platefome numérique SAS joue le rôle de consommateur et affiche les créneaux récupérés" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "CapabilityStatement" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CapabilityStatement"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/CapabilityStatement/SAS-GestionnaireAgenda-CPTS> ;
@@ -1479,11 +2116,17 @@
        ] ;
        fhir:name [ fhir:v "Profil SAS gestionnaire d'agenda CPTS" ] ;
        fhir:description [ fhir:v "Un gestionnaire d'agenda met à disposition d'un consommateur des créneaux de disponibilité. Cas d'usage CPTS" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "CapabilityStatement" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CapabilityStatement"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/CapabilityStatement/SAS-GestionnaireAgenda-PsIndiv> ;
@@ -1491,11 +2134,17 @@
        ] ;
        fhir:name [ fhir:v "Profil SAS gestionnaire d'agenda PS Indiv" ] ;
        fhir:description [ fhir:v "Un gestionnaire d'agenda met à disposition d'un consommateur des créneaux de disponibilité. Cas d'usage PS à titre individuel" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "CapabilityStatement" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CapabilityStatement"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/CapabilityStatement/SAS-GestionnaireAgenda-RDVpsindiv> ;
@@ -1503,11 +2152,17 @@
        ] ;
        fhir:name [ fhir:v "Profil SAS gestionnaire d'agenda RDV ps indiv" ] ;
        fhir:description [ fhir:v "Un gestionnaire d'agenda reçoit des rendez-vous ps indiv envoyés par un déclarant de rendez-vous. La platefome numérique SAS joue le rôle de gestionnaire d'agenda et stocke les rendez-vous récupérés" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "CapabilityStatement" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CapabilityStatement"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/CapabilityStatement/SAS-GestionnaireAgenda-RDVSOS> ;
@@ -1515,11 +2170,17 @@
        ] ;
        fhir:name [ fhir:v "Profil SAS gestionnaire d'agenda RDV SOS" ] ;
        fhir:description [ fhir:v "Un gestionnaire d'agenda reçoit des rendez-vous SOS envoyés par un déclarant de rendez-vous. La platefome numérique SAS joue le rôle de gestionnaire d'agenda et stocke les rendez-vous récupérés" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "CapabilityStatement" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CapabilityStatement"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/CapabilityStatement/SAS-GestionnaireAgenda-SOS> ;
@@ -1527,11 +2188,17 @@
        ] ;
        fhir:name [ fhir:v "Profil SAS gestionnaire d'agenda SOS" ] ;
        fhir:description [ fhir:v "Un gestionnaire d'agenda met à disposition d'un consommateur des créneaux de disponibilité. Cas d'usage SOS médecins" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "CapabilityStatement" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CapabilityStatement"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/CapabilityStatement/SAS-GestionnaireStructure> ;
@@ -1539,11 +2206,17 @@
        ] ;
        fhir:name [ fhir:v "Profil SAS gestionnaire de structure" ] ;
        fhir:description [ fhir:v "Un gestionnaire de structure gère les ressources transmises par les déclarants de ressource" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:extension" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-servicetype-aggregator> ;
@@ -1551,11 +2224,17 @@
        ] ;
        fhir:name [ fhir:v "SASServiceTypeR5" ] ;
        fhir:description [ fhir:v "Extension créée afin de permettre la reference à la ressource HealthcareService. Cette extension implemente l'élément serviceType de R5 https://hl7.org/fhir/slot-definitions.html#Slot.serviceType" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "SearchParameter" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "SearchParameter"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/SearchParameter/slot-sp-start> ;
@@ -1563,11 +2242,17 @@
        ] ;
        fhir:name [ fhir:v "slot-sp-start" ] ;
        fhir:description [ fhir:v "Paramètre de recherche date de début d'un créneau (date de début supérieure ou égale à date1 et inférieure ou égale à date2)" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ValueSet" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-sos-valueset-participant-status> ;
@@ -1575,11 +2260,17 @@
        ] ;
        fhir:name [ fhir:v "Statut participant SAS SOS" ] ;
        fhir:description [ fhir:v "Statut du participant RDV SAS SOS" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ValueSet" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-typeconsultation> ;
@@ -1587,11 +2278,17 @@
        ] ;
        fhir:name [ fhir:v "Type consultation SAS" ] ;
        fhir:description [ fhir:v "Type de consultations SAS" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ValueSet" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-cpts-valueset-typecreneau> ;
@@ -1599,11 +2296,17 @@
        ] ;
        fhir:name [ fhir:v "Type créneaux SAS CPTS" ] ;
        fhir:description [ fhir:v "Type de Créneaux SAS CPTS" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ValueSet" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-sos-valueset-typecreneau> ;
@@ -1611,11 +2314,17 @@
        ] ;
        fhir:name [ fhir:v "Type créneaux SAS SOS" ] ;
        fhir:description [ fhir:v "Type de Créneaux SAS SOS" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ValueSet" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-typeidentifiant> ;
@@ -1623,150 +2332,261 @@
        ] ;
        fhir:name [ fhir:v "Type identifiant SAS" ] ;
        fhir:description [ fhir:v "Type d'identifiant SAS" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] ) ;
      fhir:page [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "toc.html"^^xsd:anyURI ]
+         fhir:value [
+           a fhir:url ;
+           fhir:v "toc.html"^^xsd:anyURI
+         ]
        ] ) ;
-       fhir:name [ fhir:v "toc.html"^^xsd:anyURI ] ;
+       fhir:name [
+         a fhir:url ;
+         fhir:v "toc.html"^^xsd:anyURI
+       ] ;
        fhir:title [ fhir:v "Table of Contents" ] ;
        fhir:generation [ fhir:v "html" ] ;
        fhir:page ( [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "index.html"^^xsd:anyURI ]
+           fhir:value [
+             a fhir:url ;
+             fhir:v "index.html"^^xsd:anyURI
+           ]
          ] ) ;
-         fhir:name [ fhir:v "index.html"^^xsd:anyURI ] ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "index.html"^^xsd:anyURI
+         ] ;
          fhir:title [ fhir:v "Accueil" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "specifications_fonctionnelles.html"^^xsd:anyURI ]
+           fhir:value [
+             a fhir:url ;
+             fhir:v "specifications_fonctionnelles.html"^^xsd:anyURI
+           ]
          ] ) ;
-         fhir:name [ fhir:v "specifications_fonctionnelles.html"^^xsd:anyURI ] ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "specifications_fonctionnelles.html"^^xsd:anyURI
+         ] ;
          fhir:title [ fhir:v "Spécif. fonctionnelles" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "specifications_techniques-ps-recherche_creneaux.html"^^xsd:anyURI ]
+           fhir:value [
+             a fhir:url ;
+             fhir:v "specifications_techniques-ps-recherche_creneaux.html"^^xsd:anyURI
+           ]
          ] ) ;
-         fhir:name [ fhir:v "specifications_techniques-ps-recherche_creneaux.html"^^xsd:anyURI ] ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "specifications_techniques-ps-recherche_creneaux.html"^^xsd:anyURI
+         ] ;
          fhir:title [ fhir:v "PS indiv. - Recherche des créneaux" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "specifications_techniques-ps-gestion_regulateur.html"^^xsd:anyURI ]
+           fhir:value [
+             a fhir:url ;
+             fhir:v "specifications_techniques-ps-gestion_regulateur.html"^^xsd:anyURI
+           ]
          ] ) ;
-         fhir:name [ fhir:v "specifications_techniques-ps-gestion_regulateur.html"^^xsd:anyURI ] ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "specifications_techniques-ps-gestion_regulateur.html"^^xsd:anyURI
+         ] ;
          fhir:title [ fhir:v "PS indiv. - Gestion des comptes régulateurs" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "specifications_techniques-ps-gestion_rdv.html"^^xsd:anyURI ]
+           fhir:value [
+             a fhir:url ;
+             fhir:v "specifications_techniques-ps-gestion_rdv.html"^^xsd:anyURI
+           ]
          ] ) ;
-         fhir:name [ fhir:v "specifications_techniques-ps-gestion_rdv.html"^^xsd:anyURI ] ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "specifications_techniques-ps-gestion_rdv.html"^^xsd:anyURI
+         ] ;
          fhir:title [ fhir:v "PS indiv. - Gestion de rendez-vous" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "specifications_techniques-cpts-recherche_creneaux.html"^^xsd:anyURI ]
+           fhir:value [
+             a fhir:url ;
+             fhir:v "specifications_techniques-cpts-recherche_creneaux.html"^^xsd:anyURI
+           ]
          ] ) ;
-         fhir:name [ fhir:v "specifications_techniques-cpts-recherche_creneaux.html"^^xsd:anyURI ] ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "specifications_techniques-cpts-recherche_creneaux.html"^^xsd:anyURI
+         ] ;
          fhir:title [ fhir:v "CPTS - Recherche des créneaux" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "specifications_techniques-cpts-gestion_regulateur.html"^^xsd:anyURI ]
+           fhir:value [
+             a fhir:url ;
+             fhir:v "specifications_techniques-cpts-gestion_regulateur.html"^^xsd:anyURI
+           ]
          ] ) ;
-         fhir:name [ fhir:v "specifications_techniques-cpts-gestion_regulateur.html"^^xsd:anyURI ] ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "specifications_techniques-cpts-gestion_regulateur.html"^^xsd:anyURI
+         ] ;
          fhir:title [ fhir:v "CPTS - Gestion des comptes régulateurs" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "specifications_techniques-cpts-gestion_rdv.html"^^xsd:anyURI ]
+           fhir:value [
+             a fhir:url ;
+             fhir:v "specifications_techniques-cpts-gestion_rdv.html"^^xsd:anyURI
+           ]
          ] ) ;
-         fhir:name [ fhir:v "specifications_techniques-cpts-gestion_rdv.html"^^xsd:anyURI ] ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "specifications_techniques-cpts-gestion_rdv.html"^^xsd:anyURI
+         ] ;
          fhir:title [ fhir:v "CPTS - Gestion de rendez-vous" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "specifications_techniques-sos-recherche_creneaux.html"^^xsd:anyURI ]
+           fhir:value [
+             a fhir:url ;
+             fhir:v "specifications_techniques-sos-recherche_creneaux.html"^^xsd:anyURI
+           ]
          ] ) ;
-         fhir:name [ fhir:v "specifications_techniques-sos-recherche_creneaux.html"^^xsd:anyURI ] ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "specifications_techniques-sos-recherche_creneaux.html"^^xsd:anyURI
+         ] ;
          fhir:title [ fhir:v "SOS Médecins - Recherche des créneaux" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "specifications_techniques-sos-gestion_regulateur.html"^^xsd:anyURI ]
+           fhir:value [
+             a fhir:url ;
+             fhir:v "specifications_techniques-sos-gestion_regulateur.html"^^xsd:anyURI
+           ]
          ] ) ;
-         fhir:name [ fhir:v "specifications_techniques-sos-gestion_regulateur.html"^^xsd:anyURI ] ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "specifications_techniques-sos-gestion_regulateur.html"^^xsd:anyURI
+         ] ;
          fhir:title [ fhir:v "SOS Médecins - Gestion des comptes régulateurs" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "specifications_techniques-sos-gestion_rdv.html"^^xsd:anyURI ]
+           fhir:value [
+             a fhir:url ;
+             fhir:v "specifications_techniques-sos-gestion_rdv.html"^^xsd:anyURI
+           ]
          ] ) ;
-         fhir:name [ fhir:v "specifications_techniques-sos-gestion_rdv.html"^^xsd:anyURI ] ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "specifications_techniques-sos-gestion_rdv.html"^^xsd:anyURI
+         ] ;
          fhir:title [ fhir:v "SOS Médecins - Gestion de rendez-vous" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "ressources_casusage.html"^^xsd:anyURI ]
+           fhir:value [
+             a fhir:url ;
+             fhir:v "ressources_casusage.html"^^xsd:anyURI
+           ]
          ] ) ;
-         fhir:name [ fhir:v "ressources_casusage.html"^^xsd:anyURI ] ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "ressources_casusage.html"^^xsd:anyURI
+         ] ;
          fhir:title [ fhir:v "Ressources par cas d'usage" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "autres_ressources.html"^^xsd:anyURI ]
+           fhir:value [
+             a fhir:url ;
+             fhir:v "autres_ressources.html"^^xsd:anyURI
+           ]
          ] ) ;
-         fhir:name [ fhir:v "autres_ressources.html"^^xsd:anyURI ] ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "autres_ressources.html"^^xsd:anyURI
+         ] ;
          fhir:title [ fhir:v "Autres Ressources" ] ;
          fhir:generation [ fhir:v "markdown" ] ;
          fhir:page ( [
            fhir:extension ( [
              fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-             fhir:value [ fhir:v "securite.html"^^xsd:anyURI ]
+             fhir:value [
+               a fhir:url ;
+               fhir:v "securite.html"^^xsd:anyURI
+             ]
            ] ) ;
-           fhir:name [ fhir:v "securite.html"^^xsd:anyURI ] ;
+           fhir:name [
+             a fhir:url ;
+             fhir:v "securite.html"^^xsd:anyURI
+           ] ;
            fhir:title [ fhir:v "Sécurité" ] ;
            fhir:generation [ fhir:v "markdown" ]
          ] [
            fhir:extension ( [
              fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-             fhir:value [ fhir:v "faq.html"^^xsd:anyURI ]
+             fhir:value [
+               a fhir:url ;
+               fhir:v "faq.html"^^xsd:anyURI
+             ]
            ] ) ;
-           fhir:name [ fhir:v "faq.html"^^xsd:anyURI ] ;
+           fhir:name [
+             a fhir:url ;
+             fhir:v "faq.html"^^xsd:anyURI
+           ] ;
            fhir:title [ fhir:v "FAQ" ] ;
            fhir:generation [ fhir:v "markdown" ]
          ] [
            fhir:extension ( [
              fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-             fhir:value [ fhir:v "annexes.html"^^xsd:anyURI ]
+             fhir:value [
+               a fhir:url ;
+               fhir:v "annexes.html"^^xsd:anyURI
+             ]
            ] ) ;
-           fhir:name [ fhir:v "annexes.html"^^xsd:anyURI ] ;
+           fhir:name [
+             a fhir:url ;
+             fhir:v "annexes.html"^^xsd:anyURI
+           ] ;
            fhir:title [ fhir:v "Annexes" ] ;
            fhir:generation [ fhir:v "markdown" ]
          ] [
            fhir:extension ( [
              fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-             fhir:value [ fhir:v "downloads.html"^^xsd:anyURI ]
+             fhir:value [
+               a fhir:url ;
+               fhir:v "downloads.html"^^xsd:anyURI
+             ]
            ] ) ;
-           fhir:name [ fhir:v "downloads.html"^^xsd:anyURI ] ;
+           fhir:name [
+             a fhir:url ;
+             fhir:v "downloads.html"^^xsd:anyURI
+           ] ;
            fhir:title [ fhir:v "Téléchargements et usages" ] ;
            fhir:generation [ fhir:v "markdown" ]
          ] )

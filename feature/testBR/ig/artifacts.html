@@ -236,16 +236,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <a href="#2">Behavior: Search Parameters</a>
       </li>
       <li>
-         <a href="#3">Structures: Resource Profiles</a>
+         <a href="#3">Terminology: Value Sets</a>
       </li>
       <li>
-         <a href="#4">Structures: Extension Definitions</a>
+         <a href="#4">Example: Example Instances</a>
       </li>
       <li>
-         <a href="#5">Terminology: Value Sets</a>
-      </li>
-      <li>
-         <a href="#6">Example: Example Instances</a>
+         <a href="#5">Other</a>
       </li>
    </ul>
 </div>
@@ -369,193 +366,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       </tbody>
    </table>
    <a name="3"> </a>
-   <h3>Structures: Resource Profiles </h3>
-    <p>These define constraints on FHIR resources for systems conforming to this implementation guide.</p>
-<table class="grid">
-      <col style="width:20%"/>
-      <tbody>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-sas-bundle-aggregator.html"
-                  title="StructureDefinition/sas-bundle-aggregator">BundleAgregateur</a>
-            </td>
-            <td>
-<p>Profil de Bundle qui représente le flux de réponse contenant les créneaux disponibles dans le cadre du service d’agrégation de créneaux de la plateforme SAS [Cas d’usage PS Indiv]</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-sas-cpts-bundle-aggregator.html"
-                  title="StructureDefinition/sas-cpts-bundle-aggregator">BundleAgregateurCPTS</a>
-            </td>
-            <td>
-<p>Profil de Bundle qui représente le flux de réponse contenant les créneaux disponibles dans le cadre du service d’agrégation de créneaux de la plateforme SAS - Cas d’usage CPTS</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-sas-sos-bundle-aggregator.html"
-                  title="StructureDefinition/sas-sos-bundle-aggregator">BundleAgregateurSOS</a>
-            </td>
-            <td>
-<p>Profil de Bundle qui représente le flux de réponse contenant les créneaux disponibles dans le cadre du service d’agrégation de créneaux de la plateforme SAS [cas d’usage SOS Médecins]</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-sas-appointment.html"
-                  title="StructureDefinition/sas-appointment">FrAppointmentSAS</a>
-            </td>
-            <td>
-<p>Profil de Appointment, dérivé de FrAppointment, pour le cas d’usage prise de RDV de la plateforme SAS [Commun cas d’usage PS Indiv et CPTS]</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-sas-sos-appointment.html"
-                  title="StructureDefinition/sas-sos-appointment">FrAppointmentSASSOS</a>
-            </td>
-            <td>
-<p>Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS [cas d’usage SOS Médecins]</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-sas-cpts-healthcareservice-aggregator.html"
-                  title="StructureDefinition/sas-cpts-healthcareservice-aggregator">FrHealthcareServiceAgregateurCPTS</a>
-            </td>
-            <td>
-<p>Profil dérivé de FrHealthcareService pour le cas d’usage agrégateur de la plateforme SAS [Cas d’usage CPTS]</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-sas-location-aggregator.html"
-                  title="StructureDefinition/sas-location-aggregator">FrLocationAgregateur</a>
-            </td>
-            <td>
-<p>Profil de Location, dérivé de FrLocation, pour le service d’agrégation de créneaux de la plateforme SAS [Commun cas d’usage PS Indiv et CPTS]</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-sas-sos-location-aggregator.html"
-                  title="StructureDefinition/sas-sos-location-aggregator">FrLocationAgregateurSOS</a>
-            </td>
-            <td>
-<p>Profil de Location, dérivé de FrLocation, pour le service d’agrégation de créneaux de la plateforme SAS [cas d’usage SOS Médecins]</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-sas-cpts-organization-aggregator.html"
-                  title="StructureDefinition/sas-cpts-organization-aggregator">FrOrganizationAgregateurCPTS</a>
-            </td>
-            <td>
-<p>Profil dérivé de FrOrganization pour le cas d’usage agrégateur de la plateforme SAS [cas d’usage CPTS]</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-sas-sos-organization-aggregator.html"
-                  title="StructureDefinition/sas-sos-organization-aggregator">FrOrganizationAgregateurSOS</a>
-            </td>
-            <td>
-<p>Profil d’Organization, dérivé de FrOrganization, pour le service d’agrégation de créneaux de la plateforme SAS [cas d’usage SOS Médecins]</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-sas-practitioner-aggregator.html"
-                  title="StructureDefinition/sas-practitioner-aggregator">FrPractitionerAgregateur</a>
-            </td>
-            <td>
-<p>Profil de Practitioner, dérivé de FrPractitioner, pour le service d’agrégation de créneaux de la plateforme SAS [Commun cas d’usage PS Indiv et CPTS]</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-sas-practitioner-aggregator-regul.html"
-                  title="StructureDefinition/sas-practitioner-aggregator-regul">FrPractitionerRegul</a>
-            </td>
-            <td>
-<p>Profil de Practitioner, dérivé de FrPractitioner, pour la gestion des comptes régulateurs de la plateforme SAS [Commun cas d’usage PS Indiv et CPTS]</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-sas-practitioner-role-exercice-aggregator.html"
-                  title="StructureDefinition/sas-practitioner-role-exercice-aggregator">FrPractitionerRoleExerciceAgregateur</a>
-            </td>
-            <td>
-<p>Profil de PractitionerRole, dérivé de FrPractitionerRoleExercice, pour le service d’agrégation de créneaux de la plateforme SAS [Commun cas d’usage PS Indiv et CPTS]</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-sas-schedule-aggregator.html"
-                  title="StructureDefinition/sas-schedule-aggregator">FrScheduleAgregateur</a>
-            </td>
-            <td>
-<p>Profil de Schedule, dérivé de FrSchedule, pour le service d’agrégation de créneaux de la plateforme SAS [Commun cas d’usage PS Indiv et CPTS]</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-sas-sos-schedule-aggregator.html"
-                  title="StructureDefinition/sas-sos-schedule-aggregator">FrScheduleAgregateurSOS</a>
-            </td>
-            <td>
-<p>Profil de Schedule, dérivé de FrSchedule, pour le service d’agrégation de créneaux de la plateforme SAS [cas d’usage SOS Médecins]</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-sas-slot-aggregator.html"
-                  title="StructureDefinition/sas-slot-aggregator">FrSlotAgregateur</a>
-            </td>
-            <td>
-<p>Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS [Commun cas d’usage PS Indiv et CPTS]</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-sas-cpts-slot-aggregator.html"
-                  title="StructureDefinition/sas-cpts-slot-aggregator">FrSlotAgregateurCPTS</a>
-            </td>
-            <td>
-<p>Profil de Slot, dérivé de FrSlot, pour le cas d’usage agrégateur de la plateforme SAS [cas d’usage CPTS]</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-sas-sos-slot-aggregator.html"
-                  title="StructureDefinition/sas-sos-slot-aggregator">FrSlotAgregateurSOS</a>
-            </td>
-            <td>
-<p>Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS [cas d’usage SOS Médecins]</p>
-</td>
-         </tr>
-      </tbody>
-   </table>
-   <a name="4"> </a>
-   <h3>Structures: Extension Definitions </h3>
-    <p>These define constraints on FHIR data types for systems conforming to this implementation guide.</p>
-<table class="grid">
-      <col style="width:20%"/>
-      <tbody>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-sas-cpts-slot-servicetype-aggregator.html"
-                  title="StructureDefinition/sas-cpts-slot-servicetype-aggregator">SASServiceTypeR5</a>
-            </td>
-            <td>
-<p>Extension créée afin de permettre la reference à la ressource HealthcareService. Cette extension implemente l’élément serviceType de R5 https://hl7.org/fhir/slot-definitions.html#Slot.serviceType</p>
-</td>
-         </tr>
-      </tbody>
-   </table>
-   <a name="5"> </a>
    <h3>Terminology: Value Sets </h3>
     <p>These define sets of codes used by systems conforming to this implementation guide.</p>
 <table class="grid">
@@ -626,7 +436,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
       </tbody>
    </table>
-   <a name="6"> </a>
+   <a name="4"> </a>
    <h3>Example: Example Instances </h3>
     <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.</p>
 <table class="grid">
@@ -991,6 +801,185 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
       </tbody>
    </table>
+   <a name="5"> </a>
+   <h3>Other </h3>
+    <p>These are resources that are used within this implementation guide that do not fit into one of the other categories.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-sas-bundle-aggregator.html"
+                  title="StructureDefinition/sas-bundle-aggregator">BundleAgregateur</a>
+            </td>
+            <td>
+<p>Profil de Bundle qui représente le flux de réponse contenant les créneaux disponibles dans le cadre du service d’agrégation de créneaux de la plateforme SAS [Cas d’usage PS Indiv]</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-sas-cpts-bundle-aggregator.html"
+                  title="StructureDefinition/sas-cpts-bundle-aggregator">BundleAgregateurCPTS</a>
+            </td>
+            <td>
+<p>Profil de Bundle qui représente le flux de réponse contenant les créneaux disponibles dans le cadre du service d’agrégation de créneaux de la plateforme SAS - Cas d’usage CPTS</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-sas-sos-bundle-aggregator.html"
+                  title="StructureDefinition/sas-sos-bundle-aggregator">BundleAgregateurSOS</a>
+            </td>
+            <td>
+<p>Profil de Bundle qui représente le flux de réponse contenant les créneaux disponibles dans le cadre du service d’agrégation de créneaux de la plateforme SAS [cas d’usage SOS Médecins]</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-sas-appointment.html"
+                  title="StructureDefinition/sas-appointment">FrAppointmentSAS</a>
+            </td>
+            <td>
+<p>Profil de Appointment, dérivé de FrAppointment, pour le cas d’usage prise de RDV de la plateforme SAS [Commun cas d’usage PS Indiv et CPTS]</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-sas-sos-appointment.html"
+                  title="StructureDefinition/sas-sos-appointment">FrAppointmentSASSOS</a>
+            </td>
+            <td>
+<p>Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS [cas d’usage SOS Médecins]</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-sas-cpts-healthcareservice-aggregator.html"
+                  title="StructureDefinition/sas-cpts-healthcareservice-aggregator">FrHealthcareServiceAgregateurCPTS</a>
+            </td>
+            <td>
+<p>Profil dérivé de FrHealthcareService pour le cas d’usage agrégateur de la plateforme SAS [Cas d’usage CPTS]</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-sas-location-aggregator.html"
+                  title="StructureDefinition/sas-location-aggregator">FrLocationAgregateur</a>
+            </td>
+            <td>
+<p>Profil de Location, dérivé de FrLocation, pour le service d’agrégation de créneaux de la plateforme SAS [Commun cas d’usage PS Indiv et CPTS]</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-sas-sos-location-aggregator.html"
+                  title="StructureDefinition/sas-sos-location-aggregator">FrLocationAgregateurSOS</a>
+            </td>
+            <td>
+<p>Profil de Location, dérivé de FrLocation, pour le service d’agrégation de créneaux de la plateforme SAS [cas d’usage SOS Médecins]</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-sas-cpts-organization-aggregator.html"
+                  title="StructureDefinition/sas-cpts-organization-aggregator">FrOrganizationAgregateurCPTS</a>
+            </td>
+            <td>
+<p>Profil dérivé de FrOrganization pour le cas d’usage agrégateur de la plateforme SAS [cas d’usage CPTS]</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-sas-sos-organization-aggregator.html"
+                  title="StructureDefinition/sas-sos-organization-aggregator">FrOrganizationAgregateurSOS</a>
+            </td>
+            <td>
+<p>Profil d’Organization, dérivé de FrOrganization, pour le service d’agrégation de créneaux de la plateforme SAS [cas d’usage SOS Médecins]</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-sas-practitioner-aggregator.html"
+                  title="StructureDefinition/sas-practitioner-aggregator">FrPractitionerAgregateur</a>
+            </td>
+            <td>
+<p>Profil de Practitioner, dérivé de FrPractitioner, pour le service d’agrégation de créneaux de la plateforme SAS [Commun cas d’usage PS Indiv et CPTS]</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-sas-practitioner-aggregator-regul.html"
+                  title="StructureDefinition/sas-practitioner-aggregator-regul">FrPractitionerRegul</a>
+            </td>
+            <td>
+<p>Profil de Practitioner, dérivé de FrPractitioner, pour la gestion des comptes régulateurs de la plateforme SAS [Commun cas d’usage PS Indiv et CPTS]</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-sas-practitioner-role-exercice-aggregator.html"
+                  title="StructureDefinition/sas-practitioner-role-exercice-aggregator">FrPractitionerRoleExerciceAgregateur</a>
+            </td>
+            <td>
+<p>Profil de PractitionerRole, dérivé de FrPractitionerRoleExercice, pour le service d’agrégation de créneaux de la plateforme SAS [Commun cas d’usage PS Indiv et CPTS]</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-sas-schedule-aggregator.html"
+                  title="StructureDefinition/sas-schedule-aggregator">FrScheduleAgregateur</a>
+            </td>
+            <td>
+<p>Profil de Schedule, dérivé de FrSchedule, pour le service d’agrégation de créneaux de la plateforme SAS [Commun cas d’usage PS Indiv et CPTS]</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-sas-sos-schedule-aggregator.html"
+                  title="StructureDefinition/sas-sos-schedule-aggregator">FrScheduleAgregateurSOS</a>
+            </td>
+            <td>
+<p>Profil de Schedule, dérivé de FrSchedule, pour le service d’agrégation de créneaux de la plateforme SAS [cas d’usage SOS Médecins]</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-sas-slot-aggregator.html"
+                  title="StructureDefinition/sas-slot-aggregator">FrSlotAgregateur</a>
+            </td>
+            <td>
+<p>Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS [Commun cas d’usage PS Indiv et CPTS]</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-sas-cpts-slot-aggregator.html"
+                  title="StructureDefinition/sas-cpts-slot-aggregator">FrSlotAgregateurCPTS</a>
+            </td>
+            <td>
+<p>Profil de Slot, dérivé de FrSlot, pour le cas d’usage agrégateur de la plateforme SAS [cas d’usage CPTS]</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-sas-sos-slot-aggregator.html"
+                  title="StructureDefinition/sas-sos-slot-aggregator">FrSlotAgregateurSOS</a>
+            </td>
+            <td>
+<p>Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS [cas d’usage SOS Médecins]</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-sas-cpts-slot-servicetype-aggregator.html"
+                  title="StructureDefinition/sas-cpts-slot-servicetype-aggregator">SASServiceTypeR5</a>
+            </td>
+            <td>
+<p>Extension créée afin de permettre la reference à la ressource HealthcareService. Cette extension implemente l’élément serviceType de R5 https://hl7.org/fhir/slot-definitions.html#Slot.serviceType</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
 </div>
 
 </div>
@@ -1031,7 +1020,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Feb 6, 2025 14:37+0000">2025-02-06</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Feb 10, 2025 09:12+0000">2025-02-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
