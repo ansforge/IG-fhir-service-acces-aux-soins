@@ -236,7 +236,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#caractéristiques-de-lapi" id="markdown-toc-caractéristiques-de-lapi">Caractéristiques de l’API</a></li>
+  <li><a href="#caractéristiques-de-lapi" id="markdown-toc-caractéristiques-de-lapi">Caractéristiques de l'API</a></li>
   <li><a href="#création-de-rendez-vous" id="markdown-toc-création-de-rendez-vous">Création de rendez-vous</a></li>
   <li><a href="#mise-à-jour-de-rendez-vous" id="markdown-toc-mise-à-jour-de-rendez-vous">Mise à jour de rendez-vous</a></li>
   <li><a href="#nomenclatures" id="markdown-toc-nomenclatures">Nomenclatures</a></li>
@@ -246,7 +246,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <!-- Gestion de rendez-vous -->
 
-<h3 id="caractéristiques-de-lapi">Caractéristiques de l’API</h3>
+<h3 id="caractéristiques-de-lapi">Caractéristiques de l'API</h3>
 
 <table>
 <tbody>
@@ -313,7 +313,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <ul>
   <li>Un header avec un code 201 Created HTTP</li>
-  <li>Un header Location incluant l’ID de la ressource créée par le serveur <code class="language-plaintext highlighter-rouge">Location: [base]/Appointment/12345</code></li>
+  <li>Un header Location incluant l'ID de la ressource créée par le serveur <code class="language-plaintext highlighter-rouge">Location: [base]/Appointment/12345</code></li>
 </ul>
 
 <p>Plus de précision sur la spécification FHIR :
@@ -332,14 +332,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </li>
   <li>
     <p>Un body contenant une ressource OperationOutcome[^3] qui donne les
-détails sur la raison de l’échec</p>
+détails sur la raison de l'échec</p>
   </li>
 </ul>
 
-<p>À titre d’information, les codes erreurs classiques sont les suivants :</p>
+<p>À titre d'information, les codes erreurs classiques sont les suivants :</p>
 <ul>
   <li>400 (Bad request) – Le format de la requête FHIR transmise est incorrect</li>
-  <li>422 (Unprocessable Entity) – L’action demandée ne peut pas être réalisée à cause d’une règle interne à l’application.</li>
+  <li>422 (Unprocessable Entity) – L'action demandée ne peut pas être réalisée à cause d’une règle interne à l’application.</li>
 </ul>
 
 <p>Plus de précision sur la spécification FHIR :
@@ -353,7 +353,7 @@ détails sur la raison de l’échec</p>
 
 <p><strong>Corps de la requête :</strong></p>
 
-<p>La requête ci-dessous correspond à la transmission d’un RDV pris par le régulateur avec un identifiant national 3456780581/11242343 avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h.</p>
+<p>La requête ci-dessous correspond à la transmission d'un RDV pris par le régulateur avec un identifiant national 3456780581/11242343 avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h.</p>
 
 <pre class="json" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
   "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment">resourceType</a>" : "Appointment",
@@ -365,7 +365,7 @@ détails sur la raison de l’échec</p>
   },
   "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.text">text</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "extensions",
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Appointment 1&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;1\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc1\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;1-fr-FR\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;FR Core Appointment Operator Extension&lt;/b&gt;: Identifier: Identifiant National de Professionnel de Santé/3456780581/11242343&lt;/p&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;urn:oid:1.1.111.1.11.1.1.1&lt;/code&gt;/b6e39355-8a61-4556-b340-36f7b95fec6a&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Booked&lt;/p&gt;&lt;p&gt;&lt;b&gt;start&lt;/b&gt;: 2022-09-04 14:00:00+0100&lt;/p&gt;&lt;p&gt;&lt;b&gt;end&lt;/b&gt;: 2022-09-04 14:15:00+0100&lt;/p&gt;&lt;h3&gt;Participants&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Actor&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Status&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;Identifier: Identifiant National de Professionnel de Santé/810100050075&lt;/td&gt;&lt;td&gt;Accepted&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Appointment 1&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;1\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc1\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;1-fr-FR\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-sas-appointment.html\&quot;&gt;FrAppointmentSAS&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;FR Core Appointment Operator Extension&lt;/b&gt;: Identifier: Identifiant National de Professionnel de Santé/3456780581/11242343&lt;/p&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;urn:oid:1.1.111.1.11.1.1.1&lt;/code&gt;/b6e39355-8a61-4556-b340-36f7b95fec6a&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Booked&lt;/p&gt;&lt;p&gt;&lt;b&gt;start&lt;/b&gt;: 2022-09-04 14:00:00+0100&lt;/p&gt;&lt;p&gt;&lt;b&gt;end&lt;/b&gt;: 2022-09-04 14:15:00+0100&lt;/p&gt;&lt;h3&gt;Participants&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Actor&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Status&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;Identifier: Identifiant National de Professionnel de Santé/810100050075&lt;/td&gt;&lt;td&gt;Accepted&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
   },
   "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.extension">extension</a>" : [
     {
@@ -452,7 +452,7 @@ détails sur la raison de l’échec</p>
 
 <ul>
   <li>Un header avec un code 200 OK HTTP</li>
-  <li>Un header Location incluant l’ID de la ressource mise à jour par le serveur <code class="language-plaintext highlighter-rouge">Location: [base]/Appointment/12345</code></li>
+  <li>Un header Location incluant l'ID de la ressource mise à jour par le serveur <code class="language-plaintext highlighter-rouge">Location: [base]/Appointment/12345</code></li>
 </ul>
 
 <p>Plus de précision sur la spécification FHIR :
@@ -471,14 +471,14 @@ détails sur la raison de l’échec</p>
   </li>
   <li>
     <p>Un body contenant une ressource OperationOutcome[^3] qui donne les
-détails sur la raison de l’échec</p>
+détails sur la raison de l'échec</p>
   </li>
 </ul>
 
-<p>À titre d’information, les codes erreurs classiques sont les suivants :</p>
+<p>À titre d'information, les codes erreurs classiques sont les suivants :</p>
 <ul>
   <li>400 (Bad request) – Le format de la requête FHIR transmise est incorrect</li>
-  <li>422 (Unprocessable Entity) – L’action demandée ne peut pas être réalisée à cause d’une règle interne à l’application.</li>
+  <li>422 (Unprocessable Entity) – L'action demandée ne peut pas être réalisée à cause d’une règle interne à l’application.</li>
 </ul>
 
 <p>Plus de précision sur la spécification FHIR :
@@ -504,7 +504,7 @@ détails sur la raison de l’échec</p>
   },
   "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.text">text</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "extensions",
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Appointment 2&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;2\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc2\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;2-fr-FR\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;FR Core Appointment Operator Extension&lt;/b&gt;: Identifier: Identifiant National de Professionnel de Santé/3456780581/11242343&lt;/p&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;urn:oid:1.1.111.1.11.1.1.1&lt;/code&gt;/b6e39355-8a61-4556-b340-36f7b95fec6a&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Cancelled&lt;/p&gt;&lt;p&gt;&lt;b&gt;start&lt;/b&gt;: 2022-09-04 14:00:00+0100&lt;/p&gt;&lt;p&gt;&lt;b&gt;end&lt;/b&gt;: 2022-09-04 14:15:00+0100&lt;/p&gt;&lt;h3&gt;Participants&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Actor&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Status&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;Identifier: Identifiant National de Professionnel de Santé/810100050075&lt;/td&gt;&lt;td&gt;Accepted&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Appointment 2&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;2\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc2\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;2-fr-FR\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-sas-appointment.html\&quot;&gt;FrAppointmentSAS&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;FR Core Appointment Operator Extension&lt;/b&gt;: Identifier: Identifiant National de Professionnel de Santé/3456780581/11242343&lt;/p&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;urn:oid:1.1.111.1.11.1.1.1&lt;/code&gt;/b6e39355-8a61-4556-b340-36f7b95fec6a&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Cancelled&lt;/p&gt;&lt;p&gt;&lt;b&gt;start&lt;/b&gt;: 2022-09-04 14:00:00+0100&lt;/p&gt;&lt;p&gt;&lt;b&gt;end&lt;/b&gt;: 2022-09-04 14:15:00+0100&lt;/p&gt;&lt;h3&gt;Participants&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Actor&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Status&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;Identifier: Identifiant National de Professionnel de Santé/810100050075&lt;/td&gt;&lt;td&gt;Accepted&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
   },
   "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.extension">extension</a>" : [
     {
@@ -561,41 +561,41 @@ détails sur la raison de l’échec</p>
 <ul>
   <li><strong>ID : 1 – Identifiant technique du RDV :</strong>
     <ul>
-      <li>Un identifiant technique unique par RDV est attendu. Cet ID est défini par la solution logicielle éditeur et peut prendre la forme d’un UUID par exemple. Les échanges s’appuieront sur cet ID pour les requêtes de mises à jour (interaction conditional update).</li>
+      <li>Un identifiant technique unique par RDV est attendu. Cet ID est défini par la solution logicielle éditeur et peut prendre la forme d'un UUID par exemple. Les échanges s'appuieront sur cet ID pour les requêtes de mises à jour (interaction conditional update).</li>
     </ul>
   </li>
-  <li><strong>ID : 2 – Autorité d’affectation de la solution logicielle éditeur :</strong>
+  <li><strong>ID : 2 – Autorité d'affectation de la solution logicielle éditeur :</strong>
     <ul>
-      <li>Ce champ est une valeur fixe, valorisé soit par une URL soit par un OID. Si l’éditeur possède un OID propre à sa solution logicielle il est attendu que celui-ci soit transmis, sinon il est demandé de définir une URL propre à la solution éditeur.</li>
+      <li>Ce champ est une valeur fixe, valorisé soit par une URL soit par un OID. Si l'éditeur possède un OID propre à sa solution logicielle il est attendu que celui-ci soit transmis, sinon il est demandé de définir une URL propre à la solution éditeur.</li>
     </ul>
   </li>
-  <li><strong>ID : 3 – URL de l’extension AppointmentOperator pour la référence au régulateur :</strong>
+  <li><strong>ID : 3 – URL de l'extension AppointmentOperator pour la référence au régulateur :</strong>
     <ul>
       <li>Ce champ est une valeur fixe, valorisé à <code class="language-plaintext highlighter-rouge">http://interopsante.org/fhir/StructureDefinition/FrAppointmentOperator</code>.</li>
     </ul>
   </li>
   <li><strong>ID : 4, 5, 6 – Identification du régulateur ayant pris le RDV pour le patient :</strong>
     <ul>
-      <li>Il s’agit de l’identifiant communiqué par la plateforme numérique SAS dans l’interface INT_R02 “Gestion des comptes régulateurs”. Deux combinaisons sont possibles pour ces trois champs selon que le régulateur possède ou non un identifiant national.</li>
+      <li>Il s'agit de l'identifiant communiqué par la plateforme numérique SAS dans l'interface INT_R02 "Gestion des comptes régulateurs". Deux combinaisons sont possibles pour ces trois champs selon que le régulateur possède ou non un identifiant national.</li>
       <li>Lorsque le régulateur a un identifiant national, les différents champs seront valorisés comme suit (1) :
         <ul>
-          <li>Valeur de l’identifiant (ID 4) : Identifiant national avec préfixe ;</li>
-          <li>Autorité d’affectation (ID 5) : urn:oid:1.2.250.1.71.4.2.1 ;</li>
-          <li>Type d’identifiant (ID 6) : le champ <code class="language-plaintext highlighter-rouge">type.coding.code</code> est valorisé à <code class="language-plaintext highlighter-rouge">IDNPS</code> et <code class="language-plaintext highlighter-rouge">type.coding.system</code> à <code class="language-plaintext highlighter-rouge">http://interopsante.org/fhir/CodeSystem/fr-v2-0203</code>.</li>
+          <li>Valeur de l'identifiant (ID 4) : Identifiant national avec préfixe ;</li>
+          <li>Autorité d'affectation (ID 5) : urn:oid:1.2.250.1.71.4.2.1 ;</li>
+          <li>Type d'identifiant (ID 6) : le champ <code class="language-plaintext highlighter-rouge">type.coding.code</code> est valorisé à <code class="language-plaintext highlighter-rouge">IDNPS</code> et <code class="language-plaintext highlighter-rouge">type.coding.system</code> à <code class="language-plaintext highlighter-rouge">http://interopsante.org/fhir/CodeSystem/fr-v2-0203</code>.</li>
         </ul>
       </li>
-      <li>Lorsque le régulateur n’a pas d’identifiant national, nous utiliserons un ID technique SAS, les différents champs seront valorisés comme suit :
+      <li>Lorsque le régulateur n'a pas d’identifiant national, nous utiliserons un ID technique SAS, les différents champs seront valorisés comme suit :
         <ul>
-          <li>Valeur de l’identifiant (ID 4) : Identifiant technique SAS avec un format de type UUID ;</li>
-          <li>Autorité d’affectation (ID 5) : urn:oid:1.2.250.1.213.3.6 ;</li>
-          <li>Type d’identifiant (ID 6) : le champ type.coding.code est valorisé à <code class="language-plaintext highlighter-rouge">INTRN</code> et <code class="language-plaintext highlighter-rouge">type.coding.system</code> à <code class="language-plaintext highlighter-rouge">http://interopsante.org/fhir/CodeSystem/fr-v2-0203</code>.</li>
+          <li>Valeur de l'identifiant (ID 4) : Identifiant technique SAS avec un format de type UUID ;</li>
+          <li>Autorité d'affectation (ID 5) : urn:oid:1.2.250.1.213.3.6 ;</li>
+          <li>Type d'identifiant (ID 6) : le champ type.coding.code est valorisé à <code class="language-plaintext highlighter-rouge">INTRN</code> et <code class="language-plaintext highlighter-rouge">type.coding.system</code> à <code class="language-plaintext highlighter-rouge">http://interopsante.org/fhir/CodeSystem/fr-v2-0203</code>.</li>
         </ul>
       </li>
     </ul>
   </li>
   <li><strong>ID : 7 – Statut du RDV :</strong>
     <ul>
-      <li>L’utilisation de la nomenclature standard AppointmentStatus (<a href="http://hl7.org/fhir/appointmentstatus">http://hl7.org/fhir/appointmentstatus</a>) est attendue. La plateforme numérique SAS exploite à date les valeurs suivantes :
+      <li>L'utilisation de la nomenclature standard AppointmentStatus (<a href="http://hl7.org/fhir/appointmentstatus">http://hl7.org/fhir/appointmentstatus</a>) est attendue. La plateforme numérique SAS exploite à date les valeurs suivantes :
         <ul>
           <li>BOOKED : RDV pris et confirmé</li>
           <li>FULFILLED : RDV honoré</li>
@@ -609,22 +609,22 @@ détails sur la raison de l’échec</p>
     <ul>
       <li>Les champs attendus doivent être valorisés comme suit (1) :
         <ul>
-          <li>Valeur de l’identifiant (ID 10) : RPPS avec préfixe “8” ou ADELI avec préfixe “0”</li>
-          <li>Autorité d’affectation (ID 11) : urn:oid:1.2.250.1.71.4.2.1</li>
-          <li>Type d’identifiant (ID 12) : le champ <code class="language-plaintext highlighter-rouge">type.coding.code</code> est valorisé à <code class="language-plaintext highlighter-rouge">IDNPS</code> et <code class="language-plaintext highlighter-rouge">type.coding.system</code> à <code class="language-plaintext highlighter-rouge">http://interopsante.org/fhir/CodeSystem/fr-v2-0203</code></li>
+          <li>Valeur de l'identifiant (ID 10) : RPPS avec préfixe "8" ou ADELI avec préfixe "0"</li>
+          <li>Autorité d'affectation (ID 11) : urn:oid:1.2.250.1.71.4.2.1</li>
+          <li>Type d'identifiant (ID 12) : le champ <code class="language-plaintext highlighter-rouge">type.coding.code</code> est valorisé à <code class="language-plaintext highlighter-rouge">IDNPS</code> et <code class="language-plaintext highlighter-rouge">type.coding.system</code> à <code class="language-plaintext highlighter-rouge">http://interopsante.org/fhir/CodeSystem/fr-v2-0203</code></li>
         </ul>
       </li>
     </ul>
   </li>
   <li><strong>ID : 13 – Statut d’acceptation du RDV par le PS effecteur de soins :</strong>
     <ul>
-      <li>L’utilisation de la nomenclature standard Appointmentparticipantstatus (<a href="http://hl7.org/fhir/ValueSet/participationstatus">http://hl7.org/fhir/ValueSet/participationstatus</a>) est attendue. La plateforme numérique SAS ne récupérant que les RDV avec acceptation automatique et tacite du médecin effecteur de soins, ce champ aura systématiquement la valeur « accepted ».</li>
+      <li>L'utilisation de la nomenclature standard Appointmentparticipantstatus (<a href="http://hl7.org/fhir/ValueSet/participationstatus">http://hl7.org/fhir/ValueSet/participationstatus</a>) est attendue. La plateforme numérique SAS ne récupérant que les RDV avec acceptation automatique et tacite du médecin effecteur de soins, ce champ aura systématiquement la valeur « accepted ».</li>
     </ul>
   </li>
 </ul>
 
 <h3 id="validateur-ressources">Validateur ressources</h3>
-<p>Un validateur mis à disposition des développeurs dans le cadre du projet SAS offre la possibilité de tester le format des requêtes POST et PUT à générer. Il permet de vérifier que les requêtes sont correctement formatées, que l’ensemble des informations obligatoires sont bien présentes et que les données codifiées exploitent les bonnes nomenclatures.
+<p>Un validateur mis à disposition des développeurs dans le cadre du projet SAS offre la possibilité de tester le format des requêtes POST et PUT à générer. Il permet de vérifier que les requêtes sont correctement formatées, que l'ensemble des informations obligatoires sont bien présentes et que les données codifiées exploitent les bonnes nomenclatures.
 Pour que le validateur puisse effectuer correctement les contrôles au niveau de la structure, il est nécessaire de renseigner pour le resourceType <code class="language-plaintext highlighter-rouge">Appointment</code>, le meta.profile <code class="language-plaintext highlighter-rouge">URL</code> ci-après :</p>
 <ul>
   <li>http://sas.fr/fhir/StructureDefinition/FrAppointmentSAS</li>
@@ -641,7 +641,7 @@ Pour que le validateur puisse effectuer correctement les contrôles au niveau de
 },
 </code></pre></div></div>
 
-<p>Le validateur est disponible sur l’espace de test de l’ANS : <a href="https://interop.esante.gouv.fr/EVSClient/fhir/validator.seam?extension=SAS&amp;standard=FHIR+%28SAS%29&amp;type=FHIR&amp;cid=750">https://interop.esante.gouv.fr/EVSClient/fhir/validator.seam?extension=SAS&amp;standard=FHIR+%28SAS%29&amp;type=FHIR&amp;cid=750</a>. Pour faciliter les tests et conserver l’historique, nous vous recommandons de créer votre compte sur la plateforme.
+<p>Le validateur est disponible sur l'espace de test de l'ANS : <a href="https://interop.esante.gouv.fr/EVSClient/fhir/validator.seam?extension=SAS&amp;standard=FHIR+%28SAS%29&amp;type=FHIR&amp;cid=750">https://interop.esante.gouv.fr/EVSClient/fhir/validator.seam?extension=SAS&amp;standard=FHIR+%28SAS%29&amp;type=FHIR&amp;cid=750</a>. Pour faciliter les tests et conserver l'historique, nous vous recommandons de créer votre compte sur la plateforme.
 Afin de tester un fichier, il suffit de sélectionner le format <code class="language-plaintext highlighter-rouge">JSON</code>, d’ajouter le fichier via le bouton <code class="language-plaintext highlighter-rouge">Add…</code>, de sélectionner le modèle <code class="language-plaintext highlighter-rouge">FrAppointmentSAS</code> puis de cliquer sur <code class="language-plaintext highlighter-rouge">valider</code> :</p>
 
 <table align="center">
@@ -718,7 +718,7 @@ Afin de tester un fichier, il suffit de sélectionner le format <code class="lan
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Feb 10, 2025 10:49+0000">2025-02-10</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 12, 2025 10:38+0000">2025-03-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

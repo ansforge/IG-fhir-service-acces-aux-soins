@@ -236,7 +236,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#caractéristiques-de-lapi" id="markdown-toc-caractéristiques-de-lapi">Caractéristiques de l’API</a></li>
+  <li><a href="#caractéristiques-de-lapi" id="markdown-toc-caractéristiques-de-lapi">Caractéristiques de l'API</a></li>
   <li><a href="#construction-de-la-requête-de-base" id="markdown-toc-construction-de-la-requête-de-base">Construction de la requête de base</a></li>
   <li><a href="#construction-de-la-réponse-de-base" id="markdown-toc-construction-de-la-réponse-de-base">Construction de la réponse de base</a></li>
   <li><a href="#critères-de-recherche" id="markdown-toc-critères-de-recherche">Critères de recherche</a></li>
@@ -247,8 +247,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 </div>
 <!-- Recherche des créneaux -->
-<h3 id="caractéristiques-de-lapi">Caractéristiques de l’API</h3>
-<p>Cette requête s’appuie sur le flux 3A du volet d’agenda partagé du <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/CISIS-TEC_SPECIFICATIONS_TECHNIQUES-GESTION_AGENDAS_PARTAGES_V1.0.pdf">CI-SIS volet Gestion Agenda Partagés</a>.</p>
+<h3 id="caractéristiques-de-lapi">Caractéristiques de l'API</h3>
+<p>Cette requête s'appuie sur le flux 3A du volet d'agenda partagé du <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/CISIS-TEC_SPECIFICATIONS_TECHNIQUES-GESTION_AGENDAS_PARTAGES_V1.0.pdf">CI-SIS volet Gestion Agenda Partagés</a>.</p>
 
 <table>
 <tbody>
@@ -304,7 +304,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p><a href="#_ftnref1" name="_ftn1">[1]</a> <a href="https://www.hl7.org/fhir/http.html#search">https://www.hl7.org/fhir/http.html#search</a> et <a href="https://www.hl7.org/fhir/http.html#general">https://www.hl7.org/fhir/http.html#general</a></p>
 
 <h3 id="construction-de-la-réponse-de-base">Construction de la réponse de base</h3>
-<p>Cette réponse s’appuie sur le flux 4A du volet d’agenda partagé du CI-SIS.</p>
+<p>Cette réponse s'appuie sur le flux 4A du volet d'agenda partagé du CI-SIS.</p>
 
 <h4 id="réponse-de-base--succès">Réponse de base – Succès</h4>
 
@@ -323,7 +323,7 @@ Le bundle encapsule 0 à n ressources Slot corespondant aux
 critères de recherche plus les ressources incluses correspondant aux
 critères de recherche.
 Le service indique le total trouvé dans une balise <code class="language-plaintext highlighter-rouge">total</code>.
-Dans le cas où il n’y a     pas de résultat le service renvoie <code class="language-plaintext highlighter-rouge">total</code>: 0.</p>
+Dans le cas où il n'y a     pas de résultat le service renvoie <code class="language-plaintext highlighter-rouge">total</code>: 0.</p>
   </li>
 </ul>
 
@@ -346,12 +346,12 @@ peut être exécutée. Il peut il y avoir 0 à n correspondances.</p>
   </li>
   <li>
     <p>Un body contenant une ressource OperationOutcome[^3] qui donne les
-détails sur la raison de l’échec</p>
+détails sur la raison de l'échec</p>
   </li>
 </ul>
 
-<p>Remarque : l’échec d’une recherche est la non-possibilité d’exécuter la
-requête, ce qui est différent d’aucune correspondance à la recherche.
+<p>Remarque : l'échec d'une recherche est la non-possibilité d'exécuter la
+requête, ce qui est différent d'aucune correspondance à la recherche.
 Plus de précision sur la spécification FHIR :
 <a href="https://www.hl7.org/fhir/http.html">https://www.hl7.org/fhir/http.html</a></p>
 
@@ -402,12 +402,12 @@ Plus de précision sur la spécification FHIR :
 </tbody>
 </table>
 
-<p>Par ailleurs, en complément des ressources Slot, afin de récupérer l’ensemble des informations qui leur sont rattachées et qui seront potentiellement exploitées par le SAS, deux paramètres supplémentaires sont exploités :</p>
+<p>Par ailleurs, en complément des ressources Slot, afin de récupérer l'ensemble des informations qui leur sont rattachées et qui seront potentiellement exploitées par le SAS, deux paramètres supplémentaires sont exploités :</p>
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">_include=Slot:schedule</code> indique qu’il est nécessaire de transmettre les ressources Schedule associées aux Slot. La présence de cette ressource est nécessaire pour permettre de faire le lien entre le créneau (Slot) et les ressources Practitioner et PractitionerRole associées.</li>
-  <li><code class="language-plaintext highlighter-rouge">_include:iterate=Schedule:actor</code> indique qu’il est nécessaire de transmettre les ressources actor référencées dans les ressources Schedule transmises. En particulier, les ressources Practitioner et PractitionerRole (incluant la ressource Location dans une élément “contained”) sont attendues.</li>
-  <li><code class="language-plaintext highlighter-rouge">_include=Slot:service-type-reference</code> indique qu’il est nécessaire de transmettre les ressources HealthcareService associées aux Slot pour la transmission d’un créneau CPTS. La présence de cette ressource est nécessaire pour permettre de faire le lien entre le créneau (Slot) et les ressources Organization associées.</li>
-  <li><code class="language-plaintext highlighter-rouge">_include:iterate=HealthcareService:organization</code> indique qu’il est nécessaire de transmettre les ressources Organization référencées dans les ressources HealthcareService transmises.</li>
+  <li><code class="language-plaintext highlighter-rouge">_include=Slot:schedule</code> indique qu'il est nécessaire de transmettre les ressources Schedule associées aux Slot. La présence de cette ressource est nécessaire pour permettre de faire le lien entre le créneau (Slot) et les ressources Practitioner et PractitionerRole associées.</li>
+  <li><code class="language-plaintext highlighter-rouge">_include:iterate=Schedule:actor</code> indique qu'il est nécessaire de transmettre les ressources actor référencées dans les ressources Schedule transmises. En particulier, les ressources Practitioner et PractitionerRole (incluant la ressource Location dans une élément "contained") sont attendues.</li>
+  <li><code class="language-plaintext highlighter-rouge">_include=Slot:service-type-reference</code> indique qu'il est nécessaire de transmettre les ressources HealthcareService associées aux Slot pour la transmission d'un créneau CPTS. La présence de cette ressource est nécessaire pour permettre de faire le lien entre le créneau (Slot) et les ressources Organization associées.</li>
+  <li><code class="language-plaintext highlighter-rouge">_include:iterate=HealthcareService:organization</code> indique qu'il est nécessaire de transmettre les ressources Organization référencées dans les ressources HealthcareService transmises.</li>
 </ul>
 
 <h3 id="exemple-de-requête">Exemple de requête</h3>
@@ -454,7 +454,7 @@ HTTP 200 OK
   </li>
 </ul>
 
-<p>Pour consulter l’exemple en plein écran, cliquer <a href="./Bundle-ExampleBundleCPTS1.html">ici</a>.</p>
+<p>Pour consulter l'exemple en plein écran, cliquer <a href="./Bundle-ExampleBundleCPTS1.html">ici</a>.</p>
 
 <iframe src="./Bundle-ExampleBundleCPTS.json" width="100%" height="300" style="border: 1px solid #cccccc; border-radius: 4px; background: #f5f2f0;" scrolling="yes"></iframe>
 <p><br /></p>
@@ -465,20 +465,20 @@ HTTP 200 OK
 <ul>
   <li><strong>ID : 3 – Statut du créneau :</strong>
     <ul>
-      <li>L’utilisation de la nomenclature standard slotstatus (<a href="http://hl7.org/fhir/R4/valueset-slotstatus.html">http://hl7.org/fhir/R4/valueset-slotstatus.html</a>) est attendue. Cependant, la plateforme numérique SAS ne récupérant que des créneaux disponibles, ce champ aura systématiquement la valeur <code class="language-plaintext highlighter-rouge">free</code>.</li>
+      <li>L'utilisation de la nomenclature standard slotstatus (<a href="http://hl7.org/fhir/R4/valueset-slotstatus.html">http://hl7.org/fhir/R4/valueset-slotstatus.html</a>) est attendue. Cependant, la plateforme numérique SAS ne récupérant que des créneaux disponibles, ce champ aura systématiquement la valeur <code class="language-plaintext highlighter-rouge">free</code>.</li>
     </ul>
   </li>
   <li><strong>ID : 13 – Spécialités ou compétences particulières du PS associées au créneau :</strong>
     <ul>
-      <li>Dans le cadre du profil FrSlot, l’élément specialty est lié à la nomenclature des spécialités ordinales du MOS (<a href="https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale/">https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale/</a>). La plateforme numérique SAS sera cependant en mesure de traiter d’autres compétences ou spécialités transmises sous la forme d’une donnée structurée au sein de l’élément <code class="language-plaintext highlighter-rouge">coding</code>, ou sous la forme d’un texte libre au niveau de l’élément <code class="language-plaintext highlighter-rouge">text</code>.</li>
+      <li>Dans le cadre du profil FrSlot, l'élément specialty est lié à la nomenclature des spécialités ordinales du MOS (<a href="https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale/">https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale/</a>). La plateforme numérique SAS sera cependant en mesure de traiter d'autres compétences ou spécialités transmises sous la forme d'une donnée structurée au sein de l'élément <code class="language-plaintext highlighter-rouge">coding</code>, ou sous la forme d’un texte libre au niveau de l'élément <code class="language-plaintext highlighter-rouge">text</code>.</li>
     </ul>
   </li>
   <li><strong>ID : 14 – Type de créneau :</strong>
     <ul>
-      <li>Afin de répondre aux besoins de la plateforme numérique SAS, une nomenclature dédiée a été mise en oeuvre (<a href="https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau">https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau</a>). 4 types de créneaux sont présentés ci-dessous. A noter qu’un créneau peut porter une combinaison de ces valeurs :
+      <li>Afin de répondre aux besoins de la plateforme numérique SAS, une nomenclature dédiée a été mise en oeuvre (<a href="https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau">https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau</a>). 4 types de créneaux sont présentés ci-dessous. A noter qu'un créneau peut porter une combinaison de ces valeurs :
         <ul>
           <li>PUBLIC – Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible par le grand public</li>
-          <li>PRO – Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible à l’ensemble des PS</li>
+          <li>PRO – Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible à l'ensemble des PS</li>
           <li>SNP – Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible par les Régulateurs et OSNP</li>
           <li>CPTS – Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible par une structure de type CPTS</li>
         </ul>
@@ -487,7 +487,7 @@ HTTP 200 OK
   </li>
   <li><strong>ID : 15 – Type de consultation :</strong>
     <ul>
-      <li>L’utilisation de la nomenclature standard ActEncounterCode (<a href="https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html">https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html</a>) est attendue. Cette nomenclature contient différentes notions, cependant, la plateforme numérique SAS gère les 3 types de créneaux ci-dessous. A noter qu’un créneau peut porter une combinaison de ces valeurs :
+      <li>L'utilisation de la nomenclature standard ActEncounterCode (<a href="https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html">https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html</a>) est attendue. Cette nomenclature contient différentes notions, cependant, la plateforme numérique SAS gère les 3 types de créneaux ci-dessous. A noter qu'un créneau peut porter une combinaison de ces valeurs :
         <ul>
           <li>AMB – Consultation au cabinet</li>
           <li>HH – Consultation à domicile</li>
@@ -518,12 +518,12 @@ HTTP 200 OK
   </li>
   <li><strong>ID : 20 – URL de redirection pour la prise de RDV :</strong>
     <ul>
-      <li>Il est attendu l’URL de redirection vers l’agenda du PS concerné. Si l’utilisateur vient du SAS et n’est pas authentifié, il est demandé de le rediriger vers la page d’authentification de la solution éditeur avant d’accéder à l’agenda du PS. Afin de faciliter l’implémentation de la règle métier, la PTF numérique SAS ajoute un paramètre <code class="language-plaintext highlighter-rouge">origin</code> à l’URL transmise par l’éditeur au moment de la redirection pour identifier la provenance.</li>
+      <li>Il est attendu l'URL de redirection vers l'agenda du PS concerné. Si l'utilisateur vient du SAS et n'est pas authentifié, il est demandé de le rediriger vers la page d'authentification de la solution éditeur avant d'accéder à l'agenda du PS. Afin de faciliter l'implémentation de la règle métier, la PTF numérique SAS ajoute un paramètre <code class="language-plaintext highlighter-rouge">origin</code> à l'URL transmise par l'éditeur au moment de la redirection pour identifier la provenance.</li>
     </ul>
   </li>
   <li><strong>ID : 21 – Créneau avec ou sans RDV :</strong>
     <ul>
-      <li>L’utilisation de la nomenclature standard AppointmentReasonCodes (<a href="https://www.hl7.org/fhir/v2/0276/index.html">https://www.hl7.org/fhir/v2/0276/index.html</a>) est attendue. Cette nomenclature contient différentes notions, cependant, la plateforme numérique SAS gère les 2 valeurs ci-dessous :
+      <li>L'utilisation de la nomenclature standard AppointmentReasonCodes (<a href="https://www.hl7.org/fhir/v2/0276/index.html">https://www.hl7.org/fhir/v2/0276/index.html</a>) est attendue. Cette nomenclature contient différentes notions, cependant, la plateforme numérique SAS gère les 2 valeurs ci-dessous :
         <ul>
           <li>ROUTINE – Créneau avec prise de RDV possible</li>
           <li>WALKIN – Créneau sans prise de RDV possible</li>
@@ -535,7 +535,7 @@ HTTP 200 OK
     <ul>
       <li>Identifiant unique propre à chaque structure CPTS. Les champs attendus doivent être valorisés comme suit :
         <ul>
-          <li>identifier.value (valeur de l’identifiant) : numéro du FINESS avec préfixe <code class="language-plaintext highlighter-rouge">1</code></li>
+          <li>identifier.value (valeur de l'identifiant) : numéro du FINESS avec préfixe <code class="language-plaintext highlighter-rouge">1</code></li>
           <li>identifier.system (autorité d’affectation) : urn:oid:1.2.250.1.71.4.2.2</li>
           <li>identifier.type (type d’identifiant) : le champ type.coding.code est valorisé à <code class="language-plaintext highlighter-rouge">IDNST</code> et type.coding.system à «http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type »</li>
         </ul>
@@ -545,8 +545,8 @@ HTTP 200 OK
 </ul>
 
 <h3 id="validateur-ressources">Validateur ressources</h3>
-<p>Le validateur mis à disposition des développeurs dans le cadre du projet SAS offre la possibilité tester le format des bundles de réponse générés. Il permet de vérifier que les réponses sont correctement formatées, que l’ensemble des informations obligatoires sont bien présentes et que les données codifiées exploitent les bonnes nomenclatures.
-Pour que le validateur puisse effectuer correctement les contrôles au niveau de la structure, il est nécessaire de renseigner pour chacun des “resourceType” correspondant, le meta.profile “URL” ci-dessous :</p>
+<p>Le validateur mis à disposition des développeurs dans le cadre du projet SAS offre la possibilité tester le format des bundles de réponse générés. Il permet de vérifier que les réponses sont correctement formatées, que l'ensemble des informations obligatoires sont bien présentes et que les données codifiées exploitent les bonnes nomenclatures.
+Pour que le validateur puisse effectuer correctement les contrôles au niveau de la structure, il est nécessaire de renseigner pour chacun des "resourceType" correspondant, le meta.profile "URL" ci-dessous :</p>
 <ul>
   <li>https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-bundle-aggregator</li>
   <li>https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator</li>
@@ -559,7 +559,7 @@ Pour que le validateur puisse effectuer correctement les contrôles au niveau de
 </ul>
 
 <p><em>Note :</em><br />
-<em>Il y a actuellement des inconsistances dans les URLs canoniques des différents profils contenus dans ce guide, certaines URLs sont au format “http://sas.fr/fhir/…” et d’autres au format “https://interop.esante.gouv.fr/ig/fhir/sas/…”. L’uniformisation n’a pas été effectuée pour cette release pour éviter les changements non rétrocompatibles. Ce changement sera à anticiper lors des prochaines releases.</em></p>
+<em>Il y a actuellement des inconsistances dans les URLs canoniques des différents profils contenus dans ce guide, certaines URLs sont au format "http://sas.fr/fhir/…" et d'autres au format "https://interop.esante.gouv.fr/ig/fhir/sas/…". L'uniformisation n'a pas été effectuée pour cette release pour éviter les changements non rétrocompatibles. Ce changement sera à anticiper lors des prochaines releases.</em></p>
 
 <p>Ci-dessous un exemple :</p>
 
@@ -574,8 +574,8 @@ Pour que le validateur puisse effectuer correctement les contrôles au niveau de
 },
 </code></pre></div></div>
 
-<p>Le validateur est disponible sur l’espace de test de l’ANS : <a href="https://interop.esante.gouv.fr/evs/fhir/validator.seam?standard=37">https://interop.esante.gouv.fr/evs/fhir/validator.seam?standard=37</a>. Pour faciliter les tests et conserver l’historique, nous vous recommandons de créer votre compte sur la plateforme.
-Afin de tester un fichier, il suffit de sélectionner le format <code class="language-plaintext highlighter-rouge">JSON</code>, d’ajouter le fichier via le bouton <code class="language-plaintext highlighter-rouge">Add…</code>, de sélectionner le modèle <code class="language-plaintext highlighter-rouge">BundleAgregateurCPTS</code> puis de cliquer sur <code class="language-plaintext highlighter-rouge">valider</code> :</p>
+<p>Le validateur est disponible sur l'espace de test de l'ANS : <a href="https://interop.esante.gouv.fr/evs/fhir/validator.seam?standard=37">https://interop.esante.gouv.fr/evs/fhir/validator.seam?standard=37</a>. Pour faciliter les tests et conserver l'historique, nous vous recommandons de créer votre compte sur la plateforme.
+Afin de tester un fichier, il suffit de sélectionner le format <code class="language-plaintext highlighter-rouge">JSON</code>, d'ajouter le fichier via le bouton <code class="language-plaintext highlighter-rouge">Add…</code>, de sélectionner le modèle <code class="language-plaintext highlighter-rouge">BundleAgregateurCPTS</code> puis de cliquer sur <code class="language-plaintext highlighter-rouge">valider</code> :</p>
 
 <table align="center">
     <tr>
@@ -651,7 +651,7 @@ Afin de tester un fichier, il suffit de sélectionner le format <code class="lan
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Feb 10, 2025 10:49+0000">2025-02-10</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 12, 2025 10:38+0000">2025-03-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

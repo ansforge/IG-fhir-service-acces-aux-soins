@@ -243,7 +243,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 </div>
-<p>Cette section regroupe les réponses aux questions les plus fréquemment posées au cours des travaux de développements menés par les éditeurs, et les tests d’intégration.</p>
+<p>Cette section regroupe les réponses aux questions les plus fréquemment posées au cours des travaux de développements menés par les éditeurs, et les tests d'intégration.</p>
 
 <h3 id="agrégateur-ps-à-titre-individuel---cpts">Agrégateur PS à titre individuel - CPTS</h3>
 
@@ -253,26 +253,26 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>urn:oid:1.2.250.1.71.4.2.1 = IDNPS<br />
 urn:oid:1.2.250.1.71.4.2.2 = IDNST</p>
 
-<h4 id="quels-codes-sont-attendus-afin-de-décrire-le-type-didentifiant-de-professionnel-élément-identifiertypecodingcode-des-ressources-practitioner-ou-de-structure-élément-organizationidentifiertypecodingcode-des-ressources-location-transmis-">Quels codes sont attendus afin de décrire le type d’identifiant de professionnel (élément <code class="language-plaintext highlighter-rouge">identifier.type.coding.code</code> des ressources <code class="language-plaintext highlighter-rouge">Practitioner</code>), ou de structure (élément <code class="language-plaintext highlighter-rouge">organization.identifier.type.coding.code</code> des ressources <code class="language-plaintext highlighter-rouge">Location</code>), transmis ?</h4>
+<h4 id="quels-codes-sont-attendus-afin-de-décrire-le-type-didentifiant-de-professionnel-élément-identifiertypecodingcode-des-ressources-practitioner-ou-de-structure-élément-organizationidentifiertypecodingcode-des-ressources-location-transmis-">Quels codes sont attendus afin de décrire le type d'identifiant de professionnel (élément <code class="language-plaintext highlighter-rouge">identifier.type.coding.code</code> des ressources <code class="language-plaintext highlighter-rouge">Practitioner</code>), ou de structure (élément <code class="language-plaintext highlighter-rouge">organization.identifier.type.coding.code</code> des ressources <code class="language-plaintext highlighter-rouge">Location</code>), transmis ?</h4>
 
 <p>Les valeurs IDNPS (ID National de PS) et IDNST (ID National de STructure), présentes dans la nomenclature <a href="http://interopsante.org/fhir/CodeSystem/fr-v2-0203">http://interopsante.org/fhir/CodeSystem/fr-v2-0203</a> sont attendues.</p>
 
-<h4 id="quels-champs-de-lélément-identifier-des-ressources-frlocation-et-frpractitioner-sont-obligatoires-">Quels champs de l’élément identifier des ressources <code class="language-plaintext highlighter-rouge">FrLocation</code> et <code class="language-plaintext highlighter-rouge">FrPractitioner</code> sont obligatoires ?</h4>
+<h4 id="quels-champs-de-lélément-identifier-des-ressources-frlocation-et-frpractitioner-sont-obligatoires-">Quels champs de l'élément identifier des ressources <code class="language-plaintext highlighter-rouge">FrLocation</code> et <code class="language-plaintext highlighter-rouge">FrPractitioner</code> sont obligatoires ?</h4>
 
 <p>Les éléments <code class="language-plaintext highlighter-rouge">identifier.system</code>, <code class="language-plaintext highlighter-rouge">identifier.type</code> et <code class="language-plaintext highlighter-rouge">identifier.value</code> sont obligatoires.</p>
 
-<h4 id="quelle-url-doit-être-transmise-dans-lélément-comment-">Quelle URL doit être transmise dans l’élément <code class="language-plaintext highlighter-rouge">comment</code> ?</h4>
+<h4 id="quelle-url-doit-être-transmise-dans-lélément-comment-">Quelle URL doit être transmise dans l'élément <code class="language-plaintext highlighter-rouge">comment</code> ?</h4>
 
-<p>Il est attendu l’URL de redirection vers l’agenda du PS concerné et non l’URL du créneau.</p>
+<p>Il est attendu l'URL de redirection vers l'agenda du PS concerné et non l'URL du créneau.</p>
 
 <h4 id="a-quel-niveau-la-ressource-frlocation-doit-elle-être-transmise-">A quel niveau la ressource <code class="language-plaintext highlighter-rouge">FrLocation</code> doit-elle être transmise ?</h4>
 
 <p>Les ressources locations doivent être contenues <code class="language-plaintext highlighter-rouge">contained</code> dans la ressource <code class="language-plaintext highlighter-rouge">PractitionerRole</code> associée. Par ailleurs, au niveau de la ressource <code class="language-plaintext highlighter-rouge">PractitionerRole</code>, la référence vers la ressource <code class="language-plaintext highlighter-rouge">Location</code> doit être indiquée.</p>
 
 <h4 id="quelle-est-la-ressource-discriminante-au-niveau-de-la-structure-de-réponse-json-">Quelle est la ressource discriminante au niveau de la structure de réponse JSON ?</h4>
-<p>Il est attendu dans le fichier de réponse JSON d’avoir 1 ressource <code class="language-plaintext highlighter-rouge">Schedule</code> pour 1 ressource <code class="language-plaintext highlighter-rouge">PractitionerRole</code>. Cela se traduit par le fait d’avoir 1 agenda pour 1 lieu de consultation. Dans la structure du fichier de réponse, un PS aura ainsi autant d’agendas que de lieux de consultation.</p>
+<p>Il est attendu dans le fichier de réponse JSON d'avoir 1 ressource <code class="language-plaintext highlighter-rouge">Schedule</code> pour 1 ressource <code class="language-plaintext highlighter-rouge">PractitionerRole</code>. Cela se traduit par le fait d’avoir 1 agenda pour 1 lieu de consultation. Dans la structure du fichier de réponse, un PS aura ainsi autant d'agendas que de lieux de consultation.</p>
 
-<h4 id="quelles-sont-les-ressources-à-transmettre-lorsquun-créneau-de-disponibilité-transmis-est-mis-en-visibilité-dune-ou-plusieurs-cpts-">Quelles sont les ressources à transmettre lorsqu’un créneau de disponibilité transmis est mis en visibilité d’une ou plusieurs CPTS ?</h4>
+<h4 id="quelles-sont-les-ressources-à-transmettre-lorsquun-créneau-de-disponibilité-transmis-est-mis-en-visibilité-dune-ou-plusieurs-cpts-">Quelles sont les ressources à transmettre lorsqu'un créneau de disponibilité transmis est mis en visibilité d'une ou plusieurs CPTS ?</h4>
 
 <p>Il est attendu dans le fichier de réponse JSON d’avoir la relation : 1 ressource HealthcareService pour 1 ressource Organization (modélisant la structure CPTS).<br />
 Dans la structure du fichier de réponse, si un créneau est associé à plusieurs CPTS, alors il y aura autant de références à de ressources HealthcareService qu’il y a de CPTS.</p>
@@ -318,7 +318,7 @@ Dans la structure du fichier de réponse, si un créneau est associé à plusieu
 </tbody>
 </table>
 
-<p>Les éditeurs ont la possibilité de récupérer les référentiels nationaux des professionnels de santé et de leurs structures associées via l’annuaire santé de l’ANS qui propose deux modalités d’accès :</p>
+<p>Les éditeurs ont la possibilité de récupérer les référentiels nationaux des professionnels de santé et de leurs structures associées via l'annuaire santé de l'ANS qui propose deux modalités d'accès :</p>
 
 <table>
 <tbody>
@@ -709,7 +709,7 @@ Dans la structure du fichier de réponse, si un créneau est associé à plusieu
 
 <h4 id="quel-est-le-format-à-utiliser-afin-de-transmettre-un-oid-dans-un-élément-system--1">Quel est le format à utiliser afin de transmettre un OID dans un élément <code class="language-plaintext highlighter-rouge">System</code> ?</h4>
 
-<p>L’OID doit être précédé du préfixe <code class="language-plaintext highlighter-rouge">urn:oid:</code>, comme dans l’exemple suivant : “system”:  “urn:oid:1.2.250.1.71.4.2.2” (pour les IDNST).</p>
+<p>L’OID doit être précédé du préfixe <code class="language-plaintext highlighter-rouge">urn:oid:</code>, comme dans l’exemple suivant : "system":  "urn:oid:1.2.250.1.71.4.2.2" (pour les IDNST).</p>
 
 <h4 id="quels-champs-de-lélément-identifier-des-ressources-frlocation-et-frorganization-sont-obligatoires-">Quels champs de l’élément identifier des ressources FrLocation et FrOrganization sont obligatoires ?</h4>
 
@@ -844,7 +844,7 @@ Dans la structure du fichier de réponse, si un créneau est associé à plusieu
 <p>L’exemple ci-dessous concerne la modification de l’identifiant du compte du régulateur Jules MARIUS, initialement associé à l’ID technique SAS <code class="language-plaintext highlighter-rouge">b6e39355-8a61-4556-b340-36f7b95fec6a</code>. La valorisation de l’élément <code class="language-plaintext highlighter-rouge">identifier.value</code> à <code class="language-plaintext highlighter-rouge">810002673899</code> indique le nouvel identifiant à prendre en compte.</p>
 
 <p><ins>Requête</ins>
-curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.213.3.6|b6e39355-8a61-4556-b340-36f7b95fec6a -H ‘Accept: application/json+fhir’ -d</p>
+curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.213.3.6|b6e39355-8a61-4556-b340-36f7b95fec6a -H 'Accept: application/json+fhir' -d</p>
 
 <p><ins>Résultat</ins></p>
 
@@ -858,7 +858,7 @@ curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.213.3.6|b6e3935
   },
   "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.text">text</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Practitioner ExamplePractitionerRegul2&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExamplePractitionerRegul2\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExamplePractitionerRegul2\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;ExamplePractitionerRegul2-fr-FR\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: Identifiant National de Professionnel de Santé/810002673899&lt;/p&gt;&lt;p&gt;&lt;b&gt;active&lt;/b&gt;: true&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Jules MARIUS &lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: &lt;a href=\&quot;mailto:jules.marius@test.com\&quot;&gt;jules.marius@test.com&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;"
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Practitioner ExamplePractitionerRegul2&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExamplePractitionerRegul2\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExamplePractitionerRegul2\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;ExamplePractitionerRegul2-fr-FR\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-sas-practitioner-aggregator-regul.html\&quot;&gt;FrPractitionerRegul&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: Identifiant National de Professionnel de Santé/810002673899&lt;/p&gt;&lt;p&gt;&lt;b&gt;active&lt;/b&gt;: true&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Jules MARIUS &lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: &lt;a href=\&quot;mailto:jules.marius@test.com\&quot;&gt;jules.marius@test.com&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;"
   },
   "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.identifier">identifier</a>" : [
     {
@@ -896,7 +896,7 @@ curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.213.3.6|b6e3935
 <p>L’exemple ci-dessous concerne la désactivation du compte du régulateur Jules MARIUS. La valorisation de l’élément <code class="language-plaintext highlighter-rouge">active</code> à <code class="language-plaintext highlighter-rouge">false</code> indique que le compte doit être désactivé.</p>
 
 <p><ins>Requête</ins>
-curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.71.4.2.1|810002673899 -H ‘Accept: application/json+fhir’ -d</p>
+curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.71.4.2.1|810002673899 -H 'Accept: application/json+fhir' -d</p>
 
 <p><ins>Résultat</ins></p>
 
@@ -910,7 +910,7 @@ curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.71.4.2.1|810002
   },
   "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.text">text</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Practitioner ExamplePractitionerRegul3&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExamplePractitionerRegul3\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExamplePractitionerRegul3\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;ExamplePractitionerRegul3-fr-FR\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: Identifiant National de Professionnel de Santé/810002673899&lt;/p&gt;&lt;p&gt;&lt;b&gt;active&lt;/b&gt;: false&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Jules MARIUS &lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: &lt;a href=\&quot;mailto:jules.marius@test.com\&quot;&gt;jules.marius@test.com&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;"
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Practitioner ExamplePractitionerRegul3&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExamplePractitionerRegul3\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExamplePractitionerRegul3\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;ExamplePractitionerRegul3-fr-FR\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-sas-practitioner-aggregator-regul.html\&quot;&gt;FrPractitionerRegul&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: Identifiant National de Professionnel de Santé/810002673899&lt;/p&gt;&lt;p&gt;&lt;b&gt;active&lt;/b&gt;: false&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Jules MARIUS &lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: &lt;a href=\&quot;mailto:jules.marius@test.com\&quot;&gt;jules.marius@test.com&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;"
   },
   "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.identifier">identifier</a>" : [
     {
@@ -951,8 +951,8 @@ curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.71.4.2.1|810002
 
 <h4 id="comment-faire-la-distinction-entre-un-id-national-et-un-id-technique-">Comment faire la distinction entre un ID national et un ID technique ?</h4>
 
-<p>Un ID national possède une structure bien définie dont les spécificités sont explicitées ici. Un identifiant technique SAS prendra la forme d’un UUID (ex. b6e39355-8a61-4556-b340-36f7b95fec6a) où une REGEX peut-être implémentée côté éditeur.
-Cf. <a href="./specifications_techniques-ps-gestion_regulateur.html#r%C3%A8gles-de-gestion">règles de gestion comptes régulateurs</a>, au sein de la requête, les champs <code class="language-plaintext highlighter-rouge">identifier.system</code> (autorité d’affectation) et <code class="language-plaintext highlighter-rouge">identifier.type</code> (type d’identifiant) permettent d’indiquer s’il s’agit d’un identifiant technique SAS ou d’un identifiant national.
+<p>Un ID national possède une structure bien définie dont les spécificités sont explicitées ici. Un identifiant technique SAS prendra la forme d'un UUID (ex. b6e39355-8a61-4556-b340-36f7b95fec6a) où une REGEX peut-être implémentée côté éditeur.
+Cf. <a href="./specifications_techniques-ps-gestion_regulateur.html#r%C3%A8gles-de-gestion">règles de gestion comptes régulateurs</a>, au sein de la requête, les champs <code class="language-plaintext highlighter-rouge">identifier.system</code> (autorité d'affectation) et <code class="language-plaintext highlighter-rouge">identifier.type</code> (type d'identifiant) permettent d'indiquer s'il s'agit d'un identifiant technique SAS ou d'un identifiant national.
 <br /><br /></p>
 
 
@@ -996,7 +996,7 @@ Cf. <a href="./specifications_techniques-ps-gestion_regulateur.html#r%C3%A8gles-
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Feb 10, 2025 10:49+0000">2025-02-10</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 12, 2025 10:38+0000">2025-03-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

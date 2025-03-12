@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="12dbd14a-7a6d-44d6-87e0-a233e13045ea"/>
+  <id value="84ec4eca-440a-4ed9-b522-fa09bda7731f"/>
   <meta>
-    <lastUpdated value="2025-02-10T10:49:03.422+00:00"/>
+    <lastUpdated value="2025-03-12T10:38:21.106+00:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -14,25 +14,25 @@
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p class="res-header-id">
-              <b>Generated Narrative: ValueSet </b>
+              <b>ValueSet </b>
             </p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion done internally based on 
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
               <a href="https://interop.esante.gouv.fr/ig/nos/1.4.0/CodeSystem-TRE-R314-TypeCreneau.html">codesystem TRE_R314-TypeCreneau v1.4.0 (CodeSystem)</a>
             </p>
-            <p>This value set contains 4 concepts</p>
+            <p>Ce jeu de valeur (ValueSet) contient 4 concepts</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
                   <b>Code</b>
                 </td>
                 <td>
-                  <b>System</b>
+                  <b>Système</b>
                 </td>
                 <td>
-                  <b>Display</b>
+                  <b>Display (fr-FR)</b>
                 </td>
                 <td>
-                  <b>Definition</b>
+                  <b>Définition</b>
                 </td>
               </tr>
               <tr>
@@ -41,7 +41,7 @@
                   <a href="https://interop.esante.gouv.fr/ig/nos/1.4.0/CodeSystem-TRE-R314-TypeCreneau.html#TRE-R314-TypeCreneau-PUBLIC">PUBLIC</a>
                 </td>
                 <td>https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau</td>
-                <td>Créneau accessible par le grand public</td>
+                <td/>
                 <td>
                   <div>
                     <p>Les créneaux ouverts au public - Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible par le grand public</p>
@@ -55,7 +55,7 @@
                   <a href="https://interop.esante.gouv.fr/ig/nos/1.4.0/CodeSystem-TRE-R314-TypeCreneau.html#TRE-R314-TypeCreneau-SNP">SNP</a>
                 </td>
                 <td>https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau</td>
-                <td>Créneau accessible par les Régulateurs et Organisateurs de Soins Non Programmés</td>
+                <td/>
                 <td>
                   <div>
                     <p>Les créneaux ouverts aux Soins Non Programmés -Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible par les Régulateurs et Organisateurs de Soins Non Programmés</p>
@@ -69,7 +69,7 @@
                   <a href="https://interop.esante.gouv.fr/ig/nos/1.4.0/CodeSystem-TRE-R314-TypeCreneau.html#TRE-R314-TypeCreneau-PRO">PRO</a>
                 </td>
                 <td>https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau</td>
-                <td>Créneau accessible par les professionnels de santé</td>
+                <td/>
                 <td>
                   <div>
                     <p>Les créneaux ouverts aux professionnels, dans le cadre de la prise de RDV par un tiers - Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible à l'ensemble des professionnels de santé</p>
@@ -83,7 +83,7 @@
                   <a href="https://interop.esante.gouv.fr/ig/nos/1.4.0/CodeSystem-TRE-R314-TypeCreneau.html#TRE-R314-TypeCreneau-CPTS">CPTS</a>
                 </td>
                 <td>https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau</td>
-                <td>Créneau accessible par les CPTS</td>
+                <td/>
                 <td>
                   <div>
                     <p>Les créneaux ouverts aux structures de type CPTS - Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible par une structure de type CPTS</p>
@@ -100,7 +100,7 @@
         <title value="Type créneaux SAS CPTS"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2025-02-10T10:48:04+00:00"/>
+        <date value="2025-03-12T10:37:36+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -109,10 +109,14 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:17b6b24f-efc2-45b0-bd8b-6ba51adde4bb"/>
-          <timestamp value="2025-02-10T10:49:48+00:00"/>
+          <identifier value="urn:uuid:9a2bc43b-a6dd-4608-afe1-9da1e3fb1f90"/>
+          <timestamp value="2025-03-12T10:38:55+00:00"/>
           <total value="4"/>
           <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="fr-FR"/>
+          </parameter>
           <parameter>
             <name value="count"/>
             <valueInteger value="1000"/>
@@ -132,22 +136,18 @@
           <contains>
             <system value="https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"/>
             <code value="PUBLIC"/>
-            <display value="Créneau accessible par le grand public"/>
           </contains>
           <contains>
             <system value="https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"/>
             <code value="SNP"/>
-            <display value="Créneau accessible par les Régulateurs et Organisateurs de Soins Non Programmés"/>
           </contains>
           <contains>
             <system value="https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"/>
             <code value="PRO"/>
-            <display value="Créneau accessible par les professionnels de santé"/>
           </contains>
           <contains>
             <system value="https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"/>
             <code value="CPTS"/>
-            <display value="Créneau accessible par les CPTS"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -161,25 +161,25 @@
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p class="res-header-id">
-              <b>Generated Narrative: ValueSet </b>
+              <b>ValueSet </b>
             </p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion done internally based on 
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
               <a href="http://hl7.org/fhir/R4/codesystem-participationstatus.html">codesystem ParticipationStatus v4.0.1 (CodeSystem)</a>
             </p>
-            <p>This value set contains 2 concepts</p>
+            <p>Ce jeu de valeur (ValueSet) contient 2 concepts</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
                   <b>Code</b>
                 </td>
                 <td>
-                  <b>System</b>
+                  <b>Système</b>
                 </td>
                 <td>
-                  <b>Display</b>
+                  <b>Display (fr-FR)</b>
                 </td>
                 <td>
-                  <b>Definition</b>
+                  <b>Définition</b>
                 </td>
               </tr>
               <tr>
@@ -188,7 +188,7 @@
                   <a href="http://hl7.org/fhir/R4/codesystem-participationstatus.html#participationstatus-accepted">accepted</a>
                 </td>
                 <td>http://hl7.org/fhir/participationstatus</td>
-                <td>RDV accepté par le PS effecteur de soins</td>
+                <td/>
                 <td>
                   <div>
                     <p>The participant has accepted the appointment.</p>
@@ -202,7 +202,7 @@
                   <a href="http://hl7.org/fhir/R4/codesystem-participationstatus.html#participationstatus-needs-action">needs-action</a>
                 </td>
                 <td>http://hl7.org/fhir/participationstatus</td>
-                <td>RDV en attente de confirmation par le PS effecteur de soins</td>
+                <td/>
                 <td>
                   <div>
                     <p>The participant needs to indicate if they accept the appointment by changing this status to one of the other statuses.</p>
@@ -219,7 +219,7 @@
         <title value="Statut participant SAS SOS"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2025-02-10T10:48:04+00:00"/>
+        <date value="2025-03-12T10:37:36+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -228,10 +228,14 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:84e42e12-516f-4500-89fd-8ce8d3eb351a"/>
-          <timestamp value="2025-02-10T10:49:48+00:00"/>
+          <identifier value="urn:uuid:7d643491-c8a2-4f79-afa4-25801dfe6ca0"/>
+          <timestamp value="2025-03-12T10:38:55+00:00"/>
           <total value="2"/>
           <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="fr-FR"/>
+          </parameter>
           <parameter>
             <name value="count"/>
             <valueInteger value="1000"/>
@@ -255,12 +259,10 @@
           <contains>
             <system value="http://hl7.org/fhir/participationstatus"/>
             <code value="accepted"/>
-            <display value="RDV accepté par le PS effecteur de soins"/>
           </contains>
           <contains>
             <system value="http://hl7.org/fhir/participationstatus"/>
             <code value="needs-action"/>
-            <display value="RDV en attente de confirmation par le PS effecteur de soins"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -274,25 +276,25 @@
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p class="res-header-id">
-              <b>Generated Narrative: ValueSet </b>
+              <b>ValueSet </b>
             </p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion done internally based on 
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
               <a href="https://interop.esante.gouv.fr/ig/nos/1.4.0/CodeSystem-TRE-R314-TypeCreneau.html">codesystem TRE_R314-TypeCreneau v1.4.0 (CodeSystem)</a>
             </p>
-            <p>This value set contains 2 concepts</p>
+            <p>Ce jeu de valeur (ValueSet) contient 2 concepts</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
                   <b>Code</b>
                 </td>
                 <td>
-                  <b>System</b>
+                  <b>Système</b>
                 </td>
                 <td>
-                  <b>Display</b>
+                  <b>Display (fr-FR)</b>
                 </td>
                 <td>
-                  <b>Definition</b>
+                  <b>Définition</b>
                 </td>
               </tr>
               <tr>
@@ -301,7 +303,7 @@
                   <a href="https://interop.esante.gouv.fr/ig/nos/1.4.0/CodeSystem-TRE-R314-TypeCreneau.html#TRE-R314-TypeCreneau-PUBLIC">PUBLIC</a>
                 </td>
                 <td>https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau</td>
-                <td>Créneau accessible par le grand public</td>
+                <td/>
                 <td>
                   <div>
                     <p>Les créneaux ouverts au public - Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible par le grand public</p>
@@ -315,7 +317,7 @@
                   <a href="https://interop.esante.gouv.fr/ig/nos/1.4.0/CodeSystem-TRE-R314-TypeCreneau.html#TRE-R314-TypeCreneau-SNP">SNP</a>
                 </td>
                 <td>https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau</td>
-                <td>Créneau accessible par les Régulateurs et Organisateurs de Soins Non Programmés</td>
+                <td/>
                 <td>
                   <div>
                     <p>Les créneaux ouverts aux Soins Non Programmés -Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible par les Régulateurs et Organisateurs de Soins Non Programmés</p>
@@ -332,7 +334,7 @@
         <title value="Type créneaux SAS SOS"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2025-02-10T10:48:04+00:00"/>
+        <date value="2025-03-12T10:37:36+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -341,10 +343,14 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:c5798bfd-422f-44a0-ad0f-324951b2a5fe"/>
-          <timestamp value="2025-02-10T10:49:48+00:00"/>
+          <identifier value="urn:uuid:2240752c-cbe9-4f0a-a56c-77ef1294bfa9"/>
+          <timestamp value="2025-03-12T10:38:55+00:00"/>
           <total value="2"/>
           <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="fr-FR"/>
+          </parameter>
           <parameter>
             <name value="count"/>
             <valueInteger value="1000"/>
@@ -364,12 +370,10 @@
           <contains>
             <system value="https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"/>
             <code value="PUBLIC"/>
-            <display value="Créneau accessible par le grand public"/>
           </contains>
           <contains>
             <system value="https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"/>
             <code value="SNP"/>
-            <display value="Créneau accessible par les Régulateurs et Organisateurs de Soins Non Programmés"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -383,25 +387,25 @@
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p class="res-header-id">
-              <b>Generated Narrative: ValueSet </b>
+              <b>ValueSet </b>
             </p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion done internally based on 
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
               <a href="http://terminology.hl7.org/6.0.2/CodeSystem-v2-0276.html">codesystem appointmentReason v2.0.0 (CodeSystem)</a>
             </p>
-            <p>This value set contains 2 concepts</p>
+            <p>Ce jeu de valeur (ValueSet) contient 2 concepts</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
                   <b>Code</b>
                 </td>
                 <td>
-                  <b>System</b>
+                  <b>Système</b>
                 </td>
                 <td>
-                  <b>Display</b>
+                  <b>Display (fr-FR)</b>
                 </td>
                 <td>
-                  <b>Definition</b>
+                  <b>Définition</b>
                 </td>
               </tr>
               <tr>
@@ -410,7 +414,7 @@
                   <a href="http://terminology.hl7.org/6.0.2/CodeSystem-v2-0276.html#v2-0276-ROUTINE">ROUTINE</a>
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/v2-0276</td>
-                <td>Créneau avec prise de RDV possible</td>
+                <td/>
                 <td>
                   <div>
                     <p>Routine appointment - default if not valued</p>
@@ -424,7 +428,7 @@
                   <a href="http://terminology.hl7.org/6.0.2/CodeSystem-v2-0276.html#v2-0276-WALKIN">WALKIN</a>
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/v2-0276</td>
-                <td>Créneau sans prise de RDV possible à domicile</td>
+                <td/>
                 <td>
                   <div>
                     <p>A previously unscheduled walk-in visit</p>
@@ -441,7 +445,7 @@
         <title value="Appointment reason SAS"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2025-02-10T10:48:04+00:00"/>
+        <date value="2025-03-12T10:37:36+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -450,10 +454,14 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:de8c7690-ae85-44b2-8c18-155187b77f34"/>
-          <timestamp value="2025-02-10T10:49:48+00:00"/>
+          <identifier value="urn:uuid:c15065d6-1b23-40c9-94c7-8928ba710783"/>
+          <timestamp value="2025-03-12T10:38:55+00:00"/>
           <total value="2"/>
           <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="fr-FR"/>
+          </parameter>
           <parameter>
             <name value="count"/>
             <valueInteger value="1000"/>
@@ -473,12 +481,10 @@
           <contains>
             <system value="http://terminology.hl7.org/CodeSystem/v2-0276"/>
             <code value="ROUTINE"/>
-            <display value="Créneau avec prise de RDV possible"/>
           </contains>
           <contains>
             <system value="http://terminology.hl7.org/CodeSystem/v2-0276"/>
             <code value="WALKIN"/>
-            <display value="Créneau sans prise de RDV possible à domicile"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -492,25 +498,25 @@
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p class="res-header-id">
-              <b>Generated Narrative: ValueSet </b>
+              <b>ValueSet </b>
             </p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion done internally based on 
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
               <a href="https://interop.esante.gouv.fr/ig/nos/1.4.0/CodeSystem-TRE-R66-CategorieEtablissement.html">codesystem TRE_R66-CategorieEtablissement v1.4.0 (CodeSystem)</a>
             </p>
-            <p>This value set contains 1 concepts</p>
+            <p>Ce jeu de valeur (ValueSet) contient 1 concepts</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
                   <b>Code</b>
                 </td>
                 <td>
-                  <b>System</b>
+                  <b>Système</b>
                 </td>
                 <td>
-                  <b>Display</b>
+                  <b>Display (fr-FR)</b>
                 </td>
                 <td>
-                  <b>Definition</b>
+                  <b>Définition</b>
                 </td>
               </tr>
               <tr>
@@ -519,7 +525,7 @@
                   <a href="https://interop.esante.gouv.fr/ig/nos/1.4.0/CodeSystem-TRE-R66-CategorieEtablissement.html#TRE-R66-CategorieEtablissement-604">604</a>
                 </td>
                 <td>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement</td>
-                <td>CPTS</td>
+                <td/>
                 <td>
                   <div>
                     <p>Les Communautés Professionnelles Territoriales de Santé (CPTS) ont été créées par la loi de modernisation de notre système de santé du 26 janvier 2016 (cf. articles Article L1434-12 et Article L1434-13 du code de la Santé Publique). Leur enregistrement est régi par l'instruction DGOS/DIR/DREES/DMSI/2020/12. Les CPTS sont un espace d'organisation et de coordination entre professionnels de santé et non pas des structures de soins : elles regroupent les professionnels de santé d'un même territoire qui souhaitent s'organiser - à leur initiative - autour d'un projet de santé pour répondre aux besoins de santé de la population. Les CPTS sont constituées entre des professionnels de santé, le cas échéant de maisons de santé, de centres de santé, de réseaux de santé, d'établissements de santé, d'établissements et de services médico-sociaux, des groupements de coopération sanitaire, et des groupements de coopération sociale et médicosociale. Grâce à l'accord conventionnel interprofessionnel (ACI) intervenu en 2019, les CPTS dont le projet de santé est validé par l'ARS sont enregistrés dans FINESS et peuvent bénéficier de financement de l'assurance maladie  Ne sont enregistrés dans FINESS que l'Entité Juridique et le siège social. Les établissements et professionnels constitutif d'une CPTS ne sont pas enregistrés dans FINESS.</p>
@@ -536,7 +542,7 @@
         <title value="Catégorie établissement SAS"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2025-02-10T10:48:04+00:00"/>
+        <date value="2025-03-12T10:37:36+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -545,10 +551,14 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:959f3dbf-59bd-474f-a5fc-73d303e00987"/>
-          <timestamp value="2025-02-10T10:49:48+00:00"/>
+          <identifier value="urn:uuid:0868ae02-e08b-440f-acf6-bce79d6defc3"/>
+          <timestamp value="2025-03-12T10:38:55+00:00"/>
           <total value="1"/>
           <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="fr-FR"/>
+          </parameter>
           <parameter>
             <name value="count"/>
             <valueInteger value="1000"/>
@@ -568,7 +578,6 @@
           <contains>
             <system value="https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement"/>
             <code value="604"/>
-            <display value="CPTS"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -582,25 +591,25 @@
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p class="res-header-id">
-              <b>Generated Narrative: ValueSet </b>
+              <b>ValueSet </b>
             </p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion done internally based on 
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
               <a href="http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActCode.html">codesystem ActCode v9.0.0 (CodeSystem)</a>
             </p>
-            <p>This value set contains 3 concepts</p>
+            <p>Ce jeu de valeur (ValueSet) contient 3 concepts</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
                   <b>Code</b>
                 </td>
                 <td>
-                  <b>System</b>
+                  <b>Système</b>
                 </td>
                 <td>
-                  <b>Display</b>
+                  <b>Display (fr-FR)</b>
                 </td>
                 <td>
-                  <b>Definition</b>
+                  <b>Définition</b>
                 </td>
               </tr>
               <tr>
@@ -609,7 +618,7 @@
                   <a href="http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActCode.html#v3-ActCode-AMB">AMB</a>
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/v3-ActCode</td>
-                <td>Consultation au cabinet</td>
+                <td/>
                 <td>
                   <div>
                     <p>A comprehensive term for health care provided in a healthcare facility (e.g. a practitioneraTMs office, clinic setting, or hospital) on a nonresident basis. The term ambulatory usually implies that the patient has come to the location and is not assigned to a bed. Sometimes referred to as an outpatient encounter.</p>
@@ -623,7 +632,7 @@
                   <a href="http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActCode.html#v3-ActCode-HH">HH</a>
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/v3-ActCode</td>
-                <td>Consultation à domicile</td>
+                <td/>
                 <td>
                   <div>
                     <p>Healthcare encounter that takes place in the residence of the patient or a designee</p>
@@ -637,7 +646,7 @@
                   <a href="http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActCode.html#v3-ActCode-VR">VR</a>
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/v3-ActCode</td>
-                <td>Téléconsultation</td>
+                <td/>
                 <td>
                   <div>
                     <p>A patient encounter where the patient and the practitioner(s) are not in the same physical location. Examples include telephone conference, email exchange, robotic surgery, and televideo conference.</p>
@@ -654,7 +663,7 @@
         <title value="Type consultation SAS"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2025-02-10T10:48:04+00:00"/>
+        <date value="2025-03-12T10:37:36+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -663,10 +672,14 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:925c9fe0-a769-4572-8777-41494e73268b"/>
-          <timestamp value="2025-02-10T10:49:48+00:00"/>
+          <identifier value="urn:uuid:6b71f0be-c5e0-4699-b4d1-751f463d252c"/>
+          <timestamp value="2025-03-12T10:38:55+00:00"/>
           <total value="3"/>
           <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="fr-FR"/>
+          </parameter>
           <parameter>
             <name value="count"/>
             <valueInteger value="1000"/>
@@ -686,17 +699,14 @@
           <contains>
             <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
             <code value="AMB"/>
-            <display value="Consultation au cabinet"/>
           </contains>
           <contains>
             <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
             <code value="HH"/>
-            <display value="Consultation à domicile"/>
           </contains>
           <contains>
             <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
             <code value="VR"/>
-            <display value="Téléconsultation"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -710,22 +720,22 @@
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p class="res-header-id">
-              <b>Generated Narrative: ValueSet </b>
+              <b>ValueSet </b>
             </p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion done internally based on 
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
               <a href="https://hl7.fr/ig/fhir/core/2.1.0/CodeSystem-fr-core-cs-v2-0203.html">codesystem FR Core CodeSystem v2-0203 v2.1.0 (CodeSystem)</a>
             </p>
-            <p>This value set contains 2 concepts</p>
+            <p>Ce jeu de valeur (ValueSet) contient 2 concepts</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
                   <b>Code</b>
                 </td>
                 <td>
-                  <b>System</b>
+                  <b>Système</b>
                 </td>
                 <td>
-                  <b>Display</b>
+                  <b>Display (fr-FR)</b>
                 </td>
               </tr>
               <tr>
@@ -734,7 +744,7 @@
                   <a href="https://hl7.fr/ig/fhir/core/2.1.0/CodeSystem-fr-core-cs-v2-0203.html#fr-core-cs-v2-0203-IDNPS">IDNPS</a>
                 </td>
                 <td>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203</td>
-                <td>Identifiant National de Professionnel de Santé</td>
+                <td/>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -742,7 +752,7 @@
                   <a href="https://hl7.fr/ig/fhir/core/2.1.0/CodeSystem-fr-core-cs-v2-0203.html#fr-core-cs-v2-0203-INTRN">INTRN</a>
                 </td>
                 <td>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203</td>
-                <td>Identifiant interne</td>
+                <td/>
               </tr>
             </table>
           </div>
@@ -753,7 +763,7 @@
         <title value="Type identifiant SAS"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2025-02-10T10:48:04+00:00"/>
+        <date value="2025-03-12T10:37:36+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -762,10 +772,14 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:4c6f4e2a-a8c9-4603-b9b8-c9954afc1e42"/>
-          <timestamp value="2025-02-10T10:49:48+00:00"/>
+          <identifier value="urn:uuid:3f2adaea-4de7-4c7d-8398-d1728c877232"/>
+          <timestamp value="2025-03-12T10:38:56+00:00"/>
           <total value="2"/>
           <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="fr-FR"/>
+          </parameter>
           <parameter>
             <name value="count"/>
             <valueInteger value="1000"/>
@@ -785,12 +799,10 @@
           <contains>
             <system value="https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"/>
             <code value="IDNPS"/>
-            <display value="Identifiant National de Professionnel de Santé"/>
           </contains>
           <contains>
             <system value="https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"/>
             <code value="INTRN"/>
-            <display value="Identifiant interne"/>
           </contains>
         </expansion>
       </ValueSet>
