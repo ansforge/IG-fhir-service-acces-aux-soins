@@ -6,8 +6,8 @@ Description: "Profil de Practitioner, dérivé de FrPractitioner, pour le servic
 * meta.profile contains sas-practitioner-aggregator 0..1
 * meta.profile[sas-practitioner-aggregator] = Canonical(sas-practitioner-aggregator)
 
-* identifier 1..
-* identifier.type = $fr-v2-0203#IDNPS
+* identifier[idNatPs] 1..
+* identifier[idNatPs].type = $fr-v2-0203#IDNPS
 * identifier.type.coding ..1
 * identifier.system = "urn:oid:1.2.250.1.71.4.2.1"
 
