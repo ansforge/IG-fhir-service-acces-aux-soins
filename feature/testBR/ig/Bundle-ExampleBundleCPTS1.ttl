@@ -150,9 +150,15 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_ExamplePractitioner\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner ExamplePractitioner</b></p><a name=\"ExamplePractitioner\"> </a><a name=\"hcExamplePractitioner\"> </a><a name=\"ExamplePractitioner-fr-FR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-practitioner-aggregator.html\">FrPractitionerAgregateur</a></p></div><p><b>identifier</b>: <code>urn:oid:1.2.250.1.71.4.2.1</code>/810002909371</p><p><b>name</b>: Pierre Foret </p></div>"^^rdf:XMLLiteral
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_ExamplePractitioner\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner ExamplePractitioner</b></p><a name=\"ExamplePractitioner\"> </a><a name=\"hcExamplePractitioner\"> </a><a name=\"ExamplePractitioner-fr-FR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-practitioner-aggregator.html\">FrPractitionerAgregateur</a></p></div><p><b>identifier</b>: Identifiant National de Professionnel de Santé/810002909371</p><p><b>name</b>: Pierre Foret </p></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "IDNPS" ]
+       ] )
+     ] ;
      fhir:system [ fhir:v "urn:oid:1.2.250.1.71.4.2.1"^^xsd:anyURI ] ;
      fhir:value [ fhir:v "810002909371" ]
   ] ) ; # 
