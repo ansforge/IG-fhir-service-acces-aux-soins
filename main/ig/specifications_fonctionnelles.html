@@ -40,7 +40,8 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"2"}
     h3,h4,h5,h6{--heading-prefix:"2"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
@@ -241,7 +242,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 </div>
-<p>A ce jour, les API ont pour vocation de répondre aux cas d’usage suivants :</p>
+<p>A ce jour, les API ont pour vocation de répondre aux cas d'usage suivants :</p>
 <ol>
   <li>Service exposé par une solution de prise de rendez-vous en ligne consommé par la plateforme SAS
     <ul>
@@ -257,23 +258,23 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </li>
 </ol>
 
-<p>Pour les cas d’usage couverts par ces API :</p>
+<p>Pour les cas d'usage couverts par ces API :</p>
 <ul>
-  <li>Le système consommateur doit disposer des points d’accès et des moyens d’authentification (authentification mTLS avec des certificats IGC-Santé).</li>
+  <li>Le système consommateur doit disposer des points d'accès et des moyens d'authentification (authentification mTLS avec des certificats IGC-Santé).</li>
 </ul>
 
 <h3 id="agrégateur---recherche-de-créneaux">Agrégateur - Recherche de créneaux</h3>
 
-<h4 id="description-du-cas-dusage">Description du cas d’usage</h4>
+<h4 id="description-du-cas-dusage">Description du cas d'usage</h4>
 
 <h5 id="ps-à-titre-individuel---cpts">PS à titre individuel - CPTS</h5>
-<p>L’objectif de cette interface est de permettre l’agrégation des créneaux de disponibilités des solutions logicielles d’agenda avec prise de RDV dans la plateforme numérique SAS :</p>
+<p>L'objectif de cette interface est de permettre l'agrégation des créneaux de disponibilités des solutions logicielles d'agenda avec prise de RDV dans la plateforme numérique SAS :</p>
 <ul>
-  <li>Flux <font color="blue"><b>INT_R01</b></font> : solution d’agenda pour les <strong>PS à titre individuel</strong></li>
-  <li>Flux <font color="red"><b>INT_R04</b></font> : solution d’agenda pour les <strong>PS appartenant à une ou plusieurs CPTS</strong></li>
+  <li>Flux <font color="blue"><b>INT_R01</b></font> : solution d'agenda pour les <strong>PS à titre individuel</strong></li>
+  <li>Flux <font color="red"><b>INT_R04</b></font> : solution d'agenda pour les <strong>PS appartenant à une ou plusieurs CPTS</strong></li>
 </ul>
 
-<p>Le schéma de présentation générale ci-dessous illustre ce cas d’usage :</p>
+<p>Le schéma de présentation générale ci-dessous illustre ce cas d'usage :</p>
 
 <table align="center">
     <tr>
@@ -290,8 +291,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </tr>
 </table>
 
-<p>Les créneaux de disponibilités sont renseignés par les professionnels effecteurs de soins ou délégataires dans leur solution logicielle d’agenda. Le flux décrit ci-dessous permet de récupérer et d’afficher dans la plateforme numérique SAS les créneaux selon les modalités définies lors des Groupes de Travail en bilatérales avec l’ANS.
-Lors d’une recherche d’offre de soins sur la plateforme numérique SAS, le moteur de recherche va s’appuyer sur les référentiels nationaux pour identifier l’offre correspondant aux critères de recherche. Une <strong>liste de 1 à 25 RPPS/ADELI</strong> est envoyée aux solutions logicielles éditeurs pour identifier les créneaux de disponibilités des professionnels de santé (PS) correspondants. Les types de créneaux remontés dans la plateforme sont :</p>
+<p>Les créneaux de disponibilités sont renseignés par les professionnels effecteurs de soins ou délégataires dans leur solution logicielle d'agenda. Le flux décrit ci-dessous permet de récupérer et d'afficher dans la plateforme numérique SAS les créneaux selon les modalités définies lors des Groupes de Travail en bilatérales avec l'ANS.
+Lors d'une recherche d'offre de soins sur la plateforme numérique SAS, le moteur de recherche va s'appuyer sur les référentiels nationaux pour identifier l'offre correspondant aux critères de recherche. Une <strong>liste de 1 à 25 RPPS/ADELI</strong> est envoyée aux solutions logicielles éditeurs pour identifier les créneaux de disponibilités des professionnels de santé (PS) correspondants. Les types de créneaux remontés dans la plateforme sont :</p>
 <ul>
   <li>Les créneaux visibles du grand public hors ceux réservés pour la patientèle</li>
   <li>Les créneaux visibles des professionnels de santé hors ceux de structures</li>
@@ -327,8 +328,8 @@ Lors d’une recherche d’offre de soins sur la plateforme numérique SAS, le m
 </ul>
 
 <h5 id="format-commun-des-échanges">Format commun des échanges</h5>
-<p>L’agrégateur de créneaux fait intervenir de nombreux acteurs, pour la plupart externes au SAS. Il est donc nécessaire de s’assurer d’une technologie commune aux différentes plateformes.
-Les échanges reposent sur des <strong>webservices se basant sur l’API REST du standard HL7 FHIR (R4)</strong>.</p>
+<p>L'agrégateur de créneaux fait intervenir de nombreux acteurs, pour la plupart externes au SAS. Il est donc nécessaire de s'assurer d'une technologie commune aux différentes plateformes.
+Les échanges reposent sur des <strong>webservices se basant sur l'API REST du standard HL7 FHIR (R4)</strong>.</p>
 
 <p>Le schéma ci-dessous illustre les échanges à mettre en oeuvre entre la plateforme numérique SAS, et les différentes solutions interfacées :</p>
 
@@ -371,9 +372,9 @@ plateformes. Les échanges reposent sur des webservices se basant sur l’API RE
 FHIR, et respectant les spécifications des flux 1a et 1b du volet d’agendas partagés du Cadre 
 d’Interopérabilité des Systèmes d’Information de Santé (CI-SIS).</p>
 
-<p>Lorsqu’un compte régulateur est créé dans la plateforme SAS, celle-ci transmet une requête de création de compte dans la solution logicielle éditeur.</p>
+<p>Lorsqu'un compte régulateur est créé dans la plateforme SAS, celle-ci transmet une requête de création de compte dans la solution logicielle éditeur.</p>
 
-<p>Le schéma ci-dessous illustre l’échange à mettre en oeuvre :</p>
+<p>Le schéma ci-dessous illustre l'échange à mettre en oeuvre :</p>
 
 <div class="figure" style="width:100%;" align="center">
     <p><?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="149px" preserveAspectRatio="none" style="width:352px;height:149px;background:#FFFFFF;" version="1.1" viewBox="0 0 352 149" width="352px" zoomAndPan="magnify"><defs /><g><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="64" x2="64" y1="36.2969" y2="114.5625" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="274" x2="274" y1="36.2969" y2="114.5625" /><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="119" x="5" y="5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="105" x="12" y="24.9951">Plateforme SAS</text><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="119" x="5" y="113.5625" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="105" x="12" y="133.5576">Plateforme SAS</text><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="143" x="203" y="5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129" x="210" y="24.9951">Solution interfac&#233;e</text><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="143" x="203" y="113.5625" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129" x="210" y="133.5576">Solution interfac&#233;e</text><polygon fill="#181818" points="262.5,63.4297,272.5,67.4297,262.5,71.4297,266.5,67.4297" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="64.5" x2="268.5" y1="67.4297" y2="67.4297" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="53" x="71.5" y="62.3638">Requ&#234;te</text><text fill="#0000FF" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="129" x="128.5" y="62.3638">POST Practitioner</text><polygon fill="#181818" points="75.5,92.5625,65.5,96.5625,75.5,100.5625,71.5,96.5625" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="69.5" x2="273.5" y1="96.5625" y2="96.5625" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="55" x="81.5" y="91.4966">R&#233;ponse</text><text fill="#0000FF" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="89" x="140.5" y="91.4966">201 created</text></g></svg></p>
@@ -381,7 +382,7 @@ d’Interopérabilité des Systèmes d’Information de Santé (CI-SIS).</p>
 
 <p>La modification de compte peut porter sur chacun des éléments de la ressource transmise (nom, prénom, mail, ID national,habilitation).</p>
 
-<p>Le schéma ci-dessous illustre l’échange à mettre en oeuvre :</p>
+<p>Le schéma ci-dessous illustre l'échange à mettre en oeuvre :</p>
 
 <div class="figure" style="width:100%;" align="center">
     <p><?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="149px" preserveAspectRatio="none" style="width:455px;height:149px;background:#FFFFFF;" version="1.1" viewBox="0 0 455 149" width="455px" zoomAndPan="magnify"><defs /><g><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="64" x2="64" y1="36.2969" y2="114.5625" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="377" x2="377" y1="36.2969" y2="114.5625" /><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="119" x="5" y="5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="105" x="12" y="24.9951">Plateforme SAS</text><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="119" x="5" y="113.5625" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="105" x="12" y="133.5576">Plateforme SAS</text><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="143" x="306" y="5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129" x="313" y="24.9951">Solution interfac&#233;e</text><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="143" x="306" y="113.5625" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129" x="313" y="133.5576">Solution interfac&#233;e</text><polygon fill="#181818" points="365.5,63.4297,375.5,67.4297,365.5,71.4297,369.5,67.4297" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="64.5" x2="371.5" y1="67.4297" y2="67.4297" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="53" x="71.5" y="62.3638">Requ&#234;te</text><text fill="#0000FF" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="232" x="128.5" y="62.3638">PUT Practitioner?identifier=[ID]</text><polygon fill="#181818" points="75.5,92.5625,65.5,96.5625,75.5,100.5625,71.5,96.5625" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="69.5" x2="376.5" y1="96.5625" y2="96.5625" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="55" x="81.5" y="91.4966">R&#233;ponse</text><text fill="#0000FF" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="53" x="140.5" y="91.4966">200 OK</text></g></svg></p>
@@ -416,8 +417,8 @@ Le schéma ci-dessous illustre les éléments décrits ci-dessus :</li>
 
 <h3 id="gestion-des-informations-rendez-vous">Gestion des informations rendez-vous</h3>
 
-<p>L’objectif de cette interface, flux INT_R03, est de permettre la transmission des données liées à l’usage de la fonctionnalité de prise de RDV par les régulateurs provenant de la plateforme numérique SAS, dans les solutions logicielles d’agenda.
-Le schéma de présentation générale ci-dessous illustre le cas d’usage :</p>
+<p>L'objectif de cette interface, flux INT_R03, est de permettre la transmission des données liées à l'usage de la fonctionnalité de prise de RDV par les régulateurs provenant de la plateforme numérique SAS, dans les solutions logicielles d'agenda.
+Le schéma de présentation générale ci-dessous illustre le cas d'usage :</p>
 
 <table align="center">
     <tr>
@@ -434,14 +435,14 @@ Le schéma de présentation générale ci-dessous illustre le cas d’usage :</p
     </tr>
 </table>
 
-<p>Après avoir sélectionné un créneau depuis la plateforme numérique SAS et avoir été redirigé vers la plateforme de prise de RDV éditeur, le régulateur prend directement RDV pour le patient dans la solution éditeur. Dès que le RDV est pris, les informations associées sont transmises à la plateforme numérique SAS via le flux INT_R03 mis en place. Lors de chaque mise à jour du RDV (annulation, modification, honoré, non honoré), l’information est transmise par le biais de ce flux à la plateforme numérique SAS. Ces données sont utilisées pour suivre l’activité réelle engendrée par le SAS, permettre l’analyse du dispositif de l’avenant 9 par la CNAM et assurer la traçabilité des RDV patients pour le suivi dans le LRM à terme.
-Pour la mise en place de ce flux, il est nécessaire de s’assurer d’une technologie commune aux différentes plateformes. Les échanges reposent sur des webservices se basant sur l’API REST du standard HL7 FHIR, et respectant les spécifications des flux 6a et 6b du volet Gestion d’agendas partagés du Cadre d’Interopérabilité des Systèmes d’Information de Santé (CI-SIS).</p>
+<p>Après avoir sélectionné un créneau depuis la plateforme numérique SAS et avoir été redirigé vers la plateforme de prise de RDV éditeur, le régulateur prend directement RDV pour le patient dans la solution éditeur. Dès que le RDV est pris, les informations associées sont transmises à la plateforme numérique SAS via le flux INT_R03 mis en place. Lors de chaque mise à jour du RDV (annulation, modification, honoré, non honoré), l'information est transmise par le biais de ce flux à la plateforme numérique SAS. Ces données sont utilisées pour suivre l'activité réelle engendrée par le SAS, permettre l'analyse du dispositif de l'avenant 9 par la CNAM et assurer la traçabilité des RDV patients pour le suivi dans le LRM à terme.
+Pour la mise en place de ce flux, il est nécessaire de s'assurer d'une technologie commune aux différentes plateformes. Les échanges reposent sur des webservices se basant sur l'API REST du standard HL7 FHIR, et respectant les spécifications des flux 6a et 6b du volet Gestion d'agendas partagés du Cadre d'Interopérabilité des Systèmes d'Information de Santé (CI-SIS).</p>
 
 <h4 id="création-de-rendez-vous">Création de rendez-vous</h4>
 
-<h5 id="description-du-cas-dusage-1">Description du cas d’usage</h5>
-<p>Lorsqu’un régulateur prend RDV pour un patient au sein de la solution logicielle éditeur, celle-ci transmet une requête de création de RDV.
-Le schéma ci-dessous illustre l’échange à mettre en oeuvre :</p>
+<h5 id="description-du-cas-dusage-1">Description du cas d'usage</h5>
+<p>Lorsqu'un régulateur prend RDV pour un patient au sein de la solution logicielle éditeur, celle-ci transmet une requête de création de RDV.
+Le schéma ci-dessous illustre l'échange à mettre en oeuvre :</p>
 
 <div class="figure" style="width:100%;" align="center">
     <p><?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="149px" preserveAspectRatio="none" style="width:362px;height:149px;background:#FFFFFF;" version="1.1" viewBox="0 0 362 149" width="362px" zoomAndPan="magnify"><defs /><g><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="76" x2="76" y1="36.2969" y2="114.5625" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="296" x2="296" y1="36.2969" y2="114.5625" /><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="143" x="5" y="5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129" x="12" y="24.9951">Solution interfac&#233;e</text><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="143" x="5" y="113.5625" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129" x="12" y="133.5576">Solution interfac&#233;e</text><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="119" x="237" y="5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="105" x="244" y="24.9951">Plateforme SAS</text><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="119" x="237" y="113.5625" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="105" x="244" y="133.5576">Plateforme SAS</text><polygon fill="#181818" points="284.5,63.4297,294.5,67.4297,284.5,71.4297,288.5,67.4297" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="76.5" x2="290.5" y1="67.4297" y2="67.4297" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="53" x="83.5" y="62.3638">Requ&#234;te</text><text fill="#0000FF" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="139" x="140.5" y="62.3638">POST Appointment</text><polygon fill="#181818" points="87.5,92.5625,77.5,96.5625,87.5,100.5625,83.5,96.5625" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="81.5" x2="295.5" y1="96.5625" y2="96.5625" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="55" x="93.5" y="91.4966">R&#233;ponse</text><text fill="#0000FF" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="89" x="152.5" y="91.4966">201 created</text></g></svg></p>
@@ -449,9 +450,9 @@ Le schéma ci-dessous illustre l’échange à mettre en oeuvre :</p>
 
 <h4 id="mise-à-jour-de-rendez-vous">Mise à jour de rendez-vous</h4>
 
-<h5 id="description-du-cas-dusage-2">Description du cas d’usage</h5>
+<h5 id="description-du-cas-dusage-2">Description du cas d'usage</h5>
 <p>La mise à jour des données du RDV peut porter sur chacun des éléments de la ressource transmise (dates du créneau, PS effecteurs des soins, statut du RDV, etc.).
-Le schéma ci-dessous illustre l’échange à mettre en oeuvre :</p>
+Le schéma ci-dessous illustre l'échange à mettre en oeuvre :</p>
 
 <div class="figure" style="width:100%;" align="center">
     <p><?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="149px" preserveAspectRatio="none" style="width:465px;height:149px;background:#FFFFFF;" version="1.1" viewBox="0 0 465 149" width="465px" zoomAndPan="magnify"><defs /><g><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="76" x2="76" y1="36.2969" y2="114.5625" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="399" x2="399" y1="36.2969" y2="114.5625" /><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="143" x="5" y="5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129" x="12" y="24.9951">Solution interfac&#233;e</text><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="143" x="5" y="113.5625" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129" x="12" y="133.5576">Solution interfac&#233;e</text><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="119" x="340" y="5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="105" x="347" y="24.9951">Plateforme SAS</text><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="119" x="340" y="113.5625" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="105" x="347" y="133.5576">Plateforme SAS</text><polygon fill="#181818" points="387.5,63.4297,397.5,67.4297,387.5,71.4297,391.5,67.4297" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="76.5" x2="393.5" y1="67.4297" y2="67.4297" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="53" x="83.5" y="62.3638">Requ&#234;te</text><text fill="#0000FF" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="242" x="140.5" y="62.3638">PUT Appointment?identifier=[ID]</text><polygon fill="#181818" points="87.5,92.5625,77.5,96.5625,87.5,100.5625,83.5,96.5625" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="81.5" x2="398.5" y1="96.5625" y2="96.5625" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="55" x="93.5" y="91.4966">R&#233;ponse</text><text fill="#0000FF" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="53" x="152.5" y="91.4966">200 OK</text></g></svg></p>
@@ -498,7 +499,7 @@ Le schéma ci-dessous illustre l’échange à mettre en oeuvre :</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 27, 2025 16:27+0000">2025-01-27</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 12, 2025 14:16+0000">2025-03-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

@@ -42,7 +42,8 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"14.59"}
     h3,h4,h5,h6{--heading-prefix:"14.59"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
@@ -271,6 +272,7 @@
   <pre class="rdf" style="white-space: pre; overflow: hidden"><code class="language-turtle">
 @prefix fhir: &lt;http://hl7.org/fhir/&gt; .
 @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
 
@@ -286,7 +288,7 @@
   ] ; # 
   <a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.text">fhir:text</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
-fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: PractitionerRole ExamplePractitionerRoleAgregateur&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExamplePractitionerRoleAgregateur\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExamplePractitionerRoleAgregateur\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;ExamplePractitionerRoleAgregateur-fr-FR\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;practitioner&lt;/b&gt;: &lt;a href=\&quot;Practitioner-ExamplePractitioner.html\&quot;&gt;Practitioner Pierre Foret &lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;organization&lt;/b&gt;: Identifier: 412345678912345&lt;/p&gt;&lt;p&gt;&lt;b&gt;location&lt;/b&gt;: &lt;a href=\&quot;#hcExamplePractitionerRoleAgregateur/ExampleLocation\&quot;&gt;Location: identifier = Identifiant interne&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: &lt;a href=\&quot;tel:+33561855977\&quot;&gt;+33561855977&lt;/a&gt;&lt;/p&gt;&lt;hr/&gt;&lt;blockquote&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Location #ExampleLocation&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExamplePractitionerRoleAgregateur/ExampleLocation\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExamplePractitionerRoleAgregateur/ExampleLocation\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;ExamplePractitionerRoleAgregateur/ExampleLocation-fr-FR\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: Identifiant interne/123456789&lt;/p&gt;&lt;p&gt;&lt;b&gt;address&lt;/b&gt;: 25 CHEMIN DE MOUNESTIE Aussonne 31840 &lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;&quot;
+fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: PractitionerRole ExamplePractitionerRoleAgregateur&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExamplePractitionerRoleAgregateur\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExamplePractitionerRoleAgregateur\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;ExamplePractitionerRoleAgregateur-fr-FR\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-FrPractitionerRoleExerciceAgregateur.html\&quot;&gt;FrPractitionerRoleExerciceAgregateur&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;practitioner&lt;/b&gt;: &lt;a href=\&quot;Practitioner-ExamplePractitioner.html\&quot;&gt;Practitioner Pierre Foret &lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;organization&lt;/b&gt;: Identifier: 412345678912345&lt;/p&gt;&lt;p&gt;&lt;b&gt;location&lt;/b&gt;: &lt;a href=\&quot;#hcExamplePractitionerRoleAgregateur/ExampleLocation\&quot;&gt;Location : identifier = Identifiant interne&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: &lt;a href=\&quot;tel:+33561855977\&quot;&gt;+33561855977&lt;/a&gt;&lt;/p&gt;&lt;hr/&gt;&lt;blockquote&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Location #ExampleLocation&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExamplePractitionerRoleAgregateur/ExampleLocation\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExamplePractitionerRoleAgregateur/ExampleLocation\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;ExamplePractitionerRoleAgregateur/ExampleLocation-fr-FR\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-FrLocationAgregateur.html\&quot;&gt;FrLocationAgregateur&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: Identifiant interne/123456789&lt;/p&gt;&lt;p&gt;&lt;b&gt;address&lt;/b&gt;: 25 CHEMIN DE MOUNESTIE Aussonne 31840 &lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral
   ] ; # 
   <a href="http://hl7.org/fhir/R4/location.html#Location">fhir:contained</a> ( [
 <a href="http://hl7.org/fhir/R4/location.html">a</a> fhir:Location ;
@@ -369,7 +371,7 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 27, 2025 16:27+0000">2025-01-27</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 12, 2025 14:16+0000">2025-03-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

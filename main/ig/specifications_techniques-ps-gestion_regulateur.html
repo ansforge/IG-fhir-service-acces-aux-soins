@@ -40,7 +40,8 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"4"}
     h3,h4,h5,h6{--heading-prefix:"4"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
@@ -235,17 +236,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#caractéristiques-de-lapi" id="markdown-toc-caractéristiques-de-lapi">Caractéristiques de l’API</a></li>
+  <li><a href="#caractéristiques-de-lapi" id="markdown-toc-caractéristiques-de-lapi">Caractéristiques de l'API</a></li>
   <li><a href="#création-de-compte-régulateur" id="markdown-toc-création-de-compte-régulateur">Création de compte régulateur</a></li>
-  <li><a href="#mise-à-jour-dun-compte-régulateur" id="markdown-toc-mise-à-jour-dun-compte-régulateur">Mise à jour d’un compte régulateur</a></li>
-  <li><a href="#suppression-dun-compte-régulateur" id="markdown-toc-suppression-dun-compte-régulateur">Suppression d’un compte régulateur</a></li>
+  <li><a href="#mise-à-jour-dun-compte-régulateur" id="markdown-toc-mise-à-jour-dun-compte-régulateur">Mise à jour d'un compte régulateur</a></li>
+  <li><a href="#suppression-dun-compte-régulateur" id="markdown-toc-suppression-dun-compte-régulateur">Suppression d'un compte régulateur</a></li>
   <li><a href="#règles-de-gestion" id="markdown-toc-règles-de-gestion">Règles de gestion</a></li>
 </ul>
 
 </div>
 <!-- Gestion régulateurs -->
 
-<h3 id="caractéristiques-de-lapi">Caractéristiques de l’API</h3>
+<h3 id="caractéristiques-de-lapi">Caractéristiques de l'API</h3>
 
 <table>
 <tbody>
@@ -312,7 +313,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <ul>
   <li>Un header avec un code 201 Created HTTP</li>
-  <li>Un header Location incluant l’ID de la ressource créée par le serveur <code class="language-plaintext highlighter-rouge">Location: [base]/Practitioner/12345</code></li>
+  <li>Un header Location incluant l'ID de la ressource créée par le serveur <code class="language-plaintext highlighter-rouge">Location: [base]/Practitioner/12345</code></li>
 </ul>
 
 <p>Plus de précision sur la spécification FHIR :
@@ -328,13 +329,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul>
   <li>Un header avec un code erreur HTTP 4XX ou 5XX</li>
   <li>Un body contenant une ressource OperationOutcome qui donne les
-détails sur la raison de l’échec</li>
+détails sur la raison de l'échec</li>
 </ul>
 
-<p>À titre d’information, les codes erreurs classiques sont les suivants :</p>
+<p>À titre d'information, les codes erreurs classiques sont les suivants :</p>
 <ul>
   <li>400 (Bad request) – Le format de la requête FHIR transmise est incorrect</li>
-  <li>422 (Unprocessable Entity) – L’action demandée ne peut pas être réalisée à cause d’une règle interne à l’application.</li>
+  <li>422 (Unprocessable Entity) – L'action demandée ne peut pas être réalisée à cause d’une règle interne à l’application.</li>
 </ul>
 
 <p>Plus de précision sur la spécification FHIR :
@@ -389,7 +390,7 @@ détails sur la raison de l’échec</li>
   ]
 }</code></pre>
 
-<h3 id="mise-à-jour-dun-compte-régulateur">Mise à jour d’un compte régulateur</h3>
+<h3 id="mise-à-jour-dun-compte-régulateur">Mise à jour d'un compte régulateur</h3>
 
 <h4 id="construction-de-la-requête-de-base-1">Construction de la requête de base</h4>
 
@@ -415,7 +416,7 @@ détails sur la raison de l’échec</li>
 </table>
 <p><a href="#_ftnref2" name="_ftn2">[2]</a> <a href="https://www.hl7.org/fhir/http.html#cond-update">https://www.hl7.org/fhir/http.html#cond-update</a> et <a href="https://www.hl7.org/fhir/http.html#general">https://www.hl7.org/fhir/http.html#general</a></p>
 
-<p>Cette requête de modification est donc de type <code class="language-plaintext highlighter-rouge">interaction conditional update</code>. Elle permet de mettre à jour une ressource sur la base d’un critère autre que l’<code class="language-plaintext highlighter-rouge">id</code> de la ressource</p>
+<p>Cette requête de modification est donc de type <code class="language-plaintext highlighter-rouge">interaction conditional update</code>. Elle permet de mettre à jour une ressource sur la base d’un critère autre que l'<code class="language-plaintext highlighter-rouge">id</code> de la ressource</p>
 
 <p>En l’occurrence, les requêtes effectuées par le SAS se baseront sur l’élément « identifier » de la ressource à modifier. [ID] représente l’identifiant national ou technique de cette ressource.</p>
 <ul>
@@ -436,7 +437,7 @@ détails sur la raison de l’échec</li>
 
 <ul>
   <li>Un header avec un code 200 OK HTTP</li>
-  <li>Un header Location incluant l’ID de la ressource mise à jour par le serveur <code class="language-plaintext highlighter-rouge">Location: [base]/Practitioner/12345</code></li>
+  <li>Un header Location incluant l'ID de la ressource mise à jour par le serveur <code class="language-plaintext highlighter-rouge">Location: [base]/Practitioner/12345</code></li>
 </ul>
 
 <p>Plus de précision sur la spécification FHIR :
@@ -452,16 +453,16 @@ détails sur la raison de l’échec</li>
 <ul>
   <li>Un header avec un code erreur HTTP 4XX ou 5XX</li>
   <li>Un body contenant une ressource OperationOutcome qui donne les
-détails sur la raison de l’échec</li>
+détails sur la raison de l'échec</li>
 </ul>
 
-<p>À titre d’information, les codes erreurs classiques sont les suivants :</p>
+<p>À titre d'information, les codes erreurs classiques sont les suivants :</p>
 <ul>
   <li>400 (Bad request) – Le format de la requête FHIR transmise est incorrect</li>
-  <li>422 (Unprocessable Entity) – L’action demandée ne peut pas être réalisée à cause d’une règle interne à l’application.</li>
+  <li>422 (Unprocessable Entity) – L'action demandée ne peut pas être réalisée à cause d’une règle interne à l’application.</li>
 </ul>
 
-<h3 id="suppression-dun-compte-régulateur">Suppression d’un compte régulateur</h3>
+<h3 id="suppression-dun-compte-régulateur">Suppression d'un compte régulateur</h3>
 
 <p>Il n’y aura pas de requête spécifique pour la suppression de compte. Une suppression de compte côté plateforme numérique SAS est modélisée par une requête de type « mise à jour de compte » où l’on retire l’habilitation associée au compte.</p>
 
@@ -474,12 +475,12 @@ détails sur la raison de l’échec</li>
       <li>Le régulateur n’a potentiellement pas d’identifiant national à date ou n’a pas rattaché son identifiant national à son compte SAS. Par défaut il aura un ID technique SAS. Lorsque l’ajout ou le rattachement de l’identifiant national sera effectué, l’information sera transmise dans une requête de mise à jour.</li>
     </ul>
   </li>
-  <li><strong>ID : 2 – Autorité d’affectation :</strong>
+  <li><strong>ID : 2 – Autorité d'affectation :</strong>
     <ul>
       <li>Lorsque l’identifiant transmis est un ID national, le champ est valorisé à <code class="language-plaintext highlighter-rouge">urn:oid:1.2.250.1.71.4.2.1</code>. Lorsque l’identifiant transmis est un ID technique SAS, il est valorisé à <code class="language-plaintext highlighter-rouge">urn:oid:1.2.250.1.213.3.6</code>.</li>
     </ul>
   </li>
-  <li><strong>ID : 3 – Type d’identifiant :</strong>
+  <li><strong>ID : 3 – Type d'identifiant :</strong>
     <ul>
       <li>Lorsque l’identifiant transmis est un ID national, le champ type.coding.code est valorisé à <code class="language-plaintext highlighter-rouge">IDNPS</code>. Lorsque l’identifiant transmis est un ID technique SAS, il est valorisé à <code class="language-plaintext highlighter-rouge">INTRN</code>.</li>
     </ul>
@@ -537,7 +538,7 @@ détails sur la raison de l’échec</li>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 27, 2025 16:27+0000">2025-01-27</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 12, 2025 14:16+0000">2025-03-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
