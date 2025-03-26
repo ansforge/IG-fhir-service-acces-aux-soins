@@ -1,0 +1,70 @@
+{
+  "id": "38b06d987b1e76f7104dbb7b6c1199bab2d1e89ec9f79e474299522efd702eb8",
+  "url": "https://github.com/fhir-crucible/testscript-generator/38b06d987b1e76f7104dbb7b6c1199bab2d1e89ec9f79e474299522efd702eb8",
+  "version": "0.0",
+  "name": "PackageFrOrganizationAgregateurCPTSMustSupportElementOrganizationTelecom",
+  "title": "IG: package; Profile: FrOrganizationAgregateurCPTS; Case: Must Support Element; Element: Organization.telecom",
+  "status": "draft",
+  "experimental": true,
+  "date": "2025-03-26T14:35:26+00:00",
+  "publisher": "The MITRE Corporation",
+  "profile": [
+    {
+      "id": "targetProfileFrOrganizationAgregateurCPTS",
+      "reference": "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-organization-aggregator"
+    }
+  ],
+  "variable": [
+    {
+      "name": "targetResourceIdFrOrganizationAgregateurCPTS",
+      "defaultValue": "example",
+      "description": "Enter a known instance id on the destination system. Will be checked for conformance against profile FrOrganizationAgregateurCPTS.",
+      "hint": "[resource.id]"
+    }
+  ],
+  "test": [
+    {
+      "name": "Validate the identified resource conforms to the FrOrganizationAgregateurCPTS profile",
+      "action": [
+        {
+          "operation": {
+            "type": {
+              "system": "http://terminology.hl7.org/CodeSystem/testscript-operation-codes",
+              "code": "read"
+            },
+            "resource": "Organization",
+            "label": "Read_Organization_Instance",
+            "description": "Read Organization Instance",
+            "encodeRequestUrl": false,
+            "params": "/${targetResourceIdFrOrganizationAgregateurCPTS}",
+            "responseId": "targetInstance"
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_Response_OK",
+            "response": "okay",
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_Organization_Returned",
+            "description": "Assert Organization Returned",
+            "resource": "Organization",
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_Instance_Conforms_to_FrOrganizationAgregateurCPTS_Profile",
+            "description": "Assert returned instance conforms to the FrOrganizationAgregateurCPTS Profile",
+            "validateProfileId": "targetProfileFrOrganizationAgregateurCPTS",
+            "warningOnly": false
+          }
+        }
+      ]
+    }
+  ],
+  "resourceType": "TestScript"
+}

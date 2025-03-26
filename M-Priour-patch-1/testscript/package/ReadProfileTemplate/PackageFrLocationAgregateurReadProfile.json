@@ -1,0 +1,70 @@
+{
+  "id": "b6c43592b8aced9b3ecc6e02970b351a42e988bf047409aa0defb593ca90af84",
+  "url": "https://github.com/fhir-crucible/testscript-generator/b6c43592b8aced9b3ecc6e02970b351a42e988bf047409aa0defb593ca90af84",
+  "version": "0.0",
+  "name": "PackageFrLocationAgregateurReadProfile",
+  "title": "IG: package; Profile: FrLocationAgregateur; Case: Read Profile",
+  "status": "draft",
+  "experimental": true,
+  "date": "2025-03-26T14:35:26+00:00",
+  "publisher": "The MITRE Corporation",
+  "profile": [
+    {
+      "id": "targetProfileFrLocationAgregateur",
+      "reference": "http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur"
+    }
+  ],
+  "variable": [
+    {
+      "name": "targetResourceIdFrLocationAgregateur",
+      "defaultValue": "example",
+      "description": "Enter a known instance id on the destination system. Will be checked for conformance against profile FrLocationAgregateur.",
+      "hint": "[resource.id]"
+    }
+  ],
+  "test": [
+    {
+      "name": "Validate the identified resource conforms to the FrLocationAgregateur profile",
+      "action": [
+        {
+          "operation": {
+            "type": {
+              "system": "http://terminology.hl7.org/CodeSystem/testscript-operation-codes",
+              "code": "read"
+            },
+            "resource": "Location",
+            "label": "Read_Location_Instance",
+            "description": "Read Location Instance",
+            "encodeRequestUrl": false,
+            "params": "/${targetResourceIdFrLocationAgregateur}",
+            "responseId": "targetInstance"
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_Response_OK",
+            "response": "okay",
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_Location_Returned",
+            "description": "Assert Location Returned",
+            "resource": "Location",
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_Instance_Conforms_to_FrLocationAgregateur_Profile",
+            "description": "Assert returned instance conforms to the FrLocationAgregateur Profile",
+            "validateProfileId": "targetProfileFrLocationAgregateur",
+            "warningOnly": false
+          }
+        }
+      ]
+    }
+  ],
+  "resourceType": "TestScript"
+}

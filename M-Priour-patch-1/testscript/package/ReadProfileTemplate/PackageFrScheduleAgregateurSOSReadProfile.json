@@ -1,0 +1,70 @@
+{
+  "id": "484863050b98cde5517aeb5ec9aba5abd691cb36d5341cbe1e8892cc2a6c6c6c",
+  "url": "https://github.com/fhir-crucible/testscript-generator/484863050b98cde5517aeb5ec9aba5abd691cb36d5341cbe1e8892cc2a6c6c6c",
+  "version": "0.0",
+  "name": "PackageFrScheduleAgregateurSOSReadProfile",
+  "title": "IG: package; Profile: FrScheduleAgregateurSOS; Case: Read Profile",
+  "status": "draft",
+  "experimental": true,
+  "date": "2025-03-26T14:35:26+00:00",
+  "publisher": "The MITRE Corporation",
+  "profile": [
+    {
+      "id": "targetProfileFrScheduleAgregateurSOS",
+      "reference": "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator"
+    }
+  ],
+  "variable": [
+    {
+      "name": "targetResourceIdFrScheduleAgregateurSOS",
+      "defaultValue": "example",
+      "description": "Enter a known instance id on the destination system. Will be checked for conformance against profile FrScheduleAgregateurSOS.",
+      "hint": "[resource.id]"
+    }
+  ],
+  "test": [
+    {
+      "name": "Validate the identified resource conforms to the FrScheduleAgregateurSOS profile",
+      "action": [
+        {
+          "operation": {
+            "type": {
+              "system": "http://terminology.hl7.org/CodeSystem/testscript-operation-codes",
+              "code": "read"
+            },
+            "resource": "Schedule",
+            "label": "Read_Schedule_Instance",
+            "description": "Read Schedule Instance",
+            "encodeRequestUrl": false,
+            "params": "/${targetResourceIdFrScheduleAgregateurSOS}",
+            "responseId": "targetInstance"
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_Response_OK",
+            "response": "okay",
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_Schedule_Returned",
+            "description": "Assert Schedule Returned",
+            "resource": "Schedule",
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_Instance_Conforms_to_FrScheduleAgregateurSOS_Profile",
+            "description": "Assert returned instance conforms to the FrScheduleAgregateurSOS Profile",
+            "validateProfileId": "targetProfileFrScheduleAgregateurSOS",
+            "warningOnly": false
+          }
+        }
+      ]
+    }
+  ],
+  "resourceType": "TestScript"
+}

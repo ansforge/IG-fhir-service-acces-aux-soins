@@ -1,0 +1,80 @@
+{
+  "id": "Package-Schedule-Search_by-Id",
+  "url": "https://github.com/fhir-crucible/testscript-generator",
+  "version": "0.0",
+  "name": "Package_Schedule_Search_by_Id",
+  "title": "package schedule search_by id",
+  "status": "draft",
+  "experimental": true,
+  "date": "2025-03-26T14:35:26+00:00",
+  "publisher": "The MITRE Corporation",
+  "fixture": [
+    {
+      "id": "example_schedule",
+      "autocreate": false,
+      "autodelete": false,
+      "resource": {
+        "reference": "fixtures/example_schedule.json"
+      }
+    }
+  ],
+  "variable": [
+    {
+      "name": "pqD76u9qzjQeBmLE",
+      "expression": "Schedule.id",
+      "sourceId": "gDEDzOss2uZkHIJs"
+    }
+  ],
+  "setup": {
+    "action": [
+      {
+        "operation": {
+          "type": {
+            "system": "http://terminology.hl7.org/CodeSystem/testscript-operation-codes",
+            "code": "create"
+          },
+          "label": "Operation_1",
+          "encodeRequestUrl": false,
+          "responseId": "gDEDzOss2uZkHIJs",
+          "sourceId": "example_schedule"
+        }
+      }
+    ]
+  },
+  "test": [
+    {
+      "name": "Test_1",
+      "action": [
+        {
+          "operation": {
+            "type": {
+              "system": "http://terminology.hl7.org/CodeSystem/testscript-operation-codes",
+              "code": "search"
+            },
+            "resource": "Schedule",
+            "label": "Operation_2",
+            "encodeRequestUrl": false,
+            "params": "?_id=${pqD76u9qzjQeBmLE}"
+          }
+        }
+      ]
+    }
+  ],
+  "teardown": {
+    "action": [
+      {
+        "operation": {
+          "type": {
+            "system": "http://terminology.hl7.org/CodeSystem/testscript-operation-codes",
+            "code": "delete"
+          },
+          "resource": "Schedule",
+          "label": "Operation_3",
+          "encodeRequestUrl": false,
+          "params": "/${pqD76u9qzjQeBmLE}"
+        }
+      }
+    ]
+  },
+  "resourceType": "TestScript"
+}

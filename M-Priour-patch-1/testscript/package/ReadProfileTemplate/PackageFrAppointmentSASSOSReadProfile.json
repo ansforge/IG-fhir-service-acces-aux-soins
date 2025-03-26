@@ -1,0 +1,70 @@
+{
+  "id": "2f11500948a1e13b614df82800402ad98c68b33aa029266d2bda972b41c2a4d6",
+  "url": "https://github.com/fhir-crucible/testscript-generator/2f11500948a1e13b614df82800402ad98c68b33aa029266d2bda972b41c2a4d6",
+  "version": "0.0",
+  "name": "PackageFrAppointmentSASSOSReadProfile",
+  "title": "IG: package; Profile: FrAppointmentSASSOS; Case: Read Profile",
+  "status": "draft",
+  "experimental": true,
+  "date": "2025-03-26T14:35:26+00:00",
+  "publisher": "The MITRE Corporation",
+  "profile": [
+    {
+      "id": "targetProfileFrAppointmentSASSOS",
+      "reference": "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-appointment"
+    }
+  ],
+  "variable": [
+    {
+      "name": "targetResourceIdFrAppointmentSASSOS",
+      "defaultValue": "example",
+      "description": "Enter a known instance id on the destination system. Will be checked for conformance against profile FrAppointmentSASSOS.",
+      "hint": "[resource.id]"
+    }
+  ],
+  "test": [
+    {
+      "name": "Validate the identified resource conforms to the FrAppointmentSASSOS profile",
+      "action": [
+        {
+          "operation": {
+            "type": {
+              "system": "http://terminology.hl7.org/CodeSystem/testscript-operation-codes",
+              "code": "read"
+            },
+            "resource": "Appointment",
+            "label": "Read_Appointment_Instance",
+            "description": "Read Appointment Instance",
+            "encodeRequestUrl": false,
+            "params": "/${targetResourceIdFrAppointmentSASSOS}",
+            "responseId": "targetInstance"
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_Response_OK",
+            "response": "okay",
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_Appointment_Returned",
+            "description": "Assert Appointment Returned",
+            "resource": "Appointment",
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_Instance_Conforms_to_FrAppointmentSASSOS_Profile",
+            "description": "Assert returned instance conforms to the FrAppointmentSASSOS Profile",
+            "validateProfileId": "targetProfileFrAppointmentSASSOS",
+            "warningOnly": false
+          }
+        }
+      ]
+    }
+  ],
+  "resourceType": "TestScript"
+}

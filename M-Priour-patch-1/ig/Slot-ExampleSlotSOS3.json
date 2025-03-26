@@ -1,0 +1,30 @@
+{
+  "resourceType" : "Slot",
+  "id" : "ExampleSlotSOS3",
+  "meta" : {
+    "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator"],
+    "security" : [{
+      "system" : "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
+      "code" : "PUBLIC"
+    }]
+  },
+  "serviceType" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "code" : "VR"
+    }]
+  }],
+  "appointmentType" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0276",
+      "code" : "ROUTINE"
+    }]
+  },
+  "schedule" : {
+    "reference" : "Schedule/ExampleScheduleSOS3"
+  },
+  "status" : "free",
+  "start" : "2023-08-18T14:20:00.000+02:00",
+  "end" : "2023-08-18T14:40:00.000+02:00",
+  "comment" : "http://www.editeur.com/agenda-pfg/creneau3"
+}

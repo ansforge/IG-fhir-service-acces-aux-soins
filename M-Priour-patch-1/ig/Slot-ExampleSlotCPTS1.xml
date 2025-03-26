@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Slot xmlns="http://hl7.org/fhir">
+  <id value="ExampleSlotCPTS1"/>
+  <meta>
+    <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator"/>
+    <security>
+      <system value="https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"/>
+      <code value="PUBLIC"/>
+    </security>
+    <security>
+      <system value="https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"/>
+      <code value="CPTS"/>
+    </security>
+  </meta>
+  <serviceType>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+      <code value="AMB"/>
+    </coding>
+  </serviceType>
+  <serviceType>
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType">
+      <valueReference>
+        <reference value="HealthcareService/ExampleHealthcareServiceCPTS1"/>
+      </valueReference>
+    </extension>
+    <coding>
+      <system value="https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement"/>
+      <code value="604"/>
+    </coding>
+  </serviceType>
+  <serviceType>
+    <text value="Visite de contrôle"/>
+  </serviceType>
+  <specialty>
+    <coding>
+      <system value="https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"/>
+      <code value="SM54"/>
+    </coding>
+  </specialty>
+  <appointmentType>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0276"/>
+      <code value="ROUTINE"/>
+    </coding>
+  </appointmentType>
+  <schedule>
+    <reference value="Schedule/ExampleSchedule"/>
+  </schedule>
+  <status value="free"/>
+  <start value="2024-06-12T16:40:00.000+02:00"/>
+  <end value="2024-06-12T17:00:00.000+02:00"/>
+  <comment value="https://exemple.com/rdv/com/"/>
+</Slot>

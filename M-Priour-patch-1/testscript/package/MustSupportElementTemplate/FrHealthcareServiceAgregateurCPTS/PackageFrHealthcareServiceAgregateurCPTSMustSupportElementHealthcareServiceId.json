@@ -1,0 +1,70 @@
+{
+  "id": "c8d7c5a7a5bd7f21366df2a621fbaec9134cd33e4e422e4014ffedce7ee4babb",
+  "url": "https://github.com/fhir-crucible/testscript-generator/c8d7c5a7a5bd7f21366df2a621fbaec9134cd33e4e422e4014ffedce7ee4babb",
+  "version": "0.0",
+  "name": "PackageFrHealthcareServiceAgregateurCPTSMustSupportElementHealthcareServiceId",
+  "title": "IG: package; Profile: FrHealthcareServiceAgregateurCPTS; Case: Must Support Element; Element: HealthcareService.id",
+  "status": "draft",
+  "experimental": true,
+  "date": "2025-03-26T14:35:26+00:00",
+  "publisher": "The MITRE Corporation",
+  "profile": [
+    {
+      "id": "targetProfileFrHealthcareServiceAgregateurCPTS",
+      "reference": "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-healthcareservice-aggregator"
+    }
+  ],
+  "variable": [
+    {
+      "name": "targetResourceIdFrHealthcareServiceAgregateurCPTS",
+      "defaultValue": "example",
+      "description": "Enter a known instance id on the destination system. Will be checked for conformance against profile FrHealthcareServiceAgregateurCPTS.",
+      "hint": "[resource.id]"
+    }
+  ],
+  "test": [
+    {
+      "name": "Validate the identified resource conforms to the FrHealthcareServiceAgregateurCPTS profile",
+      "action": [
+        {
+          "operation": {
+            "type": {
+              "system": "http://terminology.hl7.org/CodeSystem/testscript-operation-codes",
+              "code": "read"
+            },
+            "resource": "HealthcareService",
+            "label": "Read_HealthcareService_Instance",
+            "description": "Read HealthcareService Instance",
+            "encodeRequestUrl": false,
+            "params": "/${targetResourceIdFrHealthcareServiceAgregateurCPTS}",
+            "responseId": "targetInstance"
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_Response_OK",
+            "response": "okay",
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_HealthcareService_Returned",
+            "description": "Assert HealthcareService Returned",
+            "resource": "HealthcareService",
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_Instance_Conforms_to_FrHealthcareServiceAgregateurCPTS_Profile",
+            "description": "Assert returned instance conforms to the FrHealthcareServiceAgregateurCPTS Profile",
+            "validateProfileId": "targetProfileFrHealthcareServiceAgregateurCPTS",
+            "warningOnly": false
+          }
+        }
+      ]
+    }
+  ],
+  "resourceType": "TestScript"
+}

@@ -1,0 +1,116 @@
+{
+  "id": "6697df6d9225ee131685bae59fa158e6a69edf8f60092f61111576a07063adfa",
+  "url": "https://github.com/fhir-crucible/testscript-generator/6697df6d9225ee131685bae59fa158e6a69edf8f60092f61111576a07063adfa",
+  "version": "0.0",
+  "name": "PackageFrHealthcareServiceAgregateurCPTSMustSupportElementHealthcareServiceProvidedBy",
+  "title": "IG: package; Profile: FrHealthcareServiceAgregateurCPTS; Case: Must Support Element; Element: HealthcareService.providedBy",
+  "status": "draft",
+  "experimental": true,
+  "date": "2025-03-26T14:35:26+00:00",
+  "publisher": "The MITRE Corporation",
+  "profile": [
+    {
+      "id": "targetProfileFrHealthcareServiceAgregateurCPTS",
+      "reference": "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-healthcareservice-aggregator"
+    },
+    {
+      "id": "referencedProfile",
+      "reference": "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-organization-aggregator"
+    }
+  ],
+  "variable": [
+    {
+      "name": "targetResourceIdFrHealthcareServiceAgregateurCPTS",
+      "defaultValue": "example",
+      "description": "Enter a known instance id on the destination system. Will be checked for conformance against profile FrHealthcareServiceAgregateurCPTS.",
+      "hint": "[resource.id]"
+    },
+    {
+      "name": "referencedInstanceRef",
+      "expression": "HealthcareService.providedBy.reference",
+      "sourceId": "targetInstance"
+    }
+  ],
+  "test": [
+    {
+      "name": "Validate the identified resource conforms to the FrHealthcareServiceAgregateurCPTS profile",
+      "action": [
+        {
+          "operation": {
+            "type": {
+              "system": "http://terminology.hl7.org/CodeSystem/testscript-operation-codes",
+              "code": "read"
+            },
+            "resource": "HealthcareService",
+            "label": "Read_HealthcareService_Instance",
+            "description": "Read HealthcareService Instance",
+            "encodeRequestUrl": false,
+            "params": "/${targetResourceIdFrHealthcareServiceAgregateurCPTS}",
+            "responseId": "targetInstance"
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_Response_OK",
+            "response": "okay",
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_HealthcareService_Returned",
+            "description": "Assert HealthcareService Returned",
+            "resource": "HealthcareService",
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_Instance_Conforms_to_FrHealthcareServiceAgregateurCPTS_Profile",
+            "description": "Assert returned instance conforms to the FrHealthcareServiceAgregateurCPTS Profile",
+            "validateProfileId": "targetProfileFrHealthcareServiceAgregateurCPTS",
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "label": "resolved_path_contains_reference_element",
+            "description": "resolved path contains reference element",
+            "expression": "HealthcareService.providedBy.reference.hasValue()",
+            "warningOnly": false
+          }
+        },
+        {
+          "operation": {
+            "type": {
+              "system": "http://terminology.hl7.org/CodeSystem/testscript-operation-codes",
+              "code": "read"
+            },
+            "label": "Read_referenced_instance",
+            "description": "Read referenced instance",
+            "encodeRequestUrl": false,
+            "responseId": "referencedInstance",
+            "url": "/${referencedInstanceRef}"
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_Reference_Read_Response_OK",
+            "description": "Assert Reference Read Response OK",
+            "response": "okay",
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "label": "Validate_Reference",
+            "description": "Validate Reference",
+            "validateProfileId": "referencedProfile",
+            "warningOnly": false
+          }
+        }
+      ]
+    }
+  ],
+  "resourceType": "TestScript"
+}

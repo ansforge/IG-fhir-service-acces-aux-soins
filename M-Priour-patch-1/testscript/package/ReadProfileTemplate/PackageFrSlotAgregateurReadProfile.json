@@ -1,0 +1,70 @@
+{
+  "id": "b087f69a1be942750283d0869d782bfcbf5d21691594b0d0b27120990891cd34",
+  "url": "https://github.com/fhir-crucible/testscript-generator/b087f69a1be942750283d0869d782bfcbf5d21691594b0d0b27120990891cd34",
+  "version": "0.0",
+  "name": "PackageFrSlotAgregateurReadProfile",
+  "title": "IG: package; Profile: FrSlotAgregateur; Case: Read Profile",
+  "status": "draft",
+  "experimental": true,
+  "date": "2025-03-26T14:35:26+00:00",
+  "publisher": "The MITRE Corporation",
+  "profile": [
+    {
+      "id": "targetProfileFrSlotAgregateur",
+      "reference": "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"
+    }
+  ],
+  "variable": [
+    {
+      "name": "targetResourceIdFrSlotAgregateur",
+      "defaultValue": "example",
+      "description": "Enter a known instance id on the destination system. Will be checked for conformance against profile FrSlotAgregateur.",
+      "hint": "[resource.id]"
+    }
+  ],
+  "test": [
+    {
+      "name": "Validate the identified resource conforms to the FrSlotAgregateur profile",
+      "action": [
+        {
+          "operation": {
+            "type": {
+              "system": "http://terminology.hl7.org/CodeSystem/testscript-operation-codes",
+              "code": "read"
+            },
+            "resource": "Slot",
+            "label": "Read_Slot_Instance",
+            "description": "Read Slot Instance",
+            "encodeRequestUrl": false,
+            "params": "/${targetResourceIdFrSlotAgregateur}",
+            "responseId": "targetInstance"
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_Response_OK",
+            "response": "okay",
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_Slot_Returned",
+            "description": "Assert Slot Returned",
+            "resource": "Slot",
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_Instance_Conforms_to_FrSlotAgregateur_Profile",
+            "description": "Assert returned instance conforms to the FrSlotAgregateur Profile",
+            "validateProfileId": "targetProfileFrSlotAgregateur",
+            "warningOnly": false
+          }
+        }
+      ]
+    }
+  ],
+  "resourceType": "TestScript"
+}
