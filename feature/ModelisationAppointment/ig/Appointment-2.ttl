@@ -1,0 +1,62 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/sas/Appointment/2> a fhir:Appointment ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "2"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Appointment 2</b></p><a name=\"2\"> </a><a name=\"hc2\"> </a><a name=\"2-fr-FR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-appointment.html\">FrAppointmentSAS</a></p></div><p><b>FR Core Appointment Operator Extension</b>: Identifier: Identifiant National de Professionnel de Santé/3456780581/11242343</p><p><b>identifier</b>: <code>urn:oid:1.1.111.1.11.1.1.1</code>/b6e39355-8a61-4556-b340-36f7b95fec6a</p><p><b>status</b>: Cancelled</p><p><b>start</b>: 2022-09-04 14:00:00+0100</p><p><b>end</b>: 2022-09-04 14:15:00+0100</p><h3>Participants</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td><td><b>Status</b></td></tr><tr><td style=\"display: none\">*</td><td>Identifier: Identifiant National de Professionnel de Santé/810100050075</td><td>Accepted</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment-operator"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:Reference ;
+       fhir:identifier [
+         fhir:type [
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "IDNPS" ]
+           ] )
+         ] ;
+         fhir:system [ fhir:v "urn:oid:1.2.250.1.71.4.2.1"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "3456780581/11242343" ]
+       ]
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:oid:1.1.111.1.11.1.1.1"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "b6e39355-8a61-4556-b340-36f7b95fec6a" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "cancelled"] ; # 
+  fhir:start [ fhir:v "2022-09-04T14:00:00+01:00"^^xsd:dateTime] ; # 
+  fhir:end [ fhir:v "2022-09-04T14:15:00+01:00"^^xsd:dateTime] ; # 
+  fhir:participant ( [
+     fhir:actor [
+       fhir:identifier [
+         fhir:type [
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "IDNPS" ]
+           ] )
+         ] ;
+         fhir:system [ fhir:v "urn:oid:1.2.250.1.71.4.2.1"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "810100050075" ]
+       ]
+     ] ;
+     fhir:status [ fhir:v "accepted" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
