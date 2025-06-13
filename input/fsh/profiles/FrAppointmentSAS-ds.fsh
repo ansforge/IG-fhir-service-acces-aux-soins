@@ -9,7 +9,7 @@ Description: "Profil de Appointment, dérivé de FrAppointment, pour le cas d'us
 // Extension appointmentOperator provenant de FrAppointment
 * extension[appointmentOperator] 1..
 * extension[appointmentOperator].value[x] 1..
-* extension[appointmentOperator].value[x] only AS Practitioner Profile
+* extension[appointmentOperator].value[x] only AsPractitionerProfile
 
 * identifier 1..1
 * identifier.system 1..
