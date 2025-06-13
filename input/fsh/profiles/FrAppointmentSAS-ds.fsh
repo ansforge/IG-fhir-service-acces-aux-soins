@@ -9,7 +9,7 @@ Description: "Profil de Appointment, dérivé de FrAppointment, pour le cas d'us
 // Extension appointmentOperator provenant de FrAppointment
 * extension[appointmentOperator] 1..
 * extension[appointmentOperator].value[x] 1..
-* extension[appointmentOperator].value[x] only AsPractitionerProfile
+* extension[appointmentOperator].value[x] only Reference(AsPractitionerProfile)
 
 * identifier 1..1
 * identifier.system 1..
@@ -17,6 +17,6 @@ Description: "Profil de Appointment, dérivé de FrAppointment, pour le cas d'us
 * start 1..
 * end 1..
 * created MS
-* participant.actor only FrPractitionerAgregateur
+* participant.actor only Reference(FrPractitionerAgregateur)
 // le statut est obligatoire - transmettre booked systématiquement pour un RDV SAS
 * participant.status MS
