@@ -3,14 +3,14 @@
   "id" : "ans.fhir.fr.sas",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide ans.fhir.fr.sas</b></p><a name=\"ans.fhir.fr.sas\"> </a><a name=\"hcans.fhir.fr.sas\"> </a><a name=\"ans.fhir.fr.sas-fr-FR\"> </a><h2>SAS</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>https://interop.esante.gouv.fr/ig/fhir/sas/ImplementationGuide/ans.fhir.fr.sas</pre></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : ImplementationGuide ans.fhir.fr.sas</b></p><a name=\"ans.fhir.fr.sas\"> </a><a name=\"hcans.fhir.fr.sas\"> </a><a name=\"ans.fhir.fr.sas-fr-FR\"> </a><h2>SAS</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>https://interop.esante.gouv.fr/ig/fhir/sas/ImplementationGuide/ans.fhir.fr.sas</pre></div>"
   },
   "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ImplementationGuide/ans.fhir.fr.sas",
   "version" : "1.1.0",
   "name" : "SAS",
   "title" : "Service d'Accès aux Soins",
   "status" : "active",
-  "date" : "2025-05-27T14:58:01+00:00",
+  "date" : "2025-06-13T10:40:28+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -37,7 +37,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "6.3.0"
+    "version" : "6.4.0"
   },
   {
     "id" : "hl7ext",
@@ -54,6 +54,12 @@
     "uri" : "https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core",
     "packageId" : "hl7.fhir.fr.core",
     "version" : "2.1.0"
+  },
+  {
+    "id" : "ans_fhir_fr_annuaire",
+    "uri" : "https://interop.esante.gouv.fr/ig/fhir/annuaire/ImplementationGuide/ans.fhir.fr.annuaire",
+    "packageId" : "ans.fhir.fr.annuaire",
+    "version" : "1.1.0"
   }],
   "definition" : {
     "extension" : [{
@@ -1218,6 +1224,18 @@
       },
       "name" : "FrAppointmentSAS",
       "description" : "Profil de Appointment, dérivé de FrAppointment, pour le cas d'usage prise de RDV de la plateforme SAS [Commun cas d'usage PS Indiv et CPTS]",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/sas-appointment-ds"
+      },
+      "name" : "FrAppointmentSASDashBoard",
+      "description" : "Profil de Appointment, dérivé de FrAppointment, pour le cas d'usage d'affichage dans un dashboard des RDV consolidés de la PTF",
       "exampleBoolean" : false
     },
     {

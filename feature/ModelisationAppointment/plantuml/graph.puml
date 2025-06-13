@@ -7,6 +7,23 @@ package IG #DDDDDD{
 
      package Profiles #DDDDDD{
 
+        class FrAppointmentSASDashBoard{
+
+             Appointment => [None..None]
+             Appointment.meta.profile:sas-appointment-ds => [0..1]
+             Appointment.extension => [1..None]
+             Appointment.extension:appointmentOperator => <&plus>[1..None]
+             Appointment.extension:appointmentOperator.value[x] => <&plus>[1..None]
+             Appointment.identifier => [1..1]
+             Appointment.identifier.system => [1..None]
+             Appointment.identifier.value => [1..None]
+             Appointment.start => [1..None]
+             Appointment.end => [1..None]
+             Appointment.created => [None..None]
+             Appointment.participant.actor => [None..None]
+             Appointment.participant.status => [None..None]
+        } 
+
         class FrAppointmentSAS{
 
              Appointment => [None..None]
@@ -142,7 +159,6 @@ package IG #DDDDDD{
              Practitioner.meta.profile:sas-practitioner-aggregator => [0..1]
              Practitioner.identifier => [1..None]
              Practitioner.identifier.type.coding => [None..1]
-             Practitioner.identifier.system => [None..None]
              Practitioner.identifier:idNatPs => [1..None]
         } 
 
@@ -320,6 +336,10 @@ package IG #DDDDDD{
        }
 
 package "Ressources de base" #palegreen {
+
+ class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment" as  class5b3e4ec90388039f3b23e1c44137e12e 
+
+    class5b3e4ec90388039f3b23e1c44137e12e --> FrAppointmentSASDashBoard
 
  class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment" as  class5b3e4ec90388039f3b23e1c44137e12e 
 

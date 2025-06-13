@@ -11,14 +11,14 @@
   fhir:id [ fhir:v "ans.fhir.fr.sas"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide ans.fhir.fr.sas</b></p><a name=\"ans.fhir.fr.sas\"> </a><a name=\"hcans.fhir.fr.sas\"> </a><a name=\"ans.fhir.fr.sas-fr-FR\"> </a><h2>SAS</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>https://interop.esante.gouv.fr/ig/fhir/sas/ImplementationGuide/ans.fhir.fr.sas</pre></div>"^^rdf:XMLLiteral
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : ImplementationGuide ans.fhir.fr.sas</b></p><a name=\"ans.fhir.fr.sas\"> </a><a name=\"hcans.fhir.fr.sas\"> </a><a name=\"ans.fhir.fr.sas-fr-FR\"> </a><h2>SAS</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>https://interop.esante.gouv.fr/ig/fhir/sas/ImplementationGuide/ans.fhir.fr.sas</pre></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/ImplementationGuide/ans.fhir.fr.sas"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "1.1.0"] ; # 
   fhir:name [ fhir:v "SAS"] ; # 
   fhir:title [ fhir:v "Service d'Accès aux Soins"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2025-05-27T14:58:01+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-06-13T10:40:28+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -51,7 +51,7 @@
        fhir:link <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
      ] ;
      fhir:packageId [ fhir:v "hl7.terminology.r4" ] ;
-     fhir:version [ fhir:v "6.3.0" ]
+     fhir:version [ fhir:v "6.4.0" ]
   ] [
      fhir:id [ fhir:v "hl7ext" ] ;
      fhir:extension ( [
@@ -75,6 +75,14 @@
      ] ;
      fhir:packageId [ fhir:v "hl7.fhir.fr.core" ] ;
      fhir:version [ fhir:v "2.1.0" ]
+  ] [
+     fhir:id [ fhir:v "ans_fhir_fr_annuaire" ] ;
+     fhir:uri [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/annuaire/ImplementationGuide/ans.fhir.fr.annuaire"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/annuaire/ImplementationGuide/ans.fhir.fr.annuaire>
+     ] ;
+     fhir:packageId [ fhir:v "ans.fhir.fr.annuaire" ] ;
+     fhir:version [ fhir:v "1.1.0" ]
   ] ) ; # 
   fhir:definition [
      fhir:extension ( [
@@ -1784,6 +1792,24 @@
        ] ;
        fhir:name [ fhir:v "FrAppointmentSAS" ] ;
        fhir:description [ fhir:v "Profil de Appointment, dérivé de FrAppointment, pour le cas d'usage prise de RDV de la plateforme SAS [Commun cas d'usage PS Indiv et CPTS]" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-ds> ;
+         fhir:reference [ fhir:v "StructureDefinition/sas-appointment-ds" ]
+       ] ;
+       fhir:name [ fhir:v "FrAppointmentSASDashBoard" ] ;
+       fhir:description [ fhir:v "Profil de Appointment, dérivé de FrAppointment, pour le cas d'usage d'affichage dans un dashboard des RDV consolidés de la PTF" ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false
