@@ -7,7 +7,7 @@ package IG #DDDDDD{
 
      package Profiles #DDDDDD{
 
-        class FrAppointmentSASDashBoard{
+        class SASAppointmentDashboard{
 
              Appointment => [None..None]
              Appointment.meta.profile:sas-appointment-ds => [0..1]
@@ -15,8 +15,24 @@ package IG #DDDDDD{
              Appointment.extension:appointmentOperator => <&plus>[1..None]
              Appointment.extension:appointmentOperator.value[x] => <&plus>[1..None]
              Appointment.identifier => [1..1]
-             Appointment.identifier.system => [1..None]
+             Appointment.identifier.system => [None..None]
              Appointment.identifier.value => [1..None]
+             Appointment.specialty => [None..None]
+             Appointment.start => [1..None]
+             Appointment.end => [1..None]
+             Appointment.created => [None..None]
+             Appointment.participant.actor => [None..None]
+             Appointment.participant.status => [None..None]
+        } 
+
+        class SASAppointmentLRM{
+
+             Appointment => [None..None]
+             Appointment.meta.profile:sas-appointment-ds => [0..1]
+             Appointment.identifier => [1..1]
+             Appointment.identifier.system => [None..None]
+             Appointment.identifier.value => [1..None]
+             Appointment.specialty => [None..None]
              Appointment.start => [1..None]
              Appointment.end => [1..None]
              Appointment.created => [None..None]
@@ -63,6 +79,22 @@ package IG #DDDDDD{
              Bundle.entry:FrPractitionerAgregateur.resource => [None..None]
              Bundle.entry:FrPractitionerRoleExerciceAgregateur => [0..*]
              Bundle.entry:FrPractitionerRoleExerciceAgregateur.resource => [None..None]
+        } 
+
+        class SASBundleApppointmentLRM{
+
+             Bundle.meta.profile => [None..None]
+             Bundle.type => [None..None]
+             Bundle.entry => [1..None]
+             Bundle.entry:appointmententry => [1..1]
+             Bundle.entry:appointmententry.fullUrl => [1..None]
+             Bundle.entry:appointmententry.resource => [None..None]
+             Bundle.entry:practitionerentry => [0..1]
+             Bundle.entry:practitionerentry.fullUrl => [1..None]
+             Bundle.entry:practitionerentry.resource => [None..None]
+             Bundle.entry:organizationentry => [0..1]
+             Bundle.entry:organizationentry.fullUrl => [1..None]
+             Bundle.entry:organizationentry.resource => [None..None]
         } 
 
         class BundleAgregateurCPTS{
@@ -140,6 +172,14 @@ package IG #DDDDDD{
              Location.address.postalCode => [1..None]
         } 
 
+        class SASOrganization{
+
+             Organization.meta.profile:sas-organization => [0..1]
+             Organization.identifier => [1..None]
+             Organization.identifier:idNatSt => [1..None]
+             Organization.name => [1..None]
+        } 
+
         class FrPractitionerRegul{
 
              Practitioner => [None..None]
@@ -171,6 +211,13 @@ package IG #DDDDDD{
              PractitionerRole.organization.identifier.type => [None..None]
              PractitionerRole.organization.identifier.system => [None..None]
              PractitionerRole.location => [1..1]
+        } 
+
+        class SASPractitionerRoleLRM{
+
+             PractitionerRole => [None..None]
+             PractitionerRole.meta.profile:sas-practitioner-role-lrm => [0..1]
+             PractitionerRole.organization => [1..None]
         } 
 
         class FrScheduleAgregateur{
@@ -339,7 +386,11 @@ package "Ressources de base" #palegreen {
 
  class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment" as  class5b3e4ec90388039f3b23e1c44137e12e 
 
-    class5b3e4ec90388039f3b23e1c44137e12e --> FrAppointmentSASDashBoard
+    class5b3e4ec90388039f3b23e1c44137e12e --> SASAppointmentDashboard
+
+ class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment" as  class5b3e4ec90388039f3b23e1c44137e12e 
+
+    class5b3e4ec90388039f3b23e1c44137e12e --> SASAppointmentLRM
 
  class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment" as  class5b3e4ec90388039f3b23e1c44137e12e 
 
@@ -348,6 +399,10 @@ package "Ressources de base" #palegreen {
  class "Bundle" as  class94c51f19c37f96ed231f5a0ae512b2a8 
 
     class94c51f19c37f96ed231f5a0ae512b2a8 --> BundleAgregateur
+
+ class "Bundle" as  class94c51f19c37f96ed231f5a0ae512b2a8 
+
+    class94c51f19c37f96ed231f5a0ae512b2a8 --> SASBundleApppointmentLRM
 
  class "Bundle" as  class94c51f19c37f96ed231f5a0ae512b2a8 
 
@@ -369,6 +424,10 @@ package "Ressources de base" #palegreen {
 
     class505b865d93b3b02ed3aff95e782d498a --> FrLocationAgregateur
 
+ class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization" as  class7273115ddeceb35c4c7044f07f832f67 
+
+    class7273115ddeceb35c4c7044f07f832f67 --> SASOrganization
+
  class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner" as  class722d091912544e694771fe1d2c6739cb 
 
     class722d091912544e694771fe1d2c6739cb --> FrPractitionerRegul
@@ -380,6 +439,10 @@ package "Ressources de base" #palegreen {
  class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner-role" as  class32e744761be9cc693fcaf56d8ca68b99 
 
     class32e744761be9cc693fcaf56d8ca68b99 --> FrPractitionerRoleExerciceAgregateur
+
+ class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner-role" as  class32e744761be9cc693fcaf56d8ca68b99 
+
+    class32e744761be9cc693fcaf56d8ca68b99 --> SASPractitionerRoleLRM
 
  class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-schedule" as  class7c912eb91080e8d9a809e267903ad8a9 
 
