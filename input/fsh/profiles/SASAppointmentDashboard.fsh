@@ -4,7 +4,7 @@ Id: sas-appointment-dashboard
 Description: "Profil de Appointment, dérivé de FrAppointment, pour le cas d'usage d'affichage dans un dashboard des RDV consolidés de la PTF"
 
 * meta.profile contains sas-appointment-ds 0..1
-* meta.profile[sas-appointment-ds] = Canonical(sas-appointment-ds)
+* meta.profile[sas-appointment-ds] = Canonical(sas-appointment-dashboard)
 
 // Extension appointmentOperator provenant de FrAppointment. Régulateur toujours présent dans ds mais non envoyé
 * extension[appointmentOperator] 1..
