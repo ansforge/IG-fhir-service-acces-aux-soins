@@ -1,7 +1,7 @@
 Profile: SASAppointmentLRM
 Parent: fr-core-appointment
 Id: sas-appointment-lrm
-Description: "Profil de Appointment, dérivé de FrAppointment, pour le cas d'usage d'envoi des RDV consolidés de la PTF aux logicields de LRM"
+Description: "Profil de Appointment, dérivé de FrAppointment, pour le cas d'usage d'envoi des RDV consolidés de la PTF aux logiciels de LRM"
 
 * meta.profile contains sas-appointment-ds 0..1
 * meta.profile[sas-appointment-ds] = Canonical(sas-appointment-lrm)
@@ -15,7 +15,7 @@ Description: "Profil de Appointment, dérivé de FrAppointment, pour le cas d'us
 * start 1..
 * end 1..
 * created MS
-* participant.actor only Reference(FrPractitionerAgregateur or SASOrganization)
+* participant.actor only Reference(FrPractitionerAgregateur)
 * participant.actor MS
 // le statut est obligatoire - transmettre booked systématiquement pour un RDV SAS
 * participant.status MS
