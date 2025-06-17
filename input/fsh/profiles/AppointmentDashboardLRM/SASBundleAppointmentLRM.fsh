@@ -13,7 +13,8 @@ Description: "Profil de Bundle qui représente les données de RDV à envoyer de
 * entry contains
     appointmententry 1..1 and
     practitionerentry 0..1 and
-    organizationentry 0..1
+    organizationentry 0..1 and
+    practitionerRoleentry 0..1
 
 * entry[appointmententry].resource only SASAppointmentLRM
 * entry[appointmententry].fullUrl 1..
@@ -23,3 +24,6 @@ Description: "Profil de Bundle qui représente les données de RDV à envoyer de
 
 * entry[organizationentry].resource only SASOrganization
 * entry[organizationentry].fullUrl 1..
+
+* entry[practitionerRoleentry].resource only SASOrganization
+* entry[practitionerRoleentry].fullUrl 1..

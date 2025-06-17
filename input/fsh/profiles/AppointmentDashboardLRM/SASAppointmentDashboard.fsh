@@ -12,6 +12,7 @@ Description: "Profil de Appointment, dérivé de FrAppointment, pour le cas d'us
 * extension[appointmentOperator].value[x] only Reference(AsPractitionerProfile)
 
 * identifier 1..1
+* status 1..1
 //A ajouter dans fichier des OID
 * identifier.system = "urn:oid:1.2.250.1.213.3.6.2"
 * identifier.value 1..
@@ -22,5 +23,3 @@ Description: "Profil de Appointment, dérivé de FrAppointment, pour le cas d'us
 * created MS
 * participant.actor only Reference(FrPractitionerAgregateur)
 * participant.actor MS
-// le statut est obligatoire - transmettre booked systématiquement pour un RDV SAS
-* participant.status MS
