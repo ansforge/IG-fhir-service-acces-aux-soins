@@ -25,5 +25,5 @@ Description: "Profil de Bundle qui représente les données de RDV à envoyer de
 * entry[organizationentry].resource only SASOrganization
 * entry[organizationentry].fullUrl 1..
 
-* entry[practitionerRoleentry].resource only SASOrganization
+* entry[practitionerRoleentry].resource only SASPractitionerRoleLRM
 * entry[practitionerRoleentry].fullUrl 1..
