@@ -9,8 +9,8 @@ Usage: #example
 * entry[practitionerentry].resource = ExamplePractitionerLRM
 * entry[practitionerentry].fullUrl = "https://<base_URl>/Practitioner/ExamplePractitionerLRM"
 
-* entry[practitionerRoleentry].resource = ExamplePractitionerRoleAppointment
-* entry[practitionerRoleentry].fullUrl = "https://<base_URl>/PractitionerRole/ExamplePractitionerRoleAppointment"
-
 * entry[organizationentry].resource = ExampleSasOrganization
 * entry[organizationentry].fullUrl = "https://<base_URl>/Organization/ExampleSasOrganization"
+
+* entry[practitionerRoleentry].resource = ExamplePractitionerRoleAppointment
+* entry[practitionerRoleentry].fullUrl = "https://<base_URl>/PractitionerRole/ExamplePractitionerRoleAppointment"
