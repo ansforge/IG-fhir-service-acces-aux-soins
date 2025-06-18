@@ -10,3 +10,5 @@ Usage: #example
 * end = "2025-06-17T14:15:00+01:00"
 * created = "2025-06-17T10:15:56+01:00"
 * participant.actor = Reference(ExamplePractitionerLRM)
+//le statut du participant est obligatoire
+* participant.status = #accepted
