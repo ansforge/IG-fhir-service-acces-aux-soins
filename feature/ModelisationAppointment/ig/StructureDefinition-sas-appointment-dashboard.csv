@@ -204,7 +204,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Appointment.participant.required","Appointment.participant.required","","","",0,1,"","","Y","code {[]} {[]}
 ","required | optional | information-only","Whether this participant is required to be present at the meeting. This covers a use-case where two doctors need to meet to discuss the results for a specific patient, and the patient is not required to be present.","","","","","","","","","",,"required","Is the Participant required to attend the appointment.","http://hl7.org/fhir/ValueSet/participantrequired|4.0.1","",,,,"Appointment.participant.required",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","(performer | reusableDevice | subject | location).@performInd","ROLE=REQ-PARTICIPANT (roleparam)"
-"Appointment.participant.status","Appointment.participant.status","","","",1,1,"Y","","Y","code {[]} {[]}
+"Appointment.participant.status","Appointment.participant.status","","","",1,1,"","","Y","code {[]} {[]}
 ","accepted | declined | tentative | needs-action","Participation status of the actor.","","","","","","","","","",,"required","The Participation status of an appointment.","http://hl7.org/fhir/ValueSet/participationstatus|4.0.1","",,,,"Appointment.participant.status",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","(performer | reusableDevice | subject | location).statusCode","ATTENDEE;CN=""John Doe"";RSVP=TRUE:mailto:john@doe.com (rsvpparam | partstatparam)","AIP-12, AIG-14"
 "Appointment.participant.period","Appointment.participant.period","","","",0,1,"","","","Period {[]} {[]}

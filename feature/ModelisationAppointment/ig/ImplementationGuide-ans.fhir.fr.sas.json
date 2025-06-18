@@ -10,7 +10,7 @@
   "name" : "SAS",
   "title" : "Service d'Accès aux Soins",
   "status" : "active",
-  "date" : "2025-06-17T13:53:20+00:00",
+  "date" : "2025-06-18T12:49:42+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -737,6 +737,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Appointment"
+      }],
+      "reference" : {
+        "reference" : "Appointment/ExampleAppointmentLRM1"
+      },
+      "name" : "ExampleAppointmentLRM1",
+      "description" : "Exemple RDV LRM",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Bundle"
       }],
       "reference" : {
@@ -745,6 +757,18 @@
       "name" : "ExampleBundleAgregateurSOS",
       "description" : "Exemple Bundle SOS",
       "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-bundle-aggregator"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/ExampleBundleAppointmentLRM1"
+      },
+      "name" : "ExampleBundleAppointmentLRM1",
+      "description" : "Exemple Bundle RDV LRM 1",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"
     },
     {
       "extension" : [{
@@ -932,6 +956,18 @@
         "valueString" : "Practitioner"
       }],
       "reference" : {
+        "reference" : "Practitioner/ExamplePractitionerLRM"
+      },
+      "name" : "ExamplePractitionerLRM",
+      "description" : "Exemple practitioner flux LRM",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Practitioner"
+      }],
+      "reference" : {
         "reference" : "Practitioner/ExamplePractitionerRegul1"
       },
       "name" : "ExamplePractitionerRegul1",
@@ -1009,6 +1045,30 @@
       "name" : "ExamplePractitionerRoleAgregateur4",
       "description" : "Exemple 4 PractitionerRole flux agrégateur",
       "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-exercice-aggregator"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PractitionerRole"
+      }],
+      "reference" : {
+        "reference" : "PractitionerRole/ExamplePractitionerRoleAppointment"
+      },
+      "name" : "ExamplePractitionerRoleAppointment",
+      "description" : "Exemple PractitionerRole flux LRM",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-lrm"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/ExampleSasOrganization"
+      },
+      "name" : "ExampleSasOrganization",
+      "description" : "Exemple d'organisation SAS - association SOS",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-organization"
     },
     {
       "extension" : [{

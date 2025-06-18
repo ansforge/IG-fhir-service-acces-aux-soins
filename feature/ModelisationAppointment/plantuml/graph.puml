@@ -22,7 +22,6 @@ package IG #DDDDDD{
              Appointment.end => [1..None]
              Appointment.created => [None..None]
              Appointment.participant.actor => [None..None]
-             Appointment.participant.status => [None..None]
         } 
 
         class SASAppointmentLRM{
@@ -95,6 +94,9 @@ package IG #DDDDDD{
              Bundle.entry:organizationentry => [0..1]
              Bundle.entry:organizationentry.fullUrl => [1..None]
              Bundle.entry:organizationentry.resource => [None..None]
+             Bundle.entry:practitionerRoleentry => [0..1]
+             Bundle.entry:practitionerRoleentry.fullUrl => [1..None]
+             Bundle.entry:practitionerRoleentry.resource => [None..None]
         } 
 
         class BundleAgregateurCPTS{
@@ -175,8 +177,6 @@ package IG #DDDDDD{
         class SASOrganization{
 
              Organization.meta.profile:sas-organization => [0..1]
-             Organization.identifier => [1..None]
-             Organization.identifier:idNatSt => [1..None]
              Organization.name => [1..None]
         } 
 
@@ -215,7 +215,6 @@ package IG #DDDDDD{
 
         class SASPractitionerRoleLRM{
 
-             PractitionerRole => [None..None]
              PractitionerRole.meta.profile:sas-practitioner-role-lrm => [0..1]
              PractitionerRole.organization => [1..None]
         } 
