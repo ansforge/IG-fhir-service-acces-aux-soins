@@ -1,6 +1,6 @@
 Instance: ExampleBundleAppointmentLRM1
 InstanceOf: SASBundleApppointmentLRM
-Description: "Exemple Bundle RDV LRM 1"
+Description: "Exemple Bundle RDV LRM 1 - Cas SOS Médecin interfacé après réception du PS"
 Usage: #example
 
 * entry[appointmententry].resource = ExampleAppointmentLRM1
@@ -9,7 +9,7 @@ Usage: #example
 * entry[practitionerentry].resource = ExamplePractitionerLRM
 * entry[practitionerentry].fullUrl = "https://<base_URl>/Practitioner/ExamplePractitionerLRM"
 
-* entry[organizationentry].resource = ExampleSasOrganization
+* entry[organizationentry].resource = ExampleSasOrganization1
 * entry[organizationentry].fullUrl = "https://<base_URl>/Organization/ExampleSasOrganization"
 
 * entry[practitionerRoleentry].resource = ExamplePractitionerRoleAppointment
