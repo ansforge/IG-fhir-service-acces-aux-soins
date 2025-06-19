@@ -6,7 +6,7 @@ Usage: #example
 
 * meta.security = https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau#PUBLIC
 * serviceType[TypeConsultation][+].coding = $v3-ActCode#AMB
-* serviceType[TypeConsultation][+].coding= $v3-ActCode#VR
+* serviceType[TypeConsultation][+].coding = $v3-ActCode#VR
 * serviceType[motifConsultation].text = "Visite de contrôle"
 * specialty[+].coding = https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale#SM54
 * specialty[+].coding = https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale#SM05
