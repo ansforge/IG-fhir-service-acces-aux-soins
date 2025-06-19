@@ -80,7 +80,7 @@ package IG #DDDDDD{
              Bundle.entry:FrPractitionerRoleExerciceAgregateur.resource => [None..None]
         } 
 
-        class SASBundleApppointmentLRM{
+        class SASBundleAppointmentLRM{
 
              Bundle.meta.profile => [None..None]
              Bundle.type => [None..None]
@@ -97,6 +97,9 @@ package IG #DDDDDD{
              Bundle.entry:practitionerRoleentry => [0..1]
              Bundle.entry:practitionerRoleentry.fullUrl => [1..None]
              Bundle.entry:practitionerRoleentry.resource => [None..None]
+             Bundle.entry:healthcareserviceentry => [0..1]
+             Bundle.entry:healthcareserviceentry.fullUrl => [1..None]
+             Bundle.entry:healthcareserviceentry.resource => [None..None]
         } 
 
         class BundleAgregateurCPTS{
@@ -163,6 +166,12 @@ package IG #DDDDDD{
              Slot.appointmentType.coding => [None..None]
              Slot.schedule => [None..None]
              Slot.status => [None..None]
+        } 
+
+        class SASHealthcareService{
+
+             HealthcareService.meta.profile:sas-healthcareservice => [0..1]
+             HealthcareService.providedBy => [1..None]
         } 
 
         class FrLocationAgregateur{
@@ -401,7 +410,7 @@ package "Ressources de base" #palegreen {
 
  class "Bundle" as  class94c51f19c37f96ed231f5a0ae512b2a8 
 
-    class94c51f19c37f96ed231f5a0ae512b2a8 --> SASBundleApppointmentLRM
+    class94c51f19c37f96ed231f5a0ae512b2a8 --> SASBundleAppointmentLRM
 
  class "Bundle" as  class94c51f19c37f96ed231f5a0ae512b2a8 
 
@@ -418,6 +427,10 @@ package "Ressources de base" #palegreen {
  class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-slot" as  classf72d01e910d5b05afa3e849c0230ac33 
 
     classf72d01e910d5b05afa3e849c0230ac33 --> FrSlotAgregateurCPTS
+
+ class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-healthcare-service" as  class926ccf2bb5a615fff3ac07e356f8a997 
+
+    class926ccf2bb5a615fff3ac07e356f8a997 --> SASHealthcareService
 
  class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-location" as  class505b865d93b3b02ed3aff95e782d498a 
 

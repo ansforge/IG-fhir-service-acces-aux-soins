@@ -1,0 +1,83 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "ExampleBundleAppointmentLRM2",
+  "meta" : {
+    "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"]
+  },
+  "type" : "transaction",
+  "entry" : [{
+    "fullUrl" : "https://<base_URl>/Appointment/ExampleAppointmentLRM1",
+    "resource" : {
+      "resourceType" : "Appointment",
+      "id" : "ExampleAppointmentLRM1",
+      "meta" : {
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Appointment_ExampleAppointmentLRM1\"> </a><p class=\"res-header-id\"><b>Narratif généré : RendezVous ExampleAppointmentLRM1</b></p><a name=\"ExampleAppointmentLRM1\"> </a><a name=\"hcExampleAppointmentLRM1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-appointment-lrm.html\">SASAppointmentLRM</a></p></div><p><b>identifier</b>: 12345</p><p><b>status</b>: Booked</p><p><b>specialty</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM54}\">Médecine générale (SM)</span></p><p><b>start</b>: 2025-06-17 14:00:00+0100</p><p><b>end</b>: 2025-06-17 14:15:00+0100</p><p><b>created</b>: 2025-06-17 10:15:56+0100</p><h3>Participants</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td><td><b>Status</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner-ExamplePractitionerLRM.html\">Practitioner Jean Dupont </a></td><td>Accepted</td></tr></table></div>"
+      },
+      "identifier" : [{
+        "value" : "12345"
+      }],
+      "status" : "booked",
+      "specialty" : [{
+        "coding" : [{
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
+          "code" : "SM54"
+        }]
+      }],
+      "start" : "2025-06-17T14:00:00+01:00",
+      "end" : "2025-06-17T14:15:00+01:00",
+      "created" : "2025-06-17T10:15:56+01:00",
+      "participant" : [{
+        "actor" : {
+          "reference" : "Practitioner/ExamplePractitionerLRM"
+        },
+        "status" : "accepted"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "https://<base_URl>/Organization/ExampleSasOrganization2",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "ExampleSasOrganization2",
+      "meta" : {
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-organization"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_ExampleSasOrganization2\"> </a><p class=\"res-header-id\"><b>Narratif généré : Organisation ExampleSasOrganization2</b></p><a name=\"ExampleSasOrganization2\"> </a><a name=\"hcExampleSasOrganization2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-organization.html\">SASOrganization</a></p></div><p><b>identifier</b>: Identification nationale de structure définie par l’ANS dans le CI_SIS/050005917</p><p><b>name</b>: CDS DENTAIRE</p></div>"
+      },
+      "identifier" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203",
+            "code" : "IDNST"
+          }]
+        },
+        "system" : "urn:oid:1.2.250.1.71.4.2.2",
+        "value" : "050005917"
+      }],
+      "name" : "CDS DENTAIRE"
+    }
+  },
+  {
+    "fullUrl" : "https://<base_URl>/HealthcareService/ExampleHealthcareService",
+    "resource" : {
+      "resourceType" : "HealthcareService",
+      "id" : "ExampleHealthcareService",
+      "meta" : {
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-healthcareservice"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"HealthcareService_ExampleHealthcareService\"> </a><p class=\"res-header-id\"><b>Narratif généré : ServiceDeSanté ExampleHealthcareService</b></p><a name=\"ExampleHealthcareService\"> </a><a name=\"hcExampleHealthcareService\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-healthcareservice.html\">SASHealthcareService</a></p></div><p><b>providedBy</b>: <a href=\"Organization-ExampleSasOrganization2.html\">Organization CDS DENTAIRE</a></p></div>"
+      },
+      "providedBy" : {
+        "reference" : "Organization/ExampleSasOrganization2"
+      }
+    }
+  }]
+}

@@ -1,3 +1,5 @@
+<!-- get modelType -->
+
 
 
 <?xml version="1.0" encoding="UTF-8"?>
@@ -5,7 +7,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>ExamplePractitionerRoleAppointment - XML Representation - Service d'Accès aux Soins v1.1.0</title>
+    <title> - Service d'Accès aux Soins v1.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -44,8 +46,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"14.71"}
-    h3,h4,h5,h6{--heading-prefix:"14.71"}</style>
+    <style type="text/css">h2{--heading-prefix:""}
+    h3,h4,h5,h6{--heading-prefix:""}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -190,15 +192,11 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>ExamplePractitionerRoleAppointment</b></li>
+          
 
           <span style="float:right;">
 
-            <a href="PractitionerRole-ExamplePractitionerRoleAppointment.html">&lt;prev</a> | 
-
             <a href="#bottom">bottom</a>
-
-          | <a href="PractitionerRole-ExamplePractitionerRoleAppointment.json.html">next&gt;</a>
 
           </span>
 
@@ -212,8 +210,12 @@
         <div class="row">
           <div class="inner-wrapper">
 
-<div style="counter-reset: section 7" class="col-12">
-<!--ReleaseHeader--><p id="publish-box">Service d'Accès aux Soins - Local Development build (v1.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://interop.esante.gouv.fr/ig/fhir/sas/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+
+<div style="counter-reset: section 10" class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Service d'Accès aux Soins - Local Development build (v1.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://interop.esante.gouv.fr/ig/fhir/sas/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  
+
+
 
 
 
@@ -226,75 +228,87 @@
 <ul class="nav nav-tabs">
 
   <li>
-    <a href="PractitionerRole-ExamplePractitionerRoleAppointment.html">Narrative Content</a>
+    <a href="StructureDefinition-sas-healthcareservice.html">Content</a>
+  </li>
+
+
+
+  <li>
+    <a href="StructureDefinition-sas-healthcareservice-definitions.html">Detailed Descriptions</a>
   </li>
 
 
 
   
-    <li class="active">
-      <a href="#">XML</a>
+    <li>
+      <a href="StructureDefinition-sas-healthcareservice-mappings.html">Mappings</a>
+    </li>
+  
+
+
+
+
+
+
+  
+    
+      <li>
+        <a href="StructureDefinition-sas-healthcareservice-examples.html">Examples</a>
+      </li>
+    
+  
+
+
+
+
+  
+    <li>
+      <a href="StructureDefinition-sas-healthcareservice.profile.xml.html">XML</a>
     </li>
   
 
 
   
     <li>
-      <a href="PractitionerRole-ExamplePractitionerRoleAppointment.json.html">JSON</a>
+      <a href="StructureDefinition-sas-healthcareservice.profile.json.html">JSON</a>
     </li>
   
 
 
   
     <li>
-      <a href="PractitionerRole-ExamplePractitionerRoleAppointment.ttl.html">TTL</a>
+      <a href="StructureDefinition-sas-healthcareservice.profile.ttl.html">TTL</a>
     </li>
   
-
 
 
 </ul>
 
 
-<a name="root"> </a>
+  <a name="root"> </a>
+  <h2 id="root">Resource Profile: SASHealthcareService - Change History</h2>
 
+  <table class="colsi">
+    <tr>
 
-<h2 id="root">: ExamplePractitionerRoleAppointment - XML Representation</h2>
+      <td colspan="2">
+        
+          Active
+          
+            as of 2025-06-19
+          
+        
+      </td>
 
+    </tr>
+  </table>
 
-<p><a href="PractitionerRole-ExamplePractitionerRoleAppointment.xml" no-download="true">Raw xml</a> | <a href="PractitionerRole-ExamplePractitionerRoleAppointment.xml" download>Download</a></p>
+  <p>Changes in the sas-healthcareservice resource profile.</p>
 
-  <!-- insert intro if present -->
   
-
-
-
-  <pre class="xml" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-xml" style="white-space: pre; text-wrap: nowrap;">
-&lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole">PractitionerRole</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;ExamplePractitionerRoleAppointment&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.meta">meta</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
-             <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-lrm&quot;/&gt;
-  &lt;/meta&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.text">text</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
-    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Narratif généré : PractitionerRole ExamplePractitionerRoleAppointment&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;ExamplePractitionerRoleAppointment&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcExamplePractitionerRoleAppointment&quot;&gt; &lt;/a&gt;&lt;div style=&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%&quot;&gt;&lt;p style=&quot;margin-bottom: 0px&quot;/&gt;&lt;p style=&quot;margin-bottom: 0px&quot;&gt;Profil: &lt;a href=&quot;StructureDefinition-sas-practitioner-role-lrm.html&quot;&gt;SASPractitionerRoleLRM&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;practitioner&lt;/b&gt;: &lt;a href=&quot;Practitioner-ExamplePractitionerLRM.html&quot;&gt;Practitioner Jean Dupont &lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;organization&lt;/b&gt;: &lt;a href=&quot;Organization-ExampleSasOrganization.html&quot;&gt;Organization SOS Médecins de Renne&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;<a name="end-xhtml"></a>
-  &lt;/text&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.practitioner">practitioner</a>&gt;<a href="Practitioner-ExamplePractitionerLRM.html" style="color: Maroon">&#x1F517;</a> 
-    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Practitioner/ExamplePractitionerLRM&quot;/&gt;
-  &lt;/practitioner&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.organization">organization</a>&gt;<a href="Organization-ExampleSasOrganization.html" style="color: Maroon">&#x1F517;</a> 
-    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Organization/ExampleSasOrganization&quot;/&gt;
-  &lt;/organization&gt;
-&lt;/PractitionerRole&gt;</code></pre>
-
-
-  <!-- insert notes if present -->
-  
-
-
 
 </div>
+
         </div>  <!-- /inner-wrapper -->
       </div>  <!-- /row -->
     </div>  <!-- /container -->
@@ -302,6 +316,8 @@
 
   <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
   <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/tabs.js"> </script>
 
 <script type="text/javascript" src="assets/js/window-hash.js"> </script>
   <a name="bottom"> </a>
@@ -314,7 +330,7 @@
             <tr>
               <td style="text-align:left">&#xA0;
 
-                <a href="PractitionerRole-ExamplePractitionerRoleAppointment.html">&lt;prev</a>
+                <span style="visibility:hidden">&lt;prev</span>
 
               </td>
               <td style="text-align:center">
@@ -322,7 +338,7 @@
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="PractitionerRole-ExamplePractitionerRoleAppointment.json.html">next&gt;</a>
+                <span style="visibility:hidden">next&gt;</span>
 
               </td>
             </tr>
@@ -332,7 +348,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jun 18, 2025 12:50+0000">2025-06-18</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jun 19, 2025 12:32+0000">2025-06-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

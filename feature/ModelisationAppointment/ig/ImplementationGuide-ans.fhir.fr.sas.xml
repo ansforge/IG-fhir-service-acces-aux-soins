@@ -10,7 +10,7 @@
   <name value="SAS"/>
   <title value="Service d'Accès aux Soins"/>
   <status value="active"/>
-  <date value="2025-06-18T12:49:42+00:00"/>
+  <date value="2025-06-19T12:31:56+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -593,7 +593,18 @@
         <reference value="Bundle/ExampleBundleAppointmentLRM1"/>
       </reference>
       <name value="ExampleBundleAppointmentLRM1"/>
-      <description value="Exemple Bundle RDV LRM 1"/>
+      <description value="Exemple Bundle RDV LRM 1 - Cas SOS Médecin interfacé après réception du PS"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/ExampleBundleAppointmentLRM2"/>
+      </reference>
+      <name value="ExampleBundleAppointmentLRM2"/>
+      <description value="Exemple Bundle RDV LRM 2 - Cas CDS non interfacé"/>
       <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"/>
     </resource>
     <resource>
@@ -628,6 +639,17 @@
       <name value="ExampleBundlePSIndiv"/>
       <description value="Exemple Bundle PS indiv"/>
       <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-aggregator"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="HealthcareService"/>
+      </extension>
+      <reference>
+        <reference value="HealthcareService/ExampleHealthcareService"/>
+      </reference>
+      <name value="ExampleHealthcareService"/>
+      <description value="Exemple de ressource Healthcare Service"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-healthcareservice"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -854,10 +876,10 @@
         <valueString value="PractitionerRole"/>
       </extension>
       <reference>
-        <reference value="PractitionerRole/ExamplePractitionerRoleAppointment"/>
+        <reference value="PractitionerRole/ExamplePractitionerRoleAppointment1"/>
       </reference>
-      <name value="ExamplePractitionerRoleAppointment"/>
-      <description value="Exemple PractitionerRole flux LRM"/>
+      <name value="ExamplePractitionerRoleAppointment1"/>
+      <description value="Exemple PractitionerRole 1 flux LRM"/>
       <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-lrm"/>
     </resource>
     <resource>
@@ -865,10 +887,21 @@
         <valueString value="Organization"/>
       </extension>
       <reference>
-        <reference value="Organization/ExampleSasOrganization"/>
+        <reference value="Organization/ExampleSasOrganization1"/>
       </reference>
-      <name value="ExampleSasOrganization"/>
-      <description value="Exemple d'organisation SAS - association SOS"/>
+      <name value="ExampleSasOrganization1"/>
+      <description value="Exemple d'organisation SAS - association SOS (SIRET)"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-organization"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/ExampleSasOrganization2"/>
+      </reference>
+      <name value="ExampleSasOrganization2"/>
+      <description value="Exemple d'organisation SAS - centre de santé (FINESS)"/>
       <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-organization"/>
     </resource>
     <resource>
@@ -1351,8 +1384,19 @@
       <reference>
         <reference value="StructureDefinition/sas-bundle-appointment-lrm"/>
       </reference>
-      <name value="SASBundleApppointmentLRM"/>
+      <name value="SASBundleAppointmentLRM"/>
       <description value="Profil de Bundle qui représente les données de RDV à envoyer de la plateforme numérique du SAS vers les éditeurs de LRM"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/sas-healthcareservice"/>
+      </reference>
+      <name value="SASHealthcareService"/>
+      <description value="Profil dérivé de FR Core Healthcare Service Profile dans le cadre de l'usage des flux du SAS"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
