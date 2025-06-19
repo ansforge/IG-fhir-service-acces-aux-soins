@@ -1,5 +1,5 @@
 Instance: ExampleBundleAppointmentLRM2
-InstanceOf: SASBundleApppointmentLRM
+InstanceOf: SASBundleAppointmentLRM
 Description: "Exemple Bundle RDV LRM 2 - Cas CDS non interfacé"
 Usage: #example
 

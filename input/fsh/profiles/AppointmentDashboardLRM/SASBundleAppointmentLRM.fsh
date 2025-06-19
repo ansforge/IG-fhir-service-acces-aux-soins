@@ -1,4 +1,4 @@
-Profile: SASBundleApppointmentLRM
+Profile: SASBundleAppointmentLRM
 Parent: Bundle
 Id: sas-bundle-appointment-lrm
 Description: "Profil de Bundle qui représente les données de RDV à envoyer de la plateforme numérique du SAS vers les éditeurs de LRM"
