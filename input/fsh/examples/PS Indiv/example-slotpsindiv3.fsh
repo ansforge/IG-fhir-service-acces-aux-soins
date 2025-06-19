@@ -6,9 +6,9 @@ Usage: #example
 
 * meta.security[+] = https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau#PUBLIC
 * meta.security[+] = https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau#PRO
-* serviceType[+].coding = $v3-ActCode#VR
-* serviceType[+].text = "Visite de contrôle"
-* serviceType[+].text = "Consultation de suivi pneumologie"
+* serviceType[TypeConsultation][+].coding = $v3-ActCode#VR
+* serviceType[motifConsultation][+].text = "Visite de contrôle"
+* serviceType[motifConsultation][+].text = "Consultation de suivi pneumologie"
 * specialty[+].coding = https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale#SM41
 * appointmentType[+].coding = $v2-0276#ROUTINE
 * schedule = Reference(ExampleSchedule3)
