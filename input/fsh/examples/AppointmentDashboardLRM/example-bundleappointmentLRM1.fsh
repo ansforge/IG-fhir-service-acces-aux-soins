@@ -12,5 +12,5 @@ Usage: #example
 * entry[organizationentry].resource = ExampleSasOrganization1
 * entry[organizationentry].fullUrl = "https://<base_URl>/Organization/ExampleSasOrganization"
 
-* entry[practitionerRoleentry].resource = ExamplePractitionerRoleAppointment
+* entry[practitionerRoleentry].resource = ExamplePractitionerRoleAppointment1
 * entry[practitionerRoleentry].fullUrl = "https://<base_URl>/PractitionerRole/ExamplePractitionerRoleAppointment"
