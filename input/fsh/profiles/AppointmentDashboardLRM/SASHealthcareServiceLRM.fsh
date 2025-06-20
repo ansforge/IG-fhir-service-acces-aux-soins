@@ -7,4 +7,4 @@ Description: "Profil dérivé de FR Core Healthcare Service Profile dans le cadr
 * meta.profile[sas-healthcareservice] = Canonical(sas-healthcareservice-lrm)
 
 * providedBy 1..1
-* providedBy only Reference(SASOrganization)
+* providedBy only Reference(SASOrganizationLRM)
