@@ -10,7 +10,7 @@
   <name value="SAS"/>
   <title value="Service d'Accès aux Soins"/>
   <status value="active"/>
-  <date value="2025-06-20T10:31:38+00:00"/>
+  <date value="2025-06-20T12:06:52+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -649,7 +649,7 @@
       </reference>
       <name value="ExampleHealthcareService"/>
       <description value="Exemple de ressource Healthcare Service"/>
-      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-healthcareservice"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-healthcareservice-lrm"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -891,7 +891,7 @@
       </reference>
       <name value="ExampleSasOrganization1"/>
       <description value="Exemple d'organisation SAS - association SOS (SIRET)"/>
-      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-organization"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-organization-lrm"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -902,7 +902,7 @@
       </reference>
       <name value="ExampleSasOrganization2"/>
       <description value="Exemple d'organisation SAS - centre de santé (FINESS)"/>
-      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-organization"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-organization-lrm"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1360,17 +1360,6 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/sas-appointment-dashboard"/>
-      </reference>
-      <name value="SASAppointmentDashboard"/>
-      <description value="Profil de Appointment, dérivé de FrAppointment, pour le cas d'usage d'affichage dans un dashboard des RDV consolidés de la PTF"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
         <reference value="StructureDefinition/sas-appointment-lrm"/>
       </reference>
       <name value="SASAppointmentLRM"/>
@@ -1393,9 +1382,9 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/sas-healthcareservice"/>
+        <reference value="StructureDefinition/sas-healthcareservice-lrm"/>
       </reference>
-      <name value="SASHealthcareService"/>
+      <name value="SASHealthcareServiceLRM"/>
       <description value="Profil dérivé de FR Core Healthcare Service Profile dans le cadre de l'usage des flux du SAS"/>
       <exampleBoolean value="false"/>
     </resource>
@@ -1404,9 +1393,9 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/sas-organization"/>
+        <reference value="StructureDefinition/sas-organization-lrm"/>
       </reference>
-      <name value="SASOrganization"/>
+      <name value="SASOrganizationLRM"/>
       <description value="Profil dérivé de FrOrganization dans le cadre de l'usage des flux du SAS"/>
       <exampleBoolean value="false"/>
     </resource>

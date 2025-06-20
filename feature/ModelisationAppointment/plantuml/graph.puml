@@ -7,23 +7,6 @@ package IG #DDDDDD{
 
      package Profiles #DDDDDD{
 
-        class SASAppointmentDashboard{
-
-             Appointment => [None..None]
-             Appointment.meta.profile:sas-appointment-ds => [0..1]
-             Appointment.extension => [1..None]
-             Appointment.extension:appointmentOperator => <&plus>[1..None]
-             Appointment.extension:appointmentOperator.value[x] => <&plus>[1..None]
-             Appointment.identifier => [1..1]
-             Appointment.identifier.system => [None..None]
-             Appointment.identifier.value => [1..None]
-             Appointment.specialty => [None..None]
-             Appointment.start => [1..None]
-             Appointment.end => [1..None]
-             Appointment.created => [None..None]
-             Appointment.participant.actor => [None..None]
-        } 
-
         class SASAppointmentLRM{
 
              Appointment => [None..None]
@@ -168,7 +151,7 @@ package IG #DDDDDD{
              Slot.status => [None..None]
         } 
 
-        class SASHealthcareService{
+        class SASHealthcareServiceLRM{
 
              HealthcareService.meta.profile:sas-healthcareservice => [0..1]
              HealthcareService.providedBy => [1..None]
@@ -183,9 +166,9 @@ package IG #DDDDDD{
              Location.address.postalCode => [1..None]
         } 
 
-        class SASOrganization{
+        class SASOrganizationLRM{
 
-             Organization.meta.profile:sas-organization => [0..1]
+             Organization.meta.profile:sas-organization-lrm => [0..1]
              Organization.name => [1..None]
         } 
 
@@ -225,6 +208,7 @@ package IG #DDDDDD{
         class SASPractitionerRoleLRM{
 
              PractitionerRole.meta.profile:sas-practitioner-role-lrm => [0..1]
+             PractitionerRole.practitioner => [None..None]
              PractitionerRole.organization => [1..None]
         } 
 
@@ -394,10 +378,6 @@ package "Ressources de base" #palegreen {
 
  class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment" as  class5b3e4ec90388039f3b23e1c44137e12e 
 
-    class5b3e4ec90388039f3b23e1c44137e12e --> SASAppointmentDashboard
-
- class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment" as  class5b3e4ec90388039f3b23e1c44137e12e 
-
     class5b3e4ec90388039f3b23e1c44137e12e --> SASAppointmentLRM
 
  class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment" as  class5b3e4ec90388039f3b23e1c44137e12e 
@@ -430,7 +410,7 @@ package "Ressources de base" #palegreen {
 
  class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-healthcare-service" as  class926ccf2bb5a615fff3ac07e356f8a997 
 
-    class926ccf2bb5a615fff3ac07e356f8a997 --> SASHealthcareService
+    class926ccf2bb5a615fff3ac07e356f8a997 --> SASHealthcareServiceLRM
 
  class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-location" as  class505b865d93b3b02ed3aff95e782d498a 
 
@@ -438,7 +418,7 @@ package "Ressources de base" #palegreen {
 
  class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization" as  class7273115ddeceb35c4c7044f07f832f67 
 
-    class7273115ddeceb35c4c7044f07f832f67 --> SASOrganization
+    class7273115ddeceb35c4c7044f07f832f67 --> SASOrganizationLRM
 
  class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner" as  class722d091912544e694771fe1d2c6739cb 
 
