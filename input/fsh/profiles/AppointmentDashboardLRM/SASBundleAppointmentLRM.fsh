@@ -23,11 +23,11 @@ Description: "Profil de Bundle qui représente les données de RDV à envoyer de
 * entry[practitionerentry].resource only FrPractitionerAgregateur
 * entry[practitionerentry].fullUrl 1..
 
-* entry[organizationentry].resource only SASOrganization
+* entry[organizationentry].resource only SASOrganizationLRM
 * entry[organizationentry].fullUrl 1..
 
 * entry[practitionerRoleentry].resource only SASPractitionerRoleLRM
 * entry[practitionerRoleentry].fullUrl 1..
 
-* entry[healthcareserviceentry].resource only SASHealthcareService
+* entry[healthcareserviceentry].resource only SASHealthcareServiceLRM
 * entry[healthcareserviceentry].fullUrl 1..
