@@ -18,7 +18,11 @@
   fhir:type [ fhir:v "transaction"] ; # 
   fhir:entry ( [
      fhir:fullUrl [ fhir:v "https://<base_URl>/Appointment/ExampleAppointmentLRM1"^^xsd:anyURI ] ;
-     fhir:resource ( <https://<base_URl>/Appointment/ExampleAppointmentLRM1> )
+     fhir:resource ( <https://<base_URl>/Appointment/ExampleAppointmentLRM1> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [ fhir:v "https://<base_URl>/PractitionerRole/ExamplePractitionerRoleAppointment"^^xsd:anyURI ]
+     ]
   ] [
      fhir:fullUrl [ fhir:v "https://<base_URl>/Practitioner/ExamplePractitionerLRM"^^xsd:anyURI ] ;
      fhir:resource ( <https://<base_URl>/Practitioner/ExamplePractitionerLRM> )
