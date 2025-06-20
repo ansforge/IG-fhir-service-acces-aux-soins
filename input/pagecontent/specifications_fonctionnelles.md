@@ -30,7 +30,7 @@ Le schéma de présentation générale ci-dessous illustre ce cas d'usage :
     </tr>
     <tr>
         <td align ="center">
-            <b>Figure 1 - Présentation recherche de créneaux PS indiv. - CPTS </b>
+            <b>Présentation recherche de créneaux PS indiv. - CPTS </b>
         </td>
     </tr>
 </table>
@@ -57,7 +57,7 @@ Le schéma de présentation générale ci-dessous illustre ce cas d’usage :
     </tr>
     <tr>
         <td align ="center">
-            <b>Figure 2 - Présentation recherche de créneaux SOS Médecins </b>
+            <b>Présentation recherche de créneaux SOS Médecins </b>
         </td>
     </tr>
 </table>
@@ -168,12 +168,12 @@ Le schéma de présentation générale ci-dessous illustre le cas d'usage :
     </tr>
     <tr>
         <td align ="center">
-            <b>Figure 3 - Présentation gestion de rendez-vous</b>
+            <b>Présentation gestion de rendez-vous</b>
         </td>
     </tr>
 </table>
 
-Après avoir sélectionné un créneau depuis la plateforme numérique SAS et avoir été redirigé vers la plateforme de prise de RDV éditeur, le régulateur prend directement RDV pour le patient dans la solution éditeur. Dès que le RDV est pris, les informations associées sont transmises à la plateforme numérique SAS via le flux INT_R03 mis en place. Lors de chaque mise à jour du RDV (annulation, modification, honoré, non honoré), l'information est transmise par le biais de ce flux à la plateforme numérique SAS. Ces données sont utilisées pour suivre l'activité réelle engendrée par le SAS, permettre l'analyse du dispositif de l'avenant 9 par la CNAM et assurer la traçabilité des RDV patients pour le suivi dans le LRM à terme.
+Après avoir sélectionné un créneau depuis la plateforme numérique SAS et avoir été redirigé vers la plateforme de prise de RDV éditeur, le régulateur prend directement RDV pour le patient dans la solution éditeur. Dès que le RDV est pris, les informations associées sont transmises à la plateforme numérique SAS via le flux INT_R03 mis en place. Lors de chaque mise à jour du RDV (annulation, modification, honoré, non honoré), l'information est transmise par le biais de ce flux à la plateforme numérique SAS. Ces données sont utilisées pour suivre l'activité réelle engendrée par le SAS, permettre l'analyse du dispositif de l'avenant 9 par la CNAM et assurer la traçabilité des RDV patients pour le suivi dans le LRM à terme. 
 Pour la mise en place de ce flux, il est nécessaire de s'assurer d'une technologie commune aux différentes plateformes. Les échanges reposent sur des webservices se basant sur l'API REST du standard HL7 FHIR, et respectant les spécifications des flux 6a et 6b du volet Gestion d'agendas partagés du Cadre d'Interopérabilité des Systèmes d'Information de Santé (CI-SIS).
 
 #### Création de rendez-vous
@@ -196,3 +196,37 @@ Le schéma ci-dessous illustre l'échange à mettre en oeuvre :
     <p>{% include mise_a_jour_rendez_vous.svg %}</p>
 </div>
 <br><br>
+
+### Transmission des informations de RDV aux LRM
+
+#### Description du cas d'usage
+L’objectif du cas d’usage est de pouvoir alimenter de manière automatisée le DRM avec les informations de RDV pris pour le compte du patient dans les solutions logicielles éditeurs (LGA) ou dans la plateforme numérique du SAS.
+À la suite de la prise de RDV réalisée par la régulation pour le compte du patient, les informations de RDV sont centralisées au niveau de la plateforme nationale. Les travaux souhaités visent à poursuivre le parcours de la donnée pour venir alimenter le DRM avec ces informations, selon le schéma suivant :
+
+<table align="center">
+    <tr>
+        <td align ="center">
+            <div class="figure">
+                <img src="redescente_rdv_lrm.png" width="80%" height="80%" alt="Schéma redescente des RDV" title="Schéma redescente des RDV">
+            </div>
+        </td>    
+    </tr>
+    <tr>
+        <td align ="center">
+            <b>Redescente des informations de RDV vers les LRM </b>
+        </td>
+    </tr>
+</table>
+
+#### Données à échanger
+Schéma des flux
+
+Liste des ressources FHIR
+
+Le schéma ci-dessous présente une synthèse des ressources FHIR à utiliser :
+
+<div class="figure" style="width:100%;" align ="center">
+    <p>{% include ressources-exploitees-lrm.svg %}</p>
+</div>
+
+
