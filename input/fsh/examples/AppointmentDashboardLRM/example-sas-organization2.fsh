@@ -1,5 +1,5 @@
 Instance: ExampleSasOrganization2
-InstanceOf: SASOrganization
+InstanceOf: SASOrganizationLRM
 Description: "Exemple d'organisation SAS - centre de santé (FINESS)"
 Usage: #example
 

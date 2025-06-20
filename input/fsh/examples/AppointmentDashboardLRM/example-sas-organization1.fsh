@@ -1,5 +1,5 @@
 Instance: ExampleSasOrganization1
-InstanceOf: SASOrganization
+InstanceOf: SASOrganizationLRM
 Description: "Exemple d'organisation SAS - association SOS (SIRET)"
 Usage: #example
 
