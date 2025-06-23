@@ -1,17 +1,17 @@
 SAS : Validation Results
 =========================================
 
-err = 7, warn = 117, info = 38
+err = 6, warn = 122, info = 38
 IG Publisher Version: 2.0.7
-Generated Fri Jun 20 16:28:57 UTC 2025. FHIR version 4.0.1 for ans.fhir.fr.sas#1.1.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/sas)
+Generated Mon Jun 23 15:56:20 UTC 2025. FHIR version 4.0.1 for ans.fhir.fr.sas#1.1.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/sas)
  Build Errors : 0 / 7 / 0
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Appointment-1 : 0 / 3 / 1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Appointment-2 : 0 / 3 / 1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Appointment-ExampleAppointmentLRM1 : 0 / 0 / 1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Appointment-ExampleAppointmentLRM2 : 0 / 0 / 1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundleAgregateurSOS : 0 / 6 / 40
- /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundleAppointmentLRM1 : 1 / 5 / 13
- /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundleAppointmentLRM2 : 1 / 2 / 10
+ /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundleAppointmentLRM1 : 1 / 10 / 13
+ /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundleAppointmentLRM2 : 0 / 2 / 10
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundleCPTS1 : 0 / 4 / 22
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundleCPTS2 : 0 / 5 / 28
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundlePSIndiv : 0 / 9 / 46
@@ -129,16 +129,20 @@ INFORMATION: Bundle/ExampleBundleAgregateurSOS: Bundle.entry[9].resource/*Locati
 WARNING: Bundle/ExampleBundleAgregateurSOS: Bundle.entry[9].resource/*Location/3333333333*/.identifier[0].system: No definition could be found for URL value 'https://editeur.com'
 WARNING: Bundle/ExampleBundleAgregateurSOS: Bundle.entry[10].resource/*Organization/ExampleOrgaSOS2*/.identifier[0].system: No definition could be found for URL value 'urn:oid:1.2.250.1.71.4.2.2'
 == fsh-generated/resources/Bundle-ExampleBundleAppointmentLRM1.json ==
+WARNING: Bundle/ExampleBundleAppointmentLRM1: Bundle.entry[0].resource.participant[0].actor: Entry 1 matches the reference Practitioner/ExamplePractitionerLRM by type and id but it's fullUrl Practitioner does not match the full target URL https://<base_URl>/Practitioner/ExamplePractitionerLRM by Bundle resolution rules
+WARNING: Bundle/ExampleBundleAppointmentLRM1: Bundle.entry[0].resource/*Appointment/ExampleAppointmentLRM1*/.participant[0].actor: Entry 1 matches the reference Practitioner/ExamplePractitionerLRM by type and id but it's fullUrl Practitioner does not match the full target URL https://<base_URl>/Practitioner/ExamplePractitionerLRM by Bundle resolution rules
+WARNING: Bundle/ExampleBundleAppointmentLRM1: Bundle.entry[1].resource.identifier[0].system: No definition could be found for URL value 'urn:oid:1.2.250.1.71.4.2.1'
 WARNING: Bundle/ExampleBundleAppointmentLRM1: Bundle.entry[1].resource/*Practitioner/ExamplePractitionerLRM*/.identifier[0].system: No definition could be found for URL value 'urn:oid:1.2.250.1.71.4.2.1'
 WARNING: Bundle/ExampleBundleAppointmentLRM1: Bundle.entry[2].resource.identifier[0].system: No definition could be found for URL value 'urn:oid:1.2.250.1.71.4.2.2'
 WARNING: Bundle/ExampleBundleAppointmentLRM1: Bundle.entry[2].resource/*Organization/ExampleSasOrganization1*/.identifier[0].system: No definition could be found for URL value 'urn:oid:1.2.250.1.71.4.2.2'
+WARNING: Bundle/ExampleBundleAppointmentLRM1: Bundle.entry[3].resource.practitioner: Entry 1 matches the reference Practitioner/ExamplePractitionerLRM by type and id but it's fullUrl Practitioner does not match the full target URL https://<base_URl>/Practitioner/ExamplePractitionerLRM by Bundle resolution rules
 WARNING: Bundle/ExampleBundleAppointmentLRM1: Bundle.entry[3].resource.organization: Entry 2 matches the reference Organization/ExampleSasOrganization1 by type and id but it's fullUrl https://<base_URl>/Organization/ExampleSasOrganization does not match the full target URL https://<base_URl>/Organization/ExampleSasOrganization1 by Bundle resolution rules
+WARNING: Bundle/ExampleBundleAppointmentLRM1: Bundle.entry[3].resource/*PractitionerRole/ExamplePractitionerRoleAppointment1*/.practitioner: Entry 1 matches the reference Practitioner/ExamplePractitionerLRM by type and id but it's fullUrl Practitioner does not match the full target URL https://<base_URl>/Practitioner/ExamplePractitionerLRM by Bundle resolution rules
 WARNING: Bundle/ExampleBundleAppointmentLRM1: Bundle.entry[3].resource/*PractitionerRole/ExamplePractitionerRoleAppointment1*/.organization: Entry 2 matches the reference Organization/ExampleSasOrganization1 by type and id but it's fullUrl https://<base_URl>/Organization/ExampleSasOrganization does not match the full target URL https://<base_URl>/Organization/ExampleSasOrganization1 by Bundle resolution rules
-ERROR: Bundle/ExampleBundleAppointmentLRM1: Bundle: Constraint failed: bdl-3: 'entry.request mandatory for batch/transaction/history, otherwise prohibited' (defined in http://hl7.org/fhir/StructureDefinition/Bundle)
+ERROR: Bundle/ExampleBundleAppointmentLRM1: Bundle.entry[0]: The fullUrl must be an absolute URL (not 'Practitioner')
 == fsh-generated/resources/Bundle-ExampleBundleAppointmentLRM2.json ==
 WARNING: Bundle/ExampleBundleAppointmentLRM2: Bundle.entry[1].resource.identifier[0].system: No definition could be found for URL value 'urn:oid:1.2.250.1.71.4.2.2'
 WARNING: Bundle/ExampleBundleAppointmentLRM2: Bundle.entry[1].resource/*Organization/ExampleSasOrganization2*/.identifier[0].system: No definition could be found for URL value 'urn:oid:1.2.250.1.71.4.2.2'
-ERROR: Bundle/ExampleBundleAppointmentLRM2: Bundle: Constraint failed: bdl-3: 'entry.request mandatory for batch/transaction/history, otherwise prohibited' (defined in http://hl7.org/fhir/StructureDefinition/Bundle)
 == fsh-generated/resources/Bundle-ExampleBundleCPTS1.json ==
 WARNING: Bundle/ExampleBundleCPTS1: Bundle.link[0].url: No definition could be found for URL value 'http://hapi.fhir.org/baseR4/Slot?_include=Slot:schedule&_include:iterate=Schedule:actor&start=ge2024-06-12T16:20:00.000+02:00&start=le2024-06-12T17:20:00.000+02:00&schedule.actor:Practitioner.identifier=urn:oid:1.2.250.1.71.4.2.1|810002909371&status=free&_include=Slot:service-type-reference'
 WARNING: Bundle/ExampleBundleCPTS1: Bundle.entry[2].resource/*Practitioner/ExamplePractitioner*/.identifier[0].system: No definition could be found for URL value 'urn:oid:1.2.250.1.71.4.2.1'

@@ -40,11 +40,11 @@
     </resource>
     <request>
       <method value="POST"/>
-      <url value="https://&lt;base_URl&gt;/PractitionerRole/ExamplePractitionerRoleAppointment"/>
+      <url value="Appointment"/>
     </request>
   </entry>
   <entry>
-    <fullUrl value="https://&lt;base_URl&gt;/Practitioner/ExamplePractitionerLRM"/>
+    <fullUrl value="Practitioner"/>
     <resource>
       <Practitioner>
         <id value="ExamplePractitionerLRM"/>
@@ -64,6 +64,10 @@
         </name>
       </Practitioner>
     </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Practitioner"/>
+    </request>
   </entry>
   <entry>
     <fullUrl value="https://&lt;base_URl&gt;/Organization/ExampleSasOrganization"/>
@@ -89,6 +93,10 @@
         <name value="SOS Médecins de Rennes"/>
       </Organization>
     </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Organization"/>
+    </request>
   </entry>
   <entry>
     <fullUrl value="https://&lt;base_URl&gt;/PractitionerRole/ExamplePractitionerRoleAppointment"/>
@@ -109,5 +117,9 @@
         </organization>
       </PractitionerRole>
     </resource>
+    <request>
+      <method value="POST"/>
+      <url value="ExamplePractitionerRoleAppointment"/>
+    </request>
   </entry>
 </Bundle>

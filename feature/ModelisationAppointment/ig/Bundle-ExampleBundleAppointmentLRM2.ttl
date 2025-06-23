@@ -21,14 +21,22 @@
      fhir:resource ( <https://<base_URl>/Appointment/ExampleAppointmentLRM1> ) ;
      fhir:request [
        fhir:method [ fhir:v "POST" ] ;
-       fhir:url [ fhir:v "https://<base_URl>/HealthcareService/ExampleHealthcareService"^^xsd:anyURI ]
+       fhir:url [ fhir:v "Appointment"^^xsd:anyURI ]
      ]
   ] [
      fhir:fullUrl [ fhir:v "https://<base_URl>/Organization/ExampleSasOrganization2"^^xsd:anyURI ] ;
-     fhir:resource ( <https://<base_URl>/Organization/ExampleSasOrganization2> )
+     fhir:resource ( <https://<base_URl>/Organization/ExampleSasOrganization2> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [ fhir:v "Organization"^^xsd:anyURI ]
+     ]
   ] [
      fhir:fullUrl [ fhir:v "https://<base_URl>/HealthcareService/ExampleHealthcareService"^^xsd:anyURI ] ;
-     fhir:resource ( <https://<base_URl>/HealthcareService/ExampleHealthcareService> )
+     fhir:resource ( <https://<base_URl>/HealthcareService/ExampleHealthcareService> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [ fhir:v "HealthcareService"^^xsd:anyURI ]
+     ]
   ] ) . # 
 
 <https://<base_URl>/Appointment/ExampleAppointmentLRM1> a fhir:Appointment ;
