@@ -6,19 +6,19 @@ Usage: #example
 * entry[appointmententry].resource = ExampleAppointmentLRM1
 * entry[appointmententry].fullUrl = "https://<base_URl>/Appointment/ExampleAppointmentLRM1"
 * entry[appointmententry].request.method = #POST
-* entry[appointmententry].request.url = "https://<base_URl>/Appointment/ExampleAppointmentLRM1"
+* entry[appointmententry].request.url = "Appointment"
 
 * entry[practitionerentry].resource = ExamplePractitionerLRM
-* entry[practitionerentry].fullUrl = "https://<base_URl>/Practitioner/ExamplePractitionerLRM"
-* entry[appointmententry].request.method = #POST
-* entry[appointmententry].request.url = "https://<base_URl>/Practitioner/ExamplePractitionerLRM"
+* entry[practitionerentry].fullUrl = "Practitioner"
+* entry[practitionerentry].request.method = #POST
+* entry[practitionerentry].request.url = "Practitioner"
 
 * entry[organizationentry].resource = ExampleSasOrganization1
 * entry[organizationentry].fullUrl = "https://<base_URl>/Organization/ExampleSasOrganization"
-* entry[appointmententry].request.method = #POST
-* entry[appointmententry].request.url = "https://<base_URl>/Organization/ExampleSasOrganization"
+* entry[organizationentry].request.method = #POST
+* entry[organizationentry].request.url = "Organization"
 
 * entry[practitionerRoleentry].resource = ExamplePractitionerRoleAppointment1
 * entry[practitionerRoleentry].fullUrl = "https://<base_URl>/PractitionerRole/ExamplePractitionerRoleAppointment"
-* entry[appointmententry].request.method = #POST
-* entry[appointmententry].request.url = "https://<base_URl>/PractitionerRole/ExamplePractitionerRoleAppointment"
+* entry[practitionerRoleentry].request.method = #POST
+* entry[practitionerRoleentry].request.url = "ExamplePractitionerRoleAppointment"
