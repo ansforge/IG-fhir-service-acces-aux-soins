@@ -6840,6 +6840,18 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "sas-practitioner-role-lrm","PractitionerRole.endpoint","PractitionerRole.endpoint","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Endpoint]]}
 ","Technical endpoints providing access to services operated for the practitioner with this role","Technical endpoints providing access to services operated for the practitioner with this role.","","Organizations have multiple systems that provide various services and ,ay also be different for practitioners too.So the endpoint satisfies the need to be able to define the technical connection details for how to connect to them, and for what purpose.","","","","","","","",,,,,"",,,,"PractitionerRole.endpoint",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
+"sas-rdv-logical","sas-rdv-logical","sas-rdv-logical","","","",0,*,"","","","null {[]} {[]}
+","RDV","Modélisation d'un RDV","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"sas-rdv-logical","sas-rdv-logical.identifiant","sas-rdv-logical.identifiant","","","",1,1,"","","","string {[]} {[]}
+","Identifiant du RDV","Identifiant du RDV","","","","","","","","","",,,,,"",,,,"sas-rdv-logical.identifiant",1,1,"",""
+"sas-rdv-logical","sas-rdv-logical.debut","sas-rdv-logical.debut","","","",1,1,"","","","date {[]} {[]}
+","Date début RDV","Date début RDV","","","","","","","","","",,,,,"",,,,"sas-rdv-logical.debut",1,1,"",""
+"sas-rdv-logical","sas-rdv-logical.fin","sas-rdv-logical.fin","","","",1,1,"","","","date {[]} {[]}
+","Date fin RDV","Date fin RDV","","","","","","","","","",,,,,"",,,,"sas-rdv-logical.fin",1,1,"",""
+"sas-rdv-logical","sas-rdv-logical.creation","sas-rdv-logical.creation","","","",1,1,"","","","date {[]} {[]}
+","Date de création du RDV","Date de création du RDV","","","","","","","","","",,,,,"",,,,"sas-rdv-logical.creation",1,1,"",""
+"sas-rdv-logical","sas-rdv-logical.specialite","sas-rdv-logical.specialite","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Spécialité du médecin effecteur","Spécialité du médecin effecteur","","","","","","","","","",,,,,"",,,,"sas-rdv-logical.specialite",1,1,"",""
 "sas-schedule-aggregator","Schedule","Schedule","","Availability
 ","",0,*,"","","","null {[]} {[]}
 ","A container for slots of time that may be available for booking appointments","A container for slots of time that may be available for booking appointments.","","","","","","","","","",,,,,"",,,,"Schedule",0,*,"","dom-2:If the resource is contained in another resource, it SHALL NOT contain nested Resources {contained.contained.empty()}

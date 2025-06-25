@@ -212,6 +212,16 @@ package IG #DDDDDD{
              PractitionerRole.organization => [1..None]
         } 
 
+        class RDV{
+
+             sas-rdv-logical => [None..None]
+             sas-rdv-logical.identifiant => [1..1]
+             sas-rdv-logical.debut => [1..1]
+             sas-rdv-logical.fin => [1..1]
+             sas-rdv-logical.creation => [1..1]
+             sas-rdv-logical.specialite => [1..1]
+        } 
+
         class FrScheduleAgregateur{
 
              Schedule.meta.profile:sas-schedule-aggregator => [0..1]
@@ -435,6 +445,10 @@ package "Ressources de base" #palegreen {
  class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner-role" as  class32e744761be9cc693fcaf56d8ca68b99 
 
     class32e744761be9cc693fcaf56d8ca68b99 --> SASPractitionerRoleLRM
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> RDV
 
  class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-schedule" as  class7c912eb91080e8d9a809e267903ad8a9 
 
