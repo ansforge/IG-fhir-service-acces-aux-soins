@@ -24,8 +24,8 @@
        fhir:url [ fhir:v "Appointment"^^xsd:anyURI ]
      ]
   ] [
-     fhir:fullUrl [ fhir:v "Practitioner"^^xsd:anyURI ] ;
-     fhir:resource ( <Practitioner> ) ;
+     fhir:fullUrl [ fhir:v "https://<base_URl>/Practitioner/ExamplePractitionerLRM"^^xsd:anyURI ] ;
+     fhir:resource ( <https://<base_URl>/Practitioner/ExamplePractitionerLRM> ) ;
      fhir:request [
        fhir:method [ fhir:v "POST" ] ;
        fhir:url [ fhir:v "Practitioner"^^xsd:anyURI ]
@@ -42,7 +42,7 @@
      fhir:resource ( <https://<base_URl>/PractitionerRole/ExamplePractitionerRoleAppointment> ) ;
      fhir:request [
        fhir:method [ fhir:v "POST" ] ;
-       fhir:url [ fhir:v "ExamplePractitionerRoleAppointment"^^xsd:anyURI ]
+       fhir:url [ fhir:v "PractitionerRole"^^xsd:anyURI ]
      ]
   ] ) . # 
 
@@ -79,7 +79,7 @@
      fhir:status [ fhir:v "accepted" ]
   ] ) . # 
 
-<Practitioner> a fhir:Practitioner ;
+<https://<base_URl>/Practitioner/ExamplePractitionerLRM> a fhir:Practitioner ;
   fhir:id [ fhir:v "ExamplePractitionerLRM"] ; # 
   fhir:meta [
      fhir:profile ( [

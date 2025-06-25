@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = 1, errors = 6, warn = 122, info = 38-->
+<!-- broken links = 1, errors = 5, warn = 117, info = 38-->
 <head>
   <title>SAS : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
@@ -47,7 +47,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for SAS</h1>
- <p>Generated Mon Jun 23 15:56:20 UTC 2025, FHIR version 4.0.1 for ans.fhir.fr.sas#1.1.0 (canonical = <a href="https://interop.esante.gouv.fr/ig/fhir/sas">https://interop.esante.gouv.fr/ig/fhir/sas</a> (<a href="https://interop.esante.gouv.fr/ig/fhir/sas/history.html">history</a>)). See <a href="qa.html">Full QA Report</a> &amp; <a href="qa-ipreview.html">IP</a></p>
+ <p>Generated Wed Jun 25 07:32:09 UTC 2025, FHIR version 4.0.1 for ans.fhir.fr.sas#1.1.0 (canonical = <a href="https://interop.esante.gouv.fr/ig/fhir/sas">https://interop.esante.gouv.fr/ig/fhir/sas</a> (<a href="https://interop.esante.gouv.fr/ig/fhir/sas/history.html">history</a>)). See <a href="qa.html">Full QA Report</a> &amp; <a href="qa-ipreview.html">IP</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
  <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v2.0.7</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = ans.fhir.fr.sas, Canonical = https://interop.esante.gouv.fr/ig/fhir/sas</td></tr>
@@ -139,7 +139,7 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
  <tr><td>IPA Comparison:</td><td> n/a</td></tr>
  <tr><td>IPS Comparison:</td><td> n/a</td></tr>
  <tr><td>Validation Flags:</td><td> On: autoLoad; Off: hintAboutNonMustSupport, anyExtensionsAllowed, checkAggregation, showReferenceMessages, noExperimentalContent, displayWarnings</td></tr>
- <tr><td>Summary:</td><td> errors = 6, warn = 122, info = 38, broken links = 1, pinned = n/a.  <button onclick="toggleCodes()">Show Message Ids</button></td></tr>
+ <tr><td>Summary:</td><td> errors = 5, warn = 117, info = 38, broken links = 1, pinned = n/a.  <button onclick="toggleCodes()">Show Message Ids</button></td></tr>
 </table>
  <table class="grid">
    <tr>
@@ -157,8 +157,8 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    <tr style="background-color: #EFFFEF">
      <td><a href="#_home_runner_work_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_fsh-generated_resources_Bundle-ExampleBundleAgregateurSOS"><b>/home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundleAgregateurSOS</b></a></td><td><b>0</b></td><td><b>6</b></td><td><b>3</b></td>
    </tr>
-   <tr style="background-color: #ffcccc">
-     <td><a href="#_home_runner_work_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_fsh-generated_resources_Bundle-ExampleBundleAppointmentLRM1"><b>/home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundleAppointmentLRM1</b></a></td><td><b>1</b></td><td><b>10</b></td><td><b>0</b></td>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_fsh-generated_resources_Bundle-ExampleBundleAppointmentLRM1"><b>/home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundleAppointmentLRM1</b></a></td><td><b>0</b></td><td><b>5</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#_home_runner_work_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_fsh-generated_resources_Bundle-ExampleBundleAppointmentLRM2"><b>/home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundleAppointmentLRM2</b></a></td><td><b>0</b></td><td><b>2</b></td><td><b>0</b></td>
@@ -408,15 +408,6 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle&#8203;.entry[0]&#8203;.resource&#8203;.participant[0]&#8203;.actor</b></td><td><b>warning</b></td><td><b>Entry 1 matches the reference Practitioner/ExamplePractitionerLRM by type and id but it's fullUrl Practitioner does not match the full target URL https://&lt;base_URl&gt;/Practitioner/ExamplePractitionerLRM by Bundle resolution rules</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU</span></td>
-   </tr>
-   <tr style="background-color: #ffebcc">
-     <td><b>Bundle&#8203;.entry[0]&#8203;.resource&#8203;/*Appointment&#8203;/ExampleAppointmentLRM1*&#8203;/&#8203;.participant[0]&#8203;.actor</b></td><td><b>warning</b></td><td><b>Entry 1 matches the reference Practitioner/ExamplePractitionerLRM by type and id but it's fullUrl Practitioner does not match the full target URL https://&lt;base_URl&gt;/Practitioner/ExamplePractitionerLRM by Bundle resolution rules</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU</span></td>
-   </tr>
-   <tr style="background-color: #ffebcc">
-     <td><b>Bundle&#8203;.entry[1]&#8203;.resource&#8203;.identifier[0]&#8203;.system (l65&#8203;/c51)</b></td><td><b>warning</b></td><td><b>No definition could be found for URL value 'urn:oid:1.2.250.1.71.4.2.1'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Type_Specific_Checks_DT_URL_Resolve</span></td>
-   </tr>
-   <tr style="background-color: #ffebcc">
      <td><b>Bundle&#8203;.entry[1]&#8203;.resource&#8203;/*Practitioner&#8203;/ExamplePractitionerLRM*&#8203;/&#8203;.identifier[0]&#8203;.system (l65&#8203;/c51)</b></td><td><b>warning</b></td><td><b>No definition could be found for URL value 'urn:oid:1.2.250.1.71.4.2.1'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Type_Specific_Checks_DT_URL_Resolve</span></td>
    </tr>
    <tr style="background-color: #ffebcc">
@@ -426,19 +417,10 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>Bundle&#8203;.entry[2]&#8203;.resource&#8203;/*Organization&#8203;/ExampleSasOrganization1*&#8203;/&#8203;.identifier[0]&#8203;.system (l103&#8203;/c51)</b></td><td><b>warning</b></td><td><b>No definition could be found for URL value 'urn:oid:1.2.250.1.71.4.2.2'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Type_Specific_Checks_DT_URL_Resolve</span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[3].resource.practitioner</b></td><td><b>warning</b></td><td><b>Entry 1 matches the reference Practitioner/ExamplePractitionerLRM by type and id but it's fullUrl Practitioner does not match the full target URL https://&lt;base_URl&gt;/Practitioner/ExamplePractitionerLRM by Bundle resolution rules</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU</span></td>
-   </tr>
-   <tr style="background-color: #ffebcc">
      <td><b>Bundle.entry[3].resource.organization</b></td><td><b>warning</b></td><td><b>Entry 2 matches the reference Organization/ExampleSasOrganization1 by type and id but it's fullUrl https://&lt;base_URl&gt;/Organization/ExampleSasOrganization does not match the full target URL https://&lt;base_URl&gt;/Organization/ExampleSasOrganization1 by Bundle resolution rules</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU</span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle&#8203;.entry[3]&#8203;.resource&#8203;/*PractitionerRole&#8203;/ExamplePractitionerRoleAppointment1*&#8203;/&#8203;.practitioner</b></td><td><b>warning</b></td><td><b>Entry 1 matches the reference Practitioner/ExamplePractitionerLRM by type and id but it's fullUrl Practitioner does not match the full target URL https://&lt;base_URl&gt;/Practitioner/ExamplePractitionerLRM by Bundle resolution rules</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU</span></td>
-   </tr>
-   <tr style="background-color: #ffebcc">
      <td><b>Bundle&#8203;.entry[3]&#8203;.resource&#8203;/*PractitionerRole&#8203;/ExamplePractitionerRoleAppointment1*&#8203;/&#8203;.organization</b></td><td><b>warning</b></td><td><b>Entry 2 matches the reference Organization/ExampleSasOrganization1 by type and id but it's fullUrl https://&lt;base_URl&gt;/Organization/ExampleSasOrganization does not match the full target URL https://&lt;base_URl&gt;/Organization/ExampleSasOrganization1 by Bundle resolution rules</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU</span></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[0] (l54/c6)</b></td><td><b>error</b></td><td><b>The fullUrl must be an absolute URL (not 'Practitioner')</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">BUNDLE_ENTRY_URL_ABSOLUTE</span></td>
    </tr>
 </table>
 <hr/>
@@ -1304,30 +1286,10 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
 <h2>BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU</h2>
  <table class="grid">
    <tr style="background-color: #fff4ee">
-     <td><a href="Bundle-ExampleBundleAppointmentLRM1.html">fsh-generated/resources/Bundle-ExampleBundleAppointmentLRM1.json</a></td><td><b>Entry 1 matches the reference Practitioner/ExamplePractitionerLRM by type and id but it's fullUrl Practitioner does not match the full target URL https://&lt;base_URl&gt;/Practitioner/ExamplePractitionerLRM by Bundle resolution rules</b></td>
-   </tr>
-   <tr style="background-color: #fff4ee">
-     <td><a href="Bundle-ExampleBundleAppointmentLRM1.html">fsh-generated/resources/Bundle-ExampleBundleAppointmentLRM1.json</a></td><td><b>Entry 1 matches the reference Practitioner/ExamplePractitionerLRM by type and id but it's fullUrl Practitioner does not match the full target URL https://&lt;base_URl&gt;/Practitioner/ExamplePractitionerLRM by Bundle resolution rules</b></td>
-   </tr>
-   <tr style="background-color: #fff4ee">
-     <td><a href="Bundle-ExampleBundleAppointmentLRM1.html">fsh-generated/resources/Bundle-ExampleBundleAppointmentLRM1.json</a></td><td><b>Entry 1 matches the reference Practitioner/ExamplePractitionerLRM by type and id but it's fullUrl Practitioner does not match the full target URL https://&lt;base_URl&gt;/Practitioner/ExamplePractitionerLRM by Bundle resolution rules</b></td>
-   </tr>
-   <tr style="background-color: #fff4ee">
      <td><a href="Bundle-ExampleBundleAppointmentLRM1.html">fsh-generated/resources/Bundle-ExampleBundleAppointmentLRM1.json</a></td><td><b>Entry 2 matches the reference Organization/ExampleSasOrganization1 by type and id but it's fullUrl https://&lt;base_URl&gt;/Organization/ExampleSasOrganization does not match the full target URL https://&lt;base_URl&gt;/Organization/ExampleSasOrganization1 by Bundle resolution rules</b></td>
    </tr>
    <tr style="background-color: #fff4ee">
-     <td><a href="Bundle-ExampleBundleAppointmentLRM1.html">fsh-generated/resources/Bundle-ExampleBundleAppointmentLRM1.json</a></td><td><b>Entry 1 matches the reference Practitioner/ExamplePractitionerLRM by type and id but it's fullUrl Practitioner does not match the full target URL https://&lt;base_URl&gt;/Practitioner/ExamplePractitionerLRM by Bundle resolution rules</b></td>
-   </tr>
-   <tr style="background-color: #fff4ee">
      <td><a href="Bundle-ExampleBundleAppointmentLRM1.html">fsh-generated/resources/Bundle-ExampleBundleAppointmentLRM1.json</a></td><td><b>Entry 2 matches the reference Organization/ExampleSasOrganization1 by type and id but it's fullUrl https://&lt;base_URl&gt;/Organization/ExampleSasOrganization does not match the full target URL https://&lt;base_URl&gt;/Organization/ExampleSasOrganization1 by Bundle resolution rules</b></td>
-   </tr>
-</table>
-<hr/>
-<a name="BUNDLE_ENTRY_URL_ABSOLUTE"> </a>
-<h2>BUNDLE_ENTRY_URL_ABSOLUTE</h2>
- <table class="grid">
-   <tr style="background-color: #ffeeee">
-     <td><a href="Bundle-ExampleBundleAppointmentLRM1.html">fsh-generated/resources/Bundle-ExampleBundleAppointmentLRM1.json</a></td><td><b>The fullUrl must be an absolute URL (not 'Practitioner')</b></td>
    </tr>
 </table>
 <hr/>
@@ -1667,9 +1629,6 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
    <tr style="background-color: #fff4ee">
      <td><a href="Bundle-ExampleBundleAgregateurSOS.html">fsh-generated/resources/Bundle-ExampleBundleAgregateurSOS.json</a></td><td><b>No definition could be found for URL value 'urn:oid:1.2.250.1.71.4.2.2'</b></td>
-   </tr>
-   <tr style="background-color: #fff4ee">
-     <td><a href="Bundle-ExampleBundleAppointmentLRM1.html">fsh-generated/resources/Bundle-ExampleBundleAppointmentLRM1.json</a></td><td><b>No definition could be found for URL value 'urn:oid:1.2.250.1.71.4.2.1'</b></td>
    </tr>
    <tr style="background-color: #fff4ee">
      <td><a href="Bundle-ExampleBundleAppointmentLRM1.html">fsh-generated/resources/Bundle-ExampleBundleAppointmentLRM1.json</a></td><td><b>No definition could be found for URL value 'urn:oid:1.2.250.1.71.4.2.1'</b></td>
