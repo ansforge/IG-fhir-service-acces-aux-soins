@@ -9,7 +9,7 @@ Usage: #example
 * entry[appointmententry].request.url = "Appointment"
 
 * entry[practitionerentry].resource = ExamplePractitionerLRM
-* entry[practitionerentry].fullUrl = "Practitioner"
+* entry[practitionerentry].fullUrl = "https://<base_URl>/Practitioner/ExamplePractitionerLRM"
 * entry[practitionerentry].request.method = #POST
 * entry[practitionerentry].request.url = "Practitioner"
 
@@ -21,4 +21,4 @@ Usage: #example
 * entry[practitionerRoleentry].resource = ExamplePractitionerRoleAppointment1
 * entry[practitionerRoleentry].fullUrl = "https://<base_URl>/PractitionerRole/ExamplePractitionerRoleAppointment"
 * entry[practitionerRoleentry].request.method = #POST
-* entry[practitionerRoleentry].request.url = "ExamplePractitionerRoleAppointment"
+* entry[practitionerRoleentry].request.url = "PractitionerRole"
