@@ -1,0 +1,37 @@
+{
+  "resourceType" : "Location",
+  "id" : "3333333333",
+  "meta" : {
+    "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator"]
+  },
+  "identifier" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type",
+        "code" : "INTRN"
+      }]
+    },
+    "system" : "https://editeur.com",
+    "value" : "3333333333"
+  }],
+  "name" : "Centre de consultation Lorient",
+  "telecom" : [{
+    "system" : "phone",
+    "value" : "+33139555992"
+  }],
+  "address" : {
+    "line" : ["12 impasse Royer Dubail"],
+    "city" : "LORIENT",
+    "postalCode" : "56100"
+  },
+  "managingOrganization" : {
+    "reference" : "Organization/ExampleOrgaSOS2"
+  },
+  "hoursOfOperation" : [{
+    "daysOfWeek" : ["tue",
+    "thu",
+    "sat"],
+    "openingTime" : "11:00:00",
+    "closingTime" : "18:00:00"
+  }]
+}
