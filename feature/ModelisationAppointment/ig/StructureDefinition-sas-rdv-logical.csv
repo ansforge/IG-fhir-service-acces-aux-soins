@@ -17,7 +17,7 @@
 ","Date de création du RDV","Date de création du RDV","","","","","","","","","",,,,,"",,,,"sas-rdv-logical.creation",0,1,"",""
 "sas-rdv-logical.specialite","sas-rdv-logical.specialite","","","",1,1,"","","","CodeableConcept {[]} {[]}
 ","Spécialité du médecin effecteur","Spécialité du médecin effecteur","","","","","","","","","",,,,,"",,,,"sas-rdv-logical.specialite",1,1,"",""
-"sas-rdv-logical.participant","sas-rdv-logical.participant","","","",1,1,"","","","Reference {[]} {[]}
+"sas-rdv-logical.participant","sas-rdv-logical.participant","","","",1,1,"","","","Reference {[]} {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-effecteur-logical], CanonicalType[https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-organisation-logical]]}
 ","Référence au participant du RDV","Référence au participant du RDV","","","","","","","","","",,,,,"",,,,"sas-rdv-logical.participant",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ref-1:SHALL have a contained resource if a local reference is provided {reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))}"
 "sas-rdv-logical.participant.id","sas-rdv-logical.participant.id","","","",0,1,"","","","string {[]} {[]}
