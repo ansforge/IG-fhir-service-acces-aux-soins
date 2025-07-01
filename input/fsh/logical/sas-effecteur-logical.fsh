@@ -1,4 +1,4 @@
-Logical: RDV
+Logical: Effecteur
 Id: sas-effecteur-logical
 Title: "Effecteur de soins"
 Description: "Modélisation d'un effecteur de soins - médecin auprès de qui le RDV est pris"

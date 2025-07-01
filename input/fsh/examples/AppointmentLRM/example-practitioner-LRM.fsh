@@ -7,4 +7,4 @@ Usage: #example
 * identifier[idNatPs].value = "810002909371"
 * name.family = "Dupont"
 * name.given = "Jean"
-* extension[specialty].coding = $TRE_R38#SM54
+* extension[specialty] exists
