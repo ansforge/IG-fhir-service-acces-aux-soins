@@ -24,6 +24,7 @@ Description: "Profil de Appointment, dérivé de FrAppointment, pour le cas d'us
 * identifier.value 1..
 * start 1..
 * end 1..
+* created MS
 * participant.actor.identifier.type 1..
 * participant.actor.identifier.type.coding 1..1
 * participant.actor.identifier.type.coding = $fr-v2-0203#IDNPS

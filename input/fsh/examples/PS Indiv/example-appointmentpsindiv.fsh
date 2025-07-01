@@ -12,4 +12,5 @@ Usage: #example
 * status = #booked
 * start = "2022-09-04T14:00:00+01:00"
 * end = "2022-09-04T14:15:00+01:00"
+* created = "2022-09-04T10:00:00+01:00"
 * participant.actor.identifier.value = "810100050075"
