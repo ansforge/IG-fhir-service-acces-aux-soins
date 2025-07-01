@@ -3,6 +3,7 @@
 <head>
   <title>SAS : Terminology Server Report</title>
   <link href="fhir.css" rel="stylesheet"/>
+  <meta charset="utf-8"/>
   <style>
     span.flip  { background-color: #4CAF50; color: white; border: solid 1px #a6d8a8; padding: 2px }
     span.toggle  { background-color: #e6f2ff; color: black; border: solid 1px #0056b3; padding: 2px; font-size: 10px }
@@ -11,7 +12,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Terminology Server Report for SAS</h1>
- <p>Generated Wed Mar 12 14:17:52 UTC 2025, FHIR version 4.0.1 for ans.fhir.fr.sas#1.1.0 (canonical = <a href="https://interop.esante.gouv.fr/ig/fhir/sas">https://interop.esante.gouv.fr/ig/fhir/sas</a> (<a href="https://interop.esante.gouv.fr/ig/fhir/sas/history.html">history</a>))</p>
+ <p>Generated Tue Jul 01 07:22:12 UTC 2025, FHIR version 4.0.1 for ans.fhir.fr.sas#1.1.0 (canonical = <a href="https://interop.esante.gouv.fr/ig/fhir/sas">https://interop.esante.gouv.fr/ig/fhir/sas</a> (<a href="https://interop.esante.gouv.fr/ig/fhir/sas/history.html">history</a>))</p>
 <p>This page provides a report on which terminology servers were used while publishing this IG. Note that terminology caching reduces the server hit count - this page only reports content that wasn't cached</p>
 <h2>Terminology Parameters</h2>
 <ul>
@@ -24,7 +25,7 @@
 :     <code>fr-FR</code>
   </li>
 </ul>
-<h2>Tx Manager report for 'http://tx.fhir.org/tx-reg'</h2>
+<h2>Tx Manager report for 'https://tx.fhir.org/tx-reg'</h2>
 <p>
   <b>Decisions</b>
 </p>
@@ -47,67 +48,53 @@
     </td>
   </tr>
   <tr>
-    <td>System not handled by any servers. Using primary server</td>
-    <td>http://tx.fhir.org/r4</td>
-    <td>null</td>
-    <td>http://hl7.org/fhir/fhir-types</td>
-    <td>auth = , candidates=</td>
-  </tr>
-  <tr>
-    <td>Fallback: primary server</td>
-    <td>http://tx.fhir.org/r4</td>
-    <td>null</td>
-    <td>http://hl7.org/fhir/fhir-types</td>
-    <td>auth = , candidates=</td>
-  </tr>
-  <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
     <td>http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1</td>
     <td>[http://unstats.un.org/unsd/methods/m49/m49.htm, urn:iso:std:iso:3166, urn:iso:std:iso:3166:-2]</td>
-    <td>[auth = , candidates=http://tx.fhir.org/r4|http://tx.hl7europe.eu/r4, auth = , candidates=http://tx.fhir.org/r4|http://tx.hl7europe.eu/r4, auth = , candidates=http://tx.fhir.org/r4|http://tx.hl7europe.eu/r4]</td>
+    <td>[auth = , candidates=http://tx.fhir.org/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4, auth = , candidates=http://tx.fhir.org/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://nzhts.digital.health.nz/fhir, auth = , candidates=http://tx.fhir.org/r4|http://tx.hl7europe.eu/r4]</td>
   </tr>
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
-    <td>urn:uuid:ae2d6d51-68c0-491a-8ef3-1f478f5ff7ef</td>
+    <td>urn:uuid:4d19c3aa-283c-4576-8c2c-171a17bb79aa</td>
     <td>urn:ietf:bcp:13</td>
-    <td>auth = , candidates=http://tx.fhir.org/r4|http://tx.hl7europe.eu/r4</td>
+    <td>auth = , candidates=http://tx.fhir.org/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4</td>
   </tr>
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
     <td>http://hl7.org/fhir/ValueSet/mimetypes|4.0.1</td>
     <td>urn:ietf:bcp:13</td>
-    <td>auth = , candidates=http://tx.fhir.org/r4|http://tx.hl7europe.eu/r4</td>
+    <td>auth = , candidates=http://tx.fhir.org/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4</td>
   </tr>
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
     <td>http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1</td>
     <td>[http://unstats.un.org/unsd/methods/m49/m49.htm, urn:iso:std:iso:3166, urn:iso:std:iso:3166:-2]</td>
-    <td>[auth = , candidates=http://tx.fhir.org/r4|http://tx.hl7europe.eu/r4, auth = , candidates=http://tx.fhir.org/r4|http://tx.hl7europe.eu/r4, auth = , candidates=http://tx.fhir.org/r4|http://tx.hl7europe.eu/r4]</td>
+    <td>[auth = , candidates=http://tx.fhir.org/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4, auth = , candidates=http://tx.fhir.org/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://nzhts.digital.health.nz/fhir, auth = , candidates=http://tx.fhir.org/r4|http://tx.hl7europe.eu/r4]</td>
   </tr>
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
     <td></td>
     <td>urn:iso:std:iso:3166</td>
-    <td>auth = , candidates=http://tx.fhir.org/r4|http://tx.hl7europe.eu/r4</td>
+    <td>auth = , candidates=http://tx.fhir.org/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://nzhts.digital.health.nz/fhir</td>
   </tr>
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
     <td></td>
     <td>urn:iso:std:iso:3166</td>
-    <td>auth = , candidates=http://tx.fhir.org/r4|http://tx.hl7europe.eu/r4</td>
+    <td>auth = , candidates=http://tx.fhir.org/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://nzhts.digital.health.nz/fhir</td>
   </tr>
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
     <td></td>
     <td>urn:iso:std:iso:3166</td>
-    <td>auth = , candidates=http://tx.fhir.org/r4|http://tx.hl7europe.eu/r4</td>
+    <td>auth = , candidates=http://tx.fhir.org/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://nzhts.digital.health.nz/fhir</td>
   </tr>
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
@@ -117,9 +104,22 @@
     <td>auth = , candidates=http://tx.fhir.org/r4|http://tx.hl7europe.eu/r4</td>
   </tr>
 </table>
-<h2>Primary Server: http://tx.fhir.org/r4</h2>
-<a href="http://tx.fhir.org/r4"></a>
-<p>Use Count: 20. Code Systems used: </p>
+<h2>Primary Server: https://tx.fhir.org/r4</h2>
+<a href="https://tx.fhir.org/r4"></a>
+<p>Use Count: 8. Code Systems used: </p>
+<ul>
+  <li>(None)</li>
+</ul>
+<p>ValueSets fetched:</p>
+<ul>
+  <li>http://fhir.org/packages/hl7.fhir.fr.core/ImplementationGuide/hl7.fhir.fr.core</li>
+  <li>http://hl7.org/fhir/SearchParameter/Resource-has</li>
+  <li>http://interopsante.org/fhir/valueset/fr-schedule-unavailability-reason</li>
+  <li>https://interop.esante.gouv.fr/ig/fhir/sas</li>
+</ul>
+<h2>Server: https://tx.fhir.org/r4</h2>
+<a href="https://tx.fhir.org/r4"></a>
+<p>Use Count: 17. Code Systems used: </p>
 <table class="grid">
   <tr>
     <th>
@@ -134,12 +134,6 @@
     <th>
       <b>Details</b>
     </th>
-  </tr>
-  <tr>
-    <td>http://hl7.org/fhir/fhir-types</td>
-    <td>0</td>
-    <td>1</td>
-    <td></td>
   </tr>
   <tr>
     <td>http://unstats.un.org/unsd/methods/m49/m49.htm</td>
@@ -170,10 +164,6 @@
     </td>
   </tr>
 </table>
-<p>ValueSets fetched:</p>
-<ul>
-  <li>http://interopsante.org/fhir/valueset/fr-schedule-unavailability-reason</li>
-</ul>
 <h2>Server: https://smt.esante.gouv.fr/fhir</h2>
 <a href="https://smt.esante.gouv.fr/fhir"></a>
 <p>Use Count: 2. Code Systems used: </p>

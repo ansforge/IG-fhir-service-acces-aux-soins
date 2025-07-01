@@ -245,7 +245,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 Note that the fullUrl is not the same as the canonical URL - it's an absolute url for an endpoint serving the resource (these will happen to have the same value on the canonical server for the resource with the canonical URL).","","","","","","","","",,,,,"",,,,"Bundle.entry.fullUrl",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"BundleAgregateur","Bundle.entry:FrSlotAgregateur.resource","Bundle.entry.resource","","","",0,1,"","","","Slot {[CanonicalType[http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur]]} {[]}
+"BundleAgregateur","Bundle.entry:FrSlotAgregateur.resource","Bundle.entry.resource","","","",0,1,"","","Y","Slot {[CanonicalType[http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur]]} {[]}
 ","A slot of time on a schedule that may be available for booking appointments","A slot of time on a schedule that may be available for booking appointments.","","","","","","","","","",,,,,"",,,,"Bundle.entry.resource",0,1,"",""
 "BundleAgregateur","Bundle.entry:FrSlotAgregateur.search","Bundle.entry.search","","","",0,1,"","","Y","BackboneElement {[]} {[]}
 ","Search related information","Information about the search process that lead to the creation of this entry.","","","","","","","","","",,,,,"",,,,"Bundle.entry.search",0,1,"ele-1
@@ -388,7 +388,7 @@ Note that the fullUrl is not the same as the canonical URL - it's an absolute ur
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "BundleAgregateur","Bundle.entry:FrScheduleAgregateur.resource","Bundle.entry.resource","","Availability
-","",0,1,"","","","Schedule {[CanonicalType[http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur]]} {[]}
+","",0,1,"","","Y","Schedule {[CanonicalType[http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur]]} {[]}
 ","A container for slots of time that may be available for booking appointments","A container for slots of time that may be available for booking appointments.","","","","","","","","","",,,,,"",,,,"Bundle.entry.resource",0,1,"",""
 "BundleAgregateur","Bundle.entry:FrScheduleAgregateur.search","Bundle.entry.search","","","",0,1,"","","Y","BackboneElement {[]} {[]}
 ","Search related information","Information about the search process that lead to the creation of this entry.","","","","","","","","","",,,,,"",,,,"Bundle.entry.search",0,1,"ele-1
@@ -530,7 +530,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 Note that the fullUrl is not the same as the canonical URL - it's an absolute url for an endpoint serving the resource (these will happen to have the same value on the canonical server for the resource with the canonical URL).","","","","","","","","",,,,,"",,,,"Bundle.entry.fullUrl",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"BundleAgregateur","Bundle.entry:FrPractitionerAgregateur.resource","Bundle.entry.resource","","","",0,1,"","","","Practitioner {[CanonicalType[http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur]]} {[]}
+"BundleAgregateur","Bundle.entry:FrPractitionerAgregateur.resource","Bundle.entry.resource","","","",0,1,"","","Y","Practitioner {[CanonicalType[http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur]]} {[]}
 ","A person with a  formal responsibility in the provisioning of healthcare or related services | Prestataire de santé","A person who is directly or indirectly involved in the provisioning of healthcare | Un professionnel impliqué directement ou indirectement dans la prise en charge d'une personne.","","","","","","","","","",,,,,"",,,,"Bundle.entry.resource",0,1,"",""
 "BundleAgregateur","Bundle.entry:FrPractitionerAgregateur.search","Bundle.entry.search","","","",0,1,"","","Y","BackboneElement {[]} {[]}
 ","Search related information","Information about the search process that lead to the creation of this entry.","","","","","","","","","",,,,,"",,,,"Bundle.entry.search",0,1,"ele-1
@@ -672,7 +672,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 Note that the fullUrl is not the same as the canonical URL - it's an absolute url for an endpoint serving the resource (these will happen to have the same value on the canonical server for the resource with the canonical URL).","","","","","","","","",,,,,"",,,,"Bundle.entry.fullUrl",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"BundleAgregateur","Bundle.entry:FrPractitionerRoleExerciceAgregateur.resource","Bundle.entry.resource","","","",0,1,"","","","PractitionerRole {[CanonicalType[http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur]]} {[]}
+"BundleAgregateur","Bundle.entry:FrPractitionerRoleExerciceAgregateur.resource","Bundle.entry.resource","","","",0,1,"","","Y","PractitionerRole {[CanonicalType[http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur]]} {[]}
 ","Roles/organizations the practitioner is associated with","A specific set of Roles/Locations/specialties/services that a practitioner may perform at an organization for a period of time.","","","","","","","","","",,,,,"",,,,"Bundle.entry.resource",0,1,"",""
 "BundleAgregateur","Bundle.entry:FrPractitionerRoleExerciceAgregateur.search","Bundle.entry.search","","","",0,1,"","","Y","BackboneElement {[]} {[]}
 ","Search related information","Information about the search process that lead to the creation of this entry.","","","","","","","","","",,,,,"",,,,"Bundle.entry.search",0,1,"ele-1
@@ -1059,7 +1059,7 @@ ref-1:SHALL have a contained resource if a local reference is provided {referenc
 ","The slots that this appointment is filling","The slots from the participants' schedules that will be filled by the appointment.","References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.","","","","","","","","",,,,,"",,,,"Appointment.slot",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ref-1:SHALL have a contained resource if a local reference is provided {reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))}"
-"FrAppointmentSAS","Appointment.created","Appointment.created","","","",0,1,"","","","dateTime {[]} {[]}
+"FrAppointmentSAS","Appointment.created","Appointment.created","","","",0,1,"Y","","","dateTime {[]} {[]}
 ","The date that this appointment was initially created","The date that this appointment was initially created. This could be different to the meta.lastModified value on the initial entry, as this could have been before the resource was created on the FHIR server, and should remain unchanged over the lifespan of the appointment.","This property is required for many use cases where the age of an appointment is considered in processing workflows for scheduling and billing of appointments.","","","","","","","","",,,,,"",,,,"Appointment.created",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
@@ -4043,7 +4043,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 Note that the fullUrl is not the same as the canonical URL - it's an absolute url for an endpoint serving the resource (these will happen to have the same value on the canonical server for the resource with the canonical URL).","","","","","","","","",,,,,"",,,,"Bundle.entry.fullUrl",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"sas-cpts-bundle-aggregator","Bundle.entry:slotAgregateurCPTS.resource","Bundle.entry.resource","","","",0,1,"","","","Slot {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator]]} {[]}
+"sas-cpts-bundle-aggregator","Bundle.entry:slotAgregateurCPTS.resource","Bundle.entry.resource","","","",0,1,"","","Y","Slot {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator]]} {[]}
 ","A slot of time on a schedule that may be available for booking appointments","A slot of time on a schedule that may be available for booking appointments.","","","","","","","","","",,,,,"",,,,"Bundle.entry.resource",0,1,"",""
 "sas-cpts-bundle-aggregator","Bundle.entry:slotAgregateurCPTS.search","Bundle.entry.search","","","",0,1,"","","Y","BackboneElement {[]} {[]}
 ","Search related information","Information about the search process that lead to the creation of this entry.","","","","","","","","","",,,,,"",,,,"Bundle.entry.search",0,1,"ele-1
@@ -4186,7 +4186,7 @@ Note that the fullUrl is not the same as the canonical URL - it's an absolute ur
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "sas-cpts-bundle-aggregator","Bundle.entry:scheduleAgregateurCPTS.resource","Bundle.entry.resource","","Availability
-","",0,1,"","","","Schedule {[CanonicalType[http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur]]} {[]}
+","",0,1,"","","Y","Schedule {[CanonicalType[http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur]]} {[]}
 ","A container for slots of time that may be available for booking appointments","A container for slots of time that may be available for booking appointments.","","","","","","","","","",,,,,"",,,,"Bundle.entry.resource",0,1,"",""
 "sas-cpts-bundle-aggregator","Bundle.entry:scheduleAgregateurCPTS.search","Bundle.entry.search","","","",0,1,"","","Y","BackboneElement {[]} {[]}
 ","Search related information","Information about the search process that lead to the creation of this entry.","","","","","","","","","",,,,,"",,,,"Bundle.entry.search",0,1,"ele-1
@@ -4328,7 +4328,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 Note that the fullUrl is not the same as the canonical URL - it's an absolute url for an endpoint serving the resource (these will happen to have the same value on the canonical server for the resource with the canonical URL).","","","","","","","","",,,,,"",,,,"Bundle.entry.fullUrl",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"sas-cpts-bundle-aggregator","Bundle.entry:practitionerAgregateur.resource","Bundle.entry.resource","","","",0,1,"","","","Practitioner {[CanonicalType[http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur]]} {[]}
+"sas-cpts-bundle-aggregator","Bundle.entry:practitionerAgregateur.resource","Bundle.entry.resource","","","",0,1,"","","Y","Practitioner {[CanonicalType[http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur]]} {[]}
 ","A person with a  formal responsibility in the provisioning of healthcare or related services | Prestataire de santé","A person who is directly or indirectly involved in the provisioning of healthcare | Un professionnel impliqué directement ou indirectement dans la prise en charge d'une personne.","","","","","","","","","",,,,,"",,,,"Bundle.entry.resource",0,1,"",""
 "sas-cpts-bundle-aggregator","Bundle.entry:practitionerAgregateur.search","Bundle.entry.search","","","",0,1,"","","Y","BackboneElement {[]} {[]}
 ","Search related information","Information about the search process that lead to the creation of this entry.","","","","","","","","","",,,,,"",,,,"Bundle.entry.search",0,1,"ele-1
@@ -4470,7 +4470,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 Note that the fullUrl is not the same as the canonical URL - it's an absolute url for an endpoint serving the resource (these will happen to have the same value on the canonical server for the resource with the canonical URL).","","","","","","","","",,,,,"",,,,"Bundle.entry.fullUrl",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"sas-cpts-bundle-aggregator","Bundle.entry:practitionerRole.resource","Bundle.entry.resource","","","",0,1,"","","","PractitionerRole {[CanonicalType[http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur]]} {[]}
+"sas-cpts-bundle-aggregator","Bundle.entry:practitionerRole.resource","Bundle.entry.resource","","","",0,1,"","","Y","PractitionerRole {[CanonicalType[http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur]]} {[]}
 ","Roles/organizations the practitioner is associated with","A specific set of Roles/Locations/specialties/services that a practitioner may perform at an organization for a period of time.","","","","","","","","","",,,,,"",,,,"Bundle.entry.resource",0,1,"",""
 "sas-cpts-bundle-aggregator","Bundle.entry:practitionerRole.search","Bundle.entry.search","","","",0,1,"","","Y","BackboneElement {[]} {[]}
 ","Search related information","Information about the search process that lead to the creation of this entry.","","","","","","","","","",,,,,"",,,,"Bundle.entry.search",0,1,"ele-1
@@ -4612,7 +4612,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 Note that the fullUrl is not the same as the canonical URL - it's an absolute url for an endpoint serving the resource (these will happen to have the same value on the canonical server for the resource with the canonical URL).","","","","","","","","",,,,,"",,,,"Bundle.entry.fullUrl",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"sas-cpts-bundle-aggregator","Bundle.entry:healthcareserviceCPTS.resource","Bundle.entry.resource","","","",0,1,"","","","HealthcareService {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-healthcareservice-aggregator]]} {[]}
+"sas-cpts-bundle-aggregator","Bundle.entry:healthcareserviceCPTS.resource","Bundle.entry.resource","","","",0,1,"","","Y","HealthcareService {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-healthcareservice-aggregator]]} {[]}
 ","The details of a healthcare service available at a location","The details of a healthcare service available at a location.","","","","","","","","","",,,,,"",,,,"Bundle.entry.resource",0,1,"",""
 "sas-cpts-bundle-aggregator","Bundle.entry:healthcareserviceCPTS.search","Bundle.entry.search","","","",0,1,"","","Y","BackboneElement {[]} {[]}
 ","Search related information","Information about the search process that lead to the creation of this entry.","","","","","","","","","",,,,,"",,,,"Bundle.entry.search",0,1,"ele-1
@@ -4754,7 +4754,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 Note that the fullUrl is not the same as the canonical URL - it's an absolute url for an endpoint serving the resource (these will happen to have the same value on the canonical server for the resource with the canonical URL).","","","","","","","","",,,,,"",,,,"Bundle.entry.fullUrl",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"sas-cpts-bundle-aggregator","Bundle.entry:organizationAgregateurCPTS.resource","Bundle.entry.resource","","","",0,1,"","","","Organization {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-organization-aggregator]]} {[]}
+"sas-cpts-bundle-aggregator","Bundle.entry:organizationAgregateurCPTS.resource","Bundle.entry.resource","","","",0,1,"","","Y","Organization {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-organization-aggregator]]} {[]}
 ","A grouping of people or organizations with a common purpose","A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.  Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc.","","","","","","","","","",,,,,"",,,,"Bundle.entry.resource",0,1,"",""
 "sas-cpts-bundle-aggregator","Bundle.entry:organizationAgregateurCPTS.search","Bundle.entry.search","","","",0,1,"","","Y","BackboneElement {[]} {[]}
 ","Search related information","Information about the search process that lead to the creation of this entry.","","","","","","","","","",,,,,"",,,,"Bundle.entry.search",0,1,"ele-1
@@ -5685,8 +5685,8 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "
 "sas-cpts-slot-aggregator","Slot.serviceType:referencecpts.id","Slot.serviceType.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
-"sas-cpts-slot-aggregator","Slot.serviceType:referencecpts.extension","Slot.serviceType.extension","","","",1,1,"","","","Extension {[CanonicalType[http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType]]} {[]}
-","Extension","Extension créée afin de permettre la reference à la ressource HealthcareService. Cette extension implemente l'élément serviceType de R5 https://hl7.org/fhir/slot-definitions.html#Slot.serviceType","","","","","","","","","",,,,,"","value:url}
+"sas-cpts-slot-aggregator","Slot.serviceType:referencecpts.extension","Slot.serviceType.extension","","","",1,*,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
@@ -6050,7 +6050,7 @@ ref-1:SHALL have a contained resource if a local reference is provided {referenc
 ","The slots that this appointment is filling","The slots from the participants' schedules that will be filled by the appointment.","References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.","","","","","","","","",,,,,"",,,,"Appointment.slot",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ref-1:SHALL have a contained resource if a local reference is provided {reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))}"
-"sas-sos-appointment","Appointment.created","Appointment.created","","","",0,1,"","","","dateTime {[]} {[]}
+"sas-sos-appointment","Appointment.created","Appointment.created","","","",0,1,"Y","","","dateTime {[]} {[]}
 ","The date that this appointment was initially created","The date that this appointment was initially created. This could be different to the meta.lastModified value on the initial entry, as this could have been before the resource was created on the FHIR server, and should remain unchanged over the lifespan of the appointment.","This property is required for many use cases where the age of an appointment is considered in processing workflows for scheduling and billing of appointments.","","","","","","","","",,,,,"",,,,"Appointment.created",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
@@ -6360,7 +6360,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 Note that the fullUrl is not the same as the canonical URL - it's an absolute url for an endpoint serving the resource (these will happen to have the same value on the canonical server for the resource with the canonical URL).","","","","","","","","",,,,,"",,,,"Bundle.entry.fullUrl",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"sas-sos-bundle-aggregator","Bundle.entry:slotAgregateurSOS.resource","Bundle.entry.resource","","","",0,1,"","","","Slot {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator]]} {[]}
+"sas-sos-bundle-aggregator","Bundle.entry:slotAgregateurSOS.resource","Bundle.entry.resource","","","",0,1,"","","Y","Slot {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator]]} {[]}
 ","A slot of time on a schedule that may be available for booking appointments","A slot of time on a schedule that may be available for booking appointments.","","","","","","","","","",,,,,"",,,,"Bundle.entry.resource",0,1,"",""
 "sas-sos-bundle-aggregator","Bundle.entry:slotAgregateurSOS.search","Bundle.entry.search","","","",0,1,"","","Y","BackboneElement {[]} {[]}
 ","Search related information","Information about the search process that lead to the creation of this entry.","","","","","","","","","",,,,,"",,,,"Bundle.entry.search",0,1,"ele-1
@@ -6503,7 +6503,7 @@ Note that the fullUrl is not the same as the canonical URL - it's an absolute ur
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "sas-sos-bundle-aggregator","Bundle.entry:scheduleAgregateurSOS.resource","Bundle.entry.resource","","Availability
-","",0,1,"","","","Schedule {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator]]} {[]}
+","",0,1,"","","Y","Schedule {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator]]} {[]}
 ","A container for slots of time that may be available for booking appointments","A container for slots of time that may be available for booking appointments.","","","","","","","","","",,,,,"",,,,"Bundle.entry.resource",0,1,"",""
 "sas-sos-bundle-aggregator","Bundle.entry:scheduleAgregateurSOS.search","Bundle.entry.search","","","",0,1,"","","Y","BackboneElement {[]} {[]}
 ","Search related information","Information about the search process that lead to the creation of this entry.","","","","","","","","","",,,,,"",,,,"Bundle.entry.search",0,1,"ele-1
@@ -6645,7 +6645,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 Note that the fullUrl is not the same as the canonical URL - it's an absolute url for an endpoint serving the resource (these will happen to have the same value on the canonical server for the resource with the canonical URL).","","","","","","","","",,,,,"",,,,"Bundle.entry.fullUrl",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"sas-sos-bundle-aggregator","Bundle.entry:locationAgregateurSOS.resource","Bundle.entry.resource","","","",0,1,"","","","Location {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator]]} {[]}
+"sas-sos-bundle-aggregator","Bundle.entry:locationAgregateurSOS.resource","Bundle.entry.resource","","","",0,1,"","","Y","Location {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator]]} {[]}
 ","Details and position information for a physical place","Details and position information for a physical place where services are provided and resources and participants may be stored, found, contained, or accommodated.","","","","","","","","","",,,,,"",,,,"Bundle.entry.resource",0,1,"",""
 "sas-sos-bundle-aggregator","Bundle.entry:locationAgregateurSOS.search","Bundle.entry.search","","","",0,1,"","","Y","BackboneElement {[]} {[]}
 ","Search related information","Information about the search process that lead to the creation of this entry.","","","","","","","","","",,,,,"",,,,"Bundle.entry.search",0,1,"ele-1
@@ -6787,7 +6787,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 Note that the fullUrl is not the same as the canonical URL - it's an absolute url for an endpoint serving the resource (these will happen to have the same value on the canonical server for the resource with the canonical URL).","","","","","","","","",,,,,"",,,,"Bundle.entry.fullUrl",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"sas-sos-bundle-aggregator","Bundle.entry:organizationAgregateurSOS.resource","Bundle.entry.resource","","","",0,1,"","","","Organization {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator]]} {[]}
+"sas-sos-bundle-aggregator","Bundle.entry:organizationAgregateurSOS.resource","Bundle.entry.resource","","","",0,1,"","","Y","Organization {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator]]} {[]}
 ","A grouping of people or organizations with a common purpose","A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.  Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc.","","","","","","","","","",,,,,"",,,,"Bundle.entry.resource",0,1,"",""
 "sas-sos-bundle-aggregator","Bundle.entry:organizationAgregateurSOS.search","Bundle.entry.search","","","",0,1,"","","Y","BackboneElement {[]} {[]}
 ","Search related information","Information about the search process that lead to the creation of this entry.","","","","","","","","","",,,,,"",,,,"Bundle.entry.search",0,1,"ele-1
