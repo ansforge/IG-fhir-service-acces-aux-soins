@@ -20,7 +20,7 @@ Description: "Profil de Bundle qui représente les données de RDV à envoyer de
 * entry[appointmententry].resource only SASAppointmentLRM
 * entry[appointmententry].fullUrl 1..
 
-* entry[practitionerentry].resource only FrPractitionerAgregateur
+* entry[practitionerentry].resource only SASPractitionerLRM
 * entry[practitionerentry].fullUrl 1..
 
 * entry[organizationentry].resource only SASOrganizationLRM

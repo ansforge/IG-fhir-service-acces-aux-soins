@@ -7,6 +7,6 @@ Description: "Profil dérivé de FrPractitionerRole dérivé de FrAppointment, p
 * meta.profile[sas-practitioner-role-lrm] = Canonical(sas-practitioner-role-lrm)
 
 
-* practitioner only Reference(FrPractitionerAgregateur)
+* practitioner only Reference(SASPractitionerLRM)
 * organization 1..1
 * organization only Reference(SASOrganizationLRM)
