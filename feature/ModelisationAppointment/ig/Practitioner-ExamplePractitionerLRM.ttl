@@ -11,14 +11,22 @@
   fhir:id [ fhir:v "ExamplePractitionerLRM"] ; # 
   fhir:meta [
      fhir:profile ( [
-       fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator"^^xsd:anyURI ;
-       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator>
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-lrm"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-lrm>
      ] )
   ] ; # 
   fhir:text [
-     fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : Praticien ExamplePractitionerLRM</b></p><a name=\"ExamplePractitionerLRM\"> </a><a name=\"hcExamplePractitionerLRM\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-practitioner-aggregator.html\">FrPractitionerAgregateur</a></p></div><p><b>identifier</b>: <code>urn:oid:1.2.250.1.71.4.2.1</code>/810002909371</p><p><b>name</b>: Jean Dupont </p></div>"^^rdf:XMLLiteral
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : Praticien ExamplePractitionerLRM</b></p><a name=\"ExamplePractitionerLRM\"> </a><a name=\"hcExamplePractitionerLRM\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-practitioner-lrm.html\">SASPractitionerLRM</a></p></div><p><b>FR Core Practitioner Specialty Extension</b>: <a href=\"https://interop.esante.gouv.fr/ig/nos/1.5.0/CodeSystem-TRE-R38-SpecialiteOrdinale.html#TRE-R38-SpecialiteOrdinale-SM54\">TRE_R38-SpecialiteOrdinale SM54</a>: Médecine générale (SM)</p><p><b>identifier</b>: <code>urn:oid:1.2.250.1.71.4.2.1</code>/810002909371</p><p><b>name</b>: Jean Dupont </p></div>"^^rdf:XMLLiteral
   ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner-specialty"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:Coding ;
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "SM54" ]
+     ]
+  ] ) ; # 
   fhir:identifier ( [
      fhir:system [ fhir:v "urn:oid:1.2.250.1.71.4.2.1"^^xsd:anyURI ] ;
      fhir:value [ fhir:v "810002909371" ]

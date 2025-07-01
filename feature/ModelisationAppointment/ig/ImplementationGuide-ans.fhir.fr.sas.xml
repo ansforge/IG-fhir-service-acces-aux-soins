@@ -10,7 +10,7 @@
   <name value="SAS"/>
   <title value="Service d'Accès aux Soins"/>
   <status value="active"/>
-  <date value="2025-07-01T07:34:24+00:00"/>
+  <date value="2025-07-01T14:16:04+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -543,6 +543,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/sas-effecteur-logical"/>
+      </reference>
+      <name value="Effecteur de soins"/>
+      <description value="Modélisation d'un effecteur de soins - médecin auprès de qui le RDV est pris"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Appointment"/>
       </extension>
       <reference>
@@ -571,7 +582,7 @@
         <reference value="Appointment/ExampleAppointmentLRM1"/>
       </reference>
       <name value="ExampleAppointmentLRM1"/>
-      <description value="Exemple RDV LRM"/>
+      <description value="Exemple RDV LRM 1"/>
       <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"/>
     </resource>
     <resource>
@@ -583,6 +594,17 @@
       </reference>
       <name value="ExampleAppointmentLRM2"/>
       <description value="Exemple RDV LRM 2"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Appointment"/>
+      </extension>
+      <reference>
+        <reference value="Appointment/ExampleAppointmentLRM3"/>
+      </reference>
+      <name value="ExampleAppointmentLRM3"/>
+      <description value="Exemple RDV LRM 3"/>
       <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"/>
     </resource>
     <resource>
@@ -616,6 +638,17 @@
       </reference>
       <name value="ExampleBundleAppointmentLRM2"/>
       <description value="Exemple Bundle RDV LRM 2 - Cas CDS non interfacé"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/ExampleBundleAppointmentLRM3"/>
+      </reference>
+      <name value="ExampleBundleAppointmentLRM3"/>
+      <description value="Exemple Bundle RDV LRM 3 - Cas SOS Médecin interfacé mise à jour"/>
       <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"/>
     </resource>
     <resource>
@@ -803,7 +836,7 @@
       </reference>
       <name value="ExamplePractitionerLRM"/>
       <description value="Exemple practitioner flux LRM"/>
-      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-lrm"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1419,6 +1452,17 @@
       </reference>
       <name value="SASOrganizationLRM"/>
       <description value="Profil dérivé de FrOrganization dans le cadre de l'usage des flux du SAS"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/sas-practitioner-lrm"/>
+      </reference>
+      <name value="SASPractitionerLRM"/>
+      <description value="Profil de Practitioner, dérivé de FrPractitioner, dans le cadre de l'usage des flux du SAS"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

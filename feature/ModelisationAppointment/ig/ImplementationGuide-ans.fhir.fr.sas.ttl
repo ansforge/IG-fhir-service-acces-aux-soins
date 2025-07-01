@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "SAS"] ; # 
   fhir:title [ fhir:v "Service d'Accès aux Soins"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2025-07-01T07:34:24+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-07-01T14:16:04+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -985,6 +985,24 @@
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-effecteur-logical> ;
+         fhir:reference [ fhir:v "StructureDefinition/sas-effecteur-logical" ]
+       ] ;
+       fhir:name [ fhir:v "Effecteur de soins" ] ;
+       fhir:description [ fhir:v "Modélisation d'un effecteur de soins - médecin auprès de qui le RDV est pris" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
            fhir:v "Appointment"
          ]
        ] ) ;
@@ -1031,7 +1049,7 @@
          fhir:reference [ fhir:v "Appointment/ExampleAppointmentLRM1" ]
        ] ;
        fhir:name [ fhir:v "ExampleAppointmentLRM1" ] ;
-       fhir:description [ fhir:v "Exemple RDV LRM" ] ;
+       fhir:description [ fhir:v "Exemple RDV LRM 1" ] ;
        fhir:example [
          a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"^^xsd:anyURI ;
@@ -1051,6 +1069,25 @@
        ] ;
        fhir:name [ fhir:v "ExampleAppointmentLRM2" ] ;
        fhir:description [ fhir:v "Exemple RDV LRM 2" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Appointment"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Appointment/ExampleAppointmentLRM3> ;
+         fhir:reference [ fhir:v "Appointment/ExampleAppointmentLRM3" ]
+       ] ;
+       fhir:name [ fhir:v "ExampleAppointmentLRM3" ] ;
+       fhir:description [ fhir:v "Exemple RDV LRM 3" ] ;
        fhir:example [
          a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"^^xsd:anyURI ;
@@ -1108,6 +1145,25 @@
        ] ;
        fhir:name [ fhir:v "ExampleBundleAppointmentLRM2" ] ;
        fhir:description [ fhir:v "Exemple Bundle RDV LRM 2 - Cas CDS non interfacé" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Bundle/ExampleBundleAppointmentLRM3> ;
+         fhir:reference [ fhir:v "Bundle/ExampleBundleAppointmentLRM3" ]
+       ] ;
+       fhir:name [ fhir:v "ExampleBundleAppointmentLRM3" ] ;
+       fhir:description [ fhir:v "Exemple Bundle RDV LRM 3 - Cas SOS Médecin interfacé mise à jour" ] ;
        fhir:example [
          a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"^^xsd:anyURI ;
@@ -1433,8 +1489,8 @@
        fhir:description [ fhir:v "Exemple practitioner flux LRM" ] ;
        fhir:example [
          a fhir:canonical ;
-         fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator"^^xsd:anyURI ;
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator>
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-lrm"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-lrm>
        ]
      ] [
        fhir:extension ( [
@@ -2467,6 +2523,24 @@
        ] ;
        fhir:name [ fhir:v "SASOrganizationLRM" ] ;
        fhir:description [ fhir:v "Profil dérivé de FrOrganization dans le cadre de l'usage des flux du SAS" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-lrm> ;
+         fhir:reference [ fhir:v "StructureDefinition/sas-practitioner-lrm" ]
+       ] ;
+       fhir:name [ fhir:v "SASPractitionerLRM" ] ;
+       fhir:description [ fhir:v "Profil de Practitioner, dérivé de FrPractitioner, dans le cadre de l'usage des flux du SAS" ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false
