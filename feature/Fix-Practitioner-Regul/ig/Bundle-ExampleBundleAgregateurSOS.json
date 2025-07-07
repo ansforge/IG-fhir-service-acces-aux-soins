@@ -1,0 +1,360 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "ExampleBundleAgregateurSOS",
+  "meta" : {
+    "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-bundle-aggregator"]
+  },
+  "type" : "searchset",
+  "total" : 4,
+  "link" : [{
+    "relation" : "self",
+    "url" : "https://editeur.fr/Schedule?_revinclude=Slot:schedule&_include=Schedule:actor:Location&_include:iterate=Location:organization&_has:Slot:schedule:start=ge2023-08-18T09:00:00+02:00&_has:Slot:schedule:start=le2023-08-20T08:00:00+02:00&_has:Slot:schedule:status=free&actor:Location.organization.identifier=urn:oid:1.2.250.1.71.4.2.2%7C334173748400020,urn:oid:1.2.250.1.71.4.2.2%7C392080466300010&_count=1000"
+  }],
+  "entry" : [{
+    "fullUrl" : "https://exemple.com/ans-sas/Slot/ExampleSlotSOS1",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "ExampleSlotSOS1",
+      "meta" : {
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator"],
+        "security" : [{
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
+          "code" : "PUBLIC"
+        },
+        {
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
+          "code" : "SNP"
+        }]
+      },
+      "serviceType" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code" : "AMB"
+        }]
+      },
+      {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code" : "VR"
+        }]
+      }],
+      "appointmentType" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v2-0276",
+          "code" : "ROUTINE"
+        }]
+      },
+      "schedule" : {
+        "reference" : "Schedule/ExampleScheduleSOS1"
+      },
+      "status" : "free",
+      "start" : "2023-08-18T09:00:00.000+02:00",
+      "end" : "2023-08-18T09:30:00.000+02:00",
+      "comment" : "http://www.editeur.com/agenda-pfg/creneau1"
+    }
+  },
+  {
+    "fullUrl" : "https://exemple.com/ans-sas/Schedule/ExampleScheduleSOS1",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "ExampleScheduleSOS1",
+      "meta" : {
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator"]
+      },
+      "actor" : [{
+        "reference" : "Location/1111111111"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "https://exemple.com/ans-sas/Location/1111111111",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "1111111111",
+      "meta" : {
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator"]
+      },
+      "identifier" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type",
+            "code" : "INTRN"
+          }]
+        },
+        "system" : "https://editeur.com",
+        "value" : "1111111111"
+      }],
+      "name" : "Centre de consultation Rennes Nord",
+      "telecom" : [{
+        "system" : "phone",
+        "value" : "+33193246789"
+      }],
+      "address" : {
+        "line" : ["320 avenue Général Georges Patton"],
+        "city" : "RENNES",
+        "postalCode" : "35700"
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/ExampleOrgaSOS1"
+      },
+      "hoursOfOperation" : [{
+        "daysOfWeek" : ["tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"],
+        "openingTime" : "08:00:00",
+        "closingTime" : "19:00:00"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "https://exemple.com/ans-sas/Organization/ExampleOrgaSOS1",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "ExampleOrgaSOS1",
+      "meta" : {
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator"]
+      },
+      "identifier" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type",
+            "code" : "IDNST"
+          }]
+        },
+        "system" : "urn:oid:1.2.250.1.71.4.2.2",
+        "value" : "334173748400020"
+      }],
+      "name" : "SOS Médecins de Rennes"
+    }
+  },
+  {
+    "fullUrl" : "https://exemple.com/ans-sas/Slot/ExampleSlotSOS2",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "ExampleSlotSOS2",
+      "meta" : {
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator"],
+        "security" : [{
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
+          "code" : "PUBLIC"
+        }]
+      },
+      "serviceType" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code" : "AMB"
+        }]
+      }],
+      "appointmentType" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v2-0276",
+          "code" : "ROUTINE"
+        }]
+      },
+      "schedule" : {
+        "reference" : "Schedule/ExampleScheduleSOS2"
+      },
+      "status" : "free",
+      "start" : "2023-08-19T11:00:00.000+02:00",
+      "end" : "2023-08-19T11:30:00.000+02:00",
+      "comment" : "http://www.editeur.com/agenda-pfg/creneau2"
+    }
+  },
+  {
+    "fullUrl" : "https://exemple.com/ans-sas/Schedule/ExampleScheduleSOS2",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "ExampleScheduleSOS2",
+      "meta" : {
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator"]
+      },
+      "actor" : [{
+        "reference" : "Location/2222222222"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "https://exemple.com/ans-sas/Location/2222222222",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "2222222222",
+      "meta" : {
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator"]
+      },
+      "identifier" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type",
+            "code" : "INTRN"
+          }]
+        },
+        "system" : "https://editeur.com",
+        "value" : "2222222222"
+      }],
+      "name" : "Centre de consultation Rennes Cleunay",
+      "telecom" : [{
+        "system" : "phone",
+        "value" : "+33145249912"
+      }],
+      "address" : {
+        "line" : ["106 rue Eugène Pottier"],
+        "city" : "RENNES",
+        "postalCode" : "35000"
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/ExampleOrgaSOS1"
+      },
+      "hoursOfOperation" : [{
+        "daysOfWeek" : ["mon",
+        "tue",
+        "wed",
+        "thu"],
+        "openingTime" : "09:00:00",
+        "closingTime" : "21:00:00"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "https://exemple.com/ans-sas/Slot/ExampleSlotSOS3",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "ExampleSlotSOS3",
+      "meta" : {
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator"],
+        "security" : [{
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
+          "code" : "PUBLIC"
+        }]
+      },
+      "serviceType" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code" : "VR"
+        }]
+      }],
+      "appointmentType" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v2-0276",
+          "code" : "ROUTINE"
+        }]
+      },
+      "schedule" : {
+        "reference" : "Schedule/ExampleScheduleSOS3"
+      },
+      "status" : "free",
+      "start" : "2023-08-18T14:20:00.000+02:00",
+      "end" : "2023-08-18T14:40:00.000+02:00",
+      "comment" : "http://www.editeur.com/agenda-pfg/creneau3"
+    }
+  },
+  {
+    "fullUrl" : "https://exemple.com/ans-sas/Schedule/ExampleScheduleSOS3",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "ExampleScheduleSOS3",
+      "meta" : {
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator"]
+      },
+      "actor" : [{
+        "reference" : "Location/3333333333"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "https://exemple.com/ans-sas/Location/3333333333",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "3333333333",
+      "meta" : {
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator"]
+      },
+      "identifier" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type",
+            "code" : "INTRN"
+          }]
+        },
+        "system" : "https://editeur.com",
+        "value" : "3333333333"
+      }],
+      "name" : "Centre de consultation Lorient",
+      "telecom" : [{
+        "system" : "phone",
+        "value" : "+33139555992"
+      }],
+      "address" : {
+        "line" : ["12 impasse Royer Dubail"],
+        "city" : "LORIENT",
+        "postalCode" : "56100"
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/ExampleOrgaSOS2"
+      },
+      "hoursOfOperation" : [{
+        "daysOfWeek" : ["tue",
+        "thu",
+        "sat"],
+        "openingTime" : "11:00:00",
+        "closingTime" : "18:00:00"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "https://exemple.com/ans-sas/Organization/ExampleOrgaSOS2",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "ExampleOrgaSOS2",
+      "meta" : {
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator"]
+      },
+      "identifier" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type",
+            "code" : "IDNST"
+          }]
+        },
+        "system" : "urn:oid:1.2.250.1.71.4.2.2",
+        "value" : "392080466300010"
+      }],
+      "name" : "SOS Médecins Lorient et agglomération"
+    }
+  },
+  {
+    "fullUrl" : "https://exemple.com/ans-sas/Slot/ExampleSlotSOS4",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "ExampleSlotSOS4",
+      "meta" : {
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator"],
+        "security" : [{
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
+          "code" : "PUBLIC"
+        }]
+      },
+      "serviceType" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code" : "AMB"
+        }]
+      }],
+      "appointmentType" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v2-0276",
+          "code" : "ROUTINE"
+        }]
+      },
+      "schedule" : {
+        "reference" : "Schedule/ExampleScheduleSOS3"
+      },
+      "status" : "free",
+      "start" : "2023-08-18T14:40:00.000+02:00",
+      "end" : "2023-08-18T15:00:00.000+02:00",
+      "comment" : "http://www.editeur.com/agenda-pfg/creneau4"
+    }
+  }]
+}
