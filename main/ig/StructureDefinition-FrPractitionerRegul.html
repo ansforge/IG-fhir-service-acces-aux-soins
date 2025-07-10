@@ -52,11 +52,11 @@
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
 <div id="family-nav">
-    <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+    <a id="hl7-search-lnk" data-no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
   </div>
   <div id="ans-nav" style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; ">
-    <a id="hl7-logo" no-external="true" href="https://esante.gouv.fr/"><img height="50" alt="ANS Logo" src="assets/images/logo-ANS.svg"/></a>
-    <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+    <a id="hl7-logo" data-no-external="true" href="https://esante.gouv.fr/"><img height="50" alt="ANS Logo" src="assets/images/logo-ANS.svg"/></a>
+    <a id="hl7-search-lnk" data-no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
   </div>
 
   <div id="ig-search">
@@ -321,7 +321,7 @@
         
           Active
           
-            as of 2025-07-01
+            as of 2025-07-10
           
         
       </td>
@@ -350,7 +350,7 @@
 
 <p><b>Usages:</b></p>
 <ul>
- <li>Examples for this Profile: <a href="Practitioner-ExamplePractitionerRegul1.html">Practitioner/ExamplePractitionerRegul1</a>, <a href="Practitioner-ExamplePractitionerRegul2.html">Practitioner/ExamplePractitionerRegul2</a> and <a href="Practitioner-ExamplePractitionerRegul3.html">Practitioner/ExamplePractitionerRegul3</a></li>
+ <li>Examples for this Profile: <a href="Practitioner-ExamplePractitionerRegul1.html">Practitioner/ExamplePractitionerRegul1</a>, <a href="Practitioner-ExamplePractitionerRegul2.html">Practitioner/ExamplePractitionerRegul2</a>, <a href="Practitioner-ExamplePractitionerRegul3.html">Practitioner/ExamplePractitionerRegul3</a> and <a href="Practitioner-ExamplePractitionerRegul4.html">Practitioner/ExamplePractitionerRegul4</a></li>
  <li>CapabilityStatements using this Profile: <a href="CapabilityStatement-SAS-GestionnaireStructure.html">Profil SAS gestionnaire de structure</a></li>
 </ul>
 
@@ -620,7 +620,7 @@ Pour un employé identifié au sein de sa structure, OID de l'établissement, br
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Whether this practitioner's record is in active use</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 52d6d01c-5f01-43af-8aab-b706aa483ea3
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 3cd3e888-4eb0-4342-b010-f4eab5c507a1
 document.getElementById('cbFrPractitionerRegulK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('FrPractitionerRegulK'), 'binding', document.getElementById('cbFrPractitionerRegulK-binding').checked, document.getElementById('ppFrPractitionerRegulK'));
 document.getElementById('cbFrPractitionerRegulK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -779,7 +779,7 @@ filterDesc(document.getElementById('FrPractitionerRegulK'), 'obligation', docume
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">1</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">phone | fax | email | pager | url | sms | other</span><br/><span style="font-weight:bold">Required Pattern: </span><span style="color: darkgreen">email</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 52d6d01c-5f01-43af-8aab-b706aa483ea3
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 3cd3e888-4eb0-4342-b010-f4eab5c507a1
 document.getElementById('cbFrPractitionerRegulD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('FrPractitionerRegulD'), 'binding', document.getElementById('cbFrPractitionerRegulD-binding').checked, document.getElementById('ppFrPractitionerRegulD'));
 document.getElementById('cbFrPractitionerRegulD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2071,7 +2071,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <table class="binding grid"><tr><td style="font-size: 11px"><b>Bindings Additionnels</b></td><td style="font-size: 11px">But</td></tr>
 <tr><td style="font-size: 11px"><a href="http://hl7.org/fhir/R4/valueset-all-languages.html" title="http://hl7.org/fhir/ValueSet/all-languages">AllLanguages</a></td>
 <td style="font-size: 11px"><a href="http://hl7.org/fhir/R4/extension-elementdefinition-maxvalueset.html" title="Un binding requis, à utiliser lorsque la force de binding est 'extensible' ou 'preferred'">Binding Max</a></td></tr></table><br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 52d6d01c-5f01-43af-8aab-b706aa483ea3
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 3cd3e888-4eb0-4342-b010-f4eab5c507a1
 document.getElementById('cbFrPractitionerRegulS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('FrPractitionerRegulS'), 'binding', document.getElementById('cbFrPractitionerRegulS-binding').checked, document.getElementById('ppFrPractitionerRegulS'));
 document.getElementById('cbFrPractitionerRegulS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2706,7 +2706,7 @@ Pour un employé identifié au sein de sa structure, OID de l'établissement, br
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Whether this practitioner's record is in active use</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 52d6d01c-5f01-43af-8aab-b706aa483ea3
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 3cd3e888-4eb0-4342-b010-f4eab5c507a1
 document.getElementById('cbFrPractitionerRegulKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('FrPractitionerRegulKA'), 'binding', document.getElementById('cbFrPractitionerRegulKA-binding').checked, document.getElementById('ppFrPractitionerRegulKA'));
 document.getElementById('cbFrPractitionerRegulKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2865,7 +2865,7 @@ filterDesc(document.getElementById('FrPractitionerRegulKA'), 'obligation', docum
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">1</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">phone | fax | email | pager | url | sms | other</span><br/><span style="font-weight:bold">Required Pattern: </span><span style="color: darkgreen">email</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 52d6d01c-5f01-43af-8aab-b706aa483ea3
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 3cd3e888-4eb0-4342-b010-f4eab5c507a1
 document.getElementById('cbFrPractitionerRegulDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('FrPractitionerRegulDA'), 'binding', document.getElementById('cbFrPractitionerRegulDA-binding').checked, document.getElementById('ppFrPractitionerRegulDA'));
 document.getElementById('cbFrPractitionerRegulDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -4156,7 +4156,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <table class="binding grid"><tr><td style="font-size: 11px"><b>Bindings Additionnels</b></td><td style="font-size: 11px">But</td></tr>
 <tr><td style="font-size: 11px"><a href="http://hl7.org/fhir/R4/valueset-all-languages.html" title="http://hl7.org/fhir/ValueSet/all-languages">AllLanguages</a></td>
 <td style="font-size: 11px"><a href="http://hl7.org/fhir/R4/extension-elementdefinition-maxvalueset.html" title="Un binding requis, à utiliser lorsque la force de binding est 'extensible' ou 'preferred'">Binding Max</a></td></tr></table><br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 52d6d01c-5f01-43af-8aab-b706aa483ea3
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 3cd3e888-4eb0-4342-b010-f4eab5c507a1
 document.getElementById('cbFrPractitionerRegulSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('FrPractitionerRegulSA'), 'binding', document.getElementById('cbFrPractitionerRegulSA-binding').checked, document.getElementById('ppFrPractitionerRegulSA'));
 document.getElementById('cbFrPractitionerRegulSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -4612,7 +4612,7 @@ Résumé
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jul 1, 2025 07:20+0000">2025-07-01</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jul 10, 2025 12:48+0000">2025-07-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

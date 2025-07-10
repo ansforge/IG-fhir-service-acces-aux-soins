@@ -1,7 +1,7 @@
 SAS : Validation Results
 =========================================
 
-err = 20, warn = 197, info = 117
+err = 20, warn = 199, info = 121
 $--
 Generated $--. FHIR version $-- for ans.fhir.fr.sas#$-- (canonical = https://interop.esante.gouv.fr/ig/fhir/sas)
  Build Errors : 0 / 7 / 0
@@ -34,8 +34,9 @@ Generated $--. FHIR version $-- for ans.fhir.fr.sas#$-- (canonical = https://int
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Practitioner-ExamplePractitioner2 : 0 / 2 / 2
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Practitioner-ExamplePractitioner3 : 0 / 2 / 2
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Practitioner-ExamplePractitionerRegul1 : 0 / 2 / 3
- /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Practitioner-ExamplePractitionerRegul2 : 0 / 2 / 2
- /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Practitioner-ExamplePractitionerRegul3 : 0 / 2 / 2
+ /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Practitioner-ExamplePractitionerRegul2 : 0 / 2 / 3
+ /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Practitioner-ExamplePractitionerRegul3 : 0 / 2 / 3
+ /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Practitioner-ExamplePractitionerRegul4 : 0 / 2 / 3
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/PractitionerRole-ExamplePractitionerRoleAgregateur : 0 / 1 / 4
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/PractitionerRole-ExamplePractitionerRoleAgregateur2 : 0 / 2 / 5
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/PractitionerRole-ExamplePractitionerRoleAgregateur3 : 0 / 2 / 5
@@ -260,7 +261,7 @@ WARNING: HealthcareService/ExampleHealthcareServiceCPTS1: HealthcareService: Con
 WARNING: HealthcareService/ExampleHealthcareServiceCPTS2: HealthcareService: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 == fsh-generated/resources/ImplementationGuide-ans.fhir.fr.sas.json ==
 WARNING: ImplementationGuide/ans.fhir.fr.sas: ImplementationGuide.dependsOn[2].uri: A definition could not be found for Canonical URL 'http://fhir.org/packages/hl7.fhir.fr.core/ImplementationGuide/hl7.fhir.fr.core'
-INFORMATION: ImplementationGuide/ans.fhir.fr.sas: ImplementationGuide.definition.resource[73].description: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+INFORMATION: ImplementationGuide/ans.fhir.fr.sas: ImplementationGuide.definition.resource[74].description: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 WARNING: ImplementationGuide/ans.fhir.fr.sas: ImplementationGuide.dependsOn[2]: The canonical URL http://fhir.org/packages/hl7.fhir.fr.core/ImplementationGuide/hl7.fhir.fr.core doesn't point to an actual ImplementationGuide resource
 ERROR: ImplementationGuide/ans.fhir.fr.sas: ImplementationGuide.dependsOn[2]: The packageId hl7.fhir.fr.core points to the canonical https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core which is inconsistent with the stated canonical of http://fhir.org/packages/hl7.fhir.fr.core/ImplementationGuide/hl7.fhir.fr.core
 WARNING: ImplementationGuide/ans.fhir.fr.sas: ImplementationGuide.dependsOn[3]: The ImplementationGuide uses package ans.fr.nos#1.4.0 released on 2024-11-08, but the most recent appropriate version is 1.5.0. This reference is getting old and the more recent version should be considered
@@ -305,18 +306,25 @@ INFORMATION: Practitioner/ExamplePractitioner3: Practitioner.identifier[0].type:
 WARNING: Practitioner/ExamplePractitioner3: Practitioner.identifier[0].system: No definition could be found for URL value 'urn:oid:1.2.250.1.71.4.2.1'
 WARNING: Practitioner/ExamplePractitioner3: Practitioner: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 == fsh-generated/resources/Practitioner-ExamplePractitionerRegul1.json ==
-INFORMATION: Practitioner/ExamplePractitionerRegul1: Practitioner.identifier[0]: This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Practitioner/ExamplePractitionerRegul1: Practitioner.meta.source: No definition could be found for URL value 'urn:oid:1.2.250.1.213.3.6'
 INFORMATION: Practitioner/ExamplePractitionerRegul1: Practitioner.identifier[0].type: Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-v2-0203|1.0.1
-WARNING: Practitioner/ExamplePractitionerRegul1: Practitioner.identifier[0].system: No definition could be found for URL value 'urn:oid:1.2.250.1.71.4.2.2'
+WARNING: Practitioner/ExamplePractitionerRegul1: Practitioner.identifier[0].system: No definition could be found for URL value 'urn:oid:1.2.250.1.71.4.2.1'
 WARNING: Practitioner/ExamplePractitionerRegul1: Practitioner: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 == fsh-generated/resources/Practitioner-ExamplePractitionerRegul2.json ==
+INFORMATION: Practitioner/ExamplePractitionerRegul2: Practitioner.meta.source: No definition could be found for URL value 'urn:oid:1.2.250.1.213.3.6'
 INFORMATION: Practitioner/ExamplePractitionerRegul2: Practitioner.identifier[0].type: Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-v2-0203|1.0.1
 WARNING: Practitioner/ExamplePractitionerRegul2: Practitioner.identifier[0].system: No definition could be found for URL value 'urn:oid:1.2.250.1.71.4.2.1'
 WARNING: Practitioner/ExamplePractitionerRegul2: Practitioner: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 == fsh-generated/resources/Practitioner-ExamplePractitionerRegul3.json ==
+INFORMATION: Practitioner/ExamplePractitionerRegul3: Practitioner.meta.source: No definition could be found for URL value 'urn:oid:1.2.250.1.213.3.6'
 INFORMATION: Practitioner/ExamplePractitionerRegul3: Practitioner.identifier[0].type: Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-v2-0203|1.0.1
 WARNING: Practitioner/ExamplePractitionerRegul3: Practitioner.identifier[0].system: No definition could be found for URL value 'urn:oid:1.2.250.1.71.4.2.1'
 WARNING: Practitioner/ExamplePractitionerRegul3: Practitioner: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+== fsh-generated/resources/Practitioner-ExamplePractitionerRegul4.json ==
+INFORMATION: Practitioner/ExamplePractitionerRegul4: Practitioner.meta.source: No definition could be found for URL value 'urn:oid:1.2.250.1.213.3.6'
+INFORMATION: Practitioner/ExamplePractitionerRegul4: Practitioner.identifier[0].type: Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-v2-0203|1.0.1
+WARNING: Practitioner/ExamplePractitionerRegul4: Practitioner.identifier[0].system: No definition could be found for URL value 'urn:oid:1.2.250.1.213.3.6'
+WARNING: Practitioner/ExamplePractitionerRegul4: Practitioner: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 == fsh-generated/resources/PractitionerRole-ExamplePractitionerRoleAgregateur.json ==
 INFORMATION: PractitionerRole/ExamplePractitionerRoleAgregateur: PractitionerRole.contained[0]/*Location/ExampleLocation*/.identifier[0].type: Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type|1.0.1
 WARNING: PractitionerRole/ExamplePractitionerRoleAgregateur: PractitionerRole.contained[0]/*Location/ExampleLocation*/.identifier[0].system: No definition could be found for URL value 'https://editeur.com'
