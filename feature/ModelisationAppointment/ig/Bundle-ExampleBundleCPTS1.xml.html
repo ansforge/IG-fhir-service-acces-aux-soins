@@ -275,14 +275,14 @@
   &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.meta">meta</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-bundle-aggregator&quot;/&gt;
-  &lt;/meta&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.meta">meta</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;searchset&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.total">total</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;1&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.link">link</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.link.relation">relation</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;self&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.link.url">url</a>
          <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://hapi.fhir.org/baseR4/Slot?_include=Slot:schedule&amp;amp;_include:iterate=Schedule:actor&amp;amp;start=ge2024-06-12T16:20:00.000+02:00&amp;amp;start=le2024-06-12T17:20:00.000+02:00&amp;amp;schedule.actor:Practitioner.identifier=urn:oid:1.2.250.1.71.4.2.1|810002909371&amp;amp;status=free&amp;amp;_include=Slot:service-type-reference&quot;/&gt;
-  &lt;/link&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.link">link</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://&amp;lt;base_URl&amp;gt;/Slot/ExampleSlotCPTS1&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/slot.html#Slot">resource</a>&gt;
@@ -295,66 +295,66 @@
             &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
                     <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau&quot;/&gt;
             &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;PUBLIC&quot;/&gt;
-          &lt;/security&gt;
+          &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.security">security</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.security">security</a>&gt;
             &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
                     <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau&quot;/&gt;
             &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;CPTS&quot;/&gt;
-          &lt;/security&gt;
-        &lt;/meta&gt;
+          &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.security">security</a>&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/slot.html#Slot.meta">meta</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/slot.html#Slot.text">text</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
           &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;Slot_ExampleSlotCPTS1&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Narratif généré : Slot ExampleSlotCPTS1&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;ExampleSlotCPTS1&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcExampleSlotCPTS1&quot;&gt; &lt;/a&gt;&lt;div style=&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%&quot;&gt;&lt;p style=&quot;margin-bottom: 0px&quot;/&gt;&lt;p style=&quot;margin-bottom: 0px&quot;&gt;Profil: &lt;a href=&quot;StructureDefinition-sas-cpts-slot-aggregator.html&quot;&gt;FrSlotAgregateurCPTS&lt;/a&gt;&lt;/p&gt;&lt;p style=&quot;margin-bottom: 0px&quot;&gt;Label de sécurités: Créneau accessible par le grand public (Details: TRE_R314-TypeCreneau code PUBLIC = 'Créneau accessible par le grand public'), Créneau accessible par les communautés professionnelles territoriales de santé (Details: TRE_R314-TypeCreneau code CPTS = 'Créneau accessible par les communautés professionnelles territoriales de santé')&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;serviceType&lt;/b&gt;: &lt;span title=&quot;Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode AMB}&quot;&gt;ambulatory&lt;/span&gt;, &lt;span title=&quot;Codes:{https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement 604}&quot;&gt;Communauté Professionnelle Territoriale de Santé (CPTS)&lt;/span&gt;, &lt;span title=&quot;Codes:&quot;&gt;Visite de contrôle&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;specialty&lt;/b&gt;: &lt;span title=&quot;Codes:{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM54}&quot;&gt;Médecine générale (SM)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;appointmentType&lt;/b&gt;: &lt;span title=&quot;Codes:{http://terminology.hl7.org/CodeSystem/v2-0276 ROUTINE}&quot;&gt;Routine appointment - default if not valued&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;schedule&lt;/b&gt;: &lt;a href=&quot;Schedule-ExampleSchedule.html&quot;&gt;Schedule&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Free&lt;/p&gt;&lt;p&gt;&lt;b&gt;start&lt;/b&gt;: 2024-06-12 16:40:00+0200&lt;/p&gt;&lt;p&gt;&lt;b&gt;end&lt;/b&gt;: 2024-06-12 17:00:00+0200&lt;/p&gt;&lt;p&gt;&lt;b&gt;comment&lt;/b&gt;: https://exemple.com/rdv/com/&lt;/p&gt;&lt;/div&gt;<a name="end-xhtml"></a>
-        &lt;/text&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/slot.html#Slot.text">text</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/slot.html#Slot.serviceType">serviceType</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
             &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://terminology.hl7.org/CodeSystem/v3-ActCode&quot;/&gt;
             &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;AMB&quot;/&gt;
-          &lt;/coding&gt;
-        &lt;/serviceType&gt;
+          &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/slot.html#Slot.serviceType">serviceType</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/slot.html#Slot.serviceType">serviceType</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.extension">extension</a>
                      <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType&quot;&gt;
             &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueReference</a>&gt;<a href="HealthcareService-ExampleHealthcareServiceCPTS1.html" style="color: Maroon">&#x1F517;</a> 
               &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
                          <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;HealthcareService/ExampleHealthcareServiceCPTS1&quot;/&gt;
-            &lt;/valueReference&gt;
-          &lt;/extension&gt;
+            &lt;/<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueReference</a>&gt;
+          &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.extension">extension</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
             &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
                     <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement&quot;/&gt;
             &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;604&quot;/&gt;
-          &lt;/coding&gt;
-        &lt;/serviceType&gt;
+          &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/slot.html#Slot.serviceType">serviceType</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/slot.html#Slot.serviceType">serviceType</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Visite de contrôle&quot;/&gt;
-        &lt;/serviceType&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/slot.html#Slot.serviceType">serviceType</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/slot.html#Slot.specialty">specialty</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
             &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
                     <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale&quot;/&gt;
             &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;SM54&quot;/&gt;
-          &lt;/coding&gt;
-        &lt;/specialty&gt;
+          &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/slot.html#Slot.specialty">specialty</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/slot.html#Slot.appointmentType">appointmentType</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
             &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://terminology.hl7.org/CodeSystem/v2-0276&quot;/&gt;
             &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;ROUTINE&quot;/&gt;
-          &lt;/coding&gt;
-        &lt;/appointmentType&gt;
+          &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/slot.html#Slot.appointmentType">appointmentType</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/slot.html#Slot.schedule">schedule</a>&gt;<a href="Schedule-ExampleSchedule.html" style="color: Maroon">&#x1F517;</a> 
           &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Schedule/ExampleSchedule&quot;/&gt;
-        &lt;/schedule&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/slot.html#Slot.schedule">schedule</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/slot.html#Slot.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;free&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/slot.html#Slot.start">start</a> <a href="http://hl7.org/fhir/R4/datatypes.html#instant">value</a>=&quot;2024-06-12T16:40:00.000+02:00&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/slot.html#Slot.end">end</a> <a href="http://hl7.org/fhir/R4/datatypes.html#instant">value</a>=&quot;2024-06-12T17:00:00.000+02:00&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/slot.html#Slot.comment">comment</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;https://exemple.com/rdv/com/&quot;/&gt;
-      &lt;/Slot&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/slot.html#Slot">Slot</a>&gt;
     &lt;/resource&gt;
     &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search">search</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search.mode">mode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;match&quot;/&gt;
-    &lt;/search&gt;
-  &lt;/entry&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search">search</a>&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://&amp;lt;base_URl&amp;gt;/Schedule/ExampleSchedule&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/schedule.html#Schedule">resource</a>&gt;
@@ -363,24 +363,24 @@
         &lt;<a href="http://hl7.org/fhir/R4/schedule.html#Schedule.meta">meta</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
                    <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-schedule-aggregator&quot;/&gt;
-        &lt;/meta&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/schedule.html#Schedule.meta">meta</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/schedule.html#Schedule.text">text</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
           &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;Schedule_ExampleSchedule&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Narratif généré : Schedule ExampleSchedule&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;ExampleSchedule&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcExampleSchedule&quot;&gt; &lt;/a&gt;&lt;div style=&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%&quot;&gt;&lt;p style=&quot;margin-bottom: 0px&quot;/&gt;&lt;p style=&quot;margin-bottom: 0px&quot;&gt;Profil: &lt;a href=&quot;StructureDefinition-sas-schedule-aggregator.html&quot;&gt;FrScheduleAgregateur&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;actor&lt;/b&gt;: &lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;Practitioner-ExamplePractitioner.html&quot;&gt;Practitioner Pierre Foret &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;PractitionerRole-ExamplePractitionerRoleAgregateur.html&quot;&gt;PractitionerRole : telecom = ph: +33561855977&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
-        &lt;/text&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/schedule.html#Schedule.text">text</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/schedule.html#Schedule.actor">actor</a>&gt;<a href="Practitioner-ExamplePractitioner.html" style="color: Maroon">&#x1F517;</a> 
           &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Practitioner/ExamplePractitioner&quot;/&gt;
-        &lt;/actor&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/schedule.html#Schedule.actor">actor</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/schedule.html#Schedule.actor">actor</a>&gt;<a href="PractitionerRole-ExamplePractitionerRoleAgregateur.html" style="color: Maroon">&#x1F517;</a> 
           &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
                      <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PractitionerRole/ExamplePractitionerRoleAgregateur&quot;/&gt;
-        &lt;/actor&gt;
-      &lt;/Schedule&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/schedule.html#Schedule.actor">actor</a>&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/schedule.html#Schedule">Schedule</a>&gt;
     &lt;/resource&gt;
     &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search">search</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search.mode">mode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;include&quot;/&gt;
-    &lt;/search&gt;
-  &lt;/entry&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search">search</a>&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>
              <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://&amp;lt;base_URl&amp;gt;/Practitioner/ExamplePractitioner&quot;/&gt;
@@ -390,32 +390,32 @@
         &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.meta">meta</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
                    <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-aggregator&quot;/&gt;
-        &lt;/meta&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.meta">meta</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.text">text</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
           &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;Practitioner_ExamplePractitioner&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Narratif généré : Praticien ExamplePractitioner&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;ExamplePractitioner&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcExamplePractitioner&quot;&gt; &lt;/a&gt;&lt;div style=&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%&quot;&gt;&lt;p style=&quot;margin-bottom: 0px&quot;/&gt;&lt;p style=&quot;margin-bottom: 0px&quot;&gt;Profil: &lt;a href=&quot;StructureDefinition-sas-practitioner-aggregator.html&quot;&gt;FrPractitionerAgregateur&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: Identifiant National de Professionnel de Santé/810002909371&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Pierre Foret &lt;/p&gt;&lt;/div&gt;
-        &lt;/text&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.text">text</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.identifier">identifier</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>&gt;
             &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
               &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
                       <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203&quot;/&gt;
               &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;IDNPS&quot;/&gt;
-            &lt;/coding&gt;
-          &lt;/type&gt;
+            &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+          &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;urn:oid:1.2.250.1.71.4.2.1&quot;/&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;810002909371&quot;/&gt;
-        &lt;/identifier&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.identifier">identifier</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.name">name</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.family">family</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Foret&quot;/&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">given</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Pierre&quot;/&gt;
-        &lt;/name&gt;
-      &lt;/Practitioner&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.name">name</a>&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner">Practitioner</a>&gt;
     &lt;/resource&gt;
     &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search">search</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search.mode">mode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;include&quot;/&gt;
-    &lt;/search&gt;
-  &lt;/entry&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search">search</a>&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>
              <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://&amp;lt;base_URl&amp;gt;/PractitionerRole/ExamplePractitionerRoleAgregateur&quot;/&gt;
@@ -425,57 +425,57 @@
         &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.meta">meta</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
                    <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-exercice-aggregator&quot;/&gt;
-        &lt;/meta&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.meta">meta</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.text">text</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
           &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;PractitionerRole_ExamplePractitionerRoleAgregateur&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Narratif généré : PractitionerRole ExamplePractitionerRoleAgregateur&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;ExamplePractitionerRoleAgregateur&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcExamplePractitionerRoleAgregateur&quot;&gt; &lt;/a&gt;&lt;div style=&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%&quot;&gt;&lt;p style=&quot;margin-bottom: 0px&quot;/&gt;&lt;p style=&quot;margin-bottom: 0px&quot;&gt;Profil: &lt;a href=&quot;StructureDefinition-sas-practitioner-role-exercice-aggregator.html&quot;&gt;FrPractitionerRoleExerciceAgregateur&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;practitioner&lt;/b&gt;: &lt;a href=&quot;Practitioner-ExamplePractitioner.html&quot;&gt;Practitioner Pierre Foret &lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;organization&lt;/b&gt;: Identifier: 412345678912345&lt;/p&gt;&lt;p&gt;&lt;b&gt;location&lt;/b&gt;: &lt;a href=&quot;#hcExamplePractitionerRoleAgregateur/ExampleLocation&quot;&gt;Location : identifier = Identifiant interne&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: &lt;a href=&quot;tel:+33561855977&quot;&gt;+33561855977&lt;/a&gt;&lt;/p&gt;&lt;hr/&gt;&lt;blockquote&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Narratif généré : Localisation #ExampleLocation&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;ExamplePractitionerRoleAgregateur/ExampleLocation&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcExamplePractitionerRoleAgregateur/ExampleLocation&quot;&gt; &lt;/a&gt;&lt;div style=&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%&quot;&gt;&lt;p style=&quot;margin-bottom: 0px&quot;/&gt;&lt;p style=&quot;margin-bottom: 0px&quot;&gt;Profil: &lt;a href=&quot;StructureDefinition-sas-location-aggregator.html&quot;&gt;FrLocationAgregateur&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: Identifiant interne/123456789&lt;/p&gt;&lt;p&gt;&lt;b&gt;address&lt;/b&gt;: 25 CHEMIN DE MOUNESTIE Aussonne 31840 &lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;
-        &lt;/text&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.text">text</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/location.html#Location">contained</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/location.html#Location">Location</a>&gt;
             &lt;<a href="http://hl7.org/fhir/R4/location.html#Location.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;ExampleLocation&quot;/&gt;
             &lt;<a href="http://hl7.org/fhir/R4/location.html#Location.meta">meta</a>&gt;
               &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
                        <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-location-aggregator&quot;/&gt;
-            &lt;/meta&gt;
+            &lt;/<a href="http://hl7.org/fhir/R4/location.html#Location.meta">meta</a>&gt;
             &lt;<a href="http://hl7.org/fhir/R4/location.html#Location.identifier">identifier</a>&gt;
               &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>&gt;
                 &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
                   &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
                           <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-identifier-type&quot;/&gt;
                   &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;INTRN&quot;/&gt;
-                &lt;/coding&gt;
-              &lt;/type&gt;
+                &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+              &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>&gt;
               &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://editeur.com&quot;/&gt;
               &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;123456789&quot;/&gt;
-            &lt;/identifier&gt;
+            &lt;/<a href="http://hl7.org/fhir/R4/location.html#Location.identifier">identifier</a>&gt;
             &lt;<a href="http://hl7.org/fhir/R4/location.html#Location.address">address</a>&gt;
               &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.line">line</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;25 CHEMIN DE MOUNESTIE&quot;/&gt;
               &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.city">city</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Aussonne&quot;/&gt;
               &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.postalCode">postalCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;31840&quot;/&gt;
-            &lt;/address&gt;
-          &lt;/Location&gt;
+            &lt;/<a href="http://hl7.org/fhir/R4/location.html#Location.address">address</a>&gt;
+          &lt;/<a href="http://hl7.org/fhir/R4/location.html#Location">Location</a>&gt;
         &lt;/contained&gt;
         &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.practitioner">practitioner</a>&gt;<a href="Practitioner-ExamplePractitioner.html" style="color: Maroon">&#x1F517;</a> 
           &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Practitioner/ExamplePractitioner&quot;/&gt;
-        &lt;/practitioner&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.practitioner">practitioner</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.organization">organization</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.identifier">identifier</a>&gt;
             &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;412345678912345&quot;/&gt;
-          &lt;/identifier&gt;
-        &lt;/organization&gt;
+          &lt;/<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.identifier">identifier</a>&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.organization">organization</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.location">location</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;#ExampleLocation&quot;/&gt;
-        &lt;/location&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.location">location</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.telecom">telecom</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;phone&quot;/&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;+33561855977&quot;/&gt;
-        &lt;/telecom&gt;
-      &lt;/PractitionerRole&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.telecom">telecom</a>&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole">PractitionerRole</a>&gt;
     &lt;/resource&gt;
     &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search">search</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search.mode">mode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;include&quot;/&gt;
-    &lt;/search&gt;
-  &lt;/entry&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search">search</a>&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>
              <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://&amp;lt;base_URl&amp;gt;/HealthcareService/ExampleHealthcareServiceCPTS1&quot;/&gt;
@@ -485,20 +485,20 @@
         &lt;<a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.meta">meta</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
                    <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-healthcareservice-aggregator&quot;/&gt;
-        &lt;/meta&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.meta">meta</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.text">text</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
           &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;HealthcareService_ExampleHealthcareServiceCPTS1&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Narratif généré : ServiceDeSanté ExampleHealthcareServiceCPTS1&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;ExampleHealthcareServiceCPTS1&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcExampleHealthcareServiceCPTS1&quot;&gt; &lt;/a&gt;&lt;div style=&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%&quot;&gt;&lt;p style=&quot;margin-bottom: 0px&quot;/&gt;&lt;p style=&quot;margin-bottom: 0px&quot;&gt;Profil: &lt;a href=&quot;StructureDefinition-sas-cpts-healthcareservice-aggregator.html&quot;&gt;FrHealthcareServiceAgregateurCPTS&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;providedBy&lt;/b&gt;: &lt;a href=&quot;Organization-ExampleOrgaCPTS1.html&quot;&gt;Organization CPTS AXE MAJEUR&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
-        &lt;/text&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.text">text</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.providedBy">providedBy</a>&gt;<a href="Organization-ExampleOrgaCPTS1.html" style="color: Maroon">&#x1F517;</a> 
           &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Organization/ExampleOrgaCPTS1&quot;/&gt;
-        &lt;/providedBy&gt;
-      &lt;/HealthcareService&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.providedBy">providedBy</a>&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService">HealthcareService</a>&gt;
     &lt;/resource&gt;
     &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search">search</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search.mode">mode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;include&quot;/&gt;
-    &lt;/search&gt;
-  &lt;/entry&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search">search</a>&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://&amp;lt;base_URl&amp;gt;/Organization/ExampleOrgaCPTS1&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization">resource</a>&gt;
@@ -507,34 +507,34 @@
         &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.meta">meta</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
                    <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-organization-aggregator&quot;/&gt;
-        &lt;/meta&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/organization.html#Organization.meta">meta</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.text">text</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
           &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;Organization_ExampleOrgaCPTS1&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Narratif généré : Organisation ExampleOrgaCPTS1&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;ExampleOrgaCPTS1&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcExampleOrgaCPTS1&quot;&gt; &lt;/a&gt;&lt;div style=&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%&quot;&gt;&lt;p style=&quot;margin-bottom: 0px&quot;/&gt;&lt;p style=&quot;margin-bottom: 0px&quot;&gt;Profil: &lt;a href=&quot;StructureDefinition-sas-cpts-organization-aggregator.html&quot;&gt;FrOrganizationAgregateurCPTS&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: Identification nationale de structure définie par l’ANS dans le CI_SIS/1950047225&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: CPTS AXE MAJEUR&lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: &lt;a href=&quot;tel:+33102030405&quot;&gt;+33102030405&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
-        &lt;/text&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/organization.html#Organization.text">text</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.identifier">identifier</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>&gt;
             &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
               &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
                       <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203&quot;/&gt;
               &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;IDNST&quot;/&gt;
-            &lt;/coding&gt;
-          &lt;/type&gt;
+            &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+          &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;urn:oid:1.2.250.1.71.4.2.2&quot;/&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;1950047225&quot;/&gt;
-        &lt;/identifier&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/organization.html#Organization.identifier">identifier</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;CPTS AXE MAJEUR&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.telecom">telecom</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;phone&quot;/&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;+33102030405&quot;/&gt;
-        &lt;/telecom&gt;
-      &lt;/Organization&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/organization.html#Organization.telecom">telecom</a>&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/organization.html#Organization">Organization</a>&gt;
     &lt;/resource&gt;
     &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search">search</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search.mode">mode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;include&quot;/&gt;
-    &lt;/search&gt;
-  &lt;/entry&gt;
-&lt;/Bundle&gt;</code></pre>
+    &lt;/<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search">search</a>&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
+&lt;/<a href="http://hl7.org/fhir/R4/bundle.html#Bundle">Bundle</a>&gt;</code></pre>
 
 
   <!-- insert notes if present -->
@@ -580,7 +580,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jul 9, 2025 16:04+0000">2025-07-09</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Aug 18, 2025 13:47+0000">2025-08-18</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
