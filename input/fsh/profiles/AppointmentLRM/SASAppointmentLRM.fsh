@@ -13,7 +13,6 @@ Description: "Profil de Appointment, dérivé de FrAppointment, pour le cas d'us
 // 1 ou n ?
 * specialty MS
 * start 1..
-* end 1..
 * created MS
 * participant.actor only Reference(SASPractitionerLRM or SASHealthcareServiceLRM)
 * participant.actor MS
