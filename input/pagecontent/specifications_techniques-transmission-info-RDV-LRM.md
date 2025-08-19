@@ -4,5 +4,5 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
 Le schéma ci-dessous illustre l'échange de données entre la PTF SAS et les éditeurs de LRM
 
 <div class="figure" style="width:100%;" align ="center">
-    <p>{% include schemaHub.plantuml.svg %}</p>
+    <p>{% include schemaHub.svg %}</p>
 </div>
