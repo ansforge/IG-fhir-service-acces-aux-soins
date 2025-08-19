@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "SAS"] ; # 
   fhir:title [ fhir:v "Service d'Accès aux Soins"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2025-08-18T13:46:32+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-08-19T13:46:05+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -2950,6 +2950,20 @@
            fhir:v "specifications_techniques-sos-gestion_rdv.html"^^xsd:anyURI
          ] ;
          fhir:title [ fhir:v "SOS Médecins - Gestion de rendez-vous" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:url ;
+             fhir:v "specifications_techniques-transmission-info-RDV-LRM.html"^^xsd:anyURI
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "specifications_techniques-transmission-info-RDV-LRM.html"^^xsd:anyURI
+         ] ;
+         fhir:title [ fhir:v "Transmission des informations de rendez-vous aux LRM" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
