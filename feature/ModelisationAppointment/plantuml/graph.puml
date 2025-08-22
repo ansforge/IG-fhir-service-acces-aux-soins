@@ -11,6 +11,7 @@ package IG #DDDDDD{
 
              Appointment => [None..None]
              Appointment.meta.profile:sas-appointment-ds => [0..1]
+             Appointment.extension:categorieOrientation => <&plus>[0..*]
              Appointment.identifier => [1..1]
              Appointment.identifier.system => [None..None]
              Appointment.identifier.value => [1..None]
@@ -365,11 +366,18 @@ package IG #DDDDDD{
      }
      package extension #paleturquoise {
 
+     SASAppointmentLRM -[#black,dashed,thickness=2]-> CategorieOrientation
      FrSlotAgregateurCPTS -[#black,dashed,thickness=2]-> SASServiceTypeR5
      FrSlotAgregateurCPTS -[#black,dashed,thickness=2]-> SASServiceTypeR5
      FrSlotAgregateurCPTS -[#black,dashed,thickness=2]-> SASServiceTypeR5
      FrSlotAgregateurCPTS -[#black,dashed,thickness=2]-> SASServiceTypeR5
 
+        class CategorieOrientation{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
         class SASServiceTypeR5{
 
           Extension.extension => [None..0]
@@ -378,6 +386,10 @@ package IG #DDDDDD{
          }
      }
      package valueset #PaleVioletRed{
+
+        class CategorieOrientationSASValueSet  
+
+     CategorieOrientation -[#black,dotted,thickness=2]-> CategorieOrientationSASValueSet
 
         class TypeCreneauSASCPTS  
 

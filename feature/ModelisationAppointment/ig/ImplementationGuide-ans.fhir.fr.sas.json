@@ -10,7 +10,7 @@
   "name" : "SAS",
   "title" : "Service d'Accès aux Soins",
   "status" : "active",
-  "date" : "2025-08-19T14:52:01+00:00",
+  "date" : "2025-08-22T10:17:30+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -689,6 +689,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/sas-categorie-orientation"
+      },
+      "name" : "CategorieOrientation",
+      "description" : "Extension créée afin pour ajouter la catégorie d'orientation dans un RDV",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
       }],
       "reference" : {
@@ -696,6 +708,18 @@
       },
       "name" : "Catégorie établissement SAS",
       "description" : "Catégorie d'établissement utilisée dans contexte SAS - CPTS dans un premier temps",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/categorie-orientation-sas-codesystem"
+      },
+      "name" : "Code système catégorie orientation SAS",
+      "description" : "Code système permettant de définir la catégorie d'orientation SAS spécifique qui n'est pas considéré comme un établissement de soins et qui permet de catégoriser l'orientation de soins",
       "exampleBoolean" : false
     },
     {
@@ -1872,6 +1896,18 @@
       },
       "name" : "Type identifiant SAS",
       "description" : "Type d'identifiant SAS",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/categorie-orientation-sas-valueset"
+      },
+      "name" : "Value set catégorie orientation SAS",
+      "description" : "Valueset permettant de définir la catégorie d'orientation SAS. Il regroupe des codes de la TRE-R66 et du codesystem catégorie d'orientation SAS",
       "exampleBoolean" : false
     }],
     "page" : {

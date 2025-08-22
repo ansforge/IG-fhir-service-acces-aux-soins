@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "SAS"] ; # 
   fhir:title [ fhir:v "Service d'Accès aux Soins"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2025-08-19T14:52:01+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-08-22T10:17:30+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -949,6 +949,24 @@
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-categorie-orientation> ;
+         fhir:reference [ fhir:v "StructureDefinition/sas-categorie-orientation" ]
+       ] ;
+       fhir:name [ fhir:v "CategorieOrientation" ] ;
+       fhir:description [ fhir:v "Extension créée afin pour ajouter la catégorie d'orientation dans un RDV" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
            fhir:v "ValueSet"
          ]
        ] ) ;
@@ -958,6 +976,24 @@
        ] ;
        fhir:name [ fhir:v "Catégorie établissement SAS" ] ;
        fhir:description [ fhir:v "Catégorie d'établissement utilisée dans contexte SAS - CPTS dans un premier temps" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/CodeSystem/categorie-orientation-sas-codesystem> ;
+         fhir:reference [ fhir:v "CodeSystem/categorie-orientation-sas-codesystem" ]
+       ] ;
+       fhir:name [ fhir:v "Code système catégorie orientation SAS" ] ;
+       fhir:description [ fhir:v "Code système permettant de définir la catégorie d'orientation SAS spécifique qui n'est pas considéré comme un établissement de soins et qui permet de catégoriser l'orientation de soins" ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false
@@ -2778,6 +2814,24 @@
        ] ;
        fhir:name [ fhir:v "Type identifiant SAS" ] ;
        fhir:description [ fhir:v "Type d'identifiant SAS" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/categorie-orientation-sas-valueset> ;
+         fhir:reference [ fhir:v "ValueSet/categorie-orientation-sas-valueset" ]
+       ] ;
+       fhir:name [ fhir:v "Value set catégorie orientation SAS" ] ;
+       fhir:description [ fhir:v "Valueset permettant de définir la catégorie d'orientation SAS. Il regroupe des codes de la TRE-R66 et du codesystem catégorie d'orientation SAS" ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false

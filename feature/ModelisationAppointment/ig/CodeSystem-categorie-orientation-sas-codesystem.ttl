@@ -1,0 +1,55 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/sas/CodeSystem/categorie-orientation-sas-codesystem> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "categorie-orientation-sas-codesystem"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : CodeSystem categorie-orientation-sas-codesystem</b></p><a name=\"categorie-orientation-sas-codesystem\"> </a><a name=\"hccategorie-orientation-sas-codesystem\"> </a><p>This  code system <code>https://interop.esante.gouv.fr/ig/fhir/sas/CodeSystem/categorie-orientation-sas-codesystem</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Définition</b></td></tr><tr><td style=\"white-space:nowrap\">PS<a name=\"categorie-orientation-sas-codesystem-PS\"> </a></td><td>psIndividuel</td><td>Catégorie PS à titre individuel</td></tr><tr><td style=\"white-space:nowrap\">PDM<a name=\"categorie-orientation-sas-codesystem-PDM\"> </a></td><td>placeDeMarche</td><td>Catégorie Place de marché</td></tr><tr><td style=\"white-space:nowrap\">SOS<a name=\"categorie-orientation-sas-codesystem-SOS\"> </a></td><td>sos</td><td>Catégorie SOS Médecins</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/CodeSystem/categorie-orientation-sas-codesystem"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.1.0"] ; # 
+  fhir:name [ fhir:v "CategorieOrientationSASCodeSystem"] ; # 
+  fhir:title [ fhir:v "Code système catégorie orientation SAS"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2025-08-22T10:17:30+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "ANS"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "ANS" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://esante.gouv.fr" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Code système permettant de définir la catégorie d'orientation SAS spécifique qui n'est pas considéré comme un établissement de soins et qui permet de catégoriser l'orientation de soins"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "FR" ] ;
+       fhir:display [ fhir:v "FRANCE" ]
+     ] )
+  ] ) ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "3"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "PS" ] ;
+     fhir:display [ fhir:v "psIndividuel" ] ;
+     fhir:definition [ fhir:v "Catégorie PS à titre individuel" ]
+  ] [
+     fhir:code [ fhir:v "PDM" ] ;
+     fhir:display [ fhir:v "placeDeMarche" ] ;
+     fhir:definition [ fhir:v "Catégorie Place de marché" ]
+  ] [
+     fhir:code [ fhir:v "SOS" ] ;
+     fhir:display [ fhir:v "sos" ] ;
+     fhir:definition [ fhir:v "Catégorie SOS Médecins" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -57,6 +57,21 @@
       "StructureDefinition-sas-slot-aggregator.html" : "FrSlotAgregateur"
     },
     {
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/categorie-orientation-sas-valueset",
+      "version" : "1.1.0",
+      "status" : "active",
+      "name" : "CategorieOrientationSASValueSet",
+      "title" : "Value set catégorie orientation SAS",
+      "description" : "Valueset permettant de définir la catégorie d'orientation SAS. Il regroupe des codes de la TRE-R66 et du codesystem catégorie d'orientation SAS",
+      "systems" : [
+        "https://interop.esante.gouv.fr/ig/fhir/sas/CodeSystem/categorie-orientation-sas-codesystem",
+        "https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-sas-categorie-orientation.html" : "CategorieOrientation"
+    },
+    {
       "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-cpts-valueset-typecreneau",
       "version" : "1.1.0",
       "status" : "active",
@@ -106,9 +121,9 @@
       "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0276"],
       "uses" : {
       },
-      "StructureDefinition-sas-slot-aggregator.html" : "FrSlotAgregateur",
+      "StructureDefinition-sas-sos-slot-aggregator.html" : "FrSlotAgregateurSOS",
       "StructureDefinition-sas-cpts-slot-aggregator.html" : "FrSlotAgregateurCPTS",
-      "StructureDefinition-sas-sos-slot-aggregator.html" : "FrSlotAgregateurSOS"
+      "StructureDefinition-sas-slot-aggregator.html" : "FrSlotAgregateur"
     },
     {
       "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-categorieetablissement",
@@ -134,8 +149,8 @@
       "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
       "uses" : {
       },
-      "StructureDefinition-sas-slot-aggregator.html" : "FrSlotAgregateur",
-      "StructureDefinition-sas-sos-slot-aggregator.html" : "FrSlotAgregateurSOS"
+      "StructureDefinition-sas-sos-slot-aggregator.html" : "FrSlotAgregateurSOS",
+      "StructureDefinition-sas-slot-aggregator.html" : "FrSlotAgregateur"
     },
     {
       "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-typeidentifiant",

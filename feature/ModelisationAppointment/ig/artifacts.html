@@ -251,7 +251,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <a href="#6">Terminology: Value Sets</a>
       </li>
       <li>
-         <a href="#7">Example: Example Instances</a>
+         <a href="#7">Terminology: Code Systems</a>
+      </li>
+      <li>
+         <a href="#8">Example: Example Instances</a>
       </li>
    </ul>
 </div>
@@ -650,6 +653,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
+               <a href="StructureDefinition-sas-categorie-orientation.html"
+                  title="StructureDefinition/sas-categorie-orientation">CategorieOrientation</a>
+            </td>
+            <td>
+<p>Extension créée afin pour ajouter la catégorie d'orientation dans un RDV</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="StructureDefinition-sas-cpts-slot-servicetype-aggregator.html"
                   title="StructureDefinition/sas-cpts-slot-servicetype-aggregator">SASServiceTypeR5</a>
             </td>
@@ -728,9 +740,35 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>Type d'identifiant SAS</p>
 </td>
          </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-categorie-orientation-sas-valueset.html"
+                  title="ValueSet/categorie-orientation-sas-valueset">Value set catégorie orientation SAS</a>
+            </td>
+            <td>
+<p>Valueset permettant de définir la catégorie d'orientation SAS. Il regroupe des codes de la TRE-R66 et du codesystem catégorie d'orientation SAS</p>
+</td>
+         </tr>
       </tbody>
    </table>
    <a name="7"> </a>
+   <h3>Terminology: Code Systems </h3>
+    <p>These define new code systems used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-categorie-orientation-sas-codesystem.html"
+                  title="CodeSystem/categorie-orientation-sas-codesystem">Code système catégorie orientation SAS</a>
+            </td>
+            <td>
+<p>Code système permettant de définir la catégorie d'orientation SAS spécifique qui n'est pas considéré comme un établissement de soins et qui permet de catégoriser l'orientation de soins</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="8"> </a>
    <h3>Example: Example Instances </h3>
     <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.</p>
 <table class="grid">
@@ -1261,7 +1299,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Aug 19, 2025 14:52+0000">2025-08-19</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Aug 22, 2025 10:18+0000">2025-08-22</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
