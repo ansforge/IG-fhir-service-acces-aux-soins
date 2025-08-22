@@ -18,4 +18,4 @@ Description: "Profil de Appointment, dérivé de FrAppointment, pour le cas d'us
 * participant.actor MS
 // le statut est obligatoire - transmettre booked systématiquement pour un RDV SAS
 * participant.status MS
-* extension sas-categorie-orientation 0..*
+* extension contains sas-categorie-orientation as categorieOrientation 0..*
