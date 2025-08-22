@@ -14,11 +14,11 @@ Usage: #example
 * entry[practitionerentry].request.url = "Practitioner"
 
 * entry[organizationentry].resource = ExampleSasOrganization1
-* entry[organizationentry].fullUrl = "https://<base_URl>/Organization/ExampleSasOrganization"
+* entry[organizationentry].fullUrl = "https://<base_URl>/Organization/ExampleSasOrganization1"
 * entry[organizationentry].request.method = #POST
 * entry[organizationentry].request.url = "Organization"
 
 * entry[practitionerRoleentry].resource = ExamplePractitionerRoleAppointment1
-* entry[practitionerRoleentry].fullUrl = "https://<base_URl>/PractitionerRole/ExamplePractitionerRoleAppointment"
+* entry[practitionerRoleentry].fullUrl = "https://<base_URl>/PractitionerRole/ExamplePractitionerRoleAppointment1"
 * entry[practitionerRoleentry].request.method = #POST
 * entry[practitionerRoleentry].request.url = "PractitionerRole"
