@@ -4,5 +4,5 @@ Description: "Extension créée afin pour ajouter la catégorie d'orientation da
 * ^context.type = #element
 * ^context.expression = "Appointment"
 
-* value[x] only code
-* valueCode from categorie-orientation-sas-valueset (required)
+* value[x] only CodeableConcept
+* valueCodeableConcept from categorie-orientation-sas-valueset (required)
