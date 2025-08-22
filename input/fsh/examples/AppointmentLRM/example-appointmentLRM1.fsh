@@ -9,3 +9,4 @@ Usage: #example
 * created = "2025-06-17T10:15:56+01:00"
 * participant.actor = Reference(ExamplePractitionerLRM)
 * participant.status = #accepted
+* extension[categorieOrientation].valueCodeableConcept = #SOS
