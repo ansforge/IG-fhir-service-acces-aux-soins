@@ -1,10 +1,10 @@
-Instance: ExampleBundleAppointmentLRM5
+Instance: ExampleBundleAppointmentLRM6
 InstanceOf: SASBundleAppointmentLRM
-Description: "Exemple Bundle RDV LRM 5 - Cas mise à jour d'un RDV initialement sans PS avec ajout du médecin"
+Description: "Exemple Bundle RDV LRM 6 - Cas RDV avec PS mais sans structure, exemple PS. indiv"
 Usage: #example
 
-* entry[appointmententry].resource = ExampleAppointmentLRM3
-* entry[appointmententry].fullUrl = "https://<base_URl>/Appointment/ExampleAppointmentLRM3"
+* entry[appointmententry].resource = ExampleAppointmentLRM6
+* entry[appointmententry].fullUrl = "https://<base_URl>/Appointment/ExampleAppointmentLRM6"
 * entry[appointmententry].request.method = #PUT
 * entry[appointmententry].request.url = "Appointment/ExampleAppointmentLRM4"
 
