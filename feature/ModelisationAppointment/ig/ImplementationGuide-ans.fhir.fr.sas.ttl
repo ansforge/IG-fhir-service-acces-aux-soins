@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "SAS"] ; # 
   fhir:title [ fhir:v "Service d'Accès aux Soins"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2025-08-22T15:03:40+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-08-22T16:11:41+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -1012,24 +1012,6 @@
        ] ;
        fhir:name [ fhir:v "cptsslot-sp-servicetype" ] ;
        fhir:description [ fhir:v "Paramètre de recherche sur le service type qui mime le paramètre R5. Permet de rechercher ou d'inclure la ressource reférencée HealthCare Service" ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:logical"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-effecteur-logical> ;
-         fhir:reference [ fhir:v "StructureDefinition/sas-effecteur-logical" ]
-       ] ;
-       fhir:name [ fhir:v "Effecteur de soins" ] ;
-       fhir:description [ fhir:v "Modélisation d'un effecteur de soins - médecin auprès de qui le RDV est pris" ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false
@@ -2430,24 +2412,6 @@
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
-           fhir:v "StructureDefinition:logical"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-organisation-logical> ;
-         fhir:reference [ fhir:v "StructureDefinition/sas-organisation-logical" ]
-       ] ;
-       fhir:name [ fhir:v "Organisation" ] ;
-       fhir:description [ fhir:v "Modélisation d'une structure (organisation)" ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
            fhir:v "CapabilityStatement"
          ]
        ] ) ;
@@ -2610,24 +2574,6 @@
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
-           fhir:v "StructureDefinition:logical"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-rdv-logical> ;
-         fhir:reference [ fhir:v "StructureDefinition/sas-rdv-logical" ]
-       ] ;
-       fhir:name [ fhir:v "RDV" ] ;
-       fhir:description [ fhir:v "Modélisation d'un RDV" ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
            fhir:v "StructureDefinition:resource"
          ]
        ] ) ;
@@ -2745,24 +2691,6 @@
        ] ;
        fhir:name [ fhir:v "SASServiceTypeR5" ] ;
        fhir:description [ fhir:v "Extension créée afin de permettre la reference à la ressource HealthcareService. Cette extension implemente l'élément serviceType de R5 https://hl7.org/fhir/slot-definitions.html#Slot.serviceType" ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:logical"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-situationoperationnelle-logical> ;
-         fhir:reference [ fhir:v "StructureDefinition/sas-situationoperationnelle-logical" ]
-       ] ;
-       fhir:name [ fhir:v "Situation opérationnelle" ] ;
-       fhir:description [ fhir:v "Modélisation de la situation opérationnelle d'un médecin" ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false

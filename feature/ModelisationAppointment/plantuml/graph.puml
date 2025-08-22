@@ -152,14 +152,6 @@ package IG #DDDDDD{
              Slot.status => [None..None]
         } 
 
-        class Effecteur{
-
-             sas-effecteur-logical => [None..None]
-             sas-effecteur-logical.identifiant => [1..1]
-             sas-effecteur-logical.nom => [1..1]
-             sas-effecteur-logical.prenom => [1..1]
-        } 
-
         class SASHealthcareServiceLRM{
 
              HealthcareService.meta.profile:sas-healthcareservice => [0..1]
@@ -173,13 +165,6 @@ package IG #DDDDDD{
              Location.address.line => [1..1]
              Location.address.city => [1..None]
              Location.address.postalCode => [1..None]
-        } 
-
-        class Organisation{
-
-             sas-organisation-logical => [None..None]
-             sas-organisation-logical.identifiant => [1..1]
-             sas-organisation-logical.nom => [1..1]
         } 
 
         class SASOrganizationLRM{
@@ -237,33 +222,10 @@ package IG #DDDDDD{
              PractitionerRole.organization => [1..None]
         } 
 
-        class RDV{
-
-             sas-rdv-logical => [None..None]
-             sas-rdv-logical.identifiant => [1..1]
-             sas-rdv-logical.cleechange => [0..1]
-             sas-rdv-logical.typerdv => [0..1]
-             sas-rdv-logical.sourcerdv => [0..1]
-             sas-rdv-logical.debut => [1..1]
-             sas-rdv-logical.fin => [1..1]
-             sas-rdv-logical.creation => [0..1]
-             sas-rdv-logical.specialite => [1..1]
-             sas-rdv-logical.participant => [1..1]
-             sas-rdv-logical.participant.status => [1..1]
-        } 
-
         class FrScheduleAgregateur{
 
              Schedule.meta.profile:sas-schedule-aggregator => [0..1]
              Schedule.actor => [None..None]
-        } 
-
-        class SituationOperationnelle{
-
-             sas-situationoperationnelle-logical => [None..None]
-             sas-situationoperationnelle-logical.identifiant => [1..1]
-             sas-situationoperationnelle-logical.effecteur => [1..1]
-             sas-situationoperationnelle-logical.organisation => [0..1]
         } 
 
         class FrSlotAgregateur{
@@ -467,10 +429,6 @@ package "Ressources de base" #palegreen {
 
     classf72d01e910d5b05afa3e849c0230ac33 --> FrSlotAgregateurCPTS
 
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> Effecteur
-
  class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-healthcare-service" as  class926ccf2bb5a615fff3ac07e356f8a997 
 
     class926ccf2bb5a615fff3ac07e356f8a997 --> SASHealthcareServiceLRM
@@ -478,10 +436,6 @@ package "Ressources de base" #palegreen {
  class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-location" as  class505b865d93b3b02ed3aff95e782d498a 
 
     class505b865d93b3b02ed3aff95e782d498a --> FrLocationAgregateur
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> Organisation
 
  class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization" as  class7273115ddeceb35c4c7044f07f832f67 
 
@@ -507,17 +461,9 @@ package "Ressources de base" #palegreen {
 
     class32e744761be9cc693fcaf56d8ca68b99 --> SASPractitionerRoleLRM
 
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> RDV
-
  class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-schedule" as  class7c912eb91080e8d9a809e267903ad8a9 
 
     class7c912eb91080e8d9a809e267903ad8a9 --> FrScheduleAgregateur
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> SituationOperationnelle
 
  class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-slot" as  classf72d01e910d5b05afa3e849c0230ac33 
 

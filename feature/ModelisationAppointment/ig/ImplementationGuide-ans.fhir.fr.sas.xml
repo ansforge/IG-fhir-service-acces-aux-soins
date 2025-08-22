@@ -10,7 +10,7 @@
   <name value="SAS"/>
   <title value="Service d'Accès aux Soins"/>
   <status value="active"/>
-  <date value="2025-08-22T15:03:40+00:00"/>
+  <date value="2025-08-22T16:11:41+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -561,17 +561,6 @@
       </reference>
       <name value="cptsslot-sp-servicetype"/>
       <description value="Paramètre de recherche sur le service type qui mime le paramètre R5. Permet de rechercher ou d'inclure la ressource reférencée HealthCare Service"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/sas-effecteur-logical"/>
-      </reference>
-      <name value="Effecteur de soins"/>
-      <description value="Modélisation d'un effecteur de soins - médecin auprès de qui le RDV est pris"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1390,17 +1379,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/sas-organisation-logical"/>
-      </reference>
-      <name value="Organisation"/>
-      <description value="Modélisation d'une structure (organisation)"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="CapabilityStatement"/>
       </extension>
       <reference>
@@ -1500,17 +1478,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/sas-rdv-logical"/>
-      </reference>
-      <name value="RDV"/>
-      <description value="Modélisation d'un RDV"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
@@ -1584,17 +1551,6 @@
       </reference>
       <name value="SASServiceTypeR5"/>
       <description value="Extension créée afin de permettre la reference à la ressource HealthcareService. Cette extension implemente l'élément serviceType de R5 https://hl7.org/fhir/slot-definitions.html#Slot.serviceType"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/sas-situationoperationnelle-logical"/>
-      </reference>
-      <name value="Situation opérationnelle"/>
-      <description value="Modélisation de la situation opérationnelle d'un médecin"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
