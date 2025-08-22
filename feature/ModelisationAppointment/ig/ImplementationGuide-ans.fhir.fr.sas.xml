@@ -10,7 +10,7 @@
   <name value="SAS"/>
   <title value="Service d'Accès aux Soins"/>
   <status value="active"/>
-  <date value="2025-08-22T13:23:20+00:00"/>
+  <date value="2025-08-22T14:29:38+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -653,6 +653,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Appointment"/>
+      </extension>
+      <reference>
+        <reference value="Appointment/ExampleAppointmentLRM6"/>
+      </reference>
+      <name value="ExampleAppointmentLRM6"/>
+      <description value="Exemple RDV LRM 6"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Bundle"/>
       </extension>
       <reference>
@@ -670,7 +681,7 @@
         <reference value="Bundle/ExampleBundleAppointmentLRM1"/>
       </reference>
       <name value="ExampleBundleAppointmentLRM1"/>
-      <description value="Exemple Bundle RDV LRM 1 - Cas SOS Médecin interfacé après réception du PS"/>
+      <description value="Exemple Bundle RDV LRM 1 - Cas SOS Médecin non interfacé avec PS et structure"/>
       <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"/>
     </resource>
     <resource>
@@ -681,7 +692,7 @@
         <reference value="Bundle/ExampleBundleAppointmentLRM2"/>
       </reference>
       <name value="ExampleBundleAppointmentLRM2"/>
-      <description value="Exemple Bundle RDV LRM 2 - Cas CDS non interfacé"/>
+      <description value="Exemple Bundle RDV LRM 2 - Cas CDS non interfacé (structure sans PS)"/>
       <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"/>
     </resource>
     <resource>
@@ -703,7 +714,7 @@
         <reference value="Bundle/ExampleBundleAppointmentLRM4"/>
       </reference>
       <name value="ExampleBundleAppointmentLRM4"/>
-      <description value="Exemple Bundle RDV LRM 4 - Cas RDV sans PS ni structure"/>
+      <description value="Exemple Bundle RDV LRM 4 - Cas RDV sans PS ni structure. Ex : SOS Médecins en attente d'attribution médecin"/>
       <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"/>
     </resource>
     <resource>
@@ -715,6 +726,17 @@
       </reference>
       <name value="ExampleBundleAppointmentLRM5"/>
       <description value="Exemple Bundle RDV LRM 5 - Cas mise à jour d'un RDV initialement sans PS avec ajout du médecin"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/ExampleBundleAppointmentLRM6"/>
+      </reference>
+      <name value="ExampleBundleAppointmentLRM6"/>
+      <description value="Exemple Bundle RDV LRM 6 - Cas RDV avec PS mais sans structure, exemple PS. indiv"/>
       <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"/>
     </resource>
     <resource>
