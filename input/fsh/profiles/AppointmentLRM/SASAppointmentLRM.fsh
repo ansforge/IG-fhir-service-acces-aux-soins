@@ -12,8 +12,9 @@ Description: "Profil de Appointment, dérivé de FrAppointment, pour le cas d'us
 * identifier.value 1..
 // 1 ou n ?
 * specialty MS
-* start 1..
-* created MS
+* start 1..1
+* end 1..1
+* created 1..1
 * participant.actor only Reference(SASPractitionerLRM or SASHealthcareServiceLRM)
 * participant.actor MS
 // le statut est obligatoire - transmettre booked systématiquement pour un RDV SAS
