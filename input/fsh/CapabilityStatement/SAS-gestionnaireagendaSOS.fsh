@@ -25,7 +25,6 @@ Usage: #definition
 * rest.resource[=].searchInclude[+] = "Location:organization"
 
 * rest.resource[=].searchParam[+].name = "_has"
-//* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-has"
 * rest.resource[=].searchParam[=].type = #special
 * rest.resource[=].searchParam[=].documentation = "Permet la sélection des ressources en fonction des propriétés des ressources qui y font référence (reverse chaining)"
 

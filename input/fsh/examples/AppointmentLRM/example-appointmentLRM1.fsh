@@ -1,6 +1,6 @@
 Instance: ExampleAppointmentLRM1
 InstanceOf: SASAppointmentLRM
-Description: "Exemple RDV LRM 1"
+Description: "Exemple RDV LRM 1 - SOS Médecin interfacé"
 Usage: #example
 
 * identifier.value = "12344"

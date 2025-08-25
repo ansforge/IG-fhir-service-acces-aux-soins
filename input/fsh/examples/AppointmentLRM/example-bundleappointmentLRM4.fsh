@@ -1,6 +1,6 @@
 Instance: ExampleBundleAppointmentLRM4
 InstanceOf: SASBundleAppointmentLRM
-Description: "Exemple Bundle RDV LRM 4 - Cas RDV sans PS ni structure. Ex : SOS Médecins en attente d'attribution médecin"
+Description: "Exemple Bundle RDV LRM 4 - Cas RDV sans PS ni structure. Ex : SOS Médecins interfacé en attente d'attribution médecin"
 Usage: #example
 
 * entry[appointmententry].resource = ExampleAppointmentLRM4
