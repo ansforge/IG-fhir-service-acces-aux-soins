@@ -6,28 +6,28 @@
   },
   "type" : "transaction",
   "entry" : [{
-    "fullUrl" : "https://<base_URl>/Appointment/ExampleAppointmentLRM1",
+    "fullUrl" : "https://<base_URl>/Appointment/ExampleAppointmentLRM2",
     "resource" : {
       "resourceType" : "Appointment",
-      "id" : "ExampleAppointmentLRM1",
+      "id" : "ExampleAppointmentLRM2",
       "meta" : {
         "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"]
       },
       "text" : {
         "status" : "extensions",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Appointment_ExampleAppointmentLRM1\"> </a><p class=\"res-header-id\"><b>Narratif généré : RendezVous ExampleAppointmentLRM1</b></p><a name=\"ExampleAppointmentLRM1\"> </a><a name=\"hcExampleAppointmentLRM1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-appointment-lrm.html\">SASAppointmentLRM</a></p></div><p><b>CategorieOrientation</b>: <span title=\"Codes:{https://interop.esante.gouv.fr/ig/fhir/sas/CodeSystem/categorie-orientation-sas-codesystem SOS}\">sos</span></p><p><b>identifier</b>: 12344</p><p><b>status</b>: Booked</p><p><b>start</b>: 2025-06-17 14:00:00+0100</p><p><b>end</b>: 2025-06-17 14:20:00+0100</p><p><b>created</b>: 2025-06-17 10:15:56+0100</p><h3>Participants</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td><td><b>Status</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner-ExamplePractitionerLRM.html\">Practitioner Jean Dupont </a></td><td>Accepted</td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Appointment_ExampleAppointmentLRM2\"> </a><p class=\"res-header-id\"><b>Narratif généré : RendezVous ExampleAppointmentLRM2</b></p><a name=\"ExampleAppointmentLRM2\"> </a><a name=\"hcExampleAppointmentLRM2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-appointment-lrm.html\">SASAppointmentLRM</a></p></div><p><b>CategorieOrientation</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement 124}\">Centre de Santé</span></p><p><b>identifier</b>: 12346</p><p><b>status</b>: Booked</p><p><b>start</b>: 2025-06-17 14:00:00+0100</p><p><b>end</b>: 2025-06-17 14:20:00+0100</p><p><b>created</b>: 2025-06-17 10:15:56+0100</p><h3>Participants</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td><td><b>Status</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"HealthcareService-ExampleHealthcareService2.html\">HealthcareService</a></td><td>Accepted</td></tr></table></div>"
       },
       "extension" : [{
         "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-categorie-orientation",
         "valueCodeableConcept" : {
           "coding" : [{
-            "system" : "https://interop.esante.gouv.fr/ig/fhir/sas/CodeSystem/categorie-orientation-sas-codesystem",
-            "code" : "SOS"
+            "system" : "https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement",
+            "code" : "124"
           }]
         }
       }],
       "identifier" : [{
-        "value" : "12344"
+        "value" : "12346"
       }],
       "status" : "booked",
       "start" : "2025-06-17T14:00:00+01:00",
@@ -35,7 +35,7 @@
       "created" : "2025-06-17T10:15:56+01:00",
       "participant" : [{
         "actor" : {
-          "reference" : "Practitioner/ExamplePractitionerLRM"
+          "reference" : "HealthcareService/ExampleHealthcareService2"
         },
         "status" : "accepted"
       }]
@@ -75,16 +75,16 @@
     }
   },
   {
-    "fullUrl" : "https://<base_URl>/HealthcareService/ExampleHealthcareService",
+    "fullUrl" : "https://<base_URl>/HealthcareService/ExampleHealthcareService1",
     "resource" : {
       "resourceType" : "HealthcareService",
-      "id" : "ExampleHealthcareService",
+      "id" : "ExampleHealthcareService1",
       "meta" : {
         "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-healthcareservice-lrm"]
       },
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"HealthcareService_ExampleHealthcareService\"> </a><p class=\"res-header-id\"><b>Narratif généré : ServiceDeSanté ExampleHealthcareService</b></p><a name=\"ExampleHealthcareService\"> </a><a name=\"hcExampleHealthcareService\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-healthcareservice-lrm.html\">SASHealthcareServiceLRM</a></p></div><p><b>providedBy</b>: <a href=\"Organization-ExampleSasOrganization2.html\">Organization CDS DENTAIRE</a></p></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"HealthcareService_ExampleHealthcareService1\"> </a><p class=\"res-header-id\"><b>Narratif généré : ServiceDeSanté ExampleHealthcareService1</b></p><a name=\"ExampleHealthcareService1\"> </a><a name=\"hcExampleHealthcareService1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-healthcareservice-lrm.html\">SASHealthcareServiceLRM</a></p></div><p><b>providedBy</b>: <a href=\"Organization-ExampleSasOrganization2.html\">Organization CDS DENTAIRE</a></p></div>"
       },
       "providedBy" : {
         "reference" : "Organization/ExampleSasOrganization2"

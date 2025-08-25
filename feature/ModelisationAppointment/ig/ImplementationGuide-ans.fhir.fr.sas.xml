@@ -10,7 +10,7 @@
   <name value="SAS"/>
   <title value="Service d'Accès aux Soins"/>
   <status value="active"/>
-  <date value="2025-08-25T06:59:32+00:00"/>
+  <date value="2025-08-25T09:39:34+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -593,7 +593,7 @@
         <reference value="Appointment/ExampleAppointmentLRM1"/>
       </reference>
       <name value="ExampleAppointmentLRM1"/>
-      <description value="Exemple RDV LRM 1"/>
+      <description value="Exemple RDV LRM 1 - SOS Médecin interfacé"/>
       <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"/>
     </resource>
     <resource>
@@ -604,7 +604,7 @@
         <reference value="Appointment/ExampleAppointmentLRM2"/>
       </reference>
       <name value="ExampleAppointmentLRM2"/>
-      <description value="Exemple RDV LRM 2"/>
+      <description value="Exemple RDV LRM 2 - CDS non interfacé"/>
       <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"/>
     </resource>
     <resource>
@@ -615,7 +615,7 @@
         <reference value="Appointment/ExampleAppointmentLRM3"/>
       </reference>
       <name value="ExampleAppointmentLRM3"/>
-      <description value="Exemple RDV LRM 3"/>
+      <description value="Exemple RDV LRM 3 - SOS Médecins interfacé"/>
       <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"/>
     </resource>
     <resource>
@@ -626,7 +626,7 @@
         <reference value="Appointment/ExampleAppointmentLRM4"/>
       </reference>
       <name value="ExampleAppointmentLRM4"/>
-      <description value="Exemple RDV LRM 4"/>
+      <description value="Exemple RDV LRM 4 - SOS Médecins interfacé en attente attribution PS"/>
       <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"/>
     </resource>
     <resource>
@@ -648,7 +648,18 @@
         <reference value="Appointment/ExampleAppointmentLRM6"/>
       </reference>
       <name value="ExampleAppointmentLRM6"/>
-      <description value="Exemple RDV LRM 6"/>
+      <description value="Exemple RDV LRM 6 - PS indiv (interfacé ou non)"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Appointment"/>
+      </extension>
+      <reference>
+        <reference value="Appointment/ExampleAppointmentLRM7"/>
+      </reference>
+      <name value="ExampleAppointmentLRM7"/>
+      <description value="Exemple RDV LRM 7 - CPTS non interfacé"/>
       <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"/>
     </resource>
     <resource>
@@ -670,7 +681,7 @@
         <reference value="Bundle/ExampleBundleAppointmentLRM1"/>
       </reference>
       <name value="ExampleBundleAppointmentLRM1"/>
-      <description value="Exemple Bundle RDV LRM 1 - Cas SOS Médecin non interfacé avec PS et structure"/>
+      <description value="Exemple Bundle RDV LRM 1 - Cas SOS Médecin interfacé avec PS et structure"/>
       <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"/>
     </resource>
     <resource>
@@ -703,7 +714,7 @@
         <reference value="Bundle/ExampleBundleAppointmentLRM4"/>
       </reference>
       <name value="ExampleBundleAppointmentLRM4"/>
-      <description value="Exemple Bundle RDV LRM 4 - Cas RDV sans PS ni structure. Ex : SOS Médecins en attente d'attribution médecin"/>
+      <description value="Exemple Bundle RDV LRM 4 - Cas RDV sans PS ni structure. Ex : SOS Médecins interfacé en attente d'attribution médecin"/>
       <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"/>
     </resource>
     <resource>
@@ -726,6 +737,17 @@
       </reference>
       <name value="ExampleBundleAppointmentLRM6"/>
       <description value="Exemple Bundle RDV LRM 6 - Cas RDV avec PS mais sans structure, exemple PS. indiv"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/ExampleBundleAppointmentLRM7"/>
+      </reference>
+      <name value="ExampleBundleAppointmentLRM7"/>
+      <description value="Exemple Bundle RDV LRM 7 - Cas CPTS non interfacé avec PS et structure"/>
       <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"/>
     </resource>
     <resource>
@@ -766,10 +788,21 @@
         <valueString value="HealthcareService"/>
       </extension>
       <reference>
-        <reference value="HealthcareService/ExampleHealthcareService"/>
+        <reference value="HealthcareService/ExampleHealthcareService1"/>
       </reference>
-      <name value="ExampleHealthcareService"/>
-      <description value="Exemple de ressource Healthcare Service"/>
+      <name value="ExampleHealthcareService1"/>
+      <description value="Exemple 1 de ressource Healthcare Service"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-healthcareservice-lrm"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="HealthcareService"/>
+      </extension>
+      <reference>
+        <reference value="HealthcareService/ExampleHealthcareService2"/>
+      </reference>
+      <name value="ExampleHealthcareService2"/>
+      <description value="Exemple 2 de ressource Healthcare Service"/>
       <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-healthcareservice-lrm"/>
     </resource>
     <resource>
@@ -1005,6 +1038,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PractitionerRole"/>
+      </extension>
+      <reference>
+        <reference value="PractitionerRole/ExamplePractitionerRoleAppointment2"/>
+      </reference>
+      <name value="ExamplePractitionerRoleAppointment2"/>
+      <description value="Exemple PractitionerRole 2 flux LRM"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-lrm"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Organization"/>
       </extension>
       <reference>
@@ -1023,6 +1067,17 @@
       </reference>
       <name value="ExampleSasOrganization2"/>
       <description value="Exemple d'organisation SAS - centre de santé (FINESS)"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-organization-lrm"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/ExampleSasOrganization3"/>
+      </reference>
+      <name value="ExampleSasOrganization3"/>
+      <description value="Exemple d'organisation SAS - CPTS (FINESS)"/>
       <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-organization-lrm"/>
     </resource>
     <resource>
@@ -1627,7 +1682,7 @@
         <reference value="ValueSet/categorie-orientation-sas-valueset"/>
       </reference>
       <name value="Value set catégorie orientation SAS"/>
-      <description value="Valueset permettant de définir la catégorie d'orientation SAS. Il regroupe des codes de la TRE-R66 et du codesystem catégorie d'orientation SAS"/>
+      <description value="Valueset permettant de définir la catégorie d'orientation SAS. Il regroupe des codes de la TRE-R66 et du codesystem catégorie orientation SAS"/>
       <exampleBoolean value="false"/>
     </resource>
     <page>

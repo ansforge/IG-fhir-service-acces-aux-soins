@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "SAS"] ; # 
   fhir:title [ fhir:v "Service d'Accès aux Soins"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2025-08-25T06:59:32+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-08-25T09:39:34+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -1067,7 +1067,7 @@
          fhir:reference [ fhir:v "Appointment/ExampleAppointmentLRM1" ]
        ] ;
        fhir:name [ fhir:v "ExampleAppointmentLRM1" ] ;
-       fhir:description [ fhir:v "Exemple RDV LRM 1" ] ;
+       fhir:description [ fhir:v "Exemple RDV LRM 1 - SOS Médecin interfacé" ] ;
        fhir:example [
          a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"^^xsd:anyURI ;
@@ -1086,7 +1086,7 @@
          fhir:reference [ fhir:v "Appointment/ExampleAppointmentLRM2" ]
        ] ;
        fhir:name [ fhir:v "ExampleAppointmentLRM2" ] ;
-       fhir:description [ fhir:v "Exemple RDV LRM 2" ] ;
+       fhir:description [ fhir:v "Exemple RDV LRM 2 - CDS non interfacé" ] ;
        fhir:example [
          a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"^^xsd:anyURI ;
@@ -1105,7 +1105,7 @@
          fhir:reference [ fhir:v "Appointment/ExampleAppointmentLRM3" ]
        ] ;
        fhir:name [ fhir:v "ExampleAppointmentLRM3" ] ;
-       fhir:description [ fhir:v "Exemple RDV LRM 3" ] ;
+       fhir:description [ fhir:v "Exemple RDV LRM 3 - SOS Médecins interfacé" ] ;
        fhir:example [
          a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"^^xsd:anyURI ;
@@ -1124,7 +1124,7 @@
          fhir:reference [ fhir:v "Appointment/ExampleAppointmentLRM4" ]
        ] ;
        fhir:name [ fhir:v "ExampleAppointmentLRM4" ] ;
-       fhir:description [ fhir:v "Exemple RDV LRM 4" ] ;
+       fhir:description [ fhir:v "Exemple RDV LRM 4 - SOS Médecins interfacé en attente attribution PS" ] ;
        fhir:example [
          a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"^^xsd:anyURI ;
@@ -1162,7 +1162,26 @@
          fhir:reference [ fhir:v "Appointment/ExampleAppointmentLRM6" ]
        ] ;
        fhir:name [ fhir:v "ExampleAppointmentLRM6" ] ;
-       fhir:description [ fhir:v "Exemple RDV LRM 6" ] ;
+       fhir:description [ fhir:v "Exemple RDV LRM 6 - PS indiv (interfacé ou non)" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Appointment"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Appointment/ExampleAppointmentLRM7> ;
+         fhir:reference [ fhir:v "Appointment/ExampleAppointmentLRM7" ]
+       ] ;
+       fhir:name [ fhir:v "ExampleAppointmentLRM7" ] ;
+       fhir:description [ fhir:v "Exemple RDV LRM 7 - CPTS non interfacé" ] ;
        fhir:example [
          a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"^^xsd:anyURI ;
@@ -1200,7 +1219,7 @@
          fhir:reference [ fhir:v "Bundle/ExampleBundleAppointmentLRM1" ]
        ] ;
        fhir:name [ fhir:v "ExampleBundleAppointmentLRM1" ] ;
-       fhir:description [ fhir:v "Exemple Bundle RDV LRM 1 - Cas SOS Médecin non interfacé avec PS et structure" ] ;
+       fhir:description [ fhir:v "Exemple Bundle RDV LRM 1 - Cas SOS Médecin interfacé avec PS et structure" ] ;
        fhir:example [
          a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"^^xsd:anyURI ;
@@ -1257,7 +1276,7 @@
          fhir:reference [ fhir:v "Bundle/ExampleBundleAppointmentLRM4" ]
        ] ;
        fhir:name [ fhir:v "ExampleBundleAppointmentLRM4" ] ;
-       fhir:description [ fhir:v "Exemple Bundle RDV LRM 4 - Cas RDV sans PS ni structure. Ex : SOS Médecins en attente d'attribution médecin" ] ;
+       fhir:description [ fhir:v "Exemple Bundle RDV LRM 4 - Cas RDV sans PS ni structure. Ex : SOS Médecins interfacé en attente d'attribution médecin" ] ;
        fhir:example [
          a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"^^xsd:anyURI ;
@@ -1296,6 +1315,25 @@
        ] ;
        fhir:name [ fhir:v "ExampleBundleAppointmentLRM6" ] ;
        fhir:description [ fhir:v "Exemple Bundle RDV LRM 6 - Cas RDV avec PS mais sans structure, exemple PS. indiv" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Bundle/ExampleBundleAppointmentLRM7> ;
+         fhir:reference [ fhir:v "Bundle/ExampleBundleAppointmentLRM7" ]
+       ] ;
+       fhir:name [ fhir:v "ExampleBundleAppointmentLRM7" ] ;
+       fhir:description [ fhir:v "Exemple Bundle RDV LRM 7 - Cas CPTS non interfacé avec PS et structure" ] ;
        fhir:example [
          a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"^^xsd:anyURI ;
@@ -1367,11 +1405,30 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/HealthcareService/ExampleHealthcareService> ;
-         fhir:reference [ fhir:v "HealthcareService/ExampleHealthcareService" ]
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/HealthcareService/ExampleHealthcareService1> ;
+         fhir:reference [ fhir:v "HealthcareService/ExampleHealthcareService1" ]
        ] ;
-       fhir:name [ fhir:v "ExampleHealthcareService" ] ;
-       fhir:description [ fhir:v "Exemple de ressource Healthcare Service" ] ;
+       fhir:name [ fhir:v "ExampleHealthcareService1" ] ;
+       fhir:description [ fhir:v "Exemple 1 de ressource Healthcare Service" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-healthcareservice-lrm"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-healthcareservice-lrm>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "HealthcareService"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/HealthcareService/ExampleHealthcareService2> ;
+         fhir:reference [ fhir:v "HealthcareService/ExampleHealthcareService2" ]
+       ] ;
+       fhir:name [ fhir:v "ExampleHealthcareService2" ] ;
+       fhir:description [ fhir:v "Exemple 2 de ressource Healthcare Service" ] ;
        fhir:example [
          a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-healthcareservice-lrm"^^xsd:anyURI ;
@@ -1781,6 +1838,25 @@
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
+           fhir:v "PractitionerRole"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/PractitionerRole/ExamplePractitionerRoleAppointment2> ;
+         fhir:reference [ fhir:v "PractitionerRole/ExamplePractitionerRoleAppointment2" ]
+       ] ;
+       fhir:name [ fhir:v "ExamplePractitionerRoleAppointment2" ] ;
+       fhir:description [ fhir:v "Exemple PractitionerRole 2 flux LRM" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-lrm"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-lrm>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
            fhir:v "Organization"
          ]
        ] ) ;
@@ -1809,6 +1885,25 @@
        ] ;
        fhir:name [ fhir:v "ExampleSasOrganization2" ] ;
        fhir:description [ fhir:v "Exemple d'organisation SAS - centre de santé (FINESS)" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-organization-lrm"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-organization-lrm>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Organization"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Organization/ExampleSasOrganization3> ;
+         fhir:reference [ fhir:v "Organization/ExampleSasOrganization3" ]
+       ] ;
+       fhir:name [ fhir:v "ExampleSasOrganization3" ] ;
+       fhir:description [ fhir:v "Exemple d'organisation SAS - CPTS (FINESS)" ] ;
        fhir:example [
          a fhir:canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-organization-lrm"^^xsd:anyURI ;
@@ -2816,7 +2911,7 @@
          fhir:reference [ fhir:v "ValueSet/categorie-orientation-sas-valueset" ]
        ] ;
        fhir:name [ fhir:v "Value set catégorie orientation SAS" ] ;
-       fhir:description [ fhir:v "Valueset permettant de définir la catégorie d'orientation SAS. Il regroupe des codes de la TRE-R66 et du codesystem catégorie d'orientation SAS" ] ;
+       fhir:description [ fhir:v "Valueset permettant de définir la catégorie d'orientation SAS. Il regroupe des codes de la TRE-R66 et du codesystem catégorie orientation SAS" ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false
