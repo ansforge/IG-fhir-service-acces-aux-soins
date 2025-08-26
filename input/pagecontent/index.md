@@ -7,7 +7,7 @@
 {% endif %}
 
 <div class="figure" style="width:65%;">
-    <img style="height: auto; width: 100%;" src="sas_logo.png" alt="Service d'Accès aux Soins (SAS)" title="Logo SAS">
+    <img style="height: auto; width: 100%;" src="logo_sas.png" alt="Service d'Accès aux Soins (SAS)" title="Logo SAS">
 </div>
 
 ### Contexte métier
@@ -42,10 +42,15 @@ Les travaux menés avec les industriels ont pour objectifs principaux :
       <img src="schema_cas_usage.png" alt="Schéma cas d'usage" title="Schéma cas d'usage">
     </div>
   
-L'offre de soins à mettre à disposition inclut les volets
+L'offre de soins à mettre à disposition inclut les volets : 
 - PS à titre individuel
 - Organisations CPTS
 - SOS Médecins
+
+La fludification du parcours régulateurs inclut les éléments suivants : 
+- Limiter le nombre d’authentifications entre les solutions logicielles ​- *Flux recherche contextuelle*
+- Limiter la ressaisie des données pour lancer une recherche d’offre de soins et pour la prise de RDV pour le compte du patient​ - *Flux recherche contextuelle*
+- Alimenter les LRM avec les données des RDV pris - *Flux transmission des informations de RDV aux LRM*
 
 <blockquote class="stu-note">
 <p>Le présent guide sera enrichi régulièrement avec la description de tous les cas d'usage et l'offre de soins cible</p>
@@ -75,6 +80,11 @@ L'offre de soins à mettre à disposition inclut les volets
    - [Recherche de créneaux](./specifications_techniques-sos-recherche_creneaux.html)
    - [Gestion des comptes régulateurs](./specifications_techniques-sos-gestion_regulateur.html)
    - [Gestion de rendez-vous](./specifications_techniques-sos-gestion_rdv.html)
+
+#### Transmission des informations de RDV aux LRM
+
+1. [Spécifications fonctionnelles](./specifications_fonctionnelles.html#transmission-des-informations-de-rdv-aux-lrm)
+2. [Spécifications techniques](./specifications_techniques-transmission-info-RDV-LRM.html)
 
 ### Dépendances
  

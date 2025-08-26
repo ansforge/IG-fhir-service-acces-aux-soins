@@ -18,9 +18,9 @@ SAMU -> LRM : Création de fiche
 SAMU -> LRM : Décision d'orientation
 LRM -> PTF : Recherche de RDV (appel contextuel)
 PTF -> LGA : Redirection sur la solution éditeur\net prise de RDV
-PTF -> LRM : Création et envoi du message de prise de RDV
-Hub -> PTF : Accusé de réception technique
 LGA -> PTF : Remontée des informations du RDV pris
+PTF -> Hub : Création et envoi du message de prise de RDV
+Hub -> PTF : Accusé de réception technique
 Hub -> LRM : Transmission du message RDV
 LRM -> Hub : Message d'acquittement de réception
 Hub -> PTF : Notification du statut final
