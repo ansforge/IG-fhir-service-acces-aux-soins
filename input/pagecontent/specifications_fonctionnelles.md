@@ -218,15 +218,59 @@ L’objectif du cas d’usage est de pouvoir alimenter de manière automatisée 
     </tr>
 </table>
 
-#### Données à échanger
-Schéma des flux
+#### Cinématique des échanges
+Les échanges entre la plateforme SAS et les solutions de LRM se feront au travers du Hub Santé, selon la cinématique suivante
 
-Liste des ressources FHIR
+<div class="figure" style="width:100%;" align ="center">
+    <p>{% include diagramme_sequence_hub.svg %}</p>
+</div>
+
+#### Attendu et rôles des parties
+
+##### Role de la plateforme numérique SAS
+
+La plateforme numérique SAS consolide et enregistre les données associées aux RDVs pris par les régulateurs et réalise les actions suivantes :
+- La plateforme transmet les informations d’orientations de manière instantanée au format spécifié et avec la liste des données métier disponibles
+- La plateforme cible le SAS concerné pour transmission des orientations au LRM associé
+- Les messages transmis incluent la création d’un RDV et les mises à jours potentielles
+
+##### Rôle du Hubsanté
+- Le Hub assure la couche de transport sécurisée et la transmission des données de la plateforme numérique SAS vers la solution de LRM
+- Le Hub transmet au SAMU ciblé en fonction du message
+- Le Hub suit l'acquittement du message et les erreurs transmises par la solution LRM
+- Le Hub assure la transmission de l’acquittement des messages ou des erreurs à la plateforme numérique SAS
+
+##### Rôle du logiciel de régulation médicale
+- L’éditeur LRM intègre les données de l’orientation dans sa solution pour association avec le DRM
+- L’éditeur LRM met en place les actions attendues pour permettre au régulateur de rattacher les données de l’orientation avec le DRM souhaité sans ressaisie suite à une décision SAS
+- L’éditeur LRM gère l’identifiant de RDV transmis pour intégrer automatiquement les potentiels messages de mise à jour de l’orientation post-rattachement
+
+
+#### Données à échanger
+Le flux contient la liste de données suivantes (certaines données ne seront pas transmises systématiquement en fonction du type de cas d'usage et de la situation du RDV à un instant t) : 
+- Identifiant du RDV
+- Date/heure de début du RDV
+- Date/heure  de fin du RDV
+- Date/heure de création du RDV
+- Identifiant du PS effecteur de soins
+- Nom / Prénom du PS effecteur de soins
+- Spécialité du PS effecteur de soins
+- Statut du RDV
+- Type d'orientation (ex : SOS, CPTS, ...)
+- Nom de la structure / organisation liée au RDV
+- Identifiant national de la structure liée au RDV
+- SAS ayant pris le RDV (à des fins de routage par le Hub)
+
+Le message transmis (Bundle) contiendra n ressources FHIR en fonction de la liste des données pouvant être transmises en fonction du contexte et de la temporalité. 
+
+Les données propres au RDV seront systématiquement transmises (ressource "Appointment" toujours présente). Le cas échéant, les données du professionnel de santé (ressource "Practitioner"), ainsi que sa situation d'exercice dans le cadre de ce RDV (ressource "PractitionerRole") et la structure associée (ressource "Organization"). 
+Si le professionel de santé n'est pas connu, la structure (ressource "Organization")peut également être liée à un RDV via la ressource "Healthcare Service"
 
 Le schéma ci-dessous présente une synthèse des ressources FHIR à utiliser :
 
 <div class="figure" style="width:100%;" align ="center">
     <p>{% include ressources-exploitees-lrm.svg %}</p>
 </div>
+
 
 

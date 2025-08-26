@@ -7,8 +7,11 @@ Le schéma ci-dessous illustre l'échange de données entre la PTF SAS et les é
     <p>{% include schemaHub.svg %}</p>
 </div>
 
+Le protocole utilisé pour la connexion des applications (PTF SAS et éditeurs de LRM) avec le Hub est le protocole AMQP, en vesion 0-9-1. 
+
 Les messages seront transmis avec une entête permettant notamment au Hub de router le message vers le bon SAS de destination.
-Ils seront au format FHIR sous la forme d'un Bundle de type transaction contenant les différentes ressources / données permettant aux LRM de traiter le message.
+
+Ils seront au format json sous la forme d'une ressource FHIR Bundle de type transaction contenant les différentes ressources / données permettant aux LRM de traiter le message.
 
 Exemple de message transmis 
 ### Entête
@@ -50,3 +53,5 @@ Exemple de message transmis
 </tr>
 </tbody>
 </table>
+
+### Message ACK
