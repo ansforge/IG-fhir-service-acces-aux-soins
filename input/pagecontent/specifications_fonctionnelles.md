@@ -264,7 +264,7 @@ Le flux contient la liste de données suivantes (certaines données ne seront pa
 Le message transmis (Bundle) contiendra n ressources FHIR en fonction de la liste des données pouvant être transmises en fonction du contexte et de la temporalité. 
 
 Les données propres au RDV seront systématiquement transmises (ressource "Appointment" toujours présente). Le cas échéant, les données du professionnel de santé (ressource "Practitioner"), ainsi que sa situation d'exercice dans le cadre de ce RDV (ressource "PractitionerRole") et la structure associée (ressource "Organization"). 
-Si le professionel de santé n'est pas connu, la structure (ressource "Organization")peut également être liée à un RDV via la ressource "Healthcare Service"
+Si le professionel de santé n'est pas connu, la structure (ressource "Organization") peut également être liée à un RDV via la ressource "Healthcare Service"
 
 Le schéma ci-dessous présente une synthèse des ressources FHIR à utiliser :
 
