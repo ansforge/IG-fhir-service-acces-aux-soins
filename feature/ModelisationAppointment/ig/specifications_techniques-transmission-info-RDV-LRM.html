@@ -237,17 +237,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div class="markdown-toc">
-<ul id="markdown-toc">
-  <li><a href="#détail-des-éléments-dentête" id="markdown-toc-détail-des-éléments-dentête">Détail des éléments d'entête</a>    <ul>
-      <li><a href="#message-ptf-sas---hub" id="markdown-toc-message-ptf-sas---hub">Message PTF SAS -&gt; Hub</a></li>
-      <li><a href="#message-dacquittement-technique" id="markdown-toc-message-dacquittement-technique">Message d'acquittement technique</a></li>
-      <li><a href="#message-dacquittement-final" id="markdown-toc-message-dacquittement-final">Message d'acquittement final</a></li>
-      <li><a href="#message-derreur" id="markdown-toc-message-derreur">Message d'erreur</a></li>
-    </ul>
-  </li>
-</ul>
-
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
 </div>
 <p>Les échanges avec les éditeurs de LRM se font au travers d'une liaison avec le Hub Santé.
 La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés au Hub.</p>
@@ -271,50 +262,228 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
   <li>« info » pour les messages généraux d’informations, alertes et erreurs</li>
 </ul>
 
-<h2 id="détail-des-éléments-dentête">Détail des éléments d'entête</h2>
+<h3 id="détail-des-éléments-dentête">Détail des éléments d'entête</h3>
 
-<h3 id="message-ptf-sas---hub">Message PTF SAS -&gt; Hub</h3>
-<p>| Élément | Chemin | Type | Commentaire / valeur |
-|——–|——–|——|————-|
-| <em>Entête EDXL-DE</em> | distributionID | string | À définir |
-| <em>Entête EDXL-DE</em> | senderID | string | À définir. Ex : PTFSAS|
-| <em>Entête EDXL-DE</em> | dateTimeSent | Date time | Ex : 2025-08-24T14:15:22+02:00 |
-| <em>Entête EDXL-DE</em> | dateTimeExpires | Date time | Ex : 2025-08-24T14:15:22+02:00 |
-| <em>Entête EDXL-DE</em> | distributionStatus | string | Actual |
-| <em>Entête EDXL-DE</em> | distributionKind | string | Report
-|  <em>Entête EDXL-DE</em>| descriptor.language | string | fr-FR |
-| <em>Entête EDXL-DE</em> | descriptor.explicitAddress.explicitAddressScheme | string | Hubex |
-| <em>Entête EDXL-DE</em> | descriptor.explicitAddress.explicitAddressValue | string | fr.health.samu.XXX Ex : fr.health.samu.330 |
-| <em>Contenu</em> | content.contentObject.JsonContent.embeddedJsonContent | json | Fichier Bundle transactionnel au format JSON |</p>
+<h4 id="message-ptf-sas---hub">Message PTF SAS -&gt; Hub</h4>
 
-<h3 id="message-dacquittement-technique">Message d'acquittement technique</h3>
-<p>| Élément | Chemin | Type | Commentaire / valeur |
-|——–|——–|——|————————|
-| <em>Entête EDXL-DE</em> | distributionID | string | Règle à communiquer par équipe Hub |
-| <em>Entête EDXL-DE</em> | senderID | string | À définir. PTF SAS ? |
-| <em>Entête EDXL-DE</em> | dateTimeSent | Date time | Ex : 2025-08-24T14:15:22+02:00 |
-| <em>Entête EDXL-DE</em> | dateTimeExpires | Date time | Ex : 2025-08-24T14:15:22Z+02:00 |
-| <em>Entête EDXL-DE</em> | distributionStatus | string | Actual |
-| <em>Entête EDXL-DE</em> | distributionKind | string | Ack |
-| <em>Entête EDXL-DE</em> | descriptor.language | string | fr-FR |
-| <em>Entête EDXL-DE</em> | descriptor.explicitAddress.explicitAddressScheme | string | Hubex |
-| <em>Entête EDXL-DE</em> | descriptor.explicitAddress.explicitAddressValue | string | fr.health.samu.XXX (Ex : fr.health.samu.330) |
-| <em>Contenu</em> | content.contentObject.JsonContent.embeddedJsonContent | json | Fichier Bundle transactionnel au format JSON |</p>
+<table>
+  <thead>
+    <tr>
+      <th>Élément</th>
+      <th>Chemin</th>
+      <th>Type</th>
+      <th>Commentaire / valeur</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><em>Entête EDXL-DE</em></td>
+      <td>distributionID</td>
+      <td>string</td>
+      <td>À définir</td>
+    </tr>
+    <tr>
+      <td><em>Entête EDXL-DE</em></td>
+      <td>senderID</td>
+      <td>string</td>
+      <td>À définir. Ex : PTFSAS</td>
+    </tr>
+    <tr>
+      <td><em>Entête EDXL-DE</em></td>
+      <td>dateTimeSent</td>
+      <td>Date time</td>
+      <td>Ex : 2025-08-24T14:15:22+02:00</td>
+    </tr>
+    <tr>
+      <td><em>Entête EDXL-DE</em></td>
+      <td>dateTimeExpires</td>
+      <td>Date time</td>
+      <td>Ex : 2025-08-24T14:15:22+02:00</td>
+    </tr>
+    <tr>
+      <td><em>Entête EDXL-DE</em></td>
+      <td>distributionStatus</td>
+      <td>string</td>
+      <td>Actual</td>
+    </tr>
+    <tr>
+      <td><em>Entête EDXL-DE</em></td>
+      <td>distributionKind</td>
+      <td>string</td>
+      <td>Report</td>
+    </tr>
+    <tr>
+      <td><em>Entête EDXL-DE</em></td>
+      <td>descriptor.language</td>
+      <td>string</td>
+      <td>fr-FR</td>
+    </tr>
+    <tr>
+      <td><em>Entête EDXL-DE</em></td>
+      <td>descriptor.explicitAddress.explicitAddressScheme</td>
+      <td>string</td>
+      <td>Hubex</td>
+    </tr>
+    <tr>
+      <td><em>Entête EDXL-DE</em></td>
+      <td>descriptor.explicitAddress.explicitAddressValue</td>
+      <td>string</td>
+      <td>fr.health.samu.XXX Ex : fr.health.samu.330</td>
+    </tr>
+    <tr>
+      <td><em>Contenu</em></td>
+      <td>content.contentObject.JsonContent.embeddedJsonContent</td>
+      <td>json</td>
+      <td>Fichier Bundle transactionnel au format JSON</td>
+    </tr>
+  </tbody>
+</table>
 
-<h3 id="message-dacquittement-final">Message d'acquittement final</h3>
-<p>| Élément | Chemin | Type | Commentaire |
-|——–|——–|——|————-|
-| <em>Entête RC-DE</em> | messageId | string | Égal à distributionId du message initial |
-| <em>Entête RC-DE</em> | sender.AddresseeType.name | string | "Sender du message initial ? ou de celui de l'ACK PTFSAS" |
-| <em>Entête RC-DE</em> | sender.AddresseeType.URL | string | hubex:fr.PTFSAS |
-| <em>Entête RC-DE</em> | sentAt | Date time | Ex : 2025-08-24T14:15:22+02:00 |
-| <em>Entête RC-DE</em> | status | string | Actual |
-| <em>Entête RC-DE</em> | kind | string | Ack |
-| <em>Entête RC-DE</em> | recipients.recipient.explicitAddressScheme | string | hubex |
-| <em>Entête RC-DE</em> | recipients.recipient.explicitAddressValue | string | fr.health.samu.XXX |
-|  | reference | string | Égal à distributionId du message initial |</p>
+<h4 id="message-dacquittement-technique">Message d'acquittement technique</h4>
 
-<h3 id="message-derreur">Message d'erreur</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Élément</th>
+      <th>Chemin</th>
+      <th>Type</th>
+      <th>Commentaire / valeur</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><em>Entête EDXL-DE</em></td>
+      <td>distributionID</td>
+      <td>string</td>
+      <td>Règle à communiquer par équipe Hub</td>
+    </tr>
+    <tr>
+      <td><em>Entête EDXL-DE</em></td>
+      <td>senderID</td>
+      <td>string</td>
+      <td>À définir. PTF SAS ?</td>
+    </tr>
+    <tr>
+      <td><em>Entête EDXL-DE</em></td>
+      <td>dateTimeSent</td>
+      <td>Date time</td>
+      <td>Ex : 2025-08-24T14:15:22+02:00</td>
+    </tr>
+    <tr>
+      <td><em>Entête EDXL-DE</em></td>
+      <td>dateTimeExpires</td>
+      <td>Date time</td>
+      <td>Ex : 2025-08-24T14:15:22Z+02:00</td>
+    </tr>
+    <tr>
+      <td><em>Entête EDXL-DE</em></td>
+      <td>distributionStatus</td>
+      <td>string</td>
+      <td>Actual</td>
+    </tr>
+    <tr>
+      <td><em>Entête EDXL-DE</em></td>
+      <td>distributionKind</td>
+      <td>string</td>
+      <td>Ack</td>
+    </tr>
+    <tr>
+      <td><em>Entête EDXL-DE</em></td>
+      <td>descriptor.language</td>
+      <td>string</td>
+      <td>fr-FR</td>
+    </tr>
+    <tr>
+      <td><em>Entête EDXL-DE</em></td>
+      <td>descriptor.explicitAddress.explicitAddressScheme</td>
+      <td>string</td>
+      <td>Hubex</td>
+    </tr>
+    <tr>
+      <td><em>Entête EDXL-DE</em></td>
+      <td>descriptor.explicitAddress.explicitAddressValue</td>
+      <td>string</td>
+      <td>fr.health.samu.XXX (Ex : fr.health.samu.330)</td>
+    </tr>
+    <tr>
+      <td><em>Contenu</em></td>
+      <td>content.contentObject.JsonContent.embeddedJsonContent</td>
+      <td>json</td>
+      <td>Fichier Bundle transactionnel au format JSON</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="message-dacquittement-final">Message d'acquittement final</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Élément</th>
+      <th>Chemin</th>
+      <th>Type</th>
+      <th>Commentaire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><em>Entête RC-DE</em></td>
+      <td>messageId</td>
+      <td>string</td>
+      <td>Égal à distributionId du message initial</td>
+    </tr>
+    <tr>
+      <td><em>Entête RC-DE</em></td>
+      <td>sender.AddresseeType.name</td>
+      <td>string</td>
+      <td>"Sender du message initial ? ou de celui de l'ACK PTFSAS"</td>
+    </tr>
+    <tr>
+      <td><em>Entête RC-DE</em></td>
+      <td>sender.AddresseeType.URL</td>
+      <td>string</td>
+      <td>hubex:fr.PTFSAS</td>
+    </tr>
+    <tr>
+      <td><em>Entête RC-DE</em></td>
+      <td>sentAt</td>
+      <td>Date time</td>
+      <td>Ex : 2025-08-24T14:15:22+02:00</td>
+    </tr>
+    <tr>
+      <td><em>Entête RC-DE</em></td>
+      <td>status</td>
+      <td>string</td>
+      <td>Actual</td>
+    </tr>
+    <tr>
+      <td><em>Entête RC-DE</em></td>
+      <td>kind</td>
+      <td>string</td>
+      <td>Ack</td>
+    </tr>
+    <tr>
+      <td><em>Entête RC-DE</em></td>
+      <td>recipients.recipient.explicitAddressScheme</td>
+      <td>string</td>
+      <td>hubex</td>
+    </tr>
+    <tr>
+      <td><em>Entête RC-DE</em></td>
+      <td>recipients.recipient.explicitAddressValue</td>
+      <td>string</td>
+      <td>fr.health.samu.XXX</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>reference</td>
+      <td>string</td>
+      <td>Égal à distributionId du message initial</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="message-derreur">Message d'erreur</h4>
 
 <table>
   <thead>
@@ -418,7 +587,7 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Aug 28, 2025 13:34+0000">2025-08-28</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Aug 28, 2025 13:54+0000">2025-08-28</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
