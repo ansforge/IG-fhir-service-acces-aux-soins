@@ -6,6 +6,8 @@ A ce jour, les API ont pour vocation de répondre aux cas d'usage suivants :
   - Création de rendez-vous
   - Mise à jour de rendez-vous
 
+    Les rendez-vous ainsi centralisés dans la plateforme sont également transmis aux logiciels de régultation médicale (LRM)
+
 Pour les cas d'usage couverts par ces API :
 - Le système consommateur doit disposer des points d'accès et des moyens d'authentification (authentification mTLS avec des certificats IGC-Santé).
 
@@ -153,7 +155,7 @@ Le schéma ci-dessous illustre les éléments décrits ci-dessus :
 - Il est attendu pour les éditeurs ayant implémenté le flux INT_R01 d’agrégation des créneaux de disponibilités, de réutiliser le endpoint et la sécurisation mTLS associée pour le flux INT_R02 de gestion des comptes régulateurs
 - Certains régulateurs n’ayant pas encore d’identifiant national à date, il est attendu que l’éditeur soit en mesure de gérer les comptes soit sur la base de l’identifiant national ou de l’identifiant technique SAS selon ce qui est transmis par la plateforme numérique SAS
 
-### Gestion des informations rendez-vous
+### Gestion des informations de rendez-vous
 
 L'objectif de cette interface, flux INT_R03, est de permettre la transmission des données liées à l'usage de la fonctionnalité de prise de RDV par les régulateurs provenant de la plateforme numérique SAS, dans les solutions logicielles d'agenda.
 Le schéma de présentation générale ci-dessous illustre le cas d'usage :
@@ -221,7 +223,7 @@ L’objectif du cas d’usage est de pouvoir alimenter de manière automatisée 
 #### Cinématique des échanges
 Les échanges entre la plateforme SAS et les solutions de LRM se feront au travers du Hub Santé, selon la cinématique suivante
 
-<div class="figure" style="width:100%;" align ="center">
+<div class="figure" style="width:80%;" align ="center">
     <p>{% include diagramme_sequence_hub.svg %}</p>
 </div>
 
