@@ -18,9 +18,9 @@ Chaque client dispose de 3 files d’écoute selon la typologie des messages re�
 - « ack » pour les acquittements de réception finale
 - « info » pour les messages généraux d’informations, alertes et erreurs
 
-## Détail des éléments d'entête
+### Détail des éléments d'entête
 
-### Message PTF SAS -> Hub 
+#### Message PTF SAS -> Hub 
 
 | Élément | Chemin | Type | Commentaire / valeur |
 |--------|--------|------|-------------|
@@ -35,7 +35,7 @@ Chaque client dispose de 3 files d’écoute selon la typologie des messages re�
 | *Entête EDXL-DE* | descriptor.explicitAddress.explicitAddressValue | string | fr.health.samu.XXX Ex : fr.health.samu.330 |
 | *Contenu* | content.contentObject.JsonContent.embeddedJsonContent | json | Fichier Bundle transactionnel au format JSON |
 
-### Message d'acquittement technique
+#### Message d'acquittement technique
 
 | Élément | Chemin | Type | Commentaire / valeur |
 |--------|--------|------|------------------------|
@@ -50,7 +50,7 @@ Chaque client dispose de 3 files d’écoute selon la typologie des messages re�
 | *Entête EDXL-DE* | descriptor.explicitAddress.explicitAddressValue | string | fr.health.samu.XXX (Ex : fr.health.samu.330) |
 | *Contenu* | content.contentObject.JsonContent.embeddedJsonContent | json | Fichier Bundle transactionnel au format JSON |
 
-### Message d'acquittement final
+#### Message d'acquittement final
 
 | Élément | Chemin | Type | Commentaire |
 |--------|--------|------|-------------|
@@ -65,7 +65,7 @@ Chaque client dispose de 3 files d’écoute selon la typologie des messages re�
 |  | reference | string | Égal à distributionId du message initial |
 
 
-### Message d'erreur
+#### Message d'erreur
 
 | Élément | Type | Commentaire |
 |--------|------|-------------|
