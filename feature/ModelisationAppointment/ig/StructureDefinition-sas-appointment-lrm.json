@@ -9,7 +9,7 @@
   "version" : "1.1.0",
   "name" : "SASAppointmentLRM",
   "status" : "active",
-  "date" : "2025-08-26T15:19:13+00:00",
+  "date" : "2025-08-28T09:04:45+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -1195,7 +1195,7 @@
         "human" : "If present, start SHALL have a lower value than end",
         "expression" : "start.hasValue().not() or end.hasValue().not() or (start <= end)",
         "xpath" : "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))",
-        "source" : "http://hl7.org/fhir/StructureDefinition/MeasureReport"
+        "source" : "http://hl7.org/fhir/StructureDefinition/PlanDefinition"
       }],
       "isSummary" : true,
       "mapping" : [{
@@ -1255,7 +1255,7 @@
         "human" : "SHALL have a contained resource if a local reference is provided",
         "expression" : "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
         "xpath" : "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/MeasureReport"
+        "source" : "http://hl7.org/fhir/StructureDefinition/PaymentNotice"
       }],
       "isSummary" : true,
       "mapping" : [{
