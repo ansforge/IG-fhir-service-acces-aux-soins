@@ -21,6 +21,7 @@ Chaque client dispose de 3 files d’écoute selon la typologie des messages re�
 ## Détail des éléments d'entête
 
 ### Message PTF SAS -> Hub 
+
 | Élément | Chemin | Type | Commentaire / valeur |
 |--------|--------|------|-------------|
 | *Entête EDXL-DE* | distributionID | string | À définir |
@@ -35,6 +36,7 @@ Chaque client dispose de 3 files d’écoute selon la typologie des messages re�
 | *Contenu* | content.contentObject.JsonContent.embeddedJsonContent | json | Fichier Bundle transactionnel au format JSON |
 
 ### Message d'acquittement technique
+
 | Élément | Chemin | Type | Commentaire / valeur |
 |--------|--------|------|------------------------|
 | *Entête EDXL-DE* | distributionID | string | Règle à communiquer par équipe Hub |
@@ -49,6 +51,7 @@ Chaque client dispose de 3 files d’écoute selon la typologie des messages re�
 | *Contenu* | content.contentObject.JsonContent.embeddedJsonContent | json | Fichier Bundle transactionnel au format JSON |
 
 ### Message d'acquittement final
+
 | Élément | Chemin | Type | Commentaire |
 |--------|--------|------|-------------|
 | *Entête RC-DE* | messageId | string | Égal à distributionId du message initial |
