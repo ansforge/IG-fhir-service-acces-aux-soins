@@ -20,10 +20,12 @@ LRM -> PTF : Recherche de RDV (appel contextuel)
 PTF -> LGA : Redirection sur la solution éditeur\net prise de RDV
 LGA -> PTF : Remontée des informations du RDV pris
 PTF -> Hub : Création et envoi du message de prise de RDV
-Hub -> PTF : Accusé de réception technique
+Hub -> PTF : Acquittement technique
 Hub -> LRM : Transmission du message RDV
-LRM -> Hub : Message d'acquittement de réception
+LRM -> Hub : Message d'acquittement final de réception
 Hub -> PTF : Notification du statut final
+LRM -> Hub : Transmissions erreurs (éventuelles)
+Hub -> PTF : Transmissions erreurs (éventuelles)
 
 @enduml
 

@@ -67,15 +67,15 @@ Chaque client dispose de 3 files d’écoute selon la typologie des messages re�
 
 #### Message d'erreur
 
-| Élément | Type | Commentaire |
-|--------|------|-------------|
-| distributionID | string | À définir |
-| senderID | string | fr.health.samu.XXX Ex : fr.health.samu.330 |
-| dateTimeSent | Date time | Ex : 2025-08-24T14:15:22+02:00 |
-| dateTimeExpires | Date time | Ex : 2025-08-24T14:15:22+02:00 |
-| distributionStatus | string | Actual |
-| distributionKind | string | Error |
-| descriptor.language | string | fr-FR |
-| descriptor.explicitAddress.explicitAddressScheme | string | hubex |
-| descriptor.explicitAddress.explicitAddressValue | string | À définir. PTF SAS ? |
-| content.contentObject.embeddedJsonContent | json | JSON avec errorCode et errorCause |
+| Élément | Chemin | Type | Commentaire |
+|--------|--------|------|-------------|
+| *Entête RC-DE* | distributionID | string | À définir |
+| *Entête RC-DE* | senderID | string | fr.health.samu.XXX Ex : fr.health.samu.330 |
+| *Entête RC-DE* | dateTimeSent | Date time | Ex : 2025-08-24T14:15:22+02:00 |
+| *Entête RC-DE* | dateTimeExpires | Date time | Ex : 2025-08-24T14:15:22+02:00 |
+| *Entête RC-DE* | distributionStatus | string | Actual |
+| *Entête RC-DE* | distributionKind | string | Error |
+| *Entête RC-DE* | descriptor.language | string | fr-FR |
+| *Entête RC-DE* | descriptor.explicitAddress.explicitAddressScheme | string | hubex |
+| *Entête RC-DE* | descriptor.explicitAddress.explicitAddressValue | string | À définir. PTF SAS ? |
+| *Entête RC-DE* | content.contentObject.embeddedJsonContent | json | JSON avec errorCode et errorCause |
