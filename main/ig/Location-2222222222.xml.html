@@ -275,31 +275,31 @@
   &lt;<a href="http://hl7.org/fhir/R4/location.html#Location.meta">meta</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator&quot;/&gt;
-  &lt;/meta&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/location.html#Location.meta">meta</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/location.html#Location.identifier">identifier</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;INTRN&quot;/&gt;
-      &lt;/coding&gt;
-    &lt;/type&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://editeur.com&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;2222222222&quot;/&gt;
-  &lt;/identifier&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/location.html#Location.identifier">identifier</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/location.html#Location.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Centre de consultation Rennes Cleunay&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/location.html#Location.telecom">telecom</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;phone&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;+33145249912&quot;/&gt;
-  &lt;/telecom&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/location.html#Location.telecom">telecom</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/location.html#Location.address">address</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.line">line</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;106 rue Eugène Pottier&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.city">city</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;RENNES&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.postalCode">postalCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;35000&quot;/&gt;
-  &lt;/address&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/location.html#Location.address">address</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/location.html#Location.managingOrganization">managingOrganization</a>&gt;<a href="Organization-ExampleOrgaSOS1.html" style="color: Maroon">&#x1F517;</a> 
     &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Organization/ExampleOrgaSOS1&quot;/&gt;
-  &lt;/managingOrganization&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/location.html#Location.managingOrganization">managingOrganization</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/location.html#Location.hoursOfOperation">hoursOfOperation</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/location.html#Location.hoursOfOperation.daysOfWeek">daysOfWeek</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;mon&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/location.html#Location.hoursOfOperation.daysOfWeek">daysOfWeek</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;tue&quot;/&gt;
@@ -307,8 +307,8 @@
     &lt;<a href="http://hl7.org/fhir/R4/location.html#Location.hoursOfOperation.daysOfWeek">daysOfWeek</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;thu&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/location.html#Location.hoursOfOperation.openingTime">openingTime</a> <a href="http://hl7.org/fhir/R4/datatypes.html#time">value</a>=&quot;09:00:00&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/location.html#Location.hoursOfOperation.closingTime">closingTime</a> <a href="http://hl7.org/fhir/R4/datatypes.html#time">value</a>=&quot;21:00:00&quot;/&gt;
-  &lt;/hoursOfOperation&gt;
-&lt;/Location&gt;</code></pre>
+  &lt;/<a href="http://hl7.org/fhir/R4/location.html#Location.hoursOfOperation">hoursOfOperation</a>&gt;
+&lt;/<a href="http://hl7.org/fhir/R4/location.html#Location">Location</a>&gt;</code></pre>
 
 
   <!-- insert notes if present -->
@@ -354,7 +354,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jul 10, 2025 12:48+0000">2025-07-10</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Sep 2, 2025 16:24+0000">2025-09-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
