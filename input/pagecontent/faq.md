@@ -630,3 +630,11 @@ Un ID national possède une structure bien définie dont les spécificités sont
 Cf. [règles de gestion comptes régulateurs](./specifications_techniques-ps-gestion_regulateur.html#r%C3%A8gles-de-gestion), au sein de la requête, les champs `identifier.system` (autorité d'affectation) et `identifier.type` (type d'identifiant) permettent d'indiquer s'il s'agit d'un identifiant technique SAS ou d'un identifiant national.
 <br><br>
 
+
+### Transmission des informations de RDV aux LRM
+
+A COMPLETER
+
+**Est-ce que les infos PS sont transmises dans chaque requête ?**
+**Quelles sont les données minimales transmises dans une requête ?**
+**Que faire des messages reçues d’une orientation qui ne sont pas associées à un DRM par les régulateurs ?**

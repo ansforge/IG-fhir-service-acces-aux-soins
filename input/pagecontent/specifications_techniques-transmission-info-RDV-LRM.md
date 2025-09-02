@@ -24,8 +24,8 @@ Chaque client dispose de 3 files d’écoute selon la typologie des messages re�
 
 | Élément | Chemin | Type | Commentaire / valeur |
 |--------|--------|------|-------------|
-| *Entête EDXL-DE* | distributionID | string | Format <senderId>_<internalId> |
-| *Entête EDXL-DE* | senderID | string | À définir. Ex : PTFSAS|
+| *Entête EDXL-DE* | distributionID | string | Format `<senderId>_<internalId>` où `<internalId>` est un identifiant garanti unique |
+| *Entête EDXL-DE* | senderID | string | À définir. Ex : PTFSAS
 | *Entête EDXL-DE* | dateTimeSent | Date time | Ex : 2025-08-24T14:15:22+02:00 |
 | *Entête EDXL-DE* | dateTimeExpires | Date time | Ex : 2025-08-24T14:15:22+02:00 |
 | *Entête EDXL-DE* | distributionStatus | string | Actual |
@@ -107,4 +107,4 @@ Cf. [exemple](./Bundle-ExampleBundleAppointmentLRM5.json.html) avec modification
 
 Il n’y aura pas de message spécifique pour l’annulation d’un RDV. Une annulation de RDV est modélisée par un message de type « mise à jour du RDV » avec la modification du statut du RDV à « annulé ».
 
-Cf. [exemple](./Bundle-ExampleBundleAppointmentLRM9.json.html)
+Cf. [exemple](./Bundle-ExampleBundleAppointmentLRM9.json.html) de RDV annulé avec modification de la ressource `Appointment`
