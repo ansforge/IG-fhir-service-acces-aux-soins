@@ -1,7 +1,7 @@
 
 <div align="center">
 <figure>
-<img alt="Service d'Accès aux Soins (SAS)" src="input/images/sas_logo.png" align="middle">
+<img alt="Service d'Accès aux Soins (SAS)" src="input/images/logo_sas.png" align="middle">
 </figure>
 </div>
 
@@ -22,6 +22,7 @@ Les ressources sont profilées pour les différents cas d'usage :
 - PS à titre individuel
 - CPTS
 - SOS Médecins
+- Transmission des informations de RDV aux LRM
 
 # CI/CD
 Les pipelines de ce repository permettent : 
