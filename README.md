@@ -1,7 +1,7 @@
 
 <div align="center">
 <figure>
-<img alt="Service d'Accès aux Soins (SAS)" src="input/images/sas_logo.png" align="middle">
+<img alt="Service d'Accès aux Soins (SAS)" src="input/images/logo_sas.png" align="middle">
 </figure>
 </div>
 
