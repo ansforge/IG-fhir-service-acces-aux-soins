@@ -237,8 +237,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div>
-<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#détail-des-éléments-dentête" id="markdown-toc-détail-des-éléments-dentête">Détail des éléments d'entête</a></li>
+  <li><a href="#message-denvoi-de-rdv" id="markdown-toc-message-denvoi-de-rdv">Message d'envoi de RDV</a></li>
+  <li><a href="#message-de-modification-de-rdv" id="markdown-toc-message-de-modification-de-rdv">Message de modification de RDV</a></li>
+  <li><a href="#message-dannulation-de-rdv" id="markdown-toc-message-dannulation-de-rdv">Message d'annulation de RDV</a></li>
+</ul>
+
 </div>
 <p>Les échanges avec les éditeurs de LRM se font au travers d'une liaison avec le Hub Santé.
 La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés au Hub.</p>
@@ -280,7 +286,7 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
       <td><em>Entête EDXL-DE</em></td>
       <td>distributionID</td>
       <td>string</td>
-      <td>À définir</td>
+      <td>Format <senderId>_<internalId></internalId></senderId></td>
     </tr>
     <tr>
       <td><em>Entête EDXL-DE</em></td>
@@ -328,82 +334,7 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
       <td><em>Entête EDXL-DE</em></td>
       <td>descriptor.explicitAddress.explicitAddressValue</td>
       <td>string</td>
-      <td>fr.health.samu.XXX Ex : fr.health.samu.330</td>
-    </tr>
-    <tr>
-      <td><em>Contenu</em></td>
-      <td>content.contentObject.JsonContent.embeddedJsonContent</td>
-      <td>json</td>
-      <td>Fichier Bundle transactionnel au format JSON</td>
-    </tr>
-  </tbody>
-</table>
-
-<h4 id="message-dacquittement-technique">Message d'acquittement technique</h4>
-
-<table>
-  <thead>
-    <tr>
-      <th>Élément</th>
-      <th>Chemin</th>
-      <th>Type</th>
-      <th>Commentaire / valeur</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><em>Entête EDXL-DE</em></td>
-      <td>distributionID</td>
-      <td>string</td>
-      <td>Règle à communiquer par équipe Hub</td>
-    </tr>
-    <tr>
-      <td><em>Entête EDXL-DE</em></td>
-      <td>senderID</td>
-      <td>string</td>
-      <td>À définir. PTF SAS ?</td>
-    </tr>
-    <tr>
-      <td><em>Entête EDXL-DE</em></td>
-      <td>dateTimeSent</td>
-      <td>Date time</td>
-      <td>Ex : 2025-08-24T14:15:22+02:00</td>
-    </tr>
-    <tr>
-      <td><em>Entête EDXL-DE</em></td>
-      <td>dateTimeExpires</td>
-      <td>Date time</td>
-      <td>Ex : 2025-08-24T14:15:22Z+02:00</td>
-    </tr>
-    <tr>
-      <td><em>Entête EDXL-DE</em></td>
-      <td>distributionStatus</td>
-      <td>string</td>
-      <td>Actual</td>
-    </tr>
-    <tr>
-      <td><em>Entête EDXL-DE</em></td>
-      <td>distributionKind</td>
-      <td>string</td>
-      <td>Ack</td>
-    </tr>
-    <tr>
-      <td><em>Entête EDXL-DE</em></td>
-      <td>descriptor.language</td>
-      <td>string</td>
-      <td>fr-FR</td>
-    </tr>
-    <tr>
-      <td><em>Entête EDXL-DE</em></td>
-      <td>descriptor.explicitAddress.explicitAddressScheme</td>
-      <td>string</td>
-      <td>Hubex</td>
-    </tr>
-    <tr>
-      <td><em>Entête EDXL-DE</em></td>
-      <td>descriptor.explicitAddress.explicitAddressValue</td>
-      <td>string</td>
-      <td>fr.health.samu.XXX (Ex : fr.health.samu.330)</td>
+      <td>fr.health.samuXXX Ex : fr.health.samu330</td>
     </tr>
     <tr>
       <td><em>Contenu</em></td>
@@ -436,13 +367,13 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
       <td><em>Entête RC-DE</em></td>
       <td>sender.AddresseeType.name</td>
       <td>string</td>
-      <td>"Sender du message initial ? ou de celui de l'ACK PTFSAS"</td>
+      <td>fr.health.samuXXX Ex : fr.health.samu330</td>
     </tr>
     <tr>
       <td><em>Entête RC-DE</em></td>
       <td>sender.AddresseeType.URL</td>
       <td>string</td>
-      <td>hubex:fr.PTFSAS</td>
+      <td>hubex:fr.fr.health.samuXXX</td>
     </tr>
     <tr>
       <td><em>Entête RC-DE</em></td>
@@ -472,7 +403,7 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
       <td><em>Entête RC-DE</em></td>
       <td>recipients.recipient.explicitAddressValue</td>
       <td>string</td>
-      <td>fr.health.samu.XXX</td>
+      <td>À définir. Ex : PTFSAS</td>
     </tr>
     <tr>
       <td> </td>
@@ -547,7 +478,7 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
       <td><em>Entête RC-DE</em></td>
       <td>descriptor.explicitAddress.explicitAddressValue</td>
       <td>string</td>
-      <td>À définir. PTF SAS ?</td>
+      <td>À définir. Ex : PTFSAS</td>
     </tr>
     <tr>
       <td><em>Entête RC-DE</em></td>
@@ -557,6 +488,54 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
     </tr>
   </tbody>
 </table>
+
+<h3 id="message-denvoi-de-rdv">Message d'envoi de RDV</h3>
+
+<p>Lorsqu’un régulateur prend RDV pour un patient via la plateforme numérique SAS, celle-ci transmet un message de création de RDV qui suivra les modalités suivantes :</p>
+
+<ul>
+  <li><strong>Protocole</strong> : <span style="color:blue">AMQP 0-9-1<br />
+</span></li>
+  <li><strong>Ressource type</strong> : <span style="color:blue">Bundle<br />
+</span></li>
+  <li><strong>Sender</strong> : <span style="color:blue">PTF SAS<br />
+</span></li>
+  <li><strong>Content-type</strong> : <span style="color:blue">application/json  <br />
+</span></li>
+  <li><strong>Format du contenu</strong> : <span style="color:blue">JSON
+</span></li>
+</ul>
+
+<h3 id="message-de-modification-de-rdv">Message de modification de RDV</h3>
+
+<p>La mise à jour des données du RDV peut porter sur chacun des éléments de la ressource transmise (dates du créneau, PS effecteurs des soins, statut du RDV, etc.).</p>
+
+<p>Le message transmis pour la mise à jour du RDV devra suivre les modalités suivantes :</p>
+
+<ul>
+  <li><strong>Protocole</strong> : <span style="color:blue">AMQP 0-9-1<br />
+</span></li>
+  <li><strong>Ressource type</strong> : <span style="color:blue">Bundle<br />
+</span></li>
+  <li><strong>Sender</strong> : <span style="color:blue">PTF SAS<br />
+</span></li>
+  <li><strong>Content-type</strong> : <span style="color:blue">application/json  <br />
+</span></li>
+  <li><strong>Format du contenu</strong> : <span style="color:blue">JSON
+</span></li>
+</ul>
+
+<p>Le fichier json encapsulé dans le message est un Bundle de type transaction et ne contiendra que les ressources créées ou modifiées par rapport au message de création transmis.</p>
+
+<p>Ceci se fait au travers du verbe HTTP (POST et/ou PUT) de l'attribut entry.request.method de la ressource Bundle.</p>
+
+<p>Cf. <a href="./Bundle-ExampleBundleAppointmentLRM5.json.html">exemple</a> avec modification de la ressource <code class="language-plaintext highlighter-rouge">Appointment</code> et ajout de la ressource <code class="language-plaintext highlighter-rouge">Practitioner</code></p>
+
+<h3 id="message-dannulation-de-rdv">Message d'annulation de RDV</h3>
+
+<p>Il n’y aura pas de message spécifique pour l’annulation d’un RDV. Une annulation de RDV est modélisée par un message de type « mise à jour du RDV » avec la modification du statut du RDV à « annulé ».</p>
+
+<p>Cf. <a href="./Bundle-ExampleBundleAppointmentLRM9.json.html">exemple</a></p>
 
 
 
@@ -598,7 +577,7 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Aug 29, 2025 14:53+0000">2025-08-29</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Sep 2, 2025 14:07+0000">2025-09-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

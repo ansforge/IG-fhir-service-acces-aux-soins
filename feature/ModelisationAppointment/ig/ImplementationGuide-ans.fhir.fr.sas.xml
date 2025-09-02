@@ -10,7 +10,7 @@
   <name value="SAS"/>
   <title value="Service d'Accès aux Soins"/>
   <status value="active"/>
-  <date value="2025-08-29T14:53:04+00:00"/>
+  <date value="2025-09-02T14:06:24+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -659,6 +659,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Appointment"/>
+      </extension>
+      <reference>
+        <reference value="Appointment/ExampleAppointmentLRM8"/>
+      </reference>
+      <name value="ExampleAppointmentLRM8"/>
+      <description value="Exemple RDV LRM 8 - PS indiv (interfacé) annulé"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Bundle"/>
       </extension>
       <reference>
@@ -754,6 +765,17 @@
       </reference>
       <name value="ExampleBundleAppointmentLRM8"/>
       <description value="Exemple Bundle RDV LRM 8 - Cas mise à jour d'un RDV initialement sans PS avec ajout du médecin et de la structure"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/ExampleBundleAppointmentLRM9"/>
+      </reference>
+      <name value="ExampleBundleAppointmentLRM9"/>
+      <description value="Exemple Bundle RDV LRM 9 - Cas annulation de RDV avec PS mais sans structure, exemple PS. indiv interfacé"/>
       <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"/>
     </resource>
     <resource>
