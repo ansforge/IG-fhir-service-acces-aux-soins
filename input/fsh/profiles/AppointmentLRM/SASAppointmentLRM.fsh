@@ -15,7 +15,7 @@ Description: "Profil de Appointment, dérivé de FrAppointment, pour le cas d'us
 * start 1..1
 * end 1..1
 * created 1..1
-* statut ^short = "Statuts exploités par la PTF SAS : PENDING, BOOKED, NOSHOW, CANCELLED"
+* status ^short = "Statuts exploités par la PTF SAS : PENDING, BOOKED, NOSHOW, CANCELLED"
 * participant.actor only Reference(SASPractitionerLRM or SASHealthcareServiceLRM)
 * participant.actor MS
 * participant.status MS
