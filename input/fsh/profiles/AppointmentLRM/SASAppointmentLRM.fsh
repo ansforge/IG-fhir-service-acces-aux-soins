@@ -19,4 +19,4 @@ Description: "Profil de Appointment, dérivé de FrAppointment, pour le cas d'us
 * participant.actor only Reference(SASPractitionerLRM or SASHealthcareServiceLRM)
 * participant.actor MS
 * participant.status MS
-* participant.status ^short = "Statuts exploités par la PTF SAS : ACCEPTED, NEEDS-ACTION
+* participant.status ^short = "Statuts exploités par la PTF SAS : ACCEPTED, NEEDS-ACTION"
