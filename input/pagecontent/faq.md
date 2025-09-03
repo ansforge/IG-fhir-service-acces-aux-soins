@@ -635,6 +635,6 @@ Cf. [règles de gestion comptes régulateurs](./specifications_techniques-ps-ges
 
 A COMPLETER
 
-**Est-ce que les infos PS sont transmises dans chaque requête ?**
-**Quelles sont les données minimales transmises dans une requête ?**
-**Que faire des messages reçues d’une orientation qui ne sont pas associées à un DRM par les régulateurs ?**
+- **Est-ce que les infos PS sont transmises dans chaque requête ?**
+- **Quelles sont les données minimales transmises dans une requête ?**
+- **Que faire des messages reçues d’une orientation qui ne sont pas associées à un DRM par les régulateurs ?**
