@@ -64,7 +64,7 @@ La fludification du parcours régulateurs inclut les éléments suivants :
    - [Recherche de créneaux](./specifications_techniques-ps-recherche_creneaux.html)
    - [Gestion des comptes régulateurs](./specifications_techniques-ps-gestion_regulateur.html)
    - [Gestion de rendez-vous](./specifications_techniques-ps-gestion_rdv.html)
-3. [Ressources de conformité](./ressources_casusage.html#ps-à-titre-individuel.html)
+3. [Ressources de conformité](./ressources_casusage.html#ps-à-titre-individuel)
 
 #### CPTS
 
