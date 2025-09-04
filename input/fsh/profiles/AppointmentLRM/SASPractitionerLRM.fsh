@@ -7,7 +7,9 @@ Description: "Profil de Practitioner, dérivé de FrPractitioner, dans le cadre 
 * meta.profile[sas-practitioner-lrm] = Canonical(sas-practitioner-lrm)
 
 * identifier[idNatPs] 1..
+* identifier[idNatPs].type 1..1
 * identifier[idNatPs].type = $fr-v2-0203#IDNPS
+* identifier[idNatPs].system 1..1 
 * identifier.type.coding ..1
 * extension[specialty] MS
 
