@@ -21,4 +21,10 @@
       <sch:assert test="count(f:coding) &lt;= 1">coding: maximum cardinality of 'coding' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
+  <sch:pattern>
+    <sch:title>f:Practitioner/f:identifier</sch:title>
+    <sch:rule context="f:Practitioner/f:identifier">
+      <sch:assert test="count(f:type) &gt;= 1">type: minimum cardinality of 'type' is 1</sch:assert>
+    </sch:rule>
+  </sch:pattern>
 </sch:schema>
