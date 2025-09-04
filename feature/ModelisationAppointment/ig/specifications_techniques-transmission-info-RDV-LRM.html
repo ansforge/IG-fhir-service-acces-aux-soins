@@ -243,6 +243,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#message-denvoi-de-rdv" id="markdown-toc-message-denvoi-de-rdv">Message d'envoi de RDV</a></li>
   <li><a href="#message-de-modification-de-rdv" id="markdown-toc-message-de-modification-de-rdv">Message de modification de RDV</a></li>
   <li><a href="#message-dannulation-de-rdv" id="markdown-toc-message-dannulation-de-rdv">Message d'annulation de RDV</a></li>
+  <li><a href="#déclencheurs-et-règles-dintégration-attendues" id="markdown-toc-déclencheurs-et-règles-dintégration-attendues">Déclencheurs et règles d'intégration attendues</a></li>
 </ul>
 
 </div>
@@ -537,6 +538,36 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
 
 <p>Cf. <a href="./Bundle-ExampleBundleAppointmentLRM9.json.html">exemple</a> de RDV annulé avec modification de la ressource <code class="language-plaintext highlighter-rouge">Appointment</code></p>
 
+<h3 id="déclencheurs-et-règles-dintégration-attendues">Déclencheurs et règles d'intégration attendues</h3>
+
+<p>Divers évènements dans la plateforme numérique SAS peuvent déclencher de manière instantanée le flux. À titre d’exemple, vous trouverez ci-dessous une liste non exhaustive de ces évènements :</p>
+
+<ul>
+  <li>Pour la création d’un message :
+    <ul>
+      <li>lors de la prise de RDV ou demande de prise en charge par le régulateur pour le compte du patient dans une solution éditeur</li>
+      <li>lors de la prise de RDV par le régulateur pour le compte du patient dans la plateforme numérique SAS</li>
+      <li>lors de la prise de RDV par le régulateur pour le compte du patient en surnuméraire</li>
+    </ul>
+  </li>
+  <li>Pour la modification d’un message :
+    <ul>
+      <li>lors d’un changement de statut du RDV : confirmé, annulé, honoré et non honoré</li>
+      <li>lors d’un changement du PS effecteur de soins (ex. remplacement) ou lorsque le PS n’a pas pu être identifié au préalable (ex. agendas de structure)</li>
+      <li>lors d’un changement horaire du créneau</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Le paragraphe ci-dessous détaille les différentes règles de gestions attendues par les éditeurs à la suite du déclenchement du flux et la transmission d’un message :</p>
+<ul>
+  <li>A la réception du message, la solution éditeur stockera l’identifiant technique SAS du RDV transmis pour référence et gestion des mises à jour éventuelles</li>
+  <li>Il est attendu pour les éditeurs ayant implémenté le flux de mettre en place une écoute de leurs files de messages instantanément afin de permettra le rattachement du RDV avec le DRM par le régulateur à la suite de la transmission des informations de RDV</li>
+  <li>Lors que les données du RDV pris pour le compte du patient auront été transmises à la solution LRM, le régulateur OSNP devra réaliser le rapprochement entre l’orientation et le DRM. Il est attendu que l’éditeur mette en place un tableau de bord ou un espace pour la gestion des RDV pris au sein du LRM en s’appuyant sur la donnée métier disponible (ex. via numéro téléphone, Nom Patient, sélection ID DRM avec filtre SNP, heure de prise de RDV, heure du RDV, etc) ou par l’affichage d’une liste déroulante des orientations non associées depuis le DRM. L’ANS et l’éditeur conviendront en atelier de cadrage du moyen d’association à définir dans la solution.</li>
+  <li>Les règles d’association de l’orientation avec le DRM et la gestion des requêtes potentielles non associées seront gérées au cas par cas avec l’éditeur.</li>
+  <li>Il est attendu de la part de l’éditeur de conserver un historique des messages reçus au niveau de l’échange et au niveau du résultat du traitement du message.</li>
+</ul>
+
 
 
 </div>
@@ -577,7 +608,7 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 3, 2025 16:18+0000">2025-09-03</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 4, 2025 08:15+0000">2025-09-04</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
