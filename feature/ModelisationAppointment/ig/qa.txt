@@ -1,9 +1,9 @@
 SAS : Validation Results
 =========================================
 
-err = 3, warn = 101, info = 97
+err = 4, warn = 101, info = 97
 IG Publisher Version: 2.0.16
-Generated Thu Sep 04 08:31:29 UTC 2025. FHIR version 4.0.1 for ans.fhir.fr.sas#1.1.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/sas)
+Generated Thu Sep 04 13:04:27 UTC 2025. FHIR version 4.0.1 for ans.fhir.fr.sas#1.1.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/sas)
  Build Errors : 1 / 7 / 0
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Appointment-1 : 0 / 3 / 1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Appointment-2 : 0 / 3 / 1
@@ -86,7 +86,7 @@ Generated Thu Sep 04 08:31:29 UTC 2025. FHIR version 4.0.1 for ans.fhir.fr.sas#1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Slot-ExampleSlotSOS3 : 0 / 0 / 2
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Slot-ExampleSlotSOS4 : 0 / 0 / 2
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/StructureDefinition-sas-appointment : 0 / 0 / 4
- /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/StructureDefinition-sas-appointment-lrm : 0 / 0 / 3
+ /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/StructureDefinition-sas-appointment-lrm : 1 / 0 / 3
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/StructureDefinition-sas-bundle-aggregator : 0 / 0 / 1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/StructureDefinition-sas-bundle-appointment-lrm : 0 / 1 / 2
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/StructureDefinition-sas-categorie-orientation : 0 / 0 / 1
@@ -378,6 +378,7 @@ INFORMATION: StructureDefinition/sas-appointment: StructureDefinition.snapshot.e
 == fsh-generated/resources/StructureDefinition-sas-appointment-lrm.json ==
 INFORMATION: StructureDefinition/sas-appointment-lrm: StructureDefinition.snapshot.element[14].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
 INFORMATION: StructureDefinition/sas-appointment-lrm: StructureDefinition.snapshot.element[28].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+ERROR: StructureDefinition: Profile test case failed - test for FichiersDeTest/Appointment-ExampleAppointmentLRM4.json failed but it should have failed
 == fsh-generated/resources/StructureDefinition-sas-bundle-aggregator.json ==
 == fsh-generated/resources/StructureDefinition-sas-bundle-appointment-lrm.json ==
 INFORMATION: StructureDefinition/sas-bundle-appointment-lrm: StructureDefinition.snapshot.element[8].pattern.ofType(canonical): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
