@@ -108,3 +108,25 @@ Cf. [exemple](./Bundle-ExampleBundleAppointmentLRM5.json.html) avec modification
 Il n’y aura pas de message spécifique pour l’annulation d’un RDV. Une annulation de RDV est modélisée par un message de type « mise à jour du RDV » avec la modification du statut du RDV à « annulé ».
 
 Cf. [exemple](./Bundle-ExampleBundleAppointmentLRM9.json.html) de RDV annulé avec modification de la ressource `Appointment`
+
+### Déclencheurs et règles d'intégration attendues
+
+Divers évènements dans la plateforme numérique SAS peuvent déclencher de manière instantanée le flux. À titre d’exemple, vous trouverez ci-dessous une liste non exhaustive de ces évènements : 
+
+- Pour la création d’un message : 
+    - lors de la prise de RDV ou demande de prise en charge par le régulateur pour le compte du patient dans une solution éditeur 
+    - lors de la prise de RDV par le régulateur pour le compte du patient dans la plateforme numérique SAS 
+    - lors de la prise de RDV par le régulateur pour le compte du patient en surnuméraire 
+
+- Pour la modification d’un message : 
+    - lors d’un changement de statut du RDV : confirmé, annulé, honoré et non honoré 
+    - lors d’un changement du PS effecteur de soins (ex. remplacement) ou lorsque le PS n’a pas pu être identifié au préalable (ex. agendas de structure) 
+    - lors d’un changement horaire du créneau 
+
+
+Le paragraphe ci-dessous détaille les différentes règles de gestions attendues par les éditeurs à la suite du déclenchement du flux et la transmission d’un message : 
+- A la réception du message, la solution éditeur stockera l’identifiant technique SAS du RDV transmis pour référence et gestion des mises à jour éventuelles 
+- Il est attendu pour les éditeurs ayant implémenté le flux de mettre en place une écoute de leurs files de messages instantanément afin de permettra le rattachement du RDV avec le DRM par le régulateur à la suite de la transmission des informations de RDV 
+- Lors que les données du RDV pris pour le compte du patient auront été transmises à la solution LRM, le régulateur OSNP devra réaliser le rapprochement entre l’orientation et le DRM. Il est attendu que l’éditeur mette en place un tableau de bord ou un espace pour la gestion des RDV pris au sein du LRM en s’appuyant sur la donnée métier disponible (ex. via numéro téléphone, Nom Patient, sélection ID DRM avec filtre SNP, heure de prise de RDV, heure du RDV, etc) ou par l’affichage d’une liste déroulante des orientations non associées depuis le DRM. L’ANS et l’éditeur conviendront en atelier de cadrage du moyen d’association à définir dans la solution. 
+- Les règles d’association de l’orientation avec le DRM et la gestion des requêtes potentielles non associées seront gérées au cas par cas avec l’éditeur. 
+- Il est attendu de la part de l’éditeur de conserver un historique des messages reçus au niveau de l’échange et au niveau du résultat du traitement du message. 

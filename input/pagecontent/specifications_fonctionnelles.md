@@ -202,7 +202,7 @@ Le schéma ci-dessous illustre l'échange à mettre en oeuvre :
 ### Transmission des informations de RDV aux LRM
 
 #### Description du cas d'usage
-L’objectif du cas d’usage est de pouvoir alimenter de manière automatisée le DRM avec les informations de RDV pris pour le compte du patient dans les solutions logicielles éditeurs (LGA) ou dans la plateforme numérique du SAS.
+L’objectif de cette interface, flux INT_L02, est de pouvoir alimenter de manière automatisée le DRM avec les informations de RDV pris pour le compte du patient dans les solutions logicielles éditeurs (LGA) ou dans la plateforme numérique du SAS.
 À la suite de la prise de RDV réalisée par la régulation pour le compte du patient, les informations de RDV sont centralisées au niveau de la plateforme nationale. Les travaux souhaités visent à poursuivre le parcours de la donnée pour venir alimenter le DRM avec ces informations, selon le schéma suivant :
 
 <table align="center">
@@ -274,5 +274,10 @@ Le schéma ci-dessous présente une synthèse des ressources FHIR à utiliser :
     <p>{% include ressources-exploitees-lrm.svg %}</p>
 </div>
 
+#### Rattachement au DRM dans la solution LRM 
 
+Les orientations transmises automatiquement au LRM sont affichées au niveau du LRM pour le régulateur qui est en mesure de réaliser le rattachement avec le DRM (Dossier de Régulation Médicale) correspondant pour alimentation avec les données du RDV pris pour le compte du patient sans ressaisie. 
 
+D’un point de vue implémentation, l’action de rapprochement entre l’orientation et le DRM par le régulateur pourra se traduire à titre d’exemple par la mise en place d’un tableau de bord ou d’un espace pour la gestion des RDV pris au sein du LRM en s’appuyant sur la donnée métier disponible (ex. via numéro téléphone, Nom Patient, sélection ID DRM avec filtre SNP, heure de prise de RDV, heure du RDV, etc) ou par l’affichage d’une liste déroulante des orientations non associées depuis le DRM. L’ANS et l’éditeur conviendront, lors de l’atelier de cadrage, du moyen d’association défini dans la solution éditeur pour que le régulateur puisse alimenter simplement le DRM avec les données de l’orientation réalisée.  
+
+ 

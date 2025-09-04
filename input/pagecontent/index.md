@@ -64,6 +64,7 @@ La fludification du parcours régulateurs inclut les éléments suivants :
    - [Recherche de créneaux](./specifications_techniques-ps-recherche_creneaux.html)
    - [Gestion des comptes régulateurs](./specifications_techniques-ps-gestion_regulateur.html)
    - [Gestion de rendez-vous](./specifications_techniques-ps-gestion_rdv.html)
+3. [Ressources de conformité](./ressources_casusage.html#ps-à-titre-individuel.html)
 
 #### CPTS
 
@@ -72,6 +73,7 @@ La fludification du parcours régulateurs inclut les éléments suivants :
    - [Recherche de créneaux](./specifications_techniques-cpts-recherche_creneaux.html)
    - [Gestion des comptes régulateurs](./specifications_techniques-cpts-gestion_regulateur.html)
    - [Gestion de rendez-vous](./specifications_techniques-cpts-gestion_rdv.html)
+3. [Ressources de conformité](./ressources_casusage.html#cpts)
 
 #### SOS Médecins
 
@@ -80,11 +82,13 @@ La fludification du parcours régulateurs inclut les éléments suivants :
    - [Recherche de créneaux](./specifications_techniques-sos-recherche_creneaux.html)
    - [Gestion des comptes régulateurs](./specifications_techniques-sos-gestion_regulateur.html)
    - [Gestion de rendez-vous](./specifications_techniques-sos-gestion_rdv.html)
+3. [Ressources de conformité](./ressources_casusage.html#sos-médecins)
 
 #### Transmission des informations de RDV aux LRM
 
 1. [Spécifications fonctionnelles](./specifications_fonctionnelles.html#transmission-des-informations-de-rdv-aux-lrm)
 2. [Spécifications techniques](./specifications_techniques-transmission-info-RDV-LRM.html)
+3. [Ressources de conformité](./ressources_casusage.html#redescente-des-informations-de-rdv)
 
 ### Dépendances
  

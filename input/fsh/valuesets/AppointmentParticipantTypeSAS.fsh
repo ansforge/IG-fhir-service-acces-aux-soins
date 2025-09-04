@@ -1,4 +1,4 @@
-ValueSet: AppointmentParticipantTypeSAS.
+ValueSet: AppointmentParticipantTypeSAS
 Id: sas-valueset-appointmentparticipanttype
 Title: "Appointment Participant Type SAS"
 Description: "Type de participant du RDV SAS"
