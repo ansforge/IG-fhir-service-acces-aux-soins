@@ -18,11 +18,14 @@ Chaque client dispose de 3 files d’écoute selon la typologie des messages re�
 - « ack » pour les acquittements de réception finale
 - « info » pour les messages généraux d’informations, alertes et erreurs
 
-En l'occurence, les LRM écouteront sur leur file "message" et la plateforme SAS écoutera sur les files "ack" et "info".  
+En l'occurence, les LRM écouteront sur leur file « message » et la plateforme SAS écoutera sur les files "ack" et "info".  
 
-### Détail des éléments d'entête
+### Détail des échanges
 
-#### Message PTF SAS -> Hub 
+#### Gestion de l'envoi d'un message de la PTF SAS -> Hub 
+
+Les champs ci-dessous correspondent à l’en-tête du message qui porte les informations de RDV pris par le régulateur pour le compte du patient. Ce message est envoyé instantanément de la plateforme SAS au HubSanté. 
+L'entête est de type "EDXL-DE", cf. spécifications du Hub Santé.
 
 | Élément | Champ | Type | Description | Commentaire / valeur |
 |--------|--------|------|------|-------------|
@@ -37,12 +40,18 @@ En l'occurence, les LRM écouteront sur leur file "message" et la plateforme SAS
 | *Entête EDXL-DE* | descriptor.explicitAddress.explicitAddressValue | string | Identifiant du SAMU destinataire |fr.health.samuXXX Ex : fr.health.samu330 |
 | *Contenu* | content.contentObject.JsonContent.embeddedJsonContent | json | Contenu du message json encapsulé dans l'entête | Fichier Bundle transactionnel au format JSON |
 
+#### Acquittement technique
+
+Un acquittement technique sera transmis du Hub vers la plateforme SAS afin d'informer cette dernière de la bonne prise en charge du message et de l'inscription dans sa file d'envoi (file « message » du LRM). Cette fonctionnalité est intégréé au protocole AMQ sous la forme de *Consumer Acknowledgement*, cf. spécifications du Hub Santé.
+
+
 #### Message d'acquittement final
+
+Cet aquittement correspond à la confirmation par le HubSanté de la bonne réception du message transmis par la plateforme SAS. L'entête est de type "RC-DE", cf. spécifications du Hub Santé. 
 
 | Élément | Champ | Type | Description | Commentaire / valeur |
 |--------|--------|------|------|-------------|
-| *Entête RC-DE* | messageId | string | Identifiant du message 
-interne. Identique au champ `distributionID` de l'enveloppe EDXL-DE| Égal à `distributionId` du message initial |
+| *Entête RC-DE* | messageId | string | Identifiant du message interne. Identique au champ `distributionID` de l'enveloppe EDXL-DE| Égal à `distributionId` du message initial |
 | *Entête RC-DE* | sender.AddresseeType.name | string | Identifiant de l'émetteur |fr.health.samuXXX Ex : fr.health.samu330 |
 | *Entête RC-DE* | sender.AddresseeType.URL | string | URL de l'émetteur| hubex:fr.fr.health.samuXXX |
 | *Entête RC-DE* | sentAt | Date time | Date et heure d'envoi du message | Ex : 2025-08-24T14:15:22+02:00 |
@@ -55,6 +64,8 @@ interne. Identique au champ `distributionID` de l'enveloppe EDXL-DE| Égal à `d
 
 #### Message d'erreur
 
+En cas d'erreur, un message est posté sur la file « info » de la plateforme SAS. Les champs ci-dessous correspondent à l’en-tête du message
+
 | Élément | Champ | Type | Description | Commentaire / valeur |
 |--------|--------|------|------|-------------|
 | *Entête EDXL-DE* | distributionID | string | Identifiant unique du message attribué par l’expéditeur | À définir |
@@ -66,7 +77,27 @@ interne. Identique au champ `distributionID` de l'enveloppe EDXL-DE| Égal à `d
 | *Entête EDXL-DE* | descriptor.language | string | Langue du message échangé | Valeur fixe : `fr-FR` |
 | *Entête EDXL-DE* | descriptor.explicitAddress.explicitAddressScheme | string Identifiant du SI pilotant le Hub| Valeur fixe : `Hubex` |
 | *Entête EDXL-DE* | descriptor.explicitAddress.explicitAddressValue | string | Identifiant du SAMU destinataire | À définir. Ex : PTFSAS|
-| | content.contentObject.embeddedJsonContent | json | Contenu du message json encapsulé dans l'entête | JSON avec errorCode et errorCause |
+| *Contenu* | content.contentObject.embeddedJsonContent | json | Contenu du message json encapsulé dans l'entête | JSON avec errorCode et errorCause |
+
+L'erreur sera présente dans le contenu du message json qui respecte le modèle suivant, cf. spécifications du Hub Santé : 
+
+| Champ | Description | Commentaire / valeur |
+|--------|--------|------|
+| errorCode | Code de l'erreur ayant conduit au rejet du message | Cf. tableau des erreurs ci-après |
+| errorCause | Cause de l'erreur | La cause de l’erreur. Le distributionID de l’enveloppe EDXL y est précisé si le 
+message a pu être désérialisé, ainsi que des éléments plus précis suivant l’erreur relevée. |
+| sourceMessage | Contenu du message rejeté | A préciser |
+
+A noter qu'il existe deux types d'erreur : 
+- les messages "techniques" directement générés par le Hub et traduisant une impossibilité de remettre le message au destinataire (LRM) (a)
+- les messages d'erreurs "fonctionnels" envoyés depuis le LRM (toujours en transitant par le Hub) traduisant l'impossibilité de traiter correctement le message reçu (b)
+
+A titre d'exemple, les codes d'erreur suivants pourront être envoyés du Hub vers la plateforme SAS : 
+- 400 (EXPIRED_MESSAGE_BEFORE_ROUTING) - Le message n’a pas été reçu par son destinataire, il a expiré sur le Hub avant de lui être délivré.
+- 500 (DEAD_LETTERED_QUEUE) Le message n’a pas été reçu par son destinataire, il a expiré avant qu’il ne le dépile. 
+
+Le LRM pourra envoyer des messages de type : 
+- 404 (NOT_FOUND) - L'identifiant du RDV a mettre à jour n'a pas été trouvé dans le cas d'un Bundle contenant une mise à jour sur la ressource Appointment. 
 
 ### Message d'envoi de RDV
 
