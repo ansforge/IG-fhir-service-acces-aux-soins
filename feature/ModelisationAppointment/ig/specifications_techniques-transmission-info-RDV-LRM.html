@@ -272,6 +272,8 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
   <li>« info » pour les messages généraux d’informations, alertes et erreurs</li>
 </ul>
 
+<p>En l'occurence, les LRM écouteront sur leur file "message" et la plateforme SAS écoutera sur les files "ack" et "info".</p>
+
 <h3 id="détail-des-éléments-dentête">Détail des éléments d'entête</h3>
 
 <h4 id="message-ptf-sas---hub">Message PTF SAS -&gt; Hub</h4>
@@ -280,8 +282,9 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
   <thead>
     <tr>
       <th>Élément</th>
-      <th>Chemin</th>
+      <th>Champ</th>
       <th>Type</th>
+      <th>Description</th>
       <th>Commentaire / valeur</th>
     </tr>
   </thead>
@@ -290,60 +293,70 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
       <td><em>Entête EDXL-DE</em></td>
       <td>distributionID</td>
       <td>string</td>
+      <td>Identifiant unique du message attribué par l’expéditeur</td>
       <td>Format <code class="language-plaintext highlighter-rouge">&lt;senderId&gt;_&lt;internalId&gt;</code> où <code class="language-plaintext highlighter-rouge">&lt;internalId&gt;</code> est un identifiant garanti unique</td>
     </tr>
     <tr>
       <td><em>Entête EDXL-DE</em></td>
       <td>senderID</td>
       <td>string</td>
+      <td>Identifiant de l'émetteur</td>
       <td>À définir. Ex : PTFSAS</td>
     </tr>
     <tr>
       <td><em>Entête EDXL-DE</em></td>
       <td>dateTimeSent</td>
       <td>Date time</td>
+      <td>Date et heure d'envoi du message</td>
       <td>Ex : 2025-08-24T14:15:22+02:00</td>
     </tr>
     <tr>
       <td><em>Entête EDXL-DE</em></td>
       <td>dateTimeExpires</td>
       <td>Date time</td>
+      <td>Date et heure d'expiration du message : les données ne doivent pas être délivrées au-delà de cette date</td>
       <td>Ex : 2025-08-24T14:15:22+02:00</td>
     </tr>
     <tr>
       <td><em>Entête EDXL-DE</em></td>
       <td>distributionStatus</td>
       <td>string</td>
-      <td>Actual</td>
+      <td>Statut du message</td>
+      <td>Valeur fixe : <code class="language-plaintext highlighter-rouge">Actual</code></td>
     </tr>
     <tr>
       <td><em>Entête EDXL-DE</em></td>
       <td>distributionKind</td>
       <td>string</td>
-      <td>Report</td>
+      <td>Type du message</td>
+      <td>Valeur fixe : <code class="language-plaintext highlighter-rouge">Report</code></td>
     </tr>
     <tr>
       <td><em>Entête EDXL-DE</em></td>
       <td>descriptor.language</td>
       <td>string</td>
-      <td>fr-FR</td>
+      <td>Langue du message échangé</td>
+      <td>Valeur fixe : <code class="language-plaintext highlighter-rouge">fr-FR</code></td>
     </tr>
     <tr>
       <td><em>Entête EDXL-DE</em></td>
       <td>descriptor.explicitAddress.explicitAddressScheme</td>
       <td>string</td>
-      <td>Hubex</td>
+      <td>Identifiant du SI pilotant le Hub</td>
+      <td>Valeur fixe : <code class="language-plaintext highlighter-rouge">Hubex</code></td>
     </tr>
     <tr>
       <td><em>Entête EDXL-DE</em></td>
       <td>descriptor.explicitAddress.explicitAddressValue</td>
       <td>string</td>
+      <td>Identifiant du SAMU destinataire</td>
       <td>fr.health.samuXXX Ex : fr.health.samu330</td>
     </tr>
     <tr>
       <td><em>Contenu</em></td>
       <td>content.contentObject.JsonContent.embeddedJsonContent</td>
       <td>json</td>
+      <td>Contenu du message json encapsulé dans l'entête</td>
       <td>Fichier Bundle transactionnel au format JSON</td>
     </tr>
   </tbody>
@@ -355,9 +368,10 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
   <thead>
     <tr>
       <th>Élément</th>
-      <th>Chemin</th>
+      <th>Champ</th>
       <th>Type</th>
-      <th>Commentaire</th>
+      <th>Description</th>
+      <th>Commentaire / valeur</th>
     </tr>
   </thead>
   <tbody>
@@ -365,54 +379,70 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
       <td><em>Entête RC-DE</em></td>
       <td>messageId</td>
       <td>string</td>
-      <td>Égal à distributionId du message initial</td>
+      <td>Identifiant du message</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>interne. Identique au champ <code class="language-plaintext highlighter-rouge">distributionID</code> de l'enveloppe EDXL-DE</td>
+      <td>Égal à <code class="language-plaintext highlighter-rouge">distributionId</code> du message initial</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
     </tr>
     <tr>
       <td><em>Entête RC-DE</em></td>
       <td>sender.AddresseeType.name</td>
       <td>string</td>
+      <td>Identifiant de l'émetteur</td>
       <td>fr.health.samuXXX Ex : fr.health.samu330</td>
     </tr>
     <tr>
       <td><em>Entête RC-DE</em></td>
       <td>sender.AddresseeType.URL</td>
       <td>string</td>
+      <td>URL de l'émetteur</td>
       <td>hubex:fr.fr.health.samuXXX</td>
     </tr>
     <tr>
       <td><em>Entête RC-DE</em></td>
       <td>sentAt</td>
       <td>Date time</td>
+      <td>Date et heure d'envoi du message</td>
       <td>Ex : 2025-08-24T14:15:22+02:00</td>
     </tr>
     <tr>
       <td><em>Entête RC-DE</em></td>
       <td>status</td>
       <td>string</td>
-      <td>Actual</td>
+      <td>Statut du message</td>
+      <td>Valeur fixe : <code class="language-plaintext highlighter-rouge">Actual</code></td>
     </tr>
     <tr>
       <td><em>Entête RC-DE</em></td>
       <td>kind</td>
       <td>string</td>
-      <td>Ack</td>
+      <td>Type du message</td>
+      <td>Valeur fixe : <code class="language-plaintext highlighter-rouge">Ack</code></td>
     </tr>
     <tr>
       <td><em>Entête RC-DE</em></td>
       <td>recipients.recipient.explicitAddressScheme</td>
       <td>string</td>
-      <td>hubex</td>
+      <td>Identifiant du SI pilotant le Hub</td>
+      <td>Valeur fixe : <code class="language-plaintext highlighter-rouge">Hubex</code></td>
     </tr>
     <tr>
       <td><em>Entête RC-DE</em></td>
       <td>recipients.recipient.explicitAddressValue</td>
       <td>string</td>
+      <td>Identifiant du destinataire</td>
       <td>À définir. Ex : PTFSAS</td>
     </tr>
     <tr>
       <td> </td>
       <td>reference</td>
       <td>string</td>
+      <td> </td>
       <td>Égal à distributionId du message initial</td>
     </tr>
   </tbody>
@@ -424,70 +454,81 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
   <thead>
     <tr>
       <th>Élément</th>
-      <th>Chemin</th>
+      <th>Champ</th>
       <th>Type</th>
-      <th>Commentaire</th>
+      <th>Description</th>
+      <th>Commentaire / valeur</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><em>Entête RC-DE</em></td>
+      <td><em>Entête EDXL-DE</em></td>
       <td>distributionID</td>
       <td>string</td>
+      <td>Identifiant unique du message attribué par l’expéditeur</td>
       <td>À définir</td>
     </tr>
     <tr>
-      <td><em>Entête RC-DE</em></td>
+      <td><em>Entête EDXL-DE</em></td>
       <td>senderID</td>
       <td>string</td>
+      <td>Identifiant de l'émetteur</td>
       <td>fr.health.samu.XXX Ex : fr.health.samu.330</td>
     </tr>
     <tr>
-      <td><em>Entête RC-DE</em></td>
+      <td><em>Entête EDXL-DE</em></td>
       <td>dateTimeSent</td>
       <td>Date time</td>
+      <td>Date et heure d'envoi du message</td>
       <td>Ex : 2025-08-24T14:15:22+02:00</td>
     </tr>
     <tr>
-      <td><em>Entête RC-DE</em></td>
+      <td><em>Entête EDXL-DE</em></td>
       <td>dateTimeExpires</td>
       <td>Date time</td>
+      <td>Date et heure d'expiration du message : les données ne doivent pas être délivrées au-delà de cette date</td>
       <td>Ex : 2025-08-24T14:15:22+02:00</td>
     </tr>
     <tr>
-      <td><em>Entête RC-DE</em></td>
+      <td><em>Entête EDXL-DE</em></td>
       <td>distributionStatus</td>
       <td>string</td>
-      <td>Actual</td>
+      <td>Statut du message</td>
+      <td>Valeur fixe : <code class="language-plaintext highlighter-rouge">Actual</code></td>
     </tr>
     <tr>
-      <td><em>Entête RC-DE</em></td>
+      <td><em>Entête EDXL-DE</em></td>
       <td>distributionKind</td>
       <td>string</td>
-      <td>Error</td>
+      <td>Type du message</td>
+      <td>Valeur fixe : <code class="language-plaintext highlighter-rouge">Error</code></td>
     </tr>
     <tr>
-      <td><em>Entête RC-DE</em></td>
+      <td><em>Entête EDXL-DE</em></td>
       <td>descriptor.language</td>
       <td>string</td>
-      <td>fr-FR</td>
+      <td>Langue du message échangé</td>
+      <td>Valeur fixe : <code class="language-plaintext highlighter-rouge">fr-FR</code></td>
     </tr>
     <tr>
-      <td><em>Entête RC-DE</em></td>
+      <td><em>Entête EDXL-DE</em></td>
       <td>descriptor.explicitAddress.explicitAddressScheme</td>
-      <td>string</td>
-      <td>hubex</td>
+      <td>string Identifiant du SI pilotant le Hub</td>
+      <td>Valeur fixe : <code class="language-plaintext highlighter-rouge">Hubex</code></td>
+      <td> </td>
     </tr>
     <tr>
-      <td><em>Entête RC-DE</em></td>
+      <td><em>Entête EDXL-DE</em></td>
       <td>descriptor.explicitAddress.explicitAddressValue</td>
       <td>string</td>
+      <td>Identifiant du SAMU destinataire</td>
       <td>À définir. Ex : PTFSAS</td>
     </tr>
     <tr>
-      <td><em>Entête RC-DE</em></td>
+      <td> </td>
       <td>content.contentObject.embeddedJsonContent</td>
       <td>json</td>
+      <td>Contenu du message json encapsulé dans l'entête</td>
       <td>JSON avec errorCode et errorCause</td>
     </tr>
   </tbody>
@@ -611,7 +652,7 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 4, 2025 16:13+0000">2025-09-04</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Sep 8, 2025 10:21+0000">2025-09-08</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
