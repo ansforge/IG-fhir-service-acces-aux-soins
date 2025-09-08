@@ -444,7 +444,7 @@ L'entête est de type "EDXL-DE", cf. spécifications du Hub Santé.</p>
       <td> </td>
       <td>reference</td>
       <td>string</td>
-      <td> </td>
+      <td>Identifiant du message référencé</td>
       <td>Égal à distributionId du message initial</td>
     </tr>
   </tbody>
@@ -517,9 +517,9 @@ L'entête est de type "EDXL-DE", cf. spécifications du Hub Santé.</p>
     <tr>
       <td><em>Entête EDXL-DE</em></td>
       <td>descriptor.explicitAddress.explicitAddressScheme</td>
-      <td>string Identifiant du SI pilotant le Hub</td>
+      <td>string</td>
+      <td>Identifiant du SI pilotant le Hub</td>
       <td>Valeur fixe : <code class="language-plaintext highlighter-rouge">Hubex</code></td>
-      <td> </td>
     </tr>
     <tr>
       <td><em>Entête EDXL-DE</em></td>
@@ -557,12 +557,7 @@ L'entête est de type "EDXL-DE", cf. spécifications du Hub Santé.</p>
     <tr>
       <td>errorCause</td>
       <td>Cause de l'erreur</td>
-      <td>La cause de l’erreur. Le distributionID de l’enveloppe EDXL y est précisé si le</td>
-    </tr>
-    <tr>
-      <td>message a pu être désérialisé, ainsi que des éléments plus précis suivant l’erreur relevée.</td>
-      <td> </td>
-      <td> </td>
+      <td>La cause de l’erreur. Le distributionID de l’enveloppe EDXL y est précisé si le message a pu être désérialisé, ainsi que des éléments plus précis suivant l’erreur relevée.</td>
     </tr>
     <tr>
       <td>sourceMessage</td>
@@ -658,13 +653,16 @@ L'entête est de type "EDXL-DE", cf. spécifications du Hub Santé.</p>
   </li>
 </ul>
 
-<p>Le paragraphe ci-dessous détaille les différentes règles de gestions attendues par les éditeurs à la suite du déclenchement du flux et la transmission d’un message :</p>
+<p><br />
+<br /></p>
+
+<p>Le paragraphe ci-dessous détaille les différentes <strong>règles de gestions attendues</strong> par les éditeurs à la suite du déclenchement du flux et la transmission d’un message :</p>
 <ul>
-  <li>A la réception du message, la solution éditeur stockera l’identifiant technique SAS du RDV transmis pour référence et gestion des mises à jour éventuelles</li>
-  <li>Il est attendu pour les éditeurs ayant implémenté le flux de mettre en place une écoute de leurs files de messages instantanément afin de permettra le rattachement du RDV avec le DRM par le régulateur à la suite de la transmission des informations de RDV</li>
-  <li>Lors que les données du RDV pris pour le compte du patient auront été transmises à la solution LRM, le régulateur OSNP devra réaliser le rapprochement entre l’orientation et le DRM. Il est attendu que l’éditeur mette en place un tableau de bord ou un espace pour la gestion des RDV pris au sein du LRM en s’appuyant sur la donnée métier disponible (ex. via numéro téléphone, Nom Patient, sélection ID DRM avec filtre SNP, heure de prise de RDV, heure du RDV, etc) ou par l’affichage d’une liste déroulante des orientations non associées depuis le DRM. L’ANS et l’éditeur conviendront en atelier de cadrage du moyen d’association à définir dans la solution.</li>
+  <li>A la réception du message, <strong>la solution éditeur stockera l’identifiant technique SAS du RDV transmis</strong> pour référence et gestion des mises à jour éventuelles</li>
+  <li>Il est attendu pour les éditeurs ayant implémenté le flux de <strong>mettre en place une écoute de leurs files de messages instantanément</strong> afin de permettra le rattachement du RDV avec le DRM par le régulateur à la suite de la transmission des informations de RDV</li>
+  <li>Lorsque les données du RDV pris pour le compte du patient auront été transmises à la solution LRM, le régulateur OSNP devra réaliser le rapprochement entre l’orientation et le DRM. Il est attendu que <strong>l’éditeur mette en place un tableau de bord ou un espace pour la gestion des RDV pris au sein du LRM</strong> en s’appuyant sur la donnée métier disponible (ex. via numéro téléphone, Nom Patient, sélection ID DRM avec filtre SNP, heure de prise de RDV, heure du RDV, etc) ou par l’affichage d’une liste déroulante des orientations non associées depuis le DRM. L’ANS et l’éditeur conviendront en atelier de cadrage du moyen d’association à définir dans la solution.</li>
   <li>Les règles d’association de l’orientation avec le DRM et la gestion des requêtes potentielles non associées seront gérées au cas par cas avec l’éditeur.</li>
-  <li>Il est attendu de la part de l’éditeur de conserver un historique des messages reçus au niveau de l’échange et au niveau du résultat du traitement du message.</li>
+  <li>Il est attendu de la part de l’éditeur de <strong>conserver un historique des messages reçus</strong> au niveau de l’échange et au niveau du résultat du traitement du message.</li>
 </ul>
 
 
@@ -707,7 +705,7 @@ L'entête est de type "EDXL-DE", cf. spécifications du Hub Santé.</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Sep 8, 2025 13:03+0000">2025-09-08</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Sep 8, 2025 13:32+0000">2025-09-08</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
