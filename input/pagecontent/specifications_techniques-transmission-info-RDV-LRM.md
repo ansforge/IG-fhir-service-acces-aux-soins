@@ -59,7 +59,7 @@ Cet aquittement correspond à la confirmation par le HubSanté de la bonne réce
 | *Entête RC-DE* | kind | string | Type du message | Valeur fixe : `Ack` |
 | *Entête RC-DE* | recipients.recipient.explicitAddressScheme | string | Identifiant du SI pilotant le Hub| Valeur fixe : `Hubex` |
 | *Entête RC-DE* | recipients.recipient.explicitAddressValue | string | Identifiant du destinataire |À définir. Ex : PTFSAS |
-|  | reference | string | |Égal à distributionId du message initial |
+|  | reference | string | Identifiant du message référencé |Égal à distributionId du message initial |
 
 
 #### Message d'erreur
@@ -75,7 +75,7 @@ En cas d'erreur, un message est posté sur la file « info » de la plateforme S
 | *Entête EDXL-DE* | distributionStatus | string | Statut du message |  Valeur fixe : `Actual` |
 | *Entête EDXL-DE* | distributionKind | string | Type du message | Valeur fixe : `Error` |
 | *Entête EDXL-DE* | descriptor.language | string | Langue du message échangé | Valeur fixe : `fr-FR` |
-| *Entête EDXL-DE* | descriptor.explicitAddress.explicitAddressScheme | string Identifiant du SI pilotant le Hub| Valeur fixe : `Hubex` |
+| *Entête EDXL-DE* | descriptor.explicitAddress.explicitAddressScheme | string | Identifiant du SI pilotant le Hub| Valeur fixe : `Hubex` |
 | *Entête EDXL-DE* | descriptor.explicitAddress.explicitAddressValue | string | Identifiant du SAMU destinataire | À définir. Ex : PTFSAS|
 | *Contenu* | content.contentObject.embeddedJsonContent | json | Contenu du message json encapsulé dans l'entête | JSON avec errorCode et errorCause |
 
@@ -84,8 +84,7 @@ L'erreur sera présente dans le contenu du message json qui respecte le modèle 
 | Champ | Description | Commentaire / valeur |
 |--------|--------|------|
 | errorCode | Code de l'erreur ayant conduit au rejet du message | Cf. tableau des erreurs ci-après |
-| errorCause | Cause de l'erreur | La cause de l’erreur. Le distributionID de l’enveloppe EDXL y est précisé si le 
-message a pu être désérialisé, ainsi que des éléments plus précis suivant l’erreur relevée. |
+| errorCause | Cause de l'erreur | La cause de l’erreur. Le distributionID de l’enveloppe EDXL y est précisé si le message a pu être désérialisé, ainsi que des éléments plus précis suivant l’erreur relevée. |
 | sourceMessage | Contenu du message rejeté | A préciser |
 
 A noter qu'il existe deux types d'erreur : 
@@ -157,10 +156,12 @@ Divers évènements dans la plateforme numérique SAS peuvent déclencher de man
     - lors d’un changement du PS effecteur de soins (ex. remplacement) ou lorsque le PS n’a pas pu être identifié au préalable (ex. agendas de structure) 
     - lors d’un changement horaire du créneau 
 
+<br>
+<br>
 
-Le paragraphe ci-dessous détaille les différentes règles de gestions attendues par les éditeurs à la suite du déclenchement du flux et la transmission d’un message : 
-- A la réception du message, la solution éditeur stockera l’identifiant technique SAS du RDV transmis pour référence et gestion des mises à jour éventuelles 
-- Il est attendu pour les éditeurs ayant implémenté le flux de mettre en place une écoute de leurs files de messages instantanément afin de permettra le rattachement du RDV avec le DRM par le régulateur à la suite de la transmission des informations de RDV 
-- Lors que les données du RDV pris pour le compte du patient auront été transmises à la solution LRM, le régulateur OSNP devra réaliser le rapprochement entre l’orientation et le DRM. Il est attendu que l’éditeur mette en place un tableau de bord ou un espace pour la gestion des RDV pris au sein du LRM en s’appuyant sur la donnée métier disponible (ex. via numéro téléphone, Nom Patient, sélection ID DRM avec filtre SNP, heure de prise de RDV, heure du RDV, etc) ou par l’affichage d’une liste déroulante des orientations non associées depuis le DRM. L’ANS et l’éditeur conviendront en atelier de cadrage du moyen d’association à définir dans la solution. 
+Le paragraphe ci-dessous détaille les différentes **règles de gestions attendues** par les éditeurs à la suite du déclenchement du flux et la transmission d’un message : 
+- A la réception du message, **la solution éditeur stockera l’identifiant technique SAS du RDV transmis** pour référence et gestion des mises à jour éventuelles 
+- Il est attendu pour les éditeurs ayant implémenté le flux de **mettre en place une écoute de leurs files de messages instantanément** afin de permettra le rattachement du RDV avec le DRM par le régulateur à la suite de la transmission des informations de RDV 
+- Lorsque les données du RDV pris pour le compte du patient auront été transmises à la solution LRM, le régulateur OSNP devra réaliser le rapprochement entre l’orientation et le DRM. Il est attendu que **l’éditeur mette en place un tableau de bord ou un espace pour la gestion des RDV pris au sein du LRM** en s’appuyant sur la donnée métier disponible (ex. via numéro téléphone, Nom Patient, sélection ID DRM avec filtre SNP, heure de prise de RDV, heure du RDV, etc) ou par l’affichage d’une liste déroulante des orientations non associées depuis le DRM. L’ANS et l’éditeur conviendront en atelier de cadrage du moyen d’association à définir dans la solution. 
 - Les règles d’association de l’orientation avec le DRM et la gestion des requêtes potentielles non associées seront gérées au cas par cas avec l’éditeur. 
-- Il est attendu de la part de l’éditeur de conserver un historique des messages reçus au niveau de l’échange et au niveau du résultat du traitement du message. 
+- Il est attendu de la part de l’éditeur de **conserver un historique des messages reçus** au niveau de l’échange et au niveau du résultat du traitement du message. 
