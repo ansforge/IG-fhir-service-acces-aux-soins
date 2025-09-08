@@ -242,7 +242,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#détail-des-éléments-dentête" id="markdown-toc-détail-des-éléments-dentête">Détail des éléments d'entête</a></li>
+  <li><a href="#détail-des-échanges" id="markdown-toc-détail-des-échanges">Détail des échanges</a></li>
   <li><a href="#message-denvoi-de-rdv" id="markdown-toc-message-denvoi-de-rdv">Message d'envoi de RDV</a></li>
   <li><a href="#message-de-modification-de-rdv" id="markdown-toc-message-de-modification-de-rdv">Message de modification de RDV</a></li>
   <li><a href="#message-dannulation-de-rdv" id="markdown-toc-message-dannulation-de-rdv">Message d'annulation de RDV</a></li>
@@ -272,11 +272,14 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
   <li>« info » pour les messages généraux d’informations, alertes et erreurs</li>
 </ul>
 
-<p>En l'occurence, les LRM écouteront sur leur file "message" et la plateforme SAS écoutera sur les files "ack" et "info".</p>
+<p>En l'occurence, les LRM écouteront sur leur file « message » et la plateforme SAS écoutera sur les files "ack" et "info".</p>
 
-<h3 id="détail-des-éléments-dentête">Détail des éléments d'entête</h3>
+<h3 id="détail-des-échanges">Détail des échanges</h3>
 
-<h4 id="message-ptf-sas---hub">Message PTF SAS -&gt; Hub</h4>
+<h4 id="gestion-de-lenvoi-dun-message-de-la-ptf-sas---hub">Gestion de l'envoi d'un message de la PTF SAS -&gt; Hub</h4>
+
+<p>Les champs ci-dessous correspondent à l’en-tête du message qui porte les informations de RDV pris par le régulateur pour le compte du patient. Ce message est envoyé instantanément de la plateforme SAS au HubSanté. 
+L'entête est de type "EDXL-DE", cf. spécifications du Hub Santé.</p>
 
 <table>
   <thead>
@@ -362,7 +365,13 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
   </tbody>
 </table>
 
+<h4 id="acquittement-technique">Acquittement technique</h4>
+
+<p>Un acquittement technique sera transmis du Hub vers la plateforme SAS afin d'informer cette dernière de la bonne prise en charge du message et de l'inscription dans sa file d'envoi (file « message » du LRM). Cette fonctionnalité est intégréé au protocole AMQ sous la forme de <em>Consumer Acknowledgement</em>, cf. spécifications du Hub Santé.</p>
+
 <h4 id="message-dacquittement-final">Message d'acquittement final</h4>
+
+<p>Cet aquittement correspond à la confirmation par le HubSanté de la bonne réception du message transmis par la plateforme SAS. L'entête est de type "RC-DE", cf. spécifications du Hub Santé.</p>
 
 <table>
   <thead>
@@ -379,15 +388,8 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
       <td><em>Entête RC-DE</em></td>
       <td>messageId</td>
       <td>string</td>
-      <td>Identifiant du message</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>interne. Identique au champ <code class="language-plaintext highlighter-rouge">distributionID</code> de l'enveloppe EDXL-DE</td>
+      <td>Identifiant du message interne. Identique au champ <code class="language-plaintext highlighter-rouge">distributionID</code> de l'enveloppe EDXL-DE</td>
       <td>Égal à <code class="language-plaintext highlighter-rouge">distributionId</code> du message initial</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
     </tr>
     <tr>
       <td><em>Entête RC-DE</em></td>
@@ -449,6 +451,8 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
 </table>
 
 <h4 id="message-derreur">Message d'erreur</h4>
+
+<p>En cas d'erreur, un message est posté sur la file « info » de la plateforme SAS. Les champs ci-dessous correspondent à l’en-tête du message</p>
 
 <table>
   <thead>
@@ -525,7 +529,7 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
       <td>À définir. Ex : PTFSAS</td>
     </tr>
     <tr>
-      <td> </td>
+      <td><em>Contenu</em></td>
       <td>content.contentObject.embeddedJsonContent</td>
       <td>json</td>
       <td>Contenu du message json encapsulé dans l'entête</td>
@@ -533,6 +537,57 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
     </tr>
   </tbody>
 </table>
+
+<p>L'erreur sera présente dans le contenu du message json qui respecte le modèle suivant, cf. spécifications du Hub Santé :</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Champ</th>
+      <th>Description</th>
+      <th>Commentaire / valeur</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>errorCode</td>
+      <td>Code de l'erreur ayant conduit au rejet du message</td>
+      <td>Cf. tableau des erreurs ci-après</td>
+    </tr>
+    <tr>
+      <td>errorCause</td>
+      <td>Cause de l'erreur</td>
+      <td>La cause de l’erreur. Le distributionID de l’enveloppe EDXL y est précisé si le</td>
+    </tr>
+    <tr>
+      <td>message a pu être désérialisé, ainsi que des éléments plus précis suivant l’erreur relevée.</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>sourceMessage</td>
+      <td>Contenu du message rejeté</td>
+      <td>A préciser</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>A noter qu'il existe deux types d'erreur :</p>
+<ul>
+  <li>les messages "techniques" directement générés par le Hub et traduisant une impossibilité de remettre le message au destinataire (LRM) (a)</li>
+  <li>les messages d'erreurs "fonctionnels" envoyés depuis le LRM (toujours en transitant par le Hub) traduisant l'impossibilité de traiter correctement le message reçu (b)</li>
+</ul>
+
+<p>A titre d'exemple, les codes d'erreur suivants pourront être envoyés du Hub vers la plateforme SAS :</p>
+<ul>
+  <li>400 (EXPIRED_MESSAGE_BEFORE_ROUTING) - Le message n’a pas été reçu par son destinataire, il a expiré sur le Hub avant de lui être délivré.</li>
+  <li>500 (DEAD_LETTERED_QUEUE) Le message n’a pas été reçu par son destinataire, il a expiré avant qu’il ne le dépile.</li>
+</ul>
+
+<p>Le LRM pourra envoyer des messages de type :</p>
+<ul>
+  <li>404 (NOT_FOUND) - L'identifiant du RDV a mettre à jour n'a pas été trouvé dans le cas d'un Bundle contenant une mise à jour sur la ressource Appointment.</li>
+</ul>
 
 <h3 id="message-denvoi-de-rdv">Message d'envoi de RDV</h3>
 
@@ -652,7 +707,7 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Sep 8, 2025 10:21+0000">2025-09-08</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Sep 8, 2025 13:03+0000">2025-09-08</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
