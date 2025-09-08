@@ -18,52 +18,55 @@ Chaque client dispose de 3 files d’écoute selon la typologie des messages re�
 - « ack » pour les acquittements de réception finale
 - « info » pour les messages généraux d’informations, alertes et erreurs
 
+En l'occurence, les LRM écouteront sur leur file "message" et la plateforme SAS écoutera sur les files "ack" et "info".  
+
 ### Détail des éléments d'entête
 
 #### Message PTF SAS -> Hub 
 
-| Élément | Chemin | Type | Commentaire / valeur |
-|--------|--------|------|-------------|
-| *Entête EDXL-DE* | distributionID | string | Format `<senderId>_<internalId>` où `<internalId>` est un identifiant garanti unique |
-| *Entête EDXL-DE* | senderID | string | À définir. Ex : PTFSAS
-| *Entête EDXL-DE* | dateTimeSent | Date time | Ex : 2025-08-24T14:15:22+02:00 |
-| *Entête EDXL-DE* | dateTimeExpires | Date time | Ex : 2025-08-24T14:15:22+02:00 |
-| *Entête EDXL-DE* | distributionStatus | string | Actual |
-| *Entête EDXL-DE* | distributionKind | string | Report
-|  *Entête EDXL-DE*| descriptor.language | string | fr-FR |
-| *Entête EDXL-DE* | descriptor.explicitAddress.explicitAddressScheme | string | Hubex |
-| *Entête EDXL-DE* | descriptor.explicitAddress.explicitAddressValue | string | fr.health.samuXXX Ex : fr.health.samu330 |
-| *Contenu* | content.contentObject.JsonContent.embeddedJsonContent | json | Fichier Bundle transactionnel au format JSON |
+| Élément | Champ | Type | Description | Commentaire / valeur |
+|--------|--------|------|------|-------------|
+| *Entête EDXL-DE* | distributionID | string | Identifiant unique du message attribué par l’expéditeur |Format `<senderId>_<internalId>` où `<internalId>` est un identifiant garanti unique |
+| *Entête EDXL-DE* | senderID | string | Identifiant de l'émetteur | À définir. Ex : PTFSAS
+| *Entête EDXL-DE* | dateTimeSent | Date time | Date et heure d'envoi du message | Ex : 2025-08-24T14:15:22+02:00 |
+| *Entête EDXL-DE* | dateTimeExpires | Date time | Date et heure d'expiration du message : les données ne doivent pas être délivrées au-delà de cette date | Ex : 2025-08-24T14:15:22+02:00 |
+| *Entête EDXL-DE* | distributionStatus | string | Statut du message | Valeur fixe : `Actual` |
+| *Entête EDXL-DE* | distributionKind | string | Type du message| Valeur fixe : `Report` |
+| *Entête EDXL-DE*| descriptor.language | string | Langue du message échangé | Valeur fixe : `fr-FR` |
+| *Entête EDXL-DE* | descriptor.explicitAddress.explicitAddressScheme | string | Identifiant du SI pilotant le Hub| Valeur fixe : `Hubex` |
+| *Entête EDXL-DE* | descriptor.explicitAddress.explicitAddressValue | string | Identifiant du SAMU destinataire |fr.health.samuXXX Ex : fr.health.samu330 |
+| *Contenu* | content.contentObject.JsonContent.embeddedJsonContent | json | Contenu du message json encapsulé dans l'entête | Fichier Bundle transactionnel au format JSON |
 
 #### Message d'acquittement final
 
-| Élément | Chemin | Type | Commentaire |
-|--------|--------|------|-------------|
-| *Entête RC-DE* | messageId | string | Égal à distributionId du message initial |
-| *Entête RC-DE* | sender.AddresseeType.name | string | fr.health.samuXXX Ex : fr.health.samu330 |
-| *Entête RC-DE* | sender.AddresseeType.URL | string | hubex:fr.fr.health.samuXXX |
-| *Entête RC-DE* | sentAt | Date time | Ex : 2025-08-24T14:15:22+02:00 |
-| *Entête RC-DE* | status | string | Actual |
-| *Entête RC-DE* | kind | string | Ack |
-| *Entête RC-DE* | recipients.recipient.explicitAddressScheme | string | hubex |
-| *Entête RC-DE* | recipients.recipient.explicitAddressValue | string | À définir. Ex : PTFSAS |
-|  | reference | string | Égal à distributionId du message initial |
+| Élément | Champ | Type | Description | Commentaire / valeur |
+|--------|--------|------|------|-------------|
+| *Entête RC-DE* | messageId | string | Identifiant du message 
+interne. Identique au champ `distributionID` de l'enveloppe EDXL-DE| Égal à `distributionId` du message initial |
+| *Entête RC-DE* | sender.AddresseeType.name | string | Identifiant de l'émetteur |fr.health.samuXXX Ex : fr.health.samu330 |
+| *Entête RC-DE* | sender.AddresseeType.URL | string | URL de l'émetteur| hubex:fr.fr.health.samuXXX |
+| *Entête RC-DE* | sentAt | Date time | Date et heure d'envoi du message | Ex : 2025-08-24T14:15:22+02:00 |
+| *Entête RC-DE* | status | string | Statut du message | Valeur fixe : `Actual` |
+| *Entête RC-DE* | kind | string | Type du message | Valeur fixe : `Ack` |
+| *Entête RC-DE* | recipients.recipient.explicitAddressScheme | string | Identifiant du SI pilotant le Hub| Valeur fixe : `Hubex` |
+| *Entête RC-DE* | recipients.recipient.explicitAddressValue | string | Identifiant du destinataire |À définir. Ex : PTFSAS |
+|  | reference | string | |Égal à distributionId du message initial |
 
 
 #### Message d'erreur
 
-| Élément | Chemin | Type | Commentaire |
-|--------|--------|------|-------------|
-| *Entête RC-DE* | distributionID | string | À définir |
-| *Entête RC-DE* | senderID | string | fr.health.samu.XXX Ex : fr.health.samu.330 |
-| *Entête RC-DE* | dateTimeSent | Date time | Ex : 2025-08-24T14:15:22+02:00 |
-| *Entête RC-DE* | dateTimeExpires | Date time | Ex : 2025-08-24T14:15:22+02:00 |
-| *Entête RC-DE* | distributionStatus | string | Actual |
-| *Entête RC-DE* | distributionKind | string | Error |
-| *Entête RC-DE* | descriptor.language | string | fr-FR |
-| *Entête RC-DE* | descriptor.explicitAddress.explicitAddressScheme | string | hubex |
-| *Entête RC-DE* | descriptor.explicitAddress.explicitAddressValue | string | À définir. Ex : PTFSAS|
-| *Entête RC-DE* | content.contentObject.embeddedJsonContent | json | JSON avec errorCode et errorCause |
+| Élément | Champ | Type | Description | Commentaire / valeur |
+|--------|--------|------|------|-------------|
+| *Entête EDXL-DE* | distributionID | string | Identifiant unique du message attribué par l’expéditeur | À définir |
+| *Entête EDXL-DE* | senderID | string |Identifiant de l'émetteur | fr.health.samu.XXX Ex : fr.health.samu.330 |
+| *Entête EDXL-DE* | dateTimeSent | Date time | Date et heure d'envoi du message | Ex : 2025-08-24T14:15:22+02:00 |
+| *Entête EDXL-DE* | dateTimeExpires | Date time | Date et heure d'expiration du message : les données ne doivent pas être délivrées au-delà de cette date | Ex : 2025-08-24T14:15:22+02:00 |
+| *Entête EDXL-DE* | distributionStatus | string | Statut du message |  Valeur fixe : `Actual` |
+| *Entête EDXL-DE* | distributionKind | string | Type du message | Valeur fixe : `Error` |
+| *Entête EDXL-DE* | descriptor.language | string | Langue du message échangé | Valeur fixe : `fr-FR` |
+| *Entête EDXL-DE* | descriptor.explicitAddress.explicitAddressScheme | string Identifiant du SI pilotant le Hub| Valeur fixe : `Hubex` |
+| *Entête EDXL-DE* | descriptor.explicitAddress.explicitAddressValue | string | Identifiant du SAMU destinataire | À définir. Ex : PTFSAS|
+| | content.contentObject.embeddedJsonContent | json | Contenu du message json encapsulé dans l'entête | JSON avec errorCode et errorCause |
 
 ### Message d'envoi de RDV
 
