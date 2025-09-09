@@ -24,7 +24,7 @@ Usage: #example
 
 * entry[FrPractitionerRoleExerciceAgregateur][+].resource = ExamplePractitionerRoleAgregateur2
 * entry[FrPractitionerRoleExerciceAgregateur][=].fullUrl = "https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur2"
-* entry[FrScheduleAgregateur][=].search.mode = #include
+* entry[FrPractitionerRoleExerciceAgregateur][=].search.mode = #include
 
 * entry[FrSlotAgregateur][+].resource = ExampleSlotPSIndiv2
 * entry[FrSlotAgregateur][=].fullUrl = "https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv2"
@@ -36,7 +36,7 @@ Usage: #example
 
 * entry[FrPractitionerRoleExerciceAgregateur][+].resource = ExamplePractitionerRoleAgregateur3
 * entry[FrPractitionerRoleExerciceAgregateur][=].fullUrl = "https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur3"
-* entry[FrScheduleAgregateur][=].search.mode = #include
+* entry[FrPractitionerRoleExerciceAgregateur][=].search.mode = #include
 
 * entry[FrSlotAgregateur][+].resource = ExampleSlotPSIndiv3
 * entry[FrSlotAgregateur][=].fullUrl = "https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv3"
@@ -48,7 +48,7 @@ Usage: #example
 
 * entry[FrPractitionerAgregateur][+].resource = ExamplePractitioner3
 * entry[FrPractitionerAgregateur][=].fullUrl = "https://exemple.com/ans-sas/Practitioner/ExamplePractitioner3"
-* entry[FrPractitionerRoleExerciceAgregateur][=].search.mode = #include
+* entry[FrPractitionerAgregateur][=].search.mode = #include
 
 * entry[FrPractitionerRoleExerciceAgregateur][+].resource = ExamplePractitionerRoleAgregateur4
 * entry[FrPractitionerRoleExerciceAgregateur][=].fullUrl = "https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur4"

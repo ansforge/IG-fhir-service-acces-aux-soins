@@ -27,7 +27,7 @@ Usage: #example
 
 * entry[healthcareserviceCPTS][+].resource = ExampleHealthcareServiceCPTS1
 * entry[healthcareserviceCPTS][=].fullUrl = "https://<base_URl>/HealthcareService/ExampleHealthcareServiceCPTS1"
-* entry[organizationAgregateurCPTS][=].search.mode = #include
+* entry[healthcareserviceCPTS][=].search.mode = #include
 
 * entry[organizationAgregateurCPTS][+].resource = ExampleOrgaCPTS1
 * entry[organizationAgregateurCPTS][=].fullUrl = "https://<base_URl>/Organization/ExampleOrgaCPTS1"
@@ -35,7 +35,7 @@ Usage: #example
 
 * entry[healthcareserviceCPTS][+].resource = ExampleHealthcareServiceCPTS2
 * entry[healthcareserviceCPTS][=].fullUrl = "https://<base_URl>/HealthcareService/ExampleHealthcareServiceCPTS2"
-* entry[organizationAgregateurCPTS][=].search.mode = #include
+* entry[healthcareserviceCPTS][=].search.mode = #include
 
 * entry[organizationAgregateurCPTS][+].resource = ExampleOrgaCPTS2
 * entry[organizationAgregateurCPTS][=].fullUrl = "https://<base_URl>/Organization/ExampleOrgaCPTS2"
