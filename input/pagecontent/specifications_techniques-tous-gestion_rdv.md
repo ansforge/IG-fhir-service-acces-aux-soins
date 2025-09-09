@@ -223,7 +223,7 @@ Ci-dessous un exemple :
 },
 ```
 
-Le validateur est disponible sur l'espace de test de l'ANS : <https://interop.esante.gouv.fr/EVSClient/fhir/validator.seam?extension=SAS&standard=FHIR+%28SAS%29&type=FHIR&cid=750>. Pour faciliter les tests et conserver l'historique, nous vous recommandons de créer votre compte sur la plateforme.
+Le validateur est disponible sur l'espace de test de l'ANS : <https://interop.esante.gouv.fr/EVSClient/fhir/validator.seam?extension=SAS&standard=FHIR+%28SAS%29&type=FHIR&cid=750>. Il est désormais nécessaire de s'authentifier afin d'accéder aux services de l'espace de tests. 
 Afin de tester un fichier, il suffit de sélectionner le format `JSON`, d’ajouter le fichier via le bouton `Add…`, de sélectionner le modèle `FrAppointmentSAS` puis de cliquer sur `valider` :
 
 <table align="center">

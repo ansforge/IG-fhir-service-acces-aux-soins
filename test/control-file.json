@@ -1,0 +1,29 @@
+{
+  "profiles": [
+    {
+      "url": "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm",
+      "tests": [
+        {
+          "source": "FichiersDeTest/Appointment-ExampleAppointmentLRM4.json",
+          "description": "Invalid Appointment resource missing name",
+          "valid": true,
+          "outcome": {
+            "resourceType": "OperationOutcome",
+            "issue": [
+              {
+                "severity": "error",
+                "code": "required",
+                "details": {
+                  "text": "Appointment.status is required by the profile"
+                },
+                "expression": [
+                  "Appointment.status"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

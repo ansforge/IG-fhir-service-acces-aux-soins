@@ -6,6 +6,8 @@ A ce jour, les API ont pour vocation de répondre aux cas d'usage suivants :
   - Création de rendez-vous
   - Mise à jour de rendez-vous
 
+    Les rendez-vous ainsi centralisés dans la plateforme sont également transmis aux logiciels de régultation médicale (LRM)
+
 Pour les cas d'usage couverts par ces API :
 - Le système consommateur doit disposer des points d'accès et des moyens d'authentification (authentification mTLS avec des certificats IGC-Santé).
 
@@ -30,7 +32,7 @@ Le schéma de présentation générale ci-dessous illustre ce cas d'usage :
     </tr>
     <tr>
         <td align ="center">
-            <b>Figure 1 - Présentation recherche de créneaux PS indiv. - CPTS </b>
+            <b>Présentation recherche de créneaux PS indiv. - CPTS </b>
         </td>
     </tr>
 </table>
@@ -57,7 +59,7 @@ Le schéma de présentation générale ci-dessous illustre ce cas d’usage :
     </tr>
     <tr>
         <td align ="center">
-            <b>Figure 2 - Présentation recherche de créneaux SOS Médecins </b>
+            <b>Présentation recherche de créneaux SOS Médecins </b>
         </td>
     </tr>
 </table>
@@ -153,7 +155,7 @@ Le schéma ci-dessous illustre les éléments décrits ci-dessus :
 - Il est attendu pour les éditeurs ayant implémenté le flux INT_R01 d’agrégation des créneaux de disponibilités, de réutiliser le endpoint et la sécurisation mTLS associée pour le flux INT_R02 de gestion des comptes régulateurs
 - Certains régulateurs n’ayant pas encore d’identifiant national à date, il est attendu que l’éditeur soit en mesure de gérer les comptes soit sur la base de l’identifiant national ou de l’identifiant technique SAS selon ce qui est transmis par la plateforme numérique SAS
 
-### Gestion des informations rendez-vous
+### Gestion des informations de rendez-vous
 
 L'objectif de cette interface, flux INT_R03, est de permettre la transmission des données liées à l'usage de la fonctionnalité de prise de RDV par les régulateurs provenant de la plateforme numérique SAS, dans les solutions logicielles d'agenda.
 Le schéma de présentation générale ci-dessous illustre le cas d'usage :
@@ -168,12 +170,12 @@ Le schéma de présentation générale ci-dessous illustre le cas d'usage :
     </tr>
     <tr>
         <td align ="center">
-            <b>Figure 3 - Présentation gestion de rendez-vous</b>
+            <b>Présentation gestion de rendez-vous</b>
         </td>
     </tr>
 </table>
 
-Après avoir sélectionné un créneau depuis la plateforme numérique SAS et avoir été redirigé vers la plateforme de prise de RDV éditeur, le régulateur prend directement RDV pour le patient dans la solution éditeur. Dès que le RDV est pris, les informations associées sont transmises à la plateforme numérique SAS via le flux INT_R03 mis en place. Lors de chaque mise à jour du RDV (annulation, modification, honoré, non honoré), l'information est transmise par le biais de ce flux à la plateforme numérique SAS. Ces données sont utilisées pour suivre l'activité réelle engendrée par le SAS, permettre l'analyse du dispositif de l'avenant 9 par la CNAM et assurer la traçabilité des RDV patients pour le suivi dans le LRM à terme.
+Après avoir sélectionné un créneau depuis la plateforme numérique SAS et avoir été redirigé vers la plateforme de prise de RDV éditeur, le régulateur prend directement RDV pour le patient dans la solution éditeur. Dès que le RDV est pris, les informations associées sont transmises à la plateforme numérique SAS via le flux INT_R03 mis en place. Lors de chaque mise à jour du RDV (annulation, modification, honoré, non honoré), l'information est transmise par le biais de ce flux à la plateforme numérique SAS. Ces données sont utilisées pour suivre l'activité réelle engendrée par le SAS, permettre l'analyse du dispositif de l'avenant 9 par la CNAM et assurer la traçabilité des RDV patients pour le suivi dans le LRM à terme. 
 Pour la mise en place de ce flux, il est nécessaire de s'assurer d'une technologie commune aux différentes plateformes. Les échanges reposent sur des webservices se basant sur l'API REST du standard HL7 FHIR, et respectant les spécifications des flux 6a et 6b du volet Gestion d'agendas partagés du Cadre d'Interopérabilité des Systèmes d'Information de Santé (CI-SIS).
 
 #### Création de rendez-vous
@@ -196,3 +198,86 @@ Le schéma ci-dessous illustre l'échange à mettre en oeuvre :
     <p>{% include mise_a_jour_rendez_vous.svg %}</p>
 </div>
 <br><br>
+
+### Transmission des informations de RDV aux LRM
+
+#### Description du cas d'usage
+L’objectif de cette interface, flux INT_L02, est de pouvoir alimenter de manière automatisée le DRM avec les informations de RDV pris pour le compte du patient dans les solutions logicielles éditeurs (LGA) ou dans la plateforme numérique du SAS.
+À la suite de la prise de RDV réalisée par la régulation pour le compte du patient, les informations de RDV sont centralisées au niveau de la plateforme nationale. Les travaux souhaités visent à poursuivre le parcours de la donnée pour venir alimenter le DRM avec ces informations, selon le schéma suivant :
+
+<table align="center">
+    <tr>
+        <td align ="center">
+            <div class="figure">
+                <img src="redescente_rdv_lrm.png" width="80%" height="80%" alt="Schéma redescente des RDV" title="Schéma redescente des RDV">
+            </div>
+        </td>    
+    </tr>
+    <tr>
+        <td align ="center">
+            <b>Redescente des informations de RDV vers les LRM </b>
+        </td>
+    </tr>
+</table>
+
+#### Cinématique des échanges
+Les échanges entre la plateforme SAS et les solutions de LRM se feront au travers du Hub Santé, selon la cinématique suivante
+
+<div class="figure" style="width:80%;" align ="center">
+    <p>{% include diagramme_sequence_hub.svg %}</p>
+</div>
+
+#### Attendu et rôles des parties
+
+##### Role de la plateforme numérique SAS
+
+La plateforme numérique SAS consolide et enregistre les données associées aux RDVs pris par les régulateurs et réalise les actions suivantes :
+- La plateforme transmet les informations d’orientations de manière instantanée au format spécifié et avec la liste des données métier disponibles
+- La plateforme cible le SAS concerné pour transmission des orientations au LRM associé
+- Les messages transmis incluent la création d’un RDV et les mises à jours potentielles
+
+##### Rôle du Hubsanté
+- Le Hub assure la couche de transport sécurisée et la transmission des données de la plateforme numérique SAS vers la solution de LRM
+- Le Hub transmet au SAMU ciblé en fonction du message
+- Le Hub suit l'acquittement du message et les erreurs transmises par la solution LRM
+- Le Hub assure la transmission de l’acquittement des messages ou des erreurs à la plateforme numérique SAS
+
+##### Rôle du logiciel de régulation médicale
+- L’éditeur LRM intègre les données de l’orientation dans sa solution pour association avec le DRM
+- L’éditeur LRM met en place les actions attendues pour permettre au régulateur de rattacher les données de l’orientation avec le DRM souhaité sans ressaisie suite à une décision SAS
+- L’éditeur LRM gère l’identifiant de RDV transmis pour intégrer automatiquement les potentiels messages de mise à jour de l’orientation post-rattachement
+
+
+#### Données à échanger
+Le flux contient la liste de données suivantes (certaines données ne seront pas transmises systématiquement en fonction du type de cas d'usage et de la situation du RDV à un instant t) : 
+- Identifiant du RDV
+- Date/heure de début du RDV
+- Date/heure  de fin du RDV
+- Date/heure de création du RDV
+- Identifiant du PS effecteur de soins
+- Nom / Prénom du PS effecteur de soins
+- Spécialité du PS effecteur de soins
+- Statut du RDV
+- Type d'orientation (ex : SOS, CPTS, ...)
+- Nom de la structure / organisation liée au RDV
+- Identifiant national de la structure liée au RDV
+- SAS ayant pris le RDV (à des fins de routage par le Hub)
+
+Le message transmis (Bundle) contiendra n ressources FHIR en fonction de la liste des données pouvant être transmises en fonction du contexte et de la temporalité. 
+
+Les données propres au RDV seront systématiquement transmises (ressource "Appointment" toujours présente). Le cas échéant, les données du professionnel de santé (ressource "Practitioner"), ainsi que sa situation d'exercice dans le cadre de ce RDV (ressource "PractitionerRole") et la structure associée (ressource "Organization"). 
+Si le professionel de santé n'est pas connu, la structure (ressource "Organization") peut également être liée à un RDV via la ressource "Healthcare Service"
+
+Le schéma ci-dessous présente une synthèse des ressources FHIR à utiliser :
+
+<div class="figure" style="width:100%;" align ="center">
+    <p>{% include ressources-exploitees-lrm.svg %}</p>
+</div>
+
+#### Rattachement au DRM dans la solution LRM 
+
+Les orientations transmises automatiquement au LRM sont affichées au niveau du LRM pour le régulateur qui est en mesure de réaliser le rattachement avec le DRM (Dossier de Régulation Médicale) correspondant pour alimentation avec les données du RDV pris pour le compte du patient sans ressaisie. 
+
+D’un point de vue implémentation, l’action de rapprochement entre l’orientation et le DRM par le régulateur pourra se traduire à titre d’exemple par la mise en place d’un tableau de bord ou d’un espace pour la gestion des RDV pris au sein du LRM en s’appuyant sur la donnée métier disponible (ex. via numéro téléphone, Nom Patient, sélection ID DRM avec filtre SNP, heure de prise de RDV, heure du RDV, etc) ou par l’affichage d’une liste déroulante des orientations non associées depuis le DRM. L’ANS et l’éditeur conviendront, lors de l’atelier de cadrage, du moyen d’association défini dans la solution éditeur pour que le régulateur puisse alimenter simplement le DRM avec les données de l’orientation réalisée.  
+
+ 
