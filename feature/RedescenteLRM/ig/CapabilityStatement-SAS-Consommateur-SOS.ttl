@@ -65,10 +65,6 @@
        fhir:searchRevInclude ( [ fhir:v "Slot:schedule" ] ) ;
        fhir:searchParam ( [
          fhir:name [ fhir:v "_has" ] ;
-         fhir:definition [
-           fhir:v "http://hl7.org/fhir/SearchParameter/Resource-has"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-has>
-         ] ;
          fhir:type [ fhir:v "special" ] ;
          fhir:documentation [ fhir:v "Permet la sélection des ressources en fonction des propriétés des ressources qui y font référence (reverse chaining)" ]
        ] [
