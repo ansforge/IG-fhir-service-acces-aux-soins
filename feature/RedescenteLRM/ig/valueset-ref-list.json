@@ -58,6 +58,21 @@
       "StructureDefinition-sas-cpts-slot-aggregator.html" : "FrSlotAgregateurCPTS"
     },
     {
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/categorie-orientation-sas-valueset",
+      "version" : "1.1.0",
+      "status" : "active",
+      "name" : "CategorieOrientationSASValueSet",
+      "title" : "Value set catégorie orientation SAS",
+      "description" : "Valueset permettant de définir la catégorie d'orientation SAS. Il regroupe des codes de la TRE-R66 et du codesystem catégorie orientation SAS",
+      "systems" : [
+        "https://interop.esante.gouv.fr/ig/fhir/sas/CodeSystem/categorie-orientation-sas-codesystem",
+        "https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-sas-categorie-orientation.html" : "CategorieOrientation"
+    },
+    {
       "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-cpts-valueset-typecreneau",
       "version" : "1.1.0",
       "status" : "active",
@@ -96,6 +111,18 @@
       "uses" : {
       },
       "StructureDefinition-sas-sos-slot-aggregator.html" : "FrSlotAgregateurSOS"
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-appointmentparticipanttype",
+      "version" : "1.1.0",
+      "status" : "active",
+      "name" : "AppointmentParticipantTypeSAS",
+      "title" : "Appointment Participant Type SAS",
+      "description" : "Type de participant du RDV SAS",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ParticipationType"],
+      "uses" : {
+      },
+      "StructureDefinition-sas-appointment-lrm.html" : "SASAppointmentLRM"
     },
     {
       "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-appointmentreason",
@@ -143,14 +170,14 @@
       "name" : "TypeIdentifiantSAS",
       "title" : "Type identifiant SAS",
       "description" : "Type d'identifiant SAS",
-      "systems" : ["http://interopsante.org/fhir/CodeSystem/fr-v2-0203"],
+      "systems" : ["https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"],
       "uses" : {
       },
       "StructureDefinition-sas-sos-appointment.html" : "FrAppointmentSASSOS"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/JDV_J165-TypeCreneau-SAS/FHIR/JDV-J165-TypeCreneau-SAS",
-      "version" : "1.4.0",
+      "version" : "1.3.0",
       "status" : "active",
       "name" : "JDV_J165-TypeCreneau-SAS",
       "title" : null,

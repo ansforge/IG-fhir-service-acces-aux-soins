@@ -44,8 +44,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"14.43"}
-    h3,h4,h5,h6{--heading-prefix:"14.43"}</style>
+    <style type="text/css">h2{--heading-prefix:"15.70"}
+    h3,h4,h5,h6{--heading-prefix:"15.70"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -141,6 +141,12 @@
       </li>
       <li>
         <a href="specifications_techniques-sos-gestion_rdv.html">SOS Médecins - Gestion de rendez-vous</a>
+      </li>
+      <li>
+        ________ Fluidification parcours régulateur ________
+      </li>
+      <li>
+        <a href="specifications_techniques-transmission-info-RDV-LRM.html">Transmission des informations de rendez-vous aux LRM</a>
       </li>
     </ul>
   </li>
@@ -269,7 +275,7 @@
 
 
 
-  <pre class="json" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
+  <pre class="json" style="white-space: pre; text-wrap: nowrap; width: auto;"><code style="white-space: pre; text-wrap: nowrap;">{
   "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle">resourceType</a>" : "Bundle",
   "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.id">id</a>" : "ExampleBundlePSIndiv",
   "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.meta">meta</a>" : {
@@ -301,6 +307,10 @@
               "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "PUBLIC"
             }
           ]
+        },
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Slot_ExampleSlotPSIndiv1\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : Slot ExampleSlotPSIndiv1&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExampleSlotPSIndiv1\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExampleSlotPSIndiv1\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-FrSlotAgregateur.html\&quot;&gt;FrSlotAgregateur&lt;/a&gt;&lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Label de sécurité: Créneau accessible par le grand public (Details: TRE_R314-TypeCreneau code PUBLIC = 'Créneau accessible par le grand public')&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;serviceType&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode AMB}\&quot;&gt;ambulatory&lt;/span&gt;, &lt;span title=\&quot;Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode VR}\&quot;&gt;virtual&lt;/span&gt;, &lt;span title=\&quot;Codes:\&quot;&gt;Visite de contrôle&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;specialty&lt;/b&gt;: &lt;span title=\&quot;Codes:{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM54}\&quot;&gt;Médecine générale (SM)&lt;/span&gt;, &lt;span title=\&quot;Codes:{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM05}\&quot;&gt;Chirurgie générale (SM)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;appointmentType&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://terminology.hl7.org/CodeSystem/v2-0276 ROUTINE}\&quot;&gt;Routine appointment - default if not valued&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;schedule&lt;/b&gt;: &lt;a href=\&quot;Schedule-ExampleSchedule1.html\&quot;&gt;Schedule&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Free&lt;/p&gt;&lt;p&gt;&lt;b&gt;start&lt;/b&gt;: 2021-11-05 09:00:00+0000&lt;/p&gt;&lt;p&gt;&lt;b&gt;end&lt;/b&gt;: 2021-11-05 09:30:00+0000&lt;/p&gt;&lt;p&gt;&lt;b&gt;comment&lt;/b&gt;: https://exemple.com/rdv/com/&lt;/p&gt;&lt;/div&gt;"
         },
         "<a href="http://hl7.org/fhir/R4/slot.html#Slot.serviceType">serviceType</a>" : [
           {
@@ -368,6 +378,10 @@
             <a href="StructureDefinition-FrScheduleAgregateur.html" style="color: Maroon">&#x1F517;</a> "http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"
           ]
         },
+        "<a href="http://hl7.org/fhir/R4/schedule.html#Schedule.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Schedule_ExampleSchedule1\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : Schedule ExampleSchedule1&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExampleSchedule1\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExampleSchedule1\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-FrScheduleAgregateur.html\&quot;&gt;FrScheduleAgregateur&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;actor&lt;/b&gt;: &lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=\&quot;Practitioner-ExamplePractitioner2.html\&quot;&gt;Practitioner Sébastien THOMAS &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=\&quot;PractitionerRole-ExamplePractitionerRoleAgregateur2.html\&quot;&gt;PractitionerRole&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;"
+        },
         "<a href="http://hl7.org/fhir/R4/schedule.html#Schedule.actor">actor</a>" : [
           {
             <a href="Practitioner-ExamplePractitioner2.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Practitioner/ExamplePractitioner2"
@@ -388,12 +402,16 @@
             <a href="StructureDefinition-FrPractitionerAgregateur.html" style="color: Maroon">&#x1F517;</a> "http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur"
           ]
         },
+        "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Practitioner_ExamplePractitioner2\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : Praticien ExamplePractitioner2&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExamplePractitioner2\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExamplePractitioner2\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-FrPractitionerAgregateur.html\&quot;&gt;FrPractitionerAgregateur&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: Identifiant National de Professionnel de Santé/810100050075&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Sébastien THOMAS &lt;/p&gt;&lt;/div&gt;"
+        },
         "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.identifier">identifier</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>" : {
               "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
                 {
-                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203",
                   "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "IDNPS"
                 }
               ]
@@ -421,6 +439,10 @@
           "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
             <a href="StructureDefinition-FrPractitionerRoleExerciceAgregateur.html" style="color: Maroon">&#x1F517;</a> "http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"
           ]
+        },
+        "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;PractitionerRole_ExamplePractitionerRoleAgregateur2\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : PractitionerRole ExamplePractitionerRoleAgregateur2&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExamplePractitionerRoleAgregateur2\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExamplePractitionerRoleAgregateur2\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-FrPractitionerRoleExerciceAgregateur.html\&quot;&gt;FrPractitionerRoleExerciceAgregateur&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;practitioner&lt;/b&gt;: &lt;a href=\&quot;Practitioner-ExamplePractitioner2.html\&quot;&gt;Practitioner Sébastien THOMAS &lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;organization&lt;/b&gt;: Identifier: Identification nationale de structure définie par l’ANS dans le CI_SIS/1810004421&lt;/p&gt;&lt;p&gt;&lt;b&gt;location&lt;/b&gt;: &lt;a href=\&quot;#hcExamplePractitionerRoleAgregateur2/ExampleLocation3\&quot;&gt;Location : identifier = Identifiant interne&lt;/a&gt;&lt;/p&gt;&lt;hr/&gt;&lt;blockquote&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : Localisation #ExampleLocation3&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExamplePractitionerRoleAgregateur2/ExampleLocation3\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExamplePractitionerRoleAgregateur2/ExampleLocation3\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-FrLocationAgregateur.html\&quot;&gt;FrLocationAgregateur&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: Identifiant interne/1&lt;/p&gt;&lt;p&gt;&lt;b&gt;address&lt;/b&gt;: 1 rue Mme DELMAS AGEN 47000 &lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;"
         },
         "<a href="http://hl7.org/fhir/R4/location.html#Location">contained</a>" : [
           {
@@ -462,7 +484,7 @@
             "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>" : {
               "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
                 {
-                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203",
                   "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "IDNST"
                 }
               ]
@@ -493,6 +515,10 @@
               "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "PRO"
             }
           ]
+        },
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Slot_ExampleSlotPSIndiv2\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : Slot ExampleSlotPSIndiv2&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExampleSlotPSIndiv2\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExampleSlotPSIndiv2\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-FrSlotAgregateur.html\&quot;&gt;FrSlotAgregateur&lt;/a&gt;&lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Label de sécurité: Créneau accessible par l'ensemble des professionnels de santé (Details: TRE_R314-TypeCreneau code PRO = 'Créneau accessible par l'ensemble des professionnels de santé')&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;serviceType&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode AMB}\&quot;&gt;ambulatory&lt;/span&gt;, &lt;span title=\&quot;Codes:\&quot;&gt;Visite urgente&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;specialty&lt;/b&gt;: &lt;span title=\&quot;Codes:{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM54}\&quot;&gt;Médecine générale (SM)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;appointmentType&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://terminology.hl7.org/CodeSystem/v2-0276 WALKIN}\&quot;&gt;A previously unscheduled walk-in visit&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;schedule&lt;/b&gt;: &lt;a href=\&quot;Schedule-ExampleSchedule2.html\&quot;&gt;Schedule&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Free&lt;/p&gt;&lt;p&gt;&lt;b&gt;start&lt;/b&gt;: 2021-11-05 11:00:00+0000&lt;/p&gt;&lt;p&gt;&lt;b&gt;end&lt;/b&gt;: 2021-11-05 11:30:00+0000&lt;/p&gt;&lt;/div&gt;"
         },
         "<a href="http://hl7.org/fhir/R4/slot.html#Slot.serviceType">serviceType</a>" : [
           {
@@ -543,6 +569,10 @@
             <a href="StructureDefinition-FrScheduleAgregateur.html" style="color: Maroon">&#x1F517;</a> "http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"
           ]
         },
+        "<a href="http://hl7.org/fhir/R4/schedule.html#Schedule.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Schedule_ExampleSchedule2\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : Schedule ExampleSchedule2&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExampleSchedule2\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExampleSchedule2\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-FrScheduleAgregateur.html\&quot;&gt;FrScheduleAgregateur&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;actor&lt;/b&gt;: &lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=\&quot;Practitioner-ExamplePractitioner2.html\&quot;&gt;Practitioner Sébastien THOMAS &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=\&quot;PractitionerRole-ExamplePractitionerRoleAgregateur3.html\&quot;&gt;PractitionerRole&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;"
+        },
         "<a href="http://hl7.org/fhir/R4/schedule.html#Schedule.actor">actor</a>" : [
           {
             <a href="Practitioner-ExamplePractitioner2.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Practitioner/ExamplePractitioner2"
@@ -562,6 +592,10 @@
           "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
             <a href="StructureDefinition-FrPractitionerRoleExerciceAgregateur.html" style="color: Maroon">&#x1F517;</a> "http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"
           ]
+        },
+        "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;PractitionerRole_ExamplePractitionerRoleAgregateur3\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : PractitionerRole ExamplePractitionerRoleAgregateur3&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExamplePractitionerRoleAgregateur3\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExamplePractitionerRoleAgregateur3\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-FrPractitionerRoleExerciceAgregateur.html\&quot;&gt;FrPractitionerRoleExerciceAgregateur&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;practitioner&lt;/b&gt;: &lt;a href=\&quot;Practitioner-ExamplePractitioner2.html\&quot;&gt;Practitioner Sébastien THOMAS &lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;organization&lt;/b&gt;: Identifier: Identification nationale de structure définie par l’ANS dans le CI_SIS/1810004956&lt;/p&gt;&lt;p&gt;&lt;b&gt;location&lt;/b&gt;: &lt;a href=\&quot;#hcExamplePractitionerRoleAgregateur3/ExampleLocation2\&quot;&gt;Location : identifier = Identifiant interne&lt;/a&gt;&lt;/p&gt;&lt;hr/&gt;&lt;blockquote&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : Localisation #ExampleLocation2&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExamplePractitionerRoleAgregateur3/ExampleLocation2\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExamplePractitionerRoleAgregateur3/ExampleLocation2\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-FrLocationAgregateur.html\&quot;&gt;FrLocationAgregateur&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: Identifiant interne/2&lt;/p&gt;&lt;p&gt;&lt;b&gt;address&lt;/b&gt;: 30 rue Mme DELMAS AGEN 47000 &lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;"
         },
         "<a href="http://hl7.org/fhir/R4/location.html#Location">contained</a>" : [
           {
@@ -603,7 +637,7 @@
             "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>" : {
               "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
                 {
-                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203",
                   "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "IDNST"
                 }
               ]
@@ -638,6 +672,10 @@
               "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "PRO"
             }
           ]
+        },
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Slot_ExampleSlotPSIndiv3\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : Slot ExampleSlotPSIndiv3&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExampleSlotPSIndiv3\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExampleSlotPSIndiv3\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-FrSlotAgregateur.html\&quot;&gt;FrSlotAgregateur&lt;/a&gt;&lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Label de sécurités: Créneau accessible par le grand public (Details: TRE_R314-TypeCreneau code PUBLIC = 'Créneau accessible par le grand public'), Créneau accessible par l'ensemble des professionnels de santé (Details: TRE_R314-TypeCreneau code PRO = 'Créneau accessible par l'ensemble des professionnels de santé')&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;serviceType&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode VR}\&quot;&gt;virtual&lt;/span&gt;, &lt;span title=\&quot;Codes:\&quot;&gt;Visite de contrôle&lt;/span&gt;, &lt;span title=\&quot;Codes:\&quot;&gt;Consultation de suivi pneumologie&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;specialty&lt;/b&gt;: &lt;span title=\&quot;Codes:{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM41}\&quot;&gt;Pneumologie (SM)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;appointmentType&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://terminology.hl7.org/CodeSystem/v2-0276 ROUTINE}\&quot;&gt;Routine appointment - default if not valued&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;schedule&lt;/b&gt;: &lt;a href=\&quot;Schedule-ExampleSchedule3.html\&quot;&gt;Schedule&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Free&lt;/p&gt;&lt;p&gt;&lt;b&gt;start&lt;/b&gt;: 2021-11-04 14:20:00+0000&lt;/p&gt;&lt;p&gt;&lt;b&gt;end&lt;/b&gt;: 2021-11-04 14:40:00+0000&lt;/p&gt;&lt;p&gt;&lt;b&gt;comment&lt;/b&gt;: https://exemple.com/rdv/com/&lt;/p&gt;&lt;/div&gt;"
         },
         "<a href="http://hl7.org/fhir/R4/slot.html#Slot.serviceType">serviceType</a>" : [
           {
@@ -692,6 +730,10 @@
             <a href="StructureDefinition-FrScheduleAgregateur.html" style="color: Maroon">&#x1F517;</a> "http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"
           ]
         },
+        "<a href="http://hl7.org/fhir/R4/schedule.html#Schedule.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Schedule_ExampleSchedule3\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : Schedule ExampleSchedule3&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExampleSchedule3\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExampleSchedule3\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-FrScheduleAgregateur.html\&quot;&gt;FrScheduleAgregateur&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;actor&lt;/b&gt;: &lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=\&quot;Practitioner-ExamplePractitioner3.html\&quot;&gt;Practitioner Guillaume MARCEL &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=\&quot;PractitionerRole-ExamplePractitionerRoleAgregateur4.html\&quot;&gt;PractitionerRole : telecom = ph: +33658913859&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;"
+        },
         "<a href="http://hl7.org/fhir/R4/schedule.html#Schedule.actor">actor</a>" : [
           {
             <a href="Practitioner-ExamplePractitioner3.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Practitioner/ExamplePractitioner3"
@@ -712,12 +754,16 @@
             <a href="StructureDefinition-FrPractitionerAgregateur.html" style="color: Maroon">&#x1F517;</a> "http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur"
           ]
         },
+        "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Practitioner_ExamplePractitioner3\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : Praticien ExamplePractitioner3&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExamplePractitioner3\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExamplePractitioner3\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-FrPractitionerAgregateur.html\&quot;&gt;FrPractitionerAgregateur&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: Identifiant National de Professionnel de Santé/810002673899&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Guillaume MARCEL &lt;/p&gt;&lt;/div&gt;"
+        },
         "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.identifier">identifier</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>" : {
               "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
                 {
-                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203",
                   "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "IDNPS"
                 }
               ]
@@ -745,6 +791,10 @@
           "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
             <a href="StructureDefinition-FrPractitionerRoleExerciceAgregateur.html" style="color: Maroon">&#x1F517;</a> "http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"
           ]
+        },
+        "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;PractitionerRole_ExamplePractitionerRoleAgregateur4\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : PractitionerRole ExamplePractitionerRoleAgregateur4&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExamplePractitionerRoleAgregateur4\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExamplePractitionerRoleAgregateur4\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-FrPractitionerRoleExerciceAgregateur.html\&quot;&gt;FrPractitionerRoleExerciceAgregateur&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;practitioner&lt;/b&gt;: &lt;a href=\&quot;Practitioner-ExamplePractitioner3.html\&quot;&gt;Practitioner Guillaume MARCEL &lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;organization&lt;/b&gt;: Identifier: Identification nationale de structure définie par l’ANS dans le CI_SIS/1810004421&lt;/p&gt;&lt;p&gt;&lt;b&gt;location&lt;/b&gt;: &lt;a href=\&quot;#hcExamplePractitionerRoleAgregateur4/ExampleLocation3\&quot;&gt;Location : identifier = Identifiant interne&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: &lt;a href=\&quot;tel:+33658913859\&quot;&gt;+33658913859&lt;/a&gt;&lt;/p&gt;&lt;hr/&gt;&lt;blockquote&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : Localisation #ExampleLocation3&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExamplePractitionerRoleAgregateur4/ExampleLocation3\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExamplePractitionerRoleAgregateur4/ExampleLocation3\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-FrLocationAgregateur.html\&quot;&gt;FrLocationAgregateur&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: Identifiant interne/1&lt;/p&gt;&lt;p&gt;&lt;b&gt;address&lt;/b&gt;: 1 rue Mme DELMAS AGEN 47000 &lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;"
         },
         "<a href="http://hl7.org/fhir/R4/location.html#Location">contained</a>" : [
           {
@@ -786,7 +836,7 @@
             "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>" : {
               "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
                 {
-                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203",
                   "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "IDNST"
                 }
               ]
@@ -827,6 +877,10 @@
               "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "PRO"
             }
           ]
+        },
+        "<a href="http://hl7.org/fhir/R4/slot.html#Slot.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Slot_ExampleSlotPSIndiv4\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : Slot ExampleSlotPSIndiv4&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExampleSlotPSIndiv4\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExampleSlotPSIndiv4\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-FrSlotAgregateur.html\&quot;&gt;FrSlotAgregateur&lt;/a&gt;&lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Label de sécurités: Créneau accessible par le grand public (Details: TRE_R314-TypeCreneau code PUBLIC = 'Créneau accessible par le grand public'), Créneau accessible par l'ensemble des professionnels de santé (Details: TRE_R314-TypeCreneau code PRO = 'Créneau accessible par l'ensemble des professionnels de santé')&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;serviceType&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode HH}\&quot;&gt;home health&lt;/span&gt;, &lt;span title=\&quot;Codes:\&quot;&gt;Visite de contrôle&lt;/span&gt;, &lt;span title=\&quot;Codes:\&quot;&gt;Consultation de suivi pneumologique&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;specialty&lt;/b&gt;: &lt;span title=\&quot;Codes:{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM41}\&quot;&gt;Pneumologie (SM)&lt;/span&gt;, &lt;span title=\&quot;Codes:{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM54}\&quot;&gt;Médecine générale (SM)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;appointmentType&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://terminology.hl7.org/CodeSystem/v2-0276 ROUTINE}\&quot;&gt;Routine appointment - default if not valued&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;schedule&lt;/b&gt;: &lt;a href=\&quot;Schedule-ExampleSchedule3.html\&quot;&gt;Schedule&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Free&lt;/p&gt;&lt;p&gt;&lt;b&gt;start&lt;/b&gt;: 2021-11-04 14:40:00+0000&lt;/p&gt;&lt;p&gt;&lt;b&gt;end&lt;/b&gt;: 2021-11-04 15:00:00+0000&lt;/p&gt;&lt;p&gt;&lt;b&gt;comment&lt;/b&gt;: https://exemple.com/rdv/com/&lt;/p&gt;&lt;/div&gt;"
         },
         "<a href="http://hl7.org/fhir/R4/slot.html#Slot.serviceType">serviceType</a>" : [
           {
@@ -926,7 +980,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Sep 9, 2025 08:47+0000">2025-09-09</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Sep 9, 2025 11:38+0000">2025-09-09</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

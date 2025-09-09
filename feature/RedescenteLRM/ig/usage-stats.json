@@ -10,6 +10,13 @@
       "types": [
         "Reference"
       ]
+    },
+    {
+      "url": "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-categorie-orientation",
+      "title": "CategorieOrientation",
+      "types": [
+        "CodeableConcept"
+      ]
     }
   ],
   "profiles": {
@@ -33,14 +40,14 @@
     ],
     "Practitioner": [
       {
-        "url": "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul",
-        "title": "FrPractitionerRegul"
+        "url": "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-lrm",
+        "title": "SASPractitionerLRM"
       }
     ],
     "PractitionerRole": [
       {
-        "url": "http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur",
-        "title": "FrPractitionerRoleExerciceAgregateur"
+        "url": "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-lrm",
+        "title": "SASPractitionerRoleLRM"
       }
     ],
     "Schedule": [
@@ -57,8 +64,8 @@
     ],
     "HealthcareService": [
       {
-        "url": "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-healthcareservice-aggregator",
-        "title": "FrHealthcareServiceAgregateurCPTS"
+        "url": "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-healthcareservice-lrm",
+        "title": "SASHealthcareServiceLRM"
       }
     ],
     "Organization": [
@@ -155,6 +162,27 @@
       "HealthcareService",
       "PractitionerRole",
       "Schedule"
+    ],
+    "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment-operator": [
+      "Appointment"
+    ],
+    "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization-description": [
+      "Organization"
+    ],
+    "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization-short-name": [
+      "Organization"
+    ],
+    "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner-specialty": [
+      "Bundle.entry.resource",
+      "Practitioner"
+    ],
+    "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-service-type-duration": [
+      "HealthcareService",
+      "PractitionerRole"
+    ],
+    "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-categorie-orientation": [
+      "Appointment",
+      "Bundle.entry.resource"
     ]
   }
 }

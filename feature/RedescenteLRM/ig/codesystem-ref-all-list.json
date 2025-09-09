@@ -258,8 +258,7 @@
       "description" : "HL7 v2 - Identifier type",
       "uses" : {
       },
-      "https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&canonical=http://interopsante.org/fhir/ValueSet/fr-practioner-identifier-type" : "fr-practioner-identifier-type",
-      "ValueSet-sas-valueset-typeidentifiant.html" : "Type identifiant SAS"
+      "https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&canonical=http://interopsante.org/fhir/ValueSet/fr-practioner-identifier-type" : "fr-practioner-identifier-type"
     },
     {
       "url" : "http://interopsante.org/fhir/CodeSystem/fr-v2-3307",
@@ -427,7 +426,8 @@
       "uses" : {
       },
       "https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&canonical=http://interopsante.org/fhir/ValueSet/fr-practioner-identifier-type" : "fr-practioner-identifier-type",
-      "http://hl7.org/fhir/R4/valueset-identifier-type.html" : "IdentifierType"
+      "http://hl7.org/fhir/R4/valueset-identifier-type.html" : "IdentifierType",
+      "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-practitioner-identifier-type.html" : "FR Core ValueSet Practitioner identifier type"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v2-0276",
@@ -465,11 +465,59 @@
       "oids" : ["2.16.840.1.113883.5.90"],
       "uses" : {
       },
-      "http://hl7.org/fhir/R4/valueset-encounter-participant-type.html" : "Participant type"
+      "http://hl7.org/fhir/R4/valueset-encounter-participant-type.html" : "Participant type",
+      "ValueSet-sas-valueset-appointmentparticipanttype.html" : "Appointment Participant Type SAS"
+    },
+    {
+      "url" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203",
+      "version" : "2.1.0",
+      "status" : "active",
+      "name" : "FRCoreCodeSystemv2_0203",
+      "title" : "FR Core CodeSystem v2-0203",
+      "description" : "HL7 v2 - Identifier type",
+      "uses" : {
+      },
+      "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-organization-identifier-type.html" : "FR Core ValueSet Organization identifier type",
+      "ValueSet-sas-valueset-typeidentifiant.html" : "Type identifiant SAS",
+      "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-practitioner-identifier-type.html" : "FR Core ValueSet Practitioner identifier type"
+    },
+    {
+      "url" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-3307",
+      "version" : "2.1.0",
+      "status" : "draft",
+      "name" : "FRCoreCodeSystemv2_3307",
+      "title" : "FR Core CodeSystem v2-3307",
+      "description" : "HL7 v2 - Table 3307",
+      "uses" : {
+      },
+      "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-organization-type.html" : "FR Core ValueSet Organization type"
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/CodeSystem/categorie-orientation-sas-codesystem",
+      "version" : "1.1.0",
+      "status" : "active",
+      "name" : "CategorieOrientationSASCodeSystem",
+      "title" : "Code système catégorie orientation SAS",
+      "description" : "Code système permettant de définir la catégorie d'orientation SAS spécifique qui n'est pas considéré comme un établissement de soins et qui permet de catégoriser l'orientation de soins",
+      "uses" : {
+      },
+      "ValueSet-categorie-orientation-sas-valueset.html" : "Value set catégorie orientation SAS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_G05-SousSectionTableauCNOP/FHIR/TRE-G05-SousSectionTableauCNOP",
+      "version" : "1.3.0",
+      "status" : "active",
+      "name" : "TRE_G05-SousSectionTableauCNOP",
+      "title" : null,
+      "description" : "Sous-Section du tableau de l'Ordre des Pharmaciens",
+      "oids" : ["1.2.250.1.71.4.2.6"],
+      "uses" : {
+      },
+      "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-practitioner-role-exercice.html" : "FR Core ValueSet PractitionerRole Exercice"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/TRE_G08-TypeIdentifiantPersonne/FHIR/TRE-G08-TypeIdentifiantPersonne",
-      "version" : "1.4.0",
+      "version" : "1.3.0",
       "status" : "active",
       "name" : "TRE_G08-TypeIdentifiantPersonne",
       "title" : null,
@@ -477,11 +525,36 @@
       "oids" : ["1.2.250.1.71.1.2.15"],
       "uses" : {
       },
-      "https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&canonical=http://interopsante.org/fhir/ValueSet/fr-practioner-identifier-type" : "fr-practioner-identifier-type"
+      "https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&canonical=http://interopsante.org/fhir/ValueSet/fr-practioner-identifier-type" : "fr-practioner-identifier-type",
+      "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-practitioner-identifier-type.html" : "FR Core ValueSet Practitioner identifier type"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_G13-OrientationParticuliere/FHIR/TRE-G13-OrientationParticuliere",
+      "version" : "1.3.0",
+      "status" : "active",
+      "name" : "TRE_G13-OrientationParticuliere",
+      "title" : null,
+      "description" : "Orientation particulière",
+      "oids" : ["1.2.250.1.213.2.31"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J107-EnsembleSavoirFaire-RASS.html" : "JDV_J107-EnsembleSavoirFaire-RASS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante",
+      "version" : "1.3.0",
+      "status" : "active",
+      "name" : "TRE_G15-ProfessionSante",
+      "title" : null,
+      "description" : "Professions de santé définies par le code de la santé publique",
+      "oids" : ["1.2.250.1.71.1.2.7"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J106-EnsembleProfession-RASS.html" : "JDV_J106-EnsembleProfession-RASS"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite",
-      "version" : "1.4.0",
+      "version" : "1.3.0",
       "status" : "active",
       "name" : "TRE_R02-SecteurActivite",
       "title" : null,
@@ -489,11 +562,47 @@
       "oids" : ["1.2.250.1.71.4.2.4"],
       "uses" : {
       },
-      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J101-SecteurActivite-RASS.html" : "JDV_J101-SecteurActivite-RASS"
+      "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J101-SecteurActivite-RASS.html" : "JDV_J101-SecteurActivite-RASS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R04-TypeSavoirFaire/FHIR/TRE-R04-TypeSavoirFaire",
+      "version" : "1.3.0",
+      "status" : "active",
+      "name" : "TRE_R04-TypeSavoirFaire",
+      "title" : null,
+      "description" : "Type de savoir-faire",
+      "oids" : ["1.2.250.1.213.1.6.1.16"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J91-TypeSavoirFaire-RASS.html" : "JDV_J91-TypeSavoirFaire-RASS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R06-SectionTableauCNOP/FHIR/TRE-R06-SectionTableauCNOP",
+      "version" : "1.3.0",
+      "status" : "active",
+      "name" : "TRE_R06-SectionTableauCNOP",
+      "title" : null,
+      "description" : "Section du tableau de l'Ordre des Pharmaciens",
+      "oids" : ["1.2.250.1.213.2.37"],
+      "uses" : {
+      },
+      "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-practitioner-role-exercice.html" : "FR Core ValueSet PractitionerRole Exercice"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R09-CategorieProfessionnelle/FHIR/TRE-R09-CategorieProfessionnelle",
+      "version" : "1.3.0",
+      "status" : "active",
+      "name" : "TRE_R09-CategorieProfessionnelle",
+      "title" : null,
+      "description" : "Catégorie professionnelle",
+      "oids" : ["1.2.250.1.213.1.6.1.10"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J89-CategorieProfessionnelle-RASS.html" : "JDV_J89-CategorieProfessionnelle-RASS"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/TRE_R11-CiviliteExercice/FHIR/TRE-R11-CiviliteExercice",
-      "version" : "1.4.0",
+      "version" : "1.3.0",
       "status" : "active",
       "name" : "TRE_R11-CiviliteExercice",
       "title" : null,
@@ -501,11 +610,23 @@
       "oids" : ["1.2.250.1.213.1.6.1.11"],
       "uses" : {
       },
-      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J79-CiviliteExercice-RASS.html" : "JDV_J79-CiviliteExercice-RASS"
+      "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J79-CiviliteExercice-RASS.html" : "JDV_J79-CiviliteExercice-RASS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R14-TypeDiplome/FHIR/TRE-R14-TypeDiplome",
+      "version" : "1.3.0",
+      "status" : "active",
+      "name" : "TRE_R14-TypeDiplome",
+      "title" : null,
+      "description" : "Type de diplôme",
+      "oids" : ["1.2.250.1.213.1.6.1.36"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J81-TypeDiplome-RASS.html" : "JDV_J81-TypeDiplome-RASS"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/TRE_R21-Fonction/FHIR/TRE-R21-Fonction",
-      "version" : "1.4.0",
+      "version" : "1.3.0",
       "status" : "active",
       "name" : "TRE_R21-Fonction",
       "title" : null,
@@ -513,11 +634,24 @@
       "oids" : ["1.2.250.1.213.1.6.1.17"],
       "uses" : {
       },
-      "https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&canonical=http://interopsante.org/fhir/ValueSet/fr-practioner-role-exercice" : "fr-practioner-role-exercice"
+      "https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&canonical=http://interopsante.org/fhir/ValueSet/fr-practioner-role-exercice" : "fr-practioner-role-exercice",
+      "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-practitioner-role-exercice.html" : "FR Core ValueSet PractitionerRole Exercice"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R22-GenreActivite/FHIR/TRE-R22-GenreActivite",
+      "version" : "1.3.0",
+      "status" : "active",
+      "name" : "TRE_R22-GenreActivite",
+      "title" : null,
+      "description" : "Genre d'activité",
+      "oids" : ["1.2.250.1.213.1.6.1.19"],
+      "uses" : {
+      },
+      "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-practitioner-role-exercice.html" : "FR Core ValueSet PractitionerRole Exercice"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/TRE_R226-Dip2iemeCycleNQ/FHIR/TRE-R226-Dip2iemeCycleNQ",
-      "version" : "1.4.0",
+      "version" : "1.3.0",
       "status" : "active",
       "name" : "TRE_R226-Dip2iemeCycleNQ",
       "title" : null,
@@ -525,11 +659,47 @@
       "oids" : ["1.2.250.1.213.1.6.1.118"],
       "uses" : {
       },
-      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+      "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R23-ModeExercice/FHIR/TRE-R23-ModeExercice",
+      "version" : "1.3.0",
+      "status" : "active",
+      "name" : "TRE_R23-ModeExercice",
+      "title" : null,
+      "description" : "Mode d'exercice",
+      "oids" : ["1.2.250.1.213.1.6.1.18"],
+      "uses" : {
+      },
+      "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-practitioner-role-exercice.html" : "FR Core ValueSet PractitionerRole Exercice"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R24-TypeActiviteLiberale/FHIR/TRE-R24-TypeActiviteLiberale",
+      "version" : "1.3.0",
+      "status" : "active",
+      "name" : "TRE_R24-TypeActiviteLiberale",
+      "title" : null,
+      "description" : "Type d'activité libérale",
+      "oids" : ["1.2.250.1.213.1.6.1.22"],
+      "uses" : {
+      },
+      "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-practitioner-role-exercice.html" : "FR Core ValueSet PractitionerRole Exercice"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R291-AutreProfession/FHIR/TRE-R291-AutreProfession",
+      "version" : "1.3.0",
+      "status" : "active",
+      "name" : "TRE_R291-AutreProfession",
+      "title" : null,
+      "description" : "Liste de professionnels non membres d'une profession réglementée",
+      "oids" : ["1.2.250.1.213.1.6.1.140"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J106-EnsembleProfession-RASS.html" : "JDV_J106-EnsembleProfession-RASS"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
-      "version" : "1.4.0",
+      "version" : "1.3.0",
       "status" : "active",
       "name" : "TRE_R314-TypeCreneau",
       "title" : null,
@@ -537,13 +707,25 @@
       "oids" : ["1.2.250.1.213.3.3.71"],
       "uses" : {
       },
-      "ValueSet-sas-sos-valueset-typecreneau.html" : "Type créneaux SAS SOS",
-      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J165-TypeCreneau-SAS.html" : "JDV_J165-TypeCreneau-SAS",
-      "ValueSet-sas-cpts-valueset-typecreneau.html" : "Type créneaux SAS CPTS"
+      "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J165-TypeCreneau-SAS.html" : "JDV_J165-TypeCreneau-SAS",
+      "ValueSet-sas-cpts-valueset-typecreneau.html" : "Type créneaux SAS CPTS",
+      "ValueSet-sas-sos-valueset-typecreneau.html" : "Type créneaux SAS SOS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R32-StatutHospitalier/FHIR/TRE-R32-StatutHospitalier",
+      "version" : "1.3.0",
+      "status" : "active",
+      "name" : "TRE_R32-StatutHospitalier",
+      "title" : null,
+      "description" : "Statut hospitalier",
+      "oids" : ["1.2.250.1.213.1.6.1.21"],
+      "uses" : {
+      },
+      "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-practitioner-role-exercice.html" : "FR Core ValueSet PractitionerRole Exercice"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/TRE_R348-FormationSpecialiseeTransversale/FHIR/TRE-R348-FormationSpecialiseeTransversale",
-      "version" : "1.4.0",
+      "version" : "1.3.0",
       "status" : "active",
       "name" : "TRE_R348-FormationSpecialiseeTransversale",
       "title" : null,
@@ -551,11 +733,11 @@
       "oids" : ["1.2.250.1.213.1.6.1.251"],
       "uses" : {
       },
-      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+      "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/TRE_R36-AutreDiplomeObtenu/FHIR/TRE-R36-AutreDiplomeObtenu",
-      "version" : "1.4.0",
+      "version" : "1.3.0",
       "status" : "active",
       "name" : "TRE_R36-AutreDiplomeObtenu",
       "title" : null,
@@ -563,11 +745,11 @@
       "oids" : ["1.2.250.1.213.1.6.1.54"],
       "uses" : {
       },
-      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+      "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
-      "version" : "1.4.0",
+      "version" : "1.3.0",
       "status" : "active",
       "name" : "TRE_R38-SpecialiteOrdinale",
       "title" : null,
@@ -575,11 +757,85 @@
       "oids" : ["1.2.250.1.213.2.28"],
       "uses" : {
       },
+      "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J107-EnsembleSavoirFaire-RASS.html" : "JDV_J107-EnsembleSavoirFaire-RASS",
+      "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-practitioner-specialty.html" : "FR Core ValueSet Practitioner specialty",
       "https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&canonical=http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty" : "fr-practitioner-specialty"
     },
     {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R39-Competence/FHIR/TRE-R39-Competence",
+      "version" : "1.3.0",
+      "status" : "active",
+      "name" : "TRE_R39-Competence",
+      "title" : null,
+      "description" : "Compétence",
+      "oids" : ["1.2.250.1.213.2.29"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J107-EnsembleSavoirFaire-RASS.html" : "JDV_J107-EnsembleSavoirFaire-RASS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R40-CompetenceExclusive/FHIR/TRE-R40-CompetenceExclusive",
+      "version" : "1.3.0",
+      "status" : "active",
+      "name" : "TRE_R40-CompetenceExclusive",
+      "title" : null,
+      "description" : "Compétence exclusive",
+      "oids" : ["1.2.250.1.213.2.30"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J107-EnsembleSavoirFaire-RASS.html" : "JDV_J107-EnsembleSavoirFaire-RASS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R42-DESCnonQualifiant/FHIR/TRE-R42-DESCnonQualifiant",
+      "version" : "1.3.0",
+      "status" : "active",
+      "name" : "TRE_R42-DESCnonQualifiant",
+      "title" : null,
+      "description" : "Savoir-faire liés aux DESC du groupe 1 non qualifiants",
+      "oids" : ["1.2.250.1.213.2.32"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J107-EnsembleSavoirFaire-RASS.html" : "JDV_J107-EnsembleSavoirFaire-RASS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R43-CapaciteSavoirFaire/FHIR/TRE-R43-CapaciteSavoirFaire",
+      "version" : "1.3.0",
+      "status" : "active",
+      "name" : "TRE_R43-CapaciteSavoirFaire",
+      "title" : null,
+      "description" : "Capacité (savoir-faire)",
+      "oids" : ["1.2.250.1.213.2.33"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J107-EnsembleSavoirFaire-RASS.html" : "JDV_J107-EnsembleSavoirFaire-RASS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R44-QualificationPAC/FHIR/TRE-R44-QualificationPAC",
+      "version" : "1.3.0",
+      "status" : "active",
+      "name" : "TRE_R44-QualificationPAC",
+      "title" : null,
+      "description" : "Qualification de praticien adjoint contractuel",
+      "oids" : ["1.2.250.1.213.2.34"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J107-EnsembleSavoirFaire-RASS.html" : "JDV_J107-EnsembleSavoirFaire-RASS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R45-FonctionQualifiee/FHIR/TRE-R45-FonctionQualifiee",
+      "version" : "1.3.0",
+      "status" : "active",
+      "name" : "TRE_R45-FonctionQualifiee",
+      "title" : null,
+      "description" : "Fonction qualifiée",
+      "oids" : ["1.2.250.1.213.2.35"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J107-EnsembleSavoirFaire-RASS.html" : "JDV_J107-EnsembleSavoirFaire-RASS"
+    },
+    {
       "url" : "https://mos.esante.gouv.fr/NOS/TRE_R48-DiplomeEtatFrancais/FHIR/TRE-R48-DiplomeEtatFrancais",
-      "version" : "1.4.0",
+      "version" : "1.3.0",
       "status" : "active",
       "name" : "TRE_R48-DiplomeEtatFrancais",
       "title" : null,
@@ -587,11 +843,11 @@
       "oids" : ["1.2.250.1.213.1.6.1.31"],
       "uses" : {
       },
-      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+      "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/TRE_R49-DiplomeEtudeSpecialisee/FHIR/TRE-R49-DiplomeEtudeSpecialisee",
-      "version" : "1.4.0",
+      "version" : "1.3.0",
       "status" : "active",
       "name" : "TRE_R49-DiplomeEtudeSpecialisee",
       "title" : null,
@@ -599,11 +855,11 @@
       "oids" : ["1.2.250.1.213.1.6.1.32"],
       "uses" : {
       },
-      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+      "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/TRE_R50-DESCGroupe1Diplome/FHIR/TRE-R50-DESCGroupe1Diplome",
-      "version" : "1.4.0",
+      "version" : "1.3.0",
       "status" : "active",
       "name" : "TRE_R50-DESCGroupe1Diplome",
       "title" : null,
@@ -611,11 +867,11 @@
       "oids" : ["1.2.250.1.213.1.6.1.48"],
       "uses" : {
       },
-      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+      "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/TRE_R51-DESCGroupe2Diplome/FHIR/TRE-R51-DESCGroupe2Diplome",
-      "version" : "1.4.0",
+      "version" : "1.3.0",
       "status" : "active",
       "name" : "TRE_R51-DESCGroupe2Diplome",
       "title" : null,
@@ -623,11 +879,11 @@
       "oids" : ["1.2.250.1.213.1.6.1.49"],
       "uses" : {
       },
-      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+      "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/TRE_R52-CapaciteDiplome/FHIR/TRE-R52-CapaciteDiplome",
-      "version" : "1.4.0",
+      "version" : "1.3.0",
       "status" : "active",
       "name" : "TRE_R52-CapaciteDiplome",
       "title" : null,
@@ -635,11 +891,11 @@
       "oids" : ["1.2.250.1.213.1.6.1.50"],
       "uses" : {
       },
-      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+      "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/TRE_R53-DiplomePaysEEE/FHIR/TRE-R53-DiplomePaysEEE",
-      "version" : "1.4.0",
+      "version" : "1.3.0",
       "status" : "active",
       "name" : "TRE_R53-DiplomePaysEEE",
       "title" : null,
@@ -647,11 +903,11 @@
       "oids" : ["1.2.250.1.213.1.6.1.51"],
       "uses" : {
       },
-      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+      "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/TRE_R54-DiplomeUniversiteInterUniversitaire/FHIR/TRE-R54-DiplomeUniversiteInterUniversitaire",
-      "version" : "1.4.0",
+      "version" : "1.3.0",
       "status" : "active",
       "name" : "TRE_R54-DiplomeUniversiteInterUniversitaire",
       "title" : null,
@@ -659,11 +915,11 @@
       "oids" : ["1.2.250.1.213.1.6.1.34"],
       "uses" : {
       },
-      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+      "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/TRE_R55-CertificatEtudeSpeciale/FHIR/TRE-R55-CertificatEtudeSpeciale",
-      "version" : "1.4.0",
+      "version" : "1.3.0",
       "status" : "active",
       "name" : "TRE_R55-CertificatEtudeSpeciale",
       "title" : null,
@@ -671,11 +927,11 @@
       "oids" : ["1.2.250.1.213.1.6.1.52"],
       "uses" : {
       },
-      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+      "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/TRE_R56-Attestation/FHIR/TRE-R56-Attestation",
-      "version" : "1.4.0",
+      "version" : "1.3.0",
       "status" : "active",
       "name" : "TRE_R56-Attestation",
       "title" : null,
@@ -683,11 +939,11 @@
       "oids" : ["1.2.250.1.213.1.6.1.27"],
       "uses" : {
       },
-      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+      "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/TRE_R57-DiplomeEuropeenEtudeSpecialisee/FHIR/TRE-R57-DiplomeEuropeenEtudeSpecialisee",
-      "version" : "1.4.0",
+      "version" : "1.3.0",
       "status" : "active",
       "name" : "TRE_R57-DiplomeEuropeenEtudeSpecialisee",
       "title" : null,
@@ -695,11 +951,11 @@
       "oids" : ["1.2.250.1.213.1.6.1.33"],
       "uses" : {
       },
-      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+      "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/TRE_R58-AutreTypeDiplome/FHIR/TRE-R58-AutreTypeDiplome",
-      "version" : "1.4.0",
+      "version" : "1.3.0",
       "status" : "active",
       "name" : "TRE_R58-AutreTypeDiplome",
       "title" : null,
@@ -707,11 +963,11 @@
       "oids" : ["1.2.250.1.213.1.6.1.53"],
       "uses" : {
       },
-      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+      "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement",
-      "version" : "1.4.0",
+      "version" : "1.3.0",
       "status" : "active",
       "name" : "TRE_R66-CategorieEtablissement",
       "title" : null,
@@ -719,12 +975,13 @@
       "oids" : ["1.2.250.1.213.1.6.1.8"],
       "uses" : {
       },
-      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J129-CategorieEtablissement-RASS.html" : "JDV_J129-CategorieEtablissement-RASS",
-      "ValueSet-sas-valueset-categorieetablissement.html" : "Catégorie établissement SAS"
+      "ValueSet-sas-valueset-categorieetablissement.html" : "Catégorie établissement SAS",
+      "ValueSet-categorie-orientation-sas-valueset.html" : "Value set catégorie orientation SAS",
+      "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J129-CategorieEtablissement-RASS.html" : "JDV_J129-CategorieEtablissement-RASS"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/TRE_R81-Civilite/FHIR/TRE-R81-Civilite",
-      "version" : "1.4.0",
+      "version" : "1.3.0",
       "status" : "active",
       "name" : "TRE_R81-Civilite",
       "title" : null,
@@ -732,11 +989,11 @@
       "oids" : ["1.2.250.1.213.1.6.1.69"],
       "uses" : {
       },
-      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J78-Civilite-RASS.html" : "JDV_J78-Civilite-RASS"
+      "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J78-Civilite-RASS.html" : "JDV_J78-Civilite-RASS"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/TRE_R85-RolePriseCharge/FHIR/TRE-R85-RolePriseCharge",
-      "version" : "1.4.0",
+      "version" : "1.3.0",
       "status" : "active",
       "name" : "TRE_R85-RolePriseCharge",
       "title" : null,
@@ -744,11 +1001,36 @@
       "oids" : ["1.2.250.1.213.1.6.1.107"],
       "uses" : {
       },
-      "https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&canonical=http://interopsante.org/fhir/ValueSet/fr-practioner-role-exercice" : "fr-practioner-role-exercice"
+      "https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&canonical=http://interopsante.org/fhir/ValueSet/fr-practioner-role-exercice" : "fr-practioner-role-exercice",
+      "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-practitioner-role-exercice.html" : "FR Core ValueSet PractitionerRole Exercice"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R94-ProfessionSocial/FHIR/TRE-R94-ProfessionSocial",
+      "version" : "1.3.0",
+      "status" : "active",
+      "name" : "TRE_R94-ProfessionSocial",
+      "title" : null,
+      "description" : "Profession du social",
+      "oids" : ["1.2.250.1.213.1.6.1.4"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J106-EnsembleProfession-RASS.html" : "JDV_J106-EnsembleProfession-RASS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R95-UsagerTitre/FHIR/TRE-R95-UsagerTitre",
+      "version" : "1.3.0",
+      "status" : "active",
+      "name" : "TRE_R95-UsagerTitre",
+      "title" : null,
+      "description" : "Usager de titre professionnel",
+      "oids" : ["1.2.250.1.213.1.6.1.109"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J106-EnsembleProfession-RASS.html" : "JDV_J106-EnsembleProfession-RASS"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/TRE_R96-AutreFonctionSanitaire/FHIR/TRE-R96-AutreFonctionSanitaire",
-      "version" : "1.4.0",
+      "version" : "1.3.0",
       "status" : "active",
       "name" : "TRE_R96-AutreFonctionSanitaire",
       "title" : null,
@@ -756,7 +1038,20 @@
       "oids" : ["1.2.250.1.213.1.6.1.110"],
       "uses" : {
       },
-      "https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&canonical=http://interopsante.org/fhir/ValueSet/fr-practioner-role-exercice" : "fr-practioner-role-exercice"
+      "https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&canonical=http://interopsante.org/fhir/ValueSet/fr-practioner-role-exercice" : "fr-practioner-role-exercice",
+      "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-practitioner-role-exercice.html" : "FR Core ValueSet PractitionerRole Exercice"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R97-DroitExerciceCompl/FHIR/TRE-R97-DroitExerciceCompl",
+      "version" : "1.3.0",
+      "status" : "active",
+      "name" : "TRE_R97-DroitExerciceCompl",
+      "title" : null,
+      "description" : "Droit d'exercice complémentaire",
+      "oids" : ["1.2.250.1.213.1.6.1.111"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.3.0/ValueSet-JDV-J107-EnsembleSavoirFaire-RASS.html" : "JDV_J107-EnsembleSavoirFaire-RASS"
     },
     {
       "url" : "urn:ietf:bcp:47",

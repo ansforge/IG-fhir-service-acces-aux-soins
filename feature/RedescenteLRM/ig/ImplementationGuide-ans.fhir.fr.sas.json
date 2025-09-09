@@ -10,7 +10,7 @@
   "name" : "SAS",
   "title" : "Service d'Accès aux Soins",
   "status" : "active",
-  "date" : "2025-09-09T08:46:42+00:00",
+  "date" : "2025-09-09T11:37:38+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -51,15 +51,15 @@
   },
   {
     "id" : "hl7_fhir_fr_core",
+    "uri" : "https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core",
+    "packageId" : "hl7.fhir.fr.core",
+    "version" : "2.1.0"
+  },
+  {
+    "id" : "hl7_fhir_fr_core_v110",
     "uri" : "http://fhir.org/packages/hl7.fhir.fr.core/ImplementationGuide/hl7.fhir.fr.core",
     "packageId" : "hl7.fhir.fr.core",
     "version" : "1.1.0"
-  },
-  {
-    "id" : "ans_fr_nos",
-    "uri" : "https://interop.esante.gouv.fr/ig/nos/ImplementationGuide/ans.fr.nos",
-    "packageId" : "ans.fr.nos",
-    "version" : "1.4.0"
   }],
   "definition" : {
     "extension" : [{
@@ -98,88 +98,22 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "no-narrative"
+        "valueString" : "path-test"
       },
       {
         "url" : "value",
-        "valueString" : "Appointment/*"
+        "valueString" : "/test"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "no-narrative"
+        "valueString" : "profile-test-cases"
       },
       {
         "url" : "value",
-        "valueString" : "Bundle/*"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "no-narrative"
-      },
-      {
-        "url" : "value",
-        "valueString" : "HealthcareService/*"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "no-narrative"
-      },
-      {
-        "url" : "value",
-        "valueString" : "Location/*"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "no-narrative"
-      },
-      {
-        "url" : "value",
-        "valueString" : "Organization/*"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "no-narrative"
-      },
-      {
-        "url" : "value",
-        "valueString" : "Practitioner/*"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "no-narrative"
-      },
-      {
-        "url" : "value",
-        "valueString" : "Schedule/*"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "no-narrative"
-      },
-      {
-        "url" : "value",
-        "valueString" : "Slot/*"
+        "valueString" : "test/control-file.json"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -476,88 +410,22 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueCode" : "no-narrative"
+        "valueCode" : "path-test"
       },
       {
         "url" : "value",
-        "valueString" : "Appointment/*"
+        "valueString" : "/test"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
     {
       "extension" : [{
         "url" : "code",
-        "valueCode" : "no-narrative"
+        "valueCode" : "profile-test-cases"
       },
       {
         "url" : "value",
-        "valueString" : "Bundle/*"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueCode" : "no-narrative"
-      },
-      {
-        "url" : "value",
-        "valueString" : "HealthcareService/*"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueCode" : "no-narrative"
-      },
-      {
-        "url" : "value",
-        "valueString" : "Location/*"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueCode" : "no-narrative"
-      },
-      {
-        "url" : "value",
-        "valueString" : "Organization/*"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueCode" : "no-narrative"
-      },
-      {
-        "url" : "value",
-        "valueString" : "Practitioner/*"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueCode" : "no-narrative"
-      },
-      {
-        "url" : "value",
-        "valueString" : "Schedule/*"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueCode" : "no-narrative"
-      },
-      {
-        "url" : "value",
-        "valueString" : "Slot/*"
+        "valueString" : "test/control-file.json"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -820,6 +688,18 @@
         "valueString" : "ValueSet"
       }],
       "reference" : {
+        "reference" : "ValueSet/sas-valueset-appointmentparticipanttype"
+      },
+      "name" : "Appointment Participant Type SAS",
+      "description" : "Type de participant du RDV SAS",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
         "reference" : "ValueSet/sas-valueset-appointmentreason"
       },
       "name" : "Appointment reason SAS",
@@ -865,6 +745,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/sas-categorie-orientation"
+      },
+      "name" : "CategorieOrientation",
+      "description" : "Extension créée afin d'ajouter la catégorie d'orientation dans un RDV",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
       }],
       "reference" : {
@@ -872,6 +764,18 @@
       },
       "name" : "Catégorie établissement SAS",
       "description" : "Catégorie d'établissement utilisée dans contexte SAS - CPTS dans un premier temps",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/categorie-orientation-sas-codesystem"
+      },
+      "name" : "Code système catégorie orientation SAS",
+      "description" : "Code système permettant de définir la catégorie d'orientation SAS spécifique qui n'est pas considéré comme un établissement de soins et qui permet de catégoriser l'orientation de soins",
       "exampleBoolean" : false
     },
     {
@@ -913,6 +817,102 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Appointment"
+      }],
+      "reference" : {
+        "reference" : "Appointment/ExampleAppointmentLRM1"
+      },
+      "name" : "ExampleAppointmentLRM1",
+      "description" : "Exemple RDV LRM 1 - SOS Médecin interfacé",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Appointment"
+      }],
+      "reference" : {
+        "reference" : "Appointment/ExampleAppointmentLRM2"
+      },
+      "name" : "ExampleAppointmentLRM2",
+      "description" : "Exemple RDV LRM 2 - CDS non interfacé",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Appointment"
+      }],
+      "reference" : {
+        "reference" : "Appointment/ExampleAppointmentLRM3"
+      },
+      "name" : "ExampleAppointmentLRM3",
+      "description" : "Exemple RDV LRM 3 - SOS Médecins interfacé",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Appointment"
+      }],
+      "reference" : {
+        "reference" : "Appointment/ExampleAppointmentLRM4"
+      },
+      "name" : "ExampleAppointmentLRM4",
+      "description" : "Exemple RDV LRM 4 - SOS Médecins interfacé en attente attribution PS",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Appointment"
+      }],
+      "reference" : {
+        "reference" : "Appointment/ExampleAppointmentLRM5"
+      },
+      "name" : "ExampleAppointmentLRM5",
+      "description" : "Exemple RDV LRM 5",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Appointment"
+      }],
+      "reference" : {
+        "reference" : "Appointment/ExampleAppointmentLRM6"
+      },
+      "name" : "ExampleAppointmentLRM6",
+      "description" : "Exemple RDV LRM 6 - PS indiv (interfacé ou non)",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Appointment"
+      }],
+      "reference" : {
+        "reference" : "Appointment/ExampleAppointmentLRM7"
+      },
+      "name" : "ExampleAppointmentLRM7",
+      "description" : "Exemple RDV LRM 7 - CPTS non interfacé",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Appointment"
+      }],
+      "reference" : {
+        "reference" : "Appointment/ExampleAppointmentLRM8"
+      },
+      "name" : "ExampleAppointmentLRM8",
+      "description" : "Exemple RDV LRM 8 - PS indiv (interfacé) annulé",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Bundle"
       }],
       "reference" : {
@@ -921,6 +921,114 @@
       "name" : "ExampleBundleAgregateurSOS",
       "description" : "Exemple Bundle SOS",
       "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-bundle-aggregator"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/ExampleBundleAppointmentLRM1"
+      },
+      "name" : "ExampleBundleAppointmentLRM1",
+      "description" : "Exemple Bundle RDV LRM 1 - Cas SOS Médecin interfacé avec PS et structure",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/ExampleBundleAppointmentLRM2"
+      },
+      "name" : "ExampleBundleAppointmentLRM2",
+      "description" : "Exemple Bundle RDV LRM 2 - Cas CDS non interfacé (structure sans PS)",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/ExampleBundleAppointmentLRM3"
+      },
+      "name" : "ExampleBundleAppointmentLRM3",
+      "description" : "Exemple Bundle RDV LRM 3 - Cas SOS Médecin interfacé avec statut mis à jour",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/ExampleBundleAppointmentLRM4"
+      },
+      "name" : "ExampleBundleAppointmentLRM4",
+      "description" : "Exemple Bundle RDV LRM 4 - Cas RDV sans PS ni structure. Ex : SOS Médecins interfacé en attente d'attribution médecin",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/ExampleBundleAppointmentLRM5"
+      },
+      "name" : "ExampleBundleAppointmentLRM5",
+      "description" : "Exemple Bundle RDV LRM 5 - Cas mise à jour d'un RDV initialement sans PS avec ajout du médecin",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/ExampleBundleAppointmentLRM6"
+      },
+      "name" : "ExampleBundleAppointmentLRM6",
+      "description" : "Exemple Bundle RDV LRM 6 - Cas RDV avec PS mais sans structure, exemple PS. indiv",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/ExampleBundleAppointmentLRM7"
+      },
+      "name" : "ExampleBundleAppointmentLRM7",
+      "description" : "Exemple Bundle RDV LRM 7 - Cas CPTS non interfacé avec PS et structure",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/ExampleBundleAppointmentLRM8"
+      },
+      "name" : "ExampleBundleAppointmentLRM8",
+      "description" : "Exemple Bundle RDV LRM 8 - Cas mise à jour d'un RDV initialement sans PS avec ajout du médecin et de la structure",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/ExampleBundleAppointmentLRM9"
+      },
+      "name" : "ExampleBundleAppointmentLRM9",
+      "description" : "Exemple Bundle RDV LRM 9 - Cas annulation de RDV avec PS mais sans structure, exemple PS. indiv interfacé",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"
     },
     {
       "extension" : [{
@@ -957,6 +1065,30 @@
       "name" : "ExampleBundlePSIndiv",
       "description" : "Exemple Bundle PS indiv",
       "exampleCanonical" : "http://sas.fr/fhir/StructureDefinition/BundleAgregateur"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "HealthcareService"
+      }],
+      "reference" : {
+        "reference" : "HealthcareService/ExampleHealthcareService1"
+      },
+      "name" : "ExampleHealthcareService1",
+      "description" : "Exemple 1 de ressource Healthcare Service",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-healthcareservice-lrm"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "HealthcareService"
+      }],
+      "reference" : {
+        "reference" : "HealthcareService/ExampleHealthcareService2"
+      },
+      "name" : "ExampleHealthcareService2",
+      "description" : "Exemple 2 de ressource Healthcare Service",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-healthcareservice-lrm"
     },
     {
       "extension" : [{
@@ -1108,6 +1240,18 @@
         "valueString" : "Practitioner"
       }],
       "reference" : {
+        "reference" : "Practitioner/ExamplePractitionerLRM"
+      },
+      "name" : "ExamplePractitionerLRM",
+      "description" : "Exemple practitioner flux LRM",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-lrm"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Practitioner"
+      }],
+      "reference" : {
         "reference" : "Practitioner/ExamplePractitionerRegul1"
       },
       "name" : "ExamplePractitionerRegul1",
@@ -1197,6 +1341,66 @@
       "name" : "ExamplePractitionerRoleAgregateur4",
       "description" : "Exemple 4 PractitionerRole flux agrégateur",
       "exampleCanonical" : "http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PractitionerRole"
+      }],
+      "reference" : {
+        "reference" : "PractitionerRole/ExamplePractitionerRoleAppointment1"
+      },
+      "name" : "ExamplePractitionerRoleAppointment1",
+      "description" : "Exemple PractitionerRole 1 flux LRM",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-lrm"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PractitionerRole"
+      }],
+      "reference" : {
+        "reference" : "PractitionerRole/ExamplePractitionerRoleAppointment2"
+      },
+      "name" : "ExamplePractitionerRoleAppointment2",
+      "description" : "Exemple PractitionerRole 2 flux LRM",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-lrm"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/ExampleSasOrganization1"
+      },
+      "name" : "ExampleSasOrganization1",
+      "description" : "Exemple d'organisation SAS - association SOS (SIRET)",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-organization-lrm"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/ExampleSasOrganization2"
+      },
+      "name" : "ExampleSasOrganization2",
+      "description" : "Exemple d'organisation SAS - centre de santé (FINESS)",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-organization-lrm"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/ExampleSasOrganization3"
+      },
+      "name" : "ExampleSasOrganization3",
+      "description" : "Exemple d'organisation SAS - CPTS (FINESS)",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-organization-lrm"
     },
     {
       "extension" : [{
@@ -1693,6 +1897,78 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/sas-appointment-lrm"
+      },
+      "name" : "SASAppointmentLRM",
+      "description" : "Profil de Appointment, dérivé de FrAppointment, pour le cas d'usage d'envoi des RDV consolidés de la PTF aux logiciels de LRM",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/sas-bundle-appointment-lrm"
+      },
+      "name" : "SASBundleAppointmentLRM",
+      "description" : "Profil de Bundle qui représente les données de RDV à envoyer de la plateforme numérique du SAS vers les éditeurs de LRM",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/sas-healthcareservice-lrm"
+      },
+      "name" : "SASHealthcareServiceLRM",
+      "description" : "Profil dérivé de FR Core Healthcare Service Profile dans le cadre de l'usage des flux du SAS",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/sas-organization-lrm"
+      },
+      "name" : "SASOrganizationLRM",
+      "description" : "Profil dérivé de FrOrganization dans le cadre de l'usage des flux du SAS",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/sas-practitioner-lrm"
+      },
+      "name" : "SASPractitionerLRM",
+      "description" : "Profil de Practitioner, dérivé de FrPractitioner, dans le cadre de l'usage des flux du SAS",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/sas-practitioner-role-lrm"
+      },
+      "name" : "SASPractitionerRoleLRM",
+      "description" : "Profil dérivé de FrPractitionerRole dérivé de FrAppointment, pour le cas d'usage d'envoi des RDV consolidés de la PTF aux logiciels de LRM",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
       }],
       "reference" : {
@@ -1772,6 +2048,18 @@
       },
       "name" : "Type identifiant SAS",
       "description" : "Type d'identifiant SAS",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/categorie-orientation-sas-valueset"
+      },
+      "name" : "Value set catégorie orientation SAS",
+      "description" : "Valueset permettant de définir la catégorie d'orientation SAS. Il regroupe des codes de la TRE-R66 et du codesystem catégorie orientation SAS",
       "exampleBoolean" : false
     }],
     "page" : {
@@ -1879,6 +2167,15 @@
         }],
         "nameUrl" : "specifications_techniques-sos-gestion_rdv.html",
         "title" : "SOS Médecins - Gestion de rendez-vous",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "specifications_techniques-transmission-info-RDV-LRM.html"
+        }],
+        "nameUrl" : "specifications_techniques-transmission-info-RDV-LRM.html",
+        "title" : "Transmission des informations de rendez-vous aux LRM",
         "generation" : "markdown"
       },
       {

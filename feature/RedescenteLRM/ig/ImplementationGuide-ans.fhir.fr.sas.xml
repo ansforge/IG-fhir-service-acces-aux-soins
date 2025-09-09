@@ -10,7 +10,7 @@
   <name value="SAS"/>
   <title value="Service d'Accès aux Soins"/>
   <status value="active"/>
-  <date value="2025-09-09T08:46:42+00:00"/>
+  <date value="2025-09-09T11:37:38+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -46,14 +46,14 @@
     <version value="5.2.0"/>
   </dependsOn>
   <dependsOn id="hl7_fhir_fr_core">
+    <uri value="https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core"/>
+    <packageId value="hl7.fhir.fr.core"/>
+    <version value="2.1.0"/>
+  </dependsOn>
+  <dependsOn id="hl7_fhir_fr_core_v110">
     <uri value="http://fhir.org/packages/hl7.fhir.fr.core/ImplementationGuide/hl7.fhir.fr.core"/>
     <packageId value="hl7.fhir.fr.core"/>
     <version value="1.1.0"/>
-  </dependsOn>
-  <dependsOn id="ans_fr_nos">
-    <uri value="https://interop.esante.gouv.fr/ig/nos/ImplementationGuide/ans.fr.nos"/>
-    <packageId value="ans.fr.nos"/>
-    <version value="1.4.0"/>
   </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -82,66 +82,18 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="no-narrative"/>
+        <valueString value="path-test"/>
       </extension>
       <extension url="value">
-        <valueString value="Appointment/*"/>
+        <valueString value="/test"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="no-narrative"/>
+        <valueString value="profile-test-cases"/>
       </extension>
       <extension url="value">
-        <valueString value="Bundle/*"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="HealthcareService/*"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="Location/*"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="Organization/*"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="Practitioner/*"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="Schedule/*"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="Slot/*"/>
+        <valueString value="test/control-file.json"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -357,66 +309,18 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueCode value="no-narrative"/>
+        <valueCode value="path-test"/>
       </extension>
       <extension url="value">
-        <valueString value="Appointment/*"/>
+        <valueString value="/test"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueCode value="no-narrative"/>
+        <valueCode value="profile-test-cases"/>
       </extension>
       <extension url="value">
-        <valueString value="Bundle/*"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueCode value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="HealthcareService/*"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueCode value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="Location/*"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueCode value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="Organization/*"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueCode value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="Practitioner/*"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueCode value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="Schedule/*"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueCode value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="Slot/*"/>
+        <valueString value="test/control-file.json"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -608,6 +512,17 @@
         <valueString value="ValueSet"/>
       </extension>
       <reference>
+        <reference value="ValueSet/sas-valueset-appointmentparticipanttype"/>
+      </reference>
+      <name value="Appointment Participant Type SAS"/>
+      <description value="Type de participant du RDV SAS"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
         <reference value="ValueSet/sas-valueset-appointmentreason"/>
       </reference>
       <name value="Appointment reason SAS"/>
@@ -649,6 +564,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/sas-categorie-orientation"/>
+      </reference>
+      <name value="CategorieOrientation"/>
+      <description value="Extension créée afin d'ajouter la catégorie d'orientation dans un RDV"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ValueSet"/>
       </extension>
       <reference>
@@ -656,6 +582,17 @@
       </reference>
       <name value="Catégorie établissement SAS"/>
       <description value="Catégorie d'établissement utilisée dans contexte SAS - CPTS dans un premier temps"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/categorie-orientation-sas-codesystem"/>
+      </reference>
+      <name value="Code système catégorie orientation SAS"/>
+      <description value="Code système permettant de définir la catégorie d'orientation SAS spécifique qui n'est pas considéré comme un établissement de soins et qui permet de catégoriser l'orientation de soins"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -693,6 +630,94 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Appointment"/>
+      </extension>
+      <reference>
+        <reference value="Appointment/ExampleAppointmentLRM1"/>
+      </reference>
+      <name value="ExampleAppointmentLRM1"/>
+      <description value="Exemple RDV LRM 1 - SOS Médecin interfacé"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Appointment"/>
+      </extension>
+      <reference>
+        <reference value="Appointment/ExampleAppointmentLRM2"/>
+      </reference>
+      <name value="ExampleAppointmentLRM2"/>
+      <description value="Exemple RDV LRM 2 - CDS non interfacé"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Appointment"/>
+      </extension>
+      <reference>
+        <reference value="Appointment/ExampleAppointmentLRM3"/>
+      </reference>
+      <name value="ExampleAppointmentLRM3"/>
+      <description value="Exemple RDV LRM 3 - SOS Médecins interfacé"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Appointment"/>
+      </extension>
+      <reference>
+        <reference value="Appointment/ExampleAppointmentLRM4"/>
+      </reference>
+      <name value="ExampleAppointmentLRM4"/>
+      <description value="Exemple RDV LRM 4 - SOS Médecins interfacé en attente attribution PS"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Appointment"/>
+      </extension>
+      <reference>
+        <reference value="Appointment/ExampleAppointmentLRM5"/>
+      </reference>
+      <name value="ExampleAppointmentLRM5"/>
+      <description value="Exemple RDV LRM 5"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Appointment"/>
+      </extension>
+      <reference>
+        <reference value="Appointment/ExampleAppointmentLRM6"/>
+      </reference>
+      <name value="ExampleAppointmentLRM6"/>
+      <description value="Exemple RDV LRM 6 - PS indiv (interfacé ou non)"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Appointment"/>
+      </extension>
+      <reference>
+        <reference value="Appointment/ExampleAppointmentLRM7"/>
+      </reference>
+      <name value="ExampleAppointmentLRM7"/>
+      <description value="Exemple RDV LRM 7 - CPTS non interfacé"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Appointment"/>
+      </extension>
+      <reference>
+        <reference value="Appointment/ExampleAppointmentLRM8"/>
+      </reference>
+      <name value="ExampleAppointmentLRM8"/>
+      <description value="Exemple RDV LRM 8 - PS indiv (interfacé) annulé"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Bundle"/>
       </extension>
       <reference>
@@ -701,6 +726,105 @@
       <name value="ExampleBundleAgregateurSOS"/>
       <description value="Exemple Bundle SOS"/>
       <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-bundle-aggregator"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/ExampleBundleAppointmentLRM1"/>
+      </reference>
+      <name value="ExampleBundleAppointmentLRM1"/>
+      <description value="Exemple Bundle RDV LRM 1 - Cas SOS Médecin interfacé avec PS et structure"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/ExampleBundleAppointmentLRM2"/>
+      </reference>
+      <name value="ExampleBundleAppointmentLRM2"/>
+      <description value="Exemple Bundle RDV LRM 2 - Cas CDS non interfacé (structure sans PS)"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/ExampleBundleAppointmentLRM3"/>
+      </reference>
+      <name value="ExampleBundleAppointmentLRM3"/>
+      <description value="Exemple Bundle RDV LRM 3 - Cas SOS Médecin interfacé avec statut mis à jour"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/ExampleBundleAppointmentLRM4"/>
+      </reference>
+      <name value="ExampleBundleAppointmentLRM4"/>
+      <description value="Exemple Bundle RDV LRM 4 - Cas RDV sans PS ni structure. Ex : SOS Médecins interfacé en attente d'attribution médecin"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/ExampleBundleAppointmentLRM5"/>
+      </reference>
+      <name value="ExampleBundleAppointmentLRM5"/>
+      <description value="Exemple Bundle RDV LRM 5 - Cas mise à jour d'un RDV initialement sans PS avec ajout du médecin"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/ExampleBundleAppointmentLRM6"/>
+      </reference>
+      <name value="ExampleBundleAppointmentLRM6"/>
+      <description value="Exemple Bundle RDV LRM 6 - Cas RDV avec PS mais sans structure, exemple PS. indiv"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/ExampleBundleAppointmentLRM7"/>
+      </reference>
+      <name value="ExampleBundleAppointmentLRM7"/>
+      <description value="Exemple Bundle RDV LRM 7 - Cas CPTS non interfacé avec PS et structure"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/ExampleBundleAppointmentLRM8"/>
+      </reference>
+      <name value="ExampleBundleAppointmentLRM8"/>
+      <description value="Exemple Bundle RDV LRM 8 - Cas mise à jour d'un RDV initialement sans PS avec ajout du médecin et de la structure"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/ExampleBundleAppointmentLRM9"/>
+      </reference>
+      <name value="ExampleBundleAppointmentLRM9"/>
+      <description value="Exemple Bundle RDV LRM 9 - Cas annulation de RDV avec PS mais sans structure, exemple PS. indiv interfacé"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -734,6 +858,28 @@
       <name value="ExampleBundlePSIndiv"/>
       <description value="Exemple Bundle PS indiv"/>
       <exampleCanonical value="http://sas.fr/fhir/StructureDefinition/BundleAgregateur"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="HealthcareService"/>
+      </extension>
+      <reference>
+        <reference value="HealthcareService/ExampleHealthcareService1"/>
+      </reference>
+      <name value="ExampleHealthcareService1"/>
+      <description value="Exemple 1 de ressource Healthcare Service"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-healthcareservice-lrm"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="HealthcareService"/>
+      </extension>
+      <reference>
+        <reference value="HealthcareService/ExampleHealthcareService2"/>
+      </reference>
+      <name value="ExampleHealthcareService2"/>
+      <description value="Exemple 2 de ressource Healthcare Service"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-healthcareservice-lrm"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -872,6 +1018,17 @@
         <valueString value="Practitioner"/>
       </extension>
       <reference>
+        <reference value="Practitioner/ExamplePractitionerLRM"/>
+      </reference>
+      <name value="ExamplePractitionerLRM"/>
+      <description value="Exemple practitioner flux LRM"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-lrm"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
         <reference value="Practitioner/ExamplePractitionerRegul1"/>
       </reference>
       <name value="ExamplePractitionerRegul1"/>
@@ -954,6 +1111,61 @@
       <name value="ExamplePractitionerRoleAgregateur4"/>
       <description value="Exemple 4 PractitionerRole flux agrégateur"/>
       <exampleCanonical value="http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PractitionerRole"/>
+      </extension>
+      <reference>
+        <reference value="PractitionerRole/ExamplePractitionerRoleAppointment1"/>
+      </reference>
+      <name value="ExamplePractitionerRoleAppointment1"/>
+      <description value="Exemple PractitionerRole 1 flux LRM"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-lrm"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PractitionerRole"/>
+      </extension>
+      <reference>
+        <reference value="PractitionerRole/ExamplePractitionerRoleAppointment2"/>
+      </reference>
+      <name value="ExamplePractitionerRoleAppointment2"/>
+      <description value="Exemple PractitionerRole 2 flux LRM"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-lrm"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/ExampleSasOrganization1"/>
+      </reference>
+      <name value="ExampleSasOrganization1"/>
+      <description value="Exemple d'organisation SAS - association SOS (SIRET)"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-organization-lrm"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/ExampleSasOrganization2"/>
+      </reference>
+      <name value="ExampleSasOrganization2"/>
+      <description value="Exemple d'organisation SAS - centre de santé (FINESS)"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-organization-lrm"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/ExampleSasOrganization3"/>
+      </reference>
+      <name value="ExampleSasOrganization3"/>
+      <description value="Exemple d'organisation SAS - CPTS (FINESS)"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-organization-lrm"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1408,6 +1620,72 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/sas-appointment-lrm"/>
+      </reference>
+      <name value="SASAppointmentLRM"/>
+      <description value="Profil de Appointment, dérivé de FrAppointment, pour le cas d'usage d'envoi des RDV consolidés de la PTF aux logiciels de LRM"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/sas-bundle-appointment-lrm"/>
+      </reference>
+      <name value="SASBundleAppointmentLRM"/>
+      <description value="Profil de Bundle qui représente les données de RDV à envoyer de la plateforme numérique du SAS vers les éditeurs de LRM"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/sas-healthcareservice-lrm"/>
+      </reference>
+      <name value="SASHealthcareServiceLRM"/>
+      <description value="Profil dérivé de FR Core Healthcare Service Profile dans le cadre de l'usage des flux du SAS"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/sas-organization-lrm"/>
+      </reference>
+      <name value="SASOrganizationLRM"/>
+      <description value="Profil dérivé de FrOrganization dans le cadre de l'usage des flux du SAS"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/sas-practitioner-lrm"/>
+      </reference>
+      <name value="SASPractitionerLRM"/>
+      <description value="Profil de Practitioner, dérivé de FrPractitioner, dans le cadre de l'usage des flux du SAS"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/sas-practitioner-role-lrm"/>
+      </reference>
+      <name value="SASPractitionerRoleLRM"/>
+      <description value="Profil dérivé de FrPractitionerRole dérivé de FrAppointment, pour le cas d'usage d'envoi des RDV consolidés de la PTF aux logiciels de LRM"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <reference>
@@ -1481,6 +1759,17 @@
       </reference>
       <name value="Type identifiant SAS"/>
       <description value="Type d'identifiant SAS"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/categorie-orientation-sas-valueset"/>
+      </reference>
+      <name value="Value set catégorie orientation SAS"/>
+      <description value="Valueset permettant de définir la catégorie d'orientation SAS. Il regroupe des codes de la TRE-R66 et du codesystem catégorie orientation SAS"/>
       <exampleBoolean value="false"/>
     </resource>
     <page>
@@ -1576,6 +1865,14 @@
         </extension>
         <nameUrl value="specifications_techniques-sos-gestion_rdv.html"/>
         <title value="SOS Médecins - Gestion de rendez-vous"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="specifications_techniques-transmission-info-RDV-LRM.html"/>
+        </extension>
+        <nameUrl value="specifications_techniques-transmission-info-RDV-LRM.html"/>
+        <title value="Transmission des informations de rendez-vous aux LRM"/>
         <generation value="markdown"/>
       </page>
       <page>

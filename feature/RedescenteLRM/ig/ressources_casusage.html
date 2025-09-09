@@ -42,8 +42,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"12"}
-    h3,h4,h5,h6{--heading-prefix:"12"}</style>
+    <style type="text/css">h2{--heading-prefix:"13"}
+    h3,h4,h5,h6{--heading-prefix:"13"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -140,6 +140,12 @@
       <li>
         <a href="specifications_techniques-sos-gestion_rdv.html">SOS Médecins - Gestion de rendez-vous</a>
       </li>
+      <li>
+        ________ Fluidification parcours régulateur ________
+      </li>
+      <li>
+        <a href="specifications_techniques-transmission-info-RDV-LRM.html">Transmission des informations de rendez-vous aux LRM</a>
+      </li>
     </ul>
   </li>
   <li>
@@ -192,7 +198,7 @@
 
           <span style="float:right;">
 
-            <a href="specifications_techniques-sos-gestion_rdv.html">&lt;prev</a> | 
+            <a href="specifications_techniques-transmission-info-RDV-LRM.html">&lt;prev</a> | 
 
             <a href="#bottom">bottom</a>
 
@@ -239,6 +245,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#ps-à-titre-individuel" id="markdown-toc-ps-à-titre-individuel">PS à titre individuel</a></li>
   <li><a href="#cpts" id="markdown-toc-cpts">CPTS</a></li>
   <li><a href="#sos-médecins" id="markdown-toc-sos-médecins">SOS Médecins</a></li>
+  <li><a href="#redescente-des-informations-de-rdv" id="markdown-toc-redescente-des-informations-de-rdv">Redescente des informations de RDV</a></li>
 </ul>
 
 </div>
@@ -246,7 +253,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="ps-à-titre-individuel">PS à titre individuel</h3>
 
-<p>Liste des ressources (profils,paramètres de recherche, terminologies, exemples) à utiliser dans le cadre du cas d'usage PS à titre individuel (y compris les ressources communes aux autres cas d'usage)</p>
+<p>Liste des ressources (profils, paramètres de recherche, terminologies, exemples) à utiliser dans le cadre du cas d'usage PS à titre individuel (y compris les ressources communes aux autres cas d'usage)</p>
 
 <table class="lines"><tr><td style="background-color: #eeeeee">Identifiant</td><td style="background-color: #eeeeee">Type</td><td style="background-color: #eeeeee">Description</td></tr><tr><td><a href="SearchParameter-slot-sp-start.html">slot-sp-start</a></td><td><div><p>SearchParameter</p>
 </div></td><td><div><p>Paramètre de recherche date de début d'un créneau (date de début supérieure ou égale à &lt;date1&gt; et inférieure ou égale à &lt;date2&gt;)</p>
@@ -266,6 +273,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td><td><div><p>Profil de Schedule, dérivé de FrSchedule, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS</p>
 </div></td></tr><tr><td><a href="StructureDefinition-FrSlotAgregateur.html">FrSlotAgregateur</a></td><td><div><p>StructureDefinition</p>
 </div></td><td><div><p>Profil de Slot, dérivé de FrSlot, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS</p>
+</div></td></tr><tr><td><a href="StructureDefinition-sas-categorie-orientation.html">sas-categorie-orientation</a></td><td><div><p>StructureDefinition</p>
+</div></td><td><div><p>Extension créée afin d'ajouter la catégorie d'orientation dans un RDV</p>
+</div></td></tr><tr><td><a href="ValueSet-categorie-orientation-sas-valueset.html">categorie-orientation-sas-valueset</a></td><td><div><p>ValueSet</p>
+</div></td><td><div><p>Valueset permettant de définir la catégorie d'orientation SAS. Il regroupe des codes de la TRE-R66 et du codesystem catégorie orientation SAS</p>
+</div></td></tr><tr><td><a href="ValueSet-sas-valueset-appointmentparticipanttype.html">sas-valueset-appointmentparticipanttype</a></td><td><div><p>ValueSet</p>
+</div></td><td><div><p>Type de participant du RDV SAS</p>
 </div></td></tr><tr><td><a href="ValueSet-sas-valueset-appointmentreason.html">sas-valueset-appointmentreason</a></td><td><div><p>ValueSet</p>
 </div></td><td><div><p>Appointment reason SAS</p>
 </div></td></tr><tr><td><a href="ValueSet-sas-valueset-categorieetablissement.html">sas-valueset-categorieetablissement</a></td><td><div><p>ValueSet</p>
@@ -278,7 +291,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="cpts">CPTS</h3>
 
-<p>Liste des ressources (profils,paramètres de recherche, terminologies, exemples) à utiliser dans le cadre du cas d'usage CPTS</p>
+<p>Liste des ressources (profils, paramètres de recherche, terminologies, exemples) à utiliser dans le cadre du cas d'usage CPTS</p>
 
 <table class="lines"><tr><td style="background-color: #eeeeee">Identifiant</td><td style="background-color: #eeeeee">Type</td><td style="background-color: #eeeeee">Description</td></tr><tr><td><a href="SearchParameter-cptsslot-sp-servicetype.html">cptsslot-sp-servicetype</a></td><td><div><p>SearchParameter</p>
 </div></td><td><div><p>Paramètre de recherche sur le service type qui mime le paramètre R5. Permet de rechercher ou d'inclure la ressource reférencée HealthCare Service</p>
@@ -298,7 +311,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="sos-médecins">SOS Médecins</h3>
 
-<p>Liste des ressources (profils,paramètres de recherche, terminologies, exemples) à utiliser dans le cadre du cas d'usage SOS Médecins</p>
+<p>Liste des ressources (profils, paramètres de recherche, terminologies, exemples) à utiliser dans le cadre du cas d'usage SOS Médecins</p>
 
 <table class="lines"><tr><td style="background-color: #eeeeee">Identifiant</td><td style="background-color: #eeeeee">Type</td><td style="background-color: #eeeeee">Description</td></tr><tr><td><a href="CapabilityStatement-SAS-Consommateur-SOS.html">SAS-Consommateur-SOS</a></td><td><div><p>CapabilityStatement</p>
 </div></td><td><div><p>Un consommateur consulte les créneaux SOS mis à disposition par un gestionnaire d’agenda. La platefome numérique SAS joue le rôle de consommateur et affiche les créneaux récupérés</p>
@@ -324,6 +337,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td><td><div><p>Type de Créneaux SAS SOS</p>
 </div></td></tr></table>
 
+<h3 id="redescente-des-informations-de-rdv">Redescente des informations de RDV</h3>
+
+<p>Liste des ressources (profils, paramètres de recherche, terminologies, exemples) à utiliser dans le cadre du cas d'usage de redescente des informations de RDV aux LRM</p>
+
+<table class="lines"><tr><td style="background-color: #eeeeee">Identifiant</td><td style="background-color: #eeeeee">Type</td><td style="background-color: #eeeeee">Description</td></tr><tr><td><a href="StructureDefinition-sas-appointment-lrm.html">sas-appointment-lrm</a></td><td><div><p>StructureDefinition</p>
+</div></td><td><div><p>Profil de Appointment, dérivé de FrAppointment, pour le cas d'usage d'envoi des RDV consolidés de la PTF aux logiciels de LRM</p>
+</div></td></tr><tr><td><a href="StructureDefinition-sas-bundle-appointment-lrm.html">sas-bundle-appointment-lrm</a></td><td><div><p>StructureDefinition</p>
+</div></td><td><div><p>Profil de Bundle qui représente les données de RDV à envoyer de la plateforme numérique du SAS vers les éditeurs de LRM</p>
+</div></td></tr><tr><td><a href="StructureDefinition-sas-healthcareservice-lrm.html">sas-healthcareservice-lrm</a></td><td><div><p>StructureDefinition</p>
+</div></td><td><div><p>Profil dérivé de FR Core Healthcare Service Profile dans le cadre de l'usage des flux du SAS</p>
+</div></td></tr><tr><td><a href="StructureDefinition-sas-organization-lrm.html">sas-organization-lrm</a></td><td><div><p>StructureDefinition</p>
+</div></td><td><div><p>Profil dérivé de FrOrganization dans le cadre de l'usage des flux du SAS</p>
+</div></td></tr><tr><td><a href="StructureDefinition-sas-practitioner-lrm.html">sas-practitioner-lrm</a></td><td><div><p>StructureDefinition</p>
+</div></td><td><div><p>Profil de Practitioner, dérivé de FrPractitioner, dans le cadre de l'usage des flux du SAS</p>
+</div></td></tr><tr><td><a href="StructureDefinition-sas-practitioner-role-lrm.html">sas-practitioner-role-lrm</a></td><td><div><p>StructureDefinition</p>
+</div></td><td><div><p>Profil dérivé de FrPractitionerRole dérivé de FrAppointment, pour le cas d'usage d'envoi des RDV consolidés de la PTF aux logiciels de LRM</p>
+</div></td></tr></table>
+
 
 
 
@@ -347,7 +378,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             <tr>
               <td style="text-align:left">&#xA0;
 
-                <a href="specifications_techniques-sos-gestion_rdv.html">&lt;prev</a>
+                <a href="specifications_techniques-transmission-info-RDV-LRM.html">&lt;prev</a>
 
               </td>
               <td style="text-align:center">
@@ -365,7 +396,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Sep 9, 2025 08:47+0000">2025-09-09</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Sep 9, 2025 11:38+0000">2025-09-09</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
