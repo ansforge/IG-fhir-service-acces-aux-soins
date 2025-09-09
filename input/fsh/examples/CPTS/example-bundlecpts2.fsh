@@ -11,24 +11,32 @@ Usage: #example
 
 * entry[slotAgregateurCPTS].resource = ExampleSlotCPTS2
 * entry[slotAgregateurCPTS].fullUrl = "https://<base_URl>/Slot/ExampleSlotCPTS2"
+* entry[slotAgregateurCPTS][=].search.mode = #match
 
 * entry[scheduleAgregateurCPTS].resource = ExampleSchedule
 * entry[scheduleAgregateurCPTS].fullUrl = "https://<base_URl>/Schedule/ExampleSchedule"
+* entry[scheduleAgregateurCPTS][=].search.mode = #include
 
 * entry[practitionerAgregateur].resource = ExamplePractitioner
 * entry[practitionerAgregateur].fullUrl = "https://<base_URl>/Practitioner/ExamplePractitioner"
+* entry[practitionerAgregateur][=].search.mode = #include
 
 * entry[practitionerRole].resource = ExamplePractitionerRoleAgregateur
 * entry[practitionerRole].fullUrl = "https://<base_URl>/PractitionerRole/ExamplePractitionerRoleAgregateur"
+* entry[practitionerRole][=].search.mode = #include
 
 * entry[healthcareserviceCPTS][+].resource = ExampleHealthcareServiceCPTS1
 * entry[healthcareserviceCPTS][=].fullUrl = "https://<base_URl>/HealthcareService/ExampleHealthcareServiceCPTS1"
+* entry[organizationAgregateurCPTS][=].search.mode = #include
 
 * entry[organizationAgregateurCPTS][+].resource = ExampleOrgaCPTS1
 * entry[organizationAgregateurCPTS][=].fullUrl = "https://<base_URl>/Organization/ExampleOrgaCPTS1"
+* entry[organizationAgregateurCPTS][=].search.mode = #include
 
 * entry[healthcareserviceCPTS][+].resource = ExampleHealthcareServiceCPTS2
 * entry[healthcareserviceCPTS][=].fullUrl = "https://<base_URl>/HealthcareService/ExampleHealthcareServiceCPTS2"
+* entry[organizationAgregateurCPTS][=].search.mode = #include
 
 * entry[organizationAgregateurCPTS][+].resource = ExampleOrgaCPTS2
 * entry[organizationAgregateurCPTS][=].fullUrl = "https://<base_URl>/Organization/ExampleOrgaCPTS2"
+* entry[organizationAgregateurCPTS][=].search.mode = #include
