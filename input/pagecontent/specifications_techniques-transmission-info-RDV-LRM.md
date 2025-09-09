@@ -157,7 +157,6 @@ Divers évènements dans la plateforme numérique SAS peuvent déclencher de man
     - lors d’un changement horaire du créneau 
 
 <br>
-<br>
 
 Le paragraphe ci-dessous détaille les différentes **règles de gestions attendues** par les éditeurs à la suite du déclenchement du flux et la transmission d’un message : 
 - A la réception du message, **la solution éditeur stockera l’identifiant technique SAS du RDV transmis** pour référence et gestion des mises à jour éventuelles 
