@@ -223,23 +223,23 @@ Pour consulter l'exemple en plein écran, cliquer [ici](./Bundle-ExampleBundlePS
 ### Nomenclatures
 
 Cette section détaille les nomenclatures à utiliser afin de renseigner les différents éléments codifiés de la réponse.
-- **ID : 3 – Statut du créneau :**
+- **Statut du créneau :**
   - L'utilisation de la nomenclature standard slotstatus (<http://hl7.org/fhir/R4/valueset-slotstatus.html>) est attendue. Cependant, la plateforme numérique SAS ne récupérant que des créneaux disponibles, ce champ aura systématiquement la valeur `free`.
-- **ID : 13 – Spécialités ou compétences particulières du PS associées au créneau :**
+- **Spécialités ou compétences particulières du PS associées au créneau :**
   - Dans le cadre du profil FrSlot, l'élément specialty est lié à la nomenclature des spécialités ordinales du MOS (<https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale/>). La plateforme numérique SAS sera cependant en mesure de traiter d'autres compétences ou spécialités transmises sous la forme d'une donnée structurée au sein de l'élément `coding`, ou sous la forme d’un texte libre au niveau de l'élément `text`.
-- **ID : 14 – Type de créneau :**
+- **Type de créneau :**
   - Afin de répondre aux besoins de la plateforme numérique SAS, une nomenclature dédiée a été mise en oeuvre (<https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau>). 3 types de créneaux sont présentés ci-dessous. A noter qu'un créneau peut porter une combinaison de ces valeurs :
     - PUBLIC – Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible par le grand public
     - PRO – Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible à l'ensemble des PS
     - SNP – Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible par les Régulateurs et OSNP
-- **ID : 15 – Type de consultation :**
+- **Type de consultation :**
   - L'utilisation de la nomenclature standard ActEncounterCode (<https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html>) est attendue. Cette nomenclature contient différentes notions, cependant, la plateforme numérique SAS gère les 3 types de créneaux ci-dessous. A noter qu'un créneau peut porter une combinaison de ces valeurs :
     - AMB – Consultation au cabinet
     - HH – Consultation à domicile
     - VR – Téléconsultation
-- **ID : 17 – URL de redirection pour la prise de RDV :**
+- **URL de redirection pour la prise de RDV :**
   - Il est attendu l'URL de redirection vers l'agenda du PS concerné. Si l'utilisateur vient du SAS et n'est pas authentifié, il est demandé de le rediriger vers la page d'authentification de la solution éditeur avant d'accéder à l'agenda du PS. Afin de faciliter l'implémentation de la règle métier, la PTF numérique SAS ajoute un paramètre `origin` à l'URL transmise par l'éditeur au moment de la redirection pour identifier la provenance.
-- **ID : 18 – Créneau avec ou sans RDV :**
+- **Créneau avec ou sans RDV :**
   - L'utilisation de la nomenclature standard AppointmentReasonCodes (<https://www.hl7.org/fhir/v2/0276/index.html>) est attendue. Cette nomenclature contient différentes notions, cependant, la plateforme numérique SAS gère les 2 valeurs ci-dessous :
     - ROUTINE – Créneau avec prise de RDV possible.
     - WALKIN – Créneau sans prise de RDV possible

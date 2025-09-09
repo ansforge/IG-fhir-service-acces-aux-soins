@@ -241,30 +241,30 @@ Pour consulter l'exemple en plein écran, cliquer [ici](./Bundle-ExampleBundleAg
 ### Nomenclatures
 
 Cette section détaille les nomenclatures à utiliser afin de renseigner les différents éléments codifiés de la réponse.
-- **ID : 3 – Statut du créneau :**
+- **Statut du créneau :**
   - L'utilisation de la nomenclature standard slotstatus (<http://hl7.org/fhir/R4/valueset-slotstatus.html>) est attendue. Cependant, la plateforme numérique SAS ne récupérant que des créneaux disponibles, ce champ aura systématiquement la valeur `free`.
-- **ID : 4 – Type de créneau :**
+- **Type de créneau :**
   - Afin de répondre aux besoins de la plateforme numérique SAS, une nomenclature dédiée a été mise en oeuvre (<https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau>). 3 types de créneaux sont présentés ci-dessous. A noter qu'un créneau peut porter une combinaison de ces valeurs :
     - PUBLIC – Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible par le grand public
     - PRO – Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible à l'ensemble des PS
     - SNP – Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible par les Régulateurs et OSNP
-- **ID : 5 – Type de consultation :**
+- **Type de consultation :**
   - L'utilisation de la nomenclature standard ActEncounterCode (<https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html>) est attendue. Cette nomenclature contient différentes notions, cependant, la plateforme numérique SAS gère les 3 types de créneaux ci-dessous. A noter qu'un créneau peut porter une combinaison de ces valeurs :
     - AMB – Consultation au cabinet
     - HH – Consultation à domicile
     - VR – Téléconsultation
-  - **ID : 6 – Créneau avec ou sans RDV :**
+  - **Créneau avec ou sans RDV :**
   - L'utilisation de la nomenclature standard AppointmentReasonCodes (<https://www.hl7.org/fhir/v2/0276/index.html>) est attendue. Cette nomenclature contient différentes notions, cependant, la plateforme numérique SAS gère les 2 valeurs ci-dessous :
     - ROUTINE – Créneau avec prise de RDV possible.
     - WALKIN – Créneau sans prise de RDV possible  
-- **ID : 7 – URL de redirection pour la prise de RDV :**
+- **URL de redirection pour la prise de RDV :**
   - Il est attendu l'URL de redirection vers l'agenda du PS concerné. Si l'utilisateur vient du SAS et n'est pas authentifié, il est demandé de le rediriger vers la page d'authentification de la solution éditeur avant d'accéder à l'agenda du PS. Afin de faciliter l'implémentation de la règle métier, la PTF numérique SAS ajoute un paramètre `origin` à l'URL transmise par l'éditeur au moment de la redirection pour identifier la provenance.
-- **ID : 8 – ID de l’association SOS Médecins (SIRET)  :**
+- **ID de l’association SOS Médecins (SIRET)  :**
   - Identifiant unique propre à chaque association SOS Médecins. Les champs attendus doivent être valorisés comme suit :
     - identifier.value (valeur de l'identifiant) : SIRET avec préfixe `3`
     - identifier.system (autorité d’affectation) : urn:oid:1.2.250.1.71.4.2.2
     - identifier.type (type d’identifiant) : le champ type.coding.code est valorisé à `IDNST` et type.coding.system à `http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type`
-- **ID : 10 – ID du point fixe de garde :**
+- **ID du point fixe de garde :**
   - Identifiant unique permettant d’identifier individuellement chaque point fixe de garde. Deux combinaisons sont possibles selon que le PFG ait un identifiant national de structure (IDNST) connu ou non :
     -  Lorsque le **PFG a un identifiant national de structure** connu, les différents champs sont valorisés comme suit :
       - identifier.value (valeur de l’identifiant) : valeur de l’IDNST avec préfixe
@@ -274,7 +274,7 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
       - identifier.value (valeur de l’identifiant) : Identifiant technique défini par la solution logicielle éditeur avec un format de type UUID par exemple
       - identifier.system (autorité d’affectation) : : OID propre de la solution logicielle éditeur ou valorisation du champ avec une URL de la solution logicielle éditeur par exemple
       - identifier.type (type d’identifiant) : le champ type.coding.code est valorisé à `INTRN` et type.coding.system à `http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type`
-- **ID : 16 – Horaires d’ouverture – Jours de la semaine :**
+- **Horaires d’ouverture – Jours de la semaine :**
   - L’utilisation de la nomenclature standard DaysOfWeek (https://hl7.org/fhir/codesystem-days-of-week.html) est attendue. Cette nomenclature contient différentes notions qui sont toutes supportées par la plateforme numérique SAS :
     - MON – Lundi
     - TUE – Mardi
