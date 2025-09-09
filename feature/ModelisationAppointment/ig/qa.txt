@@ -1,9 +1,9 @@
 SAS : Validation Results
 =========================================
 
-err = 4, warn = 101, info = 97
-IG Publisher Version: 2.0.16
-Generated Mon Sep 08 13:34:19 UTC 2025. FHIR version 4.0.1 for ans.fhir.fr.sas#1.1.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/sas)
+err = 5, warn = 103, info = 97
+IG Publisher Version: 2.0.17
+Generated Tue Sep 09 08:18:38 UTC 2025. FHIR version 4.0.1 for ans.fhir.fr.sas#1.1.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/sas)
  Build Errors : 0 / 7 / 0
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Appointment-1 : 0 / 3 / 1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Appointment-2 : 0 / 3 / 1
@@ -42,7 +42,7 @@ Generated Mon Sep 08 13:34:19 UTC 2025. FHIR version 4.0.1 for ans.fhir.fr.sas#1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/HealthcareService-ExampleHealthcareService2 : 0 / 0 / 1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/HealthcareService-ExampleHealthcareServiceCPTS1 : 0 / 0 / 1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/HealthcareService-ExampleHealthcareServiceCPTS2 : 0 / 0 / 1
- /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.sas : 0 / 0 / 1
+ /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.sas : 1 / 2 / 1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Location-1111111111 : 0 / 1 / 2
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Location-2222222222 : 0 / 1 / 2
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Location-3333333333 : 0 / 1 / 2
@@ -282,6 +282,9 @@ WARNING: CapabilityStatement/SAS-GestionnaireStructure: CapabilityStatement.impl
 == fsh-generated/resources/HealthcareService-ExampleHealthcareServiceCPTS1.json ==
 == fsh-generated/resources/HealthcareService-ExampleHealthcareServiceCPTS2.json ==
 == fsh-generated/resources/ImplementationGuide-ans.fhir.fr.sas.json ==
+WARNING: ImplementationGuide/ans.fhir.fr.sas: ImplementationGuide.dependsOn[3].uri: A definition could not be found for Canonical URL 'http://fhir.org/packages/hl7.fhir.fr.core/ImplementationGuide/hl7.fhir.fr.core'
+WARNING: ImplementationGuide/ans.fhir.fr.sas: ImplementationGuide.dependsOn[3]: The canonical URL http://fhir.org/packages/hl7.fhir.fr.core/ImplementationGuide/hl7.fhir.fr.core doesn't point to an actual ImplementationGuide resource
+ERROR: ImplementationGuide/ans.fhir.fr.sas: ImplementationGuide.dependsOn[3]: The packageId hl7.fhir.fr.core points to the canonical https://hl7.fr/ig/fhir/core which is inconsistent with the stated canonical of http://fhir.org/packages/hl7.fhir.fr.core/ImplementationGuide/hl7.fhir.fr.core
 == fsh-generated/resources/Location-1111111111.json ==
 INFORMATION: Location/1111111111: Location.identifier[0].type: Reference to draft CodeSystem https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-identifier-type|2.1.0
 WARNING: Location/1111111111: Location.identifier[0].system: No definition could be found for URL value 'https://editeur.com'
@@ -393,7 +396,7 @@ INFORMATION: StructureDefinition/sas-cpts-organization-aggregator: StructureDefi
 INFORMATION: StructureDefinition/sas-cpts-slot-aggregator: StructureDefinition.differential.element[2].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 INFORMATION: StructureDefinition/sas-cpts-slot-aggregator: StructureDefinition.snapshot.element[29].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 == fsh-generated/resources/StructureDefinition-sas-cpts-slot-servicetype-aggregator.json ==
-ERROR: StructureDefinition.where(url = 'http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType'): Conformance resource /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/StructureDefinition-sas-cpts-slot-servicetype-aggregator.json - the canonical URL (https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-servicetype-aggregator) does not match the URL (http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType)
+ERROR: StructureDefinition.where(url = 'http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType'): Conformance resource /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/StructureDefinition-sas-cpts-slot-servicetype-aggregator.json - the canonical URL (https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-servicetype-aggregator) does not match the URL (http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType). Use the special-url parameter if you really mean for it not to match
 ERROR: StructureDefinition/sas-cpts-slot-servicetype-aggregator: StructureDefinition: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
 ERROR: /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/StructureDefinition-sas-cpts-slot-servicetype-aggregator: URL Mismatch https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-servicetype-aggregator vs http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType
 == fsh-generated/resources/StructureDefinition-sas-healthcareservice-lrm.json ==
@@ -407,7 +410,7 @@ INFORMATION: StructureDefinition/sas-organization-lrm: StructureDefinition.snaps
 INFORMATION: StructureDefinition/sas-practitioner-aggregator: StructureDefinition.snapshot.element[20].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 == fsh-generated/resources/StructureDefinition-sas-practitioner-aggregator-regul.json ==
 INFORMATION: StructureDefinition/sas-practitioner-aggregator-regul: StructureDefinition.snapshot.element[55].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
-WARNING: StructureDefinition/sas-practitioner-aggregator-regul: StructureDefinition.snapshot.element[61].type[0].profile[0]: There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/humanname-assembly-order'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.2.0', found versions: 4.0.1, 5.1.0, 5.2.0. Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/humanname-assembly-order' to 'http://hl7.org/fhir/StructureDefinition/humanname-assembly-order|5.2.0'
+WARNING: StructureDefinition/sas-practitioner-aggregator-regul: StructureDefinition.snapshot.element[61].type[0].profile[0]: There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/humanname-assembly-order'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.2.0', found versions: 1.0.1, 4.0.1, 5.1.0, 5.2.0. Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/humanname-assembly-order' to 'http://hl7.org/fhir/StructureDefinition/humanname-assembly-order|5.2.0'
 INFORMATION: StructureDefinition/sas-practitioner-aggregator-regul: StructureDefinition.snapshot.element[20].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 == fsh-generated/resources/StructureDefinition-sas-practitioner-lrm.json ==
 INFORMATION: StructureDefinition/sas-practitioner-lrm: StructureDefinition.snapshot.element[20].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
