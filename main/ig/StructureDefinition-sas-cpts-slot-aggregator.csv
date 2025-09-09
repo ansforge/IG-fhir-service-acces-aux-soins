@@ -30,7 +30,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 This element can be used to indicate where the current master source of a resource that has a canonical URL if the resource is no longer hosted at the canonical URL.","","","","","","","","",,,,,"",,,,"Meta.source",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Slot.meta.profile","Slot.meta.profile","","","",0,*,"","","Y","canonical {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/StructureDefinition]]}
+"Slot.meta.profile","Slot.meta.profile","","","",0,*,"","","Y","canonical {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/StructureDefinition|4.0.1]]}
 ","Profiles this resource claims to conform to","A list of profiles (references to [StructureDefinition](http://hl7.org/fhir/R4/structuredefinition.html#) resources) that this resource claims to conform to. The URL is a reference to [StructureDefinition.url](http://hl7.org/fhir/R4/structuredefinition-definitions.html#StructureDefinition.url).","It is up to the server and/or other infrastructure of policy to determine whether/how these claims are verified and/or updated over time.  The list of profile URLs is a set.","","","","","","","","",,,,,"",,,,"Meta.profile",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
@@ -39,7 +39,7 @@ This element can be used to indicate where the current master source of a resour
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Slot.meta.tag","Slot.meta.tag","","","",0,*,"","","Y","Coding {[]} {[]}
-","Tags applied to this resource","Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.","The tags can be updated without changing the stated version of the resource. The list of tags is a set. Uniqueness is based the system/code, and version and display are ignored.","","","","","","","","",,"example","Codes that represent various types of tags, commonly workflow-related; e.g. ""Needs review by Dr. Jones"".","http://hl7.org/fhir/ValueSet/common-tags","",,,,"Meta.tag",0,*,"ele-1
+","Tags applied to this resource","Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.","The tags can be updated without changing the stated version of the resource. The list of tags is a set. Uniqueness is based the system/code, and version and display are ignored.","","","","","","","","",,"example","Codes that represent various types of tags, commonly workflow-related; e.g. ""Needs review by Dr. Jones"".","http://hl7.org/fhir/ValueSet/common-tags|4.0.1","",,,,"Meta.tag",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Slot.implicitRules","Slot.implicitRules","","","",0,1,"","Y","Y","uri {[]} {[]}
