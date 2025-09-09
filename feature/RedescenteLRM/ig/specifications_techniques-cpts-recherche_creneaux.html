@@ -469,17 +469,17 @@ HTTP 200 OK
 
 <p>Cette section détaille les nomenclatures à utiliser afin de renseigner les différents éléments codifiés de la réponse.</p>
 <ul>
-  <li><strong>ID : 3 – Statut du créneau :</strong>
+  <li><strong>Statut du créneau :</strong>
     <ul>
       <li>L'utilisation de la nomenclature standard slotstatus (<a href="http://hl7.org/fhir/R4/valueset-slotstatus.html">http://hl7.org/fhir/R4/valueset-slotstatus.html</a>) est attendue. Cependant, la plateforme numérique SAS ne récupérant que des créneaux disponibles, ce champ aura systématiquement la valeur <code class="language-plaintext highlighter-rouge">free</code>.</li>
     </ul>
   </li>
-  <li><strong>ID : 13 – Spécialités ou compétences particulières du PS associées au créneau :</strong>
+  <li><strong>Spécialités ou compétences particulières du PS associées au créneau :</strong>
     <ul>
       <li>Dans le cadre du profil FrSlot, l'élément specialty est lié à la nomenclature des spécialités ordinales du MOS (<a href="https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale/">https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale/</a>). La plateforme numérique SAS sera cependant en mesure de traiter d'autres compétences ou spécialités transmises sous la forme d'une donnée structurée au sein de l'élément <code class="language-plaintext highlighter-rouge">coding</code>, ou sous la forme d’un texte libre au niveau de l'élément <code class="language-plaintext highlighter-rouge">text</code>.</li>
     </ul>
   </li>
-  <li><strong>ID : 14 – Type de créneau :</strong>
+  <li><strong>Type de créneau :</strong>
     <ul>
       <li>Afin de répondre aux besoins de la plateforme numérique SAS, une nomenclature dédiée a été mise en oeuvre (<a href="https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau">https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau</a>). 4 types de créneaux sont présentés ci-dessous. A noter qu'un créneau peut porter une combinaison de ces valeurs :
         <ul>
@@ -491,7 +491,7 @@ HTTP 200 OK
       </li>
     </ul>
   </li>
-  <li><strong>ID : 15 – Type de consultation :</strong>
+  <li><strong>Type de consultation :</strong>
     <ul>
       <li>L'utilisation de la nomenclature standard ActEncounterCode (<a href="https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html">https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html</a>) est attendue. Cette nomenclature contient différentes notions, cependant, la plateforme numérique SAS gère les 3 types de créneaux ci-dessous. A noter qu'un créneau peut porter une combinaison de ces valeurs :
         <ul>
@@ -502,7 +502,7 @@ HTTP 200 OK
       </li>
     </ul>
   </li>
-  <li><strong>ID : 16 – Type de soins :</strong>
+  <li><strong>Type de soins :</strong>
     <ul>
       <li>Lorsque le créneau transmis est de type CPTS (ID 14), les champs attendus pour le type de soins doivent être valorisés comme suit :
         <ul>
@@ -512,7 +512,7 @@ HTTP 200 OK
       </li>
     </ul>
   </li>
-  <li><strong>ID : 17, 18 – URL de l’extension et référence à la ressource HealthcareService :</strong>
+  <li><strong>URL de l’extension et référence à la ressource HealthcareService :</strong>
     <ul>
       <li>Lorsque le créneau transmis est de type CPTS, les champs attendus pour faire référence au HealthcareService doivent être valorisés comme suit :
         <ul>
@@ -522,12 +522,12 @@ HTTP 200 OK
       </li>
     </ul>
   </li>
-  <li><strong>ID : 20 – URL de redirection pour la prise de RDV :</strong>
+  <li><strong>URL de redirection pour la prise de RDV :</strong>
     <ul>
       <li>Il est attendu l'URL de redirection vers l'agenda du PS concerné. Si l'utilisateur vient du SAS et n'est pas authentifié, il est demandé de le rediriger vers la page d'authentification de la solution éditeur avant d'accéder à l'agenda du PS. Afin de faciliter l'implémentation de la règle métier, la PTF numérique SAS ajoute un paramètre <code class="language-plaintext highlighter-rouge">origin</code> à l'URL transmise par l'éditeur au moment de la redirection pour identifier la provenance.</li>
     </ul>
   </li>
-  <li><strong>ID : 21 – Créneau avec ou sans RDV :</strong>
+  <li><strong>Créneau avec ou sans RDV :</strong>
     <ul>
       <li>L'utilisation de la nomenclature standard AppointmentReasonCodes (<a href="https://www.hl7.org/fhir/v2/0276/index.html">https://www.hl7.org/fhir/v2/0276/index.html</a>) est attendue. Cette nomenclature contient différentes notions, cependant, la plateforme numérique SAS gère les 2 valeurs ci-dessous :
         <ul>
@@ -537,7 +537,7 @@ HTTP 200 OK
       </li>
     </ul>
   </li>
-  <li><strong>ID : 23, 24, 25 – ID de la structure CPTS (FINESS) :</strong>
+  <li><strong>ID de la structure CPTS (FINESS) :</strong>
     <ul>
       <li>Identifiant unique propre à chaque structure CPTS. Les champs attendus doivent être valorisés comme suit :
         <ul>
@@ -657,7 +657,7 @@ Afin de tester un fichier, il suffit de sélectionner le format <code class="lan
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Sep 9, 2025 14:24+0000">2025-09-09</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Sep 9, 2025 14:58+0000">2025-09-09</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

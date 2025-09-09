@@ -527,12 +527,12 @@ HTTP 200 OK
 
 <p>Cette section détaille les nomenclatures à utiliser afin de renseigner les différents éléments codifiés de la réponse.</p>
 <ul>
-  <li><strong>ID : 3 – Statut du créneau :</strong>
+  <li><strong>Statut du créneau :</strong>
     <ul>
       <li>L'utilisation de la nomenclature standard slotstatus (<a href="http://hl7.org/fhir/R4/valueset-slotstatus.html">http://hl7.org/fhir/R4/valueset-slotstatus.html</a>) est attendue. Cependant, la plateforme numérique SAS ne récupérant que des créneaux disponibles, ce champ aura systématiquement la valeur <code class="language-plaintext highlighter-rouge">free</code>.</li>
     </ul>
   </li>
-  <li><strong>ID : 4 – Type de créneau :</strong>
+  <li><strong>Type de créneau :</strong>
     <ul>
       <li>Afin de répondre aux besoins de la plateforme numérique SAS, une nomenclature dédiée a été mise en oeuvre (<a href="https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau">https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau</a>). 3 types de créneaux sont présentés ci-dessous. A noter qu'un créneau peut porter une combinaison de ces valeurs :
         <ul>
@@ -543,7 +543,7 @@ HTTP 200 OK
       </li>
     </ul>
   </li>
-  <li><strong>ID : 5 – Type de consultation :</strong>
+  <li><strong>Type de consultation :</strong>
     <ul>
       <li>L'utilisation de la nomenclature standard ActEncounterCode (<a href="https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html">https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html</a>) est attendue. Cette nomenclature contient différentes notions, cependant, la plateforme numérique SAS gère les 3 types de créneaux ci-dessous. A noter qu'un créneau peut porter une combinaison de ces valeurs :
         <ul>
@@ -552,7 +552,7 @@ HTTP 200 OK
           <li>VR – Téléconsultation</li>
         </ul>
       </li>
-      <li><strong>ID : 6 – Créneau avec ou sans RDV :</strong></li>
+      <li><strong>Créneau avec ou sans RDV :</strong></li>
       <li>L'utilisation de la nomenclature standard AppointmentReasonCodes (<a href="https://www.hl7.org/fhir/v2/0276/index.html">https://www.hl7.org/fhir/v2/0276/index.html</a>) est attendue. Cette nomenclature contient différentes notions, cependant, la plateforme numérique SAS gère les 2 valeurs ci-dessous :
         <ul>
           <li>ROUTINE – Créneau avec prise de RDV possible.</li>
@@ -561,12 +561,12 @@ HTTP 200 OK
       </li>
     </ul>
   </li>
-  <li><strong>ID : 7 – URL de redirection pour la prise de RDV :</strong>
+  <li><strong>URL de redirection pour la prise de RDV :</strong>
     <ul>
       <li>Il est attendu l'URL de redirection vers l'agenda du PS concerné. Si l'utilisateur vient du SAS et n'est pas authentifié, il est demandé de le rediriger vers la page d'authentification de la solution éditeur avant d'accéder à l'agenda du PS. Afin de faciliter l'implémentation de la règle métier, la PTF numérique SAS ajoute un paramètre <code class="language-plaintext highlighter-rouge">origin</code> à l'URL transmise par l'éditeur au moment de la redirection pour identifier la provenance.</li>
     </ul>
   </li>
-  <li><strong>ID : 8 – ID de l’association SOS Médecins (SIRET)  :</strong>
+  <li><strong>ID de l’association SOS Médecins (SIRET)  :</strong>
     <ul>
       <li>Identifiant unique propre à chaque association SOS Médecins. Les champs attendus doivent être valorisés comme suit :
         <ul>
@@ -577,7 +577,7 @@ HTTP 200 OK
       </li>
     </ul>
   </li>
-  <li><strong>ID : 10 – ID du point fixe de garde :</strong>
+  <li><strong>ID du point fixe de garde :</strong>
     <ul>
       <li>Identifiant unique permettant d’identifier individuellement chaque point fixe de garde. Deux combinaisons sont possibles selon que le PFG ait un identifiant national de structure (IDNST) connu ou non :
         <ul>
@@ -596,7 +596,7 @@ HTTP 200 OK
       </li>
     </ul>
   </li>
-  <li><strong>ID : 16 – Horaires d’ouverture – Jours de la semaine :</strong>
+  <li><strong>Horaires d’ouverture – Jours de la semaine :</strong>
     <ul>
       <li>L’utilisation de la nomenclature standard DaysOfWeek (https://hl7.org/fhir/codesystem-days-of-week.html) est attendue. Cette nomenclature contient différentes notions qui sont toutes supportées par la plateforme numérique SAS :
         <ul>
@@ -711,7 +711,7 @@ Afin de tester un fichier, il suffit de sélectionner le format <code class="lan
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Sep 9, 2025 14:24+0000">2025-09-09</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Sep 9, 2025 14:58+0000">2025-09-09</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
