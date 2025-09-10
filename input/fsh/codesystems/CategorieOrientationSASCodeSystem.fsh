@@ -6,6 +6,6 @@ Description: "Code système permettant de définir la catégorie d'orientation S
 * ^experimental = true
 * ^caseSensitive = true 
 
-*#001 "PS" "Catégorie PS à titre individuel"
-*#002 "PDM" "Catégorie Place de marché"
-*#003 "SOS" "Catégorie SOS Médecins"
+* #001 "PS" "Catégorie PS à titre individuel"
+* #002 "PDM" "Catégorie Place de marché"
+* #003 "SOS" "Catégorie SOS Médecins"
