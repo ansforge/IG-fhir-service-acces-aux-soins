@@ -10,4 +10,4 @@ Usage: #example
 * created = "2025-06-17T10:15:56+01:00"
 * participant.type = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#ADM
 * participant.status = #needs-action
-* extension[categorieOrientation].valueCodeableConcept = https://interop.esante.gouv.fr/ig/fhir/sas/CodeSystem/categorie-orientation-sas-codesystem#SOS
+* extension[categorieOrientation].valueCodeableConcept = https://interop.esante.gouv.fr/ig/fhir/sas/CodeSystem/categorie-orientation-sas-codesystem#003
