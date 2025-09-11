@@ -8,4 +8,4 @@ Description: "Valueset permettant de définir la catégorie d'orientation SAS. I
 * https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement#603 "MSP"
 * https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement#124 "CDS"
 
-
+* ^experimental = false

@@ -36,7 +36,7 @@ Usage: #example
 
 * entry[locationAgregateurSOS][+].resource = ExampleLocationSOS2
 * entry[locationAgregateurSOS][=].fullUrl = "https://exemple.com/ans-sas/Location/2222222222"
-* entry[slotAgregateurSOS][=].search.mode = #include
+* entry[locationAgregateurSOS][=].search.mode = #include
 
 * entry[slotAgregateurSOS][+].resource = ExampleSlotSOS3
 * entry[slotAgregateurSOS][=].fullUrl = "https://exemple.com/ans-sas/Slot/ExampleSlotSOS3"

@@ -159,7 +159,7 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
   
 - **Identifiant technique du RDV** : Un identifiant technique unique par RDV est transmis. Cet ID est défini par la plateforme numérique SAS et peut prendre la forme d’un UUID par exemple. La solution éditeur devra s’appuyer sur cet ID pour la gestion des requêtes de mises à jour.
 
-- **URL de l’extension et catégorie de l’orientation SAS** : Le [jeu de valeur de la catégorie de l’orientation SAS est utilisé](./ValueSet/categorie-orientation-sas-valueset) à travers l’extension pour indiquer la catégorie de l’orientation de RDV SAS transmise.
+- **URL de l’extension et catégorie de l’orientation SAS** : Le [jeu de valeur de la catégorie de l’orientation SAS est utilisé](./ValueSet-sas-valueset-categorieetablissement.html) à travers l’extension pour indiquer la catégorie de l’orientation de RDV SAS transmise.
 
 - **Statut du RDV** : L’utilisation de la nomenclature standard AppointmentStatus (http://hl7.org/fhir/appointmentstatus) est attendue. La plateforme numérique SAS exploite à date les valeurs suivantes :
   - PENDING : RDV en attente de confirmation
