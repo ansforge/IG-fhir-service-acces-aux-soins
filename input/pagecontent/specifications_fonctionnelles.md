@@ -227,6 +227,8 @@ Les échanges entre la plateforme SAS et les solutions de LRM se feront au trave
     <p>{% include diagramme_sequence_hub.svg %}</p>
 </div>
 
+Nous nous intéresserons dans la suite de la page et dans la partie technique au séquencement et format des échanges entre la plateforme numérique SAS, le Hub et la solution éditeur LRM.
+
 #### Attendu et rôles des parties
 
 ##### Role de la plateforme numérique SAS

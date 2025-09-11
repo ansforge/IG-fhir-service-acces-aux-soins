@@ -19,14 +19,57 @@ SAMU -> LRM : Décision d'orientation
 LRM -> PTF : Recherche de RDV (appel contextuel)
 PTF -> LGA : Redirection sur la solution éditeur\net prise de RDV
 LGA -> PTF : Remontée des informations du RDV pris
-PTF -> Hub : Création et envoi du message de prise de RDV
-Hub -> PTF : Acquittement technique
-Hub -> LRM : Transmission du message RDV
-LRM -> Hub : Message d'acquittement final de réception
-Hub -> PTF : Notification du statut final
-LRM -> Hub : Transmissions erreurs (éventuelles)
-Hub -> PTF : Transmissions erreurs (éventuelles)
-
+skinparam sequence {
+    GroupBorderColor red
+    GroupBackgroundColor white
+}
+group Echanges avec le Hub
+  PTF -> Hub : Création et envoi du message de prise de RDV
+  Hub -> PTF : Acquittement technique
+  Hub -> LRM : Transmission du message RDV
+  LRM -> Hub : Message d'acquittement final de réception
+  Hub -> PTF : Notification du statut final
+  LRM -> Hub : Transmissions erreurs (éventuelles)
+  Hub -> PTF : Transmissions erreurs (éventuelles)
+end group
 @enduml
 
+
+@startuml
+title Diagramme de séquence global
+
+hide footbox
+
+box "SAMU" #PeachPuff
+  actor "Régulateur" as SAMU
+  participant LRM
+end box
+
+participant Hub
+participant "PTF SAS" as PTF
+participant LGA
+
+SAMU -> LRM : Création de fiche
+SAMU -> LRM : Décision d'orientation
+LRM -> PTF : Recherche de RDV (appel contextuel)
+PTF -> LGA : Redirection sur la solution éditeur\net prise de RDV
+LGA -> PTF : Remontée des informations du RDV pris
+
+skinparam sequence {
+    GroupBorderColor red
+    GroupBackgroundColor white
+}
+
+' Encadré sans titre visible
+group \u00A0
+  PTF -> Hub : Création et envoi du message de prise de RDV
+  Hub -> PTF : Acquittement technique
+  Hub -> LRM : Transmission du message RDV
+  LRM -> Hub : Message d'acquittement final de réception
+  Hub -> PTF : Notification du statut final
+  LRM -> Hub : Transmissions erreurs (éventuelles)
+  Hub -> PTF : Transmissions erreurs (éventuelles)
+end
+
+@enduml
 
