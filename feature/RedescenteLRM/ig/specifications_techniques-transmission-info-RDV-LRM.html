@@ -273,7 +273,15 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
   <li>« info » pour les messages généraux d’informations, alertes et erreurs</li>
 </ul>
 
+<p>La structuration du nom des files est {&#x1D456;&#x1D451;&#x1D452;&#x1D45B;&#x1D461;&#x1D456;&#x1D453;&#x1D456;&#x1D44E;&#x1D45B;&#x1D461;&#x1D436;&#x1D459;&#x1D456;&#x1D452;&#x1D45B;&#x1D461;}.{&#x1D461;&#x1D466;&#x1D45D;&#x1D45C;&#x1D459;&#x1D45C;&#x1D454;&#x1D456;&#x1D452;} donnant, par exemple, <em>fr.health.samu001.message</em></p>
+
 <p>En l'occurence, les LRM écouteront sur leur file « message » et la plateforme SAS écoutera sur les files "ack" et "info".</p>
+
+<p>Le schéma ci-dessous détaille cette cinématique d'échange entre les différents acteurs</p>
+
+<div style="width:100%;" align="center" class="figure">
+    <p><svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css" viewBox="0 0 586 455" zoomAndPan="magnify" data-diagram-type="SEQUENCE" preserveAspectRatio="none" width="586px" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:586px;height:455px;background:#FFFFFF;" version="1.1" height="455px"><defs></defs><g><g><title>Client B</title><rect width="8" x="35.2925" y="52.5938" fill="#000000" fill-opacity="0.00000" height="395.7266"></rect><line y1="52.5938" x1="39" y2="448.3203" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="39"></line></g><g><title>Hub Santé</title><rect width="8" x="264.2646" y="52.5938" fill="#000000" fill-opacity="0.00000" height="395.7266"></rect><line y1="52.5938" x1="267.6753" y2="448.3203" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="267.6753"></line></g><g><title>Client A</title><rect width="8" x="535.728" y="52.5938" fill="#000000" fill-opacity="0.00000" height="395.7266"></rect><line y1="52.5938" x1="538.8423" y2="448.3203" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="538.8423"></line></g><g data-participant="LRM" class="participant participant-head"><rect rx="2.5" ry="2.5" width="68.585" x="5" y="5" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0" height="46.5938"></rect><text lengthAdjust="spacing" x="12" font-size="14" textLength="54.585" y="24.9951" font-family="sans-serif" fill="#000000">Client B</text><text lengthAdjust="spacing" x="19.0273" font-size="14" textLength="40.5303" y="41.292" font-family="sans-serif" fill="#000000">(LRM)</text></g><g data-participant="Hub" class="participant participant-head"><rect rx="2.5" ry="2.5" width="87.1787" x="224.6753" y="5" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0" height="46.5938"></rect><text lengthAdjust="spacing" x="231.6753" font-size="14" textLength="73.1787" y="24.9951" font-family="sans-serif" fill="#000000">Hub Santé</text><text lengthAdjust="spacing" x="266.0396" font-size="14" textLength="4.4502" y="41.292" font-family="sans-serif" fill="#000000">&nbsp;</text></g><g data-participant="PTF" class="participant participant-head"><rect rx="2.5" ry="2.5" width="81.7715" x="498.8423" y="5" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0" height="46.5938"></rect><text lengthAdjust="spacing" x="512.4492" font-size="14" textLength="54.5576" y="24.9951" font-family="sans-serif" fill="#000000">Client A</text><text lengthAdjust="spacing" x="505.8423" font-size="14" textLength="67.7715" y="41.292" font-family="sans-serif" fill="#000000">(PTF SAS)</text></g><g data-participant-1="PTF" data-participant-2="Hub" class="message"><polygon style="stroke:#181818;stroke-width:1;" fill="#181818" points="279.2646,79.7266,269.2646,83.7266,279.2646,87.7266,275.2646,83.7266"></polygon><line y1="83.7266" x1="273.2646" y2="83.7266" style="stroke:#181818;stroke-width:1;" x2="538.728"></line><text lengthAdjust="spacing" x="285.2646" font-size="13" textLength="212.2275" y="78.6606" font-family="sans-serif" fill="#000000">1. Envoi du message fonctionnel</text></g><g data-participant-1="Hub" data-participant-2="PTF" class="message"><polygon style="stroke:#181818;stroke-width:1;" fill="#181818" points="527.728,108.8594,537.728,112.8594,527.728,116.8594,531.728,112.8594"></polygon><line y1="112.8594" x1="268.2646" y2="112.8594" style="stroke:#181818;stroke-width:1;stroke-dasharray:2.0,2.0;" x2="533.728"></line><text lengthAdjust="spacing" x="275.2646" font-size="13" textLength="173.8242" y="107.7935" font-family="sans-serif" fill="#000000">2. Acquittement technique</text></g><g data-participant-1="Hub" data-participant-2="Hub" class="message"><line y1="141.9922" x1="268.2646" y2="141.9922" style="stroke:#181818;stroke-width:1;" x2="310.2646"></line><line y1="141.9922" x1="310.2646" y2="154.9922" style="stroke:#181818;stroke-width:1;" x2="310.2646"></line><line y1="154.9922" x1="269.2646" y2="154.9922" style="stroke:#181818;stroke-width:1;" x2="310.2646"></line><polygon style="stroke:#181818;stroke-width:1;" fill="#181818" points="279.2646,150.9922,269.2646,154.9922,279.2646,158.9922,275.2646,154.9922"></polygon><text lengthAdjust="spacing" x="275.2646" font-size="13" textLength="243.5215" y="136.9263" font-family="sans-serif" fill="#000000">2.1 Inscription dans la file B.message</text></g><g data-participant-1="Hub" data-participant-2="LRM" class="message"><polygon style="stroke:#181818;stroke-width:1;" fill="#181818" points="50.2925,195.2578,40.2925,199.2578,50.2925,203.2578,46.2925,199.2578"></polygon><line y1="199.2578" x1="44.2925" y2="199.2578" style="stroke:#181818;stroke-width:1;" x2="267.2646"></line><text lengthAdjust="spacing" x="56.2925" font-size="13" textLength="185.6055" y="179.0591" font-family="sans-serif" fill="#000000">3. Transmission du message</text><text lengthAdjust="spacing" x="56.2925" font-size="13" textLength="98.2935" y="194.1919" font-family="sans-serif" fill="#000000">au destinataire</text></g><g data-participant-1="LRM" data-participant-2="Hub" class="message"><polygon style="stroke:#181818;stroke-width:1;" fill="#181818" points="256.2646,224.3906,266.2646,228.3906,256.2646,232.3906,260.2646,228.3906"></polygon><line y1="228.3906" x1="39.2925" y2="228.3906" style="stroke:#181818;stroke-width:1;" x2="262.2646"></line><text lengthAdjust="spacing" x="46.2925" font-size="13" textLength="137.0078" y="223.3247" font-family="sans-serif" fill="#000000">4. Acquittement final</text></g><g data-participant-1="Hub" data-participant-2="Hub" class="message"><line y1="257.5234" x1="268.2646" y2="257.5234" style="stroke:#181818;stroke-width:1;" x2="310.2646"></line><line y1="257.5234" x1="310.2646" y2="270.5234" style="stroke:#181818;stroke-width:1;" x2="310.2646"></line><line y1="270.5234" x1="269.2646" y2="270.5234" style="stroke:#181818;stroke-width:1;" x2="310.2646"></line><polygon style="stroke:#181818;stroke-width:1;" fill="#181818" points="279.2646,266.5234,269.2646,270.5234,279.2646,274.5234,275.2646,270.5234"></polygon><text lengthAdjust="spacing" x="275.2646" font-size="13" textLength="207.7144" y="252.4575" font-family="sans-serif" fill="#000000">4.1 Inscription dans la file A.ack</text></g><g data-participant-1="Hub" data-participant-2="PTF" class="message"><polygon style="stroke:#181818;stroke-width:1;" fill="#181818" points="527.728,310.7891,537.728,314.7891,527.728,318.7891,531.728,314.7891"></polygon><line y1="314.7891" x1="268.2646" y2="314.7891" style="stroke:#181818;stroke-width:1;" x2="533.728"></line><text lengthAdjust="spacing" x="275.2646" font-size="13" textLength="223.0313" y="294.5903" font-family="sans-serif" fill="#000000">4.2 Tranmission de l'acquittement</text><text lengthAdjust="spacing" x="275.2646" font-size="13" textLength="98.2935" y="309.7231" font-family="sans-serif" fill="#000000">au destinataire</text></g><g data-participant-1="LRM" data-participant-2="Hub" class="message"><polygon style="stroke:#181818;stroke-width:1;" fill="#181818" points="256.2646,339.9219,266.2646,343.9219,256.2646,347.9219,260.2646,343.9219"></polygon><line y1="343.9219" x1="39.2925" y2="343.9219" style="stroke:#181818;stroke-width:1;" x2="262.2646"></line><text lengthAdjust="spacing" x="46.2925" font-size="13" textLength="204.9722" y="338.856" font-family="sans-serif" fill="#000000">5. Message d'erreur (optionnel)</text></g><g data-participant-1="Hub" data-participant-2="Hub" class="message"><line y1="373.0547" x1="268.2646" y2="373.0547" style="stroke:#181818;stroke-width:1;" x2="310.2646"></line><line y1="373.0547" x1="310.2646" y2="386.0547" style="stroke:#181818;stroke-width:1;" x2="310.2646"></line><line y1="386.0547" x1="269.2646" y2="386.0547" style="stroke:#181818;stroke-width:1;" x2="310.2646"></line><polygon style="stroke:#181818;stroke-width:1;" fill="#181818" points="279.2646,382.0547,269.2646,386.0547,279.2646,390.0547,275.2646,386.0547"></polygon><text lengthAdjust="spacing" x="275.2646" font-size="13" textLength="209.4536" y="367.9888" font-family="sans-serif" fill="#000000">5.1 Inscription dans la file A.info</text></g><g data-participant-1="Hub" data-participant-2="PTF" class="message"><polygon style="stroke:#181818;stroke-width:1;" fill="#181818" points="527.728,426.3203,537.728,430.3203,527.728,434.3203,531.728,430.3203"></polygon><line y1="430.3203" x1="268.2646" y2="430.3203" style="stroke:#181818;stroke-width:1;" x2="533.728"></line><text lengthAdjust="spacing" x="275.2646" font-size="13" textLength="243.3311" y="410.1216" font-family="sans-serif" fill="#000000">5.2 Tranmission du message d'erreur</text><text lengthAdjust="spacing" x="275.2646" font-size="13" textLength="98.2935" y="425.2544" font-family="sans-serif" fill="#000000">au destinataire</text></g></g></svg></p>
+</div>
 
 <h3 id="détail-des-échanges">Détail des échanges</h3>
 
@@ -647,46 +655,55 @@ L'entête est de type "EDXL-DE", cf. spécifications du Hub Santé.</p>
     <p><strong>Identifiant technique du RDV</strong> : Un identifiant technique unique par RDV est transmis. Cet ID est défini par la plateforme numérique SAS et peut prendre la forme d’un UUID par exemple. La solution éditeur devra s’appuyer sur cet ID pour la gestion des requêtes de mises à jour.</p>
   </li>
   <li>
-    <p><a name="l1515">​</a><strong>URL de l’extension et catégorie de l’orientation SAS</strong> : Le <a href="./ValueSet/categorie-orientation-sas-valueset">jeu de valeur de la catégorie de l’orientation SAS est utilisé</a> à travers l’extension pour indiquer la catégorie de l’orientation de RDV SAS transmise.</p>
+    <p><a name="l1626">​</a><strong>URL de l’extension et catégorie de l’orientation SAS</strong> : Le <a href="./ValueSet/categorie-orientation-sas-valueset">jeu de valeur de la catégorie de l’orientation SAS est utilisé</a> à travers l’extension pour indiquer la catégorie de l’orientation de RDV SAS transmise.</p>
   </li>
-  <li><strong>Statut du RDV</strong> : L’utilisation de la nomenclature standard AppointmentStatus (http://hl7.org/fhir/appointmentstatus) est attendue. La plateforme numérique SAS exploite à date les valeurs suivantes :</li>
-  <li>PENDING : RDV en attente de confirmation</li>
-  <li>BOOKED : RDV pris et confirmé</li>
-  <li>FULFILLED : RDV honoré</li>
-  <li>NOSHOW : RDV non honoré</li>
-  <li>
-    <p>CANCELLED : RDV annulé</p>
+  <li><strong>Statut du RDV</strong> : L’utilisation de la nomenclature standard AppointmentStatus (http://hl7.org/fhir/appointmentstatus) est attendue. La plateforme numérique SAS exploite à date les valeurs suivantes :
+    <ul>
+      <li>PENDING : RDV en attente de confirmation</li>
+      <li>BOOKED : RDV pris et confirmé</li>
+      <li>FULFILLED : RDV honoré</li>
+      <li>NOSHOW : RDV non honoré</li>
+      <li>CANCELLED : RDV annulé</li>
+    </ul>
   </li>
-  <li><strong>Rôle du PS effecteur de soins</strong> : L’utilisation de la nomenclature standard ParticipationType (http://terminology.hl7.org/CodeSystem/v3-ParticipationType) est attendue. Dans le cadre des échanges avec les solutions éditeurs de LRM, ce champ est valorisé à :</li>
-  <li>
-    <p>ADM : admitter</p>
+  <li><strong>Rôle du PS effecteur de soins</strong> : L’utilisation de la nomenclature standard ParticipationType (http://terminology.hl7.org/CodeSystem/v3-ParticipationType) est attendue. Dans le cadre des échanges avec les solutions éditeurs de LRM, ce champ est valorisé à :
+    <ul>
+      <li>ADM : admitter</li>
+    </ul>
   </li>
-  <li><strong>Statut d’acceptation du RDV par le PS effecteur de soins</strong> : La nomenclature standard Appointmentparticipantstatus (http://hl7.org/fhir/ValueSet/participationstatus) est utilisée. La plateforme numérique SAS exploite à date les valeurs suivantes :</li>
-  <li>ACCEPTED : RDV accepté par le PS effecteur de soins</li>
-  <li>
-    <p>NEEDS-ACTION : RDV en attente de confirmation par le PS effecteur de soins (pour le statut du RDV « PENDING » uniquement)</p>
+  <li><strong>Statut d’acceptation du RDV par le PS effecteur de soins</strong> : La nomenclature standard Appointmentparticipantstatus (http://hl7.org/fhir/ValueSet/participationstatus) est utilisée. La plateforme numérique SAS exploite à date les valeurs suivantes :
+    <ul>
+      <li>ACCEPTED : RDV accepté par le PS effecteur de soins</li>
+      <li>NEEDS-ACTION : RDV en attente de confirmation par le PS effecteur de soins (pour le statut du RDV « PENDING » uniquement)</li>
+    </ul>
   </li>
-  <li><strong>Identification du PS effecteur de soins</strong> : Les champs sont valorisés comme suit :</li>
-  <li>identifier.value (valeur de l’identifiant) : RPPS avec préfixe « 8 »</li>
-  <li>identifier.system (autorité d’affectation) : urn:oid:1.2.250.1.71.4.2.1</li>
-  <li>
-    <p>identifier.type (type d’identifiant) : le champ type.coding.code est valorisé à « IDNPS » et type.coding.system à « https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203 »</p>
+  <li><strong>Identification du PS effecteur de soins</strong> : Les champs sont valorisés comme suit :
+    <ul>
+      <li>identifier.value (valeur de l’identifiant) : RPPS avec préfixe « 8 »</li>
+      <li>identifier.system (autorité d’affectation) : urn:oid:1.2.250.1.71.4.2.1</li>
+      <li>identifier.type (type d’identifiant) : le champ type.coding.code est valorisé à « IDNPS » et type.coding.system à « https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203 »</li>
+    </ul>
   </li>
-  <li><strong>URL de l’extension et spécialité du PS effecteur de soins</strong> : La nomenclature des spécialités ordinales du MOS (https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale/) est référencée et utilisée. La plateforme numérique SAS transmettra les champs avec la valorisation suivante pour indiquer la compétence ou spécialité de l’effecteur de soins :</li>
-  <li>Extension.url (extension pour valeur de la spécialité) : https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner-specialty</li>
-  <li>ValueCoding.system (nomenclature) : https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale</li>
-  <li>
-    <p>Valuecoding.code (valeur du code) : code de la nomenclature de la spécialité du PS (ex. valorisé à « SM54 » pour Médecine générale)</p>
+  <li><strong>URL de l’extension et spécialité du PS effecteur de soins</strong> : La nomenclature des spécialités ordinales du MOS (https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale/) est référencée et utilisée. La plateforme numérique SAS transmettra les champs avec la valorisation suivante pour indiquer la compétence ou spécialité de l’effecteur de soins :
+    <ul>
+      <li>Extension.url (extension pour valeur de la spécialité) : https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner-specialty</li>
+      <li>ValueCoding.system (nomenclature) : https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale</li>
+      <li>Valuecoding.code (valeur du code) : code de la nomenclature de la spécialité du PS (ex. valorisé à « SM54 » pour Médecine générale)</li>
+    </ul>
   </li>
-  <li><strong>Identification de la structure de soins</strong> : Identifiant unique propre à chaque structure de soins. Les champs sont valorisés comme suit :</li>
-  <li>identifier.value (valeur de l'identifiant) : numéro du FINESS avec préfixe « 1 » ou numéro du SIRET avec préfixe « 3 »</li>
-  <li>identifier.system (autorité d’affectation) : urn:oid:1.2.250.1.71.4.2.2</li>
-  <li>
-    <p>identifier.type (type d’identifiant) : le champ type.coding.code est valorisé à « IDNST » et type.coding.system à « https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203 »</p>
+  <li><strong>Identification de la structure de soins</strong> : Identifiant unique propre à chaque structure de soins. Les champs sont valorisés comme suit :
+    <ul>
+      <li>identifier.value (valeur de l'identifiant) : numéro du FINESS avec préfixe « 1 » ou numéro du SIRET avec préfixe « 3 »</li>
+      <li>identifier.system (autorité d’affectation) : urn:oid:1.2.250.1.71.4.2.2</li>
+      <li>identifier.type (type d’identifiant) : le champ type.coding.code est valorisé à « IDNST » et type.coding.system à « https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203 »</li>
+    </ul>
   </li>
-  <li><strong>Référence à la ressource Practitioner et/ou Organization associée</strong> : Lorsque le PS effecteur de soins de l’orientation transmise est connu, une référence à Practitioner est valorisée. Lorsque la structure de soins associée au RDV transmis est connue, une référence à Organization est valorisée. Ces références sont valorisées comme suit :</li>
-  <li>Practitioner.reference : Practitioner/<référence à="null" Practitioner="null" la="null" ressource="null" associée="null"></référence></li>
-  <li>Organization.reference : Organization/<référence à="null" Organization="null" la="null" ressource="null" associée="null"></référence></li>
+  <li><strong>Référence à la ressource Practitioner et/ou Organization associée</strong> : Lorsque le PS effecteur de soins de l’orientation transmise est connu, une référence à Practitioner est valorisée. Lorsque la structure de soins associée au RDV transmis est connue, une référence à Organization est valorisée. Ces références sont valorisées comme suit :
+    <ul>
+      <li>Practitioner.reference : Practitioner/<référence à="null" Practitioner="null" la="null" ressource="null" associée="null"></référence></li>
+      <li>Organization.reference : Organization/<référence à="null" Organization="null" la="null" ressource="null" associée="null"></référence></li>
+    </ul>
+  </li>
 </ul>
 
 <h3 id="déclencheurs-et-règles-dintégration-attendues">Déclencheurs et règles d'intégration attendues</h3>
@@ -761,7 +778,7 @@ L'entête est de type "EDXL-DE", cf. spécifications du Hub Santé.</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 11, 2025 08:39+0000">2025-09-11</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 11, 2025 12:09+0000">2025-09-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
