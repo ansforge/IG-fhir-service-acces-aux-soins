@@ -142,6 +142,51 @@ Il n’y aura pas de message spécifique pour l’annulation d’un RDV. Une ann
 
 Cf. [exemple](./Bundle-ExampleBundleAppointmentLRM9.json.html) de RDV annulé avec modification de la ressource `Appointment`
 
+### Nomenclatures
+
+Cette section détaille les nomenclatures à utiliser afin de renseigner les différents éléments codifiés de la requête.
+ - **Méthode d’ajout de la ressource associée** : Pour chaque ressource à ajouter ou modifier, ces champs permettent d’indiquer la méthode HTTP à appliquer (POST, PUT) et l’url de la ressource équivalente :
+    - Entry.request.method est valorisé à « POST » pour indiquer une nouvelle ressource à créer pour le RDV transmis ou « PUT » pour une ressource transmise initialement et concernant une mise à jour d’un ou plusieurs champs au sein de celle-ci.
+    - Entry.request.url indique la ressource associée à créer ou mettre à jour 
+  
+- **Identifiant technique du RDV** : Un identifiant technique unique par RDV est transmis. Cet ID est défini par la plateforme numérique SAS et peut prendre la forme d’un UUID par exemple. La solution éditeur devra s’appuyer sur cet ID pour la gestion des requêtes de mises à jour.
+
+- **URL de l’extension et catégorie de l’orientation SAS** : Le [jeu de valeur de la catégorie de l’orientation SAS est utilisé](./ValueSet/categorie-orientation-sas-valueset) à travers l’extension pour indiquer la catégorie de l’orientation de RDV SAS transmise.
+
+- **Statut du RDV** : L’utilisation de la nomenclature standard AppointmentStatus (http://hl7.org/fhir/appointmentstatus) est attendue. La plateforme numérique SAS exploite à date les valeurs suivantes :
+ - PENDING : RDV en attente de confirmation
+ - BOOKED : RDV pris et confirmé
+ - FULFILLED : RDV honoré
+ - NOSHOW : RDV non honoré
+ - CANCELLED : RDV annulé
+
+- **Rôle du PS effecteur de soins** : L’utilisation de la nomenclature standard ParticipationType (http://terminology.hl7.org/CodeSystem/v3-ParticipationType) est attendue. Dans le cadre des échanges avec les solutions éditeurs de LRM, ce champ est valorisé à :
+ - ADM : admitter
+
+- **Statut d’acceptation du RDV par le PS effecteur de soins** : La nomenclature standard Appointmentparticipantstatus (http://hl7.org/fhir/ValueSet/participationstatus) est utilisée. La plateforme numérique SAS exploite à date les valeurs suivantes :
+ - ACCEPTED : RDV accepté par le PS effecteur de soins
+ - NEEDS-ACTION : RDV en attente de confirmation par le PS effecteur de soins (pour le statut du RDV « PENDING » uniquement)
+
+- **Identification du PS effecteur de soins** : Les champs sont valorisés comme suit :
+ - identifier.value (valeur de l’identifiant) : RPPS avec préfixe « 8 »
+ - identifier.system (autorité d’affectation) : urn:oid:1.2.250.1.71.4.2.1
+ - identifier.type (type d’identifiant) : le champ type.coding.code est valorisé à « IDNPS » et type.coding.system à « https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203 » 
+
+- **URL de l’extension et spécialité du PS effecteur de soins** : La nomenclature des spécialités ordinales du MOS (https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale/) est référencée et utilisée. La plateforme numérique SAS transmettra les champs avec la valorisation suivante pour indiquer la compétence ou spécialité de l’effecteur de soins :
+ - Extension.url (extension pour valeur de la spécialité) : https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner-specialty
+  - ValueCoding.system (nomenclature) : https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale
+  - Valuecoding.code (valeur du code) : code de la nomenclature de la spécialité du PS (ex. valorisé à « SM54 » pour Médecine générale)
+
+- **Identification de la structure de soins** : Identifiant unique propre à chaque structure de soins. Les champs sont valorisés comme suit :
+ - identifier.value (valeur de l'identifiant) : numéro du FINESS avec préfixe « 1 » ou numéro du SIRET avec préfixe « 3 » 
+ - identifier.system (autorité d’affectation) : urn:oid:1.2.250.1.71.4.2.2
+ - identifier.type (type d’identifiant) : le champ type.coding.code est valorisé à « IDNST » et type.coding.system à « https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203 »
+
+- **Référence à la ressource Practitioner et/ou Organization associée** : Lorsque le PS effecteur de soins de l’orientation transmise est connu, une référence à Practitioner est valorisée. Lorsque la structure de soins associée au RDV transmis est connue, une référence à Organization est valorisée. Ces références sont valorisées comme suit :
+ - Practitioner.reference : Practitioner/<référence à la ressource Practitioner associée>
+ - Organization.reference : Organization/<référence à la ressource Organization associée>
+
+
 ### Déclencheurs et règles d'intégration attendues
 
 Divers évènements dans la plateforme numérique SAS peuvent déclencher de manière instantanée le flux. À titre d’exemple, vous trouverez ci-dessous une liste non exhaustive de ces évènements : 
