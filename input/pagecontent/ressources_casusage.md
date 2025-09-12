@@ -42,7 +42,7 @@ Liste des ressources (profils, paramètres de recherche, terminologies, exemples
   ]
 } %}
 
-### Redescente des informations de RDV
+### Transmission des informations de rendez-vous aux LRM
 
 Liste des ressources (profils, paramètres de recherche, terminologies, exemples) à utiliser dans le cadre du cas d'usage de redescente des informations de RDV aux LRM
 

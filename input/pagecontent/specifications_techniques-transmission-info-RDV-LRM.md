@@ -1,4 +1,4 @@
-Les échanges avec les éditeurs de LRM se font au travers d'une liaison avec le Hub Santé.
+Les échanges avec les éditeurs de LRM se font au travers d'une liaison avec le [Hub Santé](https://hub.esante.gouv.fr/).
 La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés au Hub.
 
 Le schéma ci-dessous illustre l'échange de données entre la PTF SAS et les éditeurs de LRM
@@ -7,9 +7,9 @@ Le schéma ci-dessous illustre l'échange de données entre la PTF SAS et les é
     <p>{% include schemaHub.svg %}</p>
 </div>
 
-Le protocole utilisé pour la connexion des applications (PTF SAS et éditeurs de LRM) avec le Hub est le protocole AMQP, en vesion 0-9-1. 
+Le protocole utilisé pour la connexion des applications (PTF SAS et éditeurs de LRM) avec le Hub est le [protocole AMQP](https://fr.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol), en version 0-9-1. 
 
-Les messages seront transmis au format json sous la forme d'une ressource FHIR Bundle de type transaction contenant les différentes ressources / données permettant aux LRM de traiter le message. 
+Les messages seront transmis au format json sous la forme d'une ressource [FHIR Bundle](https://hl7.org/fhir/R4/bundle.html) de type transaction contenant les différentes ressources / données permettant aux LRM de traiter le message. 
 
 Ils seront transmis avec une entête permettant notamment au Hub de router le message vers le bon SAS de destination.
 
@@ -168,27 +168,27 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
   - NOSHOW : RDV non honoré
   - CANCELLED : RDV annulé
 
-- **Rôle du PS effecteur de soins** : L’utilisation de la nomenclature standard ParticipationType (http://terminology.hl7.org/CodeSystem/v3-ParticipationType) est attendue. Dans le cadre des échanges avec les solutions éditeurs de LRM, ce champ est valorisé à :
+- **Rôle du PS effecteur de soins** : L’utilisation de la nomenclature standard ParticipationType (<http://terminology.hl7.org/CodeSystem/v3-ParticipationType>) est attendue. Dans le cadre des échanges avec les solutions éditeurs de LRM, ce champ est valorisé à :
   - ADM : admitter
 
-- **Statut d’acceptation du RDV par le PS effecteur de soins** : La nomenclature standard Appointmentparticipantstatus (http://hl7.org/fhir/ValueSet/participationstatus) est utilisée. La plateforme numérique SAS exploite à date les valeurs suivantes :
+- **Statut d’acceptation du RDV par le PS effecteur de soins** : La nomenclature standard Appointmentparticipantstatus (<http://hl7.org/fhir/ValueSet/participationstatus>) est utilisée. La plateforme numérique SAS exploite à date les valeurs suivantes :
   - ACCEPTED : RDV accepté par le PS effecteur de soins
   - NEEDS-ACTION : RDV en attente de confirmation par le PS effecteur de soins (pour le statut du RDV « PENDING » uniquement)
 
 - **Identification du PS effecteur de soins** : Les champs sont valorisés comme suit :
   - identifier.value (valeur de l’identifiant) : RPPS avec préfixe « 8 »
   - identifier.system (autorité d’affectation) : urn:oid:1.2.250.1.71.4.2.1
-  - identifier.type (type d’identifiant) : le champ type.coding.code est valorisé à « IDNPS » et type.coding.system à « https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203 » 
+  - identifier.type (type d’identifiant) : le champ type.coding.code est valorisé à « IDNPS » et type.coding.system à <https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203>
 
-- **URL de l’extension et spécialité du PS effecteur de soins** : La nomenclature des spécialités ordinales du MOS (https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale/) est référencée et utilisée. La plateforme numérique SAS transmettra les champs avec la valorisation suivante pour indiquer la compétence ou spécialité de l’effecteur de soins :
-  - Extension.url (extension pour valeur de la spécialité) : https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner-specialty
-   - ValueCoding.system (nomenclature) : https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale
+- **URL de l’extension et spécialité du PS effecteur de soins** : La nomenclature des spécialités ordinales du MOS (<https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale/>) est référencée et utilisée. La plateforme numérique SAS transmettra les champs avec la valorisation suivante pour indiquer la compétence ou spécialité de l’effecteur de soins :
+  - Extension.url (extension pour valeur de la spécialité) : <https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner-specialty>
+   - ValueCoding.system (nomenclature) : <https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale>
   - Valuecoding.code (valeur du code) : code de la nomenclature de la spécialité du PS (ex. valorisé à « SM54 » pour Médecine générale)
 
 - **Identification de la structure de soins** : Identifiant unique propre à chaque structure de soins. Les champs sont valorisés comme suit :
   - identifier.value (valeur de l'identifiant) : numéro du FINESS avec préfixe « 1 » ou numéro du SIRET avec préfixe « 3 » 
   - identifier.system (autorité d’affectation) : urn:oid:1.2.250.1.71.4.2.2
-  - identifier.type (type d’identifiant) : le champ type.coding.code est valorisé à « IDNST » et type.coding.system à « https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203 »
+  - identifier.type (type d’identifiant) : le champ type.coding.code est valorisé à « IDNST » et type.coding.system à <https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203>
 
 - **Référence à la ressource Practitioner et/ou Organization associée** : Lorsque le PS effecteur de soins de l’orientation transmise est connu, une référence à Practitioner est valorisée. Lorsque la structure de soins associée au RDV transmis est connue, une référence à Organization est valorisée. Ces références sont valorisées comme suit :
   - Practitioner.reference : Practitioner/<référence à la ressource Practitioner associée>
