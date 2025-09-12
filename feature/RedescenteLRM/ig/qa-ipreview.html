@@ -124,7 +124,7 @@ This material derives from the HL7 Terminology (THO). THO is copyright &copy;198
     <ul>
       <li>
 
-          IG &copy; 2020+ ANS.  Package ans.fhir.fr.sas#1.1.0 based on FHIR 4.0.1. Generated 2025-09-11 
+          IG &copy; 2020+ ANS.  Package ans.fhir.fr.sas#1.1.0 based on FHIR 4.0.1. Generated 2025-09-12 
           
            
             Liens : Table des matières |
@@ -296,7 +296,7 @@ Service d'Accès aux Soins - Local Development build (v1.1.0) built by the FHIR 
 
           IG &copy; 2020+           <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>
 .  Package ans.fhir.fr.sas#1.1.0 based on           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
-. Generated           <span title="Thu, Sep 11, 2025 15:08+0000">2025-09-11</span>
+. Generated           <span title="Fri, Sep 12, 2025 09:11+0000">2025-09-12</span>
 
                     <br/>
 
@@ -328,7 +328,7 @@ Service d'Accès aux Soins - Local Development build (v1.1.0) built by the FHIR 
 
           IG &copy; 2020+           <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>
 .  Package ans.fhir.fr.sas#1.1.0 based on           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
-. Generated           <span title="Thu, Sep 11, 2025 15:08+0000">2025-09-11</span>
+. Generated           <span title="Fri, Sep 12, 2025 09:11+0000">2025-09-12</span>
 
                     <br/>
 
@@ -360,7 +360,7 @@ Service d'Accès aux Soins - Local Development build (v1.1.0) built by the FHIR 
 
           IG &copy; 2020+           <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>
 .  Package ans.fhir.fr.sas#1.1.0 based on           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
-. Generated           <span title="Thu, Sep 11, 2025 15:08+0000">2025-09-11</span>
+. Generated           <span title="Fri, Sep 12, 2025 09:11+0000">2025-09-12</span>
 
                     <br/>
 
@@ -1163,6 +1163,71 @@ Afin de tester un fichier, il suffit de sélectionner le format           <code 
 , de sélectionner le modèle           <code class="language-plaintext highlighter-rouge">BundleAgregateurSOS</code>
  puis de cliquer sur           <code class="language-plaintext highlighter-rouge">valider</code>
  :
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="specifications_techniques-transmission-info-RDV-LRM.html">web</a>
+        </td>
+        <td>
+          <a href="https://hub.esante.gouv.fr/">hub.esante.gouv.fr</a>
+        </td>
+        <td>
+Les échanges avec les éditeurs de LRM se font au travers d'une liaison avec le           <a href="https://hub.esante.gouv.fr/">Hub Santé</a>
+.
+La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés au Hub.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="specifications_techniques-transmission-info-RDV-LRM.html">web</a>
+        </td>
+        <td>
+          <a href="https://fr.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol">fr.wikipedia.org</a>
+        </td>
+        <td>
+Le protocole utilisé pour la connexion des applications (PTF SAS et éditeurs de LRM) avec le Hub est le           <a href="https://fr.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol">protocole AMQP</a>
+, en version 0-9-1.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="specifications_techniques-transmission-info-RDV-LRM.html">web</a>
+        </td>
+        <td>
+          <a href="https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale/">mos.esante.gouv.fr</a>
+        </td>
+        <td>
+          <strong>URL de l’extension et spécialité du PS effecteur de soins</strong>
+ : La nomenclature des spécialités ordinales du MOS (          <a href="https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale/">https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale/</a>
+) est référencée et utilisée. La plateforme numérique SAS transmettra les champs avec la valorisation suivante pour indiquer la compétence ou spécialité de l’effecteur de soins :
+              <ul>
+
+                  <li>
+Extension.url (extension pour valeur de la spécialité) :               <a href="https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner-specialty">https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner-specialty</a>
+            </li>
+
+                  <li>
+ValueCoding.system (nomenclature) :               <a href="https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale">https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale</a>
+            </li>
+
+                  <li>Valuecoding.code (valeur du code) : code de la nomenclature de la spécialité du PS (ex. valorisé à « SM54 » pour Médecine générale)</li>
+
+    
+          </ul>
+
+  
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="specifications_techniques-transmission-info-RDV-LRM.html">web</a>
+        </td>
+        <td>
+          <a href="https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale">mos.esante.gouv.fr</a>
+        </td>
+        <td>
+ValueCoding.system (nomenclature) :           <a href="https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale">https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale</a>
         </td>
       </tr>
     </table>
