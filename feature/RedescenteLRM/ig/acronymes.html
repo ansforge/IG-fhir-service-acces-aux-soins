@@ -1,11 +1,9 @@
-
-
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE HTML>
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>ExampleHealthcareService2 - XML Representation - Service d'Accès aux Soins v1.1.0</title>
+    <title>Sigles/Acronymes - Service d'Accès aux Soins v1.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -44,8 +42,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"15.72"}
-    h3,h4,h5,h6{--heading-prefix:"15.72"}</style>
+    <style type="text/css">h2{--heading-prefix:"14.3"}
+    h3,h4,h5,h6{--heading-prefix:"14.3"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -196,15 +194,15 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>ExampleHealthcareService2</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='autres_ressources.html'><b>Autres Ressources</b></a></li><li><b>Sigles/Acronymes</b></li>
 
           <span style="float:right;">
 
-            <a href="HealthcareService-ExampleHealthcareService2.html">&lt;prev</a> | 
+            <a href="faq.html">&lt;prev</a> | 
 
             <a href="#bottom">bottom</a>
 
-          | <a href="HealthcareService-ExampleHealthcareService2.json.html">next&gt;</a>
+          | <a href="annexes.html">next&gt;</a>
 
           </span>
 
@@ -218,82 +216,99 @@
         <div class="row">
           <div class="inner-wrapper">
 
-<div style="counter-reset: section 7" class="col-12">
-<!--ReleaseHeader--><p id="publish-box">Service d'Accès aux Soins - Local Development build (v1.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://interop.esante.gouv.fr/ig/fhir/sas/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
-
-
-
-
-
-
-
-
-
-<ul class="nav nav-tabs">
-
-  <li>
-    <a href="HealthcareService-ExampleHealthcareService2.html">Narrative Content</a>
-  </li>
-
-
-
-  
-    <li class="active">
-      <a href="#">XML</a>
-    </li>
-  
-
-
-  
-    <li>
-      <a href="HealthcareService-ExampleHealthcareService2.json.html">JSON</a>
-    </li>
-  
-
-
-  
-    <li>
-      <a href="HealthcareService-ExampleHealthcareService2.ttl.html">TTL</a>
-    </li>
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Service d'Accès aux Soins - Local Development build (v1.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://interop.esante.gouv.fr/ig/fhir/sas/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Sigles/Acronymes</h2>
   
 
 
 
-</ul>
-
-
-<a name="root"> </a>
-
-
-<h2 id="root">: ExampleHealthcareService2 - XML Representation</h2>
-
-
-<p><a href="HealthcareService-ExampleHealthcareService2.xml" no-download="true">Raw xml</a> | <a href="HealthcareService-ExampleHealthcareService2.xml" download>Download</a></p>
-
-  <!-- insert intro if present -->
-  
 
 
 
-  <pre class="xml" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-xml" style="white-space: pre; text-wrap: nowrap;">
-&lt;<a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService">HealthcareService</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;ExampleHealthcareService2&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.meta">meta</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
-             <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-healthcareservice-lrm&quot;/&gt;
-  &lt;/<a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.meta">meta</a>&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.text">text</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
-    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Narratif généré : ServiceDeSanté ExampleHealthcareService2&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;ExampleHealthcareService2&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcExampleHealthcareService2&quot;&gt; &lt;/a&gt;&lt;div style=&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%&quot;&gt;&lt;p style=&quot;margin-bottom: 0px&quot;/&gt;&lt;p style=&quot;margin-bottom: 0px&quot;&gt;Profil: &lt;a href=&quot;StructureDefinition-sas-healthcareservice-lrm.html&quot;&gt;SASHealthcareServiceLRM&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;providedBy&lt;/b&gt;: &lt;a href=&quot;Organization-ExampleSasOrganization3.html&quot;&gt;Organization CPTS DU HAUT BUGEY&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;<a name="end-xhtml"></a>
-  &lt;/<a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.text">text</a>&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.providedBy">providedBy</a>&gt;<a href="Organization-ExampleSasOrganization3.html" style="color: Maroon">&#x1F517;</a> 
-    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Organization/ExampleSasOrganization3&quot;/&gt;
-  &lt;/<a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.providedBy">providedBy</a>&gt;
-&lt;/<a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService">HealthcareService</a>&gt;</code></pre>
 
 
-  <!-- insert notes if present -->
-  
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<table style="width:100%">
+  <tr>
+    <th>Sigle / Acronyme</th>
+    <th>Définition</th>
+  </tr>
+  <tr>
+    <td>ANS</td>
+    <td>Agence du Numérique en Santé</td>
+  </tr>
+  <tr>
+    <td>CI-SIS</td>
+    <td>Cadre d’Interopérabilité des Systèmes d’Information de Santé</td>
+  </tr>
+  <tr>
+    <td>CPTS</td>
+    <td>Communauté Professionnelle Territoriale de Santé</td>
+  </tr>
+  <tr>
+    <td>DRM</td>
+    <td>Dossier de Régulation Médicale</td>
+  </tr>
+  <tr>
+    <td>FINESS</td>
+    <td>Fichier National des Etablissements Sanitaires et Sociaux</td>
+  </tr>
+  <tr>
+    <td>IDNPS</td>
+    <td>IDEntifiant National de Professionel de Santé</td>
+  </tr>
+  <tr>
+    <td>IDNST</td>
+    <td>IDentifiant National de STructure</td>
+  </tr>
+  <tr>
+    <td>LRM</td>
+    <td>Logiciel de Régulation Médicale</td>
+  </tr>
+  <tr>
+    <td>MOS</td>
+    <td>Modélisation des Objects de Santé</td>
+  </tr>
+  <tr>
+    <td>NOS</td>
+    <td>Nomenclature des Objets de Santé</td>
+  </tr>
+  <tr>
+    <td>RPPS</td>
+    <td>Répertoire Partagé des Professionnels de Santé</td>
+  </tr>
+  <tr>
+    <td>SAS</td>
+    <td>Service d'Accès aux Soins</td>
+  </tr>
+  <tr>
+    <td>SIRET</td>
+    <td>Système d’Identification du Répertoire des ETablissements</td>
+  </tr>
+  <tr>
+    <td>SNP</td>
+    <td>Soins Non Programmés</td>
+  </tr>
+  <tr>
+    <td>TRE</td>
+    <td>Terminologie de REférence</td>
+  </tr>
+</table>
 
 
 
@@ -317,7 +332,7 @@
             <tr>
               <td style="text-align:left">&#xA0;
 
-                <a href="HealthcareService-ExampleHealthcareService2.html">&lt;prev</a>
+                <a href="faq.html">&lt;prev</a>
 
               </td>
               <td style="text-align:center">
@@ -325,7 +340,7 @@
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="HealthcareService-ExampleHealthcareService2.json.html">next&gt;</a>
+                <a href="annexes.html">next&gt;</a>
 
               </td>
             </tr>
