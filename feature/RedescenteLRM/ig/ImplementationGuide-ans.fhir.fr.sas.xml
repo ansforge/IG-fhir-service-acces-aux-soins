@@ -10,7 +10,7 @@
   <name value="SAS"/>
   <title value="Service d'Accès aux Soins"/>
   <status value="active"/>
-  <date value="2025-09-15T14:56:21+00:00"/>
+  <date value="2025-09-15T15:53:38+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -45,14 +45,17 @@
     <packageId value="hl7.fhir.uv.extensions.r4"/>
     <version value="5.2.0"/>
   </dependsOn>
-  <dependsOn id="hl7_fhir_fr_core">
+  <dependsOn id="frcore210">
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-ImplementationGuide.dependsOn.reason">
+      <valueMarkdown value="Version utilisée pour le cas d'usage de transmission des informations de RDV aux LRM&#xA;"/>
+    </extension>
     <uri value="https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core"/>
     <packageId value="hl7.fhir.fr.core"/>
     <version value="2.1.0"/>
   </dependsOn>
   <dependsOn id="frcore110">
     <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-ImplementationGuide.dependsOn.reason">
-      <valueMarkdown value="Version pour les cas d'usage PS Indiv, SOS et CPTS&#xA;"/>
+      <valueMarkdown value="Version utilisée pour les cas d'usage PS Indiv, SOS et CPTS&#xA;"/>
     </extension>
     <uri value="http://fhir.org/packages/hl7.fhir.fr.core/ImplementationGuide/hl7.fhir.fr.core"/>
     <packageId value="hl7.fhir.fr.core"/>

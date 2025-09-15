@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "SAS"] ; # 
   fhir:title [ fhir:v "Service d'Accès aux Soins"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2025-09-15T14:56:21+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-09-15T15:53:38+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -68,7 +68,14 @@
      fhir:packageId [ fhir:v "hl7.fhir.uv.extensions.r4" ] ;
      fhir:version [ fhir:v "5.2.0" ]
   ] [
-     fhir:id [ fhir:v "hl7_fhir_fr_core" ] ;
+     fhir:id [ fhir:v "frcore210" ] ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/5.0/StructureDefinition/extension-ImplementationGuide.dependsOn.reason"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:markdown ;
+         fhir:v "Version utilisée pour le cas d'usage de transmission des informations de RDV aux LRM\n"
+       ]
+     ] ) ;
      fhir:uri [
        fhir:v "https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core"^^xsd:anyURI ;
        fhir:link <https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core>
@@ -81,7 +88,7 @@
        fhir:url [ fhir:v "http://hl7.org/fhir/5.0/StructureDefinition/extension-ImplementationGuide.dependsOn.reason"^^xsd:anyURI ] ;
        fhir:value [
          a fhir:markdown ;
-         fhir:v "Version pour les cas d'usage PS Indiv, SOS et CPTS\n"
+         fhir:v "Version utilisée pour les cas d'usage PS Indiv, SOS et CPTS\n"
        ]
      ] ) ;
      fhir:uri [
