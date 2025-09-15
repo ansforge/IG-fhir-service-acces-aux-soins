@@ -17,7 +17,7 @@ Pour le patient confronté à un besoin de soins non programmés (SNP) et lorsqu
 Pour le patient orienté vers la filière de ville, les acteurs de la chaîne de régulation médicale du SAS peuvent s’appuyer sur la plateforme numérique, afin de :
 - Visualiser les créneaux disponibles des effecteurs de soin,
 - Réserver pour le patient une consultation de soin non programmé, au plus proche de ses besoins (localisation, horaire, spécialité).
-Plus d'information sur le site dédié du ministère : <https://esante.gouv.fr/sas>.
+Plus d'information sur la page dédiée de l'ANS : <https://esante.gouv.fr/domaine-urgences/sas>.
 
 ### Contexte technique
 L'objectif est de définir les profils qui doivent être implémentés par les éditeurs de solution de prise de rendez-vous en ligne pour exposer les créneaux disponibles et informer la plateforme des rendez-vous pris.
@@ -53,7 +53,7 @@ La fludification du parcours régulateurs inclut les éléments suivants :
 - Alimenter les LRM avec les données des RDV pris - *Flux transmission des informations de RDV aux LRM*
 
 <blockquote class="stu-note">
-<p>Le présent guide sera enrichi régulièrement avec la description de tous les cas d'usage et l'offre de soins cible</p>
+<p>Le présent guide est enrichi régulièrement avec la description de tous les cas d'usage et l'offre de soins cible</p>
 </blockquote>
 
 
@@ -88,7 +88,7 @@ La fludification du parcours régulateurs inclut les éléments suivants :
 
 1. [Spécifications fonctionnelles](./specifications_fonctionnelles.html#transmission-des-informations-de-rdv-aux-lrm)
 2. [Spécifications techniques](./specifications_techniques-transmission-info-RDV-LRM.html)
-3. [Ressources de conformité](./ressources_casusage.html#redescente-des-informations-de-rdv)
+3. [Ressources de conformité](./ressources_casusage.html#transmission-des-informations-de-rendez-vous-aux-lrm)
 
 ### Dépendances
  
