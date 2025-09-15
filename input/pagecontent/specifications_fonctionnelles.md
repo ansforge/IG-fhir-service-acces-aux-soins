@@ -202,7 +202,7 @@ Le schéma ci-dessous illustre l'échange à mettre en oeuvre :
 ### Transmission des informations de RDV aux LRM
 
 #### Description du cas d'usage
-L’objectif de cette interface, flux INT_L02, est de pouvoir alimenter de manière automatisée le DRM avec les informations de RDV pris pour le compte du patient dans les solutions logicielles éditeurs (LGA) ou dans la plateforme numérique du SAS.
+L’objectif de cette interface, **flux INT_L02**, est de pouvoir alimenter de manière automatisée le DRM avec les informations de RDV pris pour le compte du patient dans les solutions logicielles éditeurs (LGA) ou dans la plateforme numérique du SAS.
 À la suite de la prise de RDV réalisée par la régulation pour le compte du patient, les informations de RDV sont centralisées au niveau de la plateforme nationale. Les travaux souhaités visent à poursuivre le parcours de la donnée pour venir alimenter le DRM avec ces informations, selon le schéma suivant :
 
 <table align="center">
@@ -233,13 +233,13 @@ Nous nous intéresserons dans la suite de la page et dans la partie technique au
 
 ##### Role de la plateforme numérique SAS
 
-La plateforme numérique SAS consolide et enregistre les données associées aux RDVs pris par les régulateurs et réalise les actions suivantes :
+**La plateforme numérique SAS consolide et enregistre les données associées aux RDVs pris** par les régulateurs et réalise les actions suivantes :
 - La plateforme transmet les informations d’orientations de manière instantanée au format spécifié et avec la liste des données métier disponibles
 - La plateforme cible le SAS concerné pour transmission des orientations au LRM associé
 - Les messages transmis incluent la création d’un RDV et les mises à jours potentielles
 
 ##### Rôle du Hubsanté
-- Le Hub assure la couche de transport sécurisée et la transmission des données de la plateforme numérique SAS vers la solution de LRM
+Le Hub assure la couche de transport sécurisée et la transmission des données de la plateforme numérique SAS vers la solution de LRM : 
 - Le Hub transmet au SAMU ciblé en fonction du message
 - Le Hub suit l'acquittement du message et les erreurs transmises par la solution LRM
 - Le Hub assure la transmission de l’acquittement des messages ou des erreurs à la plateforme numérique SAS
@@ -251,23 +251,18 @@ La plateforme numérique SAS consolide et enregistre les données associées aux
 
 
 #### Données à échanger
-Le flux contient la liste de données suivantes (certaines données ne seront pas transmises systématiquement en fonction du type de cas d'usage et de la situation du RDV à un instant t) : 
-- Identifiant du RDV
-- Date/heure de début du RDV
-- Date/heure  de fin du RDV
-- Date/heure de création du RDV
-- Identifiant du PS effecteur de soins
-- Nom / Prénom du PS effecteur de soins
-- Spécialité du PS effecteur de soins
-- Statut du RDV
-- Type d'orientation (ex : SOS, CPTS, ...)
-- Nom de la structure / organisation liée au RDV
-- Identifiant national de la structure liée au RDV
-- SAS ayant pris le RDV (à des fins de routage par le Hub)
+Lorsqu’un RDV est pris par le régulateur (depuis l’agenda SAS, une solution éditeur, en surnuméraire ou via place de marché), les données de l’orientation sont consolidées par la plateforme numérique SAS et **transmises instantanément à la solution de LRM. Les données fonctionnelles transmises sont les suivantes** :
+- La date et l’horaire du RDV
+- L’identifiant national (RPPS), le nom et le prénom de l’effecteur de soins
+- La spécialité de l’effecteur de soins
+- Le statut du rendez-vous
+- La catégorie d’orientation
+- La date et l’horaire de la prise de RDV
+- Le nom et l’identifiant national de la structure associée au RDV
 
 Le message transmis (Bundle) contiendra n ressources FHIR en fonction de la liste des données pouvant être transmises en fonction du contexte et de la temporalité. 
 
-Les données propres au RDV seront systématiquement transmises (ressource "Appointment" toujours présente). Le cas échéant, les données du professionnel de santé (ressource "Practitioner"), ainsi que sa situation d'exercice dans le cadre de ce RDV (ressource "PractitionerRole") et la structure associée (ressource "Organization"). 
+Les données propres au RDV seront systématiquement transmises (ressource "Appointment" toujours présente). Le cas échéant, les données du professionnel de santé (ressource "Practitioner"), ainsi que sa situation d'exercice dans le cadre du RDV (ressource "PractitionerRole") et la structure associée (ressource "Organization") seront transmises.
 Si le professionel de santé n'est pas connu, la structure (ressource "Organization") peut également être liée à un RDV via la ressource "Healthcare Service"
 
 Le schéma ci-dessous présente une synthèse des ressources FHIR à utiliser :
@@ -278,8 +273,10 @@ Le schéma ci-dessous présente une synthèse des ressources FHIR à utiliser :
 
 #### Rattachement au DRM dans la solution LRM 
 
-Les orientations transmises automatiquement au LRM sont affichées au niveau du LRM pour le régulateur qui est en mesure de réaliser le rattachement avec le DRM (Dossier de Régulation Médicale) correspondant pour alimentation avec les données du RDV pris pour le compte du patient sans ressaisie. 
+Les orientations transmises automatiquement au LRM sont affichées au niveau du LRM pour que le régulateur soit en mesure de réaliser le **rattachement avec le bon dossier d’orientation au sein du DRM** correspondant, permettant ainsi d’**alimenter les données du RDV pris pour le compte du patient sans ressaisie**.
 
-D’un point de vue implémentation, l’action de rapprochement entre l’orientation et le DRM par le régulateur pourra se traduire à titre d’exemple par la mise en place d’un tableau de bord ou d’un espace pour la gestion des RDV pris au sein du LRM en s’appuyant sur la donnée métier disponible (ex. via numéro téléphone, Nom Patient, sélection ID DRM avec filtre SNP, heure de prise de RDV, heure du RDV, etc) ou par l’affichage d’une liste déroulante des orientations non associées depuis le DRM. L’ANS et l’éditeur conviendront, lors de l’atelier de cadrage, du moyen d’association défini dans la solution éditeur pour que le régulateur puisse alimenter simplement le DRM avec les données de l’orientation réalisée.  
+D’un point de vue implémentation, l’action de **rapprochement entre l’orientation et le DRM par le régulateur** pourra se traduire à titre d’exemple par la mise en place d’un tableau de bord ou d’un espace pour la gestion des RDV pris au sein du LRM en s’appuyant sur la donnée métier disponible (ex. via numéro téléphone, identité du PS, ID DRM, heure de RDV, etc.) ou par l’affichage d’une liste déroulante des orientations non associées depuis le DRM ou tout autre implémentation que l’éditeur jugera pertinente au sein de sa solution. **L’ANS et l’éditeur conviendront, lors de l’atelier de cadrage**, du moyen d’association défini dans la solution éditeur pour que le régulateur puisse alimenter simplement le DRM avec les données de l’orientation réalisée. Ceci, pour notamment faciliter l’accompagnement au déploiement et de formation des utilisateurs.
+
+ 
 
  

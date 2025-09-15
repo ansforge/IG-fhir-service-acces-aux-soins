@@ -11,16 +11,18 @@ Le protocole utilisé pour la connexion des applications (PTF SAS et éditeurs d
 
 Les messages seront transmis au format json sous la forme d'une ressource [FHIR Bundle](https://hl7.org/fhir/R4/bundle.html) de type transaction contenant les différentes ressources / données permettant aux LRM de traiter le message. 
 
-Ils seront transmis avec une entête permettant notamment au Hub de router le message vers le bon SAS de destination.
+Les messages sont transmis avec un entête permettant au Hub de router le message vers le bon SAMU et la solution LRM associée au SAS de destination. Les règles de nommage et de routage associées ainsi que l’enveloppe EDXL-DE permettant de porter ces informations d’adressage dans les messages sont décrites ci-après.
 
-Chaque client dispose de 3 files d’écoute selon la typologie des messages reçus : 
+Le mode de communication est basé sur un mode d'échange point à point (PTP) via des files de messages.
+
+Chaque client (Plateforme numérique SAS et les solutions de LRM) dispose de 3 files d’écoute selon la typologie des messages reçus : 
 - « message » pour les échanges fonctionnels
 - « ack » pour les acquittements de réception finale
 - « info » pour les messages généraux d’informations, alertes et erreurs
 
 La structuration du nom des files est {𝑖𝑑𝑒𝑛𝑡𝑖𝑓𝑖𝑎𝑛𝑡𝐶𝑙𝑖𝑒𝑛𝑡}.{𝑡𝑦𝑝𝑜𝑙𝑜𝑔𝑖𝑒} donnant, par exemple, *fr.health.samu001.message*
 
-En l'occurence, les LRM écouteront sur leur file « message » et la plateforme SAS écoutera sur les files "ack" et "info".  
+En l'occurrence, les LRM écouteront sur leur file « message » et la plateforme SAS écoutera sur les files "ack" et "info".  
 
 Le schéma ci-dessous détaille cette cinématique d'échange entre les différents acteurs
 
@@ -33,7 +35,9 @@ Le schéma ci-dessous détaille cette cinématique d'échange entre les différe
 #### Gestion de l'envoi d'un message de la PTF SAS -> Hub 
 
 Les champs ci-dessous correspondent à l’en-tête du message qui porte les informations de RDV pris par le régulateur pour le compte du patient. Ce message est envoyé instantanément de la plateforme SAS au HubSanté. 
-L'entête est de type "EDXL-DE", cf. spécifications du Hub Santé.
+L'entête est de type "EDXL-DE", cf. [spécifications techniques (DST) du Hub Santé](https://hub.esante.gouv.fr/resources/Accompagnement/tech/23.09%20DST%20v1.2%20-%20Hub%20Sante%20&%20connecteurs.pdf).
+
+Le tableau ci-dessous précise les balises qui doivent être envoyées et qui sont nécessaires au routage des messages.
 
 | Élément | Champ | Type | Description | Commentaire / valeur |
 |--------|--------|------|------|-------------|
@@ -50,7 +54,7 @@ L'entête est de type "EDXL-DE", cf. spécifications du Hub Santé.
 
 #### Acquittement technique
 
-Un acquittement technique sera transmis du Hub vers la plateforme SAS afin d'informer cette dernière de la bonne prise en charge du message et de l'inscription dans sa file d'envoi (file « message » du LRM). Cette fonctionnalité est intégréé au protocole AMQ sous la forme de *Consumer Acknowledgement*, cf. spécifications du Hub Santé.
+Un acquittement technique sera transmis du Hub vers la plateforme SAS afin d'informer de la bonne prise en charge du message et de l'inscription dans sa file d'envoi (file « message » du LRM). Cette fonctionnalité est intégrée au protocole AMQ sous la forme de *Consumer Acknowledgement* (cf. spécifications du Hub Santé §3.3.1).
 
 
 #### Message d'acquittement final
@@ -155,7 +159,8 @@ Cf. [exemple](./Bundle-ExampleBundleAppointmentLRM9.json.html) de RDV annulé av
 Cette section détaille les nomenclatures à utiliser afin de renseigner les différents éléments codifiés de la requête.
  - **Méthode d’ajout de la ressource associée** : Pour chaque ressource à ajouter ou modifier, ces champs permettent d’indiquer la méthode HTTP à appliquer (POST, PUT) et l’url de la ressource équivalente :
     - Entry.request.method est valorisé à « POST » pour indiquer une nouvelle ressource à créer pour le RDV transmis ou « PUT » pour une ressource transmise initialement et concernant une mise à jour d’un ou plusieurs champs au sein de celle-ci.
-    - Entry.request.url indique la ressource associée à créer ou mettre à jour 
+    - Entry.request.url indique la ressource associée à créer ou mettre à jour
+    (ex. valorisé à `Appointment` pour la transmission des champs de la ressource Appointment pour un nouveau RDV ou à `Appointment/<référence à la ressource Appointment associée>` dans le cas d’une modification d’un des champs de cette ressource)
   
 - **Identifiant technique du RDV** : Un identifiant technique unique par RDV est transmis. Cet ID est défini par la plateforme numérique SAS et peut prendre la forme d’un UUID par exemple. La solution éditeur devra s’appuyer sur cet ID pour la gestion des requêtes de mises à jour.
 
@@ -191,8 +196,8 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
   - identifier.type (type d’identifiant) : le champ type.coding.code est valorisé à « IDNST » et type.coding.system à <https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203>
 
 - **Référence à la ressource Practitioner et/ou Organization associée** : Lorsque le PS effecteur de soins de l’orientation transmise est connu, une référence à Practitioner est valorisée. Lorsque la structure de soins associée au RDV transmis est connue, une référence à Organization est valorisée. Ces références sont valorisées comme suit :
-  - Practitioner.reference : Practitioner/<référence à la ressource Practitioner associée>
-  - Organization.reference : Organization/<référence à la ressource Organization associée>
+  - Practitioner.reference : `Practitioner/<référence à la ressource Practitioner associée>`
+  - Organization.reference : `Organization/<référence à la ressource Organization associée>`
 
 
 ### Déclencheurs et règles d'intégration attendues
@@ -214,6 +219,6 @@ Divers évènements dans la plateforme numérique SAS peuvent déclencher de man
 Le paragraphe ci-dessous détaille les différentes **règles de gestions attendues** par les éditeurs à la suite du déclenchement du flux et la transmission d’un message : 
 - A la réception du message, **la solution éditeur stockera l’identifiant technique SAS du RDV transmis** pour référence et gestion des mises à jour éventuelles 
 - Il est attendu pour les éditeurs ayant implémenté le flux de **mettre en place une écoute de leurs files de messages instantanément** afin de permettra le rattachement du RDV avec le DRM par le régulateur à la suite de la transmission des informations de RDV 
-- Lorsque les données du RDV pris pour le compte du patient auront été transmises à la solution LRM, le régulateur OSNP devra réaliser le rapprochement entre l’orientation et le DRM. Il est attendu que **l’éditeur mette en place un tableau de bord ou un espace pour la gestion des RDV pris au sein du LRM** en s’appuyant sur la donnée métier disponible (ex. via numéro téléphone, Nom Patient, sélection ID DRM avec filtre SNP, heure de prise de RDV, heure du RDV, etc) ou par l’affichage d’une liste déroulante des orientations non associées depuis le DRM. L’ANS et l’éditeur conviendront en atelier de cadrage du moyen d’association à définir dans la solution. 
+- Lorsque les données du RDV pris pour le compte du patient auront été transmises à la solution LRM, le régulateur OSNP devra pouvoir réaliser le rapprochement entre l’orientation et le DRM. Il est attendu que **l’éditeur mette en place une solution pour que le régulateur puisse faire ce rapprochement au sein de la solution LRM**. Par exemple, un tableau de bord, un espace pour la gestion des RDV pris, un affichage des données métier disponibles pour faciliter l’action (ex. numéro téléphone, nom du PS, nom du patient, sélection DRM, heure de prise de RDV, heure du RDV, etc.), ou tout autre solution ergonomique que l’éditeur jugera pertinente. L’éditeur partagera à l’ANS la solution qu’il est prévu de mettre en place.
 - Les règles d’association de l’orientation avec le DRM et la gestion des requêtes potentielles non associées seront gérées au cas par cas avec l’éditeur. 
 - Il est attendu de la part de l’éditeur de **conserver un historique des messages reçus** au niveau de l’échange et au niveau du résultat du traitement du message. 
