@@ -10,7 +10,7 @@
   "name" : "SAS",
   "title" : "Service d'Accès aux Soins",
   "status" : "active",
-  "date" : "2025-09-15T14:05:00+00:00",
+  "date" : "2025-09-15T14:56:21+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -56,7 +56,11 @@
     "version" : "2.1.0"
   },
   {
-    "id" : "hl7_fhir_fr_core_v110",
+    "id" : "frcore110",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-ImplementationGuide.dependsOn.reason",
+      "valueMarkdown" : "Version pour les cas d'usage PS Indiv, SOS et CPTS\n"
+    }],
     "uri" : "http://fhir.org/packages/hl7.fhir.fr.core/ImplementationGuide/hl7.fhir.fr.core",
     "packageId" : "hl7.fhir.fr.core",
     "version" : "1.1.0"

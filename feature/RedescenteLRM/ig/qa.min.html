@@ -47,7 +47,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for SAS</h1>
- <p>Generated Mon Sep 15 14:07:35 UTC 2025, FHIR version 4.0.1 for ans.fhir.fr.sas#1.1.0 (canonical = <a href="https://interop.esante.gouv.fr/ig/fhir/sas">https://interop.esante.gouv.fr/ig/fhir/sas</a> (<a href="https://interop.esante.gouv.fr/ig/fhir/sas/history.html">history</a>)). See <a href="qa.html">Full QA Report</a> &amp; <a href="qa-ipreview.html">IP</a></p>
+ <p>Generated Mon Sep 15 14:58:56 UTC 2025, FHIR version 4.0.1 for ans.fhir.fr.sas#1.1.0 (canonical = <a href="https://interop.esante.gouv.fr/ig/fhir/sas">https://interop.esante.gouv.fr/ig/fhir/sas</a> (<a href="https://interop.esante.gouv.fr/ig/fhir/sas/history.html">history</a>)). See <a href="qa.html">Full QA Report</a> &amp; <a href="qa-ipreview.html">IP</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
  <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v2.0.17</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = ans.fhir.fr.sas, Canonical = https://interop.esante.gouv.fr/ig/fhir/sas</td></tr>
@@ -80,7 +80,7 @@
  <tr><td>Global Profiles:</td><td>(none declared)</td></tr>
  <tr><td>Terminology Server(s):</td><td><a href="http://tx.fhir.org/r4">http://tx.fhir.org/r4</a>, <a href="https://smt.esante.gouv.fr/fhir">https://smt.esante.gouv.fr/fhir</a>, <a href="https://tx.fhir.org/r4">https://tx.fhir.org/r4</a> (<a href="qa-txservers.html">details</a>)</td></tr>
  <tr><td>HTA Analysis:</td><td><i>Non-HL7 Igs are exempt from terminology dependency analysis</i></td></tr>
- <tr><td>R5 Dependencies:</td><td><ul><li><a href="http://build.fhir.org/slot.html">http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType</a></li></ul></td></tr>
+ <tr><td>R5 Dependencies:</td><td><ul><li><a href="http://build.fhir.org/slot.html">http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType</a></li><li><a href="http://build.fhir.org/implementationguide.html">http://hl7.org/fhir/5.0/StructureDefinition/extension-ImplementationGuide.dependsOn.reason</a></li></ul></td></tr>
  <tr><td>Draft Dependencies:</td><td><ul>
   <li>
 hl7.fhir.fr.core#1.1.0:     <a href="https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&amp;canonical=http://interopsante.org/fhir/CodeSystem/fr-v2-0203">fr-v2-0203</a>
@@ -914,16 +914,16 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>ImplementationGuide&#8203;.dependsOn[3]&#8203;.uri (l1&#8203;/c1928)</b></td><td><b>warning</b></td><td><b>A definition could not be found for Canonical URL 'http://fhir.org/packages/hl7.fhir.fr.core/ImplementationGuide/hl7.fhir.fr.core'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE</span></td>
+     <td><b>ImplementationGuide&#8203;.dependsOn[3]&#8203;.uri (l1&#8203;/c2102)</b></td><td><b>warning</b></td><td><b>A definition could not be found for Canonical URL 'http://fhir.org/packages/hl7.fhir.fr.core/ImplementationGuide/hl7.fhir.fr.core'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE</span></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>ImplementationGuide&#8203;.definition&#8203;.resource[108]&#8203;.description (l1&#8203;/c54147)</b></td><td><b>information</b></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SECURITY_STRING_CONTENT_WARNING</span></td>
+     <td><b>ImplementationGuide&#8203;.definition&#8203;.resource[108]&#8203;.description (l1&#8203;/c54321)</b></td><td><b>information</b></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SECURITY_STRING_CONTENT_WARNING</span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>ImplementationGuide&#8203;.dependsOn[3] (l1&#8203;/c1978)</b></td><td><b>warning</b></td><td><b>The canonical URL http://fhir.org/packages/hl7.fhir.fr.core/ImplementationGuide/hl7.fhir.fr.core doesn't point to an actual ImplementationGuide resource</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">IG_DEPENDENCY_INVALID_URL</span></td>
+     <td><b>ImplementationGuide&#8203;.dependsOn[3] (l1&#8203;/c2152)</b></td><td><b>warning</b></td><td><b>The canonical URL http://fhir.org/packages/hl7.fhir.fr.core/ImplementationGuide/hl7.fhir.fr.core doesn't point to an actual ImplementationGuide resource</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">IG_DEPENDENCY_INVALID_URL</span></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>ImplementationGuide&#8203;.dependsOn[3] (l1&#8203;/c1978)</b></td><td><b>error</b></td><td><b>The packageId hl7.fhir.fr.core points to the canonical https://hl7.fr/ig/fhir/core which is inconsistent with the stated canonical of http://fhir.org/packages/hl7.fhir.fr.core/ImplementationGuide/hl7.fhir.fr.core</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">IG_DEPENDENCY_CLASH_CANONICAL</span></td>
+     <td><b>ImplementationGuide&#8203;.dependsOn[3] (l1&#8203;/c2152)</b></td><td><b>error</b></td><td><b>The packageId hl7.fhir.fr.core points to the canonical https://hl7.fr/ig/fhir/core which is inconsistent with the stated canonical of http://fhir.org/packages/hl7.fhir.fr.core/ImplementationGuide/hl7.fhir.fr.core</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">IG_DEPENDENCY_CLASH_CANONICAL</span></td>
    </tr>
 </table>
 <hr/>
