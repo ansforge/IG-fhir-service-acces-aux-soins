@@ -471,7 +471,7 @@ Le schéma ci-dessous illustre l'échange à mettre en oeuvre :</p>
 <h3 id="transmission-des-informations-de-rdv-aux-lrm">Transmission des informations de RDV aux LRM</h3>
 
 <h4 id="description-du-cas-dusage-3">Description du cas d'usage</h4>
-<p>L’objectif de cette interface, flux INT_L02, est de pouvoir alimenter de manière automatisée le DRM avec les informations de RDV pris pour le compte du patient dans les solutions logicielles éditeurs (LGA) ou dans la plateforme numérique du SAS.
+<p>L’objectif de cette interface, <strong>flux INT_L02</strong>, est de pouvoir alimenter de manière automatisée le DRM avec les informations de RDV pris pour le compte du patient dans les solutions logicielles éditeurs (LGA) ou dans la plateforme numérique du SAS.
 À la suite de la prise de RDV réalisée par la régulation pour le compte du patient, les informations de RDV sont centralisées au niveau de la plateforme nationale. Les travaux souhaités visent à poursuivre le parcours de la donnée pour venir alimenter le DRM avec ces informations, selon le schéma suivant :</p>
 
 <table align="center">
@@ -502,7 +502,7 @@ Le schéma ci-dessous illustre l'échange à mettre en oeuvre :</p>
 
 <h5 id="role-de-la-plateforme-numérique-sas">Role de la plateforme numérique SAS</h5>
 
-<p>La plateforme numérique SAS consolide et enregistre les données associées aux RDVs pris par les régulateurs et réalise les actions suivantes :</p>
+<p><strong>La plateforme numérique SAS consolide et enregistre les données associées aux RDVs pris</strong> par les régulateurs et réalise les actions suivantes :</p>
 <ul>
   <li>La plateforme transmet les informations d’orientations de manière instantanée au format spécifié et avec la liste des données métier disponibles</li>
   <li>La plateforme cible le SAS concerné pour transmission des orientations au LRM associé</li>
@@ -510,8 +510,8 @@ Le schéma ci-dessous illustre l'échange à mettre en oeuvre :</p>
 </ul>
 
 <h5 id="rôle-du-hubsanté">Rôle du Hubsanté</h5>
+<p>Le Hub assure la couche de transport sécurisée et la transmission des données de la plateforme numérique SAS vers la solution de LRM :</p>
 <ul>
-  <li>Le Hub assure la couche de transport sécurisée et la transmission des données de la plateforme numérique SAS vers la solution de LRM</li>
   <li>Le Hub transmet au SAMU ciblé en fonction du message</li>
   <li>Le Hub suit l'acquittement du message et les erreurs transmises par la solution LRM</li>
   <li>Le Hub assure la transmission de l’acquittement des messages ou des erreurs à la plateforme numérique SAS</li>
@@ -525,25 +525,20 @@ Le schéma ci-dessous illustre l'échange à mettre en oeuvre :</p>
 </ul>
 
 <h4 id="données-à-échanger">Données à échanger</h4>
-<p>Le flux contient la liste de données suivantes (certaines données ne seront pas transmises systématiquement en fonction du type de cas d'usage et de la situation du RDV à un instant t) :</p>
+<p>Lorsqu’un RDV est pris par le régulateur (depuis l’agenda SAS, une solution éditeur, en surnuméraire ou via place de marché), les données de l’orientation sont consolidées par la plateforme numérique SAS et <strong>transmises instantanément à la solution de LRM. Les données fonctionnelles transmises sont les suivantes</strong> :</p>
 <ul>
-  <li>Identifiant du RDV</li>
-  <li>Date/heure de début du RDV</li>
-  <li>Date/heure  de fin du RDV</li>
-  <li>Date/heure de création du RDV</li>
-  <li>Identifiant du PS effecteur de soins</li>
-  <li>Nom / Prénom du PS effecteur de soins</li>
-  <li>Spécialité du PS effecteur de soins</li>
-  <li>Statut du RDV</li>
-  <li>Type d'orientation (ex : SOS, CPTS, …)</li>
-  <li>Nom de la structure / organisation liée au RDV</li>
-  <li>Identifiant national de la structure liée au RDV</li>
-  <li>SAS ayant pris le RDV (à des fins de routage par le Hub)</li>
+  <li>La date et l’horaire du RDV</li>
+  <li>L’identifiant national (RPPS), le nom et le prénom de l’effecteur de soins</li>
+  <li>La spécialité de l’effecteur de soins</li>
+  <li>Le statut du rendez-vous</li>
+  <li>La catégorie d’orientation</li>
+  <li>La date et l’horaire de la prise de RDV</li>
+  <li>Le nom et l’identifiant national de la structure associée au RDV</li>
 </ul>
 
 <p>Le message transmis (Bundle) contiendra n ressources FHIR en fonction de la liste des données pouvant être transmises en fonction du contexte et de la temporalité.</p>
 
-<p>Les données propres au RDV seront systématiquement transmises (ressource "Appointment" toujours présente). Le cas échéant, les données du professionnel de santé (ressource "Practitioner"), ainsi que sa situation d'exercice dans le cadre de ce RDV (ressource "PractitionerRole") et la structure associée (ressource "Organization"). 
+<p>Les données propres au RDV seront systématiquement transmises (ressource "Appointment" toujours présente). Le cas échéant, les données du professionnel de santé (ressource "Practitioner"), ainsi que sa situation d'exercice dans le cadre du RDV (ressource "PractitionerRole") et la structure associée (ressource "Organization") seront transmises.
 Si le professionel de santé n'est pas connu, la structure (ressource "Organization") peut également être liée à un RDV via la ressource "Healthcare Service"</p>
 
 <p>Le schéma ci-dessous présente une synthèse des ressources FHIR à utiliser :</p>
@@ -554,9 +549,9 @@ Si le professionel de santé n'est pas connu, la structure (ressource "Organizat
 
 <h4 id="rattachement-au-drm-dans-la-solution-lrm">Rattachement au DRM dans la solution LRM</h4>
 
-<p>Les orientations transmises automatiquement au LRM sont affichées au niveau du LRM pour le régulateur qui est en mesure de réaliser le rattachement avec le DRM (Dossier de Régulation Médicale) correspondant pour alimentation avec les données du RDV pris pour le compte du patient sans ressaisie.</p>
+<p>Les orientations transmises automatiquement au LRM sont affichées au niveau du LRM pour que le régulateur soit en mesure de réaliser le <strong>rattachement avec le bon dossier d’orientation au sein du DRM</strong> correspondant, permettant ainsi d’<strong>alimenter les données du RDV pris pour le compte du patient sans ressaisie</strong>.</p>
 
-<p>D’un point de vue implémentation, l’action de rapprochement entre l’orientation et le DRM par le régulateur pourra se traduire à titre d’exemple par la mise en place d’un tableau de bord ou d’un espace pour la gestion des RDV pris au sein du LRM en s’appuyant sur la donnée métier disponible (ex. via numéro téléphone, Nom Patient, sélection ID DRM avec filtre SNP, heure de prise de RDV, heure du RDV, etc) ou par l’affichage d’une liste déroulante des orientations non associées depuis le DRM. L’ANS et l’éditeur conviendront, lors de l’atelier de cadrage, du moyen d’association défini dans la solution éditeur pour que le régulateur puisse alimenter simplement le DRM avec les données de l’orientation réalisée.</p>
+<p>D’un point de vue implémentation, l’action de <strong>rapprochement entre l’orientation et le DRM par le régulateur</strong> pourra se traduire à titre d’exemple par la mise en place d’un tableau de bord ou d’un espace pour la gestion des RDV pris au sein du LRM en s’appuyant sur la donnée métier disponible (ex. via numéro téléphone, identité du PS, ID DRM, heure de RDV, etc.) ou par l’affichage d’une liste déroulante des orientations non associées depuis le DRM ou tout autre implémentation que l’éditeur jugera pertinente au sein de sa solution. <strong>L’ANS et l’éditeur conviendront, lors de l’atelier de cadrage</strong>, du moyen d’association défini dans la solution éditeur pour que le régulateur puisse alimenter simplement le DRM avec les données de l’orientation réalisée. Ceci, pour notamment faciliter l’accompagnement au déploiement et de formation des utilisateurs.</p>
 
 
 
@@ -599,7 +594,7 @@ Si le professionel de santé n'est pas connu, la structure (ressource "Organizat
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Sep 12, 2025 15:51+0000">2025-09-12</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Sep 15, 2025 09:19+0000">2025-09-15</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

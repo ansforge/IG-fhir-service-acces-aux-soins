@@ -264,9 +264,11 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
 
 <p>Les messages seront transmis au format json sous la forme d'une ressource <a href="https://hl7.org/fhir/R4/bundle.html">FHIR Bundle</a> de type transaction contenant les différentes ressources / données permettant aux LRM de traiter le message.</p>
 
-<p>Ils seront transmis avec une entête permettant notamment au Hub de router le message vers le bon SAS de destination.</p>
+<p>Les messages sont transmis avec un entête permettant au Hub de router le message vers le bon SAMU et la solution LRM associée au SAS de destination. Les règles de nommage et de routage associées ainsi que l’enveloppe EDXL-DE permettant de porter ces informations d’adressage dans les messages sont décrites ci-après.</p>
 
-<p>Chaque client dispose de 3 files d’écoute selon la typologie des messages reçus :</p>
+<p>Le mode de communication est basé sur un mode d'échange point à point (PTP) via des files de messages.</p>
+
+<p>Chaque client (Plateforme numérique SAS et les solutions de LRM) dispose de 3 files d’écoute selon la typologie des messages reçus :</p>
 <ul>
   <li>« message » pour les échanges fonctionnels</li>
   <li>« ack » pour les acquittements de réception finale</li>
@@ -275,7 +277,7 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
 
 <p>La structuration du nom des files est {𝑖𝑑𝑒𝑛𝑡𝑖𝑓𝑖𝑎𝑛𝑡𝐶𝑙𝑖𝑒𝑛𝑡}.{𝑡𝑦𝑝𝑜𝑙𝑜𝑔𝑖𝑒} donnant, par exemple, <em>fr.health.samu001.message</em></p>
 
-<p>En l'occurence, les LRM écouteront sur leur file « message » et la plateforme SAS écoutera sur les files "ack" et "info".</p>
+<p>En l'occurrence, les LRM écouteront sur leur file « message » et la plateforme SAS écoutera sur les files "ack" et "info".</p>
 
 <p>Le schéma ci-dessous détaille cette cinématique d'échange entre les différents acteurs</p>
 
@@ -288,7 +290,9 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
 <h4 id="gestion-de-lenvoi-dun-message-de-la-ptf-sas---hub">Gestion de l'envoi d'un message de la PTF SAS -&gt; Hub</h4>
 
 <p>Les champs ci-dessous correspondent à l’en-tête du message qui porte les informations de RDV pris par le régulateur pour le compte du patient. Ce message est envoyé instantanément de la plateforme SAS au HubSanté. 
-L'entête est de type "EDXL-DE", cf. spécifications du Hub Santé.</p>
+L'entête est de type "EDXL-DE", cf. <a href="https://hub.esante.gouv.fr/resources/Accompagnement/tech/23.09%20DST%20v1.2%20-%20Hub%20Sante%20&amp;%20connecteurs.pdf">spécifications techniques (DST) du Hub Santé</a>.</p>
+
+<p>Le tableau ci-dessous précise les balises qui doivent être envoyées et qui sont nécessaires au routage des messages.</p>
 
 <table>
   <thead>
@@ -376,7 +380,7 @@ L'entête est de type "EDXL-DE", cf. spécifications du Hub Santé.</p>
 
 <h4 id="acquittement-technique">Acquittement technique</h4>
 
-<p>Un acquittement technique sera transmis du Hub vers la plateforme SAS afin d'informer cette dernière de la bonne prise en charge du message et de l'inscription dans sa file d'envoi (file « message » du LRM). Cette fonctionnalité est intégréé au protocole AMQ sous la forme de <em>Consumer Acknowledgement</em>, cf. spécifications du Hub Santé.</p>
+<p>Un acquittement technique sera transmis du Hub vers la plateforme SAS afin d'informer de la bonne prise en charge du message et de l'inscription dans sa file d'envoi (file « message » du LRM). Cette fonctionnalité est intégrée au protocole AMQ sous la forme de <em>Consumer Acknowledgement</em> (cf. spécifications du Hub Santé §3.3.1).</p>
 
 <h4 id="message-dacquittement-final">Message d'acquittement final</h4>
 
@@ -648,7 +652,8 @@ L'entête est de type "EDXL-DE", cf. spécifications du Hub Santé.</p>
   <li><strong>Méthode d’ajout de la ressource associée</strong> : Pour chaque ressource à ajouter ou modifier, ces champs permettent d’indiquer la méthode HTTP à appliquer (POST, PUT) et l’url de la ressource équivalente :
     <ul>
       <li>Entry.request.method est valorisé à « POST » pour indiquer une nouvelle ressource à créer pour le RDV transmis ou « PUT » pour une ressource transmise initialement et concernant une mise à jour d’un ou plusieurs champs au sein de celle-ci.</li>
-      <li>Entry.request.url indique la ressource associée à créer ou mettre à jour</li>
+      <li>Entry.request.url indique la ressource associée à créer ou mettre à jour
+ (ex. valorisé à <code class="language-plaintext highlighter-rouge">Appointment</code> pour la transmission des champs de la ressource Appointment pour un nouveau RDV ou à <code class="language-plaintext highlighter-rouge">Appointment/&lt;référence à la ressource Appointment associée&gt;</code> dans le cas d’une modification d’un des champs de cette ressource)</li>
     </ul>
   </li>
   <li>
@@ -700,8 +705,8 @@ L'entête est de type "EDXL-DE", cf. spécifications du Hub Santé.</p>
   </li>
   <li><strong>Référence à la ressource Practitioner et/ou Organization associée</strong> : Lorsque le PS effecteur de soins de l’orientation transmise est connu, une référence à Practitioner est valorisée. Lorsque la structure de soins associée au RDV transmis est connue, une référence à Organization est valorisée. Ces références sont valorisées comme suit :
     <ul>
-      <li>Practitioner.reference : Practitioner/<référence à="" la="" ressource="" Practitioner="" associée=""></référence></li>
-      <li>Organization.reference : Organization/<référence à="" la="" ressource="" Organization="" associée=""></référence></li>
+      <li>Practitioner.reference : <code class="language-plaintext highlighter-rouge">Practitioner/&lt;référence à la ressource Practitioner associée&gt;</code></li>
+      <li>Organization.reference : <code class="language-plaintext highlighter-rouge">Organization/&lt;référence à la ressource Organization associée&gt;</code></li>
     </ul>
   </li>
 </ul>
@@ -733,7 +738,7 @@ L'entête est de type "EDXL-DE", cf. spécifications du Hub Santé.</p>
 <ul>
   <li>A la réception du message, <strong>la solution éditeur stockera l’identifiant technique SAS du RDV transmis</strong> pour référence et gestion des mises à jour éventuelles</li>
   <li>Il est attendu pour les éditeurs ayant implémenté le flux de <strong>mettre en place une écoute de leurs files de messages instantanément</strong> afin de permettra le rattachement du RDV avec le DRM par le régulateur à la suite de la transmission des informations de RDV</li>
-  <li>Lorsque les données du RDV pris pour le compte du patient auront été transmises à la solution LRM, le régulateur OSNP devra réaliser le rapprochement entre l’orientation et le DRM. Il est attendu que <strong>l’éditeur mette en place un tableau de bord ou un espace pour la gestion des RDV pris au sein du LRM</strong> en s’appuyant sur la donnée métier disponible (ex. via numéro téléphone, Nom Patient, sélection ID DRM avec filtre SNP, heure de prise de RDV, heure du RDV, etc) ou par l’affichage d’une liste déroulante des orientations non associées depuis le DRM. L’ANS et l’éditeur conviendront en atelier de cadrage du moyen d’association à définir dans la solution.</li>
+  <li>Lorsque les données du RDV pris pour le compte du patient auront été transmises à la solution LRM, le régulateur OSNP devra pouvoir réaliser le rapprochement entre l’orientation et le DRM. Il est attendu que <strong>l’éditeur mette en place une solution pour que le régulateur puisse faire ce rapprochement au sein de la solution LRM</strong>. Par exemple, un tableau de bord, un espace pour la gestion des RDV pris, un affichage des données métier disponibles pour faciliter l’action (ex. numéro téléphone, nom du PS, nom du patient, sélection DRM, heure de prise de RDV, heure du RDV, etc.), ou tout autre solution ergonomique que l’éditeur jugera pertinente. L’éditeur partagera à l’ANS la solution qu’il est prévu de mettre en place.</li>
   <li>Les règles d’association de l’orientation avec le DRM et la gestion des requêtes potentielles non associées seront gérées au cas par cas avec l’éditeur.</li>
   <li>Il est attendu de la part de l’éditeur de <strong>conserver un historique des messages reçus</strong> au niveau de l’échange et au niveau du résultat du traitement du message.</li>
 </ul>
@@ -778,7 +783,7 @@ L'entête est de type "EDXL-DE", cf. spécifications du Hub Santé.</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Sep 12, 2025 15:51+0000">2025-09-12</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Sep 15, 2025 09:19+0000">2025-09-15</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
