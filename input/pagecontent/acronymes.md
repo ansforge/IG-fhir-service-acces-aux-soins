@@ -55,6 +55,10 @@
     <td>SIRET</td>
     <td>Système d’Identification du Répertoire des ETablissements</td>
   </tr>
+   <tr>
+    <td>SMUR</td>
+    <td>Structures Mobiles d'Urgence et de Réanimation</td>
+  </tr>
   <tr>
     <td>SNP</td>
     <td>Soins Non Programmés</td>
