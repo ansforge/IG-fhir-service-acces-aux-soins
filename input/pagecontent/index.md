@@ -48,8 +48,8 @@ L'offre de soins à mettre à disposition inclut les volets :
 - SOS Médecins
 
 La fludification du parcours régulateurs inclut les éléments suivants : 
-- Limiter le nombre d’authentifications entre les solutions logicielles ​- *Flux recherche contextuelle*
-- Limiter la ressaisie des données pour lancer une recherche d’offre de soins et pour la prise de RDV pour le compte du patient​ - *Flux recherche contextuelle*
+- Limiter le nombre d’authentifications entre les solutions logicielles ​- *Recherche contextuelle*
+- Limiter la ressaisie des données pour lancer une recherche d’offre de soins et pour la prise de RDV pour le compte du patient​ - *Recherche contextuelle*
 - Alimenter les LRM avec les données des RDV pris - *Flux transmission des informations de RDV aux LRM*
 
 <blockquote class="stu-note">

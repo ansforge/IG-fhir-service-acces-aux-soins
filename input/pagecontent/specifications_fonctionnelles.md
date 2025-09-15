@@ -6,7 +6,7 @@ A ce jour, les API ont pour vocation de répondre aux cas d'usage suivants :
   - Création de rendez-vous
   - Mise à jour de rendez-vous
 
-    Les rendez-vous ainsi centralisés dans la plateforme sont également transmis aux logiciels de régultation médicale (LRM)
+    Les rendez-vous ainsi centralisés dans la plateforme sont également transmis aux logiciels de régulation médicale (LRM)
 
 Pour les cas d'usage couverts par ces API :
 - Le système consommateur doit disposer des points d'accès et des moyens d'authentification (authentification mTLS avec des certificats IGC-Santé).
@@ -202,7 +202,7 @@ Le schéma ci-dessous illustre l'échange à mettre en oeuvre :
 ### Transmission des informations de RDV aux LRM
 
 #### Description du cas d'usage
-L’objectif de cette interface, **flux INT_L02**, est de pouvoir alimenter de manière automatisée le DRM avec les informations de RDV pris pour le compte du patient dans les solutions logicielles éditeurs (LGA) ou dans la plateforme numérique du SAS.
+L’objectif de cette interface, **flux INT_L02**, est de pouvoir alimenter de manière automatisée le DRM (Dossier de Régulation Médicale) avec les informations de RDV pris pour le compte du patient dans les solutions logicielles éditeurs (LGA) ou dans la plateforme numérique du SAS.
 À la suite de la prise de RDV réalisée par la régulation pour le compte du patient, les informations de RDV sont centralisées au niveau de la plateforme nationale. Les travaux souhaités visent à poursuivre le parcours de la donnée pour venir alimenter le DRM avec ces informations, selon le schéma suivant :
 
 <table align="center">
@@ -221,9 +221,24 @@ L’objectif de cette interface, **flux INT_L02**, est de pouvoir alimenter de m
 </table>
 
 #### Cinématique des échanges
-Les échanges entre la plateforme SAS et les solutions de LRM se feront au travers du Hub Santé, selon la cinématique suivante
+Les échanges entre la plateforme SAS et les solutions de LRM se feront au travers du [Hub Santé](https://hub.esante.gouv.fr/), selon le schéma et la cinématique suivante
 
-<div class="figure" style="width:80%;" align ="center">
+<table align="center">
+    <tr>
+        <td align ="center">
+            <div class="figure">
+                <img src="SchemaGlobalRedescenteLRM.png" width="80%" height="80%" alt="Schéma de représentation globale du parcours" title="Schéma de représentation globale du parcours">
+            </div>
+        </td>    
+    </tr>
+    <tr>
+        <td align ="center">
+            <b>Schéma de représentation globale du parcours</b>
+        </td>
+    </tr>
+</table>
+
+<div class="figure" style="width:70%;" align ="center">
     <p>{% include diagramme_sequence_hub.svg %}</p>
 </div>
 
