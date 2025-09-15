@@ -72,7 +72,7 @@ Si la recherche est un succès, le serveur répond :
     critères de recherche plus les ressources incluses correspondant aux
     critères de recherche.
     Le service indique le total trouvé dans une balise `total`.
-    Dans le cas où il n'y a     pas de résultat le service renvoie `total`: 0.
+    Dans le cas où il n'y a pas de résultat le service renvoie `total`: 0.
 
 Remarque : la recherche est un succès à partir du moment où la requête
 peut être exécutée. Il peut il y avoir 0 à n correspondances.
@@ -189,7 +189,7 @@ La réponse ci-dessous correspond à :
     - Pour le motif `Consultation`
     - Téléphone de la CPTS : 0102030405
 
-Pour consulter l'exemple en plein écran, cliquer [ici](./Bundle-ExampleBundleCPTS1.html).
+Pour consulter l'exemple en plein écran, cliquer [ici](./Bundle-ExampleBundleCPTS1.json.html).
 
 <iframe src="./Bundle-ExampleBundleCPTS1.json" width="100%" height="300" style="border: 1px solid #cccccc; border-radius: 4px; background: #f5f2f0;" scrolling="yes"></iframe>
 <br>
