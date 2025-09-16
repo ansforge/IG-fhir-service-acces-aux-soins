@@ -144,14 +144,11 @@ Plus de précision sur la spécification FHIR :
 
 ##### Réponse de base -- Echec
 
-Lien vers la spécification FHIR :
-<https://www.hl7.org/fhir/operationoutcome.html>
-
 Si la recherche échoue, le serveur doit répondre :
 
 -   Un header avec un un code erreur HTTP 4XX ou 5XX
 
--   Un body contenant une ressource OperationOutcome[^3] qui donne les
+-   Un body contenant une ressource [OperationOutcome](https://www.hl7.org/fhir/operationoutcome.html) qui donne les
     détails sur la raison de l'échec
 
 À titre d'information, les codes erreurs classiques sont les suivants :

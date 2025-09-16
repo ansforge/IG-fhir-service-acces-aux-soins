@@ -127,7 +127,7 @@ Plus de précision sur la spécification FHIR :
 </tr>
 <tr>
   <td><p>3</p></td>
-  <td><p>Liste des identifiants nationaux des PS (le préfixe correspondant à l'identifiant sera transmis (2))</p></td>
+  <td><p>Liste des identifiants nationaux des PS (le préfixe correspondant à l'identifiant sera transmis)</p></td>
   <td><p>schedule.actor<br>:Practitioner.identifier</p></td>
   <td><p>token</p></td>
   <td><p>Oui</p></td>
