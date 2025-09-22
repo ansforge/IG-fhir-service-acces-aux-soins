@@ -392,7 +392,7 @@ L'entête est de type "EDXL-DE" et les messages au format Json, cf. <a href="htt
 <p>Cet aquittement correspond à la validation auprès de l’émetteur (plateforme numérique SAS) de la bonne réception du message par le destinataire (Editeur LRM).
 Le cheminement est similaire au message envoyé mais pris en sens inverse.</p>
 
-<p>Le format des acquittements de réception finale est de type "RC-DE" selon le modèle et les balises précisées dans le tableau ci-dessous, en reprenant le <em>distrubtionId</em> du message conderné (cf spécifications du Hub Santé §3.3.2) :</p>
+<p>Le format des acquittements de réception finale est de type "RC-DE" selon le modèle et les balises précisées dans le tableau ci-dessous, en reprenant le <em>distrubtionId</em> du message concerné (cf spécifications du Hub Santé §3.3.2) :</p>
 
 <table>
   <thead>
@@ -645,7 +645,7 @@ Le cheminement est similaire au message envoyé mais pris en sens inverse.</p>
 
 <p>Ceci se fait au travers du verbe HTTP (POST et/ou PUT) de l'attribut entry.request.method de la ressource Bundle.</p>
 
-<p><strong>L’identifiant technique SAS du RDV (identifier.value de la ressource Appointment)</strong> transmis sera stocké par la solution éditeur LRM pour identification du RDV sur lequel porte les mises à jour éventuelles.</p>
+<p><strong>L’identifiant technique SAS du RDV (identifier.value de la ressource <code class="language-plaintext highlighter-rouge">Appointment</code>)</strong> transmis sera stocké par la solution éditeur LRM pour identification du RDV sur lequel porte les mises à jour éventuelles.</p>
 
 <p>Cf. <a href="./Bundle-ExampleBundleAppointmentLRM5.json.html">exemple</a> avec modification de la ressource <code class="language-plaintext highlighter-rouge">Appointment</code> et ajout de la ressource <code class="language-plaintext highlighter-rouge">Practitioner</code></p>
 
@@ -793,7 +793,7 @@ Le cheminement est similaire au message envoyé mais pris en sens inverse.</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Sep 22, 2025 07:55+0000">2025-09-22</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Sep 22, 2025 08:49+0000">2025-09-22</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
