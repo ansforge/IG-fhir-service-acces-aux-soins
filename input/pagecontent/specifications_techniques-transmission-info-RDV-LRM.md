@@ -64,7 +64,7 @@ Un acquittement technique sera transmis du Hub vers la plateforme SAS afin d'inf
 Cet aquittement correspond à la validation auprès de l’émetteur (plateforme numérique SAS) de la bonne réception du message par le destinataire (Editeur LRM).
 Le cheminement est similaire au message envoyé mais pris en sens inverse. 
 
-Le format des acquittements de réception finale est de type "RC-DE" selon le modèle et les balises précisées dans le tableau ci-dessous, en reprenant le *distrubtionId* du message conderné (cf spécifications du Hub Santé §3.3.2) :
+Le format des acquittements de réception finale est de type "RC-DE" selon le modèle et les balises précisées dans le tableau ci-dessous, en reprenant le *distrubtionId* du message concerné (cf spécifications du Hub Santé §3.3.2) :
 
 | Élément | Champ | Type | Description | Commentaire / valeur |
 |--------|--------|------|------|-------------|
@@ -151,7 +151,7 @@ Le fichier json encapsulé dans le message est un Bundle de type transaction et 
 
 Ceci se fait au travers du verbe HTTP (POST et/ou PUT) de l'attribut entry.request.method de la ressource Bundle. 
 
-**L’identifiant technique SAS du RDV (identifier.value de la ressource Appointment)** transmis sera stocké par la solution éditeur LRM pour identification du RDV sur lequel porte les mises à jour éventuelles.
+**L’identifiant technique SAS du RDV (identifier.value de la ressource `Appointment`)** transmis sera stocké par la solution éditeur LRM pour identification du RDV sur lequel porte les mises à jour éventuelles.
 
 Cf. [exemple](./Bundle-ExampleBundleAppointmentLRM5.json.html) avec modification de la ressource `Appointment` et ajout de la ressource `Practitioner`
 
