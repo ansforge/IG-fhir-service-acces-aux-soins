@@ -1,8 +1,19 @@
+Le Service d'accès aux soins a pour objectif de faciliter l’orientation des patients vers des médecins effecteurs en ville lorsque leur situation ne relève pas d’une urgence médicale. La plateforme numérique SAS, qui s’inscrit dans le cadre du programme SAS, s’appuie sur un agrégateur de disponibilités des professionnels de santé issues de leurs outils sans s’y substituer et a pour enjeu de fluidifier le parcours de prise de RDV pour les régulateurs. 
+
+La première interface, nommée « appel contextuel », permet le lancement d’une recherche d’offre de soins depuis la solution logicielle de régulation médicale (LRM) dans la plateforme numérique SAS. Cette fonctionnalité, mise en place avec le flux INT_L01(3), recouvre la syntaxe de l’appel contextuel et la définition des données à transmettre du LRM à la plateforme numérique SAS. 
+
+Après avoir effectué une recherche d’offre de soins dans la plateforme numérique SAS, le régulateur sélectionne un créneau de disponibilité et est redirigé vers la plateforme de prise de RDV éditeur sans avoir à se réauthentifier, si ce créneau remonte d’une solution éditeur. Dans la solution éditeur, le régulateur va pouvoir finaliser la prise de RDV pour le compte du patient. 
+
+Le régulateur peut également prendre un RDV sur les disponibilités renseignées manuellement dans la plateforme numérique SAS par les effecteurs de soins au sein de l’agenda SAS ou effectuer une recherche d’offre de soins complémentaires incluant la possibilité de contacter les professionnels de santé acceptant de prendre en charge des patients « en sus de leurs disponibilités » et la possibilité de solliciter une communauté de professionnels de santé pour la prise en charge du patient via une solution éditeur interfacée offrant un service de type « Place de marché ». 
+
+Une fois la prise de RDV réalisée par le régulateur, les données associées au RDV pris pour le compte du patient sont remontées et enregistrées dans la plateforme numérique SAS. 
+
+
 A ce jour, les API ont pour vocation de répondre aux cas d'usage suivants :
-1. Service exposé par une solution de prise de rendez-vous en ligne consommé par la plateforme SAS
+- Service exposé par une solution de prise de rendez-vous en ligne consommé par la plateforme SAS
   - Recherche de créneaux
   - Gestion des comptes régulateurs
-1. Service exposé par la plateforme SAS consommé par une solution de prise de rendez-vous en ligne
+- Service exposé par la plateforme SAS consommé par une solution de prise de rendez-vous en ligne
   - Création de rendez-vous
   - Mise à jour de rendez-vous
 
@@ -202,8 +213,10 @@ Le schéma ci-dessous illustre l'échange à mettre en oeuvre :
 ### Transmission des informations de RDV aux LRM
 
 #### Description du cas d'usage
-L’objectif de cette interface, **flux INT_L02**, est de pouvoir alimenter de manière automatisée le DRM (Dossier de Régulation Médicale) avec les informations de RDV pris pour le compte du patient dans les solutions logicielles éditeurs (LGA) ou dans la plateforme numérique du SAS.
-À la suite de la prise de RDV réalisée par la régulation pour le compte du patient, les informations de RDV sont centralisées au niveau de la plateforme nationale. Les travaux souhaités visent à poursuivre le parcours de la donnée pour venir alimenter le DRM avec ces informations, selon le schéma suivant :
+Dans le cadre de **l’alimentation du dossier de régulation médicale (DRM)** avec **les informations du RDV pris** pour le compte du patient **dans les solutions logicielles éditeurs** ou **dans la plateforme numérique SAS (via l’agenda SAS ou en sus des disponibilités)**, cette section s’intéressera à la mise en place du parcours de la donnée jusqu’à l’association avec le DRM associé.
+
+L’objectif de cette interface, **flux INT_L02**, est de pouvoir alimenter de manière automatisée le LRM avec les informations de RDV pris pour le compte du patient dans les solutions logicielles éditeurs (LGA) ou dans la plateforme numérique du SAS.
+À la suite de la prise de RDV réalisée par la régulation pour le compte du patient, les informations de RDV sont centralisées au niveau de la plateforme nationale. Les travaux souhaités visent à poursuivre le parcours de la donnée pour rattachement de ces informations avec le dossier d’orientation correspondant (DRM), selon le schéma suivant :
 
 <table align="center">
     <tr>
@@ -242,7 +255,7 @@ Les échanges entre la plateforme SAS et les solutions de LRM se feront au trave
     <p>{% include diagramme_sequence_hub.svg %}</p>
 </div>
 
-Nous nous intéresserons dans la suite de la page et dans la partie technique au séquencement et format des échanges entre la plateforme numérique SAS, le Hub et la solution éditeur LRM.
+Nous nous intéresserons dans la suite de la page et dans [la partie technique](./specifications_techniques-transmission-info-RDV-LRM.html) au séquencement et format des échanges entre la plateforme numérique SAS, le Hub et la solution éditeur LRM.
 
 #### Attendu et rôles des parties
 

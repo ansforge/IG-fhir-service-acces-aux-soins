@@ -30,12 +30,14 @@ Le schéma ci-dessous détaille cette cinématique d'échange entre les différe
     <p>{% include diagramme_sequence_hub_detaille.svg %}</p>
 </div>
 
-### Détail des échanges
+### Détail des échanges entre les acteurs
 
-#### Gestion de l'envoi d'un message de la PTF SAS -> Hub 
+#### Gestion de l'envoi d'un message PTF SAS -> LRM via Hub 
+
+Dans le cadre de l’interface mise en place entre les solutions logicielles éditeurs (LRM) et la plateforme numérique SAS, les requêtes seront transmises **instantanément** par la plateforme numérique du SAS au HubSanté pour transmission auprès des solutions éditeurs de LRM lors de la **création ou la mise à jour d’un RDV** et contiendront l’ensemble des données relatives au RDV **au format JSON** dans le contenu du message.
 
 Les champs ci-dessous correspondent à l’en-tête du message qui porte les informations de RDV pris par le régulateur pour le compte du patient. Ce message est envoyé instantanément de la plateforme SAS au HubSanté. 
-L'entête est de type "EDXL-DE", cf. [spécifications techniques (DST) du Hub Santé](https://hub.esante.gouv.fr/resources/Accompagnement/tech/23.09%20DST%20v1.2%20-%20Hub%20Sante%20&%20connecteurs.pdf).
+L'entête est de type "EDXL-DE" et les messages au format Json, cf. [spécifications techniques (DST) du Hub Santé](https://hub.esante.gouv.fr/resources/Accompagnement/tech/23.09%20DST%20v1.2%20-%20Hub%20Sante%20&%20connecteurs.pdf).
 
 Le tableau ci-dessous précise les balises qui doivent être envoyées et qui sont nécessaires au routage des messages.
 
@@ -52,14 +54,17 @@ Le tableau ci-dessous précise les balises qui doivent être envoyées et qui so
 | *Entête EDXL-DE* | descriptor.explicitAddress.explicitAddressValue | string | Identifiant du SAMU destinataire |fr.health.samuXXX Ex : fr.health.samu330 |
 | *Contenu* | content.contentObject.JsonContent.embeddedJsonContent | json | Contenu du message json encapsulé dans l'entête | Fichier Bundle transactionnel au format JSON |
 
-#### Acquittement technique
+#### Acquittement technique Hub -> PTF SAS
 
 Un acquittement technique sera transmis du Hub vers la plateforme SAS afin d'informer de la bonne prise en charge du message et de l'inscription dans sa file d'envoi (file « message » du LRM). Cette fonctionnalité est intégrée au protocole AMQ sous la forme de *Consumer Acknowledgement* (cf. spécifications du Hub Santé §3.3.1).
 
 
-#### Message d'acquittement final
+#### Message d'acquittement final LRM -> PTF SAS via Hub
 
-Cet aquittement correspond à la confirmation par le HubSanté de la bonne réception du message transmis par la plateforme SAS. L'entête est de type "RC-DE", cf. spécifications du Hub Santé. 
+Cet aquittement correspond à la validation auprès de l’émetteur (plateforme numérique SAS) de la bonne réception du message par le destinataire (Editeur LRM).
+Le cheminement est similaire au message envoyé mais pris en sens inverse. 
+
+Le format des acquittements de réception finale est de type "RC-DE" selon le modèle et les balises précisées dans le tableau ci-dessous, en reprenant le *distrubtionId* du message conderné (cf spécifications du Hub Santé §3.3.2) :
 
 | Élément | Champ | Type | Description | Commentaire / valeur |
 |--------|--------|------|------|-------------|
@@ -74,9 +79,9 @@ Cet aquittement correspond à la confirmation par le HubSanté de la bonne réce
 |  | reference | string | Identifiant du message référencé |Égal à distributionId du message initial |
 
 
-#### Message d'erreur
+#### Message d'erreur LRM -> PTF SAS via Hub et Hub -> PTF SAS
 
-En cas d'erreur, un message est posté sur la file « info » de la plateforme SAS. Les champs ci-dessous correspondent à l’en-tête du message
+En cas d'erreur, un message est posté sur la file « info » de la plateforme SAS (cf. spécifications du Hub Santé §3.3.4).Les champs ci-dessous correspondent à l’en-tête et au contenu du message : 
 
 | Élément | Champ | Type | Description | Commentaire / valeur |
 |--------|--------|------|------|-------------|
@@ -142,9 +147,11 @@ Le message transmis pour la mise à jour du RDV devra suivre les modalités suiv
 - **Format du contenu** : <span style="color:blue">JSON
 </span>
 
-Le fichier json encapsulé dans le message est un Bundle de type transaction et ne contiendra que les ressources créées ou modifiées par rapport au message de création transmis. 
+Le fichier json encapsulé dans le message est un Bundle de type transaction et ne contiendra que les ressources (potentiellement des nouvelles) comportant des champs à ajouter ou à modifier par rapport à la requête de création de RDV transmise initialement par rapport à la requête de création de RDV transmise initialement. 
 
 Ceci se fait au travers du verbe HTTP (POST et/ou PUT) de l'attribut entry.request.method de la ressource Bundle. 
+
+**L’identifiant technique SAS du RDV (identifier.value de la ressource Appointment)** transmis sera stocké par la solution éditeur LRM pour identification du RDV sur lequel porte les mises à jour éventuelles.
 
 Cf. [exemple](./Bundle-ExampleBundleAppointmentLRM5.json.html) avec modification de la ressource `Appointment` et ajout de la ressource `Practitioner`
 
