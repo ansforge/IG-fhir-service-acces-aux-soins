@@ -94,5 +94,3 @@ La fludification du parcours régulateurs inclut les éléments suivants :
  
 {% include dependency-table.xhtml %}
 <br><br>
-
-{% include globals-table.xhtml %}
