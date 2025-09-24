@@ -10,8 +10,6 @@ Description: "Profil de Appointment, dérivé de FrAppointment, pour le cas d'us
 //A ajouter dans fichier des OID
 * identifier.system = "urn:oid:1.2.250.1.213.3.6.2"
 * identifier.value 1..
-// 1 ou n ?
-* specialty MS
 * start 1..1
 * end 1..1
 * created 1..1
