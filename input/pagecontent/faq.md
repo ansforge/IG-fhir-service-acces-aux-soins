@@ -633,5 +633,5 @@ Cf. [règles de gestion comptes régulateurs](./specifications_techniques-ps-ges
 
 ### Transmission des informations de RDV aux LRM
 
-A compléter le cas échéant
+A venir
 
