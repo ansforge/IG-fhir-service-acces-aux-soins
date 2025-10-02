@@ -72,7 +72,7 @@ Si la recherche est un succès, le serveur répond :
     critères de recherche plus les ressources incluses correspondant aux
     critères de recherche.
     Le service indique le total trouvé dans une balise `total`.
-    Dans le cas où il n'y a     pas de résultat le service renvoie `total`: 0.
+    Dans le cas où il n'y a pas de résultat le service renvoie `total`: 0.
 
 Remarque : la recherche est un succès à partir du moment où la requête
 peut être exécutée. Il peut il y avoir 0 à n correspondances.
@@ -189,51 +189,51 @@ La réponse ci-dessous correspond à :
     - Pour le motif `Consultation`
     - Téléphone de la CPTS : 0102030405
 
-Pour consulter l'exemple en plein écran, cliquer [ici](./Bundle-ExampleBundleCPTS1.html).
+Pour consulter l'exemple en plein écran, cliquer [ici](./Bundle-ExampleBundleCPTS1.json.html).
 
-<iframe src="./Bundle-ExampleBundleCPTS.json" width="100%" height="300" style="border: 1px solid #cccccc; border-radius: 4px; background: #f5f2f0;" scrolling="yes"></iframe>
+<iframe src="./Bundle-ExampleBundleCPTS1.json" width="100%" height="300" style="border: 1px solid #cccccc; border-radius: 4px; background: #f5f2f0;" scrolling="yes"></iframe>
 <br>
 
 ### Nomenclatures
 
 Cette section détaille les nomenclatures à utiliser afin de renseigner les différents éléments codifiés de la réponse.
-- **ID : 3 – Statut du créneau :**
+- **Statut du créneau :**
   - L'utilisation de la nomenclature standard slotstatus (<http://hl7.org/fhir/R4/valueset-slotstatus.html>) est attendue. Cependant, la plateforme numérique SAS ne récupérant que des créneaux disponibles, ce champ aura systématiquement la valeur `free`.
-- **ID : 13 – Spécialités ou compétences particulières du PS associées au créneau :**
+- **Spécialités ou compétences particulières du PS associées au créneau :**
   - Dans le cadre du profil FrSlot, l'élément specialty est lié à la nomenclature des spécialités ordinales du MOS (<https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale/>). La plateforme numérique SAS sera cependant en mesure de traiter d'autres compétences ou spécialités transmises sous la forme d'une donnée structurée au sein de l'élément `coding`, ou sous la forme d’un texte libre au niveau de l'élément `text`.
-- **ID : 14 – Type de créneau :**
+- **Type de créneau :**
   - Afin de répondre aux besoins de la plateforme numérique SAS, une nomenclature dédiée a été mise en oeuvre (<https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau>). 4 types de créneaux sont présentés ci-dessous. A noter qu'un créneau peut porter une combinaison de ces valeurs :
     - PUBLIC – Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible par le grand public
     - PRO – Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible à l'ensemble des PS
     - SNP – Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible par les Régulateurs et OSNP
     - CPTS – Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible par une structure de type CPTS
-- **ID : 15 – Type de consultation :**
+- **Type de consultation :**
   - L'utilisation de la nomenclature standard ActEncounterCode (<https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html>) est attendue. Cette nomenclature contient différentes notions, cependant, la plateforme numérique SAS gère les 3 types de créneaux ci-dessous. A noter qu'un créneau peut porter une combinaison de ces valeurs :
     - AMB – Consultation au cabinet
     - HH – Consultation à domicile
     - VR – Téléconsultation
-- **ID : 16 – Type de soins :**
+- **Type de soins :**
   - Lorsque le créneau transmis est de type CPTS (ID 14), les champs attendus pour le type de soins doivent être valorisés comme suit :
     - serviceType.coding.system : https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/TRE_R66-CategorieEtablissement
     - serviceType.coding.code : 604
-- **ID : 17, 18 – URL de l’extension et référence à la ressource HealthcareService :**
+- **URL de l’extension et référence à la ressource HealthcareService :**
   - Lorsque le créneau transmis est de type CPTS, les champs attendus pour faire référence au HealthcareService doivent être valorisés comme suit :
     - serviceType.extension.url : http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType
     - serviceType.valueReference.reference : HealthcareService/<référence à la ressource HealthcareService associée>
-- **ID : 20 – URL de redirection pour la prise de RDV :**
+- **URL de redirection pour la prise de RDV :**
   - Il est attendu l'URL de redirection vers l'agenda du PS concerné. Si l'utilisateur vient du SAS et n'est pas authentifié, il est demandé de le rediriger vers la page d'authentification de la solution éditeur avant d'accéder à l'agenda du PS. Afin de faciliter l'implémentation de la règle métier, la PTF numérique SAS ajoute un paramètre `origin` à l'URL transmise par l'éditeur au moment de la redirection pour identifier la provenance.
-- **ID : 21 – Créneau avec ou sans RDV :**
+- **Créneau avec ou sans RDV :**
   - L'utilisation de la nomenclature standard AppointmentReasonCodes (<https://www.hl7.org/fhir/v2/0276/index.html>) est attendue. Cette nomenclature contient différentes notions, cependant, la plateforme numérique SAS gère les 2 valeurs ci-dessous :
     - ROUTINE – Créneau avec prise de RDV possible
     - WALKIN – Créneau sans prise de RDV possible
-- **ID : 23, 24, 25 – ID de la structure CPTS (FINESS) :**
+- **ID de la structure CPTS (FINESS) :**
   - Identifiant unique propre à chaque structure CPTS. Les champs attendus doivent être valorisés comme suit :
     - identifier.value (valeur de l'identifiant) : numéro du FINESS avec préfixe `1`
     - identifier.system (autorité d’affectation) : urn:oid:1.2.250.1.71.4.2.2
     - identifier.type (type d’identifiant) : le champ type.coding.code est valorisé à `IDNST` et type.coding.system à «http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type »
 
 ### Validateur ressources
-Le validateur mis à disposition des développeurs dans le cadre du projet SAS offre la possibilité tester le format des bundles de réponse générés. Il permet de vérifier que les réponses sont correctement formatées, que l'ensemble des informations obligatoires sont bien présentes et que les données codifiées exploitent les bonnes nomenclatures.
+Le validateur mis à disposition des développeurs dans le cadre du projet SAS offre la possibilité de tester le format des bundles de réponse générés. Il permet de vérifier que les réponses sont correctement formatées, que l'ensemble des informations obligatoires sont bien présentes et que les données codifiées exploitent les bonnes nomenclatures.
 Pour que le validateur puisse effectuer correctement les contrôles au niveau de la structure, il est nécessaire de renseigner pour chacun des "resourceType" correspondant, le meta.profile "URL" ci-dessous :
 - https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-bundle-aggregator
 - https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator
@@ -261,7 +261,7 @@ Ci-dessous un exemple :
 },
 ```
 
-Le validateur est disponible sur l'espace de test de l'ANS : <https://interop.esante.gouv.fr/evs/fhir/validator.seam?standard=37>. Pour faciliter les tests et conserver l'historique, nous vous recommandons de créer votre compte sur la plateforme.
+Le validateur est disponible sur l'espace de test de l'ANS : <https://interop.esante.gouv.fr/evs/fhir/validator.seam?standard=37>. Il est désormais nécessaire de s'authentifier afin d'accéder aux services de l'espace de tests. 
 Afin de tester un fichier, il suffit de sélectionner le format `JSON`, d'ajouter le fichier via le bouton `Add…`, de sélectionner le modèle `BundleAgregateurCPTS` puis de cliquer sur `valider` :
 
 <table align="center">

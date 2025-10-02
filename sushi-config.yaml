@@ -16,19 +16,18 @@ jurisdiction: urn:iso:std:iso:3166#FR "FRANCE"
 
 parameters:
     shownav: 'true'
-    no-narrative: 
-    - 'Appointment/*'
-    - 'Bundle/*'
-    - 'HealthcareService/*'
-    - 'Location/*'
-    - 'Organization/*'
-    - 'Practitioner/*'
-    - 'Schedule/*'
-    - 'Slot/*'
     
 dependencies:
-    hl7.fhir.fr.core: 1.1.0
-    ans.fr.nos: 1.4.0
+    hl7.fhir.fr.core:
+     id: frcore210
+     version: 2.1.0
+     reason: |
+      Version utilisée pour le cas d'usage de transmission des informations de RDV aux LRM
+    v110@npm:hl7.fhir.fr.core: 
+     id: frcore110
+     version: 1.1.0
+     reason: |
+      Version utilisée pour les cas d'usage PS Indiv, SOS et CPTS
 
 pages:
     index.md:
@@ -52,7 +51,9 @@ pages:
     specifications_techniques-sos-gestion_regulateur.md:
         title: SOS Médecins - Gestion des comptes régulateurs       
     specifications_techniques-sos-gestion_rdv.md:
-        title: SOS Médecins - Gestion de rendez-vous      
+        title: SOS Médecins - Gestion de rendez-vous
+    specifications_techniques-transmission-info-RDV-LRM.md:
+        title: Transmission des informations de rendez-vous aux LRM         
     ressources_casusage.md:
         title: Ressources par cas d'usage
     autres_ressources.md:
@@ -61,6 +62,8 @@ pages:
             title: Sécurité
         faq.md:
             title: FAQ
+        acronymes.md:
+            title: Sigles/Acronymes
         annexes.md:
             title: Annexes
         downloads.md:
@@ -82,11 +85,14 @@ menu:
         SOS Médecins - Recherche des créneaux: specifications_techniques-sos-recherche_creneaux.html
         SOS Médecins - Gestion des comptes régulateurs: specifications_techniques-sos-gestion_regulateur.html
         SOS Médecins - Gestion de rendez-vous: specifications_techniques-sos-gestion_rdv.html
+        ________ Fluidification parcours régulateur ________:
+        Transmission des informations de rendez-vous aux LRM: specifications_techniques-transmission-info-RDV-LRM.html
     Ressources par cas d'usage: ressources_casusage.html 
     Ressources de conformité: artifacts.html
     Autres ressources:
         Sécurité: securite.html
         FAQ: faq.html
+        Acronymes : acronymes.html
         Annexes: annexes.html
         Téléchargements et usage: downloads.html
         Spécifications FHIR: new-tab {{site.data.fhir.path}}index.html

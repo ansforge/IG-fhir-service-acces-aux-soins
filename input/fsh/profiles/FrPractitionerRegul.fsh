@@ -14,11 +14,11 @@ Description: "Profil de Practitioner, dérivé de FrPractitioner, pour la gestio
     IdentifiantNatPS 0..1 and
     IdentifiantInterne 0..1 
 
-* identifier[IdentifiantNatPS].type = $fr-v2-0203#IDNPS
+* identifier[IdentifiantNatPS].type = http://interopsante.org/fhir/CodeSystem/fr-v2-0203#IDNPS
 * identifier[IdentifiantNatPS].system = "urn:oid:1.2.250.1.71.4.2.1"
 * identifier[IdentifiantNatPS].value 1..1
 
-* identifier[IdentifiantInterne].type = $fr-v2-0203#INTRN
+* identifier[IdentifiantInterne].type = http://interopsante.org/fhir/CodeSystem/fr-v2-0203#INTRN
 * identifier[IdentifiantInterne].system = "urn:oid:1.2.250.1.213.3.6"
 * identifier[IdentifiantInterne].value 1..1
 

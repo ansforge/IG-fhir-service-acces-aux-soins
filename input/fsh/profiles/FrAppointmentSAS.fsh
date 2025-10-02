@@ -27,7 +27,7 @@ Description: "Profil de Appointment, dérivé de FrAppointment, pour le cas d'us
 * created MS
 * participant.actor.identifier.type 1..
 * participant.actor.identifier.type.coding 1..1
-* participant.actor.identifier.type.coding = $fr-v2-0203#IDNPS
+* participant.actor.identifier.type.coding = http://interopsante.org/fhir/CodeSystem/fr-v2-0203#IDNPS
 * participant.actor.identifier.system 1..
 * participant.actor.identifier.system = "urn:oid:1.2.250.1.71.4.2.1"
 * participant.actor.identifier.value 1..

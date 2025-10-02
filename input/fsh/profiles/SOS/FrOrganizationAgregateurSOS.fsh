@@ -5,7 +5,7 @@ Description: "Profil d'Organization, dérivé de FrOrganization, pour le service
 
 
 * identifier 1..1
-* identifier.type = $fr-location-identifier-type#IDNST
+* identifier.type = http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type#IDNST
 * identifier.system = "urn:oid:1.2.250.1.71.4.2.2"
 * identifier obeys SIRET-invariant
 

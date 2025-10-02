@@ -630,3 +630,8 @@ Un ID national possède une structure bien définie dont les spécificités sont
 Cf. [règles de gestion comptes régulateurs](./specifications_techniques-ps-gestion_regulateur.html#r%C3%A8gles-de-gestion), au sein de la requête, les champs `identifier.system` (autorité d'affectation) et `identifier.type` (type d'identifiant) permettent d'indiquer s'il s'agit d'un identifiant technique SAS ou d'un identifiant national.
 <br><br>
 
+
+### Transmission des informations de RDV aux LRM
+
+A venir
+
