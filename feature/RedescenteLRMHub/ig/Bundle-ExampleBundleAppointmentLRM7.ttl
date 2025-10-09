@@ -1,0 +1,167 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/sas/Bundle/ExampleBundleAppointmentLRM7> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ExampleBundleAppointmentLRM7"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm>
+     ] )
+  ] ; # 
+  fhir:type [ fhir:v "transaction"] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "https://<base_URl>/Appointment/ExampleAppointmentLRM7"^^xsd:anyURI ] ;
+     fhir:resource ( <https://<base_URl>/Appointment/ExampleAppointmentLRM7> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [ fhir:v "Appointment"^^xsd:anyURI ]
+     ]
+  ] [
+     fhir:fullUrl [ fhir:v "https://<base_URl>/Practitioner/ExamplePractitionerLRM"^^xsd:anyURI ] ;
+     fhir:resource ( <https://<base_URl>/Practitioner/ExamplePractitionerLRM> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [ fhir:v "Practitioner"^^xsd:anyURI ]
+     ]
+  ] [
+     fhir:fullUrl [ fhir:v "https://<base_URl>/Organization/ExampleSasOrganization3"^^xsd:anyURI ] ;
+     fhir:resource ( <https://<base_URl>/Organization/ExampleSasOrganization3> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [ fhir:v "Organization"^^xsd:anyURI ]
+     ]
+  ] [
+     fhir:fullUrl [ fhir:v "https://<base_URl>/PractitionerRole/ExamplePractitionerRoleAppointment2"^^xsd:anyURI ] ;
+     fhir:resource ( <https://<base_URl>/PractitionerRole/ExamplePractitionerRoleAppointment2> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [ fhir:v "PractitionerRole"^^xsd:anyURI ]
+     ]
+  ] ) . # 
+
+<https://<base_URl>/Appointment/ExampleAppointmentLRM7> a fhir:Appointment ;
+  fhir:id [ fhir:v "ExampleAppointmentLRM7"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Appointment_ExampleAppointmentLRM7\"> </a><p class=\"res-header-id\"><b>Narratif généré : RendezVous ExampleAppointmentLRM7</b></p><a name=\"ExampleAppointmentLRM7\"> </a><a name=\"hcExampleAppointmentLRM7\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-appointment-lrm.html\">SASAppointmentLRM</a></p></div><p><b>CategorieOrientation</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement 604}\">Communauté Professionnelle Territoriale de Santé (CPTS)</span></p><p><b>identifier</b>: 12349</p><p><b>status</b>: Booked</p><p><b>start</b>: 2025-06-17 14:00:00+0100</p><p><b>end</b>: 2025-06-17 14:20:00+0100</p><p><b>created</b>: 2025-06-17 10:15:56+0100</p><h3>Participants</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td><td><b>Status</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner-ExamplePractitionerLRM.html\">Practitioner Jean Dupont </a></td><td>Accepted</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-categorie-orientation"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "604" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:value [ fhir:v "12349" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "booked"] ; # 
+  fhir:start [ fhir:v "2025-06-17T14:00:00+01:00"^^xsd:dateTime] ; # 
+  fhir:end [ fhir:v "2025-06-17T14:20:00+01:00"^^xsd:dateTime] ; # 
+  fhir:created [ fhir:v "2025-06-17T10:15:56+01:00"^^xsd:dateTime] ; # 
+  fhir:participant ( [
+     fhir:actor [
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/ExamplePractitionerLRM> ;
+       fhir:reference [ fhir:v "Practitioner/ExamplePractitionerLRM" ]
+     ] ;
+     fhir:status [ fhir:v "accepted" ]
+  ] ) . # 
+
+<https://<base_URl>/Practitioner/ExamplePractitionerLRM> a fhir:Practitioner ;
+  fhir:id [ fhir:v "ExamplePractitionerLRM"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-lrm"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-lrm>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_ExamplePractitionerLRM\"> </a><p class=\"res-header-id\"><b>Narratif généré : Praticien ExamplePractitionerLRM</b></p><a name=\"ExamplePractitionerLRM\"> </a><a name=\"hcExamplePractitionerLRM\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-practitioner-lrm.html\">SASPractitionerLRM</a></p></div><p><b>FR Core Practitioner Specialty Extension</b>: <a href=\"https://interop.esante.gouv.fr/ig/nos/1.3.0/CodeSystem-TRE-R38-SpecialiteOrdinale.html#TRE-R38-SpecialiteOrdinale-SM54\">TRE_R38-SpecialiteOrdinale SM54</a>: Médecine générale (SM)</p><p><b>identifier</b>: Identifiant National de Professionnel de Santé/810002909371</p><p><b>name</b>: Jean Dupont </p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner-specialty"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:Coding ;
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "SM54" ]
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "IDNPS" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "urn:oid:1.2.250.1.71.4.2.1"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "810002909371" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Dupont" ] ;
+     fhir:given ( [ fhir:v "Jean" ] )
+  ] ) . # 
+
+<https://<base_URl>/Organization/ExampleSasOrganization3> a fhir:Organization ;
+  fhir:id [ fhir:v "ExampleSasOrganization3"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-organization-lrm"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-organization-lrm>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_ExampleSasOrganization3\"> </a><p class=\"res-header-id\"><b>Narratif généré : Organisation ExampleSasOrganization3</b></p><a name=\"ExampleSasOrganization3\"> </a><a name=\"hcExampleSasOrganization3\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-organization-lrm.html\">SASOrganizationLRM</a></p></div><p><b>identifier</b>: Identification nationale de structure définie par l’ANS dans le CI_SIS/010012961</p><p><b>name</b>: CPTS DU HAUT BUGEY</p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "IDNST" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "urn:oid:1.2.250.1.71.4.2.2"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "010012961" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "CPTS DU HAUT BUGEY"] . # 
+
+<https://<base_URl>/PractitionerRole/ExamplePractitionerRoleAppointment2> a fhir:PractitionerRole ;
+  fhir:id [ fhir:v "ExamplePractitionerRoleAppointment2"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-lrm"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-lrm>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"PractitionerRole_ExamplePractitionerRoleAppointment2\"> </a><p class=\"res-header-id\"><b>Narratif généré : PractitionerRole ExamplePractitionerRoleAppointment2</b></p><a name=\"ExamplePractitionerRoleAppointment2\"> </a><a name=\"hcExamplePractitionerRoleAppointment2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-practitioner-role-lrm.html\">SASPractitionerRoleLRM</a></p></div><p><b>practitioner</b>: <a href=\"Practitioner-ExamplePractitionerLRM.html\">Practitioner Jean Dupont </a></p><p><b>organization</b>: <a href=\"Organization-ExampleSasOrganization3.html\">Organization CPTS DU HAUT BUGEY</a></p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:practitioner [
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/ExamplePractitionerLRM> ;
+     fhir:reference [ fhir:v "Practitioner/ExamplePractitionerLRM" ]
+  ] ; # 
+  fhir:organization [
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Organization/ExampleSasOrganization3> ;
+     fhir:reference [ fhir:v "Organization/ExampleSasOrganization3" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

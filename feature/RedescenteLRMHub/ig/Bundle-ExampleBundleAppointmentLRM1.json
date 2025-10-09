@@ -1,0 +1,140 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "ExampleBundleAppointmentLRM1",
+  "meta" : {
+    "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-bundle-appointment-lrm"]
+  },
+  "type" : "transaction",
+  "entry" : [{
+    "fullUrl" : "https://<base_URl>/Appointment/ExampleAppointmentLRM1",
+    "resource" : {
+      "resourceType" : "Appointment",
+      "id" : "ExampleAppointmentLRM1",
+      "meta" : {
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-appointment-lrm"]
+      },
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Appointment_ExampleAppointmentLRM1\"> </a><p class=\"res-header-id\"><b>Narratif généré : RendezVous ExampleAppointmentLRM1</b></p><a name=\"ExampleAppointmentLRM1\"> </a><a name=\"hcExampleAppointmentLRM1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-appointment-lrm.html\">SASAppointmentLRM</a></p></div><p><b>CategorieOrientation</b>: <span title=\"Codes:{https://interop.esante.gouv.fr/ig/fhir/sas/CodeSystem/categorie-orientation-sas-codesystem 003}\">SOS</span></p><p><b>identifier</b>: 12344</p><p><b>status</b>: Booked</p><p><b>start</b>: 2025-06-17 14:00:00+0100</p><p><b>end</b>: 2025-06-17 14:20:00+0100</p><p><b>created</b>: 2025-06-17 10:15:56+0100</p><h3>Participants</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td><td><b>Status</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner-ExamplePractitionerLRM.html\">Practitioner Jean Dupont </a></td><td>Accepted</td></tr></table></div>"
+      },
+      "extension" : [{
+        "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-categorie-orientation",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "https://interop.esante.gouv.fr/ig/fhir/sas/CodeSystem/categorie-orientation-sas-codesystem",
+            "code" : "003"
+          }]
+        }
+      }],
+      "identifier" : [{
+        "value" : "12344"
+      }],
+      "status" : "booked",
+      "start" : "2025-06-17T14:00:00+01:00",
+      "end" : "2025-06-17T14:20:00+01:00",
+      "created" : "2025-06-17T10:15:56+01:00",
+      "participant" : [{
+        "actor" : {
+          "reference" : "Practitioner/ExamplePractitionerLRM"
+        },
+        "status" : "accepted"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Appointment"
+    }
+  },
+  {
+    "fullUrl" : "https://<base_URl>/Practitioner/ExamplePractitionerLRM",
+    "resource" : {
+      "resourceType" : "Practitioner",
+      "id" : "ExamplePractitionerLRM",
+      "meta" : {
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-lrm"]
+      },
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_ExamplePractitionerLRM\"> </a><p class=\"res-header-id\"><b>Narratif généré : Praticien ExamplePractitionerLRM</b></p><a name=\"ExamplePractitionerLRM\"> </a><a name=\"hcExamplePractitionerLRM\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-practitioner-lrm.html\">SASPractitionerLRM</a></p></div><p><b>FR Core Practitioner Specialty Extension</b>: <a href=\"https://interop.esante.gouv.fr/ig/nos/1.3.0/CodeSystem-TRE-R38-SpecialiteOrdinale.html#TRE-R38-SpecialiteOrdinale-SM54\">TRE_R38-SpecialiteOrdinale SM54</a>: Médecine générale (SM)</p><p><b>identifier</b>: Identifiant National de Professionnel de Santé/810002909371</p><p><b>name</b>: Jean Dupont </p></div>"
+      },
+      "extension" : [{
+        "url" : "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner-specialty",
+        "valueCoding" : {
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
+          "code" : "SM54"
+        }
+      }],
+      "identifier" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203",
+            "code" : "IDNPS"
+          }]
+        },
+        "system" : "urn:oid:1.2.250.1.71.4.2.1",
+        "value" : "810002909371"
+      }],
+      "name" : [{
+        "family" : "Dupont",
+        "given" : ["Jean"]
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Practitioner"
+    }
+  },
+  {
+    "fullUrl" : "https://<base_URl>/Organization/ExampleSasOrganization1",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "ExampleSasOrganization1",
+      "meta" : {
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-organization-lrm"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_ExampleSasOrganization1\"> </a><p class=\"res-header-id\"><b>Narratif généré : Organisation ExampleSasOrganization1</b></p><a name=\"ExampleSasOrganization1\"> </a><a name=\"hcExampleSasOrganization1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-organization-lrm.html\">SASOrganizationLRM</a></p></div><p><b>identifier</b>: Identification nationale de structure définie par l’ANS dans le CI_SIS/334173748400020</p><p><b>name</b>: SOS Médecins de Rennes</p></div>"
+      },
+      "identifier" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203",
+            "code" : "IDNST"
+          }]
+        },
+        "system" : "urn:oid:1.2.250.1.71.4.2.2",
+        "value" : "334173748400020"
+      }],
+      "name" : "SOS Médecins de Rennes"
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Organization"
+    }
+  },
+  {
+    "fullUrl" : "https://<base_URl>/PractitionerRole/ExamplePractitionerRoleAppointment1",
+    "resource" : {
+      "resourceType" : "PractitionerRole",
+      "id" : "ExamplePractitionerRoleAppointment1",
+      "meta" : {
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-lrm"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"PractitionerRole_ExamplePractitionerRoleAppointment1\"> </a><p class=\"res-header-id\"><b>Narratif généré : PractitionerRole ExamplePractitionerRoleAppointment1</b></p><a name=\"ExamplePractitionerRoleAppointment1\"> </a><a name=\"hcExamplePractitionerRoleAppointment1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-practitioner-role-lrm.html\">SASPractitionerRoleLRM</a></p></div><p><b>practitioner</b>: <a href=\"Practitioner-ExamplePractitionerLRM.html\">Practitioner Jean Dupont </a></p><p><b>organization</b>: <a href=\"Organization-ExampleSasOrganization1.html\">Organization SOS Médecins de Rennes</a></p></div>"
+      },
+      "practitioner" : {
+        "reference" : "Practitioner/ExamplePractitionerLRM"
+      },
+      "organization" : {
+        "reference" : "Organization/ExampleSasOrganization1"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "PractitionerRole"
+    }
+  }]
+}

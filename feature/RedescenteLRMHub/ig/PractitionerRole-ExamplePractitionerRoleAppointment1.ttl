@@ -1,0 +1,32 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/sas/PractitionerRole/ExamplePractitionerRoleAppointment1> a fhir:PractitionerRole ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ExamplePractitionerRoleAppointment1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-lrm"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-practitioner-role-lrm>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : PractitionerRole ExamplePractitionerRoleAppointment1</b></p><a name=\"ExamplePractitionerRoleAppointment1\"> </a><a name=\"hcExamplePractitionerRoleAppointment1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-practitioner-role-lrm.html\">SASPractitionerRoleLRM</a></p></div><p><b>practitioner</b>: <a href=\"Practitioner-ExamplePractitionerLRM.html\">Practitioner Jean Dupont </a></p><p><b>organization</b>: <a href=\"Organization-ExampleSasOrganization1.html\">Organization SOS Médecins de Rennes</a></p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:practitioner [
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/ExamplePractitionerLRM> ;
+     fhir:reference [ fhir:v "Practitioner/ExamplePractitionerLRM" ]
+  ] ; # 
+  fhir:organization [
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Organization/ExampleSasOrganization1> ;
+     fhir:reference [ fhir:v "Organization/ExampleSasOrganization1" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+
