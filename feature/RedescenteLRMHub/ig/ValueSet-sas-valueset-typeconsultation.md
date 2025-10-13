@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-typeconsultation | *Version*:1.1.0 |
-| Active as of 2025-10-09 | *Computable Name*:TypeConsultationSAS |
+| Active as of 2025-10-13 | *Computable Name*:TypeConsultationSAS |
 
  
 Type de consultations SAS 
@@ -53,7 +53,7 @@ Type de consultations SAS
   "title" : "Type consultation SAS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2025-10-09T08:55:21+00:00",
+  "date" : "2025-10-13T14:37:57+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

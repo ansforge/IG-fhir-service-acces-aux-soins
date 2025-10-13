@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-categorie-orientation | *Version*:1.1.0 |
-| Active as of 2025-10-09 | *Computable Name*:CategorieOrientation |
+| Active as of 2025-10-13 | *Computable Name*:CategorieOrientation |
 
 Extension créée afin d'ajouter la catégorie d'orientation dans un RDV
 
@@ -19,8 +19,7 @@ Extension créée afin d'ajouter la catégorie d'orientation dans un RDV
 
 **Usages:**
 
-* Use this Extension: [SASAppointmentLRM](StructureDefinition-sas-appointment-lrm.md)
-* Examples for this Extension: [Appointment/ExampleAppointmentLRM1](Appointment-ExampleAppointmentLRM1.md), [Appointment/ExampleAppointmentLRM2](Appointment-ExampleAppointmentLRM2.md), [Appointment/ExampleAppointmentLRM3](Appointment-ExampleAppointmentLRM3.md), [Appointment/ExampleAppointmentLRM4](Appointment-ExampleAppointmentLRM4.md)...Show 13 more,[Appointment/ExampleAppointmentLRM5](Appointment-ExampleAppointmentLRM5.md),[Appointment/ExampleAppointmentLRM6](Appointment-ExampleAppointmentLRM6.md),[Appointment/ExampleAppointmentLRM7](Appointment-ExampleAppointmentLRM7.md),[Appointment/ExampleAppointmentLRM8](Appointment-ExampleAppointmentLRM8.md),[Bundle/ExampleBundleAppointmentLRM1](Bundle-ExampleBundleAppointmentLRM1.md),[Bundle/ExampleBundleAppointmentLRM2](Bundle-ExampleBundleAppointmentLRM2.md),[Bundle/ExampleBundleAppointmentLRM3](Bundle-ExampleBundleAppointmentLRM3.md),[Bundle/ExampleBundleAppointmentLRM4](Bundle-ExampleBundleAppointmentLRM4.md),[Bundle/ExampleBundleAppointmentLRM5](Bundle-ExampleBundleAppointmentLRM5.md),[Bundle/ExampleBundleAppointmentLRM6](Bundle-ExampleBundleAppointmentLRM6.md),[Bundle/ExampleBundleAppointmentLRM7](Bundle-ExampleBundleAppointmentLRM7.md),[Bundle/ExampleBundleAppointmentLRM8](Bundle-ExampleBundleAppointmentLRM8.md)and[Bundle/ExampleBundleAppointmentLRM9](Bundle-ExampleBundleAppointmentLRM9.md)
+* This Extension is not used by any profiles in this Implementation Guide
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.sas|current/StructureDefinition/sas-categorie-orientation)
 
@@ -48,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-sas-categorie-orient
   "version" : "1.1.0",
   "name" : "CategorieOrientation",
   "status" : "active",
-  "date" : "2025-10-09T08:55:21+00:00",
+  "date" : "2025-10-13T14:37:57+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

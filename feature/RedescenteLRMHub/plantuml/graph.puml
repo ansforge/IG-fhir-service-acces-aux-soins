@@ -115,45 +115,6 @@ package IG #DDDDDD{
              Slot.comment => [None..None]
         } 
 
-        class SASAppointmentLRM{
-
-             Appointment => [None..None]
-             Appointment.meta.profile:sas-appointment-ds => [0..1]
-             Appointment.extension:categorieOrientation => <&plus>[0..1]
-             Appointment.identifier => [1..1]
-             Appointment.identifier.system => [None..None]
-             Appointment.identifier.value => [1..None]
-             Appointment.status => [None..None]
-             Appointment.start => [1..None]
-             Appointment.end => [1..None]
-             Appointment.created => [1..None]
-             Appointment.participant.type => [None..None]
-             Appointment.participant.actor => [None..None]
-             Appointment.participant.status => [None..None]
-        } 
-
-        class SASBundleAppointmentLRM{
-
-             Bundle.meta.profile => [None..None]
-             Bundle.type => [None..None]
-             Bundle.entry => [1..None]
-             Bundle.entry:appointmententry => [1..1]
-             Bundle.entry:appointmententry.fullUrl => [1..None]
-             Bundle.entry:appointmententry.resource => [None..None]
-             Bundle.entry:practitionerentry => [0..1]
-             Bundle.entry:practitionerentry.fullUrl => [1..None]
-             Bundle.entry:practitionerentry.resource => [None..None]
-             Bundle.entry:organizationentry => [0..1]
-             Bundle.entry:organizationentry.fullUrl => [1..None]
-             Bundle.entry:organizationentry.resource => [None..None]
-             Bundle.entry:practitionerRoleentry => [0..1]
-             Bundle.entry:practitionerRoleentry.fullUrl => [1..None]
-             Bundle.entry:practitionerRoleentry.resource => [None..None]
-             Bundle.entry:healthcareserviceentry => [0..1]
-             Bundle.entry:healthcareserviceentry.fullUrl => [1..None]
-             Bundle.entry:healthcareserviceentry.resource => [None..None]
-        } 
-
         class BundleAgregateurCPTS{
 
              Bundle.type => [None..None]
@@ -210,36 +171,6 @@ package IG #DDDDDD{
              Slot.appointmentType.coding => [None..None]
              Slot.schedule => [None..None]
              Slot.status => [None..None]
-        } 
-
-        class SASHealthcareServiceLRM{
-
-             HealthcareService.meta.profile:sas-healthcareservice => [0..1]
-             HealthcareService.providedBy => [1..None]
-        } 
-
-        class SASOrganizationLRM{
-
-             Organization.meta.profile:sas-organization-lrm => [0..1]
-             Organization.name => [1..None]
-        } 
-
-        class SASPractitionerLRM{
-
-             Practitioner.meta.profile:sas-practitioner-lrm => [0..1]
-             Practitioner.extension:specialty => <&plus>[None..None]
-             Practitioner.identifier => [1..None]
-             Practitioner.identifier.type.coding => [None..1]
-             Practitioner.identifier:idNatPs => [1..None]
-             Practitioner.identifier:idNatPs.type => [1..None]
-             Practitioner.identifier:idNatPs.system => [1..None]
-        } 
-
-        class SASPractitionerRoleLRM{
-
-             PractitionerRole.meta.profile:sas-practitioner-role-lrm => [0..1]
-             PractitionerRole.practitioner => [None..None]
-             PractitionerRole.organization => [1..None]
         } 
 
         class FrAppointmentSASSOS{
@@ -321,7 +252,6 @@ package IG #DDDDDD{
      }
      package extension #paleturquoise {
 
-     SASAppointmentLRM -[#black,dashed,thickness=2]-> CategorieOrientation
      FrSlotAgregateurCPTS -[#black,dashed,thickness=2]-> SASServiceTypeR5
      FrSlotAgregateurCPTS -[#black,dashed,thickness=2]-> SASServiceTypeR5
      FrSlotAgregateurCPTS -[#black,dashed,thickness=2]-> SASServiceTypeR5
@@ -340,10 +270,6 @@ package IG #DDDDDD{
          }
      }
      package valueset #PaleVioletRed{
-
-        class AppointmentParticipantTypeSAS  
-
-     SASAppointmentLRM -[#black,dotted,thickness=2]-> AppointmentParticipantTypeSAS
 
         class CategorieOrientationSASValueSet  
 
@@ -416,14 +342,6 @@ package "Ressources de base" #palegreen {
 
     class86363a39b418154a968adc9b5da3fe9c --> FrSlotAgregateur
 
- class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment" as  class5b3e4ec90388039f3b23e1c44137e12e 
-
-    class5b3e4ec90388039f3b23e1c44137e12e --> SASAppointmentLRM
-
- class "Bundle" as  class94c51f19c37f96ed231f5a0ae512b2a8 
-
-    class94c51f19c37f96ed231f5a0ae512b2a8 --> SASBundleAppointmentLRM
-
  class "Bundle" as  class94c51f19c37f96ed231f5a0ae512b2a8 
 
     class94c51f19c37f96ed231f5a0ae512b2a8 --> BundleAgregateurCPTS
@@ -439,22 +357,6 @@ package "Ressources de base" #palegreen {
  class "http://interopsante.org/fhir/StructureDefinition/FrSlot" as  class86363a39b418154a968adc9b5da3fe9c 
 
     class86363a39b418154a968adc9b5da3fe9c --> FrSlotAgregateurCPTS
-
- class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-healthcare-service" as  class926ccf2bb5a615fff3ac07e356f8a997 
-
-    class926ccf2bb5a615fff3ac07e356f8a997 --> SASHealthcareServiceLRM
-
- class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization" as  class7273115ddeceb35c4c7044f07f832f67 
-
-    class7273115ddeceb35c4c7044f07f832f67 --> SASOrganizationLRM
-
- class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner" as  class722d091912544e694771fe1d2c6739cb 
-
-    class722d091912544e694771fe1d2c6739cb --> SASPractitionerLRM
-
- class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner-role" as  class32e744761be9cc693fcaf56d8ca68b99 
-
-    class32e744761be9cc693fcaf56d8ca68b99 --> SASPractitionerRoleLRM
 
  class "http://interopsante.org/fhir/StructureDefinition/FrAppointment" as  class659762428c9192e4f39a709a90b89755 
 

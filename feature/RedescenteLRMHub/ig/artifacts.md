@@ -56,12 +56,6 @@ These define constraints on FHIR resources for systems conforming to this implem
 | [FrSlotAgregateur](StructureDefinition-FrSlotAgregateur.md) | Profil de Slot, dérivé de FrSlot, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS |
 | [FrSlotAgregateurCPTS](StructureDefinition-sas-cpts-slot-aggregator.md) | Profil de Slot, dérivé de FrSlot, pour le cas d'usage agrégateur de la plateforme SAS - cas d'usage CPTS |
 | [FrSlotAgregateurSOS](StructureDefinition-sas-sos-slot-aggregator.md) | Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins |
-| [SASAppointmentLRM](StructureDefinition-sas-appointment-lrm.md) | Profil de Appointment, dérivé de FrAppointment, pour le cas d'usage d'envoi des RDV consolidés de la PTF aux logiciels de LRM |
-| [SASBundleAppointmentLRM](StructureDefinition-sas-bundle-appointment-lrm.md) | Profil de Bundle qui représente les données de RDV à envoyer de la plateforme numérique du SAS vers les éditeurs de LRM |
-| [SASHealthcareServiceLRM](StructureDefinition-sas-healthcareservice-lrm.md) | Profil dérivé de FR Core Healthcare Service Profile dans le cadre de l'usage des flux du SAS |
-| [SASOrganizationLRM](StructureDefinition-sas-organization-lrm.md) | Profil dérivé de FrOrganization dans le cadre de l'usage des flux du SAS |
-| [SASPractitionerLRM](StructureDefinition-sas-practitioner-lrm.md) | Profil de Practitioner, dérivé de FrPractitioner, dans le cadre de l'usage des flux du SAS |
-| [SASPractitionerRoleLRM](StructureDefinition-sas-practitioner-role-lrm.md) | Profil dérivé de FrPractitionerRole dérivé de FrAppointment, pour le cas d'usage d'envoi des RDV consolidés de la PTF aux logiciels de LRM |
 
 ### Structures: Extension Definitions 
 
@@ -104,29 +98,10 @@ These are example instances that show what data produced and consumed by systems
 | :--- | :--- |
 | [ExampleAppointmentBooked](Appointment-1.md) | Exemple RDV PS indiv booked |
 | [ExampleAppointmentCancelled](Appointment-2.md) | Exemple RDV PS indiv cancelled |
-| [ExampleAppointmentLRM1](Appointment-ExampleAppointmentLRM1.md) | Exemple RDV LRM 1 - SOS Médecin interfacé |
-| [ExampleAppointmentLRM2](Appointment-ExampleAppointmentLRM2.md) | Exemple RDV LRM 2 - CDS non interfacé |
-| [ExampleAppointmentLRM3](Appointment-ExampleAppointmentLRM3.md) | Exemple RDV LRM 3 - SOS Médecins interfacé |
-| [ExampleAppointmentLRM4](Appointment-ExampleAppointmentLRM4.md) | Exemple RDV LRM 4 - SOS Médecins interfacé en attente attribution PS |
-| [ExampleAppointmentLRM5](Appointment-ExampleAppointmentLRM5.md) | Exemple RDV LRM 5 |
-| [ExampleAppointmentLRM6](Appointment-ExampleAppointmentLRM6.md) | Exemple RDV LRM 6 - PS indiv (interfacé ou non) |
-| [ExampleAppointmentLRM7](Appointment-ExampleAppointmentLRM7.md) | Exemple RDV LRM 7 - CPTS non interfacé |
-| [ExampleAppointmentLRM8](Appointment-ExampleAppointmentLRM8.md) | Exemple RDV LRM 8 - PS indiv (interfacé) annulé |
 | [ExampleBundleAgregateurSOS](Bundle-ExampleBundleAgregateurSOS.md) | Exemple Bundle SOS |
-| [ExampleBundleAppointmentLRM1](Bundle-ExampleBundleAppointmentLRM1.md) | Exemple Bundle RDV LRM 1 - Cas SOS Médecin interfacé avec PS et structure |
-| [ExampleBundleAppointmentLRM2](Bundle-ExampleBundleAppointmentLRM2.md) | Exemple Bundle RDV LRM 2 - Cas CDS non interfacé (structure sans PS) |
-| [ExampleBundleAppointmentLRM3](Bundle-ExampleBundleAppointmentLRM3.md) | Exemple Bundle RDV LRM 3 - Cas SOS Médecin interfacé avec statut mis à jour |
-| [ExampleBundleAppointmentLRM4](Bundle-ExampleBundleAppointmentLRM4.md) | Exemple Bundle RDV LRM 4 - Cas RDV sans PS ni structure. Ex : SOS Médecins interfacé en attente d'attribution médecin |
-| [ExampleBundleAppointmentLRM5](Bundle-ExampleBundleAppointmentLRM5.md) | Exemple Bundle RDV LRM 5 - Cas mise à jour d'un RDV initialement sans PS avec ajout du médecin |
-| [ExampleBundleAppointmentLRM6](Bundle-ExampleBundleAppointmentLRM6.md) | Exemple Bundle RDV LRM 6 - Cas RDV avec PS mais sans structure, exemple PS. indiv |
-| [ExampleBundleAppointmentLRM7](Bundle-ExampleBundleAppointmentLRM7.md) | Exemple Bundle RDV LRM 7 - Cas CPTS non interfacé avec PS et structure |
-| [ExampleBundleAppointmentLRM8](Bundle-ExampleBundleAppointmentLRM8.md) | Exemple Bundle RDV LRM 8 - Cas mise à jour d'un RDV initialement sans PS avec ajout du médecin et de la structure |
-| [ExampleBundleAppointmentLRM9](Bundle-ExampleBundleAppointmentLRM9.md) | Exemple Bundle RDV LRM 9 - Cas annulation de RDV avec PS mais sans structure, exemple PS. indiv interfacé |
 | [ExampleBundleCPTS1](Bundle-ExampleBundleCPTS1.md) | Exemple Bundle CPTS 1 |
 | [ExampleBundleCPTS2](Bundle-ExampleBundleCPTS2.md) | Exemple Bundle CPTS 2 |
 | [ExampleBundlePSIndiv](Bundle-ExampleBundlePSIndiv.md) | Exemple Bundle PS indiv |
-| [ExampleHealthcareService1](HealthcareService-ExampleHealthcareService1.md) | Exemple 1 de ressource Healthcare Service |
-| [ExampleHealthcareService2](HealthcareService-ExampleHealthcareService2.md) | Exemple 2 de ressource Healthcare Service |
 | [ExampleHealthcareServiceCPTS1](HealthcareService-ExampleHealthcareServiceCPTS1.md) | Exemple healthcare service CPTS 1 |
 | [ExampleHealthcareServiceCPTS2](HealthcareService-ExampleHealthcareServiceCPTS2.md) | Exemple healthcare service CPTS 2 |
 | [ExampleLocationSOS1](Location-1111111111.md) | Exemple 1 location flux agrégateur sos |
@@ -139,7 +114,6 @@ These are example instances that show what data produced and consumed by systems
 | [ExamplePractitioner](Practitioner-ExamplePractitioner.md) | Exemple 1 practitioner flux agrégateur |
 | [ExamplePractitioner2](Practitioner-ExamplePractitioner2.md) | Exemple 2 practitioner flux agrégateur |
 | [ExamplePractitioner3](Practitioner-ExamplePractitioner3.md) | Exemple 3 practitioner flux agrégateur |
-| [ExamplePractitionerLRM](Practitioner-ExamplePractitionerLRM.md) | Exemple practitioner flux LRM |
 | [ExamplePractitionerRegul1](Practitioner-ExamplePractitionerRegul1.md) | Exemple 1 practitioner flux régulateur |
 | [ExamplePractitionerRegul2](Practitioner-ExamplePractitionerRegul2.md) | Exemple 2 practitioner flux régulateur |
 | [ExamplePractitionerRegul3](Practitioner-ExamplePractitionerRegul3.md) | Exemple 3 practitioner flux régulateur |
@@ -148,11 +122,6 @@ These are example instances that show what data produced and consumed by systems
 | [ExamplePractitionerRoleAgregateur2](PractitionerRole-ExamplePractitionerRoleAgregateur2.md) | Exemple 2 PractitionerRole flux agrégateur |
 | [ExamplePractitionerRoleAgregateur3](PractitionerRole-ExamplePractitionerRoleAgregateur3.md) | Exemple 3 PractitionerRole flux agrégateur |
 | [ExamplePractitionerRoleAgregateur4](PractitionerRole-ExamplePractitionerRoleAgregateur4.md) | Exemple 4 PractitionerRole flux agrégateur |
-| [ExamplePractitionerRoleAppointment1](PractitionerRole-ExamplePractitionerRoleAppointment1.md) | Exemple PractitionerRole 1 flux LRM |
-| [ExamplePractitionerRoleAppointment2](PractitionerRole-ExamplePractitionerRoleAppointment2.md) | Exemple PractitionerRole 2 flux LRM |
-| [ExampleSasOrganization1](Organization-ExampleSasOrganization1.md) | Exemple d'organisation SAS - association SOS (SIRET) |
-| [ExampleSasOrganization2](Organization-ExampleSasOrganization2.md) | Exemple d'organisation SAS - centre de santé (FINESS) |
-| [ExampleSasOrganization3](Organization-ExampleSasOrganization3.md) | Exemple d'organisation SAS - CPTS (FINESS) |
 | [ExampleSchedule](Schedule-ExampleSchedule.md) | Exemple ressource schedule |
 | [ExampleSchedule1](Schedule-ExampleSchedule1.md) | Exemple 1 ressource schedule |
 | [ExampleSchedule2](Schedule-ExampleSchedule2.md) | Exemple 2 ressource schedule |

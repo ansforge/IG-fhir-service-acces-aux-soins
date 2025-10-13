@@ -9,14 +9,14 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-appointmentparticipanttype | *Version*:1.1.0 |
-| Active as of 2025-10-09 | *Computable Name*:AppointmentParticipantTypeSAS |
+| Active as of 2025-10-13 | *Computable Name*:AppointmentParticipantTypeSAS |
 
  
 Type de participant du RDV SAS 
 
  **References** 
 
-* [SASAppointmentLRM](StructureDefinition-sas-appointment-lrm.md)
+Ce jeu de valeurs nest pas utilisé ici ; il peut être utilisé autre part (par exemple dans les spécifications et / ou implémentations qui utilisent ce contenu)
 
 ### Logical Definition (CLD)
 
@@ -53,7 +53,7 @@ Type de participant du RDV SAS
   "title" : "Appointment Participant Type SAS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2025-10-09T08:55:21+00:00",
+  "date" : "2025-10-13T14:37:57+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

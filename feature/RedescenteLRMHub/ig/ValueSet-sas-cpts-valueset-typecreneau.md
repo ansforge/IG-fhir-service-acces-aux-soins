@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-cpts-valueset-typecreneau | *Version*:1.1.0 |
-| Active as of 2025-10-09 | *Computable Name*:TypeCreneauSASCPTS |
+| Active as of 2025-10-13 | *Computable Name*:TypeCreneauSASCPTS |
 
  
 Type de Créneaux SAS CPTS 
@@ -53,7 +53,7 @@ Type de Créneaux SAS CPTS
   "title" : "Type créneaux SAS CPTS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2025-10-09T08:55:21+00:00",
+  "date" : "2025-10-13T14:37:57+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

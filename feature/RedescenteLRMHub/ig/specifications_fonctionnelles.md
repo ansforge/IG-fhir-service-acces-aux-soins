@@ -204,16 +204,11 @@ Lorsqu’un RDV est pris par le régulateur (depuis l’agenda SAS, une solution
 * La date et l’horaire de la prise de RDV
 * Le nom et l’identifiant national de la structure associée au RDV
 
-Le message transmis (Bundle) contiendra n ressources FHIR en fonction de la liste des données pouvant être transmises en fonction du contexte et de la temporalité.
-
-Les données propres au RDV seront systématiquement transmises (ressource "Appointment" toujours présente). Le cas échéant, les données du professionnel de santé (ressource "Practitioner"), ainsi que sa situation d'exercice dans le cadre du RDV (ressource "PractitionerRole") et la structure associée (ressource "Organization") seront transmises. Si le professionel de santé n'est pas connu, la structure (ressource "Organization") peut également être liée à un RDV via la ressource "Healthcare Service"
-
-Le schéma ci-dessous présente une synthèse des ressources FHIR à utiliser :
-
+Le message transmis (fichier json) contiendra les champs correspondants dont certains seront systématiquement remplis et d'autres optionnels.
 
 #### Rattachement au DRM dans la solution LRM
 
 Les orientations transmises automatiquement au LRM sont affichées au niveau du LRM pour que le régulateur soit en mesure de réaliser le **rattachement avec le bon dossier d’orientation au sein du DRM** correspondant, permettant ainsi d’**alimenter les données du RDV pris pour le compte du patient sans ressaisie**.
 
-D’un point de vue implémentation, l’action de **rapprochement entre l’orientation et le DRM par le régulateur** pourra se traduire à titre d’exemple par la mise en place d’un tableau de bord ou d’un espace pour la gestion des RDV pris au sein du LRM en s’appuyant sur la donnée métier disponible (ex. via numéro téléphone, identité du PS, ID DRM, heure de RDV, etc.) ou par l’affichage d’une liste déroulante des orientations non associées depuis le DRM ou tout autre implémentation que l’éditeur jugera pertinente au sein de sa solution. **L’ANS et l’éditeur conviendront, lors de l’atelier de cadrage**, du moyen d’association défini dans la solution éditeur pour que le régulateur puisse alimenter simplement le DRM avec les données de l’orientation réalisée. Ceci, pour notamment faciliter l’accompagnement au déploiement et de formation des utilisateurs.
+D’un point de vue implémentation, l’action de **rapprochement entre l’orientation et le DRM par le régulateur** pourra se traduire à titre d’exemple par la mise en place d’un tableau de bord ou d’un espace pour la gestion des RDV pris au sein du LRM en s’appuyant sur la donnée métier disponible ou par l’affichage d’une liste déroulante des orientations non associées depuis le DRM ou tout autre implémentation que l’éditeur jugera pertinente au sein de sa solution. **L’ANS et l’éditeur conviendront, lors de l’atelier de cadrage**, du moyen d’association défini dans la solution éditeur pour que le régulateur puisse alimenter simplement le DRM avec les données de l’orientation réalisée. Ceci, pour notamment faciliter l’accompagnement au déploiement et de formation des utilisateurs.
 

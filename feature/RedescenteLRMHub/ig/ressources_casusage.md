@@ -72,10 +72,4 @@ Liste des ressources (profils, paramètres de recherche, terminologies, exemples
 | | | |
 | :--- | :--- | :--- |
 | Identifiant | Type | Description |
-| [sas-appointment-lrm](StructureDefinition-sas-appointment-lrm.md) | StructureDefinition | Profil de Appointment, dérivé de FrAppointment, pour le cas d'usage d'envoi des RDV consolidés de la PTF aux logiciels de LRM |
-| [sas-bundle-appointment-lrm](StructureDefinition-sas-bundle-appointment-lrm.md) | StructureDefinition | Profil de Bundle qui représente les données de RDV à envoyer de la plateforme numérique du SAS vers les éditeurs de LRM |
-| [sas-healthcareservice-lrm](StructureDefinition-sas-healthcareservice-lrm.md) | StructureDefinition | Profil dérivé de FR Core Healthcare Service Profile dans le cadre de l'usage des flux du SAS |
-| [sas-organization-lrm](StructureDefinition-sas-organization-lrm.md) | StructureDefinition | Profil dérivé de FrOrganization dans le cadre de l'usage des flux du SAS |
-| [sas-practitioner-lrm](StructureDefinition-sas-practitioner-lrm.md) | StructureDefinition | Profil de Practitioner, dérivé de FrPractitioner, dans le cadre de l'usage des flux du SAS |
-| [sas-practitioner-role-lrm](StructureDefinition-sas-practitioner-role-lrm.md) | StructureDefinition | Profil dérivé de FrPractitionerRole dérivé de FrAppointment, pour le cas d'usage d'envoi des RDV consolidés de la PTF aux logiciels de LRM |
 

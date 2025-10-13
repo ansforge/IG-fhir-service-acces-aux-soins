@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-sos-valueset-typecreneau | *Version*:1.1.0 |
-| Active as of 2025-10-09 | *Computable Name*:TypeCreneauSASSOS |
+| Active as of 2025-10-13 | *Computable Name*:TypeCreneauSASSOS |
 
  
 Type de Créneaux SAS SOS 
@@ -53,7 +53,7 @@ Type de Créneaux SAS SOS
   "title" : "Type créneaux SAS SOS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2025-10-09T08:55:21+00:00",
+  "date" : "2025-10-13T14:37:57+00:00",
   "publisher" : "ANS",
   "contact" : [
     {
