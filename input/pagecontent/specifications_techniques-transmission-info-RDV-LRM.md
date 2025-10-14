@@ -132,123 +132,242 @@ Lorsqu’un régulateur prend RDV pour un patient via la plateforme numérique S
 
 Le message json contenant les données et encapsulé dans l'entête EDXL-DE respecte les spécifications suivantes
 
-<table>
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Donnée (Niveau 1)</th>
-      <th>Donnée (Niveau 2)</th>
-      <th>Donnée (Niveau 3)</th>
-      <th>Donnée (Niveau 4)</th>
-      <th>Donnée (Niveau 5)</th>
-      <th>Donnée (Niveau 6)</th>
-      <th>Description</th>
-      <th>Exemples</th>
-      <th>Balise</th>
-      <th>Cardinalité</th>
-      <th>Objet</th>
-      <th>Format (ou type)</th>
-      <th>Détails de format</th>
-    </tr>
-  </thead>
+<table border="1" class="dataframe">
   <tbody>
+    <tr style="text-align: right;">
+      <td>ID</td>
+      <td>Donnée (Niveau 1)</td>
+      <td>Donnée (Niveau 2)</td>
+      <td>Description</td>
+      <td>Exemples</td>
+      <td>Balise</td>
+      <td>Cardinalité</td>
+      <td>Objet</td>
+      <td>Format (ou type)</td>
+      <td>Détails de format</td>
+    </tr>
     <tr>
       <td>1</td>
-      <td>Identifiant du rendez-vous</td><td></td><td></td><td></td><td></td><td></td>
-      <td>Un identifiant technique unique par RDV est transmis. Cet identifiant est défini par la plateforme numérique SAS et peut prendre la forme d’un UUID. La solution éditeur devra s’appuyer sur cet ID.</td>
-      <td>29b7fcca-0b06-43f1-8019-9a7788a241ad</td><td>appointmentId</td><td>1..1</td><td></td><td>string</td><td>X</td>
+      <td>Identifiant du rendez-vous</td>
+      <td></td>
+      <td>Un identifiant technique unique par RDV est transmis.\n\nCet identifiant est défini par la plateforme numérique SAS et peut prendre la forme d’un UUID par exemple.\nLa solution éditeur devra s’appuyer sur cet ID pour la gestion des requêtes de mises à jour.</td>
+      <td>12348</td>
+      <td>appointmentId</td>
+      <td>1..1</td>
+      <td></td>
+      <td>string</td>
+      <td></td>
     </tr>
     <tr>
-      <td>2</td><td>Méthode</td><td></td><td></td><td></td><td></td><td></td>
+      <td>2</td>
+      <td>Méthode</td>
+      <td></td>
       <td>Indique un message de création ou de modification du rendez-vous</td>
-      <td>createAppointment</td><td>method</td><td>1..1</td><td></td><td>string</td><td>ENUM: CreateAppointment, UpdateAppointment</td>
+      <td>createAppointment</td>
+      <td>method</td>
+      <td>1..1</td>
+      <td></td>
+      <td>string</td>
+      <td>ENUM: CreateAppointment, UpdateAppointment</td>
     </tr>
     <tr>
-      <td>3</td><td>Date et heure de la prise de rendez-vous</td><td></td><td></td><td></td><td></td><td></td>
+      <td>3</td>
+      <td>Date et heure de la prise de rendez-vous</td>
+      <td></td>
       <td>Indique la date et l’heure de la prise de RDV</td>
-      <td>2025-06-17T10:15:56+01:00</td><td>created</td><td>1..1</td><td></td><td>datetime</td><td>X</td>
+      <td>2025-06-17T10:15:56+01:00</td>
+      <td>created</td>
+      <td>1..1</td>
+      <td></td>
+      <td>datetime</td>
+      <td></td>
     </tr>
     <tr>
-      <td>4</td><td>Date et heure de début du rendez-vous</td><td></td><td></td><td></td><td></td><td></td>
+      <td>4</td>
+      <td>Date et heure de début du rendez-vous</td>
+      <td></td>
       <td>Indique la date et l’horaire de début du rendez-vous</td>
-      <td>2025-06-17T14:00:00+01:00</td><td>start</td><td>1..1</td><td></td><td>datetime</td><td>X</td>
+      <td>2025-06-17T14:00:00+01:00</td>
+      <td>start</td>
+      <td>1..1</td>
+      <td></td>
+      <td>datetime</td>
+      <td></td>
     </tr>
     <tr>
-      <td>5</td><td>Date et heure de fin du rendez-vous</td><td></td><td></td><td></td><td></td><td></td>
+      <td>5</td>
+      <td>Date et heure de fin du rendez-vous</td>
+      <td></td>
       <td>Indique la date et l’horaire de fin du rendez-vous</td>
-      <td>2025-06-17T14:20:00+01:00</td><td>end</td><td>0..1</td><td></td><td>datetime</td><td>X</td>
+      <td>2025-06-17T14:20:00+01:00</td>
+      <td>end</td>
+      <td>0..1</td>
+      <td></td>
+      <td>datetime</td>
+      <td></td>
     </tr>
     <tr>
-      <td>6</td><td>Statut du rendez-vous</td><td></td><td></td><td></td><td></td><td></td>
+      <td>6</td>
+      <td>Statut du rendez-vous</td>
+      <td></td>
       <td>Indique le statut du rendez-vous</td>
-      <td>booked</td><td>status</td><td>1..1</td><td></td><td>string</td><td>ENUM: pending, booked, fulfilled, noshow, cancelled</td>
+      <td>booked</td>
+      <td>status</td>
+      <td>1..1</td>
+      <td></td>
+      <td>string</td>
+      <td>ENUM: pending, booked, fulfilled, noshow, cancelled</td>
     </tr>
     <tr>
-      <td>7</td><td>Catégorie d'orientation</td><td></td><td></td><td></td><td></td><td></td>
+      <td>7</td>
+      <td>Catégorie d'orientation</td>
+      <td></td>
       <td>Indique la catégorie de l’orientation de rendez-vous</td>
-      <td>SOS</td><td>orientationCategory</td><td>0..1</td><td></td><td>string</td><td>ENUM: CPTS, MSP, CDS, SOS, PS, PDM</td>
+      <td>SOS</td>
+      <td>orientationCategory</td>
+      <td>0..1</td>
+      <td></td>
+      <td>string</td>
+      <td>ENUM: CPTS, MSP, CDS, SOS, PS, PDM</td>
     </tr>
     <tr>
-      <td>8</td><td>Professionnel de santé</td><td></td><td></td><td></td><td></td><td></td>
+      <td>8</td>
+      <td>Professionnel de santé</td>
+      <td></td>
       <td>Représente le professionnel de santé associé au rendez-vous</td>
-      <td></td><td>practitioner</td><td>0..1</td><td>practitioner</td><td></td><td>X</td>
+      <td></td>
+      <td>practitioner</td>
+      <td>0..1</td>
+      <td>X</td>
+      <td>practitioner</td>
+      <td></td>
     </tr>
     <tr>
-      <td>9</td><td></td><td>Identifiant RPPS</td><td></td><td></td><td></td><td></td>
+      <td>9</td>
+      <td></td>
+      <td>Identifiant RPPS</td>
       <td>Identifiant national (RPPS) du PS</td>
-      <td>810002909371</td><td>rppsId</td><td>1..1</td><td></td><td>string</td><td>REGEX: ^81[0-9]{10}$</td>
+      <td>810002909371</td>
+      <td>rppsId</td>
+      <td>1..1</td>
+      <td></td>
+      <td>string</td>
+      <td>REGEX: ^81[0-9]{10}$</td>
     </tr>
     <tr>
-      <td>10</td><td></td><td>Nom du PS</td><td></td><td></td><td></td><td></td>
+      <td>10</td>
+      <td></td>
+      <td>Nom du PS</td>
       <td>Nom du professionnel de santé</td>
-      <td>Dupont</td><td>lastName</td><td>1..1</td><td></td><td>string</td><td>X</td>
+      <td>Dupont</td>
+      <td>lastName</td>
+      <td>1..1</td>
+      <td></td>
+      <td>string</td>
+      <td></td>
     </tr>
     <tr>
-      <td>11</td><td></td><td>Prénom du PS</td><td></td><td></td><td></td><td></td>
+      <td>11</td>
+      <td></td>
+      <td>Prénom du PS</td>
       <td>Prénom du professionnel de santé</td>
-      <td>Jean</td><td>firstName</td><td>1..1</td><td></td><td>string</td><td>X</td>
+      <td>Jean</td>
+      <td>firstName</td>
+      <td>1..1</td>
+      <td></td>
+      <td>string</td>
+      <td></td>
     </tr>
     <tr>
-      <td>12</td><td></td><td>Spécialité</td><td></td><td></td><td></td><td></td>
+      <td>12</td>
+      <td></td>
+      <td>Spécialité</td>
       <td>Code de la spécialité du professionnel de santé</td>
-      <td>SM54</td><td>specialityCode</td><td>0..1</td><td></td><td>string</td><td>X</td>
+      <td>SM54</td>
+      <td>specialityCode</td>
+      <td>0..1</td>
+      <td></td>
+      <td>string</td>
+      <td></td>
     </tr>
     <tr>
-      <td>13</td><td></td><td>Terminologie spécialité</td><td></td><td></td><td></td><td></td>
+      <td>13</td>
+      <td></td>
+      <td>Terminologie spécialité</td>
       <td>Url de la terminologie utilisée pour la spécialité</td>
-      <td><a href="https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale/"></td><td>specialityUrl</td><td>0..1</td><td></td><td>string</td><td>X</td>
+      <td>https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale</td>
+      <td>specialityUrl</td>
+      <td>0..1</td>
+      <td></td>
+      <td>string</td>
+      <td></td>
     </tr>
     <tr>
-      <td>14</td><td></td><td>Profession</td><td></td><td></td><td></td><td></td>
+      <td>14</td>
+      <td></td>
+      <td>Profession</td>
       <td>Code de la profession du professionnel de santé</td>
-      <td>10</td><td>professionCode</td><td>0..1</td><td></td><td>string</td><td>X</td>
+      <td>10</td>
+      <td>professionCode</td>
+      <td>0..1</td>
+      <td></td>
+      <td>string</td>
+      <td></td>
     </tr>
     <tr>
-      <td>15</td><td></td><td>Terminologie profession</td><td></td><td></td><td></td><td></td>
+      <td>15</td>
+      <td></td>
+      <td>Terminologie profession</td>
       <td>Url de la terminologie utilisée pour la profession</td>
-      <td><a href="https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante/"></td><td>professionUrl</td><td>0..1</td><td></td><td>string</td><td>X</td>
+      <td>https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante</td>
+      <td>professionUrl</td>
+      <td>0..1</td>
+      <td></td>
+      <td>string</td>
+      <td></td>
     </tr>
     <tr>
-      <td>16</td><td>Structure</td><td></td><td></td><td></td><td></td><td></td>
+      <td>16</td>
+      <td>Structure</td>
+      <td></td>
       <td>Représente la structure du PS ou la structure associée au rendez-vous si le PS n'est pas connu</td>
-      <td></td><td>organization</td><td>0..1</td><td>organization</td><td></td><td>X</td>
+      <td></td>
+      <td>organization</td>
+      <td>0..1</td>
+      <td>X</td>
+      <td>organization</td>
+      <td></td>
     </tr>
     <tr>
-      <td>17</td><td></td><td>Identifiant national de la structure</td><td></td><td></td><td></td><td></td>
+      <td>17</td>
+      <td></td>
+      <td>Identifiant national de la structure</td>
       <td>Indique l'identifiant national de la structure</td>
-      <td>334173748400020</td><td>organizationId</td><td>1..1</td><td></td><td>string</td><td>X</td>
+      <td>334173748400020</td>
+      <td>organizationId</td>
+      <td>1..1</td>
+      <td></td>
+      <td>string</td>
+      <td></td>
     </tr>
     <tr>
-      <td>18</td><td></td><td>Nom de la structure</td><td></td><td></td><td></td><td></td>
+      <td>18</td>
+      <td></td>
+      <td>Nom de la structure</td>
       <td>Indique le nom de la structure</td>
-      <td>SOS Médecins de Rennes</td><td>name</td><td>1..1</td><td></td><td>string</td><td>X</td>
+      <td>SOS Médecins de Rennes</td>
+      <td>name</td>
+      <td>1..1</td>
+      <td></td>
+      <td>string</td>
+      <td></td>
     </tr>
   </tbody>
 </table>
 
 
 Cf. exemple ci-dessous de message de création
-
+```json
 {
   "appointment": {
     "appointmentId": "2d2db05f-e2b0-4169-be8f-891806da2c74",
@@ -269,6 +388,7 @@ Cf. exemple ci-dessous de message de création
     }
   }
 }
+```
 
 ### Message de modification de RDV
 
@@ -293,7 +413,7 @@ Le fichier json encapsulé dans l'entête aura le champ `Méthode` valorisé à 
 **L’identifiant technique SAS du RDV (champ `appointmentId`)** transmis sera stocké par la solution éditeur LRM pour identification du RDV sur lequel porte les mises à jour éventuelles.
 
 Cf. exemple ci-dessous de message de modification
-
+```json
 {
   "appointment": {
     "appointmentId": "2d2db05f-e2b0-4169-be8f-891806da2c74",
@@ -314,13 +434,13 @@ Cf. exemple ci-dessous de message de modification
     }
   }
 }
-
+```
 ### Message d'annulation de RDV
 
 Il n’y aura pas de message spécifique pour l’annulation d’un RDV. Une annulation de RDV est modélisée par un message de type « mise à jour du RDV » avec la modification du statut du RDV à « annulé ».
 
 Cf. exemple ci-dessous de message d'annulation.
-
+```json
 {
   "appointment": {
     "appointmentId": "2d2db05f-e2b0-4169-be8f-891806da2c74",
@@ -341,7 +461,7 @@ Cf. exemple ci-dessous de message d'annulation.
     }
   }
 }
-
+```
 ### Détail des champs à utiliser
 
 Cette section détaille les champs à utiliser afin de renseigner les différents éléments codifiés de la requête.
