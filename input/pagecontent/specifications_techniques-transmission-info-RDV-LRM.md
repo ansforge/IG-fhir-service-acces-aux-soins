@@ -113,7 +113,7 @@ A titre d'exemple, les codes d'erreur suivants pourront être envoyés du Hub ve
 - 500 (DEAD_LETTERED_QUEUE) Le message n’a pas été reçu par son destinataire, il a expiré avant qu’il ne le dépile. 
 
 Le LRM pourra envoyer des messages de type : 
-- 404 (NOT_FOUND) - L'identifiant du RDV a mettre à jour n'a pas été trouvé dans le cas d'un Bundle contenant une mise à jour sur la ressource Appointment. 
+- 404 (NOT_FOUND) - L'identifiant du RDV a mettre à jour n'a pas été trouvé dans le cas d'un message de mise à jour
 
 ### Message d'envoi de RDV
 
@@ -121,8 +121,6 @@ Lorsqu’un régulateur prend RDV pour un patient via la plateforme numérique S
 
 - **Protocole** : <span style="color:blue">AMQP 0-9-1  
 </span>
-- **Ressource type** : <span style="color:blue">Bundle  
-</span>  
 - **Sender** : <span style="color:blue">PTF SAS  
 </span> 
 - **Content-type** : <span style="color:blue">application/json    
@@ -130,27 +128,27 @@ Lorsqu’un régulateur prend RDV pour un patient via la plateforme numérique S
 - **Format du contenu** : <span style="color:blue">JSON
 </span>
 
-Le message json contenant les données et encapsulé dans l'entête EDXL-DE respecte les spécifications suivantes
+Le message json contenant les données et encapsulé dans l'entête EDXL-DE respecte le format suivant : 
 
 <table border="1" class="dataframe">
   <tbody>
-    <tr style="text-align: right;">
-      <td>ID</td>
-      <td>Donnée (Niveau 1)</td>
-      <td>Donnée (Niveau 2)</td>
-      <td>Description</td>
-      <td>Exemples</td>
-      <td>Balise</td>
-      <td>Cardinalité</td>
-      <td>Objet</td>
-      <td>Format (ou type)</td>
-      <td>Détails de format</td>
+    <tr style="text-align: center;">
+      <td width="8%"><strong>ID</strong></td>
+      <td width="8%"><strong>Donnée (Niveau 1)</strong></td>
+      <td width="8%"><strong>Donnée (Niveau 2)</strong></td>
+      <td width="30%"><strong>Description</strong></td>
+      <td width="16%"><strong>Exemples</strong></td>
+      <td width="10%"><strong>Balise</strong></td>
+      <td width="8%"><strong>Cardinalité</strong></td>
+      <td width="5%"><strong>Objet</strong></td>
+      <td width="7%"><strong>Format (ou type)</strong></td>
+      <td width="10%"><strong>Détails de format</strong></td>
     </tr>
     <tr>
       <td>1</td>
       <td>Identifiant du rendez-vous</td>
       <td></td>
-      <td>Un identifiant technique unique par RDV est transmis.\n\nCet identifiant est défini par la plateforme numérique SAS et peut prendre la forme d’un UUID par exemple.\nLa solution éditeur devra s’appuyer sur cet ID pour la gestion des requêtes de mises à jour.</td>
+      <td>Un identifiant technique unique par RDV est transmis. Cet identifiant est défini par la plateforme numérique SAS et peut prendre la forme d’un UUID par exemple.La solution éditeur devra s’appuyer sur cet ID pour la gestion des requêtes de mises à jour.</td>
       <td>12348</td>
       <td>appointmentId</td>
       <td>1..1</td>
@@ -365,7 +363,7 @@ Le message json contenant les données et encapsulé dans l'entête EDXL-DE resp
   </tbody>
 </table>
 
-
+\
 Cf. exemple ci-dessous de message de création
 ```json
 {
@@ -389,17 +387,16 @@ Cf. exemple ci-dessous de message de création
   }
 }
 ```
+S'agissant d'une création de message, le champ `method` est valorisé à `CreateAppointment'
 
 ### Message de modification de RDV
 
-La mise à jour des données du RDV peut porter sur chacun des éléments de la ressource transmise (dates du créneau, PS effecteurs des soins, statut du RDV, etc.).
+La mise à jour des données du RDV peut porter sur chacun des éléments décrits avec modifications de données (dates du créneau, statut du RDV, etc.).ou bien ajout d'un objet (`practitioner` ou `organization`) et des attributs associés.
 
 Le message transmis pour la mise à jour du RDV devra suivre les modalités suivantes :
 
 - **Protocole** : <span style="color:blue">AMQP 0-9-1  
 </span>
-- **Ressource type** : <span style="color:blue">Bundle  
-</span>  
 - **Sender** : <span style="color:blue">PTF SAS  
 </span> 
 - **Content-type** : <span style="color:blue">application/json    
@@ -408,7 +405,7 @@ Le message transmis pour la mise à jour du RDV devra suivre les modalités suiv
 </span>
 
 
-Le fichier json encapsulé dans l'entête aura le champ `Méthode` valorisé à `UpdateAppointment` et contiendra les données modifiées / ajoutées / supprimées par rapport au message de création afin que les données pour un même identifiant de RDV puissent être mises à jour
+Le fichier json encapsulé dans l'entête aura le champ `method` valorisé à `UpdateAppointment` et contiendra les données modifiées / ajoutées / supprimées par rapport au message de création (selon le format décrit au paragraphe précédent) afin que les données pour un même identifiant de RDV puissent être mises à jour
 
 **L’identifiant technique SAS du RDV (champ `appointmentId`)** transmis sera stocké par la solution éditeur LRM pour identification du RDV sur lequel porte les mises à jour éventuelles.
 
@@ -486,7 +483,6 @@ Cette section détaille les champs à utiliser afin de renseigner les différent
 
 - **organizationId** : Identifiant unique propre à chaque structure de soins. Les champs sont valorisés comme suit : numéro du FINESS avec préfixe « 1 » ou numéro du SIRET avec préfixe « 3 » 
 
-
 ### Déclencheurs et règles d'intégration attendues
 
 Divers évènements dans la plateforme numérique SAS peuvent déclencher de manière instantanée le flux. À titre d’exemple, vous trouverez ci-dessous une liste non exhaustive de ces évènements : 
@@ -501,8 +497,7 @@ Divers évènements dans la plateforme numérique SAS peuvent déclencher de man
     - lors d’un changement du PS effecteur de soins (ex. remplacement) ou lorsque le PS n’a pas pu être identifié au préalable (ex. agendas de structure) 
     - lors d’un changement horaire du créneau 
 
-<br>
-
+\
 Le paragraphe ci-dessous détaille les différentes **règles de gestions attendues** par les éditeurs à la suite du déclenchement du flux et la transmission d’un message : 
 - A la réception du message, **la solution éditeur stockera l’identifiant technique SAS du RDV transmis** pour référence et gestion des mises à jour éventuelles 
 - Il est attendu pour les éditeurs ayant implémenté le flux de **mettre en place une écoute de leurs files de messages instantanément** afin de permettra le rattachement du RDV avec le DRM par le régulateur à la suite de la transmission des informations de RDV 
