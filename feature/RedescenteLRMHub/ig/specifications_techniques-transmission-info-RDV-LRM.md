@@ -121,35 +121,193 @@ Lorsqu’un régulateur prend RDV pour un patient via la plateforme numérique S
 
 * **Protocole** : AMQP 0-9-1
 
+* **En-tête** : EDXL-DL
 * **Sender** : PTF SAS
 
-* **Content-type** : application/json
-
-* **Format du contenu** : JSON
+* **Format du message contenu** : JSON
 
 Le message json contenant les données et encapsulé dans l'entête EDXL-DE respecte le format suivant :
 
-| | | | | | | | | | |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **ID** | **Donnée (Niveau 1)** | **Donnée (Niveau 2)** | **Description** | **Exemples** | **Balise** | **Cardinalité** | **Objet** | **Format (ou type)** | **Détails de format** |
-| 1 | Identifiant du rendez-vous |  | Un identifiant technique unique par RDV est transmis. Cet identifiant est défini par la plateforme numérique SAS et peut prendre la forme d’un UUID par exemple.La solution éditeur devra s’appuyer sur cet ID pour la gestion des requêtes de mises à jour. | 12348 | appointmentId | 1..1 |  | string |  |
-| 2 | Méthode |  | Indique un message de création ou de modification du rendez-vous | createAppointment | method | 1..1 |  | string | ENUM: CreateAppointment, UpdateAppointment |
-| 3 | Date et heure de la prise de rendez-vous |  | Indique la date et l’heure de la prise de RDV | 2025-06-17T10:15:56+01:00 | created | 1..1 |  | datetime |  |
-| 4 | Date et heure de début du rendez-vous |  | Indique la date et l’horaire de début du rendez-vous | 2025-06-17T14:00:00+01:00 | start | 1..1 |  | datetime |  |
-| 5 | Date et heure de fin du rendez-vous |  | Indique la date et l’horaire de fin du rendez-vous | 2025-06-17T14:20:00+01:00 | end | 0..1 |  | datetime |  |
-| 6 | Statut du rendez-vous |  | Indique le statut du rendez-vous | booked | status | 1..1 |  | string | ENUM: pending, booked, fulfilled, noshow, cancelled |
-| 7 | Catégorie d'orientation |  | Indique la catégorie de l’orientation de rendez-vous | SOS | orientationCategory | 0..1 |  | string | ENUM: CPTS, MSP, CDS, SOS, PS, PDM |
-| 8 | Professionnel de santé |  | Représente le professionnel de santé associé au rendez-vous |  | practitioner | 0..1 | X | practitioner |  |
-| 9 |  | Identifiant RPPS | Identifiant national (RPPS) du PS | 810002909371 | rppsId | 1..1 |  | string | REGEX: ^81[0-9]{10}$ |
-| 10 |  | Nom du PS | Nom du professionnel de santé | Dupont | lastName | 1..1 |  | string |  |
-| 11 |  | Prénom du PS | Prénom du professionnel de santé | Jean | firstName | 1..1 |  | string |  |
-| 12 |  | Spécialité | Code de la spécialité du professionnel de santé | SM54 | specialityCode | 0..1 |  | string |  |
-| 13 |  | Terminologie spécialité | Url de la terminologie utilisée pour la spécialité | https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale | specialityUrl | 0..1 |  | string |  |
-| 14 |  | Profession | Code de la profession du professionnel de santé | 10 | professionCode | 0..1 |  | string |  |
-| 15 |  | Terminologie profession | Url de la terminologie utilisée pour la profession | https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante | professionUrl | 0..1 |  | string |  |
-| 16 | Structure |  | Représente la structure du PS ou la structure associée au rendez-vous si le PS n'est pas connu |  | organization | 0..1 | X | organization |  |
-| 17 |  | Identifiant national de la structure | Indique l'identifiant national de la structure | 334173748400020 | organizationId | 1..1 |  | string |  |
-| 18 |  | Nom de la structure | Indique le nom de la structure | SOS Médecins de Rennes | name | 1..1 |  | string |  |
+* **ID**: 1
+  * **Donnée (Niveau 1)**: Identifiant du rendez-vous
+  * **Donnée (Niveau 2)**: 
+  * **Description**: Un identifiant technique unique par RDV est transmis. Cet identifiant est défini par la plateforme numérique SAS et peut prendre la forme d’un UUID par exemple.La solution éditeur devra s’appuyer sur cet ID pour la gestion des requêtes de mises à jour.
+  * **Exemples**: 12348
+  * **Balise**: appointmentId
+  * **Cardinalité**: 1..1
+  * **Objet**: 
+  * **Format (ou type)**: string
+  * **Détails de format**: 
+* **ID**: 2
+  * **Donnée (Niveau 1)**: Méthode
+  * **Donnée (Niveau 2)**: 
+  * **Description**: Indique un message de création ou de modification du rendez-vous
+  * **Exemples**: createAppointment
+  * **Balise**: method
+  * **Cardinalité**: 1..1
+  * **Objet**: 
+  * **Format (ou type)**: string
+  * **Détails de format**: ENUM: CreateAppointment, UpdateAppointment
+* **ID**: 3
+  * **Donnée (Niveau 1)**: Date et heure de la prise de rendez-vous
+  * **Donnée (Niveau 2)**: 
+  * **Description**: Indique la date et l’heure de la prise de RDV
+  * **Exemples**: 2025-06-17T10:15:56+01:00
+  * **Balise**: created
+  * **Cardinalité**: 1..1
+  * **Objet**: 
+  * **Format (ou type)**: datetime
+  * **Détails de format**: 
+* **ID**: 4
+  * **Donnée (Niveau 1)**: Date et heure de début du rendez-vous
+  * **Donnée (Niveau 2)**: 
+  * **Description**: Indique la date et l’horaire de début du rendez-vous
+  * **Exemples**: 2025-06-17T14:00:00+01:00
+  * **Balise**: start
+  * **Cardinalité**: 1..1
+  * **Objet**: 
+  * **Format (ou type)**: datetime
+  * **Détails de format**: 
+* **ID**: 5
+  * **Donnée (Niveau 1)**: Date et heure de fin du rendez-vous
+  * **Donnée (Niveau 2)**: 
+  * **Description**: Indique la date et l’horaire de fin du rendez-vous
+  * **Exemples**: 2025-06-17T14:20:00+01:00
+  * **Balise**: end
+  * **Cardinalité**: 0..1
+  * **Objet**: 
+  * **Format (ou type)**: datetime
+  * **Détails de format**: 
+* **ID**: 6
+  * **Donnée (Niveau 1)**: Statut du rendez-vous
+  * **Donnée (Niveau 2)**: 
+  * **Description**: Indique le statut du rendez-vous
+  * **Exemples**: booked
+  * **Balise**: status
+  * **Cardinalité**: 1..1
+  * **Objet**: 
+  * **Format (ou type)**: string
+  * **Détails de format**: ENUM: pending, booked, fulfilled, noshow, cancelled
+* **ID**: 7
+  * **Donnée (Niveau 1)**: Catégorie d'orientation
+  * **Donnée (Niveau 2)**: 
+  * **Description**: Indique la catégorie de l’orientation de rendez-vous
+  * **Exemples**: SOS
+  * **Balise**: orientationCategory
+  * **Cardinalité**: 0..1
+  * **Objet**: 
+  * **Format (ou type)**: string
+  * **Détails de format**: ENUM: CPTS, MSP, CDS, SOS, PS, PDM
+* **ID**: 8
+  * **Donnée (Niveau 1)**: Professionnel de santé
+  * **Donnée (Niveau 2)**: 
+  * **Description**: Représente le professionnel de santé associé au rendez-vous
+  * **Exemples**: 
+  * **Balise**: practitioner
+  * **Cardinalité**: 0..1
+  * **Objet**: X
+  * **Format (ou type)**: practitioner
+  * **Détails de format**: 
+* **ID**: 9
+  * **Donnée (Niveau 1)**: 
+  * **Donnée (Niveau 2)**: Identifiant RPPS
+  * **Description**: Identifiant national (RPPS) du PS
+  * **Exemples**: 810002909371
+  * **Balise**: rppsId
+  * **Cardinalité**: 1..1
+  * **Objet**: 
+  * **Format (ou type)**: string
+  * **Détails de format**: REGEX: ^81[0-9]{10}$
+* **ID**: 10
+  * **Donnée (Niveau 1)**: 
+  * **Donnée (Niveau 2)**: Nom du PS
+  * **Description**: Nom du professionnel de santé
+  * **Exemples**: Dupont
+  * **Balise**: lastName
+  * **Cardinalité**: 1..1
+  * **Objet**: 
+  * **Format (ou type)**: string
+  * **Détails de format**: 
+* **ID**: 11
+  * **Donnée (Niveau 1)**: 
+  * **Donnée (Niveau 2)**: Prénom du PS
+  * **Description**: Prénom du professionnel de santé
+  * **Exemples**: Jean
+  * **Balise**: firstName
+  * **Cardinalité**: 1..1
+  * **Objet**: 
+  * **Format (ou type)**: string
+  * **Détails de format**: 
+* **ID**: 12
+  * **Donnée (Niveau 1)**: 
+  * **Donnée (Niveau 2)**: Spécialité
+  * **Description**: Code de la spécialité du professionnel de santé
+  * **Exemples**: SM54
+  * **Balise**: specialityCode
+  * **Cardinalité**: 0..1
+  * **Objet**: 
+  * **Format (ou type)**: string
+  * **Détails de format**: 
+* **ID**: 13
+  * **Donnée (Niveau 1)**: 
+  * **Donnée (Niveau 2)**: Terminologie spécialité
+  * **Description**: Url de la terminologie utilisée pour la spécialité
+  * **Exemples**: https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale
+  * **Balise**: specialityUrl
+  * **Cardinalité**: 0..1
+  * **Objet**: 
+  * **Format (ou type)**: string
+  * **Détails de format**: 
+* **ID**: 14
+  * **Donnée (Niveau 1)**: 
+  * **Donnée (Niveau 2)**: Profession
+  * **Description**: Code de la profession du professionnel de santé
+  * **Exemples**: 10
+  * **Balise**: professionCode
+  * **Cardinalité**: 0..1
+  * **Objet**: 
+  * **Format (ou type)**: string
+  * **Détails de format**: 
+* **ID**: 15
+  * **Donnée (Niveau 1)**: 
+  * **Donnée (Niveau 2)**: Terminologie profession
+  * **Description**: Url de la terminologie utilisée pour la profession
+  * **Exemples**: https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante
+  * **Balise**: professionUrl
+  * **Cardinalité**: 0..1
+  * **Objet**: 
+  * **Format (ou type)**: string
+  * **Détails de format**: 
+* **ID**: 16
+  * **Donnée (Niveau 1)**: Structure
+  * **Donnée (Niveau 2)**: 
+  * **Description**: Représente la structure du PS ou la structure associée au rendez-vous si le PS n'est pas connu
+  * **Exemples**: 
+  * **Balise**: organization
+  * **Cardinalité**: 0..1
+  * **Objet**: X
+  * **Format (ou type)**: organization
+  * **Détails de format**: 
+* **ID**: 17
+  * **Donnée (Niveau 1)**: 
+  * **Donnée (Niveau 2)**: Identifiant national de la structure
+  * **Description**: Indique l'identifiant national de la structure
+  * **Exemples**: 334173748400020
+  * **Balise**: organizationId
+  * **Cardinalité**: 1..1
+  * **Objet**: 
+  * **Format (ou type)**: string
+  * **Détails de format**: 
+* **ID**: 18
+  * **Donnée (Niveau 1)**: 
+  * **Donnée (Niveau 2)**: Nom de la structure
+  * **Description**: Indique le nom de la structure
+  * **Exemples**: SOS Médecins de Rennes
+  * **Balise**: name
+  * **Cardinalité**: 1..1
+  * **Objet**: 
+  * **Format (ou type)**: string
+  * **Détails de format**: 
 
  Cf. exemple ci-dessous de message de création
 
@@ -187,11 +345,10 @@ Le message transmis pour la mise à jour du RDV devra suivre les modalités suiv
 
 * **Protocole** : AMQP 0-9-1
 
+* **En-tête** : EDXL-DL
 * **Sender** : PTF SAS
 
-* **Content-type** : application/json
-
-* **Format du contenu** : JSON
+* **Format du message contenu** : JSON
 
 Le fichier json encapsulé dans l'entête aura le champ `method` valorisé à `UpdateAppointment` et contiendra les données modifiées / ajoutées / supprimées par rapport au message de création (selon le format décrit au paragraphe précédent) afin que les données pour un même identifiant de RDV puissent être mises à jour
 
