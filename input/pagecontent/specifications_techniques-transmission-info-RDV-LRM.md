@@ -121,28 +121,28 @@ Lorsqu’un régulateur prend RDV pour un patient via la plateforme numérique S
 
 - **Protocole** : <span style="color:blue">AMQP 0-9-1  
 </span>
+- **En-tête** : <span style="color:blue">EDXL-DL 
+</span>
 - **Sender** : <span style="color:blue">PTF SAS  
 </span> 
-- **Content-type** : <span style="color:blue">application/json    
-</span>
-- **Format du contenu** : <span style="color:blue">JSON
+- **Format du message contenu** : <span style="color:blue">JSON
 </span>
 
 Le message json contenant les données et encapsulé dans l'entête EDXL-DE respecte le format suivant : 
 
-<table border="1" class="dataframe">
+<table style="table-layout: fixed; width: 100%;">
   <tbody>
     <tr style="text-align: center;">
-      <td width="8%"><strong>ID</strong></td>
-      <td width="8%"><strong>Donnée (Niveau 1)</strong></td>
-      <td width="8%"><strong>Donnée (Niveau 2)</strong></td>
-      <td width="30%"><strong>Description</strong></td>
-      <td width="16%"><strong>Exemples</strong></td>
-      <td width="10%"><strong>Balise</strong></td>
-      <td width="8%"><strong>Cardinalité</strong></td>
-      <td width="5%"><strong>Objet</strong></td>
-      <td width="7%"><strong>Format (ou type)</strong></td>
-      <td width="10%"><strong>Détails de format</strong></td>
+      <th style="width: 8%;"><strong>ID</strong></th>
+      <th style="width: 8%;"><strong>Donnée (Niveau 1)</strong></th>
+      <th style="width: 8%;"><strong>Donnée (Niveau 2)</strong></th>
+      <th style="width: 30%;"><strong>Description</strong></th>
+      <th style="width: 6%;"><strong>Exemples</strong></th>
+      <th style="width: 10%;"><strong>Balise</strong></th>
+      <th style="width: 8%;"><strong>Cardinalité</strong></th>
+      <th style="width: 5%;"><strong>Objet</strong></th>
+      <th style="width: 7%;"><strong>Format (ou type)</strong></th>
+      <th style="width: 10%;"><strong>Détails de format</strong></th>
     </tr>
     <tr>
       <td>1</td>
@@ -397,11 +397,11 @@ Le message transmis pour la mise à jour du RDV devra suivre les modalités suiv
 
 - **Protocole** : <span style="color:blue">AMQP 0-9-1  
 </span>
+- **En-tête** : <span style="color:blue">EDXL-DL 
+</span>
 - **Sender** : <span style="color:blue">PTF SAS  
 </span> 
-- **Content-type** : <span style="color:blue">application/json    
-</span>
-- **Format du contenu** : <span style="color:blue">JSON
+- **Format du message contenu** : <span style="color:blue">JSON
 </span>
 
 
