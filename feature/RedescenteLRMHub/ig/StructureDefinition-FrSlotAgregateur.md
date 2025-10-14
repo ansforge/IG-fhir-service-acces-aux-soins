@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-FrSlotAgregateur.csv
   "version" : "1.1.0",
   "name" : "FrSlotAgregateur",
   "status" : "active",
-  "date" : "2025-10-14T07:25:19+00:00",
+  "date" : "2025-10-14T07:48:21+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

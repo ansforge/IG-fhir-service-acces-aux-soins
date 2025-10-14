@@ -53,7 +53,7 @@ Statut du participant RDV SAS SOS
   "title" : "Statut participant SAS SOS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2025-10-14T07:25:19+00:00",
+  "date" : "2025-10-14T07:48:21+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

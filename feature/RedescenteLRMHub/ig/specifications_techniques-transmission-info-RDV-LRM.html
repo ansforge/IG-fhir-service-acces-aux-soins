@@ -247,6 +247,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul id="markdown-toc">
   <li><a href="#détail-des-échanges-entre-les-acteurs" id="markdown-toc-détail-des-échanges-entre-les-acteurs">Détail des échanges entre les acteurs</a></li>
   <li><a href="#message-denvoi-de-rdv" id="markdown-toc-message-denvoi-de-rdv">Message d'envoi de RDV</a></li>
+  <li><a href="#message-de-modification-de-rdv" id="markdown-toc-message-de-modification-de-rdv">Message de modification de RDV</a></li>
+  <li><a href="#message-dannulation-de-rdv" id="markdown-toc-message-dannulation-de-rdv">Message d'annulation de RDV</a></li>
+  <li><a href="#détail-des-champs-à-utiliser" id="markdown-toc-détail-des-champs-à-utiliser">Détail des champs à utiliser</a></li>
+  <li><a href="#déclencheurs-et-règles-dintégration-attendues" id="markdown-toc-déclencheurs-et-règles-dintégration-attendues">Déclencheurs et règles d'intégration attendues</a></li>
 </ul>
 
 </div>
@@ -620,264 +624,398 @@ Le cheminement est similaire au message envoyé mais pris en sens inverse.</p>
 
 <p>Le message json contenant les données et encapsulé dans l'entête EDXL-DE respecte les spécifications suivantes</p>
 
-<table>
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Donnée (Niveau 1)</th>
-      <th>Donnée (Niveau 2)</th>
-      <th>Donnée (Niveau 3)</th>
-      <th>Donnée (Niveau 4)</th>
-      <th>Donnée (Niveau 5)</th>
-      <th>Donnée (Niveau 6)</th>
-      <th>Description</th>
-      <th>Exemples</th>
-      <th>Balise</th>
-      <th>Cardinalité</th>
-      <th>Objet</th>
-      <th>Format (ou type)</th>
-      <th>Détails de format</th>
-    </tr>
-  </thead>
+<table border="1" class="dataframe">
   <tbody>
+    <tr style="text-align: right;">
+      <td>ID</td>
+      <td>Donnée (Niveau 1)</td>
+      <td>Donnée (Niveau 2)</td>
+      <td>Description</td>
+      <td>Exemples</td>
+      <td>Balise</td>
+      <td>Cardinalité</td>
+      <td>Objet</td>
+      <td>Format (ou type)</td>
+      <td>Détails de format</td>
+    </tr>
     <tr>
       <td>1</td>
-      <td>Identifiant du rendez-vous</td><td></td><td></td><td></td><td></td><td></td>
-      <td>Un identifiant technique unique par RDV est transmis. Cet identifiant est défini par la plateforme numérique SAS et peut prendre la forme d’un UUID. La solution éditeur devra s’appuyer sur cet ID.</td>
-      <td>29b7fcca-0b06-43f1-8019-9a7788a241ad</td><td>appointmentId</td><td>1..1</td><td></td><td>string</td><td>X</td>
+      <td>Identifiant du rendez-vous</td>
+      <td></td>
+      <td>Un identifiant technique unique par RDV est transmis.\n\nCet identifiant est défini par la plateforme numérique SAS et peut prendre la forme d’un UUID par exemple.\nLa solution éditeur devra s’appuyer sur cet ID pour la gestion des requêtes de mises à jour.</td>
+      <td>12348</td>
+      <td>appointmentId</td>
+      <td>1..1</td>
+      <td></td>
+      <td>string</td>
+      <td></td>
     </tr>
     <tr>
-      <td>2</td><td>Méthode</td><td></td><td></td><td></td><td></td><td></td>
+      <td>2</td>
+      <td>Méthode</td>
+      <td></td>
       <td>Indique un message de création ou de modification du rendez-vous</td>
-      <td>createAppointment</td><td>method</td><td>1..1</td><td></td><td>string</td><td>ENUM: CreateAppointment, UpdateAppointment</td>
+      <td>createAppointment</td>
+      <td>method</td>
+      <td>1..1</td>
+      <td></td>
+      <td>string</td>
+      <td>ENUM: CreateAppointment, UpdateAppointment</td>
     </tr>
     <tr>
-      <td>3</td><td>Date et heure de la prise de rendez-vous</td><td></td><td></td><td></td><td></td><td></td>
+      <td>3</td>
+      <td>Date et heure de la prise de rendez-vous</td>
+      <td></td>
       <td>Indique la date et l’heure de la prise de RDV</td>
-      <td>2025-06-17T10:15:56+01:00</td><td>created</td><td>1..1</td><td></td><td>datetime</td><td>X</td>
+      <td>2025-06-17T10:15:56+01:00</td>
+      <td>created</td>
+      <td>1..1</td>
+      <td></td>
+      <td>datetime</td>
+      <td></td>
     </tr>
     <tr>
-      <td>4</td><td>Date et heure de début du rendez-vous</td><td></td><td></td><td></td><td></td><td></td>
+      <td>4</td>
+      <td>Date et heure de début du rendez-vous</td>
+      <td></td>
       <td>Indique la date et l’horaire de début du rendez-vous</td>
-      <td>2025-06-17T14:00:00+01:00</td><td>start</td><td>1..1</td><td></td><td>datetime</td><td>X</td>
+      <td>2025-06-17T14:00:00+01:00</td>
+      <td>start</td>
+      <td>1..1</td>
+      <td></td>
+      <td>datetime</td>
+      <td></td>
     </tr>
     <tr>
-      <td>5</td><td>Date et heure de fin du rendez-vous</td><td></td><td></td><td></td><td></td><td></td>
+      <td>5</td>
+      <td>Date et heure de fin du rendez-vous</td>
+      <td></td>
       <td>Indique la date et l’horaire de fin du rendez-vous</td>
-      <td>2025-06-17T14:20:00+01:00</td><td>end</td><td>0..1</td><td></td><td>datetime</td><td>X</td>
+      <td>2025-06-17T14:20:00+01:00</td>
+      <td>end</td>
+      <td>0..1</td>
+      <td></td>
+      <td>datetime</td>
+      <td></td>
     </tr>
     <tr>
-      <td>6</td><td>Statut du rendez-vous</td><td></td><td></td><td></td><td></td><td></td>
+      <td>6</td>
+      <td>Statut du rendez-vous</td>
+      <td></td>
       <td>Indique le statut du rendez-vous</td>
-      <td>booked</td><td>status</td><td>1..1</td><td></td><td>string</td><td>ENUM: pending, booked, fulfilled, noshow, cancelled</td>
+      <td>booked</td>
+      <td>status</td>
+      <td>1..1</td>
+      <td></td>
+      <td>string</td>
+      <td>ENUM: pending, booked, fulfilled, noshow, cancelled</td>
     </tr>
     <tr>
-      <td>7</td><td>Catégorie d'orientation</td><td></td><td></td><td></td><td></td><td></td>
+      <td>7</td>
+      <td>Catégorie d'orientation</td>
+      <td></td>
       <td>Indique la catégorie de l’orientation de rendez-vous</td>
-      <td>SOS</td><td>orientationCategory</td><td>0..1</td><td></td><td>string</td><td>ENUM: CPTS, MSP, CDS, SOS, PS, PDM</td>
+      <td>SOS</td>
+      <td>orientationCategory</td>
+      <td>0..1</td>
+      <td></td>
+      <td>string</td>
+      <td>ENUM: CPTS, MSP, CDS, SOS, PS, PDM</td>
     </tr>
     <tr>
-      <td>8</td><td>Professionnel de santé</td><td></td><td></td><td></td><td></td><td></td>
+      <td>8</td>
+      <td>Professionnel de santé</td>
+      <td></td>
       <td>Représente le professionnel de santé associé au rendez-vous</td>
-      <td></td><td>practitioner</td><td>0..1</td><td>practitioner</td><td></td><td>X</td>
+      <td></td>
+      <td>practitioner</td>
+      <td>0..1</td>
+      <td>X</td>
+      <td>practitioner</td>
+      <td></td>
     </tr>
     <tr>
-      <td>9</td><td></td><td>Identifiant RPPS</td><td></td><td></td><td></td><td></td>
+      <td>9</td>
+      <td></td>
+      <td>Identifiant RPPS</td>
       <td>Identifiant national (RPPS) du PS</td>
-      <td>810002909371</td><td>rppsId</td><td>1..1</td><td></td><td>string</td><td>REGEX: ^81[0-9]{10}$</td>
+      <td>810002909371</td>
+      <td>rppsId</td>
+      <td>1..1</td>
+      <td></td>
+      <td>string</td>
+      <td>REGEX: ^81[0-9]{10}$</td>
     </tr>
     <tr>
-      <td>10</td><td></td><td>Nom du PS</td><td></td><td></td><td></td><td></td>
+      <td>10</td>
+      <td></td>
+      <td>Nom du PS</td>
       <td>Nom du professionnel de santé</td>
-      <td>Dupont</td><td>lastName</td><td>1..1</td><td></td><td>string</td><td>X</td>
+      <td>Dupont</td>
+      <td>lastName</td>
+      <td>1..1</td>
+      <td></td>
+      <td>string</td>
+      <td></td>
     </tr>
     <tr>
-      <td>11</td><td></td><td>Prénom du PS</td><td></td><td></td><td></td><td></td>
+      <td>11</td>
+      <td></td>
+      <td>Prénom du PS</td>
       <td>Prénom du professionnel de santé</td>
-      <td>Jean</td><td>firstName</td><td>1..1</td><td></td><td>string</td><td>X</td>
+      <td>Jean</td>
+      <td>firstName</td>
+      <td>1..1</td>
+      <td></td>
+      <td>string</td>
+      <td></td>
     </tr>
     <tr>
-      <td>12</td><td></td><td>Spécialité</td><td></td><td></td><td></td><td></td>
+      <td>12</td>
+      <td></td>
+      <td>Spécialité</td>
       <td>Code de la spécialité du professionnel de santé</td>
-      <td>SM54</td><td>specialityCode</td><td>0..1</td><td></td><td>string</td><td>X</td>
+      <td>SM54</td>
+      <td>specialityCode</td>
+      <td>0..1</td>
+      <td></td>
+      <td>string</td>
+      <td></td>
     </tr>
     <tr>
-      <td>13</td><td></td><td>Terminologie spécialité</td><td></td><td></td><td></td><td></td>
+      <td>13</td>
+      <td></td>
+      <td>Terminologie spécialité</td>
       <td>Url de la terminologie utilisée pour la spécialité</td>
-      <td><a href="https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale/">&lt;/td&gt;<td>specialityUrl</td><td>0..1</td><td></td><td>string</td><td>X</td>
-    &lt;/tr&gt;
+      <td>https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale</td>
+      <td>specialityUrl</td>
+      <td>0..1</td>
+      <td></td>
+      <td>string</td>
+      <td></td>
+    </tr>
     <tr>
-      <td>14</td><td></td><td>Profession</td><td></td><td></td><td></td><td></td>
+      <td>14</td>
+      <td></td>
+      <td>Profession</td>
       <td>Code de la profession du professionnel de santé</td>
-      <td>10</td><td>professionCode</td><td>0..1</td><td></td><td>string</td><td>X</td>
+      <td>10</td>
+      <td>professionCode</td>
+      <td>0..1</td>
+      <td></td>
+      <td>string</td>
+      <td></td>
     </tr>
     <tr>
-      <td>15</td><td></td><td>Terminologie profession</td><td></td><td></td><td></td><td></td>
+      <td>15</td>
+      <td></td>
+      <td>Terminologie profession</td>
       <td>Url de la terminologie utilisée pour la profession</td>
-      <td><a href="https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante/">&lt;/td&gt;<td>professionUrl</td><td>0..1</td><td></td><td>string</td><td>X</td>
-    &lt;/tr&gt;
+      <td>https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante</td>
+      <td>professionUrl</td>
+      <td>0..1</td>
+      <td></td>
+      <td>string</td>
+      <td></td>
+    </tr>
     <tr>
-      <td>16</td><td>Structure</td><td></td><td></td><td></td><td></td><td></td>
+      <td>16</td>
+      <td>Structure</td>
+      <td></td>
       <td>Représente la structure du PS ou la structure associée au rendez-vous si le PS n'est pas connu</td>
-      <td></td><td>organization</td><td>0..1</td><td>organization</td><td></td><td>X</td>
+      <td></td>
+      <td>organization</td>
+      <td>0..1</td>
+      <td>X</td>
+      <td>organization</td>
+      <td></td>
     </tr>
     <tr>
-      <td>17</td><td></td><td>Identifiant national de la structure</td><td></td><td></td><td></td><td></td>
+      <td>17</td>
+      <td></td>
+      <td>Identifiant national de la structure</td>
       <td>Indique l'identifiant national de la structure</td>
-      <td>334173748400020</td><td>organizationId</td><td>1..1</td><td></td><td>string</td><td>X</td>
+      <td>334173748400020</td>
+      <td>organizationId</td>
+      <td>1..1</td>
+      <td></td>
+      <td>string</td>
+      <td></td>
     </tr>
     <tr>
-      <td>18</td><td></td><td>Nom de la structure</td><td></td><td></td><td></td><td></td>
+      <td>18</td>
+      <td></td>
+      <td>Nom de la structure</td>
       <td>Indique le nom de la structure</td>
-      <td>SOS Médecins de Rennes</td><td>name</td><td>1..1</td><td></td><td>string</td><td>X</td>
+      <td>SOS Médecins de Rennes</td>
+      <td>name</td>
+      <td>1..1</td>
+      <td></td>
+      <td>string</td>
+      <td></td>
     </tr>
-  &lt;/tbody&gt;
-&lt;/table&gt;
+  </tbody>
+</table>
 
+<p>Cf. exemple ci-dessous de message de création</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"appointment"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"appointmentId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2d2db05f-e2b0-4169-be8f-891806da2c74"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CreateAppointment"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-06-17T10:15:00+02:00"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"booked"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"orientationCategory"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PS"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-06-17T14:00:00+02:00"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-06-17T14:20:00+02:00"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"practitioner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"rppsId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"810005681340"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MOREL"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"firstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Didier"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"specialityCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SM54"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"specialityUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"professionUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"professionCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
 
-Cf. exemple ci-dessous de message de création
+<h3 id="message-de-modification-de-rdv">Message de modification de RDV</h3>
 
-{
-  "appointment": {
-    "appointmentId": "2d2db05f-e2b0-4169-be8f-891806da2c74",
-    "method": "CreateAppointment",
-    "created": "2025-06-17T10:15:00+02:00",
-    "status": "booked",
-    "orientationCategory": "PS",
-    "start": "2025-06-17T14:00:00+02:00",
-    "end": "2025-06-17T14:20:00+02:00",
-    "practitioner": {
-      "rppsId": "810005681340",
-      "lastName": "MOREL",
-      "firstName": "Didier",
-      "specialityCode": "SM54",
-      "specialityUrl": "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
-      "professionUrl": "https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante",
-      "professionCode": "10"
-    }
-  }
-}
+<p>La mise à jour des données du RDV peut porter sur chacun des éléments de la ressource transmise (dates du créneau, PS effecteurs des soins, statut du RDV, etc.).</p>
 
-### Message de modification de RDV
+<p>Le message transmis pour la mise à jour du RDV devra suivre les modalités suivantes :</p>
 
-La mise à jour des données du RDV peut porter sur chacun des éléments de la ressource transmise (dates du créneau, PS effecteurs des soins, statut du RDV, etc.).
+<ul>
+  <li><strong>Protocole</strong> : <span style="color:blue">AMQP 0-9-1<br />
+</span></li>
+  <li><strong>Ressource type</strong> : <span style="color:blue">Bundle<br />
+</span></li>
+  <li><strong>Sender</strong> : <span style="color:blue">PTF SAS<br />
+</span></li>
+  <li><strong>Content-type</strong> : <span style="color:blue">application/json  <br />
+</span></li>
+  <li><strong>Format du contenu</strong> : <span style="color:blue">JSON
+</span></li>
+</ul>
 
-Le message transmis pour la mise à jour du RDV devra suivre les modalités suivantes :
+<p>Le fichier json encapsulé dans l'entête aura le champ <code class="language-plaintext highlighter-rouge">Méthode</code> valorisé à <code class="language-plaintext highlighter-rouge">UpdateAppointment</code> et contiendra les données modifiées / ajoutées / supprimées par rapport au message de création afin que les données pour un même identifiant de RDV puissent être mises à jour</p>
 
-- **Protocole** : <span style="color:blue">AMQP 0-9-1  
-</span>
-- **Ressource type** : <span style="color:blue">Bundle  
-</span>  
-- **Sender** : <span style="color:blue">PTF SAS  
-</span> 
-- **Content-type** : <span style="color:blue">application/json    
-</span>
-- **Format du contenu** : <span style="color:blue">JSON
-</span>
+<p><strong>L’identifiant technique SAS du RDV (champ <code class="language-plaintext highlighter-rouge">appointmentId</code>)</strong> transmis sera stocké par la solution éditeur LRM pour identification du RDV sur lequel porte les mises à jour éventuelles.</p>
 
+<p>Cf. exemple ci-dessous de message de modification</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"appointment"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"appointmentId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2d2db05f-e2b0-4169-be8f-891806da2c74"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UpdateAppointment"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-06-17T10:15:00+02:00"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fulfilled"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"orientationCategory"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PS"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-06-17T14:00:00+02:00"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-06-17T14:20:00+02:00"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"practitioner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"rppsId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"810005681340"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MOREL"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"firstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Didier"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"specialityCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SM54"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"specialityUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"professionUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"professionCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+<h3 id="message-dannulation-de-rdv">Message d'annulation de RDV</h3>
 
-Le fichier json encapsulé dans l'entête aura le champ `Méthode` valorisé à `UpdateAppointment` et contiendra les données modifiées / ajoutées / supprimées par rapport au message de création afin que les données pour un même identifiant de RDV puissent être mises à jour
+<p>Il n’y aura pas de message spécifique pour l’annulation d’un RDV. Une annulation de RDV est modélisée par un message de type « mise à jour du RDV » avec la modification du statut du RDV à « annulé ».</p>
 
-**L’identifiant technique SAS du RDV (champ `appointmentId`)** transmis sera stocké par la solution éditeur LRM pour identification du RDV sur lequel porte les mises à jour éventuelles.
+<p>Cf. exemple ci-dessous de message d'annulation.</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"appointment"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"appointmentId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2d2db05f-e2b0-4169-be8f-891806da2c74"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UpdateAppointment"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-06-17T10:15:00+02:00"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cancelled"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"orientationCategory"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PS"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-06-17T14:00:00+02:00"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-06-17T14:20:00+02:00"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"practitioner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"rppsId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"810005681340"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MOREL"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"firstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Didier"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"specialityCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SM54"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"specialityUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"professionUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"professionCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+<h3 id="détail-des-champs-à-utiliser">Détail des champs à utiliser</h3>
 
-Cf. exemple ci-dessous de message de modification
+<p>Cette section détaille les champs à utiliser afin de renseigner les différents éléments codifiés de la requête.</p>
+<ul>
+  <li><strong>method</strong> : Indique un message de création ou de mise à jour. Les valeurs suivantes sont attendues :
+    <ul>
+      <li>createAppointment</li>
+      <li>updateAppointment</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>appointmentId</strong> : Un identifiant technique unique par RDV est transmis. Cet ID est défini par la plateforme numérique SAS et peut prendre la forme d’un UUID par exemple. La solution éditeur devra s’appuyer sur cet ID pour la gestion des requêtes de mises à jour.</p>
+  </li>
+  <li><strong>status</strong> : L’utilisation de la nomenclature standard AppointmentStatus (http://hl7.org/fhir/appointmentstatus) est attendue. La plateforme numérique SAS exploite à date les valeurs suivantes :
+    <ul>
+      <li>PENDING : RDV en attente de confirmation</li>
+      <li>BOOKED : RDV pris et confirmé</li>
+      <li>FULFILLED : RDV honoré</li>
+      <li>NOSHOW : RDV non honoré</li>
+      <li>CANCELLED : RDV annulé</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>practitioner.rppsId</strong> : RPPS avec préfixe « 8 »</p>
+  </li>
+  <li>
+    <p><strong>practitioner.specialtyCode</strong> : Code issu de la nomenclature des spécialités ordinales du NOS (<a href="https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale/">https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale/</a>)</p>
+  </li>
+  <li>
+    <p><strong>practitioner.professionCode</strong> : Code issu de la nomenclature des professions de santédu NOS (<a href="https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante/">https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante/</a>)</p>
+  </li>
+  <li><strong>organizationId</strong> : Identifiant unique propre à chaque structure de soins. Les champs sont valorisés comme suit : numéro du FINESS avec préfixe « 1 » ou numéro du SIRET avec préfixe « 3 »</li>
+</ul>
 
-{
-  "appointment": {
-    "appointmentId": "2d2db05f-e2b0-4169-be8f-891806da2c74",
-    "method": "UpdateAppointment",
-    "created": "2025-06-17T10:15:00+02:00",
-    "status": "fulfilled",
-    "orientationCategory": "PS",
-    "start": "2025-06-17T14:00:00+02:00",
-    "end": "2025-06-17T14:20:00+02:00",
-    "practitioner": {
-      "rppsId": "810005681340",
-      "lastName": "MOREL",
-      "firstName": "Didier",
-      "specialityCode": "SM54",
-      "specialityUrl": "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
-      "professionUrl": "https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante",
-      "professionCode": "10"
-    }
-  }
-}
+<h3 id="déclencheurs-et-règles-dintégration-attendues">Déclencheurs et règles d'intégration attendues</h3>
 
-### Message d'annulation de RDV
+<p>Divers évènements dans la plateforme numérique SAS peuvent déclencher de manière instantanée le flux. À titre d’exemple, vous trouverez ci-dessous une liste non exhaustive de ces évènements :</p>
 
-Il n’y aura pas de message spécifique pour l’annulation d’un RDV. Une annulation de RDV est modélisée par un message de type « mise à jour du RDV » avec la modification du statut du RDV à « annulé ».
+<ul>
+  <li>Pour la création d’un message :
+    <ul>
+      <li>lors de la prise de RDV ou demande de prise en charge par le régulateur pour le compte du patient dans une solution éditeur</li>
+      <li>lors de la prise de RDV par le régulateur pour le compte du patient dans la plateforme numérique SAS</li>
+      <li>lors de la prise de RDV par le régulateur pour le compte du patient en surnuméraire</li>
+    </ul>
+  </li>
+  <li>Pour la modification d’un message :
+    <ul>
+      <li>lors d’un changement de statut du RDV : confirmé, annulé, honoré et non honoré</li>
+      <li>lors d’un changement du PS effecteur de soins (ex. remplacement) ou lorsque le PS n’a pas pu être identifié au préalable (ex. agendas de structure)</li>
+      <li>lors d’un changement horaire du créneau</li>
+    </ul>
+  </li>
+</ul>
 
-Cf. exemple ci-dessous de message d'annulation.
+<p><br /></p>
 
-{
-  "appointment": {
-    "appointmentId": "2d2db05f-e2b0-4169-be8f-891806da2c74",
-    "method": "UpdateAppointment",
-    "created": "2025-06-17T10:15:00+02:00",
-    "status": "cancelled",
-    "orientationCategory": "PS",
-    "start": "2025-06-17T14:00:00+02:00",
-    "end": "2025-06-17T14:20:00+02:00",
-    "practitioner": {
-      "rppsId": "810005681340",
-      "lastName": "MOREL",
-      "firstName": "Didier",
-      "specialityCode": "SM54",
-      "specialityUrl": "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
-      "professionUrl": "https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante",
-      "professionCode": "10"
-    }
-  }
-}
-
-### Détail des champs à utiliser
-
-Cette section détaille les champs à utiliser afin de renseigner les différents éléments codifiés de la requête.
- - **method** : Indique un message de création ou de mise à jour. Les valeurs suivantes sont attendues : 
-    - createAppointment
-    - updateAppointment
-  
-- **appointmentId** : Un identifiant technique unique par RDV est transmis. Cet ID est défini par la plateforme numérique SAS et peut prendre la forme d’un UUID par exemple. La solution éditeur devra s’appuyer sur cet ID pour la gestion des requêtes de mises à jour.
-
-- **status** : L’utilisation de la nomenclature standard AppointmentStatus (http://hl7.org/fhir/appointmentstatus) est attendue. La plateforme numérique SAS exploite à date les valeurs suivantes :
-  - PENDING : RDV en attente de confirmation
-  - BOOKED : RDV pris et confirmé
-  - FULFILLED : RDV honoré
-  - NOSHOW : RDV non honoré
-  - CANCELLED : RDV annulé
-
-- **practitioner.rppsId** : RPPS avec préfixe « 8 »
-
-- **practitioner.specialtyCode** : Code issu de la nomenclature des spécialités ordinales du NOS (&lt;https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale/&gt;)
-
-- **practitioner.professionCode** : Code issu de la nomenclature des professions de santédu NOS (&lt;https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante/&gt;)
-
-- **organizationId** : Identifiant unique propre à chaque structure de soins. Les champs sont valorisés comme suit : numéro du FINESS avec préfixe « 1 » ou numéro du SIRET avec préfixe « 3 » 
-
-
-### Déclencheurs et règles d'intégration attendues
-
-Divers évènements dans la plateforme numérique SAS peuvent déclencher de manière instantanée le flux. À titre d’exemple, vous trouverez ci-dessous une liste non exhaustive de ces évènements : 
-
-- Pour la création d’un message : 
-    - lors de la prise de RDV ou demande de prise en charge par le régulateur pour le compte du patient dans une solution éditeur 
-    - lors de la prise de RDV par le régulateur pour le compte du patient dans la plateforme numérique SAS 
-    - lors de la prise de RDV par le régulateur pour le compte du patient en surnuméraire 
-
-- Pour la modification d’un message : 
-    - lors d’un changement de statut du RDV : confirmé, annulé, honoré et non honoré 
-    - lors d’un changement du PS effecteur de soins (ex. remplacement) ou lorsque le PS n’a pas pu être identifié au préalable (ex. agendas de structure) 
-    - lors d’un changement horaire du créneau 
-
-<br />
-
-Le paragraphe ci-dessous détaille les différentes **règles de gestions attendues** par les éditeurs à la suite du déclenchement du flux et la transmission d’un message : 
-- A la réception du message, **la solution éditeur stockera l’identifiant technique SAS du RDV transmis** pour référence et gestion des mises à jour éventuelles 
-- Il est attendu pour les éditeurs ayant implémenté le flux de **mettre en place une écoute de leurs files de messages instantanément** afin de permettra le rattachement du RDV avec le DRM par le régulateur à la suite de la transmission des informations de RDV 
-- Lorsque les données du RDV pris pour le compte du patient auront été transmises à la solution LRM, le régulateur OSNP devra pouvoir réaliser le rapprochement entre l’orientation et le DRM. Il est attendu que **l’éditeur mette en place une solution pour que le régulateur puisse faire ce rapprochement au sein de la solution LRM**. Par exemple, un tableau de bord, un espace pour la gestion des RDV pris, un affichage des données métier disponibles pour faciliter l’action (ex. numéro téléphone, nom du PS, nom du patient, sélection DRM, heure de prise de RDV, heure du RDV, etc.), ou tout autre solution ergonomique que l’éditeur jugera pertinente. L’éditeur partagera à l’ANS la solution qu’il est prévu de mettre en place.
-- Les règles d’association de l’orientation avec le DRM et la gestion des requêtes potentielles non associées seront gérées au cas par cas avec l’éditeur. 
-- Il est attendu de la part de l’éditeur de **conserver un historique des messages reçus** au niveau de l’échange et au niveau du résultat du traitement du message. 
-</a></td></tr></a></td></tr></tbody></table>
+<p>Le paragraphe ci-dessous détaille les différentes <strong>règles de gestions attendues</strong> par les éditeurs à la suite du déclenchement du flux et la transmission d’un message :</p>
+<ul>
+  <li>A la réception du message, <strong>la solution éditeur stockera l’identifiant technique SAS du RDV transmis</strong> pour référence et gestion des mises à jour éventuelles</li>
+  <li>Il est attendu pour les éditeurs ayant implémenté le flux de <strong>mettre en place une écoute de leurs files de messages instantanément</strong> afin de permettra le rattachement du RDV avec le DRM par le régulateur à la suite de la transmission des informations de RDV</li>
+  <li>Lorsque les données du RDV pris pour le compte du patient auront été transmises à la solution LRM, le régulateur OSNP devra pouvoir réaliser le rapprochement entre l’orientation et le DRM. Il est attendu que <strong>l’éditeur mette en place une solution pour que le régulateur puisse faire ce rapprochement au sein de la solution LRM</strong>. Par exemple, un tableau de bord, un espace pour la gestion des RDV pris, un affichage des données métier disponibles pour faciliter l’action (ex. numéro téléphone, nom du PS, nom du patient, sélection DRM, heure de prise de RDV, heure du RDV, etc.), ou tout autre solution ergonomique que l’éditeur jugera pertinente. L’éditeur partagera à l’ANS la solution qu’il est prévu de mettre en place.</li>
+  <li>Les règles d’association de l’orientation avec le DRM et la gestion des requêtes potentielles non associées seront gérées au cas par cas avec l’éditeur.</li>
+  <li>Il est attendu de la part de l’éditeur de <strong>conserver un historique des messages reçus</strong> au niveau de l’échange et au niveau du résultat du traitement du message.</li>
+</ul>
 
 
 
@@ -919,7 +1057,7 @@ Le paragraphe ci-dessous détaille les différentes **règles de gestions attend
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Oct 14, 2025 07:25+0000">2025-10-14</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Oct 14, 2025 07:49+0000">2025-10-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

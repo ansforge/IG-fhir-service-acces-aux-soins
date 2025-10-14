@@ -131,19 +131,171 @@ Lorsqu’un régulateur prend RDV pour un patient via la plateforme numérique S
 
 Le message json contenant les données et encapsulé dans l'entête EDXL-DE respecte les spécifications suivantes
 
-| | | | | | | | | | | | | | |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | Identifiant du rendez-vous |  |  |  |  |  | Un identifiant technique unique par RDV est transmis. Cet identifiant est défini par la plateforme numérique SAS et peut prendre la forme d’un UUID. La solution éditeur devra s’appuyer sur cet ID. | 29b7fcca-0b06-43f1-8019-9a7788a241ad | appointmentId | 1..1 |  | string | X |
-| 2 | Méthode |  |  |  |  |  | Indique un message de création ou de modification du rendez-vous | createAppointment | method | 1..1 |  | string | ENUM: CreateAppointment, UpdateAppointment |
-| 3 | Date et heure de la prise de rendez-vous |  |  |  |  |  | Indique la date et l’heure de la prise de RDV | 2025-06-17T10:15:56+01:00 | created | 1..1 |  | datetime | X |
-| 4 | Date et heure de début du rendez-vous |  |  |  |  |  | Indique la date et l’horaire de début du rendez-vous | 2025-06-17T14:00:00+01:00 | start | 1..1 |  | datetime | X |
-| 5 | Date et heure de fin du rendez-vous |  |  |  |  |  | Indique la date et l’horaire de fin du rendez-vous | 2025-06-17T14:20:00+01:00 | end | 0..1 |  | datetime | X |
-| 6 | Statut du rendez-vous |  |  |  |  |  | Indique le statut du rendez-vous | booked | status | 1..1 |  | string | ENUM: pending, booked, fulfilled, noshow, cancelled |
-| 7 | Catégorie d'orientation |  |  |  |  |  | Indique la catégorie de l’orientation de rendez-vous | SOS | orientationCategory | 0..1 |  | string | ENUM: CPTS, MSP, CDS, SOS, PS, PDM |
-| 8 | Professionnel de santé |  |  |  |  |  | Représente le professionnel de santé associé au rendez-vous |  | practitioner | 0..1 | practitioner |  | X |
-| 9 |  | Identifiant RPPS |  |  |  |  | Identifiant national (RPPS) du PS | 810002909371 | rppsId | 1..1 |  | string | REGEX: ^81[0-9]{10}$ |
-| 10 |  | Nom du PS |  |  |  |  | Nom du professionnel de santé | Dupont | lastName | 1..1 |  | string | X |
-| 11 |  | Prénom du PS |  |  |  |  | Prénom du professionnel de santé | Jean | firstName | 1..1 |  | string | X |
-| 12 |  | Spécialité |  |  |  |  | Code de la spécialité du professionnel de santé | SM54 | specialityCode | 0..1 |  | string | X |
-| 13 |  | Terminologie spécialité |  |  |  |  | Url de la terminologie utilisée pour la spécialité | [</td>specialityUrl0..1stringX</tr>14ProfessionCode de la profession du professionnel de santé10professionCode0..1stringX15Terminologie professionUrl de la terminologie utilisée pour la profession[</td>professionUrl0..1stringX</tr>16StructureReprésente la structure du PS ou la structure associée au rendez-vous si le PS n'est pas connuorganization0..1organizationX17Identifiant national de la structureIndique l'identifiant national de la structure334173748400020organizationId1..1stringX18Nom de la structureIndique le nom de la structureSOS Médecins de Rennesname1..1stringX</tbody> </table> Cf. exemple ci-dessous de message de création { "appointment": { "appointmentId": "2d2db05f-e2b0-4169-be8f-891806da2c74", "method": "CreateAppointment", "created": "2025-06-17T10:15:00+02:00", "status": "booked", "orientationCategory": "PS", "start": "2025-06-17T14:00:00+02:00", "end": "2025-06-17T14:20:00+02:00", "practitioner": { "rppsId": "810005681340", "lastName": "MOREL", "firstName": "Didier", "specialityCode": "SM54", "specialityUrl": "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale", "professionUrl": "https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante", "professionCode": "10" } } } ### Message de modification de RDV La mise à jour des données du RDV peut porter sur chacun des éléments de la ressource transmise (dates du créneau, PS effecteurs des soins, statut du RDV, etc.). Le message transmis pour la mise à jour du RDV devra suivre les modalités suivantes : - **Protocole** :AMQP 0-9-1- **Ressource type** :Bundle- **Sender** :PTF SAS- **Content-type** :application/json- **Format du contenu** :JSONLe fichier json encapsulé dans l'entête aura le champ `Méthode` valorisé à `UpdateAppointment` et contiendra les données modifiées / ajoutées / supprimées par rapport au message de création afin que les données pour un même identifiant de RDV puissent être mises à jour **L’identifiant technique SAS du RDV (champ `appointmentId`)** transmis sera stocké par la solution éditeur LRM pour identification du RDV sur lequel porte les mises à jour éventuelles. Cf. exemple ci-dessous de message de modification { "appointment": { "appointmentId": "2d2db05f-e2b0-4169-be8f-891806da2c74", "method": "UpdateAppointment", "created": "2025-06-17T10:15:00+02:00", "status": "fulfilled", "orientationCategory": "PS", "start": "2025-06-17T14:00:00+02:00", "end": "2025-06-17T14:20:00+02:00", "practitioner": { "rppsId": "810005681340", "lastName": "MOREL", "firstName": "Didier", "specialityCode": "SM54", "specialityUrl": "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale", "professionUrl": "https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante", "professionCode": "10" } } } ### Message d'annulation de RDV Il n’y aura pas de message spécifique pour l’annulation d’un RDV. Une annulation de RDV est modélisée par un message de type « mise à jour du RDV » avec la modification du statut du RDV à « annulé ». Cf. exemple ci-dessous de message d'annulation. { "appointment": { "appointmentId": "2d2db05f-e2b0-4169-be8f-891806da2c74", "method": "UpdateAppointment", "created": "2025-06-17T10:15:00+02:00", "status": "cancelled", "orientationCategory": "PS", "start": "2025-06-17T14:00:00+02:00", "end": "2025-06-17T14:20:00+02:00", "practitioner": { "rppsId": "810005681340", "lastName": "MOREL", "firstName": "Didier", "specialityCode": "SM54", "specialityUrl": "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale", "professionUrl": "https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante", "professionCode": "10" } } } ### Détail des champs à utiliser Cette section détaille les champs à utiliser afin de renseigner les différents éléments codifiés de la requête. - **method** : Indique un message de création ou de mise à jour. Les valeurs suivantes sont attendues : - createAppointment - updateAppointment - **appointmentId** : Un identifiant technique unique par RDV est transmis. Cet ID est défini par la plateforme numérique SAS et peut prendre la forme d’un UUID par exemple. La solution éditeur devra s’appuyer sur cet ID pour la gestion des requêtes de mises à jour. - **status** : L’utilisation de la nomenclature standard AppointmentStatus (http://hl7.org/fhir/appointmentstatus) est attendue. La plateforme numérique SAS exploite à date les valeurs suivantes : - PENDING : RDV en attente de confirmation - BOOKED : RDV pris et confirmé - FULFILLED : RDV honoré - NOSHOW : RDV non honoré - CANCELLED : RDV annulé - **practitioner.rppsId** : RPPS avec préfixe « 8 » - **practitioner.specialtyCode** : Code issu de la nomenclature des spécialités ordinales du NOS (<https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale/>) - **practitioner.professionCode** : Code issu de la nomenclature des professions de santédu NOS (<https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante/>) - **organizationId** : Identifiant unique propre à chaque structure de soins. Les champs sont valorisés comme suit : numéro du FINESS avec préfixe « 1 » ou numéro du SIRET avec préfixe « 3 » ### Déclencheurs et règles d'intégration attendues Divers évènements dans la plateforme numérique SAS peuvent déclencher de manière instantanée le flux. À titre d’exemple, vous trouverez ci-dessous une liste non exhaustive de ces évènements : - Pour la création d’un message : - lors de la prise de RDV ou demande de prise en charge par le régulateur pour le compte du patient dans une solution éditeur - lors de la prise de RDV par le régulateur pour le compte du patient dans la plateforme numérique SAS - lors de la prise de RDV par le régulateur pour le compte du patient en surnuméraire - Pour la modification d’un message : - lors d’un changement de statut du RDV : confirmé, annulé, honoré et non honoré - lors d’un changement du PS effecteur de soins (ex. remplacement) ou lorsque le PS n’a pas pu être identifié au préalable (ex. agendas de structure) - lors d’un changement horaire du créneauLe paragraphe ci-dessous détaille les différentes **règles de gestions attendues** par les éditeurs à la suite du déclenchement du flux et la transmission d’un message : - A la réception du message, **la solution éditeur stockera l’identifiant technique SAS du RDV transmis** pour référence et gestion des mises à jour éventuelles - Il est attendu pour les éditeurs ayant implémenté le flux de **mettre en place une écoute de leurs files de messages instantanément** afin de permettra le rattachement du RDV avec le DRM par le régulateur à la suite de la transmission des informations de RDV - Lorsque les données du RDV pris pour le compte du patient auront été transmises à la solution LRM, le régulateur OSNP devra pouvoir réaliser le rapprochement entre l’orientation et le DRM. Il est attendu que **l’éditeur mette en place une solution pour que le régulateur puisse faire ce rapprochement au sein de la solution LRM**. Par exemple, un tableau de bord, un espace pour la gestion des RDV pris, un affichage des données métier disponibles pour faciliter l’action (ex. numéro téléphone, nom du PS, nom du patient, sélection DRM, heure de prise de RDV, heure du RDV, etc.), ou tout autre solution ergonomique que l’éditeur jugera pertinente. L’éditeur partagera à l’ANS la solution qu’il est prévu de mettre en place. - Les règles d’association de l’orientation avec le DRM et la gestion des requêtes potentielles non associées seront gérées au cas par cas avec l’éditeur. - Il est attendu de la part de l’éditeur de **conserver un historique des messages reçus** au niveau de l’échange et au niveau du résultat du traitement du message.](https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante/)](https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale/) | | | | | |
+| | | | | | | | | | |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| ID | Donnée (Niveau 1) | Donnée (Niveau 2) | Description | Exemples | Balise | Cardinalité | Objet | Format (ou type) | Détails de format |
+| 1 | Identifiant du rendez-vous |  | Un identifiant technique unique par RDV est transmis.\n\nCet identifiant est défini par la plateforme numérique SAS et peut prendre la forme d’un UUID par exemple.\nLa solution éditeur devra s’appuyer sur cet ID pour la gestion des requêtes de mises à jour. | 12348 | appointmentId | 1..1 |  | string |  |
+| 2 | Méthode |  | Indique un message de création ou de modification du rendez-vous | createAppointment | method | 1..1 |  | string | ENUM: CreateAppointment, UpdateAppointment |
+| 3 | Date et heure de la prise de rendez-vous |  | Indique la date et l’heure de la prise de RDV | 2025-06-17T10:15:56+01:00 | created | 1..1 |  | datetime |  |
+| 4 | Date et heure de début du rendez-vous |  | Indique la date et l’horaire de début du rendez-vous | 2025-06-17T14:00:00+01:00 | start | 1..1 |  | datetime |  |
+| 5 | Date et heure de fin du rendez-vous |  | Indique la date et l’horaire de fin du rendez-vous | 2025-06-17T14:20:00+01:00 | end | 0..1 |  | datetime |  |
+| 6 | Statut du rendez-vous |  | Indique le statut du rendez-vous | booked | status | 1..1 |  | string | ENUM: pending, booked, fulfilled, noshow, cancelled |
+| 7 | Catégorie d'orientation |  | Indique la catégorie de l’orientation de rendez-vous | SOS | orientationCategory | 0..1 |  | string | ENUM: CPTS, MSP, CDS, SOS, PS, PDM |
+| 8 | Professionnel de santé |  | Représente le professionnel de santé associé au rendez-vous |  | practitioner | 0..1 | X | practitioner |  |
+| 9 |  | Identifiant RPPS | Identifiant national (RPPS) du PS | 810002909371 | rppsId | 1..1 |  | string | REGEX: ^81[0-9]{10}$ |
+| 10 |  | Nom du PS | Nom du professionnel de santé | Dupont | lastName | 1..1 |  | string |  |
+| 11 |  | Prénom du PS | Prénom du professionnel de santé | Jean | firstName | 1..1 |  | string |  |
+| 12 |  | Spécialité | Code de la spécialité du professionnel de santé | SM54 | specialityCode | 0..1 |  | string |  |
+| 13 |  | Terminologie spécialité | Url de la terminologie utilisée pour la spécialité | https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale | specialityUrl | 0..1 |  | string |  |
+| 14 |  | Profession | Code de la profession du professionnel de santé | 10 | professionCode | 0..1 |  | string |  |
+| 15 |  | Terminologie profession | Url de la terminologie utilisée pour la profession | https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante | professionUrl | 0..1 |  | string |  |
+| 16 | Structure |  | Représente la structure du PS ou la structure associée au rendez-vous si le PS n'est pas connu |  | organization | 0..1 | X | organization |  |
+| 17 |  | Identifiant national de la structure | Indique l'identifiant national de la structure | 334173748400020 | organizationId | 1..1 |  | string |  |
+| 18 |  | Nom de la structure | Indique le nom de la structure | SOS Médecins de Rennes | name | 1..1 |  | string |  |
+
+Cf. exemple ci-dessous de message de création
+
+```
+{
+  "appointment": {
+    "appointmentId": "2d2db05f-e2b0-4169-be8f-891806da2c74",
+    "method": "CreateAppointment",
+    "created": "2025-06-17T10:15:00+02:00",
+    "status": "booked",
+    "orientationCategory": "PS",
+    "start": "2025-06-17T14:00:00+02:00",
+    "end": "2025-06-17T14:20:00+02:00",
+    "practitioner": {
+      "rppsId": "810005681340",
+      "lastName": "MOREL",
+      "firstName": "Didier",
+      "specialityCode": "SM54",
+      "specialityUrl": "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
+      "professionUrl": "https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante",
+      "professionCode": "10"
+    }
+  }
+}
+
+```
+
+### Message de modification de RDV
+
+La mise à jour des données du RDV peut porter sur chacun des éléments de la ressource transmise (dates du créneau, PS effecteurs des soins, statut du RDV, etc.).
+
+Le message transmis pour la mise à jour du RDV devra suivre les modalités suivantes :
+
+* **Protocole** : AMQP 0-9-1
+
+* **Ressource type** : Bundle
+
+* **Sender** : PTF SAS
+
+* **Content-type** : application/json
+
+* **Format du contenu** : JSON
+
+Le fichier json encapsulé dans l'entête aura le champ `Méthode` valorisé à `UpdateAppointment` et contiendra les données modifiées / ajoutées / supprimées par rapport au message de création afin que les données pour un même identifiant de RDV puissent être mises à jour
+
+**L’identifiant technique SAS du RDV (champ`appointmentId`)** transmis sera stocké par la solution éditeur LRM pour identification du RDV sur lequel porte les mises à jour éventuelles.
+
+Cf. exemple ci-dessous de message de modification
+
+```
+{
+  "appointment": {
+    "appointmentId": "2d2db05f-e2b0-4169-be8f-891806da2c74",
+    "method": "UpdateAppointment",
+    "created": "2025-06-17T10:15:00+02:00",
+    "status": "fulfilled",
+    "orientationCategory": "PS",
+    "start": "2025-06-17T14:00:00+02:00",
+    "end": "2025-06-17T14:20:00+02:00",
+    "practitioner": {
+      "rppsId": "810005681340",
+      "lastName": "MOREL",
+      "firstName": "Didier",
+      "specialityCode": "SM54",
+      "specialityUrl": "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
+      "professionUrl": "https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante",
+      "professionCode": "10"
+    }
+  }
+}
+
+```
+
+### Message d'annulation de RDV
+
+Il n’y aura pas de message spécifique pour l’annulation d’un RDV. Une annulation de RDV est modélisée par un message de type « mise à jour du RDV » avec la modification du statut du RDV à « annulé ».
+
+Cf. exemple ci-dessous de message d'annulation.
+
+```
+{
+  "appointment": {
+    "appointmentId": "2d2db05f-e2b0-4169-be8f-891806da2c74",
+    "method": "UpdateAppointment",
+    "created": "2025-06-17T10:15:00+02:00",
+    "status": "cancelled",
+    "orientationCategory": "PS",
+    "start": "2025-06-17T14:00:00+02:00",
+    "end": "2025-06-17T14:20:00+02:00",
+    "practitioner": {
+      "rppsId": "810005681340",
+      "lastName": "MOREL",
+      "firstName": "Didier",
+      "specialityCode": "SM54",
+      "specialityUrl": "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
+      "professionUrl": "https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante",
+      "professionCode": "10"
+    }
+  }
+}
+
+```
+
+### Détail des champs à utiliser
+
+Cette section détaille les champs à utiliser afin de renseigner les différents éléments codifiés de la requête.
+
+* **method** : Indique un message de création ou de mise à jour. Les valeurs suivantes sont attendues : 
+* createAppointment
+* updateAppointment
+ 
+* **appointmentId** : Un identifiant technique unique par RDV est transmis. Cet ID est défini par la plateforme numérique SAS et peut prendre la forme d’un UUID par exemple. La solution éditeur devra s’appuyer sur cet ID pour la gestion des requêtes de mises à jour.
+* **status** : L’utilisation de la nomenclature standard AppointmentStatus (http://hl7.org/fhir/appointmentstatus) est attendue. La plateforme numérique SAS exploite à date les valeurs suivantes : 
+* PENDING : RDV en attente de confirmation
+* BOOKED : RDV pris et confirmé
+* FULFILLED : RDV honoré
+* NOSHOW : RDV non honoré
+* CANCELLED : RDV annulé
+ 
+* **practitioner.rppsId** : RPPS avec préfixe « 8 »
+* **practitioner.specialtyCode** : Code issu de la nomenclature des spécialités ordinales du NOS ([https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale/](https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale/))
+* **practitioner.professionCode** : Code issu de la nomenclature des professions de santédu NOS ([https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante/](https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante/))
+* **organizationId** : Identifiant unique propre à chaque structure de soins. Les champs sont valorisés comme suit : numéro du FINESS avec préfixe « 1 » ou numéro du SIRET avec préfixe « 3 »
+
+### Déclencheurs et règles d'intégration attendues
+
+Divers évènements dans la plateforme numérique SAS peuvent déclencher de manière instantanée le flux. À titre d’exemple, vous trouverez ci-dessous une liste non exhaustive de ces évènements :
+
+* Pour la création d’un message : 
+* lors de la prise de RDV ou demande de prise en charge par le régulateur pour le compte du patient dans une solution éditeur
+* lors de la prise de RDV par le régulateur pour le compte du patient dans la plateforme numérique SAS
+* lors de la prise de RDV par le régulateur pour le compte du patient en surnuméraire
+ 
+* Pour la modification d’un message : 
+* lors d’un changement de statut du RDV : confirmé, annulé, honoré et non honoré
+* lors d’un changement du PS effecteur de soins (ex. remplacement) ou lorsque le PS n’a pas pu être identifié au préalable (ex. agendas de structure)
+* lors d’un changement horaire du créneau
+ 
+
+Le paragraphe ci-dessous détaille les différentes **règles de gestions attendues** par les éditeurs à la suite du déclenchement du flux et la transmission d’un message :
+
+* A la réception du message, **la solution éditeur stockera l’identifiant technique SAS du RDV transmis** pour référence et gestion des mises à jour éventuelles
+* Il est attendu pour les éditeurs ayant implémenté le flux de **mettre en place une écoute de leurs files de messages instantanément** afin de permettra le rattachement du RDV avec le DRM par le régulateur à la suite de la transmission des informations de RDV
+* Lorsque les données du RDV pris pour le compte du patient auront été transmises à la solution LRM, le régulateur OSNP devra pouvoir réaliser le rapprochement entre l’orientation et le DRM. Il est attendu que **l’éditeur mette en place une solution pour que le régulateur puisse faire ce rapprochement au sein de la solution LRM**. Par exemple, un tableau de bord, un espace pour la gestion des RDV pris, un affichage des données métier disponibles pour faciliter l’action (ex. numéro téléphone, nom du PS, nom du patient, sélection DRM, heure de prise de RDV, heure du RDV, etc.), ou tout autre solution ergonomique que l’éditeur jugera pertinente. L’éditeur partagera à l’ANS la solution qu’il est prévu de mettre en place.
+* Les règles d’association de l’orientation avec le DRM et la gestion des requêtes potentielles non associées seront gérées au cas par cas avec l’éditeur.
+* Il est attendu de la part de l’éditeur de **conserver un historique des messages reçus** au niveau de l’échange et au niveau du résultat du traitement du message.
 
