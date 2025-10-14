@@ -283,6 +283,7 @@ Lorsqu’un RDV est pris par le régulateur (depuis l’agenda SAS, une solution
 - La date et l’horaire du RDV
 - L’identifiant national (RPPS), le nom et le prénom de l’effecteur de soins
 - La spécialité de l’effecteur de soins
+- La profession de l’effecteur de soins
 - Le statut du rendez-vous
 - La catégorie d’orientation
 - La date et l’horaire de la prise de RDV

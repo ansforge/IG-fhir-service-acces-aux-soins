@@ -132,8 +132,6 @@ Lorsqu’un régulateur prend RDV pour un patient via la plateforme numérique S
 
 Le message json contenant les données et encapsulé dans l'entête EDXL-DE respecte les spécifications suivantes
 
-# Tableau des données - 15-SAS
-
 <table>
   <thead>
     <tr>
@@ -247,6 +245,7 @@ Le message json contenant les données et encapsulé dans l'entête EDXL-DE resp
     </tr>
   </tbody>
 </table>
+
 
 Cf. exemple ci-dessous de message de création
 
