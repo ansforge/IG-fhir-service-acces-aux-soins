@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-appointmentreason | *Version*:1.1.0 |
-| Active as of 2025-10-13 | *Computable Name*:AppointmentReasonSAS |
+| Active as of 2025-10-14 | *Computable Name*:AppointmentReasonSAS |
 
  
 Appointment reason SAS 
@@ -21,7 +21,7 @@ Appointment reason SAS
 
 ### Logical Definition (CLD)
 
-* Include ce(s) code(s) tel quil(s) est (sont) défini(s) dans [`http://terminology.hl7.org/CodeSystem/v2-0276`](http://terminology.hl7.org/6.5.0/CodeSystem-v2-0276.html) version 📦2.0.0
+* Include ce(s) code(s) tel quil(s) est (sont) défini(s) dans [`http://terminology.hl7.org/CodeSystem/v2-0276`](http://terminology.hl7.org/6.5.0/CodeSystem-v2-0276.html)version 📦2.0.0
 
  
 
@@ -54,7 +54,7 @@ Appointment reason SAS
   "title" : "Appointment reason SAS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2025-10-13T14:37:57+00:00",
+  "date" : "2025-10-14T07:25:19+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-sos-valueset-participant-status | *Version*:1.1.0 |
-| Active as of 2025-10-13 | *Computable Name*:ParticipantStatusSASSOS |
+| Active as of 2025-10-14 | *Computable Name*:ParticipantStatusSASSOS |
 
  
 Statut du participant RDV SAS SOS 
@@ -20,7 +20,7 @@ Statut du participant RDV SAS SOS
 
 ### Logical Definition (CLD)
 
-* Include ce(s) code(s) tel quil(s) est (sont) défini(s) dans [`http://hl7.org/fhir/participationstatus`](http://hl7.org/fhir/R4/codesystem-participationstatus.html) version 📦4.0.1
+* Include ce(s) code(s) tel quil(s) est (sont) défini(s) dans [`http://hl7.org/fhir/participationstatus`](http://hl7.org/fhir/R4/codesystem-participationstatus.html)version 📦4.0.1
 
  
 
@@ -53,7 +53,7 @@ Statut du participant RDV SAS SOS
   "title" : "Statut participant SAS SOS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2025-10-13T14:37:57+00:00",
+  "date" : "2025-10-14T07:25:19+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

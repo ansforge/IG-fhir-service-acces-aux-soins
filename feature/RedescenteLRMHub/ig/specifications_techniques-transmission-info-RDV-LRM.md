@@ -131,8 +131,6 @@ Lorsqu’un régulateur prend RDV pour un patient via la plateforme numérique S
 
 Le message json contenant les données et encapsulé dans l'entête EDXL-DE respecte les spécifications suivantes
 
-# Tableau des données - 15-SAS
-
 | | | | | | | | | | | | | | |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | Identifiant du rendez-vous |  |  |  |  |  | Un identifiant technique unique par RDV est transmis. Cet identifiant est défini par la plateforme numérique SAS et peut prendre la forme d’un UUID. La solution éditeur devra s’appuyer sur cet ID. | 29b7fcca-0b06-43f1-8019-9a7788a241ad | appointmentId | 1..1 |  | string | X |

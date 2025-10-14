@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/SearchParameter/cptsslot-sp-servicetype | *Version*:1.1.0 |
-| Active as of 2025-10-13 | *Computable Name*:SPServiceTypeCPTS |
+| Active as of 2025-10-14 | *Computable Name*:SPServiceTypeCPTS |
 
  
 Paramètre de recherche sur le service type qui mime le paramètre R5. Permet de rechercher ou d'inclure la ressource reférencée HealthCare Service 
@@ -40,7 +40,7 @@ Paramètre de recherche sur le service type qui mime le paramètre R5. Permet de
   "version" : "1.1.0",
   "name" : "SPServiceTypeCPTS",
   "status" : "active",
-  "date" : "2025-10-13T14:37:57+00:00",
+  "date" : "2025-10-14T07:25:19+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

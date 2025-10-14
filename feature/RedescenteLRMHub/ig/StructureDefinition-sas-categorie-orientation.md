@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-categorie-orientation | *Version*:1.1.0 |
-| Active as of 2025-10-13 | *Computable Name*:CategorieOrientation |
+| Active as of 2025-10-14 | *Computable Name*:CategorieOrientation |
 
 Extension créée afin d'ajouter la catégorie d'orientation dans un RDV
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-sas-categorie-orient
   "version" : "1.1.0",
   "name" : "CategorieOrientation",
   "status" : "active",
-  "date" : "2025-10-13T14:37:57+00:00",
+  "date" : "2025-10-14T07:25:19+00:00",
   "publisher" : "ANS",
   "contact" : [
     {
