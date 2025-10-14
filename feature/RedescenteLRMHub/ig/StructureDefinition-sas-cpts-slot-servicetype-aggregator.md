@@ -46,7 +46,7 @@ Other representations of profile: [CSV](StructureDefinition-sas-cpts-slot-servic
   "version" : "1.1.0",
   "name" : "SASServiceTypeR5",
   "status" : "active",
-  "date" : "2025-10-14T07:48:21+00:00",
+  "date" : "2025-10-14T09:08:01+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

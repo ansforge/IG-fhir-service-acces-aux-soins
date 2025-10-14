@@ -113,7 +113,7 @@ A titre d'exemple, les codes d'erreur suivants pourront être envoyés du Hub ve
 
 Le LRM pourra envoyer des messages de type :
 
-* 404 (NOT_FOUND) - L'identifiant du RDV a mettre à jour n'a pas été trouvé dans le cas d'un Bundle contenant une mise à jour sur la ressource Appointment.
+* 404 (NOT_FOUND) - L'identifiant du RDV a mettre à jour n'a pas été trouvé dans le cas d'un message de mise à jour
 
 ### Message d'envoi de RDV
 
@@ -121,20 +121,18 @@ Lorsqu’un régulateur prend RDV pour un patient via la plateforme numérique S
 
 * **Protocole** : AMQP 0-9-1
 
-* **Ressource type** : Bundle
-
 * **Sender** : PTF SAS
 
 * **Content-type** : application/json
 
 * **Format du contenu** : JSON
 
-Le message json contenant les données et encapsulé dans l'entête EDXL-DE respecte les spécifications suivantes
+Le message json contenant les données et encapsulé dans l'entête EDXL-DE respecte le format suivant :
 
 | | | | | | | | | | |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| ID | Donnée (Niveau 1) | Donnée (Niveau 2) | Description | Exemples | Balise | Cardinalité | Objet | Format (ou type) | Détails de format |
-| 1 | Identifiant du rendez-vous |  | Un identifiant technique unique par RDV est transmis.\n\nCet identifiant est défini par la plateforme numérique SAS et peut prendre la forme d’un UUID par exemple.\nLa solution éditeur devra s’appuyer sur cet ID pour la gestion des requêtes de mises à jour. | 12348 | appointmentId | 1..1 |  | string |  |
+| **ID** | **Donnée (Niveau 1)** | **Donnée (Niveau 2)** | **Description** | **Exemples** | **Balise** | **Cardinalité** | **Objet** | **Format (ou type)** | **Détails de format** |
+| 1 | Identifiant du rendez-vous |  | Un identifiant technique unique par RDV est transmis. Cet identifiant est défini par la plateforme numérique SAS et peut prendre la forme d’un UUID par exemple.La solution éditeur devra s’appuyer sur cet ID pour la gestion des requêtes de mises à jour. | 12348 | appointmentId | 1..1 |  | string |  |
 | 2 | Méthode |  | Indique un message de création ou de modification du rendez-vous | createAppointment | method | 1..1 |  | string | ENUM: CreateAppointment, UpdateAppointment |
 | 3 | Date et heure de la prise de rendez-vous |  | Indique la date et l’heure de la prise de RDV | 2025-06-17T10:15:56+01:00 | created | 1..1 |  | datetime |  |
 | 4 | Date et heure de début du rendez-vous |  | Indique la date et l’horaire de début du rendez-vous | 2025-06-17T14:00:00+01:00 | start | 1..1 |  | datetime |  |
@@ -153,7 +151,7 @@ Le message json contenant les données et encapsulé dans l'entête EDXL-DE resp
 | 17 |  | Identifiant national de la structure | Indique l'identifiant national de la structure | 334173748400020 | organizationId | 1..1 |  | string |  |
 | 18 |  | Nom de la structure | Indique le nom de la structure | SOS Médecins de Rennes | name | 1..1 |  | string |  |
 
-Cf. exemple ci-dessous de message de création
+ Cf. exemple ci-dessous de message de création
 
 ```
 {
@@ -179,15 +177,15 @@ Cf. exemple ci-dessous de message de création
 
 ```
 
+S'agissant d'une création de message, le champ `method` est valorisé à `CreateAppointment'
+
 ### Message de modification de RDV
 
-La mise à jour des données du RDV peut porter sur chacun des éléments de la ressource transmise (dates du créneau, PS effecteurs des soins, statut du RDV, etc.).
+La mise à jour des données du RDV peut porter sur chacun des éléments décrits avec modifications de données (dates du créneau, statut du RDV, etc.).ou bien ajout d'un objet (`practitioner` ou `organization`) et des attributs associés.
 
 Le message transmis pour la mise à jour du RDV devra suivre les modalités suivantes :
 
 * **Protocole** : AMQP 0-9-1
-
-* **Ressource type** : Bundle
 
 * **Sender** : PTF SAS
 
@@ -195,7 +193,7 @@ Le message transmis pour la mise à jour du RDV devra suivre les modalités suiv
 
 * **Format du contenu** : JSON
 
-Le fichier json encapsulé dans l'entête aura le champ `Méthode` valorisé à `UpdateAppointment` et contiendra les données modifiées / ajoutées / supprimées par rapport au message de création afin que les données pour un même identifiant de RDV puissent être mises à jour
+Le fichier json encapsulé dans l'entête aura le champ `method` valorisé à `UpdateAppointment` et contiendra les données modifiées / ajoutées / supprimées par rapport au message de création (selon le format décrit au paragraphe précédent) afin que les données pour un même identifiant de RDV puissent être mises à jour
 
 **L’identifiant technique SAS du RDV (champ`appointmentId`)** transmis sera stocké par la solution éditeur LRM pour identification du RDV sur lequel porte les mises à jour éventuelles.
 
@@ -291,7 +289,7 @@ Divers évènements dans la plateforme numérique SAS peuvent déclencher de man
 * lors d’un changement horaire du créneau
  
 
-Le paragraphe ci-dessous détaille les différentes **règles de gestions attendues** par les éditeurs à la suite du déclenchement du flux et la transmission d’un message :
+ Le paragraphe ci-dessous détaille les différentes **règles de gestions attendues** par les éditeurs à la suite du déclenchement du flux et la transmission d’un message :
 
 * A la réception du message, **la solution éditeur stockera l’identifiant technique SAS du RDV transmis** pour référence et gestion des mises à jour éventuelles
 * Il est attendu pour les éditeurs ayant implémenté le flux de **mettre en place une écoute de leurs files de messages instantanément** afin de permettra le rattachement du RDV avec le DRM par le régulateur à la suite de la transmission des informations de RDV

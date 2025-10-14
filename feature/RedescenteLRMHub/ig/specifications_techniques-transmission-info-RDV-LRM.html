@@ -602,7 +602,7 @@ Le cheminement est similaire au message envoyé mais pris en sens inverse.</p>
 
 <p>Le LRM pourra envoyer des messages de type :</p>
 <ul>
-  <li>404 (NOT_FOUND) - L'identifiant du RDV a mettre à jour n'a pas été trouvé dans le cas d'un Bundle contenant une mise à jour sur la ressource Appointment.</li>
+  <li>404 (NOT_FOUND) - L'identifiant du RDV a mettre à jour n'a pas été trouvé dans le cas d'un message de mise à jour</li>
 </ul>
 
 <h3 id="message-denvoi-de-rdv">Message d'envoi de RDV</h3>
@@ -612,8 +612,6 @@ Le cheminement est similaire au message envoyé mais pris en sens inverse.</p>
 <ul>
   <li><strong>Protocole</strong> : <span style="color:blue">AMQP 0-9-1<br />
 </span></li>
-  <li><strong>Ressource type</strong> : <span style="color:blue">Bundle<br />
-</span></li>
   <li><strong>Sender</strong> : <span style="color:blue">PTF SAS<br />
 </span></li>
   <li><strong>Content-type</strong> : <span style="color:blue">application/json  <br />
@@ -622,27 +620,27 @@ Le cheminement est similaire au message envoyé mais pris en sens inverse.</p>
 </span></li>
 </ul>
 
-<p>Le message json contenant les données et encapsulé dans l'entête EDXL-DE respecte les spécifications suivantes</p>
+<p>Le message json contenant les données et encapsulé dans l'entête EDXL-DE respecte le format suivant :</p>
 
 <table border="1" class="dataframe">
   <tbody>
-    <tr style="text-align: right;">
-      <td>ID</td>
-      <td>Donnée (Niveau 1)</td>
-      <td>Donnée (Niveau 2)</td>
-      <td>Description</td>
-      <td>Exemples</td>
-      <td>Balise</td>
-      <td>Cardinalité</td>
-      <td>Objet</td>
-      <td>Format (ou type)</td>
-      <td>Détails de format</td>
+    <tr style="text-align: center;">
+      <td width="8%"><strong>ID</strong></td>
+      <td width="8%"><strong>Donnée (Niveau 1)</strong></td>
+      <td width="8%"><strong>Donnée (Niveau 2)</strong></td>
+      <td width="30%"><strong>Description</strong></td>
+      <td width="16%"><strong>Exemples</strong></td>
+      <td width="10%"><strong>Balise</strong></td>
+      <td width="8%"><strong>Cardinalité</strong></td>
+      <td width="5%"><strong>Objet</strong></td>
+      <td width="7%"><strong>Format (ou type)</strong></td>
+      <td width="10%"><strong>Détails de format</strong></td>
     </tr>
     <tr>
       <td>1</td>
       <td>Identifiant du rendez-vous</td>
       <td></td>
-      <td>Un identifiant technique unique par RDV est transmis.\n\nCet identifiant est défini par la plateforme numérique SAS et peut prendre la forme d’un UUID par exemple.\nLa solution éditeur devra s’appuyer sur cet ID pour la gestion des requêtes de mises à jour.</td>
+      <td>Un identifiant technique unique par RDV est transmis. Cet identifiant est défini par la plateforme numérique SAS et peut prendre la forme d’un UUID par exemple.La solution éditeur devra s’appuyer sur cet ID pour la gestion des requêtes de mises à jour.</td>
       <td>12348</td>
       <td>appointmentId</td>
       <td>1..1</td>
@@ -857,7 +855,8 @@ Le cheminement est similaire au message envoyé mais pris en sens inverse.</p>
   </tbody>
 </table>
 
-<p>Cf. exemple ci-dessous de message de création</p>
+<p><br />
+Cf. exemple ci-dessous de message de création</p>
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"appointment"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"appointmentId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2d2db05f-e2b0-4169-be8f-891806da2c74"</span><span class="p">,</span><span class="w">
@@ -879,17 +878,16 @@ Le cheminement est similaire au message envoyé mais pris en sens inverse.</p>
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
+<p>S'agissant d'une création de message, le champ <code class="language-plaintext highlighter-rouge">method</code> est valorisé à `CreateAppointment'</p>
 
 <h3 id="message-de-modification-de-rdv">Message de modification de RDV</h3>
 
-<p>La mise à jour des données du RDV peut porter sur chacun des éléments de la ressource transmise (dates du créneau, PS effecteurs des soins, statut du RDV, etc.).</p>
+<p>La mise à jour des données du RDV peut porter sur chacun des éléments décrits avec modifications de données (dates du créneau, statut du RDV, etc.).ou bien ajout d'un objet (<code class="language-plaintext highlighter-rouge">practitioner</code> ou <code class="language-plaintext highlighter-rouge">organization</code>) et des attributs associés.</p>
 
 <p>Le message transmis pour la mise à jour du RDV devra suivre les modalités suivantes :</p>
 
 <ul>
   <li><strong>Protocole</strong> : <span style="color:blue">AMQP 0-9-1<br />
-</span></li>
-  <li><strong>Ressource type</strong> : <span style="color:blue">Bundle<br />
 </span></li>
   <li><strong>Sender</strong> : <span style="color:blue">PTF SAS<br />
 </span></li>
@@ -899,7 +897,7 @@ Le cheminement est similaire au message envoyé mais pris en sens inverse.</p>
 </span></li>
 </ul>
 
-<p>Le fichier json encapsulé dans l'entête aura le champ <code class="language-plaintext highlighter-rouge">Méthode</code> valorisé à <code class="language-plaintext highlighter-rouge">UpdateAppointment</code> et contiendra les données modifiées / ajoutées / supprimées par rapport au message de création afin que les données pour un même identifiant de RDV puissent être mises à jour</p>
+<p>Le fichier json encapsulé dans l'entête aura le champ <code class="language-plaintext highlighter-rouge">method</code> valorisé à <code class="language-plaintext highlighter-rouge">UpdateAppointment</code> et contiendra les données modifiées / ajoutées / supprimées par rapport au message de création (selon le format décrit au paragraphe précédent) afin que les données pour un même identifiant de RDV puissent être mises à jour</p>
 
 <p><strong>L’identifiant technique SAS du RDV (champ <code class="language-plaintext highlighter-rouge">appointmentId</code>)</strong> transmis sera stocké par la solution éditeur LRM pour identification du RDV sur lequel porte les mises à jour éventuelles.</p>
 
@@ -1006,9 +1004,8 @@ Le cheminement est similaire au message envoyé mais pris en sens inverse.</p>
   </li>
 </ul>
 
-<p><br /></p>
-
-<p>Le paragraphe ci-dessous détaille les différentes <strong>règles de gestions attendues</strong> par les éditeurs à la suite du déclenchement du flux et la transmission d’un message :</p>
+<p><br />
+Le paragraphe ci-dessous détaille les différentes <strong>règles de gestions attendues</strong> par les éditeurs à la suite du déclenchement du flux et la transmission d’un message :</p>
 <ul>
   <li>A la réception du message, <strong>la solution éditeur stockera l’identifiant technique SAS du RDV transmis</strong> pour référence et gestion des mises à jour éventuelles</li>
   <li>Il est attendu pour les éditeurs ayant implémenté le flux de <strong>mettre en place une écoute de leurs files de messages instantanément</strong> afin de permettra le rattachement du RDV avec le DRM par le régulateur à la suite de la transmission des informations de RDV</li>
@@ -1057,7 +1054,7 @@ Le cheminement est similaire au message envoyé mais pris en sens inverse.</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Oct 14, 2025 07:49+0000">2025-10-14</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Oct 14, 2025 09:08+0000">2025-10-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
