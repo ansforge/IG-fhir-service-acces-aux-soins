@@ -288,7 +288,7 @@ Lorsqu’un RDV est pris par le régulateur (depuis l’agenda SAS, une solution
 - La catégorie d’orientation
 - La date et l’horaire de la prise de RDV
 - Le nom et l’identifiant national de la structure associée au RDV
-- Le régulateur ayant pris le RDV : Identifiant, Nom, Prenom et Adresse email
+- Le régulateur ayant pris le RDV : Identifiant, nom, prénom et adresse e-mail
 
 Le message transmis (fichier json) contiendra les champs correspondants dont certains seront systématiquement remplis et d'autres optionnels. 
 

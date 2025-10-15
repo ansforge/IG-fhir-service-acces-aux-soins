@@ -88,7 +88,6 @@ La fludification du parcours régulateurs inclut les éléments suivants :
 
 1. [Spécifications fonctionnelles](./specifications_fonctionnelles.html#transmission-des-informations-de-rdv-aux-lrm)
 2. [Spécifications techniques](./specifications_techniques-transmission-info-RDV-LRM.html)
-3. [Ressources de conformité](./ressources_casusage.html#transmission-des-informations-de-rendez-vous-aux-lrm)
 
 ### Dépendances
  

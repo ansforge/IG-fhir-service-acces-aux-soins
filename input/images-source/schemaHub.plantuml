@@ -9,8 +9,8 @@ rectangle LRM
 
 R -> db :"Enregistrement \n orientation"
 db -> PTF
-PTF -> Hub :"Transmission Bundle"
-Hub -> LRM :"Transmission Bundle"
+PTF -> Hub :"Transmission message json"
+Hub -> LRM :"Transmission message json"
 LRM -[#blue]> Hub :<color:blue>ACK</color>
 LRM -[#red]> Hub :<color:red>Erreurs</color>
 Hub -[#blue]> PTF :<color:blue>ACK</color>
