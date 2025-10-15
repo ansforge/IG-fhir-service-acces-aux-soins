@@ -65,11 +65,3 @@ Liste des ressources (profils, paramètres de recherche, terminologies, exemples
 | [sas-sos-valueset-participant-status](ValueSet-sas-sos-valueset-participant-status.md) | ValueSet | Statut du participant RDV SAS SOS |
 | [sas-sos-valueset-typecreneau](ValueSet-sas-sos-valueset-typecreneau.md) | ValueSet | Type de Créneaux SAS SOS |
 
-### Transmission des informations de rendez-vous aux LRM
-
-Liste des ressources (profils, paramètres de recherche, terminologies, exemples) à utiliser dans le cadre du cas d'usage de redescente des informations de RDV aux LRM
-
-| | | |
-| :--- | :--- | :--- |
-| Identifiant | Type | Description |
-

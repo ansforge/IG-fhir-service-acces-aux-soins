@@ -494,6 +494,14 @@ Cette section détaille les champs à utiliser afin de renseigner les différent
 * NOSHOW : RDV non honoré
 * CANCELLED : RDV annulé
  
+* **orientationCategory** : catégorie d'orientation transmise. Prend une valeur parmi la liste suivante : 
+* PS
+* SOS
+* PDM
+* CPTS
+* CDS
+* MSP
+ 
 * **practitioner.rppsId** : RPPS avec préfixe « 8 »
 * **practitioner.specialtyCode** : Code issu de la nomenclature des spécialités ordinales du NOS ([https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale/](https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale/))
 * **practitioner.professionCode** : Code issu de la nomenclature des professions de santédu NOS ([https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante/](https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante/))

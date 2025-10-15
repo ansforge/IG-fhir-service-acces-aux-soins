@@ -85,7 +85,6 @@ La fludification du parcours régulateurs inclut les éléments suivants :
 
 1. [Spécifications fonctionnelles](./specifications_fonctionnelles.md#transmission-des-informations-de-rdv-aux-lrm)
 1. [Spécifications techniques](./specifications_techniques-transmission-info-RDV-LRM.md)
-1. [Ressources de conformité](./ressources_casusage.md#transmission-des-informations-de-rendez-vous-aux-lrm)
 
 ### Dépendances
 
@@ -107,7 +106,7 @@ La fludification du parcours régulateurs inclut les éléments suivants :
   "name" : "SAS",
   "title" : "Service d'Accès aux Soins",
   "status" : "active",
-  "date" : "2025-10-15T13:34:51+00:00",
+  "date" : "2025-10-15T14:17:23+00:00",
   "publisher" : "ANS",
   "contact" : [
     {
