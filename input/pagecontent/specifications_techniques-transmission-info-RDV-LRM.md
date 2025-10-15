@@ -130,7 +130,7 @@ Lorsqu’un régulateur prend RDV pour un patient via la plateforme numérique S
 
 Le message json contenant les données et encapsulé dans l'entête EDXL-DE respecte le format suivant : 
 
-<table style="table-layout: fixed; width: 100%;">
+<table style="table-layout: fixed; width: 100%; font-size: 8px">
   <tbody>
     <tr style="text-align: center;">
       <th style="width: 8%;"><strong>ID</strong></th>
@@ -360,6 +360,66 @@ Le message json contenant les données et encapsulé dans l'entête EDXL-DE resp
       <td>string</td>
       <td></td>
     </tr>
+    <tr>
+      <td>19</td>
+      <td>Régulateur</td>
+      <td></td>
+      <td>Représente le régulateur ayant pris le RDV</td>
+      <td></td>
+      <td>regulatorId</td>
+      <td>1..1</td>
+      <td>X</td>
+      <td>regulator</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td></td>
+      <td>Identifiant régulateur</td>
+      <td>Identifiant du régulateur ayant pris le RDV</td>
+      <td>3620100057/70326SR</td>
+      <td>regulatorId</td>
+      <td>1..1</td>
+      <td></td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td></td>
+      <td>Nom du régulateur</td>
+      <td>Nom du régulateur ayant pris le RDV</td>
+      <td>Ricart</td>
+      <td>regulatorName</td>
+      <td>1..1</td>
+      <td></td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td></td>
+      <td>Prénom du régulateur</td>
+      <td>Prénom du régulateur ayant pris le RDV</td>
+      <td>Pauline</td>
+      <td>regulatorFirstname</td>
+      <td>1..1</td>
+      <td></td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td></td>
+      <td>Mail du régulateur</td>
+      <td>Adresse mail du régulateur ayant pris le RDV</td>
+      <td>pauline.ricart@ghsas.fr</td>
+      <td>regulatorEmail</td>
+      <td>1..1</td>
+      <td></td>
+      <td>string</td>
+      <td></td>
+    </tr>
   </tbody>
 </table>
 
@@ -383,6 +443,12 @@ Cf. exemple ci-dessous de message de création
       "specialityUrl": "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
       "professionUrl": "https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante",
       "professionCode": "10"
+    },
+    "regulator":{
+      "regulatorId": "3620100057/70326SR",
+      "regulatorName": "RICART",
+      "regulatorFirstname": "Pauline",
+      "regulatorEmail": "pauline.ricart@ghsas.fr"
     }
   }
 }
@@ -428,6 +494,12 @@ Cf. exemple ci-dessous de message de modification
       "specialityUrl": "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
       "professionUrl": "https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante",
       "professionCode": "10"
+    },
+    "regulator":{
+      "regulatorId": "3620100057/70326SR",
+      "regulatorName": "RICART",
+      "regulatorFirstname": "Pauline",
+      "regulatorEmail": "pauline.ricart@ghsas.fr"
     }
   }
 }
@@ -455,11 +527,17 @@ Cf. exemple ci-dessous de message d'annulation.
       "specialityUrl": "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
       "professionUrl": "https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante",
       "professionCode": "10"
+    },
+    "regulator":{
+      "regulatorId": "3620100057/70326SR",
+      "regulatorName": "RICART",
+      "regulatorFirstname": "Pauline",
+      "regulatorEmail": "pauline.ricart@ghsas.fr"
     }
   }
 }
 ```
-### Détail des champs à utiliser
+### Détail des champs transmis et nomenclatures
 
 Cette section détaille les champs à utiliser afin de renseigner les différents éléments codifiés de la requête.
  - **method** : Indique un message de création ou de mise à jour. Les valeurs suivantes sont attendues : 
@@ -482,6 +560,12 @@ Cette section détaille les champs à utiliser afin de renseigner les différent
 - **practitioner.professionCode** : Code issu de la nomenclature des professions de santédu NOS (<https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante/>)
 
 - **organizationId** : Identifiant unique propre à chaque structure de soins. Les champs sont valorisés comme suit : numéro du FINESS avec préfixe « 1 » ou numéro du SIRET avec préfixe « 3 » 
+
+- **regulatorId** : Identifiant unique du régulateur ayant pris le RDV. Il s'agit soit d'un identifiant national "IDNPS"(identifiant présent sur la carte CPx du régulateur) soit d'un identifiant technique attribué par la plateforme numérique SAS. En effet, certains régulateurs n’ayant pas encore d’identifiant national à date, un identifiant technique de type uuid est créé. 
+*Exemple d'identifiant national* : `3620100057/70326SR`
+*Exemple d'identifiant technique* : `1ef24046-7c54-69ca-a309-8106d60b6540` 
+
+- **regulatorEmail** : Il s'agit de l'adresse mail du compte du régulateur telle que déclarée dans la plateforme SAS. Elle correspond également à l'identifiant de connexion à la plateforme. 
 
 ### Déclencheurs et règles d'intégration attendues
 
