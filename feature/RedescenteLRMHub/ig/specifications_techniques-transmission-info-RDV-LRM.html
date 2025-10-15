@@ -249,7 +249,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#message-denvoi-de-rdv" id="markdown-toc-message-denvoi-de-rdv">Message d'envoi de RDV</a></li>
   <li><a href="#message-de-modification-de-rdv" id="markdown-toc-message-de-modification-de-rdv">Message de modification de RDV</a></li>
   <li><a href="#message-dannulation-de-rdv" id="markdown-toc-message-dannulation-de-rdv">Message d'annulation de RDV</a></li>
-  <li><a href="#détail-des-champs-à-utiliser" id="markdown-toc-détail-des-champs-à-utiliser">Détail des champs à utiliser</a></li>
+  <li><a href="#détail-des-champs-transmis-et-nomenclatures" id="markdown-toc-détail-des-champs-transmis-et-nomenclatures">Détail des champs transmis et nomenclatures</a></li>
   <li><a href="#déclencheurs-et-règles-dintégration-attendues" id="markdown-toc-déclencheurs-et-règles-dintégration-attendues">Déclencheurs et règles d'intégration attendues</a></li>
 </ul>
 
@@ -622,7 +622,7 @@ Le cheminement est similaire au message envoyé mais pris en sens inverse.</p>
 
 <p>Le message json contenant les données et encapsulé dans l'entête EDXL-DE respecte le format suivant :</p>
 
-<table style="table-layout: fixed; width: 100%;">
+<table style="table-layout: fixed; width: 100%; font-size: 8px">
   <tbody>
     <tr style="text-align: center;">
       <th style="width: 8%;"><strong>ID</strong></th>
@@ -852,6 +852,66 @@ Le cheminement est similaire au message envoyé mais pris en sens inverse.</p>
       <td>string</td>
       <td></td>
     </tr>
+    <tr>
+      <td>19</td>
+      <td>Régulateur</td>
+      <td></td>
+      <td>Représente le régulateur ayant pris le RDV</td>
+      <td></td>
+      <td>regulatorId</td>
+      <td>1..1</td>
+      <td>X</td>
+      <td>regulator</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td></td>
+      <td>Identifiant régulateur</td>
+      <td>Identifiant du régulateur ayant pris le RDV</td>
+      <td>3620100057/70326SR</td>
+      <td>regulatorId</td>
+      <td>1..1</td>
+      <td></td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td></td>
+      <td>Nom du régulateur</td>
+      <td>Nom du régulateur ayant pris le RDV</td>
+      <td>Ricart</td>
+      <td>regulatorName</td>
+      <td>1..1</td>
+      <td></td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td></td>
+      <td>Prénom du régulateur</td>
+      <td>Prénom du régulateur ayant pris le RDV</td>
+      <td>Pauline</td>
+      <td>regulatorFirstname</td>
+      <td>1..1</td>
+      <td></td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td></td>
+      <td>Mail du régulateur</td>
+      <td>Adresse mail du régulateur ayant pris le RDV</td>
+      <td>pauline.ricart@ghsas.fr</td>
+      <td>regulatorEmail</td>
+      <td>1..1</td>
+      <td></td>
+      <td>string</td>
+      <td></td>
+    </tr>
   </tbody>
 </table>
 
@@ -874,6 +934,12 @@ Cf. exemple ci-dessous de message de création</p>
       </span><span class="nl">"specialityUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"professionUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"professionCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"regulator"</span><span class="p">:{</span><span class="w">
+      </span><span class="nl">"regulatorId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3620100057/70326SR"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"regulatorName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RICART"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"regulatorFirstname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pauline"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"regulatorEmail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pauline.ricart@ghsas.fr"</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -919,6 +985,12 @@ Cf. exemple ci-dessous de message de création</p>
       </span><span class="nl">"specialityUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"professionUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"professionCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"regulator"</span><span class="p">:{</span><span class="w">
+      </span><span class="nl">"regulatorId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3620100057/70326SR"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"regulatorName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RICART"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"regulatorFirstname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pauline"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"regulatorEmail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pauline.ricart@ghsas.fr"</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -945,11 +1017,17 @@ Cf. exemple ci-dessous de message de création</p>
       </span><span class="nl">"specialityUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"professionUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"professionCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"regulator"</span><span class="p">:{</span><span class="w">
+      </span><span class="nl">"regulatorId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3620100057/70326SR"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"regulatorName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RICART"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"regulatorFirstname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pauline"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"regulatorEmail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pauline.ricart@ghsas.fr"</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
-<h3 id="détail-des-champs-à-utiliser">Détail des champs à utiliser</h3>
+<h3 id="détail-des-champs-transmis-et-nomenclatures">Détail des champs transmis et nomenclatures</h3>
 
 <p>Cette section détaille les champs à utiliser afin de renseigner les différents éléments codifiés de la requête.</p>
 <ul>
@@ -980,7 +1058,15 @@ Cf. exemple ci-dessous de message de création</p>
   <li>
     <p><strong>practitioner.professionCode</strong> : Code issu de la nomenclature des professions de santédu NOS (<a href="https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante/">https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante/</a>)</p>
   </li>
-  <li><strong>organizationId</strong> : Identifiant unique propre à chaque structure de soins. Les champs sont valorisés comme suit : numéro du FINESS avec préfixe « 1 » ou numéro du SIRET avec préfixe « 3 »</li>
+  <li>
+    <p><strong>organizationId</strong> : Identifiant unique propre à chaque structure de soins. Les champs sont valorisés comme suit : numéro du FINESS avec préfixe « 1 » ou numéro du SIRET avec préfixe « 3 »</p>
+  </li>
+  <li>
+    <p><strong>regulatorId</strong> : Identifiant unique du régulateur ayant pris le RDV. Il s'agit soit d'un identifiant national "IDNPS"(identifiant présent sur la carte CPx du régulateur) soit d'un identifiant technique attribué par la plateforme numérique SAS. En effet, certains régulateurs n’ayant pas encore d’identifiant national à date, un identifiant technique de type uuid est créé. 
+<em>Exemple d'identifiant national</em> : <code class="language-plaintext highlighter-rouge">3620100057/70326SR</code>
+<em>Exemple d'identifiant technique</em> : <code class="language-plaintext highlighter-rouge">1ef24046-7c54-69ca-a309-8106d60b6540</code></p>
+  </li>
+  <li><strong>regulatorEmail</strong> : Il s'agit de l'adresse mail du compte du régulateur telle que déclarée dans la plateforme SAS. Elle correspond également à l'identifiant de connexion à la plateforme.</li>
 </ul>
 
 <h3 id="déclencheurs-et-règles-dintégration-attendues">Déclencheurs et règles d'intégration attendues</h3>
@@ -1054,7 +1140,7 @@ Le paragraphe ci-dessous détaille les différentes <strong>règles de gestions 
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Oct 14, 2025 13:36+0000">2025-10-14</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Oct 15, 2025 13:35+0000">2025-10-15</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

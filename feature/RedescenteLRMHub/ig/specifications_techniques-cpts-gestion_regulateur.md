@@ -33,7 +33,7 @@
 
 ##### Réponse de base – Succès
 
-Lien vers la spécification FHIR : [https://www.hl7.org/fhir/bundle.html](https://www.hl7.org/fhir/bundle.html)
+Lien vers la spécification FHIR : [https://www.hl7.org/fhir/practitioner.html](https://www.hl7.org/fhir/practitioner.html)
 
 Si la création est un succès, le serveur répond :
 

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur | *Version*:1.1.0 |
-| Active as of 2025-10-14 | *Computable Name*:FrScheduleAgregateur |
+| Active as of 2025-10-15 | *Computable Name*:FrScheduleAgregateur |
 
  
 Profil de Schedule, dérivé de FrSchedule, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS 
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-FrScheduleAgregateur
   "version" : "1.1.0",
   "name" : "FrScheduleAgregateur",
   "status" : "active",
-  "date" : "2025-10-14T13:35:28+00:00",
+  "date" : "2025-10-15T13:34:51+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

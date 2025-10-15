@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator | *Version*:1.1.0 |
-| Active as of 2025-10-14 | *Computable Name*:FrSlotAgregateurSOS |
+| Active as of 2025-10-15 | *Computable Name*:FrSlotAgregateurSOS |
 
  
 Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-sas-sos-slot-aggrega
   "version" : "1.1.0",
   "name" : "FrSlotAgregateurSOS",
   "status" : "active",
-  "date" : "2025-10-14T13:35:28+00:00",
+  "date" : "2025-10-15T13:34:51+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://sas.fr/fhir/StructureDefinition/FrAppointmentSAS | *Version*:1.1.0 |
-| Active as of 2025-10-14 | *Computable Name*:FrAppointmentSAS |
+| Active as of 2025-10-15 | *Computable Name*:FrAppointmentSAS |
 
  
 Profil de Appointment, dérivé de FrAppointment, pour le cas d'usage prise de RDV de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-FrAppointmentSAS.csv
   "version" : "1.1.0",
   "name" : "FrAppointmentSAS",
   "status" : "active",
-  "date" : "2025-10-14T13:35:28+00:00",
+  "date" : "2025-10-15T13:34:51+00:00",
   "publisher" : "ANS",
   "contact" : [
     {
