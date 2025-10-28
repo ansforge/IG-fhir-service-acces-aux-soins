@@ -55,7 +55,8 @@ Le tableau ci-dessous précise les balises qui doivent être envoyées et qui so
 | *Contenu* | content.contentObject.JsonContent.embeddedJsonContent | json | Contenu du message json encapsulé dans l'entête | Fichier json contenant les données transmises, cf. détail ci-dessous |
 
 
-Détail sur le contenu `embeddedJsonContent` encapsulé dans l'entête EXDL-DE : ils'agit d'un message json avec la liste des champs décrite plus bas propre aux données de RDV transmises elle même encapsulée dans une entête RC-DE dont les caractéristiques sont décrites plus bas. 
+**Détail sur le contenu `embeddedJsonContent` encapsulé dans l'entête EXDL-DE** : 
+il s'agit d'un message json avec la liste des champs décrite plus bas propre aux données de RDV transmises elle même encapsulée dans une entête RC-DE dont les caractéristiques sont décrites plus bas. 
 L'entête RC-DE contient un nombre de champs communs à l'entête EDXL-DE, ce qui permet de rendre le message auportortant sans l'entête EDXL-DE. 
 
 #### Acquittement technique Hub -> PTF SAS
@@ -127,7 +128,7 @@ Lorsqu’un régulateur prend RDV pour un patient via la plateforme numérique S
 
 - **Protocole** : <span style="color:blue">AMQP 0-9-1  
 </span>
-- **En-tête** : <span style="color:blue">EDXL-DL 
+- **En-tête** : <span style="color:blue">EDXL-DE 
 </span>
 - **Sender** : <span style="color:blue">ptfsas  
 </span> 
@@ -585,7 +586,7 @@ Cette section détaille les champs à utiliser afin de renseigner les différent
 
 ### Exemple de message complet avec entêtes et contenu
 
-Message PTF SAS -> SAMU 33
+**Message PTF SAS -> SAMU 33**
 
 ```json
 {
@@ -647,7 +648,73 @@ Message PTF SAS -> SAMU 33
 }
 ```
 
-Acquittement final SAMU 33 -> PTF SAS
+Détail du message
+```json
+{
+  //entête EDXL-DE
+  "distributionID": "fr.health.ptfsas_30c8e00d-68b2-4092-a4f2-a9cb19b416e9",
+  "senderID": "fr.health.ptfsas",
+  "dateTimeSent": "2025-10-28T17:05:54+01:00",
+  "dateTimeExpires": "2072-09-27T08:23:34+02:00",
+  "distributionStatus": "Actual",
+  "distributionKind": "Report",
+  "descriptor": {
+    "language": "fr-FR",
+    "explicitAddress": {
+      "explicitAddressScheme": "hubex",
+      "explicitAddressValue": "fr.health.samu330"
+    }
+  },
+  "content": [
+    {
+      //contenu au format json
+      "jsonContent": {
+        "embeddedJsonContent": {
+          "message": 
+          //entête RC-DE
+          {
+            "messageId": "fr.health.ptfsas_30c8e00d-68b2-4092-a4f2-a9cb19b416e9",
+            "sender": {
+              "name": "ptfsas",
+              "URI": "hubex:fr.health.ptfsas"
+            },
+            "sentAt": "2025-10-28T17:05:54+01:00",
+            "status": "Actual",
+            "kind": "Report",
+            "recipient": [
+              {
+                "name": "samu330",
+                "URI": "hubex:fr.health.samu330"
+              }
+            ],
+            //données de RDV
+            "appointment": {
+              "appointmentId": "2d2db05f-e2b0-4169-be8f-891806da2c74",
+              "method": "CreateAppointment",
+              "created": "2025-06-17T10:15:00+02:00",
+              "status": "booked",
+              "orientationCategory": "PS",
+              "start": "2025-06-17T14:00:00+02:00",
+              "end": "2025-06-17T14:20:00+02:00",
+              "practitioner": {
+                "rppsId": "810005681340",
+                "lastName": "MOREL",
+                "firstName": "Didier",
+                "specialityCode": "SM54",
+                "specialityUrl": "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
+                "professionUrl": "https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante",
+                "professionCode": "10"
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
+```
+
+**Acquittement final SAMU 33 -> PTF SAS**
 
 ```json
 {
@@ -693,6 +760,88 @@ Acquittement final SAMU 33 -> PTF SAS
     ]
 }
 ```
+
+**Message d'erreur retourné par le Hub suite à un envoi PTF SAS -> SAMU 330**
+
+```json
+{
+    "distributionID": "fr.health.hub_cb0f6f14-6b57-4fb5-a635-97705c8d31e7",
+    "senderID": "fr.health.hub",
+    "dateTimeSent": "2025-10-28T16:29:59+00:00",
+    "dateTimeExpires": "2025-10-29T16:29:59+00:00",
+    "distributionStatus": "Actual",
+    "distributionKind": "Error",
+    "descriptor": {
+        "language": "fr-FR",
+        "explicitAddress": {
+            "explicitAddressScheme": "hubex",
+            "explicitAddressValue": "fr.health.ptfsas"
+        }
+    },
+    "content": [
+        {
+            "jsonContent": {
+                "embeddedJsonContent": {
+                    "message": {
+                        "error": {
+                            "errorCode": {
+                                "statusCode": 300,
+                                "statusString": "INVALID_MESSAGE"
+                            },
+                            "errorCause": "Could not validate message against schema : errors occurred. \nIssues found on the $.content[0].jsonContent.embeddedJsonContent.message content: \n - appointment: string found, object expected\n",
+                            "sourceMessage": {
+                                "distributionID": "fr.health.ptfsas_44fce1e7-461e-4b15-91e2-b4168bed531e",
+                                "distributionKind": "Report",
+                                "senderID": "fr.health.ptfsas",
+                                "dateTimeSent": "2025-10-28T17:29:59+01:00",
+                                "distributionStatus": "Actual",
+                                "descriptor": {
+                                    "language": "fr-FR",
+                                    "explicitAddress": {
+                                        "explicitAddressScheme": "hubex",
+                                        "explicitAddressValue": "fr.health.samu330"
+                                    }
+                                },
+                                "dateTimeExpires": "2072-09-27T08:23:34+02:00",
+                                "content": [
+                                    {
+                                        "jsonContent": {
+                                            "embeddedJsonContent": {
+                                                "message": {
+                                                    "messageId": "fr.health.ptfsas_44fce1e7-461e-4b15-91e2-b4168bed531e",
+                                                    "sender": {
+                                                        "name": "ptfsas",
+                                                        "URI": "hubex:fr.health.ptfsas"
+                                                    },
+                                                    "sentAt": "2025-10-28T17:29:59+01:00",
+                                                    "status": "Actual",
+                                                    "kind": "Report",
+                                                    "recipient": [
+                                                        {
+                                                            "name": "samu330",
+                                                            "URI": "hubex:fr.health.samu330"
+                                                        }
+                                                    ],
+                                                    "appointment": "fr.health.ptfsas_30c8e00d-68b2-4092-a4f2-a9cb19b416e9"
+                                                }
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            "referencedDistributionID": "fr.health.ptfsas_44fce1e7-461e-4b15-91e2-b4168bed531e"
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}
+```
+
+Dans ce cas, il manque le champ RPPS obligatoire et le contrôle de validation par le Hub échoue. 
+
+**Message d'erreur retourné par le LRM suite à un envoi PTF SAS -> SAMU 330**
 
 ### Déclencheurs et règles d'intégration attendues
 
