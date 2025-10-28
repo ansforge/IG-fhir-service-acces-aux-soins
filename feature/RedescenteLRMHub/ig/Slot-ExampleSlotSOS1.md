@@ -8,7 +8,7 @@
 
 Profil: [FrSlotAgregateurSOS](StructureDefinition-sas-sos-slot-aggregator.md)
 
-Label de sécurités: Créneau accessible par le grand public (Details: TRE_R314-TypeCreneau code PUBLIC = 'Créneau accessible par le grand public'), Créneau accessible par les Régulateurs et Organisateurs de Soins Non Programmés (Details: TRE_R314-TypeCreneau code SNP = 'Créneau accessible par les Régulateurs et Organisateurs de Soins Non Programmés')
+Label de sécurités: Créneau accessible par le grand public (Détails : code TRE_R314-TypeCreneau PUBLIC = 'Créneau accessible par le grand public'), Créneau accessible par les Régulateurs et Organisateurs de Soins Non Programmés (Détails : code TRE_R314-TypeCreneau SNP = 'Créneau accessible par les Régulateurs et Organisateurs de Soins Non Programmés')
 
 **serviceType**: ambulatory, virtual
 

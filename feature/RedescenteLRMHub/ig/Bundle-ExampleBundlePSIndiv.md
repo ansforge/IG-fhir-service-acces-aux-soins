@@ -12,7 +12,7 @@ Bundle ExampleBundlePSIndiv de type searchset
 
 -------
 
-Entry 1 - fullUrl = https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv1
+Entrée 1 - fullUrl = https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv1
 
 Recherche :Mode = match
 
@@ -22,13 +22,13 @@ Ressource Slot :
 
 Profil: [FrSlotAgregateur](StructureDefinition-FrSlotAgregateur.md)
 
-Label de sécurité: Créneau accessible par le grand public (Details: TRE_R314-TypeCreneau code PUBLIC = 'Créneau accessible par le grand public')
+Label de sécurité: Créneau accessible par le grand public (Détails : code TRE_R314-TypeCreneau PUBLIC = 'Créneau accessible par le grand public')
 
-**serviceType**: No display for Slot.serviceType (concept : ambulatory), No display for Slot.serviceType (concept : virtual), No display for Slot.serviceType (concept : )**specialty**:Médecine générale (SM),Chirurgie générale (SM)**appointmentType**:Routine appointment - default if not valued**schedule**:[Schedule](Schedule-ExampleSchedule1.md)**status**: Free**start**: 2021-11-05 09:00:00+0000**end**: 2021-11-05 09:30:00+0000**comment**: https://exemple.com/rdv/com/
+**serviceType**: Pas daffichage pour {0} (concept : ambulatory), Pas daffichage pour {0} (concept : virtual), Pas daffichage pour {0} (concept : )**specialty**:Médecine générale (SM),Chirurgie générale (SM)**appointmentType**:Routine appointment - default if not valued**schedule**:[Schedule](Schedule-ExampleSchedule1.md)**status**: Free**start**: 2021-11-05 09:00:00+0000**end**: 2021-11-05 09:30:00+0000**comment**: https://exemple.com/rdv/com/
 
 -------
 
-Entry 2 - fullUrl = https://exemple.com/ans-sas/Schedule/ExampleSchedule1
+Entrée 2 - fullUrl = https://exemple.com/ans-sas/Schedule/ExampleSchedule1
 
 Recherche :Mode = include
 
@@ -44,7 +44,7 @@ Profil: [FrScheduleAgregateur](StructureDefinition-FrScheduleAgregateur.md)
 
 -------
 
-Entry 3 - fullUrl = https://exemple.com/ans-sas/Practitioner/ExamplePractitioner2
+Entrée 3 - fullUrl = https://exemple.com/ans-sas/Practitioner/ExamplePractitioner2
 
 Ressource Practitioner :
 
@@ -56,7 +56,7 @@ Profil: [FrPractitionerAgregateur](StructureDefinition-FrPractitionerAgregateur.
 
 -------
 
-Entry 4 - fullUrl = https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur2
+Entrée 4 - fullUrl = https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur2
 
 Recherche :Mode = include
 
@@ -77,7 +77,7 @@ Profil: [FrLocationAgregateur](StructureDefinition-FrLocationAgregateur.md)
 
 -------
 
-Entry 5 - fullUrl = https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv2
+Entrée 5 - fullUrl = https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv2
 
 Recherche :Mode = match
 
@@ -87,13 +87,13 @@ Ressource Slot :
 
 Profil: [FrSlotAgregateur](StructureDefinition-FrSlotAgregateur.md)
 
-Label de sécurité: Créneau accessible par l'ensemble des professionnels de santé (Details: TRE_R314-TypeCreneau code PRO = 'Créneau accessible par l'ensemble des professionnels de santé')
+Label de sécurité: Créneau accessible par l'ensemble des professionnels de santé (Détails : code TRE_R314-TypeCreneau PRO = 'Créneau accessible par l'ensemble des professionnels de santé')
 
-**serviceType**: No display for Slot.serviceType (concept : ambulatory), No display for Slot.serviceType (concept : )**specialty**:Médecine générale (SM)**appointmentType**:A previously unscheduled walk-in visit**schedule**:[Schedule](Schedule-ExampleSchedule2.md)**status**: Free**start**: 2021-11-05 11:00:00+0000**end**: 2021-11-05 11:30:00+0000
+**serviceType**: Pas daffichage pour {0} (concept : ambulatory), Pas daffichage pour {0} (concept : )**specialty**:Médecine générale (SM)**appointmentType**:A previously unscheduled walk-in visit**schedule**:[Schedule](Schedule-ExampleSchedule2.md)**status**: Free**start**: 2021-11-05 11:00:00+0000**end**: 2021-11-05 11:30:00+0000
 
 -------
 
-Entry 6 - fullUrl = https://exemple.com/ans-sas/Schedule/ExampleSchedule2
+Entrée 6 - fullUrl = https://exemple.com/ans-sas/Schedule/ExampleSchedule2
 
 Recherche :Mode = include
 
@@ -109,7 +109,7 @@ Profil: [FrScheduleAgregateur](StructureDefinition-FrScheduleAgregateur.md)
 
 -------
 
-Entry 7 - fullUrl = https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur3
+Entrée 7 - fullUrl = https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur3
 
 Recherche :Mode = include
 
@@ -130,7 +130,7 @@ Profil: [FrLocationAgregateur](StructureDefinition-FrLocationAgregateur.md)
 
 -------
 
-Entry 8 - fullUrl = https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv3
+Entrée 8 - fullUrl = https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv3
 
 Recherche :Mode = match
 
@@ -140,13 +140,13 @@ Ressource Slot :
 
 Profil: [FrSlotAgregateur](StructureDefinition-FrSlotAgregateur.md)
 
-Label de sécurités: Créneau accessible par le grand public (Details: TRE_R314-TypeCreneau code PUBLIC = 'Créneau accessible par le grand public'), Créneau accessible par l'ensemble des professionnels de santé (Details: TRE_R314-TypeCreneau code PRO = 'Créneau accessible par l'ensemble des professionnels de santé')
+Label de sécurités: Créneau accessible par le grand public (Détails : code TRE_R314-TypeCreneau PUBLIC = 'Créneau accessible par le grand public'), Créneau accessible par l'ensemble des professionnels de santé (Détails : code TRE_R314-TypeCreneau PRO = 'Créneau accessible par l'ensemble des professionnels de santé')
 
-**serviceType**: No display for Slot.serviceType (concept : virtual), No display for Slot.serviceType (concept : ), No display for Slot.serviceType (concept : )**specialty**:Pneumologie (SM)**appointmentType**:Routine appointment - default if not valued**schedule**:[Schedule](Schedule-ExampleSchedule3.md)**status**: Free**start**: 2021-11-04 14:20:00+0000**end**: 2021-11-04 14:40:00+0000**comment**: https://exemple.com/rdv/com/
+**serviceType**: Pas daffichage pour {0} (concept : virtual), Pas daffichage pour {0} (concept : ), Pas daffichage pour {0} (concept : )**specialty**:Pneumologie (SM)**appointmentType**:Routine appointment - default if not valued**schedule**:[Schedule](Schedule-ExampleSchedule3.md)**status**: Free**start**: 2021-11-04 14:20:00+0000**end**: 2021-11-04 14:40:00+0000**comment**: https://exemple.com/rdv/com/
 
 -------
 
-Entry 9 - fullUrl = https://exemple.com/ans-sas/Schedule/ExampleSchedule3
+Entrée 9 - fullUrl = https://exemple.com/ans-sas/Schedule/ExampleSchedule3
 
 Recherche :Mode = include
 
@@ -162,7 +162,7 @@ Profil: [FrScheduleAgregateur](StructureDefinition-FrScheduleAgregateur.md)
 
 -------
 
-Entry 10 - fullUrl = https://exemple.com/ans-sas/Practitioner/ExamplePractitioner3
+Entrée 10 - fullUrl = https://exemple.com/ans-sas/Practitioner/ExamplePractitioner3
 
 Recherche :Mode = include
 
@@ -176,7 +176,7 @@ Profil: [FrPractitionerAgregateur](StructureDefinition-FrPractitionerAgregateur.
 
 -------
 
-Entry 11 - fullUrl = https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur4
+Entrée 11 - fullUrl = https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur4
 
 Recherche :Mode = include
 
@@ -197,7 +197,7 @@ Profil: [FrLocationAgregateur](StructureDefinition-FrLocationAgregateur.md)
 
 -------
 
-Entry 12 - fullUrl = https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv4
+Entrée 12 - fullUrl = https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv4
 
 Recherche :Mode = match
 
@@ -207,9 +207,9 @@ Ressource Slot :
 
 Profil: [FrSlotAgregateur](StructureDefinition-FrSlotAgregateur.md)
 
-Label de sécurités: Créneau accessible par le grand public (Details: TRE_R314-TypeCreneau code PUBLIC = 'Créneau accessible par le grand public'), Créneau accessible par l'ensemble des professionnels de santé (Details: TRE_R314-TypeCreneau code PRO = 'Créneau accessible par l'ensemble des professionnels de santé')
+Label de sécurités: Créneau accessible par le grand public (Détails : code TRE_R314-TypeCreneau PUBLIC = 'Créneau accessible par le grand public'), Créneau accessible par l'ensemble des professionnels de santé (Détails : code TRE_R314-TypeCreneau PRO = 'Créneau accessible par l'ensemble des professionnels de santé')
 
-**serviceType**: No display for Slot.serviceType (concept : home health), No display for Slot.serviceType (concept : ), No display for Slot.serviceType (concept : )**specialty**:Pneumologie (SM),Médecine générale (SM)**appointmentType**:Routine appointment - default if not valued**schedule**:[Schedule](Schedule-ExampleSchedule3.md)**status**: Free**start**: 2021-11-04 14:40:00+0000**end**: 2021-11-04 15:00:00+0000**comment**: https://exemple.com/rdv/com/
+**serviceType**: Pas daffichage pour {0} (concept : home health), Pas daffichage pour {0} (concept : ), Pas daffichage pour {0} (concept : )**specialty**:Pneumologie (SM),Médecine générale (SM)**appointmentType**:Routine appointment - default if not valued**schedule**:[Schedule](Schedule-ExampleSchedule3.md)**status**: Free**start**: 2021-11-04 14:40:00+0000**end**: 2021-11-04 15:00:00+0000**comment**: https://exemple.com/rdv/com/
 
 
 
@@ -247,7 +247,7 @@ Label de sécurités: Créneau accessible par le grand public (Details: TRE_R314
         },
         "text" : {
           "status" : "generated",
-          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Slot_ExampleSlotPSIndiv1\"> </a><p class=\"res-header-id\"><b>Narratif généré : Slot ExampleSlotPSIndiv1</b></p><a name=\"ExampleSlotPSIndiv1\"> </a><a name=\"hcExampleSlotPSIndiv1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-FrSlotAgregateur.html\">FrSlotAgregateur</a></p><p style=\"margin-bottom: 0px\">Label de sécurité: Créneau accessible par le grand public (Details: TRE_R314-TypeCreneau code PUBLIC = 'Créneau accessible par le grand public')</p></div><p><b>serviceType</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode AMB}\">ambulatory</span>, <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode VR}\">virtual</span>, <span title=\"Codes:\">Visite de contrôle</span></p><p><b>specialty</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM54}\">Médecine générale (SM)</span>, <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM05}\">Chirurgie générale (SM)</span></p><p><b>appointmentType</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0276 ROUTINE}\">Routine appointment - default if not valued</span></p><p><b>schedule</b>: <a href=\"Schedule-ExampleSchedule1.html\">Schedule</a></p><p><b>status</b>: Free</p><p><b>start</b>: 2021-11-05 09:00:00+0000</p><p><b>end</b>: 2021-11-05 09:30:00+0000</p><p><b>comment</b>: https://exemple.com/rdv/com/</p></div>"
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Slot_ExampleSlotPSIndiv1\"> </a><p class=\"res-header-id\"><b>Narratif généré : Slot ExampleSlotPSIndiv1</b></p><a name=\"ExampleSlotPSIndiv1\"> </a><a name=\"hcExampleSlotPSIndiv1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-FrSlotAgregateur.html\">FrSlotAgregateur</a></p><p style=\"margin-bottom: 0px\">Label de sécurité: Créneau accessible par le grand public (Détails : code TRE_R314-TypeCreneau PUBLIC = 'Créneau accessible par le grand public')</p></div><p><b>serviceType</b>: <span title=\"Codes :{http://terminology.hl7.org/CodeSystem/v3-ActCode AMB}\">ambulatory</span>, <span title=\"Codes :{http://terminology.hl7.org/CodeSystem/v3-ActCode VR}\">virtual</span>, <span title=\"Codes :\">Visite de contrôle</span></p><p><b>specialty</b>: <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM54}\">Médecine générale (SM)</span>, <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM05}\">Chirurgie générale (SM)</span></p><p><b>appointmentType</b>: <span title=\"Codes :{http://terminology.hl7.org/CodeSystem/v2-0276 ROUTINE}\">Routine appointment - default if not valued</span></p><p><b>schedule</b>: <a href=\"Schedule-ExampleSchedule1.html\">Schedule</a></p><p><b>status</b>: Free</p><p><b>start</b>: 2021-11-05 09:00:00+0000</p><p><b>end</b>: 2021-11-05 09:30:00+0000</p><p><b>comment</b>: https://exemple.com/rdv/com/</p></div>"
         },
         "serviceType" : [
           {
@@ -458,7 +458,7 @@ Label de sécurités: Créneau accessible par le grand public (Details: TRE_R314
         },
         "text" : {
           "status" : "generated",
-          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Slot_ExampleSlotPSIndiv2\"> </a><p class=\"res-header-id\"><b>Narratif généré : Slot ExampleSlotPSIndiv2</b></p><a name=\"ExampleSlotPSIndiv2\"> </a><a name=\"hcExampleSlotPSIndiv2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-FrSlotAgregateur.html\">FrSlotAgregateur</a></p><p style=\"margin-bottom: 0px\">Label de sécurité: Créneau accessible par l'ensemble des professionnels de santé (Details: TRE_R314-TypeCreneau code PRO = 'Créneau accessible par l'ensemble des professionnels de santé')</p></div><p><b>serviceType</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode AMB}\">ambulatory</span>, <span title=\"Codes:\">Visite urgente</span></p><p><b>specialty</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM54}\">Médecine générale (SM)</span></p><p><b>appointmentType</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0276 WALKIN}\">A previously unscheduled walk-in visit</span></p><p><b>schedule</b>: <a href=\"Schedule-ExampleSchedule2.html\">Schedule</a></p><p><b>status</b>: Free</p><p><b>start</b>: 2021-11-05 11:00:00+0000</p><p><b>end</b>: 2021-11-05 11:30:00+0000</p></div>"
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Slot_ExampleSlotPSIndiv2\"> </a><p class=\"res-header-id\"><b>Narratif généré : Slot ExampleSlotPSIndiv2</b></p><a name=\"ExampleSlotPSIndiv2\"> </a><a name=\"hcExampleSlotPSIndiv2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-FrSlotAgregateur.html\">FrSlotAgregateur</a></p><p style=\"margin-bottom: 0px\">Label de sécurité: Créneau accessible par l'ensemble des professionnels de santé (Détails : code TRE_R314-TypeCreneau PRO = 'Créneau accessible par l'ensemble des professionnels de santé')</p></div><p><b>serviceType</b>: <span title=\"Codes :{http://terminology.hl7.org/CodeSystem/v3-ActCode AMB}\">ambulatory</span>, <span title=\"Codes :\">Visite urgente</span></p><p><b>specialty</b>: <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM54}\">Médecine générale (SM)</span></p><p><b>appointmentType</b>: <span title=\"Codes :{http://terminology.hl7.org/CodeSystem/v2-0276 WALKIN}\">A previously unscheduled walk-in visit</span></p><p><b>schedule</b>: <a href=\"Schedule-ExampleSchedule2.html\">Schedule</a></p><p><b>status</b>: Free</p><p><b>start</b>: 2021-11-05 11:00:00+0000</p><p><b>end</b>: 2021-11-05 11:30:00+0000</p></div>"
         },
         "serviceType" : [
           {
@@ -620,7 +620,7 @@ Label de sécurités: Créneau accessible par le grand public (Details: TRE_R314
         },
         "text" : {
           "status" : "generated",
-          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Slot_ExampleSlotPSIndiv3\"> </a><p class=\"res-header-id\"><b>Narratif généré : Slot ExampleSlotPSIndiv3</b></p><a name=\"ExampleSlotPSIndiv3\"> </a><a name=\"hcExampleSlotPSIndiv3\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-FrSlotAgregateur.html\">FrSlotAgregateur</a></p><p style=\"margin-bottom: 0px\">Label de sécurités: Créneau accessible par le grand public (Details: TRE_R314-TypeCreneau code PUBLIC = 'Créneau accessible par le grand public'), Créneau accessible par l'ensemble des professionnels de santé (Details: TRE_R314-TypeCreneau code PRO = 'Créneau accessible par l'ensemble des professionnels de santé')</p></div><p><b>serviceType</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode VR}\">virtual</span>, <span title=\"Codes:\">Visite de contrôle</span>, <span title=\"Codes:\">Consultation de suivi pneumologie</span></p><p><b>specialty</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM41}\">Pneumologie (SM)</span></p><p><b>appointmentType</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0276 ROUTINE}\">Routine appointment - default if not valued</span></p><p><b>schedule</b>: <a href=\"Schedule-ExampleSchedule3.html\">Schedule</a></p><p><b>status</b>: Free</p><p><b>start</b>: 2021-11-04 14:20:00+0000</p><p><b>end</b>: 2021-11-04 14:40:00+0000</p><p><b>comment</b>: https://exemple.com/rdv/com/</p></div>"
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Slot_ExampleSlotPSIndiv3\"> </a><p class=\"res-header-id\"><b>Narratif généré : Slot ExampleSlotPSIndiv3</b></p><a name=\"ExampleSlotPSIndiv3\"> </a><a name=\"hcExampleSlotPSIndiv3\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-FrSlotAgregateur.html\">FrSlotAgregateur</a></p><p style=\"margin-bottom: 0px\">Label de sécurités: Créneau accessible par le grand public (Détails : code TRE_R314-TypeCreneau PUBLIC = 'Créneau accessible par le grand public'), Créneau accessible par l'ensemble des professionnels de santé (Détails : code TRE_R314-TypeCreneau PRO = 'Créneau accessible par l'ensemble des professionnels de santé')</p></div><p><b>serviceType</b>: <span title=\"Codes :{http://terminology.hl7.org/CodeSystem/v3-ActCode VR}\">virtual</span>, <span title=\"Codes :\">Visite de contrôle</span>, <span title=\"Codes :\">Consultation de suivi pneumologie</span></p><p><b>specialty</b>: <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM41}\">Pneumologie (SM)</span></p><p><b>appointmentType</b>: <span title=\"Codes :{http://terminology.hl7.org/CodeSystem/v2-0276 ROUTINE}\">Routine appointment - default if not valued</span></p><p><b>schedule</b>: <a href=\"Schedule-ExampleSchedule3.html\">Schedule</a></p><p><b>status</b>: Free</p><p><b>start</b>: 2021-11-04 14:20:00+0000</p><p><b>end</b>: 2021-11-04 14:40:00+0000</p><p><b>comment</b>: https://exemple.com/rdv/com/</p></div>"
         },
         "serviceType" : [
           {
@@ -831,7 +831,7 @@ Label de sécurités: Créneau accessible par le grand public (Details: TRE_R314
         },
         "text" : {
           "status" : "generated",
-          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Slot_ExampleSlotPSIndiv4\"> </a><p class=\"res-header-id\"><b>Narratif généré : Slot ExampleSlotPSIndiv4</b></p><a name=\"ExampleSlotPSIndiv4\"> </a><a name=\"hcExampleSlotPSIndiv4\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-FrSlotAgregateur.html\">FrSlotAgregateur</a></p><p style=\"margin-bottom: 0px\">Label de sécurités: Créneau accessible par le grand public (Details: TRE_R314-TypeCreneau code PUBLIC = 'Créneau accessible par le grand public'), Créneau accessible par l'ensemble des professionnels de santé (Details: TRE_R314-TypeCreneau code PRO = 'Créneau accessible par l'ensemble des professionnels de santé')</p></div><p><b>serviceType</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode HH}\">home health</span>, <span title=\"Codes:\">Visite de contrôle</span>, <span title=\"Codes:\">Consultation de suivi pneumologique</span></p><p><b>specialty</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM41}\">Pneumologie (SM)</span>, <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM54}\">Médecine générale (SM)</span></p><p><b>appointmentType</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0276 ROUTINE}\">Routine appointment - default if not valued</span></p><p><b>schedule</b>: <a href=\"Schedule-ExampleSchedule3.html\">Schedule</a></p><p><b>status</b>: Free</p><p><b>start</b>: 2021-11-04 14:40:00+0000</p><p><b>end</b>: 2021-11-04 15:00:00+0000</p><p><b>comment</b>: https://exemple.com/rdv/com/</p></div>"
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Slot_ExampleSlotPSIndiv4\"> </a><p class=\"res-header-id\"><b>Narratif généré : Slot ExampleSlotPSIndiv4</b></p><a name=\"ExampleSlotPSIndiv4\"> </a><a name=\"hcExampleSlotPSIndiv4\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-FrSlotAgregateur.html\">FrSlotAgregateur</a></p><p style=\"margin-bottom: 0px\">Label de sécurités: Créneau accessible par le grand public (Détails : code TRE_R314-TypeCreneau PUBLIC = 'Créneau accessible par le grand public'), Créneau accessible par l'ensemble des professionnels de santé (Détails : code TRE_R314-TypeCreneau PRO = 'Créneau accessible par l'ensemble des professionnels de santé')</p></div><p><b>serviceType</b>: <span title=\"Codes :{http://terminology.hl7.org/CodeSystem/v3-ActCode HH}\">home health</span>, <span title=\"Codes :\">Visite de contrôle</span>, <span title=\"Codes :\">Consultation de suivi pneumologique</span></p><p><b>specialty</b>: <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM41}\">Pneumologie (SM)</span>, <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM54}\">Médecine générale (SM)</span></p><p><b>appointmentType</b>: <span title=\"Codes :{http://terminology.hl7.org/CodeSystem/v2-0276 ROUTINE}\">Routine appointment - default if not valued</span></p><p><b>schedule</b>: <a href=\"Schedule-ExampleSchedule3.html\">Schedule</a></p><p><b>status</b>: Free</p><p><b>start</b>: 2021-11-04 14:40:00+0000</p><p><b>end</b>: 2021-11-04 15:00:00+0000</p><p><b>comment</b>: https://exemple.com/rdv/com/</p></div>"
         },
         "serviceType" : [
           {

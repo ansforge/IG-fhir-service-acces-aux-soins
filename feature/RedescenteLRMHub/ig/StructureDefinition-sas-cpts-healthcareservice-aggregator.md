@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-healthcareservice-aggregator | *Version*:1.1.0 |
-| Active as of 2025-10-15 | *Computable Name*:FrHealthcareServiceAgregateurCPTS |
+| Active as of 2025-10-28 | *Computable Name*:FrHealthcareServiceAgregateurCPTS |
 
  
 Profil dérivé de FrHealthcareService pour le cas d'usage agrégateur de la plateforme SAS - cas d'usage CPTS 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-sas-cpts-healthcares
   "version" : "1.1.0",
   "name" : "FrHealthcareServiceAgregateurCPTS",
   "status" : "active",
-  "date" : "2025-10-15T14:17:23+00:00",
+  "date" : "2025-10-28T16:18:27+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

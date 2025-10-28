@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator | *Version*:1.1.0 |
-| Active as of 2025-10-15 | *Computable Name*:FrLocationAgregateurSOS |
+| Active as of 2025-10-28 | *Computable Name*:FrLocationAgregateurSOS |
 
  
 Profil de Location, dérivé de FrLocation, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-sas-sos-location-agg
   "version" : "1.1.0",
   "name" : "FrLocationAgregateurSOS",
   "status" : "active",
-  "date" : "2025-10-15T14:17:23+00:00",
+  "date" : "2025-10-28T16:18:27+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

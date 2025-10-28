@@ -8,7 +8,7 @@
 
 Profil: [FrSlotAgregateur](StructureDefinition-FrSlotAgregateur.md)
 
-Label de sécurité: Créneau accessible par l'ensemble des professionnels de santé (Details: TRE_R314-TypeCreneau code PRO = 'Créneau accessible par l'ensemble des professionnels de santé')
+Label de sécurité: Créneau accessible par l'ensemble des professionnels de santé (Détails : code TRE_R314-TypeCreneau PRO = 'Créneau accessible par l'ensemble des professionnels de santé')
 
 **serviceType**: ambulatory, Visite urgente
 

@@ -12,7 +12,7 @@ Bundle ExampleBundleCPTS2 de type searchset
 
 -------
 
-Entry 1 - fullUrl = https://<base_URl>/Slot/ExampleSlotCPTS2
+Entrée 1 - fullUrl = https://<base_URl>/Slot/ExampleSlotCPTS2
 
 Recherche :Mode = match
 
@@ -22,13 +22,13 @@ Ressource Slot :
 
 Profil: [FrSlotAgregateurCPTS](StructureDefinition-sas-cpts-slot-aggregator.md)
 
-Label de sécurités: Créneau accessible par le grand public (Details: TRE_R314-TypeCreneau code PUBLIC = 'Créneau accessible par le grand public'), Créneau accessible par les communautés professionnelles territoriales de santé (Details: TRE_R314-TypeCreneau code CPTS = 'Créneau accessible par les communautés professionnelles territoriales de santé')
+Label de sécurités: Créneau accessible par le grand public (Détails : code TRE_R314-TypeCreneau PUBLIC = 'Créneau accessible par le grand public'), Créneau accessible par les communautés professionnelles territoriales de santé (Détails : code TRE_R314-TypeCreneau CPTS = 'Créneau accessible par les communautés professionnelles territoriales de santé')
 
-**serviceType**: No display for Slot.serviceType (concept : ambulatory), No display for Slot.serviceType (concept : Communauté Professionnelle Territoriale de Santé (CPTS)), No display for Slot.serviceType (concept : Communauté Professionnelle Territoriale de Santé (CPTS))**specialty**:Médecine générale (SM)**appointmentType**:Routine appointment - default if not valued**schedule**:[Schedule](Schedule-ExampleSchedule.md)**status**: Free**start**: 2024-06-12 16:40:00+0200**end**: 2024-06-12 17:00:00+0200**comment**: https://exemple.com/rdv/com/
+**serviceType**: Pas daffichage pour {0} (concept : ambulatory), Pas daffichage pour {0} (concept : Communauté Professionnelle Territoriale de Santé (CPTS)), Pas daffichage pour {0} (concept : Communauté Professionnelle Territoriale de Santé (CPTS))**specialty**:Médecine générale (SM)**appointmentType**:Routine appointment - default if not valued**schedule**:[Schedule](Schedule-ExampleSchedule.md)**status**: Free**start**: 2024-06-12 16:40:00+0200**end**: 2024-06-12 17:00:00+0200**comment**: https://exemple.com/rdv/com/
 
 -------
 
-Entry 2 - fullUrl = https://<base_URl>/Schedule/ExampleSchedule
+Entrée 2 - fullUrl = https://<base_URl>/Schedule/ExampleSchedule
 
 Recherche :Mode = include
 
@@ -44,7 +44,7 @@ Profil: [FrScheduleAgregateur](StructureDefinition-FrScheduleAgregateur.md)
 
 -------
 
-Entry 3 - fullUrl = https://<base_URl>/Practitioner/ExamplePractitioner
+Entrée 3 - fullUrl = https://<base_URl>/Practitioner/ExamplePractitioner
 
 Recherche :Mode = include
 
@@ -58,7 +58,7 @@ Profil: [FrPractitionerAgregateur](StructureDefinition-FrPractitionerAgregateur.
 
 -------
 
-Entry 4 - fullUrl = https://<base_URl>/PractitionerRole/ExamplePractitionerRoleAgregateur
+Entrée 4 - fullUrl = https://<base_URl>/PractitionerRole/ExamplePractitionerRoleAgregateur
 
 Recherche :Mode = include
 
@@ -79,7 +79,7 @@ Profil: [FrLocationAgregateur](StructureDefinition-FrLocationAgregateur.md)
 
 -------
 
-Entry 5 - fullUrl = https://<base_URl>/HealthcareService/ExampleHealthcareServiceCPTS1
+Entrée 5 - fullUrl = https://<base_URl>/HealthcareService/ExampleHealthcareServiceCPTS1
 
 Recherche :Mode = include
 
@@ -93,7 +93,7 @@ Profil: [FrHealthcareServiceAgregateurCPTS](StructureDefinition-sas-cpts-healthc
 
 -------
 
-Entry 6 - fullUrl = https://<base_URl>/Organization/ExampleOrgaCPTS1
+Entrée 6 - fullUrl = https://<base_URl>/Organization/ExampleOrgaCPTS1
 
 Recherche :Mode = include
 
@@ -115,7 +115,7 @@ Profil: [FrOrganizationAgregateurCPTS](StructureDefinition-sas-cpts-organization
 
 -------
 
-Entry 7 - fullUrl = https://<base_URl>/HealthcareService/ExampleHealthcareServiceCPTS2
+Entrée 7 - fullUrl = https://<base_URl>/HealthcareService/ExampleHealthcareServiceCPTS2
 
 Recherche :Mode = include
 
@@ -129,7 +129,7 @@ Profil: [FrHealthcareServiceAgregateurCPTS](StructureDefinition-sas-cpts-healthc
 
 -------
 
-Entry 8 - fullUrl = https://<base_URl>/Organization/ExampleOrgaCPTS2
+Entrée 8 - fullUrl = https://<base_URl>/Organization/ExampleOrgaCPTS2
 
 Recherche :Mode = include
 
@@ -193,7 +193,7 @@ Profil: [FrOrganizationAgregateurCPTS](StructureDefinition-sas-cpts-organization
         },
         "text" : {
           "status" : "generated",
-          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Slot_ExampleSlotCPTS2\"> </a><p class=\"res-header-id\"><b>Narratif généré : Slot ExampleSlotCPTS2</b></p><a name=\"ExampleSlotCPTS2\"> </a><a name=\"hcExampleSlotCPTS2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-cpts-slot-aggregator.html\">FrSlotAgregateurCPTS</a></p><p style=\"margin-bottom: 0px\">Label de sécurités: Créneau accessible par le grand public (Details: TRE_R314-TypeCreneau code PUBLIC = 'Créneau accessible par le grand public'), Créneau accessible par les communautés professionnelles territoriales de santé (Details: TRE_R314-TypeCreneau code CPTS = 'Créneau accessible par les communautés professionnelles territoriales de santé')</p></div><p><b>serviceType</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode AMB}\">Visite de contrôle</span>, <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement 604}\">Communauté Professionnelle Territoriale de Santé (CPTS)</span>, <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement 604}\">Communauté Professionnelle Territoriale de Santé (CPTS)</span></p><p><b>specialty</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM54}\">Médecine générale (SM)</span></p><p><b>appointmentType</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0276 ROUTINE}\">Routine appointment - default if not valued</span></p><p><b>schedule</b>: <a href=\"Schedule-ExampleSchedule.html\">Schedule</a></p><p><b>status</b>: Free</p><p><b>start</b>: 2024-06-12 16:40:00+0200</p><p><b>end</b>: 2024-06-12 17:00:00+0200</p><p><b>comment</b>: https://exemple.com/rdv/com/</p></div>"
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Slot_ExampleSlotCPTS2\"> </a><p class=\"res-header-id\"><b>Narratif généré : Slot ExampleSlotCPTS2</b></p><a name=\"ExampleSlotCPTS2\"> </a><a name=\"hcExampleSlotCPTS2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-cpts-slot-aggregator.html\">FrSlotAgregateurCPTS</a></p><p style=\"margin-bottom: 0px\">Label de sécurités: Créneau accessible par le grand public (Détails : code TRE_R314-TypeCreneau PUBLIC = 'Créneau accessible par le grand public'), Créneau accessible par les communautés professionnelles territoriales de santé (Détails : code TRE_R314-TypeCreneau CPTS = 'Créneau accessible par les communautés professionnelles territoriales de santé')</p></div><p><b>serviceType</b>: <span title=\"Codes :{http://terminology.hl7.org/CodeSystem/v3-ActCode AMB}\">Visite de contrôle</span>, <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement 604}\">Communauté Professionnelle Territoriale de Santé (CPTS)</span>, <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement 604}\">Communauté Professionnelle Territoriale de Santé (CPTS)</span></p><p><b>specialty</b>: <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM54}\">Médecine générale (SM)</span></p><p><b>appointmentType</b>: <span title=\"Codes :{http://terminology.hl7.org/CodeSystem/v2-0276 ROUTINE}\">Routine appointment - default if not valued</span></p><p><b>schedule</b>: <a href=\"Schedule-ExampleSchedule.html\">Schedule</a></p><p><b>status</b>: Free</p><p><b>start</b>: 2024-06-12 16:40:00+0200</p><p><b>end</b>: 2024-06-12 17:00:00+0200</p><p><b>comment</b>: https://exemple.com/rdv/com/</p></div>"
         },
         "serviceType" : [
           {

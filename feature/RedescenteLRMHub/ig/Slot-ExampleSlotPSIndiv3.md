@@ -8,7 +8,7 @@
 
 Profil: [FrSlotAgregateur](StructureDefinition-FrSlotAgregateur.md)
 
-Label de sécurités: Créneau accessible par le grand public (Details: TRE_R314-TypeCreneau code PUBLIC = 'Créneau accessible par le grand public'), Créneau accessible par l'ensemble des professionnels de santé (Details: TRE_R314-TypeCreneau code PRO = 'Créneau accessible par l'ensemble des professionnels de santé')
+Label de sécurités: Créneau accessible par le grand public (Détails : code TRE_R314-TypeCreneau PUBLIC = 'Créneau accessible par le grand public'), Créneau accessible par l'ensemble des professionnels de santé (Détails : code TRE_R314-TypeCreneau PRO = 'Créneau accessible par l'ensemble des professionnels de santé')
 
 **serviceType**: virtual, Visite de contrôle, Consultation de suivi pneumologie
 

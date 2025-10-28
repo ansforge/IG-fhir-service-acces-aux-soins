@@ -12,21 +12,27 @@
   fhir:meta [
      fhir:profile ( [
        fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator"^^xsd:anyURI ;
-       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator>
+       fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator>
      ] )
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : Localisation 1111111111</b></p><a name=\"1111111111\"> </a><a name=\"hc1111111111\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-sos-location-aggregator.html\">FrLocationAgregateurSOS</a></p></div><p><b>identifier</b>: Identifiant interne/1111111111</p><p><b>name</b>: Centre de consultation Rennes Nord</p><p><b>telecom</b>: <a href=\"tel:+33193246789\">+33193246789</a></p><p><b>address</b>: 320 avenue Général Georges Patton RENNES 35700 </p><p><b>managingOrganization</b>: <a href=\"Organization-ExampleOrgaSOS1.html\">Organization SOS Médecins de Rennes</a></p><blockquote><p><b>hoursOfOperation</b></p><p><b>daysOfWeek</b>: Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday</p><p><b>openingTime</b>: 08:00:00</p><p><b>closingTime</b>: 19:00:00</p></blockquote></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : Localisation 1111111111</b></p><a name=\"1111111111\"> </a><a name=\"hc1111111111\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-sos-location-aggregator.html\">FrLocationAgregateurSOS</a></p></div><p><b>identifier</b>: Identifiant interne/1111111111</p><p><b>name</b>: Centre de consultation Rennes Nord</p><p><b>telecom</b>: <a href=\"tel:+33193246789\">+33193246789</a></p><p><b>address</b>: 320 avenue Général Georges Patton RENNES 35700 </p><p><b>managingOrganization</b>: <a href=\"Organization-ExampleOrgaSOS1.html\">Organization SOS Médecins de Rennes</a></p><blockquote><p><b>hoursOfOperation</b></p><p><b>daysOfWeek</b>: Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday</p><p><b>openingTime</b>: 08:00:00</p><p><b>closingTime</b>: 19:00:00</p></blockquote></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:identifier ( [
      fhir:type [
        fhir:coding ( [
-         fhir:system [ fhir:v "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"^^xsd:anyURI ] ;
+         fhir:system [
+           fhir:v "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"^^xsd:anyURI ;
+           fhir:l <http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type>
+         ] ;
          fhir:code [ fhir:v "INTRN" ]
        ] )
      ] ;
-     fhir:system [ fhir:v "https://editeur.com"^^xsd:anyURI ] ;
+     fhir:system [
+       fhir:v "https://editeur.com"^^xsd:anyURI ;
+       fhir:l <https://editeur.com>
+     ] ;
      fhir:value [ fhir:v "1111111111" ]
   ] ) ; # 
   fhir:name [ fhir:v "Centre de consultation Rennes Nord"] ; # 
@@ -40,7 +46,7 @@
      fhir:postalCode [ fhir:v "35700" ]
   ] ; # 
   fhir:managingOrganization [
-     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Organization/ExampleOrgaSOS1> ;
+     fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/Organization/ExampleOrgaSOS1> ;
      fhir:reference [ fhir:v "Organization/ExampleOrgaSOS1" ]
   ] ; # 
   fhir:hoursOfOperation ( [

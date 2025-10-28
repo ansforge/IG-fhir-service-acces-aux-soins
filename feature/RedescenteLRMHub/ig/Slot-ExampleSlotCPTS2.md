@@ -8,7 +8,7 @@
 
 Profil: [FrSlotAgregateurCPTS](StructureDefinition-sas-cpts-slot-aggregator.md)
 
-Label de sécurités: Créneau accessible par le grand public (Details: TRE_R314-TypeCreneau code PUBLIC = 'Créneau accessible par le grand public'), Créneau accessible par les communautés professionnelles territoriales de santé (Details: TRE_R314-TypeCreneau code CPTS = 'Créneau accessible par les communautés professionnelles territoriales de santé')
+Label de sécurités: Créneau accessible par le grand public (Détails : code TRE_R314-TypeCreneau PUBLIC = 'Créneau accessible par le grand public'), Créneau accessible par les communautés professionnelles territoriales de santé (Détails : code TRE_R314-TypeCreneau CPTS = 'Créneau accessible par les communautés professionnelles territoriales de santé')
 
 **serviceType**: Visite de contrôle, Communauté Professionnelle Territoriale de Santé (CPTS), Communauté Professionnelle Territoriale de Santé (CPTS)
 

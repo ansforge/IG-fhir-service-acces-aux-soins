@@ -20,17 +20,17 @@ Un gestionnaire d'agenda reçoit des rendez-vous SOS envoyés par un déclarant 
 
 * Version du guide dimplémentation : {0} 
 * Version de FHIR : 4.0.1 
-* Supported Formats: `application/fhir+json`
+* Formats supportés : `application/fhir+json`
 * Publié sur : 2024-10-01 00:00:00+0100 
 * Publié par : ANS 
 
-> **Note aux implémenteurs : capacités FHIR**Any FHIR capability may be 'allowed' by the system unless explicitly marked as 'SHALL NOT'. A few items are marked as MAY in the Implementation Guide to highlight their potential relevance to the use case.
+> **Note aux implémenteurs : capacités FHIR**Toute capacité FHIR peut être 'autorisée' par le système sauf si elle est explicitement marquée comme 'SHALL NOT'. Quelques éléments sont marqués comme MAY dans le guide dimplémentation pour souligner leur pertinence potentielle pour le cas dusage.
 
 ### DOIT prendre en charge les guides d’implémentation suivants.
 
 * https://interop.esante.gouv.fr/ig/fhir/sas
 
-## FHIR RESTful Capabilities
+## Capacités RESTful FHIR
 
 ### Mode: server
 
@@ -43,18 +43,18 @@ Réception des création et mises à jour de RDV SOS
 L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S ) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes d’information de santé (CI-SIS)
 
 
-### Capabilities by Resource/Profile
+### Capacités par ressource/profil
 
 #### Résumé
 
 Le tableau récapitulatif liste les ressources faisant partie de cette configuration, et pour chaque ressource, il liste :
 
-* The relevant profiles (if any)
+* Les profils pertinents (le cas échéant)
 * Les interactions supportées par chaque ressource (**R**ead, **S**earch, **U**pdate, and **C**reate, are always shown, while **VR**ead, **P**atch, **D**elete, **H**istory on **I**nstance, or **H**istory on **T**les types sont seulement présents si au moins une des ressources les prend en charge.
 * Les paramètres de recherche (SearchParameters) requis, recommandés, optionnels (le cas échéant).
-* The linked resources enabled for `_include`
-* The other resources enabled for `_revinclude`
-* The operations on the resource (if any)
+* Les ressources liées activées pour `_include`
+* Les autres ressources activées pour `_revinclude`
+* Les opérations sur la ressource (le cas échéant)
 
 | | | | | | | | | | |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -62,9 +62,9 @@ Le tableau récapitulatif liste les ressources faisant partie de cette configura
 
 -------
 
-#### Resource Conformance: supported Appointment
+#### Conformité de la ressource : supported Appointment
 
-Base System Profile
+Profil système de base
 
 [FrAppointmentSASSOS](StructureDefinition-sas-sos-appointment.md)
 
@@ -72,11 +72,11 @@ Conformité au Profil
 
 **SHALL**
 
-Reference Policy
+Politique de référence
 
 Résumé des interactions
 
-* Supports `create`, `update`.
+* Supporte `create`, `update`.
 
 Paramètres de recherche
 

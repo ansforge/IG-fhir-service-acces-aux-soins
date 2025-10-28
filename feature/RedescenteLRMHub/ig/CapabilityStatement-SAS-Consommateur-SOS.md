@@ -20,17 +20,17 @@ Un consommateur consulte les créneaux SOS mis à disposition par un gestionnair
 
 * Version du guide dimplémentation : {0} 
 * Version de FHIR : 4.0.1 
-* Supported Formats: `application/fhir+json`
+* Formats supportés : `application/fhir+json`
 * Publié sur : 2024-10-01 00:00:00+0100 
 * Publié par : ANS 
 
-> **Note aux implémenteurs : capacités FHIR**Any FHIR capability may be 'allowed' by the system unless explicitly marked as 'SHALL NOT'. A few items are marked as MAY in the Implementation Guide to highlight their potential relevance to the use case.
+> **Note aux implémenteurs : capacités FHIR**Toute capacité FHIR peut être 'autorisée' par le système sauf si elle est explicitement marquée comme 'SHALL NOT'. Quelques éléments sont marqués comme MAY dans le guide dimplémentation pour souligner leur pertinence potentielle pour le cas dusage.
 
 ### DOIT prendre en charge les guides d’implémentation suivants.
 
 * https://interop.esante.gouv.fr/ig/fhir/sas
 
-## FHIR RESTful Capabilities
+## Capacités RESTful FHIR
 
 ### Mode: client
 
@@ -43,18 +43,18 @@ Consultation de créneaux SOS
 L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S ) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes d’information de santé (CI-SIS)
 
 
-### Capabilities by Resource/Profile
+### Capacités par ressource/profil
 
 #### Résumé
 
 Le tableau récapitulatif liste les ressources faisant partie de cette configuration, et pour chaque ressource, il liste :
 
-* The relevant profiles (if any)
+* Les profils pertinents (le cas échéant)
 * Les interactions supportées par chaque ressource (**R**ead, **S**earch, **U**pdate, and **C**reate, are always shown, while **VR**ead, **P**atch, **D**elete, **H**istory on **I**nstance, or **H**istory on **T**les types sont seulement présents si au moins une des ressources les prend en charge.
 * Les paramètres de recherche (SearchParameters) requis, recommandés, optionnels (le cas échéant).
-* The linked resources enabled for `_include`
-* The other resources enabled for `_revinclude`
-* The operations on the resource (if any)
+* Les ressources liées activées pour `_include`
+* Les autres ressources activées pour `_revinclude`
+* Les opérations sur la ressource (le cas échéant)
 
 | | | | | | | | | | |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -65,9 +65,9 @@ Le tableau récapitulatif liste les ressources faisant partie de cette configura
 
 -------
 
-#### Resource Conformance: supported Schedule
+#### Conformité de la ressource : supported Schedule
 
-Base System Profile
+Profil système de base
 
 [FrScheduleAgregateurSOS](StructureDefinition-sas-sos-schedule-aggregator.md)
 
@@ -75,20 +75,20 @@ Conformité au Profil
 
 **SHALL**
 
-Reference Policy
+Politique de référence
 
 Résumé des interactions
 
-* Supports `read`, `search-type`.
+* Supporte `read`, `search-type`.
 
 Paramètres de recherche
 
 
  
 
-#### Resource Conformance: supported Slot
+#### Conformité de la ressource : supported Slot
 
-Base System Profile
+Profil système de base
 
 [FrSlotAgregateurSOS](StructureDefinition-sas-sos-slot-aggregator.md)
 
@@ -96,20 +96,20 @@ Conformité au Profil
 
 **SHALL**
 
-Reference Policy
+Politique de référence
 
 Résumé des interactions
 
-* Supports `read`, `search-type`.
+* Supporte `read`, `search-type`.
 
 Paramètres de recherche
 
 
  
 
-#### Resource Conformance: supported Location
+#### Conformité de la ressource : supported Location
 
-Base System Profile
+Profil système de base
 
 [FrLocationAgregateurSOS](StructureDefinition-sas-sos-location-aggregator.md)
 
@@ -117,20 +117,20 @@ Conformité au Profil
 
 **SHALL**
 
-Reference Policy
+Politique de référence
 
 Résumé des interactions
 
-* Supports `read`, `search-type`.
+* Supporte `read`, `search-type`.
 
 Paramètres de recherche
 
 
  
 
-#### Resource Conformance: supported Organization
+#### Conformité de la ressource : supported Organization
 
-Base System Profile
+Profil système de base
 
 [FrOrganizationAgregateurSOS](StructureDefinition-sas-sos-organization-aggregator.md)
 
@@ -138,11 +138,11 @@ Conformité au Profil
 
 **SHALL**
 
-Reference Policy
+Politique de référence
 
 Résumé des interactions
 
-* Supports `read`, `search-type`.
+* Supporte `read`, `search-type`.
 
 Paramètres de recherche
 

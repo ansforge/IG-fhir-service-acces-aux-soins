@@ -12,7 +12,7 @@ Le schéma ci-dessous illustre l'échange de données entre la PTF SAS et les é
 
 Le protocole utilisé pour la connexion des applications (PTF SAS et éditeurs de LRM) avec le Hub est le [protocole AMQP](https://fr.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol), en version 0-9-1.
 
-Les messages seront transmis sous la forme d'un fichier json contenant les différentes ressources / données permettant aux LRM de traiter le message.
+Les messages seront transmis sous la forme d'un fichier json contenant les différentes données permettant aux LRM de traiter le message.
 
 Les messages sont transmis avec un entête permettant au Hub de router le message vers le bon SAMU et la solution LRM associée au SAS de destination. Les règles de nommage et de routage associées ainsi que l’enveloppe EDXL-DE permettant de porter ces informations d’adressage dans les messages sont décrites ci-après.
 
@@ -44,7 +44,7 @@ Le tableau ci-dessous précise les balises qui doivent être envoyées et qui so
 | | | | | |
 | :--- | :--- | :--- | :--- | :--- |
 | **Entête EDXL-DE** | distributionID | string | Identifiant unique du message attribué par l’expéditeur | Format`<senderId>_<internalId>`où`<internalId>`est un identifiant garanti unique |
-| **Entête EDXL-DE** | senderID | string | Identifiant de l'émetteur | À définir. Ex : PTFSAS |
+| **Entête EDXL-DE** | senderID | string | Identifiant de l'émetteur | Valeur fixe par environnement. Ex :`fr.health.ptfsas` |
 | **Entête EDXL-DE** | dateTimeSent | Date time | Date et heure d'envoi du message | Ex : 2025-08-24T14:15:22+02:00 |
 | **Entête EDXL-DE** | dateTimeExpires | Date time | Date et heure d'expiration du message : les données ne doivent pas être délivrées au-delà de cette date | Ex : 2025-08-24T14:15:22+02:00 |
 | **Entête EDXL-DE** | distributionStatus | string | Statut du message | Valeur fixe :`Actual` |
@@ -52,7 +52,9 @@ Le tableau ci-dessous précise les balises qui doivent être envoyées et qui so
 | **Entête EDXL-DE** | descriptor.language | string | Langue du message échangé | Valeur fixe :`fr-FR` |
 | **Entête EDXL-DE** | descriptor.explicitAddress.explicitAddressScheme | string | Identifiant du SI pilotant le Hub | Valeur fixe :`Hubex` |
 | **Entête EDXL-DE** | descriptor.explicitAddress.explicitAddressValue | string | Identifiant du SAMU destinataire | fr.health.samuXXX Ex : fr.health.samu330 |
-| **Contenu** | content.contentObject.JsonContent.embeddedJsonContent | json | Contenu du message json encapsulé dans l'entête | Fichier json contenant les données transmises |
+| **Contenu** | content.contentObject.JsonContent.embeddedJsonContent | json | Contenu du message json encapsulé dans l'entête | Fichier json contenant les données transmises, cf. détail ci-dessous |
+
+Détail sur le contenu `embeddedJsonContent` encapsulé dans l'entête EXDL-DE : ils'agit d'un message json avec la liste des champs décrite plus bas propre aux données de RDV transmises elle même encapsulée dans une entête RC-DE dont les caractéristiques sont décrites plus bas. L'entête RC-DE contient un nombre de champs communs à l'entête EDXL-DE, ce qui permet de rendre le message auportortant sans l'entête EDXL-DE.
 
 #### Acquittement technique Hub -> PTF SAS
 
@@ -73,7 +75,7 @@ Le format des acquittements de réception finale est de type "RC-DE" selon le mo
 | **Entête RC-DE** | status | string | Statut du message | Valeur fixe :`Actual` |
 | **Entête RC-DE** | kind | string | Type du message | Valeur fixe :`Ack` |
 | **Entête RC-DE** | recipients.recipient.explicitAddressScheme | string | Identifiant du SI pilotant le Hub | Valeur fixe :`Hubex` |
-| **Entête RC-DE** | recipients.recipient.explicitAddressValue | string | Identifiant du destinataire | À définir. Ex : PTFSAS |
+| **Entête RC-DE** | recipients.recipient.explicitAddressValue | string | Identifiant du destinataire | Valeur fixe par environnement. Ex :`fr.health.ptfsas` |
 |   | reference | string | Identifiant du message référencé | Égal à distributionId du message initial |
 
 #### Message d'erreur LRM -> PTF SAS via Hub et Hub -> PTF SAS
@@ -90,7 +92,7 @@ En cas d'erreur, un message est posté sur la file « info » de la plateforme S
 | **Entête EDXL-DE** | distributionKind | string | Type du message | Valeur fixe :`Error` |
 | **Entête EDXL-DE** | descriptor.language | string | Langue du message échangé | Valeur fixe :`fr-FR` |
 | **Entête EDXL-DE** | descriptor.explicitAddress.explicitAddressScheme | string | Identifiant du SI pilotant le Hub | Valeur fixe :`Hubex` |
-| **Entête EDXL-DE** | descriptor.explicitAddress.explicitAddressValue | string | Identifiant du SAMU destinataire | À définir. Ex : PTFSAS |
+| **Entête EDXL-DE** | descriptor.explicitAddress.explicitAddressValue | string | Identifiant du SAMU destinataire | Valeur fixe par environnement. Ex :`fr.health.ptfsas` |
 | **Contenu** | content.contentObject.embeddedJsonContent | json | Contenu du message json encapsulé dans l'entête | JSON avec errorCode et errorCause |
 
 L'erreur sera présente dans le contenu du message json qui respecte le modèle suivant, cf. spécifications du Hub Santé :
@@ -108,8 +110,10 @@ A noter qu'il existe deux types d'erreur :
 
 A titre d'exemple, les codes d'erreur suivants pourront être envoyés du Hub vers la plateforme SAS :
 
+* 102 UNRECOGNIZED_MESSAGE_FORMAT - Le message n’a pas pu être désérialisé.
+* 300 INVALID_MESSAGE Le message n’est pas conforme aux spécifications techniques (JSON Schema)
 * 400 (EXPIRED_MESSAGE_BEFORE_ROUTING) - Le message n’a pas été reçu par son destinataire, il a expiré sur le Hub avant de lui être délivré.
-* 500 (DEAD_LETTERED_QUEUE) Le message n’a pas été reçu par son destinataire, il a expiré avant qu’il ne le dépile.
+* 500 (DEAD_LETTERED_QUEUE) - Le message n’a pas été reçu par son destinataire, il a expiré avant qu’il ne le dépile.
 
 Le LRM pourra envoyer des messages de type :
 
@@ -122,11 +126,11 @@ Lorsqu’un régulateur prend RDV pour un patient via la plateforme numérique S
 * **Protocole** : AMQP 0-9-1
 
 * **En-tête** : EDXL-DL
-* **Sender** : PTF SAS
+* **Sender** : ptfsas
 
 * **Format du message contenu** : JSON
 
-Le message json contenant les données et encapsulé dans l'entête EDXL-DE respecte le format suivant :
+Le message json contenant les données et encapsulé dans l'entête EDXL-DE (et dans l'entête RC-DE) respecte le format suivant :
 
 * **ID**: 1
   * **Donnée (Niveau 1)**: Identifiant du rendez-vous
@@ -401,9 +405,8 @@ Le message transmis pour la mise à jour du RDV devra suivre les modalités suiv
 
 * **Protocole** : AMQP 0-9-1
 
-* **En-tête** : EDXL-DL
-* **Sender** : PTF SAS
-
+* **En-tête** : EDXL-DE
+* **Sender** : ptfsas
 * **Format du message contenu** : JSON
 
 Le fichier json encapsulé dans l'entête aura le champ `method` valorisé à `UpdateAppointment` et contiendra les données modifiées / ajoutées / supprimées par rapport au message de création (selon le format décrit au paragraphe précédent) afin que les données pour un même identifiant de RDV puissent être mises à jour
@@ -482,6 +485,7 @@ Cf. exemple ci-dessous de message d'annulation.
 
 Cette section détaille les champs à utiliser afin de renseigner les différents éléments codifiés de la requête.
 
+* **identifiant de la PTF SAS** : Utilisé dans les entêtes EDXL-DE et RC-DE. Valeur fixe par environnement. Pour l'environnement de PROD, sera valorisé à `fr.health.ptfsas`. Pour un environnement hors PROD, la valeur sera `fr.health.test.ptfsas`.
 * **method** : Indique un message de création ou de mise à jour. Les valeurs suivantes sont attendues : 
 * createAppointment
 * updateAppointment
@@ -508,6 +512,119 @@ Cette section détaille les champs à utiliser afin de renseigner les différent
 * **organizationId** : Identifiant unique propre à chaque structure de soins. Les champs sont valorisés comme suit : numéro du FINESS avec préfixe « 1 » ou numéro du SIRET avec préfixe « 3 »
 * **regulatorId** : Identifiant unique du régulateur ayant pris le RDV. Il s'agit soit d'un identifiant national "IDNPS"(identifiant présent sur la carte CPx du régulateur) soit d'un identifiant technique attribué par la plateforme numérique SAS. En effet, certains régulateurs n’ayant pas encore d’identifiant national à date, un identifiant technique de type uuid est créé. **Exemple d'identifiant national** : `3620100057/70326SR` **Exemple d'identifiant technique** : `1ef24046-7c54-69ca-a309-8106d60b6540`
 * **regulatorEmail** : Il s'agit de l'adresse mail du compte du régulateur telle que déclarée dans la plateforme SAS. Elle correspond également à l'identifiant de connexion à la plateforme.
+
+### Exemple de message complet avec entêtes et contenu
+
+Message PTF SAS -> SAMU 33
+
+```
+{
+  "distributionID": "fr.health.ptfsas_30c8e00d-68b2-4092-a4f2-a9cb19b416e9",
+  "senderID": "fr.health.ptfsas",
+  "dateTimeSent": "2025-10-28T17:05:54+01:00",
+  "dateTimeExpires": "2072-09-27T08:23:34+02:00",
+  "distributionStatus": "Actual",
+  "distributionKind": "Report",
+  "descriptor": {
+    "language": "fr-FR",
+    "explicitAddress": {
+      "explicitAddressScheme": "hubex",
+      "explicitAddressValue": "fr.health.samu330"
+    }
+  },
+  "content": [
+    {
+      "jsonContent": {
+        "embeddedJsonContent": {
+          "message": {
+            "messageId": "fr.health.ptfsas_30c8e00d-68b2-4092-a4f2-a9cb19b416e9",
+            "sender": {
+              "name": "ptfsas",
+              "URI": "hubex:fr.health.ptfsas"
+            },
+            "sentAt": "2025-10-28T17:05:54+01:00",
+            "status": "Actual",
+            "kind": "Report",
+            "recipient": [
+              {
+                "name": "samu330",
+                "URI": "hubex:fr.health.samu330"
+              }
+            ],
+            "appointment": {
+              "appointmentId": "2d2db05f-e2b0-4169-be8f-891806da2c74",
+              "method": "CreateAppointment",
+              "created": "2025-06-17T10:15:00+02:00",
+              "status": "booked",
+              "orientationCategory": "PS",
+              "start": "2025-06-17T14:00:00+02:00",
+              "end": "2025-06-17T14:20:00+02:00",
+              "practitioner": {
+                "rppsId": "810005681340",
+                "lastName": "MOREL",
+                "firstName": "Didier",
+                "specialityCode": "SM54",
+                "specialityUrl": "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
+                "professionUrl": "https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante",
+                "professionCode": "10"
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
+
+```
+
+Acquittement final SAMU 33 -> PTF SAS
+
+```
+{
+    "distributionID": "fr.health.samu330_cf21c600-3bd2-49e6-8651-c97dac05d021",
+    "senderID": "fr.health.samu330",
+    "dateTimeSent": "2025-10-28T17:06:30+01:00",
+    "dateTimeExpires": "2072-09-27T08:23:34+02:00",
+    "distributionStatus": "Actual",
+    "distributionKind": "Ack",
+    "descriptor": {
+        "language": "fr-FR",
+        "explicitAddress": {
+            "explicitAddressScheme": "hubex",
+            "explicitAddressValue": "fr.health.ptfsas"
+        }
+    },
+    "content": [
+        {
+            "jsonContent": {
+                "embeddedJsonContent": {
+                    "message": {
+                        "messageId": "fr.health.samu330_cf21c600-3bd2-49e6-8651-c97dac05d021",
+                        "sender": {
+                            "name": "samu330",
+                            "URI": "hubex:fr.health.samu330"
+                        },
+                        "sentAt": "2025-10-28T17:06:30+01:00",
+                        "kind": "Ack",
+                        "status": "Actual",
+                        "recipient": [
+                            {
+                                "name": "ptfsas",
+                                "URI": "hubex:fr.health.ptfsas"
+                            }
+                        ],
+                        "reference": {
+                            "distributionID": "fr.health.ptfsas_30c8e00d-68b2-4092-a4f2-a9cb19b416e9"
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}
+
+```
 
 ### Déclencheurs et règles d'intégration attendues
 

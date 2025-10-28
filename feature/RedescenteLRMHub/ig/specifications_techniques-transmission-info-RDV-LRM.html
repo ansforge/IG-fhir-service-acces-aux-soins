@@ -250,6 +250,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#message-de-modification-de-rdv" id="markdown-toc-message-de-modification-de-rdv">Message de modification de RDV</a></li>
   <li><a href="#message-dannulation-de-rdv" id="markdown-toc-message-dannulation-de-rdv">Message d'annulation de RDV</a></li>
   <li><a href="#détail-des-champs-transmis-et-nomenclatures" id="markdown-toc-détail-des-champs-transmis-et-nomenclatures">Détail des champs transmis et nomenclatures</a></li>
+  <li><a href="#exemple-de-message-complet-avec-entêtes-et-contenu" id="markdown-toc-exemple-de-message-complet-avec-entêtes-et-contenu">Exemple de message complet avec entêtes et contenu</a></li>
   <li><a href="#déclencheurs-et-règles-dintégration-attendues" id="markdown-toc-déclencheurs-et-règles-dintégration-attendues">Déclencheurs et règles d'intégration attendues</a></li>
 </ul>
 
@@ -265,7 +266,7 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
 
 <p>Le protocole utilisé pour la connexion des applications (PTF SAS et éditeurs de LRM) avec le Hub est le <a href="https://fr.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol">protocole AMQP</a>, en version 0-9-1.</p>
 
-<p>Les messages seront transmis sous la forme d'un fichier json contenant les différentes ressources / données permettant aux LRM de traiter le message.</p>
+<p>Les messages seront transmis sous la forme d'un fichier json contenant les différentes données permettant aux LRM de traiter le message.</p>
 
 <p>Les messages sont transmis avec un entête permettant au Hub de router le message vers le bon SAMU et la solution LRM associée au SAS de destination. Les règles de nommage et de routage associées ainsi que l’enveloppe EDXL-DE permettant de porter ces informations d’adressage dans les messages sont décrites ci-après.</p>
 
@@ -322,7 +323,7 @@ L'entête est de type "EDXL-DE" et les messages au format Json, cf. <a href="htt
       <td>senderID</td>
       <td>string</td>
       <td>Identifiant de l'émetteur</td>
-      <td>À définir. Ex : PTFSAS</td>
+      <td>Valeur fixe par environnement. Ex : <code class="language-plaintext highlighter-rouge">fr.health.ptfsas</code></td>
     </tr>
     <tr>
       <td><em>Entête EDXL-DE</em></td>
@@ -378,10 +379,13 @@ L'entête est de type "EDXL-DE" et les messages au format Json, cf. <a href="htt
       <td>content.contentObject.JsonContent.embeddedJsonContent</td>
       <td>json</td>
       <td>Contenu du message json encapsulé dans l'entête</td>
-      <td>Fichier json contenant les données transmises</td>
+      <td>Fichier json contenant les données transmises, cf. détail ci-dessous</td>
     </tr>
   </tbody>
 </table>
+
+<p>Détail sur le contenu <code class="language-plaintext highlighter-rouge">embeddedJsonContent</code> encapsulé dans l'entête EXDL-DE : ils'agit d'un message json avec la liste des champs décrite plus bas propre aux données de RDV transmises elle même encapsulée dans une entête RC-DE dont les caractéristiques sont décrites plus bas. 
+L'entête RC-DE contient un nombre de champs communs à l'entête EDXL-DE, ce qui permet de rendre le message auportortant sans l'entête EDXL-DE.</p>
 
 <h4 id="acquittement-technique-hub---ptf-sas">Acquittement technique Hub -&gt; PTF SAS</h4>
 
@@ -459,7 +463,7 @@ Le cheminement est similaire au message envoyé mais pris en sens inverse.</p>
       <td>recipients.recipient.explicitAddressValue</td>
       <td>string</td>
       <td>Identifiant du destinataire</td>
-      <td>À définir. Ex : PTFSAS</td>
+      <td>Valeur fixe par environnement. Ex : <code class="language-plaintext highlighter-rouge">fr.health.ptfsas</code></td>
     </tr>
     <tr>
       <td> </td>
@@ -547,7 +551,7 @@ Le cheminement est similaire au message envoyé mais pris en sens inverse.</p>
       <td>descriptor.explicitAddress.explicitAddressValue</td>
       <td>string</td>
       <td>Identifiant du SAMU destinataire</td>
-      <td>À définir. Ex : PTFSAS</td>
+      <td>Valeur fixe par environnement. Ex : <code class="language-plaintext highlighter-rouge">fr.health.ptfsas</code></td>
     </tr>
     <tr>
       <td><em>Contenu</em></td>
@@ -596,8 +600,10 @@ Le cheminement est similaire au message envoyé mais pris en sens inverse.</p>
 
 <p>A titre d'exemple, les codes d'erreur suivants pourront être envoyés du Hub vers la plateforme SAS :</p>
 <ul>
+  <li>102 UNRECOGNIZED_MESSAGE_FORMAT - Le message n’a pas pu être désérialisé.</li>
+  <li>300 INVALID_MESSAGE Le message n’est pas conforme aux spécifications techniques (JSON Schema)</li>
   <li>400 (EXPIRED_MESSAGE_BEFORE_ROUTING) - Le message n’a pas été reçu par son destinataire, il a expiré sur le Hub avant de lui être délivré.</li>
-  <li>500 (DEAD_LETTERED_QUEUE) Le message n’a pas été reçu par son destinataire, il a expiré avant qu’il ne le dépile.</li>
+  <li>500 (DEAD_LETTERED_QUEUE) - Le message n’a pas été reçu par son destinataire, il a expiré avant qu’il ne le dépile.</li>
 </ul>
 
 <p>Le LRM pourra envoyer des messages de type :</p>
@@ -614,13 +620,13 @@ Le cheminement est similaire au message envoyé mais pris en sens inverse.</p>
 </span></li>
   <li><strong>En-tête</strong> : <span style="color:blue">EDXL-DL 
 </span></li>
-  <li><strong>Sender</strong> : <span style="color:blue">PTF SAS<br />
+  <li><strong>Sender</strong> : <span style="color:blue">ptfsas<br />
 </span></li>
   <li><strong>Format du message contenu</strong> : <span style="color:blue">JSON
 </span></li>
 </ul>
 
-<p>Le message json contenant les données et encapsulé dans l'entête EDXL-DE respecte le format suivant :</p>
+<p>Le message json contenant les données et encapsulé dans l'entête EDXL-DE (et dans l'entête RC-DE) respecte le format suivant :</p>
 
 <table style="table-layout: fixed; width: 100%; font-size: 8px">
   <tbody>
@@ -955,9 +961,9 @@ Cf. exemple ci-dessous de message de création</p>
 <ul>
   <li><strong>Protocole</strong> : <span style="color:blue">AMQP 0-9-1<br />
 </span></li>
-  <li><strong>En-tête</strong> : <span style="color:blue">EDXL-DL 
+  <li><strong>En-tête</strong> : <span style="color:blue">EDXL-DE
 </span></li>
-  <li><strong>Sender</strong> : <span style="color:blue">PTF SAS<br />
+  <li><strong>Sender</strong> : <span style="color:blue">ptfsas 
 </span></li>
   <li><strong>Format du message contenu</strong> : <span style="color:blue">JSON
 </span></li>
@@ -1031,6 +1037,9 @@ Cf. exemple ci-dessous de message de création</p>
 
 <p>Cette section détaille les champs à utiliser afin de renseigner les différents éléments codifiés de la requête.</p>
 <ul>
+  <li>
+    <p><strong>identifiant de la PTF SAS</strong> : Utilisé dans les entêtes EDXL-DE et RC-DE. Valeur fixe par environnement. Pour l'environnement de PROD, sera valorisé à <code class="language-plaintext highlighter-rouge">fr.health.ptfsas</code>. Pour un environnement hors PROD, la valeur sera <code class="language-plaintext highlighter-rouge">fr.health.test.ptfsas</code>.</p>
+  </li>
   <li><strong>method</strong> : Indique un message de création ou de mise à jour. Les valeurs suivantes sont attendues :
     <ul>
       <li>createAppointment</li>
@@ -1078,6 +1087,115 @@ Cf. exemple ci-dessous de message de création</p>
   </li>
   <li><strong>regulatorEmail</strong> : Il s'agit de l'adresse mail du compte du régulateur telle que déclarée dans la plateforme SAS. Elle correspond également à l'identifiant de connexion à la plateforme.</li>
 </ul>
+
+<h3 id="exemple-de-message-complet-avec-entêtes-et-contenu">Exemple de message complet avec entêtes et contenu</h3>
+
+<p>Message PTF SAS -&gt; SAMU 33</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"distributionID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.ptfsas_30c8e00d-68b2-4092-a4f2-a9cb19b416e9"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"senderID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.ptfsas"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"dateTimeSent"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-10-28T17:05:54+01:00"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"dateTimeExpires"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2072-09-27T08:23:34+02:00"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"distributionStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Actual"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"distributionKind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Report"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"descriptor"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr-FR"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"explicitAddress"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"explicitAddressScheme"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hubex"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"explicitAddressValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.samu330"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"content"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"jsonContent"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"embeddedJsonContent"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"messageId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.ptfsas_30c8e00d-68b2-4092-a4f2-a9cb19b416e9"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"sender"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ptfsas"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"URI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hubex:fr.health.ptfsas"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"sentAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-10-28T17:05:54+01:00"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Actual"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Report"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"recipient"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+              </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"samu330"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"URI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hubex:fr.health.samu330"</span><span class="w">
+              </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"appointment"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"appointmentId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2d2db05f-e2b0-4169-be8f-891806da2c74"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CreateAppointment"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-06-17T10:15:00+02:00"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"booked"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"orientationCategory"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PS"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-06-17T14:00:00+02:00"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-06-17T14:20:00+02:00"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"practitioner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"rppsId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"810005681340"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MOREL"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"firstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Didier"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"specialityCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SM54"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"specialityUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"professionUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"professionCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10"</span><span class="w">
+              </span><span class="p">}</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Acquittement final SAMU 33 -&gt; PTF SAS</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"distributionID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.samu330_cf21c600-3bd2-49e6-8651-c97dac05d021"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"senderID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.samu330"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dateTimeSent"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-10-28T17:06:30+01:00"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dateTimeExpires"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2072-09-27T08:23:34+02:00"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"distributionStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Actual"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"distributionKind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ack"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"descriptor"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr-FR"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"explicitAddress"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"explicitAddressScheme"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hubex"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"explicitAddressValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.ptfsas"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"content"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"jsonContent"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"embeddedJsonContent"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"messageId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.samu330_cf21c600-3bd2-49e6-8651-c97dac05d021"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"sender"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"samu330"</span><span class="p">,</span><span class="w">
+                            </span><span class="nl">"URI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hubex:fr.health.samu330"</span><span class="w">
+                        </span><span class="p">},</span><span class="w">
+                        </span><span class="nl">"sentAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-10-28T17:06:30+01:00"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ack"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Actual"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"recipient"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                            </span><span class="p">{</span><span class="w">
+                                </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ptfsas"</span><span class="p">,</span><span class="w">
+                                </span><span class="nl">"URI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hubex:fr.health.ptfsas"</span><span class="w">
+                            </span><span class="p">}</span><span class="w">
+                        </span><span class="p">],</span><span class="w">
+                        </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                            </span><span class="nl">"distributionID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.ptfsas_30c8e00d-68b2-4092-a4f2-a9cb19b416e9"</span><span class="w">
+                        </span><span class="p">}</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
 
 <h3 id="déclencheurs-et-règles-dintégration-attendues">Déclencheurs et règles d'intégration attendues</h3>
 
@@ -1150,7 +1268,7 @@ Le paragraphe ci-dessous détaille les différentes <strong>règles de gestions 
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Oct 15, 2025 14:18+0000">2025-10-15</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Oct 28, 2025 16:18+0000">2025-10-28</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

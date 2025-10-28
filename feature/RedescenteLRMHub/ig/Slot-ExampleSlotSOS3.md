@@ -8,7 +8,7 @@
 
 Profil: [FrSlotAgregateurSOS](StructureDefinition-sas-sos-slot-aggregator.md)
 
-Label de sécurité: Créneau accessible par le grand public (Details: TRE_R314-TypeCreneau code PUBLIC = 'Créneau accessible par le grand public')
+Label de sécurité: Créneau accessible par le grand public (Détails : code TRE_R314-TypeCreneau PUBLIC = 'Créneau accessible par le grand public')
 
 **serviceType**: virtual
 

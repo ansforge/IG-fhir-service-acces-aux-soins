@@ -10,24 +10,33 @@
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "ExamplePractitionerRegul2"] ; # 
   fhir:meta [
-     fhir:source [ fhir:v "urn:oid:1.2.250.1.213.3.6"^^xsd:anyURI ] ;
+     fhir:source [
+       fhir:v "urn:oid:1.2.250.1.213.3.6"^^xsd:anyURI ;
+       fhir:l <urn:oid:1.2.250.1.213.3.6>
+     ] ;
      fhir:profile ( [
        fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul"^^xsd:anyURI ;
-       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul>
+       fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul>
      ] )
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : Praticien ExamplePractitionerRegul2</b></p><a name=\"ExamplePractitionerRegul2\"> </a><a name=\"hcExamplePractitionerRegul2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Information Source: <a href=\"https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&amp;canonical=urn:oid:1.2.250.1.213.3.6\">urn:oid:1.2.250.1.213.3.6</a></p><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-FrPractitionerRegul.html\">FrPractitionerRegul</a></p></div><p><b>identifier</b>: Identifiant National de Professionnel de Santé/810002673899</p><p><b>active</b>: true</p><p><b>name</b>: Jules MARIUS </p><p><b>telecom</b>: <a href=\"mailto:jules.marius@test.com\">jules.marius@test.com</a></p></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : Praticien ExamplePractitionerRegul2</b></p><a name=\"ExamplePractitionerRegul2\"> </a><a name=\"hcExamplePractitionerRegul2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Information Source: <a href=\"https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&amp;canonical=urn:oid:1.2.250.1.213.3.6\">urn:oid:1.2.250.1.213.3.6</a></p><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-FrPractitionerRegul.html\">FrPractitionerRegul</a></p></div><p><b>identifier</b>: Identifiant National de Professionnel de Santé/810002673899</p><p><b>active</b>: true</p><p><b>name</b>: Jules MARIUS </p><p><b>telecom</b>: <a href=\"mailto:jules.marius@test.com\">jules.marius@test.com</a></p></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:identifier ( [
      fhir:type [
        fhir:coding ( [
-         fhir:system [ fhir:v "http://interopsante.org/fhir/CodeSystem/fr-v2-0203"^^xsd:anyURI ] ;
+         fhir:system [
+           fhir:v "http://interopsante.org/fhir/CodeSystem/fr-v2-0203"^^xsd:anyURI ;
+           fhir:l <http://interopsante.org/fhir/CodeSystem/fr-v2-0203>
+         ] ;
          fhir:code [ fhir:v "IDNPS" ]
        ] )
      ] ;
-     fhir:system [ fhir:v "urn:oid:1.2.250.1.71.4.2.1"^^xsd:anyURI ] ;
+     fhir:system [
+       fhir:v "urn:oid:1.2.250.1.71.4.2.1"^^xsd:anyURI ;
+       fhir:l <urn:oid:1.2.250.1.71.4.2.1>
+     ] ;
      fhir:value [ fhir:v "810002673899" ]
   ] ) ; # 
   fhir:active [ fhir:v true] ; # 

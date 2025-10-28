@@ -12,7 +12,7 @@ Bundle ExampleBundleAgregateurSOS de type searchset
 
 -------
 
-Entry 1 - fullUrl = https://exemple.com/ans-sas/Slot/ExampleSlotSOS1
+Entrée 1 - fullUrl = https://exemple.com/ans-sas/Slot/ExampleSlotSOS1
 
 Recherche :Mode = include
 
@@ -22,13 +22,13 @@ Ressource Slot :
 
 Profil: [FrSlotAgregateurSOS](StructureDefinition-sas-sos-slot-aggregator.md)
 
-Label de sécurités: Créneau accessible par le grand public (Details: TRE_R314-TypeCreneau code PUBLIC = 'Créneau accessible par le grand public'), Créneau accessible par les Régulateurs et Organisateurs de Soins Non Programmés (Details: TRE_R314-TypeCreneau code SNP = 'Créneau accessible par les Régulateurs et Organisateurs de Soins Non Programmés')
+Label de sécurités: Créneau accessible par le grand public (Détails : code TRE_R314-TypeCreneau PUBLIC = 'Créneau accessible par le grand public'), Créneau accessible par les Régulateurs et Organisateurs de Soins Non Programmés (Détails : code TRE_R314-TypeCreneau SNP = 'Créneau accessible par les Régulateurs et Organisateurs de Soins Non Programmés')
 
-**serviceType**: No display for Slot.serviceType (concept : ambulatory), No display for Slot.serviceType (concept : virtual)**appointmentType**:Routine appointment - default if not valued**schedule**:[Schedule](Schedule-ExampleScheduleSOS1.md)**status**: Free**start**: 2023-08-18 09:00:00+0200**end**: 2023-08-18 09:30:00+0200**comment**: http://www.editeur.com/agenda-pfg/creneau1
+**serviceType**: Pas daffichage pour {0} (concept : ambulatory), Pas daffichage pour {0} (concept : virtual)**appointmentType**:Routine appointment - default if not valued**schedule**:[Schedule](Schedule-ExampleScheduleSOS1.md)**status**: Free**start**: 2023-08-18 09:00:00+0200**end**: 2023-08-18 09:30:00+0200**comment**: http://www.editeur.com/agenda-pfg/creneau1
 
 -------
 
-Entry 2 - fullUrl = https://exemple.com/ans-sas/Schedule/ExampleScheduleSOS1
+Entrée 2 - fullUrl = https://exemple.com/ans-sas/Schedule/ExampleScheduleSOS1
 
 Recherche :Mode = match
 
@@ -42,7 +42,7 @@ Profil: [FrScheduleAgregateurSOS](StructureDefinition-sas-sos-schedule-aggregato
 
 -------
 
-Entry 3 - fullUrl = https://exemple.com/ans-sas/Location/1111111111
+Entrée 3 - fullUrl = https://exemple.com/ans-sas/Location/1111111111
 
 Recherche :Mode = include
 
@@ -56,7 +56,7 @@ Profil: [FrLocationAgregateurSOS](StructureDefinition-sas-sos-location-aggregato
 
 -------
 
-Entry 4 - fullUrl = https://exemple.com/ans-sas/Organization/ExampleOrgaSOS1
+Entrée 4 - fullUrl = https://exemple.com/ans-sas/Organization/ExampleOrgaSOS1
 
 Recherche :Mode = include
 
@@ -70,7 +70,7 @@ Profil: [FrOrganizationAgregateurSOS](StructureDefinition-sas-sos-organization-a
 
 -------
 
-Entry 5 - fullUrl = https://exemple.com/ans-sas/Slot/ExampleSlotSOS2
+Entrée 5 - fullUrl = https://exemple.com/ans-sas/Slot/ExampleSlotSOS2
 
 Recherche :Mode = include
 
@@ -80,13 +80,13 @@ Ressource Slot :
 
 Profil: [FrSlotAgregateurSOS](StructureDefinition-sas-sos-slot-aggregator.md)
 
-Label de sécurité: Créneau accessible par le grand public (Details: TRE_R314-TypeCreneau code PUBLIC = 'Créneau accessible par le grand public')
+Label de sécurité: Créneau accessible par le grand public (Détails : code TRE_R314-TypeCreneau PUBLIC = 'Créneau accessible par le grand public')
 
-**serviceType**: No display for Slot.serviceType (concept : ambulatory)**appointmentType**:Routine appointment - default if not valued**schedule**:[Schedule](Schedule-ExampleScheduleSOS2.md)**status**: Free**start**: 2023-08-19 11:00:00+0200**end**: 2023-08-19 11:30:00+0200**comment**: http://www.editeur.com/agenda-pfg/creneau2
+**serviceType**: Pas daffichage pour {0} (concept : ambulatory)**appointmentType**:Routine appointment - default if not valued**schedule**:[Schedule](Schedule-ExampleScheduleSOS2.md)**status**: Free**start**: 2023-08-19 11:00:00+0200**end**: 2023-08-19 11:30:00+0200**comment**: http://www.editeur.com/agenda-pfg/creneau2
 
 -------
 
-Entry 6 - fullUrl = https://exemple.com/ans-sas/Schedule/ExampleScheduleSOS2
+Entrée 6 - fullUrl = https://exemple.com/ans-sas/Schedule/ExampleScheduleSOS2
 
 Recherche :Mode = match
 
@@ -100,7 +100,7 @@ Profil: [FrScheduleAgregateurSOS](StructureDefinition-sas-sos-schedule-aggregato
 
 -------
 
-Entry 7 - fullUrl = https://exemple.com/ans-sas/Location/2222222222
+Entrée 7 - fullUrl = https://exemple.com/ans-sas/Location/2222222222
 
 Recherche :Mode = include
 
@@ -114,7 +114,7 @@ Profil: [FrLocationAgregateurSOS](StructureDefinition-sas-sos-location-aggregato
 
 -------
 
-Entry 8 - fullUrl = https://exemple.com/ans-sas/Slot/ExampleSlotSOS3
+Entrée 8 - fullUrl = https://exemple.com/ans-sas/Slot/ExampleSlotSOS3
 
 Recherche :Mode = include
 
@@ -124,13 +124,13 @@ Ressource Slot :
 
 Profil: [FrSlotAgregateurSOS](StructureDefinition-sas-sos-slot-aggregator.md)
 
-Label de sécurité: Créneau accessible par le grand public (Details: TRE_R314-TypeCreneau code PUBLIC = 'Créneau accessible par le grand public')
+Label de sécurité: Créneau accessible par le grand public (Détails : code TRE_R314-TypeCreneau PUBLIC = 'Créneau accessible par le grand public')
 
-**serviceType**: No display for Slot.serviceType (concept : virtual)**appointmentType**:Routine appointment - default if not valued**schedule**:[Schedule](Schedule-ExampleScheduleSOS3.md)**status**: Free**start**: 2023-08-18 14:20:00+0200**end**: 2023-08-18 14:40:00+0200**comment**: http://www.editeur.com/agenda-pfg/creneau3
+**serviceType**: Pas daffichage pour {0} (concept : virtual)**appointmentType**:Routine appointment - default if not valued**schedule**:[Schedule](Schedule-ExampleScheduleSOS3.md)**status**: Free**start**: 2023-08-18 14:20:00+0200**end**: 2023-08-18 14:40:00+0200**comment**: http://www.editeur.com/agenda-pfg/creneau3
 
 -------
 
-Entry 9 - fullUrl = https://exemple.com/ans-sas/Schedule/ExampleScheduleSOS3
+Entrée 9 - fullUrl = https://exemple.com/ans-sas/Schedule/ExampleScheduleSOS3
 
 Recherche :Mode = match
 
@@ -144,7 +144,7 @@ Profil: [FrScheduleAgregateurSOS](StructureDefinition-sas-sos-schedule-aggregato
 
 -------
 
-Entry 10 - fullUrl = https://exemple.com/ans-sas/Location/3333333333
+Entrée 10 - fullUrl = https://exemple.com/ans-sas/Location/3333333333
 
 Recherche :Mode = include
 
@@ -158,7 +158,7 @@ Profil: [FrLocationAgregateurSOS](StructureDefinition-sas-sos-location-aggregato
 
 -------
 
-Entry 11 - fullUrl = https://exemple.com/ans-sas/Organization/ExampleOrgaSOS2
+Entrée 11 - fullUrl = https://exemple.com/ans-sas/Organization/ExampleOrgaSOS2
 
 Recherche :Mode = include
 
@@ -172,7 +172,7 @@ Profil: [FrOrganizationAgregateurSOS](StructureDefinition-sas-sos-organization-a
 
 -------
 
-Entry 12 - fullUrl = https://exemple.com/ans-sas/Slot/ExampleSlotSOS4
+Entrée 12 - fullUrl = https://exemple.com/ans-sas/Slot/ExampleSlotSOS4
 
 Recherche :Mode = include
 
@@ -182,9 +182,9 @@ Ressource Slot :
 
 Profil: [FrSlotAgregateurSOS](StructureDefinition-sas-sos-slot-aggregator.md)
 
-Label de sécurité: Créneau accessible par le grand public (Details: TRE_R314-TypeCreneau code PUBLIC = 'Créneau accessible par le grand public')
+Label de sécurité: Créneau accessible par le grand public (Détails : code TRE_R314-TypeCreneau PUBLIC = 'Créneau accessible par le grand public')
 
-**serviceType**: No display for Slot.serviceType (concept : ambulatory)**appointmentType**:Routine appointment - default if not valued**schedule**:[Schedule](Schedule-ExampleScheduleSOS3.md)**status**: Free**start**: 2023-08-18 14:40:00+0200**end**: 2023-08-18 15:00:00+0200**comment**: http://www.editeur.com/agenda-pfg/creneau4
+**serviceType**: Pas daffichage pour {0} (concept : ambulatory)**appointmentType**:Routine appointment - default if not valued**schedule**:[Schedule](Schedule-ExampleScheduleSOS3.md)**status**: Free**start**: 2023-08-18 14:40:00+0200**end**: 2023-08-18 15:00:00+0200**comment**: http://www.editeur.com/agenda-pfg/creneau4
 
 
 
@@ -230,7 +230,7 @@ Label de sécurité: Créneau accessible par le grand public (Details: TRE_R314-
         },
         "text" : {
           "status" : "generated",
-          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Slot_ExampleSlotSOS1\"> </a><p class=\"res-header-id\"><b>Narratif généré : Slot ExampleSlotSOS1</b></p><a name=\"ExampleSlotSOS1\"> </a><a name=\"hcExampleSlotSOS1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-sos-slot-aggregator.html\">FrSlotAgregateurSOS</a></p><p style=\"margin-bottom: 0px\">Label de sécurités: Créneau accessible par le grand public (Details: TRE_R314-TypeCreneau code PUBLIC = 'Créneau accessible par le grand public'), Créneau accessible par les Régulateurs et Organisateurs de Soins Non Programmés (Details: TRE_R314-TypeCreneau code SNP = 'Créneau accessible par les Régulateurs et Organisateurs de Soins Non Programmés')</p></div><p><b>serviceType</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode AMB}\">ambulatory</span>, <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode VR}\">virtual</span></p><p><b>appointmentType</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0276 ROUTINE}\">Routine appointment - default if not valued</span></p><p><b>schedule</b>: <a href=\"Schedule-ExampleScheduleSOS1.html\">Schedule</a></p><p><b>status</b>: Free</p><p><b>start</b>: 2023-08-18 09:00:00+0200</p><p><b>end</b>: 2023-08-18 09:30:00+0200</p><p><b>comment</b>: http://www.editeur.com/agenda-pfg/creneau1</p></div>"
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Slot_ExampleSlotSOS1\"> </a><p class=\"res-header-id\"><b>Narratif généré : Slot ExampleSlotSOS1</b></p><a name=\"ExampleSlotSOS1\"> </a><a name=\"hcExampleSlotSOS1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-sos-slot-aggregator.html\">FrSlotAgregateurSOS</a></p><p style=\"margin-bottom: 0px\">Label de sécurités: Créneau accessible par le grand public (Détails : code TRE_R314-TypeCreneau PUBLIC = 'Créneau accessible par le grand public'), Créneau accessible par les Régulateurs et Organisateurs de Soins Non Programmés (Détails : code TRE_R314-TypeCreneau SNP = 'Créneau accessible par les Régulateurs et Organisateurs de Soins Non Programmés')</p></div><p><b>serviceType</b>: <span title=\"Codes :{http://terminology.hl7.org/CodeSystem/v3-ActCode AMB}\">ambulatory</span>, <span title=\"Codes :{http://terminology.hl7.org/CodeSystem/v3-ActCode VR}\">virtual</span></p><p><b>appointmentType</b>: <span title=\"Codes :{http://terminology.hl7.org/CodeSystem/v2-0276 ROUTINE}\">Routine appointment - default if not valued</span></p><p><b>schedule</b>: <a href=\"Schedule-ExampleScheduleSOS1.html\">Schedule</a></p><p><b>status</b>: Free</p><p><b>start</b>: 2023-08-18 09:00:00+0200</p><p><b>end</b>: 2023-08-18 09:30:00+0200</p><p><b>comment</b>: http://www.editeur.com/agenda-pfg/creneau1</p></div>"
         },
         "serviceType" : [
           {
@@ -401,7 +401,7 @@ Label de sécurité: Créneau accessible par le grand public (Details: TRE_R314-
         },
         "text" : {
           "status" : "generated",
-          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Slot_ExampleSlotSOS2\"> </a><p class=\"res-header-id\"><b>Narratif généré : Slot ExampleSlotSOS2</b></p><a name=\"ExampleSlotSOS2\"> </a><a name=\"hcExampleSlotSOS2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-sos-slot-aggregator.html\">FrSlotAgregateurSOS</a></p><p style=\"margin-bottom: 0px\">Label de sécurité: Créneau accessible par le grand public (Details: TRE_R314-TypeCreneau code PUBLIC = 'Créneau accessible par le grand public')</p></div><p><b>serviceType</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode AMB}\">ambulatory</span></p><p><b>appointmentType</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0276 ROUTINE}\">Routine appointment - default if not valued</span></p><p><b>schedule</b>: <a href=\"Schedule-ExampleScheduleSOS2.html\">Schedule</a></p><p><b>status</b>: Free</p><p><b>start</b>: 2023-08-19 11:00:00+0200</p><p><b>end</b>: 2023-08-19 11:30:00+0200</p><p><b>comment</b>: http://www.editeur.com/agenda-pfg/creneau2</p></div>"
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Slot_ExampleSlotSOS2\"> </a><p class=\"res-header-id\"><b>Narratif généré : Slot ExampleSlotSOS2</b></p><a name=\"ExampleSlotSOS2\"> </a><a name=\"hcExampleSlotSOS2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-sos-slot-aggregator.html\">FrSlotAgregateurSOS</a></p><p style=\"margin-bottom: 0px\">Label de sécurité: Créneau accessible par le grand public (Détails : code TRE_R314-TypeCreneau PUBLIC = 'Créneau accessible par le grand public')</p></div><p><b>serviceType</b>: <span title=\"Codes :{http://terminology.hl7.org/CodeSystem/v3-ActCode AMB}\">ambulatory</span></p><p><b>appointmentType</b>: <span title=\"Codes :{http://terminology.hl7.org/CodeSystem/v2-0276 ROUTINE}\">Routine appointment - default if not valued</span></p><p><b>schedule</b>: <a href=\"Schedule-ExampleScheduleSOS2.html\">Schedule</a></p><p><b>status</b>: Free</p><p><b>start</b>: 2023-08-19 11:00:00+0200</p><p><b>end</b>: 2023-08-19 11:30:00+0200</p><p><b>comment</b>: http://www.editeur.com/agenda-pfg/creneau2</p></div>"
         },
         "serviceType" : [
           {
@@ -530,7 +530,7 @@ Label de sécurité: Créneau accessible par le grand public (Details: TRE_R314-
         },
         "text" : {
           "status" : "generated",
-          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Slot_ExampleSlotSOS3\"> </a><p class=\"res-header-id\"><b>Narratif généré : Slot ExampleSlotSOS3</b></p><a name=\"ExampleSlotSOS3\"> </a><a name=\"hcExampleSlotSOS3\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-sos-slot-aggregator.html\">FrSlotAgregateurSOS</a></p><p style=\"margin-bottom: 0px\">Label de sécurité: Créneau accessible par le grand public (Details: TRE_R314-TypeCreneau code PUBLIC = 'Créneau accessible par le grand public')</p></div><p><b>serviceType</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode VR}\">virtual</span></p><p><b>appointmentType</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0276 ROUTINE}\">Routine appointment - default if not valued</span></p><p><b>schedule</b>: <a href=\"Schedule-ExampleScheduleSOS3.html\">Schedule</a></p><p><b>status</b>: Free</p><p><b>start</b>: 2023-08-18 14:20:00+0200</p><p><b>end</b>: 2023-08-18 14:40:00+0200</p><p><b>comment</b>: http://www.editeur.com/agenda-pfg/creneau3</p></div>"
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Slot_ExampleSlotSOS3\"> </a><p class=\"res-header-id\"><b>Narratif généré : Slot ExampleSlotSOS3</b></p><a name=\"ExampleSlotSOS3\"> </a><a name=\"hcExampleSlotSOS3\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-sos-slot-aggregator.html\">FrSlotAgregateurSOS</a></p><p style=\"margin-bottom: 0px\">Label de sécurité: Créneau accessible par le grand public (Détails : code TRE_R314-TypeCreneau PUBLIC = 'Créneau accessible par le grand public')</p></div><p><b>serviceType</b>: <span title=\"Codes :{http://terminology.hl7.org/CodeSystem/v3-ActCode VR}\">virtual</span></p><p><b>appointmentType</b>: <span title=\"Codes :{http://terminology.hl7.org/CodeSystem/v2-0276 ROUTINE}\">Routine appointment - default if not valued</span></p><p><b>schedule</b>: <a href=\"Schedule-ExampleScheduleSOS3.html\">Schedule</a></p><p><b>status</b>: Free</p><p><b>start</b>: 2023-08-18 14:20:00+0200</p><p><b>end</b>: 2023-08-18 14:40:00+0200</p><p><b>comment</b>: http://www.editeur.com/agenda-pfg/creneau3</p></div>"
         },
         "serviceType" : [
           {
@@ -693,7 +693,7 @@ Label de sécurité: Créneau accessible par le grand public (Details: TRE_R314-
         },
         "text" : {
           "status" : "generated",
-          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Slot_ExampleSlotSOS4\"> </a><p class=\"res-header-id\"><b>Narratif généré : Slot ExampleSlotSOS4</b></p><a name=\"ExampleSlotSOS4\"> </a><a name=\"hcExampleSlotSOS4\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-sos-slot-aggregator.html\">FrSlotAgregateurSOS</a></p><p style=\"margin-bottom: 0px\">Label de sécurité: Créneau accessible par le grand public (Details: TRE_R314-TypeCreneau code PUBLIC = 'Créneau accessible par le grand public')</p></div><p><b>serviceType</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode AMB}\">ambulatory</span></p><p><b>appointmentType</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0276 ROUTINE}\">Routine appointment - default if not valued</span></p><p><b>schedule</b>: <a href=\"Schedule-ExampleScheduleSOS3.html\">Schedule</a></p><p><b>status</b>: Free</p><p><b>start</b>: 2023-08-18 14:40:00+0200</p><p><b>end</b>: 2023-08-18 15:00:00+0200</p><p><b>comment</b>: http://www.editeur.com/agenda-pfg/creneau4</p></div>"
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Slot_ExampleSlotSOS4\"> </a><p class=\"res-header-id\"><b>Narratif généré : Slot ExampleSlotSOS4</b></p><a name=\"ExampleSlotSOS4\"> </a><a name=\"hcExampleSlotSOS4\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-sos-slot-aggregator.html\">FrSlotAgregateurSOS</a></p><p style=\"margin-bottom: 0px\">Label de sécurité: Créneau accessible par le grand public (Détails : code TRE_R314-TypeCreneau PUBLIC = 'Créneau accessible par le grand public')</p></div><p><b>serviceType</b>: <span title=\"Codes :{http://terminology.hl7.org/CodeSystem/v3-ActCode AMB}\">ambulatory</span></p><p><b>appointmentType</b>: <span title=\"Codes :{http://terminology.hl7.org/CodeSystem/v2-0276 ROUTINE}\">Routine appointment - default if not valued</span></p><p><b>schedule</b>: <a href=\"Schedule-ExampleScheduleSOS3.html\">Schedule</a></p><p><b>status</b>: Free</p><p><b>start</b>: 2023-08-18 14:40:00+0200</p><p><b>end</b>: 2023-08-18 15:00:00+0200</p><p><b>comment</b>: http://www.editeur.com/agenda-pfg/creneau4</p></div>"
         },
         "serviceType" : [
           {
