@@ -42,7 +42,7 @@ Paramètre de recherche date de début d'un créneau (date de début supérieure
   "version" : "1.1.0",
   "name" : "SPDateDebutSlot",
   "status" : "active",
-  "date" : "2025-10-28T16:18:27+00:00",
+  "date" : "2025-10-28T16:43:33+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

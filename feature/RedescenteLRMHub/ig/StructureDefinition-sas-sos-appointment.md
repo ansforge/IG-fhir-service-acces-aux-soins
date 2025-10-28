@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-sas-sos-appointment.
   "version" : "1.1.0",
   "name" : "FrAppointmentSASSOS",
   "status" : "active",
-  "date" : "2025-10-28T16:18:27+00:00",
+  "date" : "2025-10-28T16:43:33+00:00",
   "publisher" : "ANS",
   "contact" : [
     {
