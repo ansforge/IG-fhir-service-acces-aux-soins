@@ -75,8 +75,8 @@ Le schéma de présentation générale ci-dessous illustre ce cas d’usage :
     </tr>
 </table>
 
-Les créneaux de disponibilités des Points Fixes de Garde (PFG), lieux de consultation SOS Médecins, sont renseignés par les associations dans les solutions logicielles d’agendas. Le flux décrit ci-dessous permet de récupérer et d’afficher dans la plateforme numérique SAS les créneaux selon les modalités définies lors des Groupes de Travail en bilatérales avec l’ANS.
-Lors d’une recherche d’offre de soins sur la plateforme numérique SAS, le moteur de recherche va s’appuyer sur les référentiels nationaux enrichis pour identifier l’offre de soins correspondant aux critères de recherche. Une **liste de 1 à 10 SIRET**, identifiant national de structure (IDNST) d’une association SOS Médecins, est envoyée aux solutions logicielles éditeurs pour identifier les créneaux de disponibilités des Points Fixes de Garde (PFG) correspondants. Les types de créneaux remontés dans la plateforme sont :
+Les créneaux de disponibilités des Lieux Fixes de Consultation (LFC), lieux de consultation SOS Médecins, sont renseignés par les associations dans les solutions logicielles d’agendas. Le flux décrit ci-dessous permet de récupérer et d’afficher dans la plateforme numérique SAS les créneaux selon les modalités définies lors des Groupes de Travail en bilatérales avec l’ANS.
+Lors d’une recherche d’offre de soins sur la plateforme numérique SAS, le moteur de recherche va s’appuyer sur les référentiels nationaux enrichis pour identifier l’offre de soins correspondant aux critères de recherche. Une **liste de 1 à 10 SIRET**, identifiant national de structure (IDNST) d’une association SOS Médecins, est envoyée aux solutions logicielles éditeurs pour identifier les créneaux de disponibilités des Lieux Fixes de Consultation (LFC) correspondants. Les types de créneaux remontés dans la plateforme sont :
 -	Les créneaux visibles du grand public
 -	Les créneaux dédiés au SAS, le cas échéant
 
@@ -107,7 +107,7 @@ Le schéma ci-dessous présente une synthèse de la structure attendue :
 
 ##### SOS Médecins
 La structure de réponse attendue inclut l’ensemble des créneaux de consultation disponibles correspondant à la requête réalisée par la plateforme numérique SAS.
-1 à n créneaux de consultation (Slot) peuvent être rattachés à 1 agenda (Schedule) qui représente 1 point fixe de garde (Location), lui-même rattaché à 1 association SOS Médecins (Organization). Si des créneaux de consultation sont proposés pour plusieurs PFG, on aura autant d’agendas (Schedule) que de PFG (Location).
+1 à n créneaux de consultation (Slot) peuvent être rattachés à 1 agenda (Schedule) qui représente 1 lieu fixe de consultation (Location), lui-même rattaché à 1 association SOS Médecins (Organization). Si des créneaux de consultation sont proposés pour plusieurs LFC, on aura autant d’agendas (Schedule) que de LFC (Location).
 
 Le schéma ci-dessous présente une synthèse de la structure attendue :
 

@@ -264,8 +264,8 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
     - identifier.value (valeur de l'identifiant) : SIRET avec préfixe `3`
     - identifier.system (autorité d’affectation) : urn:oid:1.2.250.1.71.4.2.2
     - identifier.type (type d’identifiant) : le champ type.coding.code est valorisé à `IDNST` et type.coding.system à `http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type`
-- **ID du point fixe de garde :**
-  - Identifiant unique permettant d’identifier individuellement chaque point fixe de garde. Deux combinaisons sont possibles selon que le PFG ait un identifiant national de structure (IDNST) connu ou non :
+- **ID du lieu fixe de consultation :**
+  - Identifiant unique permettant d’identifier individuellement chaque point lieu fixe de consultation. Deux combinaisons sont possibles selon que le PFG ait un identifiant national de structure (IDNST) connu ou non :
     -  Lorsque le **PFG a un identifiant national de structure** connu, les différents champs sont valorisés comme suit :
       - identifier.value (valeur de l’identifiant) : valeur de l’IDNST avec préfixe
       - identifier.system (autorité d’affectation) : urn:oid:1.2.250.1.71.4.2.2
