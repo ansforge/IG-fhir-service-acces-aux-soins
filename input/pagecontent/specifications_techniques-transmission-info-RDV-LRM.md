@@ -114,8 +114,9 @@ A noter qu'il existe deux types d'erreur :
 - les messages d'erreurs "fonctionnels" envoyés depuis le LRM (toujours en transitant par le Hub) traduisant l'impossibilité de traiter correctement le message reçu (b)
 
 A titre d'exemple, les codes d'erreur suivants pourront être envoyés du Hub vers la plateforme SAS : 
+
 |statusCode | statusString | description |
-|--------|--------|------|
+|------|-----|-----------|
 | 102 | UNRECOGNIZED_MESSAGE_FORMAT | Le message n’a pas pu être désérialisé. |
 | 300 | INVALID_MESSAGE | Le message n’est pas conforme aux spécifications techniques (JSON Schema) |
 | 400 | EXPIRED_MESSAGE_BEFORE_ROUTING | Le message n’a pas été reçu par son destinataire, il a expiré sur le Hub avant de lui être délivré. |
@@ -580,9 +581,8 @@ Cette section détaille les champs à utiliser afin de renseigner les différent
 
 - **organizationId** : Identifiant unique propre à chaque structure de soins. Les champs sont valorisés comme suit : numéro du FINESS avec préfixe « 1 » ou numéro du SIRET avec préfixe « 3 » 
 
-- **regulatorId** : Identifiant unique du régulateur ayant pris le RDV. Il s'agit soit d'un identifiant national "IDNPS"(identifiant présent sur la carte CPx du régulateur) soit d'un identifiant technique attribué par la plateforme numérique SAS. En effet, certains régulateurs n’ayant pas encore d’identifiant national à date, un identifiant technique de type uuid est créé. 
+- **regulatorId** : Identifiant unique du régulateur ayant pris le RDV. Il s'agira uniquemet d'un identifiant national "IDNPS"(identifiant présent sur la carte CPx du régulateur). En effet, certains régulateurs n’ayant pas encore d’identifiant national à date, un identifiant technique de type uuid est créé. Cet identifiant étant connu uniquement de la PTF SAS, il ne sera pas transmis dans le flux. 
 *Exemple d'identifiant national* : `3620100057/70326SR`
-*Exemple d'identifiant technique* : `1ef24046-7c54-69ca-a309-8106d60b6540` 
 
 - **regulatorEmail** : Il s'agit de l'adresse mail du compte du régulateur telle que déclarée dans la plateforme SAS. Elle correspond également à l'identifiant de connexion à la plateforme. 
 
@@ -956,6 +956,6 @@ Divers évènements dans la plateforme numérique SAS peuvent déclencher de man
 Le paragraphe ci-dessous détaille les différentes **règles de gestions attendues** par les éditeurs à la suite du déclenchement du flux et la transmission d’un message : 
 - A la réception du message, **la solution éditeur stockera l’identifiant technique SAS du RDV transmis** pour référence et gestion des mises à jour éventuelles 
 - Il est attendu pour les éditeurs ayant implémenté le flux de **mettre en place une écoute de leurs files de messages instantanément** afin de permettra le rattachement du RDV avec le DRM par le régulateur à la suite de la transmission des informations de RDV 
-- Lorsque les données du RDV pris pour le compte du patient auront été transmises à la solution LRM, le régulateur OSNP devra pouvoir réaliser le rapprochement entre l’orientation et le DRM. Il est attendu que **l’éditeur mette en place une solution pour que le régulateur puisse faire ce rapprochement au sein de la solution LRM**. Par exemple, un tableau de bord, un espace pour la gestion des RDV pris, un affichage des données métier disponibles pour faciliter l’action (ex. numéro téléphone, nom du PS, nom du patient, sélection DRM, heure de prise de RDV, heure du RDV, etc.), ou tout autre solution ergonomique que l’éditeur jugera pertinente. L’éditeur partagera à l’ANS la solution qu’il est prévu de mettre en place.
+- Lorsque les données du RDV pris pour le compte du patient auront été transmises à la solution LRM, le régulateur OSNP devra pouvoir réaliser le rapprochement entre l’orientation et le DRM. Il est attendu que **l’éditeur mette en place une solution pour que le régulateur puisse faire ce rapprochement au sein de la solution LRM**. Par exemple, un tableau de bord, un espace pour la gestion des RDV pris, un affichage des données métier disponibles pour faciliter l’action (ex. nom du PS, , sélection DRM, heure de prise de RDV, heure du RDV, etc.), ou tout autre solution ergonomique que l’éditeur jugera pertinente. L’éditeur partagera à l’ANS la solution qu’il est prévu de mettre en place.
 - Les règles d’association de l’orientation avec le DRM et la gestion des requêtes potentielles non associées seront gérées au cas par cas avec l’éditeur. 
 - Il est attendu de la part de l’éditeur de **conserver un historique des messages reçus** au niveau de l’échange et au niveau du résultat du traitement du message. 
