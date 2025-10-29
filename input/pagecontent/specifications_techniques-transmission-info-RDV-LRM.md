@@ -56,7 +56,7 @@ Le tableau ci-dessous précise les balises qui doivent être envoyées et qui so
 
 
 **Détail sur le contenu `embeddedJsonContent` encapsulé dans l'entête EXDL-DE** : 
-il s'agit d'un message json avec la liste des champs décrite plus bas propre aux données de RDV transmises elle même encapsulée dans une entête RC-DE dont les caractéristiques sont décrites plus bas. 
+il s'agit d'un message json avec la liste des champs décrite plus bas propre aux données de RDV transmises elle même encapsulée dans une entête RC-DE dont les caractéristiques sont décrites plus bas, dans [la section suivante](./specifications_techniques-transmission-info-RDV-LRM.html#message-dacquittement-final-lrm---ptf-sas-via-hub)
 L'entête RC-DE contient un nombre de champs communs à l'entête EDXL-DE, ce qui permet de rendre le message auportortant sans l'entête EDXL-DE. 
 
 #### Acquittement technique Hub -> PTF SAS
@@ -101,7 +101,7 @@ En cas d'erreur, un message est posté sur la file « info » de la plateforme S
 | *Entête EDXL-DE* | descriptor.explicitAddress.explicitAddressValue | string | Identifiant du SAMU destinataire | Valeur fixe par environnement. Ex : `fr.health.ptfsas` |
 | *Contenu* | content.contentObject.embeddedJsonContent | json | Contenu du message json encapsulé dans l'entête | JSON avec errorCode et errorCause |
 
-L'erreur sera présente dans le contenu du message json qui respecte le modèle suivant, cf. spécifications du Hub Santé : 
+L'erreur sera présente dans le contenu du message json qui respecte le modèle suivant, cf. spécifications du Hub Santé, §3.4.7 : 
 
 | Champ | Description | Commentaire / valeur |
 |--------|--------|------|
@@ -114,10 +114,12 @@ A noter qu'il existe deux types d'erreur :
 - les messages d'erreurs "fonctionnels" envoyés depuis le LRM (toujours en transitant par le Hub) traduisant l'impossibilité de traiter correctement le message reçu (b)
 
 A titre d'exemple, les codes d'erreur suivants pourront être envoyés du Hub vers la plateforme SAS : 
-- 102 UNRECOGNIZED_MESSAGE_FORMAT - Le message n’a pas pu être désérialisé.
-- 300 INVALID_MESSAGE Le message n’est pas conforme aux spécifications techniques (JSON Schema)
-- 400 (EXPIRED_MESSAGE_BEFORE_ROUTING) - Le message n’a pas été reçu par son destinataire, il a expiré sur le Hub avant de lui être délivré.
-- 500 (DEAD_LETTERED_QUEUE) - Le message n’a pas été reçu par son destinataire, il a expiré avant qu’il ne le dépile. 
+|statusCode | statusString | description |
+|--------|--------|------|
+| 102 | UNRECOGNIZED_MESSAGE_FORMAT | Le message n’a pas pu être désérialisé. |
+| 300 | INVALID_MESSAGE | Le message n’est pas conforme aux spécifications techniques (JSON Schema) |
+| 400 | EXPIRED_MESSAGE_BEFORE_ROUTING | Le message n’a pas été reçu par son destinataire, il a expiré sur le Hub avant de lui être délivré. |
+| 500 | DEAD_LETTERED_QUEUE | Le message n’a pas été reçu par son destinataire, il a expiré avant qu’il ne le dépile. | 
 
 Le LRM pourra envoyer des messages de type : 
 - 404 (NOT_FOUND) - L'identifiant du RDV a mettre à jour n'a pas été trouvé dans le cas d'un message de mise à jour
@@ -586,7 +588,7 @@ Cette section détaille les champs à utiliser afin de renseigner les différent
 
 ### Exemple de message complet avec entêtes et contenu
 
-**Message PTF SAS -> SAMU 33**
+*Message PTF SAS -> SAMU 33*
 
 ```json
 {
@@ -714,7 +716,7 @@ Détail du message
 }
 ```
 
-**Acquittement final SAMU 33 -> PTF SAS**
+*Message acquittement final SAMU 33 -> PTF SAS*
 
 ```json
 {
@@ -761,7 +763,7 @@ Détail du message
 }
 ```
 
-**Message d'erreur retourné par le Hub suite à un envoi PTF SAS -> SAMU 330**
+*Message d'erreur retourné par le Hub suite à un envoi PTF SAS -> SAMU 330*
 
 ```json
 {
@@ -841,7 +843,100 @@ Détail du message
 
 Dans ce cas, il manque le champ RPPS obligatoire et le contrôle de validation par le Hub échoue. 
 
-**Message d'erreur retourné par le LRM suite à un envoi PTF SAS -> SAMU 330**
+*Message d'erreur retourné par le LRM suite à un envoi PTF SAS -> SAMU 330*
+
+```json
+{
+    "distributionID": "fr.health.hub_cb0f6f14-6b57-4fb5-a635-97705c8d31e8",
+    "senderID": "fr.health.samu330",
+    "dateTimeSent": "2025-10-28T16:29:59+00:00",
+    "dateTimeExpires": "2025-10-29T16:29:59+00:00",
+    "distributionStatus": "Actual",
+    "distributionKind": "Error",
+    "descriptor": {
+        "language": "fr-FR",
+        "explicitAddress": {
+            "explicitAddressScheme": "hubex",
+            "explicitAddressValue": "fr.health.ptfsas"
+        }
+    },
+    "content": [
+        {
+            "jsonContent": {
+                "embeddedJsonContent": {
+                    "message": {
+                        "error": {
+                            "errorCode": {
+                                "statusCode": 404,
+                                "statusString": "NOT_FOUND"
+                            },
+                            "errorCause": "Impossible de mettre à jour ce RDV, identifiant de RDV '30c8e00d-68b2-4092-a4f2-a9cb19b416e9' inconnu ",
+                            "sourceMessage": {
+                                "distributionID": "fr.health.ptfsas_44fce1e7-461e-4b15-91e2-b4168bed531e",
+                                "distributionKind": "Report",
+                                "senderID": "fr.health.ptfsas",
+                                "dateTimeSent": "2025-10-28T17:29:59+01:00",
+                                "distributionStatus": "Actual",
+                                "descriptor": {
+                                    "language": "fr-FR",
+                                    "explicitAddress": {
+                                        "explicitAddressScheme": "hubex",
+                                        "explicitAddressValue": "fr.health.samu330"
+                                    }
+                                },
+                                "dateTimeExpires": "2072-09-27T08:23:34+02:00",
+                                "content": [
+                                    {
+                                        "jsonContent": {
+                                            "embeddedJsonContent": {
+                                                "message": {
+                                                    "messageId": "fr.health.ptfsas_44fce1e7-461e-4b15-91e2-b4168bed531e",
+                                                    "sender": {
+                                                        "name": "ptfsas",
+                                                        "URI": "hubex:fr.health.ptfsas"
+                                                    },
+                                                    "sentAt": "2025-10-28T17:29:59+01:00",
+                                                    "status": "Actual",
+                                                    "kind": "Report",
+                                                    "recipient": [
+                                                        {
+                                                            "name": "samu330",
+                                                            "URI": "hubex:fr.health.samu330"
+                                                        }
+                                                    ],
+                                                    "appointment": {
+                                                        "appointmentId": "2d2db05f-e2b0-4169-be8f-891806da2c74",
+                                                        "method": "UpdateAppointment",
+                                                        "created": "2025-06-17T10:15:00+02:00",
+                                                        "status": "booked",
+                                                        "orientationCategory": "PS",
+                                                        "start": "2025-06-17T14:00:00+02:00",
+                                                        "end": "2025-06-17T14:20:00+02:00",
+                                                        "practitioner": {
+                                                            "rppsId": "810005681340",
+                                                            "lastName": "MOREL",
+                                                            "firstName": "Didier",
+                                                            "specialityCode": "SM54",
+                                                            "specialityUrl": "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
+                                                            "professionUrl": "https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante",
+                                                            "professionCode": "10"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            "referencedDistributionID": "fr.health.ptfsas_44fce1e7-461e-4b15-91e2-b4168bed531e"
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}
+```
 
 ### Déclencheurs et règles d'intégration attendues
 
