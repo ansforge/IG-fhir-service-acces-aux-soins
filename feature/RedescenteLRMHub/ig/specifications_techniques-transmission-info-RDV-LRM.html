@@ -599,13 +599,39 @@ Le cheminement est similaire au message envoyé mais pris en sens inverse.</p>
   <li>les messages d'erreurs "fonctionnels" envoyés depuis le LRM (toujours en transitant par le Hub) traduisant l'impossibilité de traiter correctement le message reçu (b)</li>
 </ul>
 
-<p>A titre d'exemple, les codes d'erreur suivants pourront être envoyés du Hub vers la plateforme SAS : 
-|statusCode | statusString | description |
-|——–|——–|——|
-| 102 | UNRECOGNIZED_MESSAGE_FORMAT | Le message n’a pas pu être désérialisé. |
-| 300 | INVALID_MESSAGE | Le message n’est pas conforme aux spécifications techniques (JSON Schema) |
-| 400 | EXPIRED_MESSAGE_BEFORE_ROUTING | Le message n’a pas été reçu par son destinataire, il a expiré sur le Hub avant de lui être délivré. |
-| 500 | DEAD_LETTERED_QUEUE | Le message n’a pas été reçu par son destinataire, il a expiré avant qu’il ne le dépile. |</p>
+<p>A titre d'exemple, les codes d'erreur suivants pourront être envoyés du Hub vers la plateforme SAS :</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>statusCode</th>
+      <th>statusString</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>102</td>
+      <td>UNRECOGNIZED_MESSAGE_FORMAT</td>
+      <td>Le message n’a pas pu être désérialisé.</td>
+    </tr>
+    <tr>
+      <td>300</td>
+      <td>INVALID_MESSAGE</td>
+      <td>Le message n’est pas conforme aux spécifications techniques (JSON Schema)</td>
+    </tr>
+    <tr>
+      <td>400</td>
+      <td>EXPIRED_MESSAGE_BEFORE_ROUTING</td>
+      <td>Le message n’a pas été reçu par son destinataire, il a expiré sur le Hub avant de lui être délivré.</td>
+    </tr>
+    <tr>
+      <td>500</td>
+      <td>DEAD_LETTERED_QUEUE</td>
+      <td>Le message n’a pas été reçu par son destinataire, il a expiré avant qu’il ne le dépile.</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>Le LRM pourra envoyer des messages de type :</p>
 <ul>
@@ -1082,9 +1108,8 @@ Cf. exemple ci-dessous de message de création</p>
     <p><strong>organizationId</strong> : Identifiant unique propre à chaque structure de soins. Les champs sont valorisés comme suit : numéro du FINESS avec préfixe « 1 » ou numéro du SIRET avec préfixe « 3 »</p>
   </li>
   <li>
-    <p><strong>regulatorId</strong> : Identifiant unique du régulateur ayant pris le RDV. Il s'agit soit d'un identifiant national "IDNPS"(identifiant présent sur la carte CPx du régulateur) soit d'un identifiant technique attribué par la plateforme numérique SAS. En effet, certains régulateurs n’ayant pas encore d’identifiant national à date, un identifiant technique de type uuid est créé. 
-<em>Exemple d'identifiant national</em> : <code class="language-plaintext highlighter-rouge">3620100057/70326SR</code>
-<em>Exemple d'identifiant technique</em> : <code class="language-plaintext highlighter-rouge">1ef24046-7c54-69ca-a309-8106d60b6540</code></p>
+    <p><strong>regulatorId</strong> : Identifiant unique du régulateur ayant pris le RDV. Il s'agira uniquemet d'un identifiant national "IDNPS"(identifiant présent sur la carte CPx du régulateur). En effet, certains régulateurs n’ayant pas encore d’identifiant national à date, un identifiant technique de type uuid est créé. Cet identifiant étant connu uniquement de la PTF SAS, il ne sera pas transmis dans le flux. 
+<em>Exemple d'identifiant national</em> : <code class="language-plaintext highlighter-rouge">3620100057/70326SR</code></p>
   </li>
   <li><strong>regulatorEmail</strong> : Il s'agit de l'adresse mail du compte du régulateur telle que déclarée dans la plateforme SAS. Elle correspond également à l'identifiant de connexion à la plateforme.</li>
 </ul>
@@ -1462,7 +1487,7 @@ Le paragraphe ci-dessous détaille les différentes <strong>règles de gestions 
 <ul>
   <li>A la réception du message, <strong>la solution éditeur stockera l’identifiant technique SAS du RDV transmis</strong> pour référence et gestion des mises à jour éventuelles</li>
   <li>Il est attendu pour les éditeurs ayant implémenté le flux de <strong>mettre en place une écoute de leurs files de messages instantanément</strong> afin de permettra le rattachement du RDV avec le DRM par le régulateur à la suite de la transmission des informations de RDV</li>
-  <li>Lorsque les données du RDV pris pour le compte du patient auront été transmises à la solution LRM, le régulateur OSNP devra pouvoir réaliser le rapprochement entre l’orientation et le DRM. Il est attendu que <strong>l’éditeur mette en place une solution pour que le régulateur puisse faire ce rapprochement au sein de la solution LRM</strong>. Par exemple, un tableau de bord, un espace pour la gestion des RDV pris, un affichage des données métier disponibles pour faciliter l’action (ex. numéro téléphone, nom du PS, nom du patient, sélection DRM, heure de prise de RDV, heure du RDV, etc.), ou tout autre solution ergonomique que l’éditeur jugera pertinente. L’éditeur partagera à l’ANS la solution qu’il est prévu de mettre en place.</li>
+  <li>Lorsque les données du RDV pris pour le compte du patient auront été transmises à la solution LRM, le régulateur OSNP devra pouvoir réaliser le rapprochement entre l’orientation et le DRM. Il est attendu que <strong>l’éditeur mette en place une solution pour que le régulateur puisse faire ce rapprochement au sein de la solution LRM</strong>. Par exemple, un tableau de bord, un espace pour la gestion des RDV pris, un affichage des données métier disponibles pour faciliter l’action (ex. nom du PS, , sélection DRM, heure de prise de RDV, heure du RDV, etc.), ou tout autre solution ergonomique que l’éditeur jugera pertinente. L’éditeur partagera à l’ANS la solution qu’il est prévu de mettre en place.</li>
   <li>Les règles d’association de l’orientation avec le DRM et la gestion des requêtes potentielles non associées seront gérées au cas par cas avec l’éditeur.</li>
   <li>Il est attendu de la part de l’éditeur de <strong>conserver un historique des messages reçus</strong> au niveau de l’échange et au niveau du résultat du traitement du message.</li>
 </ul>
@@ -1507,7 +1532,7 @@ Le paragraphe ci-dessous détaille les différentes <strong>règles de gestions 
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Oct 29, 2025 09:51+0000">2025-10-29</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Oct 29, 2025 14:06+0000">2025-10-29</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

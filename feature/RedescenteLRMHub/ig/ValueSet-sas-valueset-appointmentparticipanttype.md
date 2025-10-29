@@ -53,7 +53,7 @@ Ce jeu de valeurs nest pas utilisé ici ; il peut être utilisé autre part (par
   "title" : "Appointment Participant Type SAS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2025-10-29T09:51:36+00:00",
+  "date" : "2025-10-29T14:06:34+00:00",
   "publisher" : "ANS",
   "contact" : [
     {
