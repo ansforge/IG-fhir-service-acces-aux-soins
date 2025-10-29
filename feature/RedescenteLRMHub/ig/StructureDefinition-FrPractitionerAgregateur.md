@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur | *Version*:1.1.0 |
-| Active as of 2025-10-28 | *Computable Name*:FrPractitionerAgregateur |
+| Active as of 2025-10-29 | *Computable Name*:FrPractitionerAgregateur |
 
  
 Profil de Practitioner, dérivé de FrPractitioner, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS 
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-FrPractitionerAgrega
   "version" : "1.1.0",
   "name" : "FrPractitionerAgregateur",
   "status" : "active",
-  "date" : "2025-10-28T16:43:33+00:00",
+  "date" : "2025-10-29T09:51:36+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

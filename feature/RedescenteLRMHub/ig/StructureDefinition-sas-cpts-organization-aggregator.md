@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-organization-aggregator | *Version*:1.1.0 |
-| Active as of 2025-10-28 | *Computable Name*:FrOrganizationAgregateurCPTS |
+| Active as of 2025-10-29 | *Computable Name*:FrOrganizationAgregateurCPTS |
 
  
 Profil dérivé de FrOrganization pour le cas d'usage agrégateur de la plateforme SAS - cas d'usage CPTS 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-sas-cpts-organizatio
   "version" : "1.1.0",
   "name" : "FrOrganizationAgregateurCPTS",
   "status" : "active",
-  "date" : "2025-10-28T16:43:33+00:00",
+  "date" : "2025-10-29T09:51:36+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

@@ -9,12 +9,12 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/CodeSystem/categorie-orientation-sas-codesystem | *Version*:1.1.0 |
-| Active as of 2025-10-28 | *Computable Name*:CategorieOrientationSASCodeSystem |
+| Active as of 2025-10-29 | *Computable Name*:CategorieOrientationSASCodeSystem |
 
  
 Code système permettant de définir la catégorie d'orientation SAS spécifique qui n'est pas considéré comme un établissement de soins et qui permet de catégoriser l'orientation de soins 
 
- This Code system is referenced in the content logical definition of the following value sets: 
+ Cette terminologie de référence (CodeSystem) est référencé dans la définition de contenu des jeux de valeurs (ValueSet) suivants : 
 
 * [CategorieOrientationSASValueSet](ValueSet-categorie-orientation-sas-valueset.md)
 
@@ -32,7 +32,7 @@ Code système permettant de définir la catégorie d'orientation SAS spécifique
   "title" : "Code système catégorie orientation SAS",
   "status" : "active",
   "experimental" : true,
-  "date" : "2025-10-28T16:43:33+00:00",
+  "date" : "2025-10-29T09:51:36+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

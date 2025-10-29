@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator | *Version*:1.1.0 |
-| Active as of 2025-10-28 | *Computable Name*:FrOrganizationAgregateurSOS |
+| Active as of 2025-10-29 | *Computable Name*:FrOrganizationAgregateurSOS |
 
  
 Profil d'Organization, dérivé de FrOrganization, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins 
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-sas-sos-organization
   "version" : "1.1.0",
   "name" : "FrOrganizationAgregateurSOS",
   "status" : "active",
-  "date" : "2025-10-28T16:43:33+00:00",
+  "date" : "2025-10-29T09:51:36+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

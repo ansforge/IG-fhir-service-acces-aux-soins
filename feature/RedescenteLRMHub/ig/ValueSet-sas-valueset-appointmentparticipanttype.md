@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-appointmentparticipanttype | *Version*:1.1.0 |
-| Active as of 2025-10-28 | *Computable Name*:AppointmentParticipantTypeSAS |
+| Active as of 2025-10-29 | *Computable Name*:AppointmentParticipantTypeSAS |
 
  
 Type de participant du RDV SAS 
@@ -53,7 +53,7 @@ Ce jeu de valeurs nest pas utilisé ici ; il peut être utilisé autre part (par
   "title" : "Appointment Participant Type SAS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2025-10-28T16:43:33+00:00",
+  "date" : "2025-10-29T09:51:36+00:00",
   "publisher" : "ANS",
   "contact" : [
     {
