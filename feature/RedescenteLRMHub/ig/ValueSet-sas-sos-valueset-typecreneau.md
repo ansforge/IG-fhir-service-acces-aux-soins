@@ -53,7 +53,7 @@ Type de Créneaux SAS SOS
   "title" : "Type créneaux SAS SOS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2025-10-29T14:06:34+00:00",
+  "date" : "2025-10-29T15:00:17+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

@@ -250,7 +250,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#message-de-modification-de-rdv" id="markdown-toc-message-de-modification-de-rdv">Message de modification de RDV</a></li>
   <li><a href="#message-dannulation-de-rdv" id="markdown-toc-message-dannulation-de-rdv">Message d'annulation de RDV</a></li>
   <li><a href="#détail-des-champs-transmis-et-nomenclatures" id="markdown-toc-détail-des-champs-transmis-et-nomenclatures">Détail des champs transmis et nomenclatures</a></li>
-  <li><a href="#exemple-de-message-complet-avec-entêtes-et-contenu" id="markdown-toc-exemple-de-message-complet-avec-entêtes-et-contenu">Exemple de message complet avec entêtes et contenu</a></li>
+  <li><a href="#exemples-de-messages-complets-avec-entêtes-et-contenu" id="markdown-toc-exemples-de-messages-complets-avec-entêtes-et-contenu">Exemples de messages complets avec entêtes et contenu</a></li>
   <li><a href="#déclencheurs-et-règles-dintégration-attendues" id="markdown-toc-déclencheurs-et-règles-dintégration-attendues">Déclencheurs et règles d'intégration attendues</a></li>
 </ul>
 
@@ -559,7 +559,7 @@ Le cheminement est similaire au message envoyé mais pris en sens inverse.</p>
       <td>content.contentObject.embeddedJsonContent</td>
       <td>json</td>
       <td>Contenu du message json encapsulé dans l'entête</td>
-      <td>JSON avec errorCode et errorCause</td>
+      <td>JSON avec errorCode et errorCause et contenu du message initial</td>
     </tr>
   </tbody>
 </table>
@@ -588,7 +588,7 @@ Le cheminement est similaire au message envoyé mais pris en sens inverse.</p>
     <tr>
       <td>sourceMessage</td>
       <td>Contenu du message rejeté</td>
-      <td>A préciser</td>
+      <td>Contenu du message initial avec son entête</td>
     </tr>
   </tbody>
 </table>
@@ -1114,7 +1114,7 @@ Cf. exemple ci-dessous de message de création</p>
   <li><strong>regulatorEmail</strong> : Il s'agit de l'adresse mail du compte du régulateur telle que déclarée dans la plateforme SAS. Elle correspond également à l'identifiant de connexion à la plateforme.</li>
 </ul>
 
-<h3 id="exemple-de-message-complet-avec-entêtes-et-contenu">Exemple de message complet avec entêtes et contenu</h3>
+<h3 id="exemples-de-messages-complets-avec-entêtes-et-contenu">Exemples de messages complets avec entêtes et contenu</h3>
 
 <p><em>Message PTF SAS -&gt; SAMU 33</em></p>
 
@@ -1291,17 +1291,17 @@ Cf. exemple ci-dessous de message de création</p>
 <p><em>Message d'erreur retourné par le Hub suite à un envoi PTF SAS -&gt; SAMU 330</em></p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-    </span><span class="nl">"distributionID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.hub_cb0f6f14-6b57-4fb5-a635-97705c8d31e7"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"distributionID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.hub_29055e53-46e5-4a70-843c-335e7e058829"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"senderID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.hub"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"dateTimeSent"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-10-28T16:29:59+00:00"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"dateTimeExpires"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-10-29T16:29:59+00:00"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dateTimeSent"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-10-29T14:37:15+00:00"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dateTimeExpires"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-10-30T14:37:15+00:00"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"distributionStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Actual"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"distributionKind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Error"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"descriptor"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nl">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr-FR"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"explicitAddress"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
             </span><span class="nl">"explicitAddressScheme"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hubex"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"explicitAddressValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.ptfsas"</span><span class="w">
+            </span><span class="nl">"explicitAddressValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.test.ptfsas"</span><span class="w">
         </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"content"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -1314,12 +1314,12 @@ Cf. exemple ci-dessous de message de création</p>
                                 </span><span class="nl">"statusCode"</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w">
                                 </span><span class="nl">"statusString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INVALID_MESSAGE"</span><span class="w">
                             </span><span class="p">},</span><span class="w">
-                            </span><span class="nl">"errorCause"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Could not validate message against schema : errors occurred. </span><span class="se">\n</span><span class="s2">Issues found on the $.content[0].jsonContent.embeddedJsonContent.message content: </span><span class="se">\n</span><span class="s2"> - appointment: string found, object expected</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span><span class="w">
+                            </span><span class="nl">"errorCause"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Could not validate message against schema : errors occurred. </span><span class="se">\n</span><span class="s2">Issues found on the $.content[0].jsonContent.embeddedJsonContent.message content: </span><span class="se">\n</span><span class="s2"> - appointment.orientationCategory: does not have a value in the enumeration [CPTS, MSP, CDS, SOS, PS, PDM]</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span><span class="w">
                             </span><span class="nl">"sourceMessage"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                                </span><span class="nl">"distributionID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.ptfsas_44fce1e7-461e-4b15-91e2-b4168bed531e"</span><span class="p">,</span><span class="w">
+                                </span><span class="nl">"distributionID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.ptfsas_c461338a-97ea-41e5-b9fa-af87840890ff"</span><span class="p">,</span><span class="w">
                                 </span><span class="nl">"distributionKind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Report"</span><span class="p">,</span><span class="w">
                                 </span><span class="nl">"senderID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.ptfsas"</span><span class="p">,</span><span class="w">
-                                </span><span class="nl">"dateTimeSent"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-10-28T17:29:59+01:00"</span><span class="p">,</span><span class="w">
+                                </span><span class="nl">"dateTimeSent"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-10-29T15:37:15+01:00"</span><span class="p">,</span><span class="w">
                                 </span><span class="nl">"distributionStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Actual"</span><span class="p">,</span><span class="w">
                                 </span><span class="nl">"descriptor"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                                     </span><span class="nl">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr-FR"</span><span class="p">,</span><span class="w">
@@ -1334,12 +1334,12 @@ Cf. exemple ci-dessous de message de création</p>
                                         </span><span class="nl">"jsonContent"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                                             </span><span class="nl">"embeddedJsonContent"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                                                 </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                                                    </span><span class="nl">"messageId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.ptfsas_44fce1e7-461e-4b15-91e2-b4168bed531e"</span><span class="p">,</span><span class="w">
+                                                    </span><span class="nl">"messageId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.ptfsas_c461338a-97ea-41e5-b9fa-af87840890ff"</span><span class="p">,</span><span class="w">
                                                     </span><span class="nl">"sender"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                                                         </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ptfsas"</span><span class="p">,</span><span class="w">
                                                         </span><span class="nl">"URI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hubex:fr.health.ptfsas"</span><span class="w">
                                                     </span><span class="p">},</span><span class="w">
-                                                    </span><span class="nl">"sentAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-10-28T17:29:59+01:00"</span><span class="p">,</span><span class="w">
+                                                    </span><span class="nl">"sentAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-10-29T15:37:15+01:00"</span><span class="p">,</span><span class="w">
                                                     </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Actual"</span><span class="p">,</span><span class="w">
                                                     </span><span class="nl">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Report"</span><span class="p">,</span><span class="w">
                                                     </span><span class="nl">"recipient"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -1348,14 +1348,31 @@ Cf. exemple ci-dessous de message de création</p>
                                                             </span><span class="nl">"URI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hubex:fr.health.samu330"</span><span class="w">
                                                         </span><span class="p">}</span><span class="w">
                                                     </span><span class="p">],</span><span class="w">
-                                                    </span><span class="nl">"appointment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.ptfsas_30c8e00d-68b2-4092-a4f2-a9cb19b416e9"</span><span class="w">
+                                                    </span><span class="nl">"appointment"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                        </span><span class="nl">"appointmentId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2d2db05f-e2b0-4169-be8f-891806da2c74"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="nl">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CreateAppointment"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="nl">"created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-06-17T10:15:00+02:00"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"booked"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="nl">"orientationCategory"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Medecin"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="nl">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-06-17T14:00:00+02:00"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="nl">"end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-06-17T14:20:00+02:00"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="nl">"practitioner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                            </span><span class="nl">"rppsId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"810005681340"</span><span class="p">,</span><span class="w">
+                                                            </span><span class="nl">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MOREL"</span><span class="p">,</span><span class="w">
+                                                            </span><span class="nl">"firstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Didier"</span><span class="p">,</span><span class="w">
+                                                            </span><span class="nl">"specialityCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SM54"</span><span class="p">,</span><span class="w">
+                                                            </span><span class="nl">"specialityUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"</span><span class="p">,</span><span class="w">
+                                                            </span><span class="nl">"professionUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante"</span><span class="p">,</span><span class="w">
+                                                            </span><span class="nl">"professionCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10"</span><span class="w">
+                                                        </span><span class="p">}</span><span class="w">
+                                                    </span><span class="p">}</span><span class="w">
                                                 </span><span class="p">}</span><span class="w">
                                             </span><span class="p">}</span><span class="w">
                                         </span><span class="p">}</span><span class="w">
                                     </span><span class="p">}</span><span class="w">
                                 </span><span class="p">]</span><span class="w">
                             </span><span class="p">},</span><span class="w">
-                            </span><span class="nl">"referencedDistributionID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.ptfsas_44fce1e7-461e-4b15-91e2-b4168bed531e"</span><span class="w">
+                            </span><span class="nl">"referencedDistributionID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.ptfsas_c461338a-97ea-41e5-b9fa-af87840890ff"</span><span class="w">
                         </span><span class="p">}</span><span class="w">
                     </span><span class="p">}</span><span class="w">
                 </span><span class="p">}</span><span class="w">
@@ -1364,8 +1381,7 @@ Cf. exemple ci-dessous de message de création</p>
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
-
-<p>Dans ce cas, il manque le champ RPPS obligatoire et le contrôle de validation par le Hub échoue.</p>
+<p>Dans ce cas, le type d'orientation est incorrect car il ne respecte pas la nomenclature établie.</p>
 
 <p><em>Message d'erreur retourné par le LRM suite à un envoi PTF SAS -&gt; SAMU 330</em></p>
 
@@ -1532,7 +1548,7 @@ Le paragraphe ci-dessous détaille les différentes <strong>règles de gestions 
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Oct 29, 2025 14:06+0000">2025-10-29</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Oct 29, 2025 15:00+0000">2025-10-29</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

@@ -93,7 +93,7 @@ En cas d'erreur, un message est posté sur la file « info » de la plateforme S
 | **Entête EDXL-DE** | descriptor.language | string | Langue du message échangé | Valeur fixe :`fr-FR` |
 | **Entête EDXL-DE** | descriptor.explicitAddress.explicitAddressScheme | string | Identifiant du SI pilotant le Hub | Valeur fixe :`Hubex` |
 | **Entête EDXL-DE** | descriptor.explicitAddress.explicitAddressValue | string | Identifiant du SAMU destinataire | Valeur fixe par environnement. Ex :`fr.health.ptfsas` |
-| **Contenu** | content.contentObject.embeddedJsonContent | json | Contenu du message json encapsulé dans l'entête | JSON avec errorCode et errorCause |
+| **Contenu** | content.contentObject.embeddedJsonContent | json | Contenu du message json encapsulé dans l'entête | JSON avec errorCode et errorCause et contenu du message initial |
 
 L'erreur sera présente dans le contenu du message json qui respecte le modèle suivant, cf. spécifications du Hub Santé, §3.4.7 :
 
@@ -101,7 +101,7 @@ L'erreur sera présente dans le contenu du message json qui respecte le modèle 
 | :--- | :--- | :--- |
 | errorCode | Code de l'erreur ayant conduit au rejet du message | Cf. tableau des erreurs ci-après |
 | errorCause | Cause de l'erreur | La cause de l’erreur. Le distributionID de l’enveloppe EDXL y est précisé si le message a pu être désérialisé, ainsi que des éléments plus précis suivant l’erreur relevée. |
-| sourceMessage | Contenu du message rejeté | A préciser |
+| sourceMessage | Contenu du message rejeté | Contenu du message initial avec son entête |
 
 A noter qu'il existe deux types d'erreur :
 
@@ -515,7 +515,7 @@ Cette section détaille les champs à utiliser afin de renseigner les différent
 * **regulatorId** : Identifiant unique du régulateur ayant pris le RDV. Il s'agira uniquemet d'un identifiant national "IDNPS"(identifiant présent sur la carte CPx du régulateur). En effet, certains régulateurs n’ayant pas encore d’identifiant national à date, un identifiant technique de type uuid est créé. Cet identifiant étant connu uniquement de la PTF SAS, il ne sera pas transmis dans le flux. **Exemple d'identifiant national** : `3620100057/70326SR`
 * **regulatorEmail** : Il s'agit de l'adresse mail du compte du régulateur telle que déclarée dans la plateforme SAS. Elle correspond également à l'identifiant de connexion à la plateforme.
 
-### Exemple de message complet avec entêtes et contenu
+### Exemples de messages complets avec entêtes et contenu
 
 **Message PTF SAS -> SAMU 33**
 
@@ -700,17 +700,17 @@ Détail du message
 
 ```
 {
-    "distributionID": "fr.health.hub_cb0f6f14-6b57-4fb5-a635-97705c8d31e7",
+    "distributionID": "fr.health.hub_29055e53-46e5-4a70-843c-335e7e058829",
     "senderID": "fr.health.hub",
-    "dateTimeSent": "2025-10-28T16:29:59+00:00",
-    "dateTimeExpires": "2025-10-29T16:29:59+00:00",
+    "dateTimeSent": "2025-10-29T14:37:15+00:00",
+    "dateTimeExpires": "2025-10-30T14:37:15+00:00",
     "distributionStatus": "Actual",
     "distributionKind": "Error",
     "descriptor": {
         "language": "fr-FR",
         "explicitAddress": {
             "explicitAddressScheme": "hubex",
-            "explicitAddressValue": "fr.health.ptfsas"
+            "explicitAddressValue": "fr.health.test.ptfsas"
         }
     },
     "content": [
@@ -723,12 +723,12 @@ Détail du message
                                 "statusCode": 300,
                                 "statusString": "INVALID_MESSAGE"
                             },
-                            "errorCause": "Could not validate message against schema : errors occurred. \nIssues found on the $.content[0].jsonContent.embeddedJsonContent.message content: \n - appointment: string found, object expected\n",
+                            "errorCause": "Could not validate message against schema : errors occurred. \nIssues found on the $.content[0].jsonContent.embeddedJsonContent.message content: \n - appointment.orientationCategory: does not have a value in the enumeration [CPTS, MSP, CDS, SOS, PS, PDM]\n",
                             "sourceMessage": {
-                                "distributionID": "fr.health.ptfsas_44fce1e7-461e-4b15-91e2-b4168bed531e",
+                                "distributionID": "fr.health.ptfsas_c461338a-97ea-41e5-b9fa-af87840890ff",
                                 "distributionKind": "Report",
                                 "senderID": "fr.health.ptfsas",
-                                "dateTimeSent": "2025-10-28T17:29:59+01:00",
+                                "dateTimeSent": "2025-10-29T15:37:15+01:00",
                                 "distributionStatus": "Actual",
                                 "descriptor": {
                                     "language": "fr-FR",
@@ -743,12 +743,12 @@ Détail du message
                                         "jsonContent": {
                                             "embeddedJsonContent": {
                                                 "message": {
-                                                    "messageId": "fr.health.ptfsas_44fce1e7-461e-4b15-91e2-b4168bed531e",
+                                                    "messageId": "fr.health.ptfsas_c461338a-97ea-41e5-b9fa-af87840890ff",
                                                     "sender": {
                                                         "name": "ptfsas",
                                                         "URI": "hubex:fr.health.ptfsas"
                                                     },
-                                                    "sentAt": "2025-10-28T17:29:59+01:00",
+                                                    "sentAt": "2025-10-29T15:37:15+01:00",
                                                     "status": "Actual",
                                                     "kind": "Report",
                                                     "recipient": [
@@ -757,14 +757,31 @@ Détail du message
                                                             "URI": "hubex:fr.health.samu330"
                                                         }
                                                     ],
-                                                    "appointment": "fr.health.ptfsas_30c8e00d-68b2-4092-a4f2-a9cb19b416e9"
+                                                    "appointment": {
+                                                        "appointmentId": "2d2db05f-e2b0-4169-be8f-891806da2c74",
+                                                        "method": "CreateAppointment",
+                                                        "created": "2025-06-17T10:15:00+02:00",
+                                                        "status": "booked",
+                                                        "orientationCategory": "Medecin",
+                                                        "start": "2025-06-17T14:00:00+02:00",
+                                                        "end": "2025-06-17T14:20:00+02:00",
+                                                        "practitioner": {
+                                                            "rppsId": "810005681340",
+                                                            "lastName": "MOREL",
+                                                            "firstName": "Didier",
+                                                            "specialityCode": "SM54",
+                                                            "specialityUrl": "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
+                                                            "professionUrl": "https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante",
+                                                            "professionCode": "10"
+                                                        }
+                                                    }
                                                 }
                                             }
                                         }
                                     }
                                 ]
                             },
-                            "referencedDistributionID": "fr.health.ptfsas_44fce1e7-461e-4b15-91e2-b4168bed531e"
+                            "referencedDistributionID": "fr.health.ptfsas_c461338a-97ea-41e5-b9fa-af87840890ff"
                         }
                     }
                 }
@@ -775,7 +792,7 @@ Détail du message
 
 ```
 
-Dans ce cas, il manque le champ RPPS obligatoire et le contrôle de validation par le Hub échoue.
+Dans ce cas, le type d'orientation est incorrect car il ne respecte pas la nomenclature établie.
 
 **Message d'erreur retourné par le LRM suite à un envoi PTF SAS -> SAMU 330**
 

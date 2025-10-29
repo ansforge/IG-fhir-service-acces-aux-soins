@@ -40,7 +40,7 @@ Paramètre de recherche sur le service type qui mime le paramètre R5. Permet de
   "version" : "1.1.0",
   "name" : "SPServiceTypeCPTS",
   "status" : "active",
-  "date" : "2025-10-29T14:06:34+00:00",
+  "date" : "2025-10-29T15:00:17+00:00",
   "publisher" : "ANS",
   "contact" : [
     {
