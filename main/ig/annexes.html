@@ -42,8 +42,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"13.3"}
-    h3,h4,h5,h6{--heading-prefix:"13.3"}</style>
+    <style type="text/css">h2{--heading-prefix:"14.4"}
+    h3,h4,h5,h6{--heading-prefix:"14.4"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -140,6 +140,12 @@
       <li>
         <a href="specifications_techniques-sos-gestion_rdv.html">SOS Médecins - Gestion de rendez-vous</a>
       </li>
+      <li>
+        ________ Fluidification parcours régulateur ________
+      </li>
+      <li>
+        <a href="specifications_techniques-transmission-info-RDV-LRM.html">Transmission des informations de rendez-vous aux LRM</a>
+      </li>
     </ul>
   </li>
   <li>
@@ -158,6 +164,9 @@
       </li>
       <li>
         <a href="faq.html">FAQ</a>
+      </li>
+      <li>
+        <a href="acronymes.html">Acronymes</a>
       </li>
       <li>
         <a href="annexes.html">Annexes</a>
@@ -192,7 +201,7 @@
 
           <span style="float:right;">
 
-            <a href="faq.html">&lt;prev</a> | 
+            <a href="acronymes.html">&lt;prev</a> | 
 
             <a href="#bottom">bottom</a>
 
@@ -234,14 +243,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div>
-<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#performance-attendue-des-solutions-logicielles-interfacées---volet-agrégateur" id="markdown-toc-performance-attendue-des-solutions-logicielles-interfacées---volet-agrégateur">Performance attendue des solutions logicielles interfacées - volet agrégateur</a></li>
+  <li><a href="#hypothèses-de-volumétrie" id="markdown-toc-hypothèses-de-volumétrie">Hypothèses de volumétrie</a>    <ul>
+      <li><a href="#agregation-de-créneaux" id="markdown-toc-agregation-de-créneaux">Agregation de créneaux</a></li>
+      <li><a href="#gestion-des-comptes-régulateurs" id="markdown-toc-gestion-des-comptes-régulateurs">Gestion des comptes régulateurs</a></li>
+    </ul>
+  </li>
+  <li><a href="#correspondance-des-environnements-anssas-et-éditeurs" id="markdown-toc-correspondance-des-environnements-anssas-et-éditeurs">Correspondance des environnements ANS/SAS et éditeurs</a></li>
+</ul>
+
 </div>
 
-<h2 id="performance-attendue-des-solutions-logicielles-interfacées">Performance attendue des solutions logicielles interfacées</h2>
+<h2 id="performance-attendue-des-solutions-logicielles-interfacées---volet-agrégateur">Performance attendue des solutions logicielles interfacées - volet agrégateur</h2>
 <p>L'agrégateur de disponibilités SAS appelle de manière synchrone l'ensemble des solutions éditeurs interfacées pour une liste de 1 à 25 PS. Pour des raisons de qualité de service et d'expérience utilisateur, il est attendu de la part des solutions logicielles éditeurs de garantir un temps de réponse inférieure à 7 secondes qui pourra évoluer à l'usage. Passé ce délai, la plateforme numérique SAS déclenchera un "time-out" et toute réponse réceptionnée par la suite ne sera pas prise en compte.</p>
 
 <h2 id="hypothèses-de-volumétrie">Hypothèses de volumétrie</h2>
+<h3 id="agregation-de-créneaux">Agregation de créneaux</h3>
 <p>A titre d'information, une estimation est donnée ci-dessous de la volumétrie de requêtes émises en une heure par la plateforme numérique SAS :</p>
 <ul>
   <li><strong>Nb appels max / heure</strong> ~ 3000</li>
@@ -255,6 +274,36 @@ Hypothèses retenues pour l'estimation :</p>
   <li>Contingence = 15%</li>
   <li>Nb recherches dans la plateforme numérique SAS par appel = 4</li>
 </ul>
+
+<h3 id="gestion-des-comptes-régulateurs">Gestion des comptes régulateurs</h3>
+<p>A titre d’information, le tableau ci-dessous contient une estimation de la volumétrie de comptes régulateurs à prévoir et un ordre de grandeur sur le nombre d’appels :</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Pilote</th>
+      <th>Cible</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Nombre total de comptes</strong></td>
+      <td>1000</td>
+      <td>3500</td>
+    </tr>
+    <tr>
+      <td><strong>Nombre de compres à créer quotidiennement</strong></td>
+      <td>&lt; 1</td>
+      <td>&lt; 2</td>
+    </tr>
+    <tr>
+      <td><strong>Nombre de mises à jour quotidiennes</strong></td>
+      <td>&lt; 3</td>
+      <td>&lt; 10</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="correspondance-des-environnements-anssas-et-éditeurs">Correspondance des environnements ANS/SAS et éditeurs</h2>
 
@@ -272,12 +321,12 @@ En fonction du nombre d'environnements identifiés côté éditeur nous pouvons 
     <ul>
       <li>Recette ANS &lt;&gt; Pré-production éditeur</li>
       <li>Pré-production ANS &lt;&gt; Pré-production éditeur</li>
-      <li>Production &lt;&gt; Production
-Il est attendu de la part de l'éditeur de communiquer les endpoints correspondants à chaque environnement à l'ANS.
-<br /><br /></li>
+      <li>Production &lt;&gt; Production</li>
     </ul>
   </li>
 </ul>
+
+<p>Il est attendu de la part de l'éditeur de communiquer les endpoints correspondants à chaque environnement à l'ANS.</p>
 
 
 
@@ -302,7 +351,7 @@ Il est attendu de la part de l'éditeur de communiquer les endpoints corresponda
             <tr>
               <td style="text-align:left">&#xA0;
 
-                <a href="faq.html">&lt;prev</a>
+                <a href="acronymes.html">&lt;prev</a>
 
               </td>
               <td style="text-align:center">
@@ -320,7 +369,7 @@ Il est attendu de la part de l'éditeur de communiquer les endpoints corresponda
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Sep 9, 2025 16:28+0000">2025-09-09</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Nov 4, 2025 10:04+0000">2025-11-04</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

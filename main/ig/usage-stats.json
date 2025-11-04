@@ -10,6 +10,13 @@
       "types": [
         "Reference"
       ]
+    },
+    {
+      "url": "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-categorie-orientation",
+      "title": "CategorieOrientation",
+      "types": [
+        "CodeableConcept"
+      ]
     }
   ],
   "profiles": {
@@ -69,6 +76,9 @@
     ]
   },
   "usage": {
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-ImplementationGuide.dependsOn.reason": [
+      "ImplementationGuide.dependsOn"
+    ],
     "http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType": [
       "Bundle.entry.resource.serviceType",
       "Slot.serviceType"

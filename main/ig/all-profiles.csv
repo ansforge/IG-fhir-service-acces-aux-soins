@@ -3797,6 +3797,23 @@ ref-1:SHALL have a contained resource if a local reference is provided {referenc
 ","URL permettant d’accéder à la prise de RDV relative à ce créneau","URL permettant d’accéder à la prise de RDV relative à ce créneau","Note that FHIR strings SHALL NOT exceed 1MB in size","","","","","","","","",,,,,"",,,,"Slot.comment",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
+"sas-categorie-orientation","Extension","Extension","","","",0,*,"","","","null {[]} {[]}
+","Extension","Extension créée afin d'ajouter la catégorie d'orientation dans un RDV","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"sas-categorie-orientation","Extension.id","Extension.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"sas-categorie-orientation","Extension.extension","Extension.extension","","","",0,0,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"sas-categorie-orientation","Extension.url","Extension.url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-categorie-orientation""/>","","","","",,,,,"",,,,"Extension.url",1,1,"",""
+"sas-categorie-orientation","Extension.value[x]","Extension.value[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,"required","","https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/categorie-orientation-sas-valueset","",,,,"Extension.value[x]",0,1,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
 "sas-cpts-bundle-aggregator","Bundle","Bundle","","","",0,*,"","","","null {[]} {[]}
 ","Contains a collection of resources","A container for a collection of resources.","","","","","","","","","",,,,,"",,,,"Bundle",0,*,"","bdl-7:FullUrl must be unique in a bundle, or else entries with the same fullUrl must have different meta.versionId (except in history bundles) {(type = 'history') or entry.where(fullUrl.exists()).select(fullUrl&resource.meta.versionId).isDistinct()}
 bdl-9:A document must have an identifier with a system and a value {type = 'document' implies (identifier.system.exists() and identifier.value.exists())}bdl-3:entry.request mandatory for batch/transaction/history, otherwise prohibited {entry.all(request.exists() = (%resource.type = 'batch' or %resource.type = 'transaction' or %resource.type = 'history'))}bdl-4:entry.response mandatory for batch-response/transaction-response/history, otherwise prohibited {entry.all(response.exists() = (%resource.type = 'batch-response' or %resource.type = 'transaction-response' or %resource.type = 'history'))}bdl-12:A message must have a MessageHeader as the first resource {type = 'message' implies entry.first().resource.is(MessageHeader)}bdl-1:total only when a search or history {total.empty() or (type = 'searchset') or (type = 'history')}bdl-2:entry.search only when a search {entry.search.empty() or (type = 'searchset')}bdl-11:A document must have a Composition as the first resource {type = 'document' implies entry.first().resource.is(Composition)}bdl-10:A document must have a date {type = 'document' implies (timestamp.hasValue())}"
@@ -5199,7 +5216,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "sas-cpts-organization-aggregator","Organization.identifier.type","Organization.identifier.type","","","",1,1,"","","Y","CodeableConcept {[]} {[]}
 ","Description of identifier","A coded type for the identifier that can be used to determine which identifier to use for a specific purpose.","This element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage.   Where the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type.","Allows users to make use of identifiers when the identifier system is not known.","","","","<valueCodeableConcept xmlns=""http://hl7.org/fhir"">
   <coding>
-    <system value=""http://interopsante.org/fhir/CodeSystem/fr-v2-0203""/>
+    <system value=""https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203""/>
     <code value=""IDNST""/>
   </coding>
 </valueCodeableConcept>","","","",,"extensible","A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.","http://interopsante.org/fhir/ValueSet/fr-organization-identifier-type","",,,,"Identifier.type",0,1,"ele-1

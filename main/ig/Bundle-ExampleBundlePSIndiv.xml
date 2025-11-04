@@ -23,6 +23,9 @@
             <code value="PUBLIC"/>
           </security>
         </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Slot_ExampleSlotPSIndiv1"> </a><p class="res-header-id"><b>Narratif généré : Slot ExampleSlotPSIndiv1</b></p><a name="ExampleSlotPSIndiv1"> </a><a name="hcExampleSlotPSIndiv1"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-FrSlotAgregateur.html">FrSlotAgregateur</a></p><p style="margin-bottom: 0px">Label de sécurité: Créneau accessible par le grand public (Détails : code TRE_R314-TypeCreneau PUBLIC = 'Créneau accessible par le grand public')</p></div><p><b>serviceType</b>: <span title="Codes :{http://terminology.hl7.org/CodeSystem/v3-ActCode AMB}">ambulatory</span>, <span title="Codes :{http://terminology.hl7.org/CodeSystem/v3-ActCode VR}">virtual</span>, <span title="Codes :">Visite de contrôle</span></p><p><b>specialty</b>: <span title="Codes :{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM54}">Médecine générale (SM)</span>, <span title="Codes :{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM05}">Chirurgie générale (SM)</span></p><p><b>appointmentType</b>: <span title="Codes :{http://terminology.hl7.org/CodeSystem/v2-0276 ROUTINE}">Routine appointment - default if not valued</span></p><p><b>schedule</b>: <a href="Schedule-ExampleSchedule1.html">Schedule</a></p><p><b>status</b>: Free</p><p><b>start</b>: 2021-11-05 09:00:00+0000</p><p><b>end</b>: 2021-11-05 09:30:00+0000</p><p><b>comment</b>: https://exemple.com/rdv/com/</p></div>
+        </text>
         <serviceType>
           <coding>
             <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
@@ -65,6 +68,9 @@
         <comment value="https://exemple.com/rdv/com/"/>
       </Slot>
     </resource>
+    <search>
+      <mode value="match"/>
+    </search>
   </entry>
   <entry>
     <fullUrl value="https://exemple.com/ans-sas/Schedule/ExampleSchedule1"/>
@@ -74,6 +80,9 @@
         <meta>
           <profile value="http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"/>
         </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Schedule_ExampleSchedule1"> </a><p class="res-header-id"><b>Narratif généré : Schedule ExampleSchedule1</b></p><a name="ExampleSchedule1"> </a><a name="hcExampleSchedule1"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-FrScheduleAgregateur.html">FrScheduleAgregateur</a></p></div><p><b>actor</b>: </p><ul><li><a href="Practitioner-ExamplePractitioner2.html">Practitioner Sébastien THOMAS </a></li><li><a href="PractitionerRole-ExamplePractitionerRoleAgregateur2.html">PractitionerRole</a></li></ul></div>
+        </text>
         <actor>
           <reference value="Practitioner/ExamplePractitioner2"/>
         </actor>
@@ -82,6 +91,9 @@
         </actor>
       </Schedule>
     </resource>
+    <search>
+      <mode value="include"/>
+    </search>
   </entry>
   <entry>
     <fullUrl value="https://exemple.com/ans-sas/Practitioner/ExamplePractitioner2"/>
@@ -91,6 +103,9 @@
         <meta>
           <profile value="http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur"/>
         </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Practitioner_ExamplePractitioner2"> </a><p class="res-header-id"><b>Narratif généré : Praticien ExamplePractitioner2</b></p><a name="ExamplePractitioner2"> </a><a name="hcExamplePractitioner2"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-FrPractitionerAgregateur.html">FrPractitionerAgregateur</a></p></div><p><b>identifier</b>: Identifiant National de Professionnel de Santé/810100050075</p><p><b>name</b>: Sébastien THOMAS </p></div>
+        </text>
         <identifier>
           <type>
             <coding>
@@ -116,6 +131,9 @@
         <meta>
           <profile value="http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"/>
         </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="PractitionerRole_ExamplePractitionerRoleAgregateur2"> </a><p class="res-header-id"><b>Narratif généré : PractitionerRole ExamplePractitionerRoleAgregateur2</b></p><a name="ExamplePractitionerRoleAgregateur2"> </a><a name="hcExamplePractitionerRoleAgregateur2"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-FrPractitionerRoleExerciceAgregateur.html">FrPractitionerRoleExerciceAgregateur</a></p></div><p><b>practitioner</b>: <a href="Practitioner-ExamplePractitioner2.html">Practitioner Sébastien THOMAS </a></p><p><b>organization</b>: Identifier: Identification nationale de structure définie par l’ASIP-SANTE dans le CI_SIS/1810004421</p><p><b>location</b>: <a href="#hcExamplePractitionerRoleAgregateur2/ExampleLocation3">Location : identifier = Identifiant interne</a></p><hr/><blockquote><p class="res-header-id"><b>Narratif généré : Localisation #ExampleLocation3</b></p><a name="ExamplePractitionerRoleAgregateur2/ExampleLocation3"> </a><a name="hcExamplePractitionerRoleAgregateur2/ExampleLocation3"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-FrLocationAgregateur.html">FrLocationAgregateur</a></p></div><p><b>identifier</b>: Identifiant interne/1</p><p><b>address</b>: 1 rue Mme DELMAS AGEN 47000 </p></blockquote></div>
+        </text>
         <contained>
           <Location>
             <id value="ExampleLocation3"/>
@@ -159,6 +177,9 @@
         </location>
       </PractitionerRole>
     </resource>
+    <search>
+      <mode value="include"/>
+    </search>
   </entry>
   <entry>
     <fullUrl value="https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv2"/>
@@ -172,6 +193,9 @@
             <code value="PRO"/>
           </security>
         </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Slot_ExampleSlotPSIndiv2"> </a><p class="res-header-id"><b>Narratif généré : Slot ExampleSlotPSIndiv2</b></p><a name="ExampleSlotPSIndiv2"> </a><a name="hcExampleSlotPSIndiv2"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-FrSlotAgregateur.html">FrSlotAgregateur</a></p><p style="margin-bottom: 0px">Label de sécurité: Créneau accessible par l'ensemble des professionnels de santé (Détails : code TRE_R314-TypeCreneau PRO = 'Créneau accessible par l'ensemble des professionnels de santé')</p></div><p><b>serviceType</b>: <span title="Codes :{http://terminology.hl7.org/CodeSystem/v3-ActCode AMB}">ambulatory</span>, <span title="Codes :">Visite urgente</span></p><p><b>specialty</b>: <span title="Codes :{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM54}">Médecine générale (SM)</span></p><p><b>appointmentType</b>: <span title="Codes :{http://terminology.hl7.org/CodeSystem/v2-0276 WALKIN}">A previously unscheduled walk-in visit</span></p><p><b>schedule</b>: <a href="Schedule-ExampleSchedule2.html">Schedule</a></p><p><b>status</b>: Free</p><p><b>start</b>: 2021-11-05 11:00:00+0000</p><p><b>end</b>: 2021-11-05 11:30:00+0000</p></div>
+        </text>
         <serviceType>
           <coding>
             <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
@@ -201,6 +225,9 @@
         <end value="2021-11-05T11:30:00.000+00:00"/>
       </Slot>
     </resource>
+    <search>
+      <mode value="match"/>
+    </search>
   </entry>
   <entry>
     <fullUrl value="https://exemple.com/ans-sas/Schedule/ExampleSchedule2"/>
@@ -210,6 +237,9 @@
         <meta>
           <profile value="http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"/>
         </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Schedule_ExampleSchedule2"> </a><p class="res-header-id"><b>Narratif généré : Schedule ExampleSchedule2</b></p><a name="ExampleSchedule2"> </a><a name="hcExampleSchedule2"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-FrScheduleAgregateur.html">FrScheduleAgregateur</a></p></div><p><b>actor</b>: </p><ul><li><a href="Practitioner-ExamplePractitioner2.html">Practitioner Sébastien THOMAS </a></li><li><a href="PractitionerRole-ExamplePractitionerRoleAgregateur3.html">PractitionerRole</a></li></ul></div>
+        </text>
         <actor>
           <reference value="Practitioner/ExamplePractitioner2"/>
         </actor>
@@ -218,6 +248,9 @@
         </actor>
       </Schedule>
     </resource>
+    <search>
+      <mode value="include"/>
+    </search>
   </entry>
   <entry>
     <fullUrl value="https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur3"/>
@@ -227,6 +260,9 @@
         <meta>
           <profile value="http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"/>
         </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="PractitionerRole_ExamplePractitionerRoleAgregateur3"> </a><p class="res-header-id"><b>Narratif généré : PractitionerRole ExamplePractitionerRoleAgregateur3</b></p><a name="ExamplePractitionerRoleAgregateur3"> </a><a name="hcExamplePractitionerRoleAgregateur3"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-FrPractitionerRoleExerciceAgregateur.html">FrPractitionerRoleExerciceAgregateur</a></p></div><p><b>practitioner</b>: <a href="Practitioner-ExamplePractitioner2.html">Practitioner Sébastien THOMAS </a></p><p><b>organization</b>: Identifier: Identification nationale de structure définie par l’ASIP-SANTE dans le CI_SIS/1810004956</p><p><b>location</b>: <a href="#hcExamplePractitionerRoleAgregateur3/ExampleLocation2">Location : identifier = Identifiant interne</a></p><hr/><blockquote><p class="res-header-id"><b>Narratif généré : Localisation #ExampleLocation2</b></p><a name="ExamplePractitionerRoleAgregateur3/ExampleLocation2"> </a><a name="hcExamplePractitionerRoleAgregateur3/ExampleLocation2"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-FrLocationAgregateur.html">FrLocationAgregateur</a></p></div><p><b>identifier</b>: Identifiant interne/2</p><p><b>address</b>: 30 rue Mme DELMAS AGEN 47000 </p></blockquote></div>
+        </text>
         <contained>
           <Location>
             <id value="ExampleLocation2"/>
@@ -270,6 +306,9 @@
         </location>
       </PractitionerRole>
     </resource>
+    <search>
+      <mode value="include"/>
+    </search>
   </entry>
   <entry>
     <fullUrl value="https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv3"/>
@@ -287,6 +326,9 @@
             <code value="PRO"/>
           </security>
         </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Slot_ExampleSlotPSIndiv3"> </a><p class="res-header-id"><b>Narratif généré : Slot ExampleSlotPSIndiv3</b></p><a name="ExampleSlotPSIndiv3"> </a><a name="hcExampleSlotPSIndiv3"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-FrSlotAgregateur.html">FrSlotAgregateur</a></p><p style="margin-bottom: 0px">Label de sécurités: Créneau accessible par le grand public (Détails : code TRE_R314-TypeCreneau PUBLIC = 'Créneau accessible par le grand public'), Créneau accessible par l'ensemble des professionnels de santé (Détails : code TRE_R314-TypeCreneau PRO = 'Créneau accessible par l'ensemble des professionnels de santé')</p></div><p><b>serviceType</b>: <span title="Codes :{http://terminology.hl7.org/CodeSystem/v3-ActCode VR}">virtual</span>, <span title="Codes :">Visite de contrôle</span>, <span title="Codes :">Consultation de suivi pneumologie</span></p><p><b>specialty</b>: <span title="Codes :{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM41}">Pneumologie (SM)</span></p><p><b>appointmentType</b>: <span title="Codes :{http://terminology.hl7.org/CodeSystem/v2-0276 ROUTINE}">Routine appointment - default if not valued</span></p><p><b>schedule</b>: <a href="Schedule-ExampleSchedule3.html">Schedule</a></p><p><b>status</b>: Free</p><p><b>start</b>: 2021-11-04 14:20:00+0000</p><p><b>end</b>: 2021-11-04 14:40:00+0000</p><p><b>comment</b>: https://exemple.com/rdv/com/</p></div>
+        </text>
         <serviceType>
           <coding>
             <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
@@ -320,6 +362,9 @@
         <comment value="https://exemple.com/rdv/com/"/>
       </Slot>
     </resource>
+    <search>
+      <mode value="match"/>
+    </search>
   </entry>
   <entry>
     <fullUrl value="https://exemple.com/ans-sas/Schedule/ExampleSchedule3"/>
@@ -329,6 +374,9 @@
         <meta>
           <profile value="http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"/>
         </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Schedule_ExampleSchedule3"> </a><p class="res-header-id"><b>Narratif généré : Schedule ExampleSchedule3</b></p><a name="ExampleSchedule3"> </a><a name="hcExampleSchedule3"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-FrScheduleAgregateur.html">FrScheduleAgregateur</a></p></div><p><b>actor</b>: </p><ul><li><a href="Practitioner-ExamplePractitioner3.html">Practitioner Guillaume MARCEL </a></li><li><a href="PractitionerRole-ExamplePractitionerRoleAgregateur4.html">PractitionerRole : telecom = ph: +33658913859</a></li></ul></div>
+        </text>
         <actor>
           <reference value="Practitioner/ExamplePractitioner3"/>
         </actor>
@@ -337,6 +385,9 @@
         </actor>
       </Schedule>
     </resource>
+    <search>
+      <mode value="include"/>
+    </search>
   </entry>
   <entry>
     <fullUrl value="https://exemple.com/ans-sas/Practitioner/ExamplePractitioner3"/>
@@ -346,6 +397,9 @@
         <meta>
           <profile value="http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur"/>
         </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Practitioner_ExamplePractitioner3"> </a><p class="res-header-id"><b>Narratif généré : Praticien ExamplePractitioner3</b></p><a name="ExamplePractitioner3"> </a><a name="hcExamplePractitioner3"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-FrPractitionerAgregateur.html">FrPractitionerAgregateur</a></p></div><p><b>identifier</b>: Identifiant National de Professionnel de Santé/810002673899</p><p><b>name</b>: Guillaume MARCEL </p></div>
+        </text>
         <identifier>
           <type>
             <coding>
@@ -362,6 +416,9 @@
         </name>
       </Practitioner>
     </resource>
+    <search>
+      <mode value="include"/>
+    </search>
   </entry>
   <entry>
     <fullUrl value="https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur4"/>
@@ -371,6 +428,9 @@
         <meta>
           <profile value="http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"/>
         </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="PractitionerRole_ExamplePractitionerRoleAgregateur4"> </a><p class="res-header-id"><b>Narratif généré : PractitionerRole ExamplePractitionerRoleAgregateur4</b></p><a name="ExamplePractitionerRoleAgregateur4"> </a><a name="hcExamplePractitionerRoleAgregateur4"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-FrPractitionerRoleExerciceAgregateur.html">FrPractitionerRoleExerciceAgregateur</a></p></div><p><b>practitioner</b>: <a href="Practitioner-ExamplePractitioner3.html">Practitioner Guillaume MARCEL </a></p><p><b>organization</b>: Identifier: Identification nationale de structure définie par l’ASIP-SANTE dans le CI_SIS/1810004421</p><p><b>location</b>: <a href="#hcExamplePractitionerRoleAgregateur4/ExampleLocation3">Location : identifier = Identifiant interne</a></p><p><b>telecom</b>: <a href="tel:+33658913859">+33658913859</a></p><hr/><blockquote><p class="res-header-id"><b>Narratif généré : Localisation #ExampleLocation3</b></p><a name="ExamplePractitionerRoleAgregateur4/ExampleLocation3"> </a><a name="hcExamplePractitionerRoleAgregateur4/ExampleLocation3"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-FrLocationAgregateur.html">FrLocationAgregateur</a></p></div><p><b>identifier</b>: Identifiant interne/1</p><p><b>address</b>: 1 rue Mme DELMAS AGEN 47000 </p></blockquote></div>
+        </text>
         <contained>
           <Location>
             <id value="ExampleLocation3"/>
@@ -418,6 +478,9 @@
         </telecom>
       </PractitionerRole>
     </resource>
+    <search>
+      <mode value="include"/>
+    </search>
   </entry>
   <entry>
     <fullUrl value="https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv4"/>
@@ -435,6 +498,9 @@
             <code value="PRO"/>
           </security>
         </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Slot_ExampleSlotPSIndiv4"> </a><p class="res-header-id"><b>Narratif généré : Slot ExampleSlotPSIndiv4</b></p><a name="ExampleSlotPSIndiv4"> </a><a name="hcExampleSlotPSIndiv4"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-FrSlotAgregateur.html">FrSlotAgregateur</a></p><p style="margin-bottom: 0px">Label de sécurités: Créneau accessible par le grand public (Détails : code TRE_R314-TypeCreneau PUBLIC = 'Créneau accessible par le grand public'), Créneau accessible par l'ensemble des professionnels de santé (Détails : code TRE_R314-TypeCreneau PRO = 'Créneau accessible par l'ensemble des professionnels de santé')</p></div><p><b>serviceType</b>: <span title="Codes :{http://terminology.hl7.org/CodeSystem/v3-ActCode HH}">home health</span>, <span title="Codes :">Visite de contrôle</span>, <span title="Codes :">Consultation de suivi pneumologique</span></p><p><b>specialty</b>: <span title="Codes :{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM41}">Pneumologie (SM)</span>, <span title="Codes :{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM54}">Médecine générale (SM)</span></p><p><b>appointmentType</b>: <span title="Codes :{http://terminology.hl7.org/CodeSystem/v2-0276 ROUTINE}">Routine appointment - default if not valued</span></p><p><b>schedule</b>: <a href="Schedule-ExampleSchedule3.html">Schedule</a></p><p><b>status</b>: Free</p><p><b>start</b>: 2021-11-04 14:40:00+0000</p><p><b>end</b>: 2021-11-04 15:00:00+0000</p><p><b>comment</b>: https://exemple.com/rdv/com/</p></div>
+        </text>
         <serviceType>
           <coding>
             <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
@@ -474,5 +540,8 @@
         <comment value="https://exemple.com/rdv/com/"/>
       </Slot>
     </resource>
+    <search>
+      <mode value="match"/>
+    </search>
   </entry>
 </Bundle>

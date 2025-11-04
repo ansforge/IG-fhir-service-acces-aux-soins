@@ -140,6 +140,12 @@
       <li>
         <a href="specifications_techniques-sos-gestion_rdv.html">SOS Médecins - Gestion de rendez-vous</a>
       </li>
+      <li>
+        ________ Fluidification parcours régulateur ________
+      </li>
+      <li>
+        <a href="specifications_techniques-transmission-info-RDV-LRM.html">Transmission des informations de rendez-vous aux LRM</a>
+      </li>
     </ul>
   </li>
   <li>
@@ -158,6 +164,9 @@
       </li>
       <li>
         <a href="faq.html">FAQ</a>
+      </li>
+      <li>
+        <a href="acronymes.html">Acronymes</a>
       </li>
       <li>
         <a href="annexes.html">Annexes</a>
@@ -307,7 +316,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h5 id="réponse-de-base--succès">Réponse de base – Succès</h5>
 
-<p>Lien vers la spécification FHIR : <a href="https://www.hl7.org/fhir/bundle.html">https://www.hl7.org/fhir/bundle.html</a></p>
+<p>Lien vers la spécification FHIR : <a href="https://www.hl7.org/fhir/practitioner.html">https://www.hl7.org/fhir/practitioner.html</a></p>
 
 <p>Si la création est un succès, le serveur répond :</p>
 
@@ -351,7 +360,7 @@ détails sur la raison de l'échec</li>
 
 <p>La requête ci-dessous correspond à la création ou mise à jour du compte de Sébastien LORIDON, dont l’identifiant national est <code class="language-plaintext highlighter-rouge">3456780581/11242343</code> et le mail <code class="language-plaintext highlighter-rouge">sebastien.loridon@test.com</code>.</p>
 
-<pre class="json" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
+<pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
   "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner">resourceType</a>" : "Practitioner",
   "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.id">id</a>" : "ExamplePractitionerRegul1",
   "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.meta">meta</a>" : {
@@ -359,6 +368,10 @@ détails sur la raison de l'échec</li>
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
       <a href="StructureDefinition-FrPractitionerRegul.html" style="color: Maroon">&#x1F517;</a> "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul"
     ]
+  },
+  "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : Praticien ExamplePractitionerRegul1&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExamplePractitionerRegul1\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExamplePractitionerRegul1\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Information Source: &lt;a href=\&quot;https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&amp;amp;canonical=urn:oid:1.2.250.1.213.3.6\&quot;&gt;urn:oid:1.2.250.1.213.3.6&lt;/a&gt;&lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-FrPractitionerRegul.html\&quot;&gt;FrPractitionerRegul&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: Identifiant National de Professionnel de Santé/3456780581/11242343&lt;/p&gt;&lt;p&gt;&lt;b&gt;active&lt;/b&gt;: true&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Sébastien Loridon &lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: &lt;a href=\&quot;mailto:sebastien.loridon@test.com\&quot;&gt;sebastien.loridon@test.com&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;"
   },
   "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.identifier">identifier</a>" : [
     {
@@ -471,12 +484,12 @@ détails sur la raison de l'échec</li>
 
 <p>Cette section détaille les règles de gestion à utiliser au niveau des éléments retournés par la requête.</p>
 <ul>
-  <li><strong>ID : 1 – Identifiant national du régulateur :</strong>
+  <li><strong>Identifiant national du régulateur :</strong>
     <ul>
       <li>Le régulateur n’a potentiellement pas d’identifiant national à date ou n’a pas rattaché son identifiant national à son compte SAS. Par défaut il aura un ID technique SAS. Lorsque l’ajout ou le rattachement de l’identifiant national sera effectué, l’information sera transmise dans une requête de mise à jour.</li>
     </ul>
   </li>
-  <li><strong>ID : 2 – Autorité d'affectation :</strong>
+  <li><strong>Autorité d'affectation :</strong>
     <ul>
       <li>Lorsque l’identifiant transmis est un ID national, le champ est valorisé à <code class="language-plaintext highlighter-rouge">urn:oid:1.2.250.1.71.4.2.1</code>. Lorsque l’identifiant transmis est un ID technique SAS, il est valorisé à <code class="language-plaintext highlighter-rouge">urn:oid:1.2.250.1.213.3.6</code>.</li>
     </ul>
@@ -486,12 +499,12 @@ détails sur la raison de l'échec</li>
       <li>Lorsque l’identifiant transmis est un ID national, le champ type.coding.code est valorisé à <code class="language-plaintext highlighter-rouge">IDNPS</code>. Lorsque l’identifiant transmis est un ID technique SAS, il est valorisé à <code class="language-plaintext highlighter-rouge">INTRN</code>.</li>
     </ul>
   </li>
-  <li><strong>ID : 4 – Habilitation (active ou non) :</strong>
+  <li><strong>Habilitation (active ou non) :</strong>
     <ul>
       <li>Si le champ est valorisé à <code class="language-plaintext highlighter-rouge">true</code> le compte doit être habilité et actif, si le champ est valorisé à <code class="language-plaintext highlighter-rouge">false</code> le compte doit être déshabilité ou désactivé.</li>
     </ul>
   </li>
-  <li><strong>ID : 5 – Source de la requête :</strong>
+  <li><strong>Source de la requête :</strong>
     <ul>
       <li>La requête venant de la plateforme numérique SAS, le champ meta.source sera toujours valorisé à : <code class="language-plaintext highlighter-rouge">urn:oid:1.2.250.1.213.3.6</code>.</li>
     </ul>
@@ -539,7 +552,7 @@ détails sur la raison de l'échec</li>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Sep 9, 2025 16:28+0000">2025-09-09</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Nov 4, 2025 10:04+0000">2025-11-04</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

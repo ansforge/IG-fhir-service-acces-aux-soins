@@ -12,12 +12,12 @@
   fhir:meta [
      fhir:profile ( [
        fhir:v "http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"^^xsd:anyURI ;
-       fhir:link <http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur>
+       fhir:l <http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur>
      ] )
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : PractitionerRole ExamplePractitionerRoleAgregateur4</b></p><a name=\"ExamplePractitionerRoleAgregateur4\"> </a><a name=\"hcExamplePractitionerRoleAgregateur4\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-FrPractitionerRoleExerciceAgregateur.html\">FrPractitionerRoleExerciceAgregateur</a></p></div><p><b>practitioner</b>: <a href=\"Practitioner-ExamplePractitioner3.html\">Practitioner Guillaume MARCEL </a></p><p><b>organization</b>: Identifier: Identification nationale de structure définie par l’ASIP-SANTE dans le CI_SIS/1810004421</p><p><b>location</b>: <a href=\"#hcExamplePractitionerRoleAgregateur4/ExampleLocation3\">Location : identifier = Identifiant interne</a></p><p><b>telecom</b>: <a href=\"tel:+33658913859\">+33658913859</a></p><hr/><blockquote><p class=\"res-header-id\"><b>Narratif généré : Localisation #ExampleLocation3</b></p><a name=\"ExamplePractitionerRoleAgregateur4/ExampleLocation3\"> </a><a name=\"hcExamplePractitionerRoleAgregateur4/ExampleLocation3\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-FrLocationAgregateur.html\">FrLocationAgregateur</a></p></div><p><b>identifier</b>: Identifiant interne/1</p><p><b>address</b>: 1 rue Mme DELMAS AGEN 47000 </p></blockquote></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : PractitionerRole ExamplePractitionerRoleAgregateur4</b></p><a name=\"ExamplePractitionerRoleAgregateur4\"> </a><a name=\"hcExamplePractitionerRoleAgregateur4\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-FrPractitionerRoleExerciceAgregateur.html\">FrPractitionerRoleExerciceAgregateur</a></p></div><p><b>practitioner</b>: <a href=\"Practitioner-ExamplePractitioner3.html\">Practitioner Guillaume MARCEL </a></p><p><b>organization</b>: Identifier: Identification nationale de structure définie par l’ASIP-SANTE dans le CI_SIS/1810004421</p><p><b>location</b>: <a href=\"#hcExamplePractitionerRoleAgregateur4/ExampleLocation3\">Location : identifier = Identifiant interne</a></p><p><b>telecom</b>: <a href=\"tel:+33658913859\">+33658913859</a></p><hr/><blockquote><p class=\"res-header-id\"><b>Narratif généré : Localisation #ExampleLocation3</b></p><a name=\"ExamplePractitionerRoleAgregateur4/ExampleLocation3\"> </a><a name=\"hcExamplePractitionerRoleAgregateur4/ExampleLocation3\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-FrLocationAgregateur.html\">FrLocationAgregateur</a></p></div><p><b>identifier</b>: Identifiant interne/1</p><p><b>address</b>: 1 rue Mme DELMAS AGEN 47000 </p></blockquote></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:contained ( [
      a fhir:Location ;
@@ -25,17 +25,23 @@
      fhir:meta [
        fhir:profile ( [
          fhir:v "http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur"^^xsd:anyURI ;
-         fhir:link <http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur>
+         fhir:l <http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur>
        ] )
      ] ;
      fhir:identifier ( [
        fhir:type [
          fhir:coding ( [
-           fhir:system [ fhir:v "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"^^xsd:anyURI ] ;
+           fhir:system [
+             fhir:v "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"^^xsd:anyURI ;
+             fhir:l <http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type>
+           ] ;
            fhir:code [ fhir:v "INTRN" ]
          ] )
        ] ;
-       fhir:system [ fhir:v "urn:oid:1.1.111.1.111.1.1.1"^^xsd:anyURI ] ;
+       fhir:system [
+         fhir:v "urn:oid:1.1.111.1.111.1.1.1"^^xsd:anyURI ;
+         fhir:l <urn:oid:1.1.111.1.111.1.1.1>
+       ] ;
        fhir:value [ fhir:v "1" ]
      ] ) ;
      fhir:address [
@@ -45,22 +51,29 @@
      ]
   ] ) ; # 
   fhir:practitioner [
-     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/ExamplePractitioner3> ;
+     fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/ExamplePractitioner3> ;
      fhir:reference [ fhir:v "Practitioner/ExamplePractitioner3" ]
   ] ; # 
   fhir:organization [
      fhir:identifier [
        fhir:type [
          fhir:coding ( [
-           fhir:system [ fhir:v "http://interopsante.org/fhir/CodeSystem/fr-v2-0203"^^xsd:anyURI ] ;
+           fhir:system [
+             fhir:v "http://interopsante.org/fhir/CodeSystem/fr-v2-0203"^^xsd:anyURI ;
+             fhir:l <http://interopsante.org/fhir/CodeSystem/fr-v2-0203>
+           ] ;
            fhir:code [ fhir:v "IDNST" ]
          ] )
        ] ;
-       fhir:system [ fhir:v "urn:oid:1.2.250.1.71.4.2.2"^^xsd:anyURI ] ;
+       fhir:system [
+         fhir:v "urn:oid:1.2.250.1.71.4.2.2"^^xsd:anyURI ;
+         fhir:l <urn:oid:1.2.250.1.71.4.2.2>
+       ] ;
        fhir:value [ fhir:v "1810004421" ]
      ]
   ] ; # 
   fhir:location ( [
+     fhir:l <#ExampleLocation3> ;
      fhir:reference [ fhir:v "#ExampleLocation3" ]
   ] ) ; # 
   fhir:telecom ( [

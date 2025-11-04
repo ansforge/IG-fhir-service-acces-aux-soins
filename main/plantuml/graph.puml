@@ -256,6 +256,12 @@ package IG #DDDDDD{
      FrSlotAgregateurCPTS -[#black,dashed,thickness=2]-> SASServiceTypeR5
      FrSlotAgregateurCPTS -[#black,dashed,thickness=2]-> SASServiceTypeR5
 
+        class CategorieOrientation{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
         class SASServiceTypeR5{
 
           Extension.extension => [None..0]
@@ -264,6 +270,10 @@ package IG #DDDDDD{
          }
      }
      package valueset #PaleVioletRed{
+
+        class CategorieOrientationSASValueSet  
+
+     CategorieOrientation -[#black,dotted,thickness=2]-> CategorieOrientationSASValueSet
 
         class TypeCreneauSASCPTS  
 

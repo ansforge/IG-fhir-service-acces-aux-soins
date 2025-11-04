@@ -10,7 +10,7 @@
   <name value="SAS"/>
   <title value="Service d'Accès aux Soins"/>
   <status value="active"/>
-  <date value="2025-09-09T16:27:22+00:00"/>
+  <date value="2025-11-04T10:04:56+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -45,15 +45,21 @@
     <packageId value="hl7.fhir.uv.extensions.r4"/>
     <version value="5.2.0"/>
   </dependsOn>
-  <dependsOn id="hl7_fhir_fr_core">
+  <dependsOn id="frcore210">
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-ImplementationGuide.dependsOn.reason">
+      <valueMarkdown value="Version utilisée pour les nouveaux cas d'usage&#xA;"/>
+    </extension>
+    <uri value="https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core"/>
+    <packageId value="hl7.fhir.fr.core"/>
+    <version value="2.1.0"/>
+  </dependsOn>
+  <dependsOn id="frcore110">
+    <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-ImplementationGuide.dependsOn.reason">
+      <valueMarkdown value="Version utilisée pour les cas d'usage PS Indiv, SOS et CPTS&#xA;"/>
+    </extension>
     <uri value="http://fhir.org/packages/hl7.fhir.fr.core/ImplementationGuide/hl7.fhir.fr.core"/>
     <packageId value="hl7.fhir.fr.core"/>
     <version value="1.1.0"/>
-  </dependsOn>
-  <dependsOn id="ans_fr_nos">
-    <uri value="https://interop.esante.gouv.fr/ig/nos/ImplementationGuide/ans.fr.nos"/>
-    <packageId value="ans.fr.nos"/>
-    <version value="1.4.0"/>
   </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -78,70 +84,6 @@
       </extension>
       <extension url="value">
         <valueString value="true"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="Appointment/*"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="Bundle/*"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="HealthcareService/*"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="Location/*"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="Organization/*"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="Practitioner/*"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="Schedule/*"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="Slot/*"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -357,70 +299,6 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueCode value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="Appointment/*"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueCode value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="Bundle/*"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueCode value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="HealthcareService/*"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueCode value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="Location/*"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueCode value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="Organization/*"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueCode value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="Practitioner/*"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueCode value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="Schedule/*"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueCode value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="Slot/*"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
         <valueCode value="autoload-resources"/>
       </extension>
       <extension url="value">
@@ -608,6 +486,17 @@
         <valueString value="ValueSet"/>
       </extension>
       <reference>
+        <reference value="ValueSet/sas-valueset-appointmentparticipanttype"/>
+      </reference>
+      <name value="Appointment Participant Type SAS"/>
+      <description value="Type de participant du RDV SAS"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
         <reference value="ValueSet/sas-valueset-appointmentreason"/>
       </reference>
       <name value="Appointment reason SAS"/>
@@ -649,6 +538,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/sas-categorie-orientation"/>
+      </reference>
+      <name value="CategorieOrientation"/>
+      <description value="Extension créée afin d'ajouter la catégorie d'orientation dans un RDV"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ValueSet"/>
       </extension>
       <reference>
@@ -656,6 +556,17 @@
       </reference>
       <name value="Catégorie établissement SAS"/>
       <description value="Catégorie d'établissement utilisée dans contexte SAS - CPTS dans un premier temps"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/categorie-orientation-sas-codesystem"/>
+      </reference>
+      <name value="Code système catégorie orientation SAS"/>
+      <description value="Code système permettant de définir la catégorie d'orientation SAS spécifique qui n'est pas considéré comme un établissement de soins et qui permet de catégoriser l'orientation de soins"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1483,6 +1394,17 @@
       <description value="Type d'identifiant SAS"/>
       <exampleBoolean value="false"/>
     </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/categorie-orientation-sas-valueset"/>
+      </reference>
+      <name value="Value set catégorie orientation SAS"/>
+      <description value="Valueset permettant de définir la catégorie d'orientation SAS. Il regroupe des codes de la TRE-R66 et du codesystem catégorie orientation SAS"/>
+      <exampleBoolean value="false"/>
+    </resource>
     <page>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
         <valueUrl value="toc.html"/>
@@ -1580,6 +1502,14 @@
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="specifications_techniques-transmission-info-RDV-LRM.html"/>
+        </extension>
+        <nameUrl value="specifications_techniques-transmission-info-RDV-LRM.html"/>
+        <title value="Transmission des informations de rendez-vous aux LRM"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
           <valueUrl value="ressources_casusage.html"/>
         </extension>
         <nameUrl value="ressources_casusage.html"/>
@@ -1607,6 +1537,14 @@
           </extension>
           <nameUrl value="faq.html"/>
           <title value="FAQ"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="acronymes.html"/>
+          </extension>
+          <nameUrl value="acronymes.html"/>
+          <title value="Sigles/Acronymes"/>
           <generation value="markdown"/>
         </page>
         <page>
