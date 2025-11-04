@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-categorieetablissement | *Version*:1.1.0 |
-| Active as of 2025-10-29 | *Computable Name*:CategorieEtablissementSAS |
+| Active as of 2025-11-04 | *Computable Name*:CategorieEtablissementSAS |
 
  
 Catégorie d'établissement utilisée dans contexte SAS - CPTS dans un premier temps 
@@ -53,7 +53,7 @@ Catégorie d'établissement utilisée dans contexte SAS - CPTS dans un premier t
   "title" : "Catégorie établissement SAS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2025-10-29T15:00:17+00:00",
+  "date" : "2025-11-04T09:53:58+00:00",
   "publisher" : "ANS",
   "contact" : [
     {
