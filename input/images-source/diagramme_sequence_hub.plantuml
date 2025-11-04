@@ -16,7 +16,7 @@ participant LGA
 
 SAMU -> LRM : Création de fiche
 SAMU -> LRM : Décision d'orientation
-LRM -> PTF : Recherche de RDV (appel contextuel)
+LRM -> PTF : Recherche de RDV (appel contextuel - redirection vers PTF SAS)
 PTF -> LGA : Redirection sur la solution éditeur\net prise de RDV
 LGA -> PTF : Remontée des informations du RDV pris
 skinparam sequence {
