@@ -22,6 +22,7 @@ Les ressources sont profilées pour les différents cas d'usage :
 - PS à titre individuel
 - CPTS
 - SOS Médecins
+- Transmission des informations de RDV aux LRM
 
 # CI/CD
 Les pipelines de ce repository permettent : 

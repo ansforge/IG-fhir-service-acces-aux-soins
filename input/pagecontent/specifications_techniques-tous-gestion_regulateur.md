@@ -61,7 +61,7 @@
 
 ##### Réponse de base -- Succès
 
-Lien vers la spécification FHIR : <https://www.hl7.org/fhir/bundle.html>
+Lien vers la spécification FHIR : <https://www.hl7.org/fhir/practitioner.html>
 
 Si la création est un succès, le serveur répond :
 
@@ -173,13 +173,13 @@ Il n’y aura pas de requête spécifique pour la suppression de compte. Une sup
 ### Règles de gestion
 
 Cette section détaille les règles de gestion à utiliser au niveau des éléments retournés par la requête.
-- **ID : 1 – Identifiant national du régulateur :**
+- **Identifiant national du régulateur :**
   - Le régulateur n’a potentiellement pas d’identifiant national à date ou n’a pas rattaché son identifiant national à son compte SAS. Par défaut il aura un ID technique SAS. Lorsque l’ajout ou le rattachement de l’identifiant national sera effectué, l’information sera transmise dans une requête de mise à jour.
-- **ID : 2 – Autorité d'affectation :**
+- **Autorité d'affectation :**
   - Lorsque l’identifiant transmis est un ID national, le champ est valorisé à `urn:oid:1.2.250.1.71.4.2.1`. Lorsque l’identifiant transmis est un ID technique SAS, il est valorisé à `urn:oid:1.2.250.1.213.3.6`.
 - **ID : 3 – Type d'identifiant :**
   - Lorsque l’identifiant transmis est un ID national, le champ type.coding.code est valorisé à `IDNPS`. Lorsque l’identifiant transmis est un ID technique SAS, il est valorisé à `INTRN`.
-- **ID : 4 – Habilitation (active ou non) :**
+- **Habilitation (active ou non) :**
   - Si le champ est valorisé à `true` le compte doit être habilité et actif, si le champ est valorisé à `false` le compte doit être déshabilité ou désactivé.
-- **ID : 5 – Source de la requête :**
+- **Source de la requête :**
   - La requête venant de la plateforme numérique SAS, le champ meta.source sera toujours valorisé à : `urn:oid:1.2.250.1.213.3.6`.

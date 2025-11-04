@@ -1,0 +1,18 @@
+@startuml
+
+
+actor "Régulateur" as R
+database "Stockage" as db
+rectangle "Plateforme SAS" as PTF
+queue "Hub Santé" as Hub
+rectangle LRM
+
+R -> db :"Enregistrement \n orientation"
+db -> PTF
+PTF -> Hub :"Transmission message json"
+Hub -> LRM :"Transmission message json"
+LRM -[#blue]> Hub :<color:blue>ACK</color>
+LRM -[#red]> Hub :<color:red>Erreurs</color>
+Hub -[#blue]> PTF :<color:blue>ACK</color>
+Hub -[#red]> PTF :<color:red>Erreurs</color>
+@enduml
