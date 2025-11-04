@@ -31,69 +31,66 @@ En l'occurrence, les LRM écouteront sur leur file « message » et la plateform
 Le schéma ci-dessous détaille cette cinématique d'échange entre les différents acteurs
 
 
-### Détail des échanges entre les acteurs
+### Structure et format des messages transitant via le Hub Santé
 
-#### Gestion de l'envoi d'un message PTF SAS -> LRM via Hub
+#### Enveloppe EDXL-DE
 
-Dans le cadre de l’interface mise en place entre les solutions logicielles éditeurs (LRM) et la plateforme numérique SAS, les requêtes seront transmises **instantanément** par la plateforme numérique du SAS au HubSanté pour transmission auprès des solutions éditeurs de LRM lors de la **création ou la mise à jour d’un RDV** et contiendront l’ensemble des données relatives au RDV **au format JSON** dans le contenu du message.
+Tous les messages transitant par l’intermédiaire du Hub Santé contiendront un entête est de type "EDXL-DE" dans lequel sera encapsulé le détail du message (cf. spécifications du Hub Santé §3.4 et 3.4.3).
 
-Les champs ci-dessous correspondent à l’en-tête du message qui porte les informations de RDV pris par le régulateur pour le compte du patient. Ce message est envoyé instantanément de la plateforme SAS au HubSanté. L'entête est de type "EDXL-DE" et les messages au format Json, cf. [spécifications techniques (DST) du Hub Santé](https://hub.esante.gouv.fr/resources/Accompagnement/tech/23.09%20DST%20v1.2%20-%20Hub%20Sante%20&%20connecteurs.pdf).
-
-Le tableau ci-dessous précise les balises qui doivent être envoyées et qui sont nécessaires au routage des messages.
+Le tableau ci-dessous précise les balises de l’enveloppe EDXL-DE qui doivent être envoyées et qui sont nécessaires au routage des messages.
 
 | | | | | |
 | :--- | :--- | :--- | :--- | :--- |
 | **Entête EDXL-DE** | distributionID | string | Identifiant unique du message attribué par l’expéditeur | Format`<senderId>_<internalId>`où`<internalId>`est un identifiant garanti unique |
-| **Entête EDXL-DE** | senderID | string | Identifiant de l'émetteur | Valeur fixe par environnement. Ex :`fr.health.ptfsas` |
+| **Entête EDXL-DE** | senderID | string | Identifiant de l'émetteur | `fr.health.ptfsas`, fr.health.samuXXX |
 | **Entête EDXL-DE** | dateTimeSent | Date time | Date et heure d'envoi du message | Ex : 2025-08-24T14:15:22+02:00 |
 | **Entête EDXL-DE** | dateTimeExpires | Date time | Date et heure d'expiration du message : les données ne doivent pas être délivrées au-delà de cette date | Ex : 2025-08-24T14:15:22+02:00 |
 | **Entête EDXL-DE** | distributionStatus | string | Statut du message | Valeur fixe :`Actual` |
-| **Entête EDXL-DE** | distributionKind | string | Type du message | Valeur fixe :`Report` |
+| **Entête EDXL-DE** | distributionKind | string | Type du message | `Report`,`Ack`,`Error` |
 | **Entête EDXL-DE** | descriptor.language | string | Langue du message échangé | Valeur fixe :`fr-FR` |
 | **Entête EDXL-DE** | descriptor.explicitAddress.explicitAddressScheme | string | Identifiant du SI pilotant le Hub | Valeur fixe :`Hubex` |
-| **Entête EDXL-DE** | descriptor.explicitAddress.explicitAddressValue | string | Identifiant du SAMU destinataire | fr.health.samuXXX Ex : fr.health.samu330 |
-| **Contenu** | content.contentObject.JsonContent.embeddedJsonContent | json | Contenu du message json encapsulé dans l'entête | Fichier json contenant les données transmises, cf. détail ci-dessous |
+| **Entête EDXL-DE** | descriptor.explicitAddress.explicitAddressValue | string | Identifiant du destinataire | `fr.health.ptfsas`, fr.health.samuXXX |
+| **Contenu** | content.contentObject.JsonContent.embeddedJsonContent | json | Contenu du message json encapsulé dans l'entête | Fichier json contenant les données transmises |
 
-**Détail sur le contenu`embeddedJsonContent`encapsulé dans l'entête EXDL-DE** : il s'agit d'un message json avec la liste des champs décrite plus bas propre aux données de RDV transmises elle même encapsulée dans une entête RC-DE dont les caractéristiques sont décrites plus bas, dans [la section suivante](./specifications_techniques-transmission-info-RDV-LRM.md#message-dacquittement-final-lrm---ptf-sas-via-hub) L'entête RC-DE contient un nombre de champs communs à l'entête EDXL-DE, ce qui permet de rendre le message auportortant sans l'entête EDXL-DE.
+#### Entête RC-DE
+
+Le contenu des messages transmis pourra également être encapsulé dans un entête RC-DE au sein de l’enveloppe EDXL-DE. L'entête RC-DE contient un nombre de champs communs à l'entête EDXL-DE, ce qui permet de rendre le message auportortant sans l'entête EDXL-DE selon le modèle et les balises précisées dans le tableau ci-dessous (cf spécifications du Hub Santé §3.3.2).
+
+| | | | | |
+| :--- | :--- | :--- | :--- | :--- |
+| **Entête RC-DE** | messageId | string | Identifiant du message interne. Identique au champ`distributionID`de l'enveloppe EDXL-DE | Égal à`distributionId`du message initial dans le cas d'un acquittement |
+| **Entête RC-DE** | sender.AddresseeType.name | string | Identifiant de l'émetteur | `fr.health.ptfsas`, fr.health.samuXXX |
+| **Entête RC-DE** | sender.AddresseeType.URL | string | URL de l'émetteur | `hubex:fr.health.ptfsas`, hubex:fr.fr.health.samuXXX, |
+| **Entête RC-DE** | sentAt | Date time | Date et heure d'envoi du message | Ex : 2025-08-24T14:15:22+02:00 |
+| **Entête RC-DE** | status | string | Statut du message | Valeur fixe :`Actual` |
+| **Entête RC-DE** | kind | string | Type du message | `Report`,`Ack` |
+| **Entête RC-DE** | recipients.recipient.explicitAddressScheme | string | Identifiant du SI pilotant le Hub | Valeur fixe :`Hubex` |
+| **Entête RC-DE** | recipients.recipient.explicitAddressValue | string | Identifiant du destinataire | `fr.health.ptfsas`, fr.health.samuXXX |
+
+### Détail des échanges entre la plateforme SAS et le Hub Santé
+
+#### Gestion de l'envoi d'un message PTF SAS -> LRM via Hub
+
+LCe message contenant les informations de RDV pris par le régulateur pour le compte du patient est envoyé instantanément par la plateforme numérique SAS au HubSanté. Le message est transmis avec un entête est de type "EDXL-DE" (cf <>) encapsulant un entête de type RC-DE (cf <>) et les contenus des messages au format Json (cf <>>).
+
+Il s'agit d'un message de type `Report` (entête EDXL-DE et RC-DE)
 
 #### Acquittement technique Hub -> PTF SAS
 
 Un acquittement technique sera transmis du Hub vers la plateforme SAS afin d'informer de la bonne prise en charge du message et de l'inscription dans sa file d'envoi (file « message » du LRM). Cette fonctionnalité est intégrée au protocole AMQ sous la forme de **Consumer Acknowledgement** (cf. spécifications du Hub Santé §3.3.1).
 
-#### Message d'acquittement final LRM -> PTF SAS via Hub
+#### Message d'acquittement final et gestion des erreurs
 
-Cet aquittement correspond à la validation auprès de l’émetteur (plateforme numérique SAS) de la bonne réception du message par le destinataire (Editeur LRM). Le cheminement est similaire au message envoyé mais pris en sens inverse.
+Les échanges entre le Hub Santé et la plateforme numérique SAS incluent également les acquittements de réception finale et la gestion des messages d’erreurs transmis par les éditeurs de LRM. Une fois le message intégré dans le système du client destinataire (Editeur LRM), ce dernier peut en informer la plateforme numérique SAS (transitant par le Hub) en lui envoyant un acquittement de réception finale sur un deuxième type de file dédié fr.health.ptfsas.𝑎𝑐k permettant de remonter les accusés de réception finale. Le cheminement est similaire au message envoyé mais pris en sens inverse.
 
-Le format des acquittements de réception finale est de type "RC-DE" selon le modèle et les balises précisées dans le tableau ci-dessous, en reprenant le **distrubtionId** du message concerné (cf spécifications du Hub Santé §3.3.2) :
+Il s'agit d'un message de type `Ack` (entête EDXL-DE et RC-DE)
 
-| | | | | |
-| :--- | :--- | :--- | :--- | :--- |
-| **Entête RC-DE** | messageId | string | Identifiant du message interne. Identique au champ`distributionID`de l'enveloppe EDXL-DE | Égal à`distributionId`du message initial |
-| **Entête RC-DE** | sender.AddresseeType.name | string | Identifiant de l'émetteur | fr.health.samuXXX Ex : fr.health.samu330 |
-| **Entête RC-DE** | sender.AddresseeType.URL | string | URL de l'émetteur | hubex:fr.fr.health.samuXXX |
-| **Entête RC-DE** | sentAt | Date time | Date et heure d'envoi du message | Ex : 2025-08-24T14:15:22+02:00 |
-| **Entête RC-DE** | status | string | Statut du message | Valeur fixe :`Actual` |
-| **Entête RC-DE** | kind | string | Type du message | Valeur fixe :`Ack` |
-| **Entête RC-DE** | recipients.recipient.explicitAddressScheme | string | Identifiant du SI pilotant le Hub | Valeur fixe :`Hubex` |
-| **Entête RC-DE** | recipients.recipient.explicitAddressValue | string | Identifiant du destinataire | Valeur fixe par environnement. Ex :`fr.health.ptfsas` |
-|   | reference | string | Identifiant du message référencé | Égal à distributionId du message initial |
+Un troisième type de file, fr.health.ptfsas.𝑖𝑛𝑓𝑜, est mis en place pour remonter des informations et de potentielles erreurs aux émetteurs et destinataires des messages. A noter qu'il existe deux types d'erreur :
 
-#### Message d'erreur LRM -> PTF SAS via Hub et Hub -> PTF SAS
+* les messages "techniques" directement générés par le Hub et traduisant une impossibilité de remettre le message au destinataire
+* les messages d'erreurs "fonctionnels" envoyés depuis l’éditeur de LRM (transitant par le Hub) traduisant l'impossibilité de traiter correctement le message reçu (cf <>)
 
-En cas d'erreur, un message est posté sur la file « info » de la plateforme SAS (cf. spécifications du Hub Santé §3.3.4).Les champs ci-dessous correspondent à l’en-tête et au contenu du message :
-
-| | | | | |
-| :--- | :--- | :--- | :--- | :--- |
-| **Entête EDXL-DE** | distributionID | string | Identifiant unique du message attribué par l’expéditeur | À définir |
-| **Entête EDXL-DE** | senderID | string | Identifiant de l'émetteur | fr.health.samu.XXX Ex : fr.health.samu.330 |
-| **Entête EDXL-DE** | dateTimeSent | Date time | Date et heure d'envoi du message | Ex : 2025-08-24T14:15:22+02:00 |
-| **Entête EDXL-DE** | dateTimeExpires | Date time | Date et heure d'expiration du message : les données ne doivent pas être délivrées au-delà de cette date | Ex : 2025-08-24T14:15:22+02:00 |
-| **Entête EDXL-DE** | distributionStatus | string | Statut du message | Valeur fixe :`Actual` |
-| **Entête EDXL-DE** | distributionKind | string | Type du message | Valeur fixe :`Error` |
-| **Entête EDXL-DE** | descriptor.language | string | Langue du message échangé | Valeur fixe :`fr-FR` |
-| **Entête EDXL-DE** | descriptor.explicitAddress.explicitAddressScheme | string | Identifiant du SI pilotant le Hub | Valeur fixe :`Hubex` |
-| **Entête EDXL-DE** | descriptor.explicitAddress.explicitAddressValue | string | Identifiant du SAMU destinataire | Valeur fixe par environnement. Ex :`fr.health.ptfsas` |
-| **Contenu** | content.contentObject.embeddedJsonContent | json | Contenu du message json encapsulé dans l'entête | JSON avec errorCode et errorCause et contenu du message initial |
+Ces messages sont de type `Error` (entête EDXL-DE, les messages d'erreur ne comportent pas d'entête RC-DE)
 
 L'erreur sera présente dans le contenu du message json qui respecte le modèle suivant, cf. spécifications du Hub Santé, §3.4.7 :
 
@@ -102,11 +99,6 @@ L'erreur sera présente dans le contenu du message json qui respecte le modèle 
 | errorCode | Code de l'erreur ayant conduit au rejet du message | Cf. tableau des erreurs ci-après |
 | errorCause | Cause de l'erreur | La cause de l’erreur. Le distributionID de l’enveloppe EDXL y est précisé si le message a pu être désérialisé, ainsi que des éléments plus précis suivant l’erreur relevée. |
 | sourceMessage | Contenu du message rejeté | Contenu du message initial avec son entête |
-
-A noter qu'il existe deux types d'erreur :
-
-* les messages "techniques" directement générés par le Hub et traduisant une impossibilité de remettre le message au destinataire (LRM) (a)
-* les messages d'erreurs "fonctionnels" envoyés depuis le LRM (toujours en transitant par le Hub) traduisant l'impossibilité de traiter correctement le message reçu (b)
 
 A titre d'exemple, les codes d'erreur suivants pourront être envoyés du Hub vers la plateforme SAS :
 
@@ -117,253 +109,204 @@ A titre d'exemple, les codes d'erreur suivants pourront être envoyés du Hub ve
 | 400 | EXPIRED_MESSAGE_BEFORE_ROUTING | Le message n’a pas été reçu par son destinataire, il a expiré sur le Hub avant de lui être délivré. |
 | 500 | DEAD_LETTERED_QUEUE | Le message n’a pas été reçu par son destinataire, il a expiré avant qu’il ne le dépile. |
 
+### Echanges entre l'éditeur LRM et le Hub Santé
+
+#### Message d'acquittement final LRM -> PTF
+
+Cet acquittement correspond à la validation auprès de l’émetteur (plateforme numérique SAS) de la bonne réception du message par le destinataire (Editeur LRM).
+
+Le format des acquittements de réception finale est contenu dans une enveloppe de type "EDXL-DE" (cf <>) et un entête de type "RC-DE" (cf <>) selon le modèle et les balises précisées dans les tableaux associésci-dessous, en reprenant le `distrubtionId` du message concerné en référence dans le contenu du message (cf spécifications du Hub Santé §3.3.2).
+
+A REVOIR
+
+#### Message d'erreur LRM -> Hub
+
+En cas d'erreur, un message est posté sur la file « info » de la plateforme SAS (cf. spécifications du Hub Santé §3.3.4). Le message est transmis avec un entête de type "EDXL-DE" de type `Error`(cf <>) encapsulant le contenu du message json qui respecte le modèle suivant (cf. spécifications du Hub Santé §3.4.7) :
+
+| | | | |
+| :--- | :--- | :--- | :--- |
+|   | errorCode | Code de l'erreur ayant conduit au rejet du message | Cf. ci-après |
+|   | errorCause | Cause de l'erreur | La cause de l’erreur. Le`distributionID`de l’enveloppe EDXL y est précisé si le message a pu être désérialisé, ainsi que des éléments plus précis suivant l’erreur relevée. |
+|   | sourceMessage | Contenu du message rejeté | Contenu du message initial avec son entête |
+
 Le LRM pourra envoyer des messages de type :
 
-* 404 (NOT_FOUND) - L'identifiant du RDV a mettre à jour n'a pas été trouvé dans le cas d'un message de mise à jour
+* 409 (NOT_FOUND) - L'identifiant du RDV à créér existe déjà
 
-### Message d'envoi de RDV
+### Données transmises au LRM
 
 Lorsqu’un régulateur prend RDV pour un patient via la plateforme numérique SAS, celle-ci transmet un message de création de RDV qui suivra les modalités suivantes :
 
 * **Protocole** : AMQP 0-9-1
 
-* **En-tête** : EDXL-DE
-* **Sender** : ptfsas
+* **En-tête** : EDXL-DE, RC-DE
+* **Sender** : fr.health.ptfsas
 
 * **Format du message contenu** : JSON
 
 Le message json contenant les données et encapsulé dans l'entête EDXL-DE (et dans l'entête RC-DE) respecte le format suivant :
 
 * **ID**: 1
-  * **Donnée (Niveau 1)**: Identifiant du rendez-vous
-  * **Donnée (Niveau 2)**: 
-  * **Description**: Un identifiant technique unique par RDV est transmis. Cet identifiant est défini par la plateforme numérique SAS et peut prendre la forme d’un UUID par exemple.La solution éditeur devra s’appuyer sur cet ID pour la gestion des requêtes de mises à jour.
-  * **Exemples**: 12348
-  * **Balise**: appointmentId
-  * **Cardinalité**: 1..1
   * **Objet**: 
-  * **Format (ou type)**: string
-  * **Détails de format**: 
+  * **Balise**: appointmentId
+  * **Description**: Identifiant technique unique du RDV
+  * **Exemples**: 1efc111e-ce11-1d11-a111-11c1f11c111e12348
+  * **Cardinalité**: 1..1
+  * **Type**: string
 * **ID**: 2
-  * **Donnée (Niveau 1)**: Méthode
-  * **Donnée (Niveau 2)**: 
+  * **Objet**: 
+  * **Balise**: method
   * **Description**: Indique un message de création ou de modification du rendez-vous
   * **Exemples**: createAppointment
-  * **Balise**: method
   * **Cardinalité**: 1..1
-  * **Objet**: 
-  * **Format (ou type)**: string
-  * **Détails de format**: ENUM: CreateAppointment, UpdateAppointment
+  * **Type**: string
 * **ID**: 3
-  * **Donnée (Niveau 1)**: Date et heure de la prise de rendez-vous
-  * **Donnée (Niveau 2)**: 
-  * **Description**: Indique la date et l’heure de la prise de RDV
-  * **Exemples**: 2025-06-17T10:15:56+01:00
+  * **Objet**: 
   * **Balise**: created
+  * **Description**: Date et heure de la prise de RDV
+  * **Exemples**: 2025-06-17T10:15:56+01:00
   * **Cardinalité**: 1..1
-  * **Objet**: 
-  * **Format (ou type)**: datetime
-  * **Détails de format**: 
+  * **Type**: datetime
 * **ID**: 4
-  * **Donnée (Niveau 1)**: Date et heure de début du rendez-vous
-  * **Donnée (Niveau 2)**: 
-  * **Description**: Indique la date et l’horaire de début du rendez-vous
-  * **Exemples**: 2025-06-17T14:00:00+01:00
+  * **Objet**: 
   * **Balise**: start
+  * **Description**: Date et heure de début du rendez-vous
+  * **Exemples**: 2025-06-17T14:00:00+01:00
   * **Cardinalité**: 1..1
-  * **Objet**: 
-  * **Format (ou type)**: datetime
-  * **Détails de format**: 
+  * **Type**: datetime
 * **ID**: 5
-  * **Donnée (Niveau 1)**: Date et heure de fin du rendez-vous
-  * **Donnée (Niveau 2)**: 
-  * **Description**: Indique la date et l’horaire de fin du rendez-vous
-  * **Exemples**: 2025-06-17T14:20:00+01:00
+  * **Objet**: 
   * **Balise**: end
+  * **Description**: Date et heure de fin du rendez-vous
+  * **Exemples**: 2025-06-17T14:20:00+01:00
   * **Cardinalité**: 0..1
-  * **Objet**: 
-  * **Format (ou type)**: datetime
-  * **Détails de format**: 
+  * **Type**: datetime
 * **ID**: 6
-  * **Donnée (Niveau 1)**: Statut du rendez-vous
-  * **Donnée (Niveau 2)**: 
-  * **Description**: Indique le statut du rendez-vous
-  * **Exemples**: booked
-  * **Balise**: status
-  * **Cardinalité**: 1..1
   * **Objet**: 
-  * **Format (ou type)**: string
-  * **Détails de format**: ENUM: pending, booked, fulfilled, noshow, cancelled
+  * **Balise**: status
+  * **Description**: Statut du rendez-vous
+  * **Exemples**: booked
+  * **Cardinalité**: 1..1
+  * **Type**: string
 * **ID**: 7
-  * **Donnée (Niveau 1)**: Catégorie d'orientation
-  * **Donnée (Niveau 2)**: 
+  * **Objet**: 
+  * **Balise**: orientationCategory
   * **Description**: Indique la catégorie de l’orientation de rendez-vous
   * **Exemples**: SOS
-  * **Balise**: orientationCategory
   * **Cardinalité**: 0..1
-  * **Objet**: 
-  * **Format (ou type)**: string
-  * **Détails de format**: ENUM: CPTS, MSP, CDS, SOS, PS, PDM
+  * **Type**: string
 * **ID**: 8
-  * **Donnée (Niveau 1)**: Professionnel de santé
-  * **Donnée (Niveau 2)**: 
+  * **Objet**: practitioner
+  * **Balise**: Professionnel de santé
   * **Description**: Représente le professionnel de santé associé au rendez-vous
   * **Exemples**: 
-  * **Balise**: practitioner
   * **Cardinalité**: 0..1
-  * **Objet**: X
-  * **Format (ou type)**: practitioner
-  * **Détails de format**: 
+  * **Type**: practitioner
 * **ID**: 9
-  * **Donnée (Niveau 1)**: 
-  * **Donnée (Niveau 2)**: Identifiant RPPS
-  * **Description**: Identifiant national (RPPS) du PS
-  * **Exemples**: 810002909371
+  * **Objet**: practitioner
   * **Balise**: rppsId
+  * **Description**: Identifiant national (RPPS avec préfixe) du PS
+  * **Exemples**: 810002909371
   * **Cardinalité**: 1..1
-  * **Objet**: 
-  * **Format (ou type)**: string
-  * **Détails de format**: REGEX: ^81[0-9]{10}$
+  * **Type**: string
 * **ID**: 10
-  * **Donnée (Niveau 1)**: 
-  * **Donnée (Niveau 2)**: Nom du PS
+  * **Objet**: practitioner
+  * **Balise**: lastName
   * **Description**: Nom du professionnel de santé
   * **Exemples**: Dupont
-  * **Balise**: lastName
   * **Cardinalité**: 1..1
-  * **Objet**: 
-  * **Format (ou type)**: string
-  * **Détails de format**: 
+  * **Type**: string
 * **ID**: 11
-  * **Donnée (Niveau 1)**: 
-  * **Donnée (Niveau 2)**: Prénom du PS
+  * **Objet**: practitioner
+  * **Balise**: firstName
   * **Description**: Prénom du professionnel de santé
   * **Exemples**: Jean
-  * **Balise**: firstName
   * **Cardinalité**: 1..1
-  * **Objet**: 
-  * **Format (ou type)**: string
-  * **Détails de format**: 
+  * **Type**: string
 * **ID**: 12
-  * **Donnée (Niveau 1)**: 
-  * **Donnée (Niveau 2)**: Spécialité
+  * **Objet**: practitioner
+  * **Balise**: specialityCode
   * **Description**: Code de la spécialité du professionnel de santé
   * **Exemples**: SM54
-  * **Balise**: specialityCode
   * **Cardinalité**: 0..1
-  * **Objet**: 
-  * **Format (ou type)**: string
-  * **Détails de format**: 
+  * **Type**: string
 * **ID**: 13
-  * **Donnée (Niveau 1)**: 
-  * **Donnée (Niveau 2)**: Terminologie spécialité
+  * **Objet**: practitioner
+  * **Balise**: specialityUrl
   * **Description**: Url de la terminologie utilisée pour la spécialité
   * **Exemples**: https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale
-  * **Balise**: specialityUrl
   * **Cardinalité**: 0..1
-  * **Objet**: 
-  * **Format (ou type)**: string
-  * **Détails de format**: 
+  * **Type**: string
 * **ID**: 14
-  * **Donnée (Niveau 1)**: 
-  * **Donnée (Niveau 2)**: Profession
+  * **Objet**: practitioner
+  * **Balise**: professionCode
   * **Description**: Code de la profession du professionnel de santé
   * **Exemples**: 10
-  * **Balise**: professionCode
   * **Cardinalité**: 0..1
-  * **Objet**: 
-  * **Format (ou type)**: string
-  * **Détails de format**: 
+  * **Type**: string
 * **ID**: 15
-  * **Donnée (Niveau 1)**: 
-  * **Donnée (Niveau 2)**: Terminologie profession
+  * **Objet**: practitioner
+  * **Balise**: professionUrl
   * **Description**: Url de la terminologie utilisée pour la profession
   * **Exemples**: https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante
-  * **Balise**: professionUrl
   * **Cardinalité**: 0..1
-  * **Objet**: 
-  * **Format (ou type)**: string
-  * **Détails de format**: 
+  * **Type**: string
 * **ID**: 16
-  * **Donnée (Niveau 1)**: Structure
-  * **Donnée (Niveau 2)**: 
+  * **Objet**: organization
+  * **Balise**: 
   * **Description**: Représente la structure du PS ou la structure associée au rendez-vous si le PS n'est pas connu
   * **Exemples**: 
-  * **Balise**: organization
   * **Cardinalité**: 0..1
-  * **Objet**: X
-  * **Format (ou type)**: organization
-  * **Détails de format**: 
+  * **Type**: organization
 * **ID**: 17
-  * **Donnée (Niveau 1)**: 
-  * **Donnée (Niveau 2)**: Identifiant national de la structure
-  * **Description**: Indique l'identifiant national de la structure
-  * **Exemples**: 334173748400020
+  * **Objet**: organization
   * **Balise**: organizationId
+  * **Description**: Identifiant national de la structure (avec préfixe)
+  * **Exemples**: 334173748400020
   * **Cardinalité**: 1..1
-  * **Objet**: 
-  * **Format (ou type)**: string
-  * **Détails de format**: 
+  * **Type**: string
 * **ID**: 18
-  * **Donnée (Niveau 1)**: 
-  * **Donnée (Niveau 2)**: Nom de la structure
+  * **Objet**: organization
+  * **Balise**: name
   * **Description**: Indique le nom de la structure
   * **Exemples**: SOS Médecins de Rennes
-  * **Balise**: name
   * **Cardinalité**: 1..1
-  * **Objet**: 
-  * **Format (ou type)**: string
-  * **Détails de format**: 
+  * **Type**: string
 * **ID**: 19
-  * **Donnée (Niveau 1)**: Régulateur
-  * **Donnée (Niveau 2)**: 
+  * **Objet**: regulator
+  * **Balise**: 
   * **Description**: Représente le régulateur ayant pris le RDV
   * **Exemples**: 
-  * **Balise**: regulatorId
   * **Cardinalité**: 1..1
-  * **Objet**: X
-  * **Format (ou type)**: regulator
-  * **Détails de format**: 
+  * **Type**: regulator
 * **ID**: 20
-  * **Donnée (Niveau 1)**: 
-  * **Donnée (Niveau 2)**: Identifiant régulateur
+  * **Objet**: regulator
+  * **Balise**: Identifiant régulateur
   * **Description**: Identifiant du régulateur ayant pris le RDV
   * **Exemples**: 3620100057/70326SR
-  * **Balise**: regulatorId
   * **Cardinalité**: 1..1
-  * **Objet**: 
-  * **Format (ou type)**: string
-  * **Détails de format**: 
+  * **Type**: string
 * **ID**: 21
-  * **Donnée (Niveau 1)**: 
-  * **Donnée (Niveau 2)**: Nom du régulateur
+  * **Objet**: regulator
+  * **Balise**: regulatorName
   * **Description**: Nom du régulateur ayant pris le RDV
   * **Exemples**: Ricart
-  * **Balise**: regulatorName
   * **Cardinalité**: 1..1
-  * **Objet**: 
-  * **Format (ou type)**: string
-  * **Détails de format**: 
+  * **Type**: string
 * **ID**: 22
-  * **Donnée (Niveau 1)**: 
-  * **Donnée (Niveau 2)**: Prénom du régulateur
+  * **Objet**: regulator
+  * **Balise**: regulatorFirstname
   * **Description**: Prénom du régulateur ayant pris le RDV
   * **Exemples**: Pauline
-  * **Balise**: regulatorFirstname
   * **Cardinalité**: 1..1
-  * **Objet**: 
-  * **Format (ou type)**: string
-  * **Détails de format**: 
+  * **Type**: string
 * **ID**: 23
-  * **Donnée (Niveau 1)**: 
-  * **Donnée (Niveau 2)**: Mail du régulateur
+  * **Objet**: regulator
+  * **Balise**: regulatorEmail
   * **Description**: Adresse mail du régulateur ayant pris le RDV
   * **Exemples**: pauline.ricart@ghsas.fr
-  * **Balise**: regulatorEmail
   * **Cardinalité**: 1..1
-  * **Objet**: 
-  * **Format (ou type)**: string
-  * **Détails de format**: 
+  * **Type**: string
 
  Cf. exemple ci-dessous de message de création
 
@@ -407,13 +350,15 @@ Le message transmis pour la mise à jour du RDV devra suivre les modalités suiv
 
 * **Protocole** : AMQP 0-9-1
 
-* **En-tête** : EDXL-DE
-* **Sender** : ptfsas
+* **En-tête** : EDXL-DE, RC-DE
+* **Sender** : fr.health.ptfsas
 * **Format du message contenu** : JSON
 
 Le fichier json encapsulé dans l'entête aura le champ `method` valorisé à `UpdateAppointment` et contiendra les données modifiées / ajoutées / supprimées par rapport au message de création (selon le format décrit au paragraphe précédent) afin que les données pour un même identifiant de RDV puissent être mises à jour
 
 **L’identifiant technique SAS du RDV (champ`appointmentId`)** transmis sera stocké par la solution éditeur LRM pour identification du RDV sur lequel porte les mises à jour éventuelles.
+
+**En cas de réception d'un message du mise à jour sur un identifiant inconnu, la solution LRM devra pouvoir gérer le message en tant que création avec les données contenues dans le message à l'instant t.**
 
 Cf. exemple ci-dessous de message de modification
 
