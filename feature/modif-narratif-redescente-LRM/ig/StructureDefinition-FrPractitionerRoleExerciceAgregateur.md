@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur | *Version*:1.1.0 |
-| Active as of 2025-11-04 | *Computable Name*:FrPractitionerRoleExerciceAgregateur |
+| Active as of 2025-11-05 | *Computable Name*:FrPractitionerRoleExerciceAgregateur |
 
  
 Profil de PractitionerRole, dérivé de FrPractitionerRoleExercice, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-FrPractitionerRoleEx
   "version" : "1.1.0",
   "name" : "FrPractitionerRoleExerciceAgregateur",
   "status" : "active",
-  "date" : "2025-11-04T16:40:09+00:00",
+  "date" : "2025-11-05T08:44:55+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

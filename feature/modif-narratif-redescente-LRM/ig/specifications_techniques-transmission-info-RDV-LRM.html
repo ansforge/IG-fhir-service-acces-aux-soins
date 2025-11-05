@@ -461,7 +461,7 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
 
 <h4 id="gestion-de-lenvoi-dun-message-ptf-sas---lrm-via-hub">Gestion de l'envoi d'un message PTF SAS -&gt; LRM via Hub</h4>
 
-<p>LCe message contenant les informations de RDV pris par le régulateur pour le compte du patient est envoyé instantanément par la plateforme numérique SAS au HubSanté. Le message est transmis avec un entête est de type "EDXL-DE" (cf &lt;&gt;) encapsulant un entête de type RC-DE (cf &lt;&gt;) et les contenus des messages au format Json (cf &lt;&gt;&gt;).</p>
+<p><a name="l1160">​</a>LCe message contenant les informations de RDV pris par le régulateur pour le compte du patient est envoyé instantanément par la plateforme numérique SAS au HubSanté. Le message est transmis avec un entête est de type "EDXL-DE" (cf <a href="./modif-narratif-redescente-LRM/ig/specifications_techniques-transmission-info-RDV-LRM.html#enveloppe-edxl-de">Enveloppe EDXL-DE</a>) encapsulant un entête de type RC-DE (cf <a href="./modif-narratif-redescente-LRM/ig/specifications_techniques-transmission-info-RDV-LRM.html#entête-rc-de">Enveloppe RC-DE</a>) et les contenus des messages au format Json (cf <a href="./specifications_techniques-transmission-info-RDV-LRM.html#données-transmises-au-lrm">Contenu json</a>).</p>
 
 <p>Il s'agit d'un message de type <code class="language-plaintext highlighter-rouge">Report</code> (entête EDXL-DE et RC-DE)</p>
 
@@ -479,7 +479,7 @@ Une fois le message intégré dans le système du client destinataire (Editeur L
 <p>Un troisième type de file, fr.health.ptfsas.&#x1D456;&#x1D45B;&#x1D453;&#x1D45C;, est mis en place pour remonter des informations et de potentielles erreurs aux émetteurs et destinataires des messages. A noter qu'il existe deux types d'erreur :</p>
 <ul>
   <li>les messages "techniques" directement générés par le Hub et traduisant une impossibilité de remettre le message au destinataire</li>
-  <li>les messages d'erreurs "fonctionnels" envoyés depuis l’éditeur de LRM (transitant par le Hub) traduisant l'impossibilité de traiter correctement le message reçu (cf &lt;&gt;)</li>
+  <li>les messages d'erreurs "fonctionnels" envoyés depuis l’éditeur de LRM (transitant par le Hub) traduisant l'impossibilité de traiter correctement le message reçu (cf <a href="./specifications_techniques-transmission-info-RDV-LRM.html#message-derreur-lrm---hub">erreurs LRM</a>)</li>
 </ul>
 
 <p>Ces messages sont de type <code class="language-plaintext highlighter-rouge">Error</code> (entête EDXL-DE, les messages d'erreur ne comportent pas d'entête RC-DE)</p>
@@ -503,7 +503,7 @@ Une fois le message intégré dans le système du client destinataire (Editeur L
     <tr>
       <td>errorCause</td>
       <td>Cause de l'erreur</td>
-      <td>La cause de l’erreur. Le distributionID de l’enveloppe EDXL y est précisé si le message a pu être désérialisé, ainsi que des éléments plus précis suivant l’erreur relevée.</td>
+      <td>La cause de l’erreur. Le <code class="language-plaintext highlighter-rouge">distributionID</code> de l’enveloppe EDXL-DE y est précisé si le message a pu être désérialisé, ainsi que des éléments plus précis suivant l’erreur relevée.</td>
     </tr>
     <tr>
       <td>sourceMessage</td>
@@ -553,13 +553,13 @@ Une fois le message intégré dans le système du client destinataire (Editeur L
 
 <p>Cet acquittement correspond à la validation auprès de l’émetteur (plateforme numérique SAS) de la bonne réception du message par le destinataire (Editeur LRM).</p>
 
-<p>Le format des acquittements de réception finale est contenu dans une enveloppe de type "EDXL-DE" (cf &lt;&gt;) et un entête de type "RC-DE" (cf &lt;&gt;) selon le modèle et les balises précisées dans les tableaux  associésci-dessous, en reprenant le <code class="language-plaintext highlighter-rouge">distrubtionId</code> du message concerné en référence dans le contenu du message (cf spécifications du Hub Santé &sect;3.3.2).</p>
+<p><a name="l1364">​</a>Le format des acquittements de réception finale est contenu dans une enveloppe de type "EDXL-DE" (cf <a href="./modif-narratif-redescente-LRM/ig/specifications_techniques-transmission-info-RDV-LRM.html#enveloppe-edxl-de">Enveloppe EDXL-DE</a>) et un entête de type "RC-DE" (cf <a href="./modif-narratif-redescente-LRM/ig/specifications_techniques-transmission-info-RDV-LRM.html#entête-rc-de">Enveloppe RC-DE</a>) selon le modèle et les balises précisées dans les tableaux  associés ci-dessous, en reprenant le <code class="language-plaintext highlighter-rouge">distributionId</code> du message concerné en référence dans le contenu du message (cf spécifications du Hub Santé &sect;3.3.2).</p>
 
-<p>A REVOIR</p>
+<p>A REVOIR RC-DEF</p>
 
 <h4 id="message-derreur-lrm---hub">Message d'erreur LRM -&gt; Hub</h4>
 
-<p>En cas d'erreur, un message est posté sur la file « info » de la plateforme SAS (cf. spécifications du Hub Santé <span class="fhir-conformance">3.3.4). Le message est transmis avec un entête de type "EDXL-DE" de type <code class="language-plaintext highlighter-rouge">Error</code>(cf &lt;&gt;) encapsulant le contenu du message json qui respecte le modèle suivant (cf. spécifications du Hub Santé </span>3.4.7) :</p>
+<p>En cas d'erreur, un message est posté sur la file « info » de la plateforme SAS (cf. spécifications du Hub Santé <span class="fhir-conformance"><a name="l1384">​</a>3.3.4). Le message est transmis avec un entête de type "EDXL-DE" (cf <a href="./modif-narratif-redescente-LRM/ig/specifications_techniques-transmission-info-RDV-LRM.html#enveloppe-edxl-de">Enveloppe EDXL-DE</a>) de type <code class="language-plaintext highlighter-rouge">Error</code> encapsulant le contenu du message json qui respecte le modèle suivant (cf. spécifications du Hub Santé </span>3.4.7) :</p>
 
 <table>
   <thead>
@@ -594,7 +594,7 @@ Une fois le message intégré dans le système du client destinataire (Editeur L
 
 <p>Le LRM pourra envoyer des messages de type :</p>
 <ul>
-  <li>409 (NOT_FOUND) - L'identifiant du RDV à créér existe déjà</li>
+  <li>409 (CONFLICT) - L'identifiant du RDV à créér existe déjà</li>
 </ul>
 
 <h3 id="données-transmises-au-lrm">Données transmises au LRM</h3>
@@ -1437,7 +1437,7 @@ Le paragraphe ci-dessous détaille les différentes <strong>règles de gestions 
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Nov 4, 2025 16:40+0000">2025-11-04</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Nov 5, 2025 08:44+0000">2025-11-05</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-appointmentreason | *Version*:1.1.0 |
-| Active as of 2025-11-04 | *Computable Name*:AppointmentReasonSAS |
+| Active as of 2025-11-05 | *Computable Name*:AppointmentReasonSAS |
 
  
 Appointment reason SAS 
@@ -54,7 +54,7 @@ Appointment reason SAS
   "title" : "Appointment reason SAS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2025-11-04T16:40:09+00:00",
+  "date" : "2025-11-05T08:44:55+00:00",
   "publisher" : "ANS",
   "contact" : [
     {
