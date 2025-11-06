@@ -35,7 +35,7 @@ Le schéma ci-dessous détaille cette cinématique d'échange entre les différe
 
 #### Enveloppe EDXL-DE
 
-Tous les messages transitant par l’intermédiaire du Hub Santé contiendront un entête est de type "EDXL-DE" dans lequel sera encapsulé le détail du message (cf. spécifications du Hub Santé §3.4 et 3.4.3).
+Tous les messages transitant par l’intermédiaire du Hub Santé contiendront un entête est de type "EDXL-DE" (cf. [spécifications techniques (DST) du Hub Santé](https://hub.esante.gouv.fr/resources/Accompagnement/tech/23.09%20DST%20v1.2%20-%20Hub%20Sante%20&%20connecteurs.pdf)) dans lequel sera encapsulé le détail du message (cf. spécifications du Hub Santé §3.4 et 3.4.3).
 
 Le tableau ci-dessous précise les balises de l’enveloppe EDXL-DE qui doivent être envoyées et qui sont nécessaires au routage des messages.
 
@@ -67,11 +67,15 @@ Le contenu des messages transmis pourra également être encapsulé dans un ent�
 | **Entête RC-DE** | recipients.recipient.explicitAddressScheme | string | Identifiant du SI pilotant le Hub | Valeur fixe :`Hubex` |
 | **Entête RC-DE** | recipients.recipient.explicitAddressValue | string | Identifiant du destinataire | `fr.health.ptfsas`, fr.health.samuXXX |
 
+#### Message de référence RC-DEF
+
+Le message de référence permet de faire référence à un message précédemment partagé (spécifications du Hub Santé §3.4?6). Il est utilisé en cas d'acquittement technique, cf. ci-dessous. Sa structure est la même que celle d'un message RC-DE, avec l'ajout d'un champ supplémentaire `reference` qui reprend le `distributionId` du message acquitté.
+
 ### Détail des échanges entre la plateforme SAS et le Hub Santé
 
 #### Gestion de l'envoi d'un message PTF SAS -> LRM via Hub
 
-LCe message contenant les informations de RDV pris par le régulateur pour le compte du patient est envoyé instantanément par la plateforme numérique SAS au HubSanté. Le message est transmis avec un entête est de type "EDXL-DE" (cf [Enveloppe EDXL-DE](./modif-narratif-redescente-LRM/ig/specifications_techniques-transmission-info-RDV-LRM.md#enveloppe-edxl-de)) encapsulant un entête de type RC-DE (cf [Enveloppe RC-DE](./modif-narratif-redescente-LRM/ig/specifications_techniques-transmission-info-RDV-LRM.md#entête-rc-de)) et les contenus des messages au format Json (cf [Contenu json](./specifications_techniques-transmission-info-RDV-LRM.md#données-transmises-au-lrm)).
+LCe message contenant les informations de RDV pris par le régulateur pour le compte du patient est envoyé instantanément par la plateforme numérique SAS au HubSanté. Le message est transmis avec un entête est de type "EDXL-DE" (cf [Enveloppe EDXL-DE](./specifications_techniques-transmission-info-RDV-LRM.md#enveloppe-edxl-de)) encapsulant un entête de type RC-DE (cf [Enveloppe RC-DE](./specifications_techniques-transmission-info-RDV-LRM.md#entête-rc-de)) et les contenus des messages au format Json (cf [Contenu json](./specifications_techniques-transmission-info-RDV-LRM.md#données-transmises-au-lrm)).
 
 Il s'agit d'un message de type `Report` (entête EDXL-DE et RC-DE)
 
@@ -82,8 +86,6 @@ Un acquittement technique sera transmis du Hub vers la plateforme SAS afin d'inf
 #### Message d'acquittement final et gestion des erreurs
 
 Les échanges entre le Hub Santé et la plateforme numérique SAS incluent également les acquittements de réception finale et la gestion des messages d’erreurs transmis par les éditeurs de LRM. Une fois le message intégré dans le système du client destinataire (Editeur LRM), ce dernier peut en informer la plateforme numérique SAS (transitant par le Hub) en lui envoyant un acquittement de réception finale sur un deuxième type de file dédié fr.health.ptfsas.𝑎𝑐k permettant de remonter les accusés de réception finale. Le cheminement est similaire au message envoyé mais pris en sens inverse.
-
-Il s'agit d'un message de type `Ack` (entête EDXL-DE et RC-DE)
 
 Un troisième type de file, fr.health.ptfsas.𝑖𝑛𝑓𝑜, est mis en place pour remonter des informations et de potentielles erreurs aux émetteurs et destinataires des messages. A noter qu'il existe deux types d'erreur :
 
@@ -115,13 +117,17 @@ A titre d'exemple, les codes d'erreur suivants pourront être envoyés du Hub ve
 
 Cet acquittement correspond à la validation auprès de l’émetteur (plateforme numérique SAS) de la bonne réception du message par le destinataire (Editeur LRM).
 
-Le format des acquittements de réception finale est contenu dans une enveloppe de type "EDXL-DE" (cf [Enveloppe EDXL-DE](./modif-narratif-redescente-LRM/ig/specifications_techniques-transmission-info-RDV-LRM.md#enveloppe-edxl-de)) et un entête de type "RC-DE" (cf [Enveloppe RC-DE](./modif-narratif-redescente-LRM/ig/specifications_techniques-transmission-info-RDV-LRM.md#entête-rc-de)) selon le modèle et les balises précisées dans les tableaux associés ci-dessous, en reprenant le `distributionId` du message concerné en référence dans le contenu du message (cf spécifications du Hub Santé §3.3.2).
+Le format des acquittements de réception finale est contenu dans une enveloppe de type "EDXL-DE" (cf [Enveloppe EDXL-DE](./specifications_techniques-transmission-info-RDV-LRM.md#enveloppe-edxl-de)) et un message de type "RC-REF" (cf [Message RC-REF](./specifications_techniques-transmission-info-RDV-LRM.md#message-de-referenceRC-DEF))
 
-A REVOIR RC-DEF
+En résumé, le message doit :
+
+* spécifier EDXL-DE.distributionKind à `Ack`
+* spécifier RC-DE.kind à `Ack`
+* faire référence au message à acquitter (par sa `distributionID`)
 
 #### Message d'erreur LRM -> Hub
 
-En cas d'erreur, un message est posté sur la file « info » de la plateforme SAS (cf. spécifications du Hub Santé §3.3.4). Le message est transmis avec un entête de type "EDXL-DE" (cf [Enveloppe EDXL-DE](./modif-narratif-redescente-LRM/ig/specifications_techniques-transmission-info-RDV-LRM.md#enveloppe-edxl-de)) de type `Error` encapsulant le contenu du message json qui respecte le modèle suivant (cf. spécifications du Hub Santé §3.4.7) :
+En cas d'erreur, un message est posté sur la file « info » de la plateforme SAS (cf. spécifications du Hub Santé §3.3.4). Le message est transmis avec un entête de type "EDXL-DE" (cf [Enveloppe EDXL-DE](./specifications_techniques-transmission-info-RDV-LRM.md#enveloppe-edxl-de)) de type `Error` encapsulant le contenu du message json qui respecte le modèle suivant (cf. spécifications du Hub Santé §3.4.7) :
 
 | | | | |
 | :--- | :--- | :--- | :--- |

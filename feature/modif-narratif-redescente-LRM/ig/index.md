@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/ImplementationGuide/ans.fhir.fr.sas | *Version*:1.1.0 |
-| Active as of 2025-11-05 | *Computable Name*:SAS |
+| Active as of 2025-11-06 | *Computable Name*:SAS |
 
 > **Attention !**Cette version de l'Implementation Guide est en intégration continue et est soumise à des changements réguliers. La version officielle est accessible à l'adresse[https://interop.esante.gouv.fr/ig/fhir/sas](https://interop.esante.gouv.fr/ig/fhir/sas)
 
@@ -106,7 +106,7 @@ La fludification du parcours régulateurs inclut les éléments suivants :
   "name" : "SAS",
   "title" : "Service d'Accès aux Soins",
   "status" : "active",
-  "date" : "2025-11-05T08:44:55+00:00",
+  "date" : "2025-11-06T14:31:44+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

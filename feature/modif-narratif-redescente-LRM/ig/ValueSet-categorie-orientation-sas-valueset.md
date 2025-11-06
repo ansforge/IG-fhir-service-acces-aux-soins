@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/categorie-orientation-sas-valueset | *Version*:1.1.0 |
-| Active as of 2025-11-05 | *Computable Name*:CategorieOrientationSASValueSet |
+| Active as of 2025-11-06 | *Computable Name*:CategorieOrientationSASValueSet |
 
  
 Valueset permettant de définir la catégorie d'orientation SAS. Il regroupe des codes de la TRE-R66 et du codesystem catégorie orientation SAS 
@@ -58,7 +58,7 @@ Ce jeu de valeur (ValueSet) contient 6 concepts
   "title" : "Value set catégorie orientation SAS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2025-11-05T08:44:55+00:00",
+  "date" : "2025-11-06T14:31:44+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

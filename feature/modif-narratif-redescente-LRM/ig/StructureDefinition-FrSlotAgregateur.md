@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur | *Version*:1.1.0 |
-| Active as of 2025-11-05 | *Computable Name*:FrSlotAgregateur |
+| Active as of 2025-11-06 | *Computable Name*:FrSlotAgregateur |
 
  
 Profil de Slot, dérivé de FrSlot, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-FrSlotAgregateur.csv
   "version" : "1.1.0",
   "name" : "FrSlotAgregateur",
   "status" : "active",
-  "date" : "2025-11-05T08:44:55+00:00",
+  "date" : "2025-11-06T14:31:44+00:00",
   "publisher" : "ANS",
   "contact" : [
     {
