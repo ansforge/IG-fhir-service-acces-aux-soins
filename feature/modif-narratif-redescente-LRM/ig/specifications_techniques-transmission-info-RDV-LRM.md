@@ -287,10 +287,10 @@ Le message json contenant les données et encapsulé dans l'entête EDXL-DE (et 
   * **Type**: regulator
 * **ID**: 20
   * **Objet**: regulator
-  * **Balise**: Identifiant régulateur
+  * **Balise**: regulatorId
   * **Description**: Identifiant du régulateur ayant pris le RDV
   * **Exemples**: 3620100057/70326SR
-  * **Cardinalité**: 1..1
+  * **Cardinalité**: 0..1
   * **Type**: string
 * **ID**: 21
   * **Objet**: regulator

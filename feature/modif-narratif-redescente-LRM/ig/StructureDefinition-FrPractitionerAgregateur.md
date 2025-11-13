@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-FrPractitionerAgrega
   "version" : "1.1.0",
   "name" : "FrPractitionerAgregateur",
   "status" : "active",
-  "date" : "2025-11-13T08:07:59+00:00",
+  "date" : "2025-11-13T14:39:46+00:00",
   "publisher" : "ANS",
   "contact" : [
     {
