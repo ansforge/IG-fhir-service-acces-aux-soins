@@ -339,10 +339,10 @@ Le message json contenant les données et encapsulé dans l'entête EDXL-DE (et 
     <tr>
       <td>20</td>
       <td>regulator</td>
-      <td>Identifiant régulateur</td>
+      <td>regulatorId</td>
       <td>Identifiant du régulateur ayant pris le RDV</td>
       <td>3620100057/70326SR</td>
-      <td>1..1</td>
+      <td>0..1</td>
       <td>string</td>
     </tr>
     <tr>
