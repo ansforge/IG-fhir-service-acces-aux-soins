@@ -457,7 +457,7 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
   </tbody>
 </table>
 
-<h4 id="message-de-référence-rc-def">Message de référence RC-DEF</h4>
+<h4 id="message-de-référence-rc-ref">Message de référence RC-REF</h4>
 
 <p>Le message de référence permet de faire référence à un message précédemment partagé (spécifications du Hub Santé &sect;3.4?6). Il est utilisé en cas d'acquittement technique, cf. ci-dessous.
 Sa structure est la même que celle d'un message RC-DE, avec l'ajout d'un champ supplémentaire <code class="language-plaintext highlighter-rouge">reference</code> qui reprend le <code class="language-plaintext highlighter-rouge">distributionId</code> du message acquitté.</p>
@@ -556,7 +556,7 @@ Une fois le message intégré dans le système du client destinataire (Editeur L
 
 <p>Cet acquittement correspond à la validation auprès de l’émetteur (plateforme numérique SAS) de la bonne réception du message par le destinataire (Editeur LRM).</p>
 
-<p><a name="l1373">​</a>Le format des acquittements de réception finale est contenu dans une enveloppe de type "EDXL-DE" (cf <a href="./specifications_techniques-transmission-info-RDV-LRM.html#enveloppe-edxl-de">Enveloppe EDXL-DE</a>) et un message de type "RC-REF" (cf <a href="./specifications_techniques-transmission-info-RDV-LRM.html#message-de-referenceRC-DEF">Message RC-REF</a>)</p>
+<p>Le format des acquittements de réception finale est contenu dans une enveloppe de type "EDXL-DE" (cf <a href="./specifications_techniques-transmission-info-RDV-LRM.html#enveloppe-edxl-de">Enveloppe EDXL-DE</a>) et un message de type "RC-REF" (cf <a href="./specifications_techniques-transmission-info-RDV-LRM.html#message-de-référence-rc-ref">Message RC-REF</a>)</p>
 
 <p>En résumé, le message doit :</p>
 <ul>
@@ -575,24 +575,20 @@ Une fois le message intégré dans le système du client destinataire (Editeur L
       <th>Champ</th>
       <th>Description</th>
       <th>Commentaire</th>
-      <th>&nbsp;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>&nbsp;</td>
       <td>errorCode</td>
       <td>Code de l'erreur ayant conduit au rejet du message</td>
       <td>Cf. ci-après</td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
       <td>errorCause</td>
       <td>Cause de l'erreur</td>
       <td>La cause de l’erreur. Le <code class="language-plaintext highlighter-rouge">distributionID</code> de l’enveloppe EDXL y est précisé si le message a pu être désérialisé, ainsi que des éléments plus précis suivant l’erreur relevée.</td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
       <td>sourceMessage</td>
       <td>Contenu du message rejeté</td>
       <td>Contenu du message initial avec son entête</td>
@@ -1445,7 +1441,7 @@ Le paragraphe ci-dessous détaille les différentes <strong>règles de gestions 
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Nov 6, 2025 14:31+0000">2025-11-06</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Nov 13, 2025 08:07+0000">2025-11-13</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

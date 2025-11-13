@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-sos-valueset-participant-status | *Version*:1.1.0 |
-| Active as of 2025-11-06 | *Computable Name*:ParticipantStatusSASSOS |
+| Active as of 2025-11-13 | *Computable Name*:ParticipantStatusSASSOS |
 
  
 Statut du participant RDV SAS SOS 
@@ -53,7 +53,7 @@ Statut du participant RDV SAS SOS
   "title" : "Statut participant SAS SOS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2025-11-06T14:31:44+00:00",
+  "date" : "2025-11-13T08:07:59+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

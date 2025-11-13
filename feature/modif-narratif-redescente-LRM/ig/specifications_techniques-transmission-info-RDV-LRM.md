@@ -67,7 +67,7 @@ Le contenu des messages transmis pourra également être encapsulé dans un ent�
 | **Entête RC-DE** | recipients.recipient.explicitAddressScheme | string | Identifiant du SI pilotant le Hub | Valeur fixe :`Hubex` |
 | **Entête RC-DE** | recipients.recipient.explicitAddressValue | string | Identifiant du destinataire | `fr.health.ptfsas`, fr.health.samuXXX |
 
-#### Message de référence RC-DEF
+#### Message de référence RC-REF
 
 Le message de référence permet de faire référence à un message précédemment partagé (spécifications du Hub Santé §3.4?6). Il est utilisé en cas d'acquittement technique, cf. ci-dessous. Sa structure est la même que celle d'un message RC-DE, avec l'ajout d'un champ supplémentaire `reference` qui reprend le `distributionId` du message acquitté.
 
@@ -117,7 +117,7 @@ A titre d'exemple, les codes d'erreur suivants pourront être envoyés du Hub ve
 
 Cet acquittement correspond à la validation auprès de l’émetteur (plateforme numérique SAS) de la bonne réception du message par le destinataire (Editeur LRM).
 
-Le format des acquittements de réception finale est contenu dans une enveloppe de type "EDXL-DE" (cf [Enveloppe EDXL-DE](./specifications_techniques-transmission-info-RDV-LRM.md#enveloppe-edxl-de)) et un message de type "RC-REF" (cf [Message RC-REF](./specifications_techniques-transmission-info-RDV-LRM.md#message-de-referenceRC-DEF))
+Le format des acquittements de réception finale est contenu dans une enveloppe de type "EDXL-DE" (cf [Enveloppe EDXL-DE](./specifications_techniques-transmission-info-RDV-LRM.md#enveloppe-edxl-de)) et un message de type "RC-REF" (cf [Message RC-REF](./specifications_techniques-transmission-info-RDV-LRM.md#message-de-référence-rc-ref))
 
 En résumé, le message doit :
 
@@ -129,11 +129,11 @@ En résumé, le message doit :
 
 En cas d'erreur, un message est posté sur la file « info » de la plateforme SAS (cf. spécifications du Hub Santé §3.3.4). Le message est transmis avec un entête de type "EDXL-DE" (cf [Enveloppe EDXL-DE](./specifications_techniques-transmission-info-RDV-LRM.md#enveloppe-edxl-de)) de type `Error` encapsulant le contenu du message json qui respecte le modèle suivant (cf. spécifications du Hub Santé §3.4.7) :
 
-| | | | |
-| :--- | :--- | :--- | :--- |
-|   | errorCode | Code de l'erreur ayant conduit au rejet du message | Cf. ci-après |
-|   | errorCause | Cause de l'erreur | La cause de l’erreur. Le`distributionID`de l’enveloppe EDXL y est précisé si le message a pu être désérialisé, ainsi que des éléments plus précis suivant l’erreur relevée. |
-|   | sourceMessage | Contenu du message rejeté | Contenu du message initial avec son entête |
+| | | |
+| :--- | :--- | :--- |
+| errorCode | Code de l'erreur ayant conduit au rejet du message | Cf. ci-après |
+| errorCause | Cause de l'erreur | La cause de l’erreur. Le`distributionID`de l’enveloppe EDXL y est précisé si le message a pu être désérialisé, ainsi que des éléments plus précis suivant l’erreur relevée. |
+| sourceMessage | Contenu du message rejeté | Contenu du message initial avec son entête |
 
 Le LRM pourra envoyer des messages de type :
 
