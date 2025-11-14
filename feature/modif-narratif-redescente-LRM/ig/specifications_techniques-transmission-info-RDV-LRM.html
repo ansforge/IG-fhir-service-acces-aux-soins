@@ -295,7 +295,7 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
 
 <h4 id="enveloppe-edxl-de">Enveloppe EDXL-DE</h4>
 
-<p>Tous les messages transitant par l’intermédiaire du Hub Santé contiendront un entête est de type "EDXL-DE" (cf. <a href="https://hub.esante.gouv.fr/resources/Accompagnement/tech/23.09%20DST%20v1.2%20-%20Hub%20Sante%20&amp;%20connecteurs.pdf">spécifications techniques (DST) du Hub Santé</a>) dans lequel sera encapsulé le détail du message (cf. spécifications du Hub Santé &sect;3.4 et 3.4.3).</p>
+<p>Tous les messages transitant par l’intermédiaire du Hub Santé contiendront un entête de type "EDXL-DE" (cf. <a href="https://hub.esante.gouv.fr/resources/Accompagnement/tech/23.09%20DST%20v1.2%20-%20Hub%20Sante%20&amp;%20connecteurs.pdf">spécifications techniques (DST) du Hub Santé</a>) dans lequel sera encapsulé le détail du message (cf. spécifications du Hub Santé &sect;3.4 et 3.4.3).</p>
 
 <p>Le tableau ci-dessous précise les balises de l’enveloppe EDXL-DE qui doivent être envoyées et qui sont nécessaires au routage des messages.</p>
 
@@ -459,14 +459,14 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
 
 <h4 id="message-de-référence-rc-ref">Message de référence RC-REF</h4>
 
-<p>Le message de référence permet de faire référence à un message précédemment partagé (spécifications du Hub Santé &sect;3.4?6). Il est utilisé en cas d'acquittement technique, cf. ci-dessous.
+<p>Le message de référence permet de faire référence à un message précédemment partagé (spécifications du Hub Santé &sect;3.4?6). Il est utilisé en cas d'acquittement final, cf. ci-dessous.
 Sa structure est la même que celle d'un message RC-DE, avec l'ajout d'un champ supplémentaire <code class="language-plaintext highlighter-rouge">reference</code> qui reprend le <code class="language-plaintext highlighter-rouge">distributionId</code> du message acquitté.</p>
 
 <h3 id="détail-des-échanges-entre-la-plateforme-sas-et-le-hub-santé">Détail des échanges entre la plateforme SAS et le Hub Santé</h3>
 
 <h4 id="gestion-de-lenvoi-dun-message-ptf-sas---lrm-via-hub">Gestion de l'envoi d'un message PTF SAS -&gt; LRM via Hub</h4>
 
-<p>LCe message contenant les informations de RDV pris par le régulateur pour le compte du patient est envoyé instantanément par la plateforme numérique SAS au HubSanté. Le message est transmis avec un entête est de type "EDXL-DE" (cf <a href="./specifications_techniques-transmission-info-RDV-LRM.html#enveloppe-edxl-de">Enveloppe EDXL-DE</a>) encapsulant un entête de type RC-DE (cf <a href="./specifications_techniques-transmission-info-RDV-LRM.html#entête-rc-de">Enveloppe RC-DE</a>) et les contenus des messages au format Json (cf <a href="./specifications_techniques-transmission-info-RDV-LRM.html#données-transmises-au-lrm">Contenu json</a>).</p>
+<p>Le message contenant les informations de RDV pris par le régulateur pour le compte du patient est envoyé instantanément par la plateforme numérique SAS au HubSanté. Le message est transmis avec un entête est de type "EDXL-DE" (cf <a href="./specifications_techniques-transmission-info-RDV-LRM.html#enveloppe-edxl-de">Enveloppe EDXL-DE</a>) encapsulant un entête de type RC-DE (cf <a href="./specifications_techniques-transmission-info-RDV-LRM.html#entête-rc-de">Enveloppe RC-DE</a>) et les contenus des messages au format Json (cf <a href="./specifications_techniques-transmission-info-RDV-LRM.html#données-transmises-au-lrm">Données transmises au LRM</a>).</p>
 
 <p>Il s'agit d'un message de type <code class="language-plaintext highlighter-rouge">Report</code> (entête EDXL-DE et RC-DE)</p>
 
@@ -1441,7 +1441,7 @@ Le paragraphe ci-dessous détaille les différentes <strong>règles de gestions 
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Nov 13, 2025 14:39+0000">2025-11-13</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Nov 14, 2025 16:44+0000">2025-11-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
