@@ -459,7 +459,7 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
 
 <h4 id="message-de-référence-rc-ref">Message de référence RC-REF</h4>
 
-<p>Le message de référence permet de faire référence à un message précédemment partagé (spécifications du Hub Santé &sect;3.4?6). Il est utilisé en cas d'acquittement final, cf. ci-dessous.
+<p>Le message de référence permet de faire référence à un message précédemment partagé (spécifications du Hub Santé &sect;3.4.6). Il est utilisé en cas d'acquittement final, cf. ci-dessous.
 Sa structure est la même que celle d'un message RC-DE, avec l'ajout d'un champ supplémentaire <code class="language-plaintext highlighter-rouge">reference</code> qui reprend le <code class="language-plaintext highlighter-rouge">distributionId</code> du message acquitté.</p>
 
 <h3 id="détail-des-échanges-entre-la-plateforme-sas-et-le-hub-santé">Détail des échanges entre la plateforme SAS et le Hub Santé</h3>
@@ -468,7 +468,7 @@ Sa structure est la même que celle d'un message RC-DE, avec l'ajout d'un champ 
 
 <p>Le message contenant les informations de RDV pris par le régulateur pour le compte du patient est envoyé instantanément par la plateforme numérique SAS au HubSanté. Le message est transmis avec un entête est de type "EDXL-DE" (cf <a href="./specifications_techniques-transmission-info-RDV-LRM.html#enveloppe-edxl-de">Enveloppe EDXL-DE</a>) encapsulant un entête de type RC-DE (cf <a href="./specifications_techniques-transmission-info-RDV-LRM.html#entête-rc-de">Enveloppe RC-DE</a>) et les contenus des messages au format Json (cf <a href="./specifications_techniques-transmission-info-RDV-LRM.html#données-transmises-au-lrm">Données transmises au LRM</a>).</p>
 
-<p>Il s'agit d'un message de type <code class="language-plaintext highlighter-rouge">Report</code> (entête EDXL-DE et RC-DE)</p>
+<p>Il s'agit d'un message où le champ <code class="language-plaintext highlighter-rouge">distribution.kind</code> (entête EDXL-DE) et <code class="language-plaintext highlighter-rouge">kind</code> (entête RC-DE) est valorisé à <code class="language-plaintext highlighter-rouge">Report</code>.</p>
 
 <h4 id="acquittement-technique-hub---ptf-sas">Acquittement technique Hub -&gt; PTF SAS</h4>
 
@@ -485,7 +485,7 @@ Une fois le message intégré dans le système du client destinataire (Editeur L
   <li>les messages d'erreurs "fonctionnels" envoyés depuis l’éditeur de LRM (transitant par le Hub) traduisant l'impossibilité de traiter correctement le message reçu (cf <a href="./specifications_techniques-transmission-info-RDV-LRM.html#message-derreur-lrm---hub">erreurs LRM</a>)</li>
 </ul>
 
-<p>Ces messages sont de type <code class="language-plaintext highlighter-rouge">Error</code> (entête EDXL-DE, les messages d'erreur ne comportent pas d'entête RC-DE)</p>
+<p>Il s'agit de messages où le champ <code class="language-plaintext highlighter-rouge">distribution.kind</code> est valorisé à <code class="language-plaintext highlighter-rouge">Error</code> (entête EDXL-DE, les messages d'erreur ne comportent pas d'entête RC-DE)</p>
 
 <p>L'erreur sera présente dans le contenu du message json qui respecte le modèle suivant, cf. spécifications du Hub Santé, &sect;3.4.7 :</p>
 
@@ -567,7 +567,7 @@ Une fois le message intégré dans le système du client destinataire (Editeur L
 
 <h4 id="message-derreur-lrm---hub">Message d'erreur LRM -&gt; Hub</h4>
 
-<p>En cas d'erreur, un message est posté sur la file « info » de la plateforme SAS (cf. spécifications du Hub Santé <span class="fhir-conformance">3.3.4). Le message est transmis avec un entête de type "EDXL-DE" (cf <a href="./specifications_techniques-transmission-info-RDV-LRM.html#enveloppe-edxl-de">Enveloppe EDXL-DE</a>) de type <code class="language-plaintext highlighter-rouge">Error</code> encapsulant le contenu du message json qui respecte le modèle suivant (cf. spécifications du Hub Santé </span>3.4.7) :</p>
+<p>En cas d'erreur, un message est posté sur la file « info » de la plateforme SAS (cf. spécifications du Hub Santé <span class="fhir-conformance">3.3.4). Le message est transmis avec un entête de type "EDXL-DE" (cf <a href="./specifications_techniques-transmission-info-RDV-LRM.html#enveloppe-edxl-de">Enveloppe EDXL-DE</a>) où <code class="language-plaintext highlighter-rouge">distribution.kind</code> est valorisé à <code class="language-plaintext highlighter-rouge">Error</code>, encapsulant le contenu du message json qui respecte le modèle suivant (cf. spécifications du Hub Santé </span>3.4.7) :</p>
 
 <table>
   <thead>
@@ -687,7 +687,7 @@ Une fois le message intégré dans le système du client destinataire (Editeur L
       <td>7</td>
       <td></td>
       <td>orientationCategory</td>
-      <td>Indique la catégorie de l’orientation de rendez-vous</td>
+      <td>Indique la catégorie de l’orientation SAS identifiée</td>
       <td>SOS</td>
       <td>0..1</td>
       <td>string</td>
@@ -705,7 +705,7 @@ Une fois le message intégré dans le système du client destinataire (Editeur L
       <td>9</td>
       <td>practitioner</td>
       <td>rppsId</td>
-      <td>Identifiant national (RPPS avec préfixe) du PS</td>
+      <td>Identifiant national (RPPS avec préfixe) du PS effecteur de soins</td>
       <td>810002909371</td>
       <td>1..1</td>
       <td>string</td>
@@ -733,7 +733,7 @@ Une fois le message intégré dans le système du client destinataire (Editeur L
       <td>practitioner</td>
       <td>specialityCode</td>
       <td>Code de la spécialité du professionnel de santé</td>
-      <td>SM54</td>
+      <td>SM54 (pour médecine générale)</td>
       <td>0..1</td>
       <td>string</td>
     </tr>
@@ -751,7 +751,7 @@ Une fois le message intégré dans le système du client destinataire (Editeur L
       <td>practitioner</td>
       <td>professionCode</td>
       <td>Code de la profession du professionnel de santé</td>
-      <td>10</td>
+      <td>10 (pour médecin)</td>
       <td>0..1</td>
       <td>string</td>
     </tr>
@@ -786,7 +786,7 @@ Une fois le message intégré dans le système du client destinataire (Editeur L
       <td>18</td>
       <td>organization</td>
       <td>name</td>
-      <td>Indique le nom de la structure</td>
+      <td>Nom de la structure</td>
       <td>SOS Médecins de Rennes</td>
       <td>1..1</td>
       <td>string</td>
@@ -804,7 +804,7 @@ Une fois le message intégré dans le système du client destinataire (Editeur L
       <td>20</td>
       <td>regulator</td>
       <td>regulatorId</td>
-      <td>Identifiant du régulateur ayant pris le RDV</td>
+      <td>Identifiant associé au compte SAS du régulateur ayant pris le RDV</td>
       <td>3620100057/70326SR</td>
       <td>0..1</td>
       <td>string</td>
@@ -831,7 +831,7 @@ Une fois le message intégré dans le système du client destinataire (Editeur L
       <td>23</td>
       <td>regulator</td>
       <td>regulatorEmail</td>
-      <td>Adresse mail du régulateur ayant pris le RDV</td>
+      <td>Adresse email associée au compte SAS du régulateur ayant pris le RDV</td>
       <td>pauline.ricart@ghsas.fr</td>
       <td>1..1</td>
       <td>string</td>
@@ -1032,7 +1032,7 @@ Cf. exemple ci-dessous de message de création</p>
           </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
             </span><span class="nl">"messageId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.ptfsas_30c8e00d-68b2-4092-a4f2-a9cb19b416e9"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"sender"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-              </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ptfsas"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.ptfsas"</span><span class="p">,</span><span class="w">
               </span><span class="nl">"URI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hubex:fr.health.ptfsas"</span><span class="w">
             </span><span class="p">},</span><span class="w">
             </span><span class="nl">"sentAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-10-28T17:05:54+01:00"</span><span class="p">,</span><span class="w">
@@ -1040,7 +1040,7 @@ Cf. exemple ci-dessous de message de création</p>
             </span><span class="nl">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Report"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"recipient"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
               </span><span class="p">{</span><span class="w">
-                </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"samu330"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.samu330"</span><span class="p">,</span><span class="w">
                 </span><span class="nl">"URI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hubex:fr.health.samu330"</span><span class="w">
               </span><span class="p">}</span><span class="w">
             </span><span class="p">],</span><span class="w">
@@ -1096,7 +1096,7 @@ Cf. exemple ci-dessous de message de création</p>
           </span><span class="p">{</span><span class="w">
             </span><span class="nl">"messageId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.ptfsas_30c8e00d-68b2-4092-a4f2-a9cb19b416e9"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"sender"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-              </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ptfsas"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.ptfsas"</span><span class="p">,</span><span class="w">
               </span><span class="nl">"URI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hubex:fr.health.ptfsas"</span><span class="w">
             </span><span class="p">},</span><span class="w">
             </span><span class="nl">"sentAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-10-28T17:05:54+01:00"</span><span class="p">,</span><span class="w">
@@ -1104,7 +1104,7 @@ Cf. exemple ci-dessous de message de création</p>
             </span><span class="nl">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Report"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"recipient"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
               </span><span class="p">{</span><span class="w">
-                </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"samu330"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.samu330"</span><span class="p">,</span><span class="w">
                 </span><span class="nl">"URI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hubex:fr.health.samu330"</span><span class="w">
               </span><span class="p">}</span><span class="w">
             </span><span class="p">],</span><span class="w">
@@ -1158,7 +1158,7 @@ Cf. exemple ci-dessous de message de création</p>
                     </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                         </span><span class="nl">"messageId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.samu330_cf21c600-3bd2-49e6-8651-c97dac05d021"</span><span class="p">,</span><span class="w">
                         </span><span class="nl">"sender"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"samu330"</span><span class="p">,</span><span class="w">
+                            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.samu330"</span><span class="p">,</span><span class="w">
                             </span><span class="nl">"URI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hubex:fr.health.samu330"</span><span class="w">
                         </span><span class="p">},</span><span class="w">
                         </span><span class="nl">"sentAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-10-28T17:06:30+01:00"</span><span class="p">,</span><span class="w">
@@ -1166,7 +1166,7 @@ Cf. exemple ci-dessous de message de création</p>
                         </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Actual"</span><span class="p">,</span><span class="w">
                         </span><span class="nl">"recipient"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
                             </span><span class="p">{</span><span class="w">
-                                </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ptfsas"</span><span class="p">,</span><span class="w">
+                                </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.ptfsas"</span><span class="p">,</span><span class="w">
                                 </span><span class="nl">"URI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hubex:fr.health.ptfsas"</span><span class="w">
                             </span><span class="p">}</span><span class="w">
                         </span><span class="p">],</span><span class="w">
@@ -1229,7 +1229,7 @@ Cf. exemple ci-dessous de message de création</p>
                                                 </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                                                     </span><span class="nl">"messageId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.ptfsas_c461338a-97ea-41e5-b9fa-af87840890ff"</span><span class="p">,</span><span class="w">
                                                     </span><span class="nl">"sender"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                                                        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ptfsas"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.ptfsas"</span><span class="p">,</span><span class="w">
                                                         </span><span class="nl">"URI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hubex:fr.health.ptfsas"</span><span class="w">
                                                     </span><span class="p">},</span><span class="w">
                                                     </span><span class="nl">"sentAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-10-29T15:37:15+01:00"</span><span class="p">,</span><span class="w">
@@ -1237,7 +1237,7 @@ Cf. exemple ci-dessous de message de création</p>
                                                     </span><span class="nl">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Report"</span><span class="p">,</span><span class="w">
                                                     </span><span class="nl">"recipient"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
                                                         </span><span class="p">{</span><span class="w">
-                                                            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"samu330"</span><span class="p">,</span><span class="w">
+                                                            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.samu330"</span><span class="p">,</span><span class="w">
                                                             </span><span class="nl">"URI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hubex:fr.health.samu330"</span><span class="w">
                                                         </span><span class="p">}</span><span class="w">
                                                     </span><span class="p">],</span><span class="w">
@@ -1299,10 +1299,10 @@ Cf. exemple ci-dessous de message de création</p>
                     </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                         </span><span class="nl">"error"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                             </span><span class="nl">"errorCode"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                                </span><span class="nl">"statusCode"</span><span class="p">:</span><span class="w"> </span><span class="mi">404</span><span class="p">,</span><span class="w">
-                                </span><span class="nl">"statusString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NOT_FOUND"</span><span class="w">
+                                </span><span class="nl">"statusCode"</span><span class="p">:</span><span class="w"> </span><span class="mi">409</span><span class="p">,</span><span class="w">
+                                </span><span class="nl">"statusString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CONFLICT"</span><span class="w">
                             </span><span class="p">},</span><span class="w">
-                            </span><span class="nl">"errorCause"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Impossible de mettre à jour ce RDV, identifiant de RDV '30c8e00d-68b2-4092-a4f2-a9cb19b416e9' inconnu "</span><span class="p">,</span><span class="w">
+                            </span><span class="nl">"errorCause"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Impossible de créer ce RDV. L'identifiant du RDV à créér '30c8e00d-68b2-4092-a4f2-a9cb19b416e9' existe déjà dans la solution"</span><span class="p">,</span><span class="w">
                             </span><span class="nl">"sourceMessage"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                                 </span><span class="nl">"distributionID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.ptfsas_44fce1e7-461e-4b15-91e2-b4168bed531e"</span><span class="p">,</span><span class="w">
                                 </span><span class="nl">"distributionKind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Report"</span><span class="p">,</span><span class="w">
@@ -1324,7 +1324,7 @@ Cf. exemple ci-dessous de message de création</p>
                                                 </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                                                     </span><span class="nl">"messageId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.ptfsas_44fce1e7-461e-4b15-91e2-b4168bed531e"</span><span class="p">,</span><span class="w">
                                                     </span><span class="nl">"sender"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                                                        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ptfsas"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.ptfsas"</span><span class="p">,</span><span class="w">
                                                         </span><span class="nl">"URI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hubex:fr.health.ptfsas"</span><span class="w">
                                                     </span><span class="p">},</span><span class="w">
                                                     </span><span class="nl">"sentAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-10-28T17:29:59+01:00"</span><span class="p">,</span><span class="w">
@@ -1332,7 +1332,7 @@ Cf. exemple ci-dessous de message de création</p>
                                                     </span><span class="nl">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Report"</span><span class="p">,</span><span class="w">
                                                     </span><span class="nl">"recipient"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
                                                         </span><span class="p">{</span><span class="w">
-                                                            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"samu330"</span><span class="p">,</span><span class="w">
+                                                            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.samu330"</span><span class="p">,</span><span class="w">
                                                             </span><span class="nl">"URI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hubex:fr.health.samu330"</span><span class="w">
                                                         </span><span class="p">}</span><span class="w">
                                                     </span><span class="p">],</span><span class="w">
@@ -1441,7 +1441,7 @@ Le paragraphe ci-dessous détaille les différentes <strong>règles de gestions 
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Nov 14, 2025 16:44+0000">2025-11-14</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Nov 14, 2025 17:06+0000">2025-11-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

@@ -69,7 +69,7 @@ Le contenu des messages transmis pourra également être encapsulé dans un ent�
 
 #### Message de référence RC-REF
 
-Le message de référence permet de faire référence à un message précédemment partagé (spécifications du Hub Santé §3.4?6). Il est utilisé en cas d'acquittement final, cf. ci-dessous. Sa structure est la même que celle d'un message RC-DE, avec l'ajout d'un champ supplémentaire `reference` qui reprend le `distributionId` du message acquitté.
+Le message de référence permet de faire référence à un message précédemment partagé (spécifications du Hub Santé §3.4.6). Il est utilisé en cas d'acquittement final, cf. ci-dessous. Sa structure est la même que celle d'un message RC-DE, avec l'ajout d'un champ supplémentaire `reference` qui reprend le `distributionId` du message acquitté.
 
 ### Détail des échanges entre la plateforme SAS et le Hub Santé
 
@@ -77,7 +77,7 @@ Le message de référence permet de faire référence à un message précédemme
 
 Le message contenant les informations de RDV pris par le régulateur pour le compte du patient est envoyé instantanément par la plateforme numérique SAS au HubSanté. Le message est transmis avec un entête est de type "EDXL-DE" (cf [Enveloppe EDXL-DE](./specifications_techniques-transmission-info-RDV-LRM.md#enveloppe-edxl-de)) encapsulant un entête de type RC-DE (cf [Enveloppe RC-DE](./specifications_techniques-transmission-info-RDV-LRM.md#entête-rc-de)) et les contenus des messages au format Json (cf [Données transmises au LRM](./specifications_techniques-transmission-info-RDV-LRM.md#données-transmises-au-lrm)).
 
-Il s'agit d'un message de type `Report` (entête EDXL-DE et RC-DE)
+Il s'agit d'un message où le champ `distribution.kind` (entête EDXL-DE) et `kind` (entête RC-DE) est valorisé à `Report`.
 
 #### Acquittement technique Hub -> PTF SAS
 
@@ -92,7 +92,7 @@ Un troisième type de file, fr.health.ptfsas.𝑖𝑛𝑓𝑜, est mis en place 
 * les messages "techniques" directement générés par le Hub et traduisant une impossibilité de remettre le message au destinataire
 * les messages d'erreurs "fonctionnels" envoyés depuis l’éditeur de LRM (transitant par le Hub) traduisant l'impossibilité de traiter correctement le message reçu (cf [erreurs LRM](./specifications_techniques-transmission-info-RDV-LRM.md#message-derreur-lrm---hub))
 
-Ces messages sont de type `Error` (entête EDXL-DE, les messages d'erreur ne comportent pas d'entête RC-DE)
+Il s'agit de messages où le champ `distribution.kind` est valorisé à `Error` (entête EDXL-DE, les messages d'erreur ne comportent pas d'entête RC-DE)
 
 L'erreur sera présente dans le contenu du message json qui respecte le modèle suivant, cf. spécifications du Hub Santé, §3.4.7 :
 
@@ -127,7 +127,7 @@ En résumé, le message doit :
 
 #### Message d'erreur LRM -> Hub
 
-En cas d'erreur, un message est posté sur la file « info » de la plateforme SAS (cf. spécifications du Hub Santé §3.3.4). Le message est transmis avec un entête de type "EDXL-DE" (cf [Enveloppe EDXL-DE](./specifications_techniques-transmission-info-RDV-LRM.md#enveloppe-edxl-de)) de type `Error` encapsulant le contenu du message json qui respecte le modèle suivant (cf. spécifications du Hub Santé §3.4.7) :
+En cas d'erreur, un message est posté sur la file « info » de la plateforme SAS (cf. spécifications du Hub Santé §3.3.4). Le message est transmis avec un entête de type "EDXL-DE" (cf [Enveloppe EDXL-DE](./specifications_techniques-transmission-info-RDV-LRM.md#enveloppe-edxl-de)) où `distribution.kind` est valorisé à `Error`, encapsulant le contenu du message json qui respecte le modèle suivant (cf. spécifications du Hub Santé §3.4.7) :
 
 | | | |
 | :--- | :--- | :--- |
@@ -197,7 +197,7 @@ Le message json contenant les données et encapsulé dans l'entête EDXL-DE (et 
 * **ID**: 7
   * **Objet**: 
   * **Balise**: orientationCategory
-  * **Description**: Indique la catégorie de l’orientation de rendez-vous
+  * **Description**: Indique la catégorie de l’orientation SAS identifiée
   * **Exemples**: SOS
   * **Cardinalité**: 0..1
   * **Type**: string
@@ -211,7 +211,7 @@ Le message json contenant les données et encapsulé dans l'entête EDXL-DE (et 
 * **ID**: 9
   * **Objet**: practitioner
   * **Balise**: rppsId
-  * **Description**: Identifiant national (RPPS avec préfixe) du PS
+  * **Description**: Identifiant national (RPPS avec préfixe) du PS effecteur de soins
   * **Exemples**: 810002909371
   * **Cardinalité**: 1..1
   * **Type**: string
@@ -233,7 +233,7 @@ Le message json contenant les données et encapsulé dans l'entête EDXL-DE (et 
   * **Objet**: practitioner
   * **Balise**: specialityCode
   * **Description**: Code de la spécialité du professionnel de santé
-  * **Exemples**: SM54
+  * **Exemples**: SM54 (pour médecine générale)
   * **Cardinalité**: 0..1
   * **Type**: string
 * **ID**: 13
@@ -247,7 +247,7 @@ Le message json contenant les données et encapsulé dans l'entête EDXL-DE (et 
   * **Objet**: practitioner
   * **Balise**: professionCode
   * **Description**: Code de la profession du professionnel de santé
-  * **Exemples**: 10
+  * **Exemples**: 10 (pour médecin)
   * **Cardinalité**: 0..1
   * **Type**: string
 * **ID**: 15
@@ -274,7 +274,7 @@ Le message json contenant les données et encapsulé dans l'entête EDXL-DE (et 
 * **ID**: 18
   * **Objet**: organization
   * **Balise**: name
-  * **Description**: Indique le nom de la structure
+  * **Description**: Nom de la structure
   * **Exemples**: SOS Médecins de Rennes
   * **Cardinalité**: 1..1
   * **Type**: string
@@ -288,7 +288,7 @@ Le message json contenant les données et encapsulé dans l'entête EDXL-DE (et 
 * **ID**: 20
   * **Objet**: regulator
   * **Balise**: regulatorId
-  * **Description**: Identifiant du régulateur ayant pris le RDV
+  * **Description**: Identifiant associé au compte SAS du régulateur ayant pris le RDV
   * **Exemples**: 3620100057/70326SR
   * **Cardinalité**: 0..1
   * **Type**: string
@@ -309,7 +309,7 @@ Le message json contenant les données et encapsulé dans l'entête EDXL-DE (et 
 * **ID**: 23
   * **Objet**: regulator
   * **Balise**: regulatorEmail
-  * **Description**: Adresse mail du régulateur ayant pris le RDV
+  * **Description**: Adresse email associée au compte SAS du régulateur ayant pris le RDV
   * **Exemples**: pauline.ricart@ghsas.fr
   * **Cardinalité**: 1..1
   * **Type**: string
@@ -492,7 +492,7 @@ Cette section détaille les champs à utiliser afin de renseigner les différent
           "message": {
             "messageId": "fr.health.ptfsas_30c8e00d-68b2-4092-a4f2-a9cb19b416e9",
             "sender": {
-              "name": "ptfsas",
+              "name": "fr.health.ptfsas",
               "URI": "hubex:fr.health.ptfsas"
             },
             "sentAt": "2025-10-28T17:05:54+01:00",
@@ -500,7 +500,7 @@ Cette section détaille les champs à utiliser afin de renseigner les différent
             "kind": "Report",
             "recipient": [
               {
-                "name": "samu330",
+                "name": "fr.health.samu330",
                 "URI": "hubex:fr.health.samu330"
               }
             ],
@@ -559,7 +559,7 @@ Détail du message
           {
             "messageId": "fr.health.ptfsas_30c8e00d-68b2-4092-a4f2-a9cb19b416e9",
             "sender": {
-              "name": "ptfsas",
+              "name": "fr.health.ptfsas",
               "URI": "hubex:fr.health.ptfsas"
             },
             "sentAt": "2025-10-28T17:05:54+01:00",
@@ -567,7 +567,7 @@ Détail du message
             "kind": "Report",
             "recipient": [
               {
-                "name": "samu330",
+                "name": "fr.health.samu330",
                 "URI": "hubex:fr.health.samu330"
               }
             ],
@@ -623,7 +623,7 @@ Détail du message
                     "message": {
                         "messageId": "fr.health.samu330_cf21c600-3bd2-49e6-8651-c97dac05d021",
                         "sender": {
-                            "name": "samu330",
+                            "name": "fr.health.samu330",
                             "URI": "hubex:fr.health.samu330"
                         },
                         "sentAt": "2025-10-28T17:06:30+01:00",
@@ -631,7 +631,7 @@ Détail du message
                         "status": "Actual",
                         "recipient": [
                             {
-                                "name": "ptfsas",
+                                "name": "fr.health.ptfsas",
                                 "URI": "hubex:fr.health.ptfsas"
                             }
                         ],
@@ -696,7 +696,7 @@ Détail du message
                                                 "message": {
                                                     "messageId": "fr.health.ptfsas_c461338a-97ea-41e5-b9fa-af87840890ff",
                                                     "sender": {
-                                                        "name": "ptfsas",
+                                                        "name": "fr.health.ptfsas",
                                                         "URI": "hubex:fr.health.ptfsas"
                                                     },
                                                     "sentAt": "2025-10-29T15:37:15+01:00",
@@ -704,7 +704,7 @@ Détail du message
                                                     "kind": "Report",
                                                     "recipient": [
                                                         {
-                                                            "name": "samu330",
+                                                            "name": "fr.health.samu330",
                                                             "URI": "hubex:fr.health.samu330"
                                                         }
                                                     ],
@@ -769,10 +769,10 @@ Dans ce cas, le type d'orientation est incorrect car il ne respecte pas la nomen
                     "message": {
                         "error": {
                             "errorCode": {
-                                "statusCode": 404,
-                                "statusString": "NOT_FOUND"
+                                "statusCode": 409,
+                                "statusString": "CONFLICT"
                             },
-                            "errorCause": "Impossible de mettre à jour ce RDV, identifiant de RDV '30c8e00d-68b2-4092-a4f2-a9cb19b416e9' inconnu ",
+                            "errorCause": "Impossible de créer ce RDV. L'identifiant du RDV à créér '30c8e00d-68b2-4092-a4f2-a9cb19b416e9' existe déjà dans la solution",
                             "sourceMessage": {
                                 "distributionID": "fr.health.ptfsas_44fce1e7-461e-4b15-91e2-b4168bed531e",
                                 "distributionKind": "Report",
@@ -794,7 +794,7 @@ Dans ce cas, le type d'orientation est incorrect car il ne respecte pas la nomen
                                                 "message": {
                                                     "messageId": "fr.health.ptfsas_44fce1e7-461e-4b15-91e2-b4168bed531e",
                                                     "sender": {
-                                                        "name": "ptfsas",
+                                                        "name": "fr.health.ptfsas",
                                                         "URI": "hubex:fr.health.ptfsas"
                                                     },
                                                     "sentAt": "2025-10-28T17:29:59+01:00",
@@ -802,7 +802,7 @@ Dans ce cas, le type d'orientation est incorrect car il ne respecte pas la nomen
                                                     "kind": "Report",
                                                     "recipient": [
                                                         {
-                                                            "name": "samu330",
+                                                            "name": "fr.health.samu330",
                                                             "URI": "hubex:fr.health.samu330"
                                                         }
                                                     ],
