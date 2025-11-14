@@ -34,7 +34,7 @@ Le schéma ci-dessous détaille cette cinématique d'échange entre les différe
 
 #### Enveloppe EDXL-DE
 
-Tous les messages transitant par l’intermédiaire du Hub Santé contiendront un entête est de type "EDXL-DE" (cf. [spécifications techniques (DST) du Hub Santé](https://hub.esante.gouv.fr/resources/Accompagnement/tech/23.09%20DST%20v1.2%20-%20Hub%20Sante%20&%20connecteurs.pdf)) dans lequel sera encapsulé le détail du message (cf. spécifications du Hub Santé §3.4 et 3.4.3).
+Tous les messages transitant par l’intermédiaire du Hub Santé contiendront un entête de type "EDXL-DE" (cf. [spécifications techniques (DST) du Hub Santé](https://hub.esante.gouv.fr/resources/Accompagnement/tech/23.09%20DST%20v1.2%20-%20Hub%20Sante%20&%20connecteurs.pdf)) dans lequel sera encapsulé le détail du message (cf. spécifications du Hub Santé §3.4 et 3.4.3).
 
 Le tableau ci-dessous précise les balises de l’enveloppe EDXL-DE qui doivent être envoyées et qui sont nécessaires au routage des messages.
 
@@ -68,14 +68,14 @@ Le contenu des messages transmis pourra également être encapsulé dans un ent�
 
 #### Message de référence RC-REF
 
-Le message de référence permet de faire référence à un message précédemment partagé (spécifications du Hub Santé §3.4?6). Il est utilisé en cas d'acquittement technique, cf. ci-dessous.
+Le message de référence permet de faire référence à un message précédemment partagé (spécifications du Hub Santé §3.4?6). Il est utilisé en cas d'acquittement final, cf. ci-dessous.
 Sa structure est la même que celle d'un message RC-DE, avec l'ajout d'un champ supplémentaire `reference` qui reprend le `distributionId` du message acquitté. 
 
 ### Détail des échanges entre la plateforme SAS et le Hub Santé
 
 #### Gestion de l'envoi d'un message PTF SAS -> LRM via Hub 
 
-LCe message contenant les informations de RDV pris par le régulateur pour le compte du patient est envoyé instantanément par la plateforme numérique SAS au HubSanté. Le message est transmis avec un entête est de type "EDXL-DE" (cf [Enveloppe EDXL-DE](./specifications_techniques-transmission-info-RDV-LRM.html#enveloppe-edxl-de)) encapsulant un entête de type RC-DE (cf [Enveloppe RC-DE](./specifications_techniques-transmission-info-RDV-LRM.html#entête-rc-de)) et les contenus des messages au format Json (cf [Contenu json](./specifications_techniques-transmission-info-RDV-LRM.html#données-transmises-au-lrm)).
+Le message contenant les informations de RDV pris par le régulateur pour le compte du patient est envoyé instantanément par la plateforme numérique SAS au HubSanté. Le message est transmis avec un entête est de type "EDXL-DE" (cf [Enveloppe EDXL-DE](./specifications_techniques-transmission-info-RDV-LRM.html#enveloppe-edxl-de)) encapsulant un entête de type RC-DE (cf [Enveloppe RC-DE](./specifications_techniques-transmission-info-RDV-LRM.html#entête-rc-de)) et les contenus des messages au format Json (cf [Données transmises au LRM](./specifications_techniques-transmission-info-RDV-LRM.html#données-transmises-au-lrm)).
 
 Il s'agit d'un message de type `Report` (entête EDXL-DE et RC-DE)
 
