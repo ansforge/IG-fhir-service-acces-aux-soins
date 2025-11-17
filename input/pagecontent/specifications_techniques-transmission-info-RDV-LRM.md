@@ -34,7 +34,7 @@ Le schéma ci-dessous détaille cette cinématique d'échange entre les différe
 
 #### Enveloppe EDXL-DE
 
-Tous les messages transitant par l’intermédiaire du Hub Santé contiendront un entête de type "EDXL-DE" (cf. [spécifications techniques (DST) du Hub Santé](https://hub.esante.gouv.fr/resources/Accompagnement/tech/23.09%20DST%20v1.2%20-%20Hub%20Sante%20&%20connecteurs.pdf)) dans lequel sera encapsulé le détail du message (cf. spécifications du Hub Santé §3.4 et 3.4.3).
+Tous les messages transitant par l’intermédiaire du Hub Santé contiendront un entête de type "EDXL-DE" (cf. [spécifications techniques (DST) du Hub Santé](https://hub.esante.gouv.fr/resources/Accompagnement/tech/23.09%20DST%20v1.2%20-%20Hub%20Sante%20&%20connecteurs.pdf) §3.4 et 3.4.3) dans lequel sera encapsulé le détail du message.
 
 Le tableau ci-dessous précise les balises de l’enveloppe EDXL-DE qui doivent être envoyées et qui sont nécessaires au routage des messages.
 
@@ -53,18 +53,18 @@ Le tableau ci-dessous précise les balises de l’enveloppe EDXL-DE qui doivent 
 
 #### Entête RC-DE
 
-Le contenu des messages transmis pourra également être encapsulé dans un entête RC-DE au sein de l’enveloppe EDXL-DE. L'entête RC-DE contient un nombre de champs communs à l'entête EDXL-DE, ce qui permet de rendre le message auportortant sans l'entête EDXL-DE selon le modèle et les balises précisées dans le tableau ci-dessous (cf spécifications du Hub Santé §3.3.2).
+Le contenu des messages transmis pourra également être encapsulé dans un entête RC-DE au sein de l’enveloppe EDXL-DE. L'entête RC-DE contient un nombre de champs communs à l'entête EDXL-DE, ce qui permet de rendre le message auportortant sans l'entête EDXL-DE selon le modèle et les balises précisées dans le tableau ci-dessous (cf spécifications du Hub Santé §3.4.5).
 
 | Élément | Champ | Type | Description | Commentaire / valeur |
 |--------|--------|------|------|-------------|
 | *Entête RC-DE* | messageId | string | Identifiant du message interne. Identique au champ `distributionID` de l'enveloppe EDXL-DE| Égal à `distributionId` du message initial dans le cas d'un acquittement|
-| *Entête RC-DE* | sender.AddresseeType.name | string | Identifiant de l'émetteur |`fr.health.ptfsas`, fr.health.samuXXX |
-| *Entête RC-DE* | sender.AddresseeType.URL | string | URL de l'émetteur|`hubex:fr.health.ptfsas`, hubex:fr.fr.health.samuXXX,  |
+| *Entête RC-DE* | sender.name | string | Identifiant de l'émetteur |`fr.health.ptfsas`, fr.health.samuXXX |
+| *Entête RC-DE* | sender.URI | string | URL de l'émetteur|`hubex:fr.health.ptfsas`, hubex:fr.health.samuXXX,  |
 | *Entête RC-DE* | sentAt | Date time | Date et heure d'envoi du message | Ex : 2025-08-24T14:15:22+02:00 |
 | *Entête RC-DE* | status | string | Statut du message | Valeur fixe : `Actual` |
 | *Entête RC-DE* | kind | string | Type du message | `Report`, `Ack` |
-| *Entête RC-DE* | recipients.recipient.explicitAddressScheme | string | Identifiant du SI pilotant le Hub| Valeur fixe : `Hubex` |
-| *Entête RC-DE* | recipients.recipient.explicitAddressValue | string | Identifiant du destinataire |`fr.health.ptfsas`, fr.health.samuXXX |
+| *Entête RC-DE* | recipient.name | string | Identifiant du SI pilotant le Hub| `hubex:fr.health.ptfsas`, hubex:fr.health.samuXXX |
+| *Entête RC-DE* | recipient.URI | string | Identifiant du destinataire |`fr.health.ptfsas`, fr.health.samuXXX |
 
 #### Message de référence RC-REF
 
@@ -161,7 +161,7 @@ Le message json contenant les données et encapsulé dans l'entête EDXL-DE (et 
       <th style="width: 8%;"><strong>Objet</strong></th>
       <th style="width: 8%;"><strong>Balise</strong></th>
       <th style="width: 30%;"><strong>Description</strong></th>
-      <th style="width: 6%;"><strong>Exemples</strong></th>
+      <th style="width: 6%;"><strong>Exemple</strong></th>
       <th style="width: 8%;"><strong>Cardinalité</strong></th>
       <th style="width: 7%;"><strong>Type</strong></th>
     </tr>
@@ -285,18 +285,18 @@ Le message json contenant les données et encapsulé dans l'entête EDXL-DE (et 
     <tr>
       <td>14</td>
       <td>practitioner</td>
-      <td>professionCode</td>
-      <td>Code de la profession du professionnel de santé</td>
-      <td>10 (pour médecin)</td>
-      <td>0..1</td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td>15</td>
-      <td>practitioner</td>
       <td>professionUrl</td>
       <td>Url de la terminologie utilisée pour la profession</td>
       <td>https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante</td>
+      <td>0..1</td>
+      <td>string</td>
+    </tr>
+     <tr>
+      <td>15</td>
+      <td>practitioner</td>
+      <td>professionCode</td>
+      <td>Code de la profession du professionnel de santé</td>
+      <td>10 (pour médecin)</td>
       <td>0..1</td>
       <td>string</td>
     </tr>
@@ -900,7 +900,7 @@ Dans ce cas, le type d'orientation est incorrect car il ne respecte pas la nomen
 
 ### Déclencheurs et règles d'intégration attendues
 
-Divers évènements dans la plateforme numérique SAS peuvent déclencher de manière instantanée le flux. À titre d’exemple, vous trouverez ci-dessous une liste non exhaustive de ces évènements : 
+Divers évènements dans la plateforme numérique SAS peuvent déclencher de manière instantanée le flux. À titre d’exemple, voune liste non exhaustive de ces évènements est présentée ci-dessous : 
 
 - Pour la création d’un message : 
     - lors de la prise de RDV ou demande de prise en charge par le régulateur pour le compte du patient dans une solution éditeur 
