@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur | *Version*:1.1.0 |
-| Active as of 2025-11-14 | *Computable Name*:FrLocationAgregateur |
+| Active as of 2025-11-17 | *Computable Name*:FrLocationAgregateur |
 
  
 Profil de Location, dérivé de FrLocation, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS 
@@ -40,7 +40,7 @@ Other representations of profile: [CSV](StructureDefinition-FrLocationAgregateur
   "version" : "1.1.0",
   "name" : "FrLocationAgregateur",
   "status" : "active",
-  "date" : "2025-11-14T17:06:33+00:00",
+  "date" : "2025-11-17T09:01:12+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

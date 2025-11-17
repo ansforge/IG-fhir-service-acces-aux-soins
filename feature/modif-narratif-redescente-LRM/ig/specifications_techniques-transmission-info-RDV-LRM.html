@@ -295,7 +295,7 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
 
 <h4 id="enveloppe-edxl-de">Enveloppe EDXL-DE</h4>
 
-<p>Tous les messages transitant par l’intermédiaire du Hub Santé contiendront un entête de type "EDXL-DE" (cf. <a href="https://hub.esante.gouv.fr/resources/Accompagnement/tech/23.09%20DST%20v1.2%20-%20Hub%20Sante%20&amp;%20connecteurs.pdf">spécifications techniques (DST) du Hub Santé</a>) dans lequel sera encapsulé le détail du message (cf. spécifications du Hub Santé &sect;3.4 et 3.4.3).</p>
+<p>Tous les messages transitant par l’intermédiaire du Hub Santé contiendront un entête de type "EDXL-DE" (cf. <a href="https://hub.esante.gouv.fr/resources/Accompagnement/tech/23.09%20DST%20v1.2%20-%20Hub%20Sante%20&amp;%20connecteurs.pdf">spécifications techniques (DST) du Hub Santé</a> &sect;3.4 et 3.4.3) dans lequel sera encapsulé le détail du message.</p>
 
 <p>Le tableau ci-dessous précise les balises de l’enveloppe EDXL-DE qui doivent être envoyées et qui sont nécessaires au routage des messages.</p>
 
@@ -385,7 +385,7 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
 
 <h4 id="entête-rc-de">Entête RC-DE</h4>
 
-<p>Le contenu des messages transmis pourra également être encapsulé dans un entête RC-DE au sein de l’enveloppe EDXL-DE. L'entête RC-DE contient un nombre de champs communs à l'entête EDXL-DE, ce qui permet de rendre le message auportortant sans l'entête EDXL-DE selon le modèle et les balises précisées dans le tableau ci-dessous (cf spécifications du Hub Santé &sect;3.3.2).</p>
+<p>Le contenu des messages transmis pourra également être encapsulé dans un entête RC-DE au sein de l’enveloppe EDXL-DE. L'entête RC-DE contient un nombre de champs communs à l'entête EDXL-DE, ce qui permet de rendre le message auportortant sans l'entête EDXL-DE selon le modèle et les balises précisées dans le tableau ci-dessous (cf spécifications du Hub Santé &sect;3.4.5).</p>
 
 <table>
   <thead>
@@ -407,17 +407,17 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
     </tr>
     <tr>
       <td><em>Entête RC-DE</em></td>
-      <td>sender.AddresseeType.name</td>
+      <td>sender.name</td>
       <td>string</td>
       <td>Identifiant de l'émetteur</td>
       <td><code class="language-plaintext highlighter-rouge">fr.health.ptfsas</code>, fr.health.samuXXX</td>
     </tr>
     <tr>
       <td><em>Entête RC-DE</em></td>
-      <td>sender.AddresseeType.URL</td>
+      <td>sender.URI</td>
       <td>string</td>
       <td>URL de l'émetteur</td>
-      <td><code class="language-plaintext highlighter-rouge">hubex:fr.health.ptfsas</code>, hubex:fr.fr.health.samuXXX,</td>
+      <td><code class="language-plaintext highlighter-rouge">hubex:fr.health.ptfsas</code>, hubex:fr.health.samuXXX,</td>
     </tr>
     <tr>
       <td><em>Entête RC-DE</em></td>
@@ -442,14 +442,14 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
     </tr>
     <tr>
       <td><em>Entête RC-DE</em></td>
-      <td>recipients.recipient.explicitAddressScheme</td>
+      <td>recipient.name</td>
       <td>string</td>
       <td>Identifiant du SI pilotant le Hub</td>
-      <td>Valeur fixe : <code class="language-plaintext highlighter-rouge">Hubex</code></td>
+      <td><code class="language-plaintext highlighter-rouge">hubex:fr.health.ptfsas</code>, hubex:fr.health.samuXXX</td>
     </tr>
     <tr>
       <td><em>Entête RC-DE</em></td>
-      <td>recipients.recipient.explicitAddressValue</td>
+      <td>recipient.URI</td>
       <td>string</td>
       <td>Identifiant du destinataire</td>
       <td><code class="language-plaintext highlighter-rouge">fr.health.ptfsas</code>, fr.health.samuXXX</td>
@@ -625,7 +625,7 @@ Une fois le message intégré dans le système du client destinataire (Editeur L
       <th style="width: 8%;"><strong>Objet</strong></th>
       <th style="width: 8%;"><strong>Balise</strong></th>
       <th style="width: 30%;"><strong>Description</strong></th>
-      <th style="width: 6%;"><strong>Exemples</strong></th>
+      <th style="width: 6%;"><strong>Exemple</strong></th>
       <th style="width: 8%;"><strong>Cardinalité</strong></th>
       <th style="width: 7%;"><strong>Type</strong></th>
     </tr>
@@ -749,18 +749,18 @@ Une fois le message intégré dans le système du client destinataire (Editeur L
     <tr>
       <td>14</td>
       <td>practitioner</td>
-      <td>professionCode</td>
-      <td>Code de la profession du professionnel de santé</td>
-      <td>10 (pour médecin)</td>
-      <td>0..1</td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td>15</td>
-      <td>practitioner</td>
       <td>professionUrl</td>
       <td>Url de la terminologie utilisée pour la profession</td>
       <td>https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante</td>
+      <td>0..1</td>
+      <td>string</td>
+    </tr>
+     <tr>
+      <td>15</td>
+      <td>practitioner</td>
+      <td>professionCode</td>
+      <td>Code de la profession du professionnel de santé</td>
+      <td>10 (pour médecin)</td>
       <td>0..1</td>
       <td>string</td>
     </tr>
@@ -1372,7 +1372,7 @@ Cf. exemple ci-dessous de message de création</p>
 
 <h3 id="déclencheurs-et-règles-dintégration-attendues">Déclencheurs et règles d'intégration attendues</h3>
 
-<p>Divers évènements dans la plateforme numérique SAS peuvent déclencher de manière instantanée le flux. À titre d’exemple, vous trouverez ci-dessous une liste non exhaustive de ces évènements :</p>
+<p>Divers évènements dans la plateforme numérique SAS peuvent déclencher de manière instantanée le flux. À titre d’exemple, voune liste non exhaustive de ces évènements est présentée ci-dessous :</p>
 
 <ul>
   <li>Pour la création d’un message :
@@ -1441,7 +1441,7 @@ Le paragraphe ci-dessous détaille les différentes <strong>règles de gestions 
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Nov 14, 2025 17:06+0000">2025-11-14</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Nov 17, 2025 09:01+0000">2025-11-17</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

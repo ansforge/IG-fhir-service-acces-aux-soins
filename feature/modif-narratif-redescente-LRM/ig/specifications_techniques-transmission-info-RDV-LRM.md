@@ -35,7 +35,7 @@ Le schéma ci-dessous détaille cette cinématique d'échange entre les différe
 
 #### Enveloppe EDXL-DE
 
-Tous les messages transitant par l’intermédiaire du Hub Santé contiendront un entête de type "EDXL-DE" (cf. [spécifications techniques (DST) du Hub Santé](https://hub.esante.gouv.fr/resources/Accompagnement/tech/23.09%20DST%20v1.2%20-%20Hub%20Sante%20&%20connecteurs.pdf)) dans lequel sera encapsulé le détail du message (cf. spécifications du Hub Santé §3.4 et 3.4.3).
+Tous les messages transitant par l’intermédiaire du Hub Santé contiendront un entête de type "EDXL-DE" (cf. [spécifications techniques (DST) du Hub Santé](https://hub.esante.gouv.fr/resources/Accompagnement/tech/23.09%20DST%20v1.2%20-%20Hub%20Sante%20&%20connecteurs.pdf) §3.4 et 3.4.3) dans lequel sera encapsulé le détail du message.
 
 Le tableau ci-dessous précise les balises de l’enveloppe EDXL-DE qui doivent être envoyées et qui sont nécessaires au routage des messages.
 
@@ -54,18 +54,18 @@ Le tableau ci-dessous précise les balises de l’enveloppe EDXL-DE qui doivent 
 
 #### Entête RC-DE
 
-Le contenu des messages transmis pourra également être encapsulé dans un entête RC-DE au sein de l’enveloppe EDXL-DE. L'entête RC-DE contient un nombre de champs communs à l'entête EDXL-DE, ce qui permet de rendre le message auportortant sans l'entête EDXL-DE selon le modèle et les balises précisées dans le tableau ci-dessous (cf spécifications du Hub Santé §3.3.2).
+Le contenu des messages transmis pourra également être encapsulé dans un entête RC-DE au sein de l’enveloppe EDXL-DE. L'entête RC-DE contient un nombre de champs communs à l'entête EDXL-DE, ce qui permet de rendre le message auportortant sans l'entête EDXL-DE selon le modèle et les balises précisées dans le tableau ci-dessous (cf spécifications du Hub Santé §3.4.5).
 
 | | | | | |
 | :--- | :--- | :--- | :--- | :--- |
 | **Entête RC-DE** | messageId | string | Identifiant du message interne. Identique au champ`distributionID`de l'enveloppe EDXL-DE | Égal à`distributionId`du message initial dans le cas d'un acquittement |
-| **Entête RC-DE** | sender.AddresseeType.name | string | Identifiant de l'émetteur | `fr.health.ptfsas`, fr.health.samuXXX |
-| **Entête RC-DE** | sender.AddresseeType.URL | string | URL de l'émetteur | `hubex:fr.health.ptfsas`, hubex:fr.fr.health.samuXXX, |
+| **Entête RC-DE** | sender.name | string | Identifiant de l'émetteur | `fr.health.ptfsas`, fr.health.samuXXX |
+| **Entête RC-DE** | sender.URI | string | URL de l'émetteur | `hubex:fr.health.ptfsas`, hubex:fr.health.samuXXX, |
 | **Entête RC-DE** | sentAt | Date time | Date et heure d'envoi du message | Ex : 2025-08-24T14:15:22+02:00 |
 | **Entête RC-DE** | status | string | Statut du message | Valeur fixe :`Actual` |
 | **Entête RC-DE** | kind | string | Type du message | `Report`,`Ack` |
-| **Entête RC-DE** | recipients.recipient.explicitAddressScheme | string | Identifiant du SI pilotant le Hub | Valeur fixe :`Hubex` |
-| **Entête RC-DE** | recipients.recipient.explicitAddressValue | string | Identifiant du destinataire | `fr.health.ptfsas`, fr.health.samuXXX |
+| **Entête RC-DE** | recipient.name | string | Identifiant du SI pilotant le Hub | `hubex:fr.health.ptfsas`, hubex:fr.health.samuXXX |
+| **Entête RC-DE** | recipient.URI | string | Identifiant du destinataire | `fr.health.ptfsas`, fr.health.samuXXX |
 
 #### Message de référence RC-REF
 
@@ -156,161 +156,161 @@ Le message json contenant les données et encapsulé dans l'entête EDXL-DE (et 
   * **Objet**: 
   * **Balise**: appointmentId
   * **Description**: Identifiant technique unique du RDV
-  * **Exemples**: 1efc111e-ce11-1d11-a111-11c1f11c111e12348
+  * **Exemple**: 1efc111e-ce11-1d11-a111-11c1f11c111e12348
   * **Cardinalité**: 1..1
   * **Type**: string
 * **ID**: 2
   * **Objet**: 
   * **Balise**: method
   * **Description**: Indique un message de création ou de modification du rendez-vous
-  * **Exemples**: createAppointment
+  * **Exemple**: createAppointment
   * **Cardinalité**: 1..1
   * **Type**: string
 * **ID**: 3
   * **Objet**: 
   * **Balise**: created
   * **Description**: Date et heure de la prise de RDV
-  * **Exemples**: 2025-06-17T10:15:56+01:00
+  * **Exemple**: 2025-06-17T10:15:56+01:00
   * **Cardinalité**: 1..1
   * **Type**: datetime
 * **ID**: 4
   * **Objet**: 
   * **Balise**: start
   * **Description**: Date et heure de début du rendez-vous
-  * **Exemples**: 2025-06-17T14:00:00+01:00
+  * **Exemple**: 2025-06-17T14:00:00+01:00
   * **Cardinalité**: 1..1
   * **Type**: datetime
 * **ID**: 5
   * **Objet**: 
   * **Balise**: end
   * **Description**: Date et heure de fin du rendez-vous
-  * **Exemples**: 2025-06-17T14:20:00+01:00
+  * **Exemple**: 2025-06-17T14:20:00+01:00
   * **Cardinalité**: 0..1
   * **Type**: datetime
 * **ID**: 6
   * **Objet**: 
   * **Balise**: status
   * **Description**: Statut du rendez-vous
-  * **Exemples**: booked
+  * **Exemple**: booked
   * **Cardinalité**: 1..1
   * **Type**: string
 * **ID**: 7
   * **Objet**: 
   * **Balise**: orientationCategory
   * **Description**: Indique la catégorie de l’orientation SAS identifiée
-  * **Exemples**: SOS
+  * **Exemple**: SOS
   * **Cardinalité**: 0..1
   * **Type**: string
 * **ID**: 8
   * **Objet**: practitioner
   * **Balise**: Professionnel de santé
   * **Description**: Représente le professionnel de santé associé au rendez-vous
-  * **Exemples**: 
+  * **Exemple**: 
   * **Cardinalité**: 0..1
   * **Type**: practitioner
 * **ID**: 9
   * **Objet**: practitioner
   * **Balise**: rppsId
   * **Description**: Identifiant national (RPPS avec préfixe) du PS effecteur de soins
-  * **Exemples**: 810002909371
+  * **Exemple**: 810002909371
   * **Cardinalité**: 1..1
   * **Type**: string
 * **ID**: 10
   * **Objet**: practitioner
   * **Balise**: lastName
   * **Description**: Nom du professionnel de santé
-  * **Exemples**: Dupont
+  * **Exemple**: Dupont
   * **Cardinalité**: 1..1
   * **Type**: string
 * **ID**: 11
   * **Objet**: practitioner
   * **Balise**: firstName
   * **Description**: Prénom du professionnel de santé
-  * **Exemples**: Jean
+  * **Exemple**: Jean
   * **Cardinalité**: 1..1
   * **Type**: string
 * **ID**: 12
   * **Objet**: practitioner
   * **Balise**: specialityCode
   * **Description**: Code de la spécialité du professionnel de santé
-  * **Exemples**: SM54 (pour médecine générale)
+  * **Exemple**: SM54 (pour médecine générale)
   * **Cardinalité**: 0..1
   * **Type**: string
 * **ID**: 13
   * **Objet**: practitioner
   * **Balise**: specialityUrl
   * **Description**: Url de la terminologie utilisée pour la spécialité
-  * **Exemples**: https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale
+  * **Exemple**: https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale
   * **Cardinalité**: 0..1
   * **Type**: string
 * **ID**: 14
   * **Objet**: practitioner
-  * **Balise**: professionCode
-  * **Description**: Code de la profession du professionnel de santé
-  * **Exemples**: 10 (pour médecin)
+  * **Balise**: professionUrl
+  * **Description**: Url de la terminologie utilisée pour la profession
+  * **Exemple**: https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante
   * **Cardinalité**: 0..1
   * **Type**: string
 * **ID**: 15
   * **Objet**: practitioner
-  * **Balise**: professionUrl
-  * **Description**: Url de la terminologie utilisée pour la profession
-  * **Exemples**: https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante
+  * **Balise**: professionCode
+  * **Description**: Code de la profession du professionnel de santé
+  * **Exemple**: 10 (pour médecin)
   * **Cardinalité**: 0..1
   * **Type**: string
 * **ID**: 16
   * **Objet**: organization
   * **Balise**: 
   * **Description**: Représente la structure du PS ou la structure associée au rendez-vous si le PS n'est pas connu
-  * **Exemples**: 
+  * **Exemple**: 
   * **Cardinalité**: 0..1
   * **Type**: organization
 * **ID**: 17
   * **Objet**: organization
   * **Balise**: organizationId
   * **Description**: Identifiant national de la structure (avec préfixe)
-  * **Exemples**: 334173748400020
+  * **Exemple**: 334173748400020
   * **Cardinalité**: 1..1
   * **Type**: string
 * **ID**: 18
   * **Objet**: organization
   * **Balise**: name
   * **Description**: Nom de la structure
-  * **Exemples**: SOS Médecins de Rennes
+  * **Exemple**: SOS Médecins de Rennes
   * **Cardinalité**: 1..1
   * **Type**: string
 * **ID**: 19
   * **Objet**: regulator
   * **Balise**: 
   * **Description**: Représente le régulateur ayant pris le RDV
-  * **Exemples**: 
+  * **Exemple**: 
   * **Cardinalité**: 1..1
   * **Type**: regulator
 * **ID**: 20
   * **Objet**: regulator
   * **Balise**: regulatorId
   * **Description**: Identifiant associé au compte SAS du régulateur ayant pris le RDV
-  * **Exemples**: 3620100057/70326SR
+  * **Exemple**: 3620100057/70326SR
   * **Cardinalité**: 0..1
   * **Type**: string
 * **ID**: 21
   * **Objet**: regulator
   * **Balise**: regulatorName
   * **Description**: Nom du régulateur ayant pris le RDV
-  * **Exemples**: Ricart
+  * **Exemple**: Ricart
   * **Cardinalité**: 1..1
   * **Type**: string
 * **ID**: 22
   * **Objet**: regulator
   * **Balise**: regulatorFirstname
   * **Description**: Prénom du régulateur ayant pris le RDV
-  * **Exemples**: Pauline
+  * **Exemple**: Pauline
   * **Cardinalité**: 1..1
   * **Type**: string
 * **ID**: 23
   * **Objet**: regulator
   * **Balise**: regulatorEmail
   * **Description**: Adresse email associée au compte SAS du régulateur ayant pris le RDV
-  * **Exemples**: pauline.ricart@ghsas.fr
+  * **Exemple**: pauline.ricart@ghsas.fr
   * **Cardinalité**: 1..1
   * **Type**: string
 
@@ -843,7 +843,7 @@ Dans ce cas, le type d'orientation est incorrect car il ne respecte pas la nomen
 
 ### Déclencheurs et règles d'intégration attendues
 
-Divers évènements dans la plateforme numérique SAS peuvent déclencher de manière instantanée le flux. À titre d’exemple, vous trouverez ci-dessous une liste non exhaustive de ces évènements :
+Divers évènements dans la plateforme numérique SAS peuvent déclencher de manière instantanée le flux. À titre d’exemple, voune liste non exhaustive de ces évènements est présentée ci-dessous :
 
 * Pour la création d’un message : 
 * lors de la prise de RDV ou demande de prise en charge par le régulateur pour le compte du patient dans une solution éditeur
