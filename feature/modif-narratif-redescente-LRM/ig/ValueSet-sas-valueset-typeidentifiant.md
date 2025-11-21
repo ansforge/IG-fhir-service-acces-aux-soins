@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-typeidentifiant | *Version*:1.1.0 |
-| Active as of 2025-11-17 | *Computable Name*:TypeIdentifiantSAS |
+| Active as of 2025-11-21 | *Computable Name*:TypeIdentifiantSAS |
 
  
 Type d'identifiant SAS 
@@ -53,7 +53,7 @@ Type d'identifiant SAS
   "title" : "Type identifiant SAS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2025-11-17T12:25:04+00:00",
+  "date" : "2025-11-21T13:13:12+00:00",
   "publisher" : "ANS",
   "contact" : [
     {
