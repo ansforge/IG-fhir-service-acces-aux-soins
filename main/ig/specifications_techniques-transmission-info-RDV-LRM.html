@@ -1,58 +1,58 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE HTML>
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
     <title>Transmission des informations de rendez-vous aux LRM - Service d'Accès aux Soins v1.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
 
-    <link href="fhir.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="fhir.css"/>
 
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
 
-    <!-- Project extras -->
-    <link href="assets/css/project.css" rel="stylesheet"/>
-    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
-    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
-  	<link href="assets/css/prism.css" rel="stylesheet" />
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
     <link rel="stylesheet" href="assets/css/style-ans.css"/>
     <link rel="stylesheet" href="assets/css/style-add-ans.css"/>
-    <!-- Placeholder for child template CSS declarations -->
+      <!-- Placeholder for child template CSS declarations -->
 
-    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
     <script src="assets/js/html5shiv.js"></script>
     <script src="assets/js/respond.min.js"></script>
-    <![endif]-->
+    <![endif] -->
 
-    <!-- Favicons -->
-    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
-    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
-    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
     <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-    <script type="text/javascript" src="assets/js/mermaid.js"></script>
-    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <script src="assets/js/mermaid.js" type="text/javascript"></script>
+    <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
     <style type="text/css">h2{--heading-prefix:"12"}
     h3,h4,h5,h6{--heading-prefix:"12"}</style>
-    <div id="segment-header" class="segment">  <!-- segment-header -->
-      <div class="container">  <!-- container -->
-        <!-- Placeholder for child template header declarations -->
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+      <div class="container">    <!-- container -->
+          <!-- Placeholder for child template header declarations -->
 <div id="family-nav">
-    <a id="hl7-search-lnk" data-no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+    <a id="hl7-search-lnk" href="http://hl7.org/fhir" data-no-external="true"><img src="assets/images/fhir-logo-www.png" alt="Visit the FHIR website" height="50"/> </a>
   </div>
-  <div id="ans-nav" style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; ">
-    <a id="hl7-logo" data-no-external="true" href="https://esante.gouv.fr/"><img height="50" alt="ANS Logo" src="assets/images/logo-ANS.svg"/></a>
-    <a id="hl7-search-lnk" data-no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+  <div style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; " id="ans-nav">
+    <a id="hl7-logo" href="https://esante.gouv.fr/" data-no-external="true"><img src="assets/images/logo-ANS.svg" alt="ANS Logo" height="50"/></a>
+    <a id="hl7-search-lnk" href="searchform.html" data-no-external="true"><img src="assets/images/search.png" alt="Search FHIR"/></a>
   </div>
 
   <div id="ig-search">
@@ -60,39 +60,39 @@
 
 
         <div id="ig-status">
-          <p><span style="font-size:12pt;font-weight:bold">Service d&#39;Accès aux Soins</span>
+          <p><span style="font-size:12pt;font-weight:bold">Service d'Accès aux Soins</span>
             <br/>
             <span style="display:inline-block;">1.1.0 - ci-build
 
 
 
-  <img alt="France flag" src="assets/images/fra.svg" height="16" title="France"/>
+  <img src="assets/images/fra.svg" alt="France flag" title="France" height="16"/>
 
 
             </span>
           </p>
         </div>
-      </div> <!-- /container -->
-    </div>  <!-- /segment-header -->
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
 
-    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
       <div id="stripe"> </div>
-      <div class="container">  <!-- container -->
-        <!-- HEADER CONTENT -->
+      <div class="container">    <!-- container -->
+          <!-- HEADER CONTENT -->
 
         <nav class="navbar navbar-inverse">
-          <!--status-bar-->
+            <!-- status-bar -->
           <div class="container">
-            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
               <span class="icon-bar"> </span>
               <span class="icon-bar"> </span>
               <span class="icon-bar"> </span>
             </button>
-            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              <!-- menu.xml  -->
+                <!-- menu.xml -->
 
-<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+<ul class="nav navbar-nav">
   <li>
     <a href="index.html">Accueil</a>
   </li>
@@ -149,7 +149,7 @@
     </ul>
   </li>
   <li>
-    <a href="ressources_casusage.html">Ressources par cas d&apos;usage</a>
+    <a href="ressources_casusage.html">Ressources par cas d'usage</a>
   </li>
   <li>
     <a href="artifacts.html">Ressources de conformité</a>
@@ -175,29 +175,29 @@
         <a href="downloads.html">Téléchargements et usage</a>
       </li>
       <li>
-        <a target="_blank" href="http://hl7.org/fhir/R4/index.html">Spécifications FHIR</a>
+        <a href="http://hl7.org/fhir/R4/index.html" target="_blank">Spécifications FHIR</a>
       </li>
       <li>
-        <a target="_blank" href="https://esante.gouv.fr/">Site de l&apos;ANS</a>
+        <a href="https://esante.gouv.fr/" target="_blank">Site de l'ANS</a>
       </li>
     </ul>
   </li>
   <li>
-    <a target="_blank" href="https://interop.esante.gouv.fr/ig/documentation/">Documentation</a>
+    <a href="https://interop.esante.gouv.fr/ig/documentation/" target="_blank">Documentation</a>
   </li>
 </ul>
-            </div>  <!-- /.nav-collapse -->
-          </div>  <!-- /.container -->
-        </nav>  <!-- /.navbar -->
-      <!-- /HEADER CONTENT -->
-      </div>  <!-- /container -->
-    </div>  <!-- /segment-navbar -->
-    <!--status-bar-->
+            </div>    <!-- /.nav-collapse -->
+          </div>    <!-- /.container -->
+        </nav>    <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-navbar -->
+      <!-- status-bar -->
 
-    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
-      <div class="container">  <!-- container -->
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Transmission des informations de rendez-vous aux LRM</b></li>
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><b>Transmission des informations de rendez-vous aux LRM</b></li>
 
           <span style="float:right;">
 
@@ -210,12 +210,12 @@
           </span>
 
         </ul>
-      </div>  <!-- /container -->
-    </div>  <!-- /segment-breadcrumb -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
 
     <a name="top"> </a>
-    <div id="segment-content" class="segment">  <!-- segment-content -->
-      <div class="container">  <!-- container -->
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
         <div class="row">
           <div class="inner-wrapper">
 
@@ -227,7 +227,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Service d'Accès aux Soins - Local Development build (v1.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://interop.esante.gouv.fr/ig/fhir/sas/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+    <!-- ReleaseHeader --><p id="publish-box">Service d'Accès aux Soins - Local Development build (v1.1.0) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/fhir/sas/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
   <h2>Transmission des informations de rendez-vous aux LRM</h2>
   
 
@@ -242,11 +242,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
 
-    <p><!-- white space is critical inside of capture --></p>
+    <p>  <!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#détail-des-échanges-entre-les-acteurs" id="markdown-toc-détail-des-échanges-entre-les-acteurs">Détail des échanges entre les acteurs</a></li>
-  <li><a href="#message-denvoi-de-rdv" id="markdown-toc-message-denvoi-de-rdv">Message d'envoi de RDV</a></li>
+  <li><a href="#structure-et-format-des-messages-transitant-via-le-hub-santé" id="markdown-toc-structure-et-format-des-messages-transitant-via-le-hub-santé">Structure et format des messages transitant via le Hub Santé</a></li>
+  <li><a href="#détail-des-échanges-entre-la-plateforme-sas-et-le-hub-santé" id="markdown-toc-détail-des-échanges-entre-la-plateforme-sas-et-le-hub-santé">Détail des échanges entre la plateforme SAS et le Hub Santé</a></li>
+  <li><a href="#echanges-entre-léditeur-lrm-et-le-hub-santé" id="markdown-toc-echanges-entre-léditeur-lrm-et-le-hub-santé">Echanges entre l'éditeur LRM et le Hub Santé</a></li>
+  <li><a href="#données-transmises-au-lrm" id="markdown-toc-données-transmises-au-lrm">Données transmises au LRM</a></li>
   <li><a href="#message-de-modification-de-rdv" id="markdown-toc-message-de-modification-de-rdv">Message de modification de RDV</a></li>
   <li><a href="#message-dannulation-de-rdv" id="markdown-toc-message-dannulation-de-rdv">Message d'annulation de RDV</a></li>
   <li><a href="#détail-des-champs-transmis-et-nomenclatures" id="markdown-toc-détail-des-champs-transmis-et-nomenclatures">Détail des champs transmis et nomenclatures</a></li>
@@ -260,8 +262,8 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
 
 <p>Le schéma ci-dessous illustre l'échange de données entre la PTF SAS et les éditeurs de LRM</p>
 
-<div class="figure" style="width:100%;" align="center">
-    <p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="DESCRIPTION" height="93px" preserveAspectRatio="none" style="width:1053px;height:93px;background:#FFFFFF;" version="1.1" viewBox="0 0 1053 93" width="1053px" zoomAndPan="magnify"><defs /><g><!--entity R--><g class="entity" data-entity="R" data-source-line="3" data-uid="ent0002" id="entity_R"><ellipse cx="44.6504" cy="20.0659" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" /><path d="M44.6504,28.0659 L44.6504,55.0659 M31.6504,36.0659 L57.6504,36.0659 M44.6504,55.0659 L31.6504,70.0659 M44.6504,55.0659 L57.6504,70.0659" fill="none" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="77.3008" x="6" y="84.561">R&#233;gulateur</text></g><!--entity db--><g class="entity" data-entity="db" data-source-line="4" data-uid="ent0003" id="entity_db"><path d="M225,37.0659 C225,27.0659 267.4126,27.0659 267.4126,27.0659 C267.4126,27.0659 309.8252,27.0659 309.8252,37.0659 L309.8252,62.3628 C309.8252,72.3628 267.4126,72.3628 267.4126,72.3628 C267.4126,72.3628 225,72.3628 225,62.3628 L225,37.0659" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" /><path d="M225,37.0659 C225,47.0659 267.4126,47.0659 267.4126,47.0659 C267.4126,47.0659 309.8252,47.0659 309.8252,37.0659" fill="none" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64.8252" x="235" y="64.061">Stockage</text></g><!--entity PTF--><g class="entity" data-entity="PTF" data-source-line="5" data-uid="ent0004" id="entity_PTF"><rect fill="#F1F1F1" height="36.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="128.3154" x="345.5" y="31.5659" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="108.3154" x="355.5" y="54.561">Plateforme SAS</text></g><!--entity Hub--><g class="entity" data-entity="Hub" data-source-line="6" data-uid="ent0005" id="entity_Hub"><path d="M694,36.5659 L777.1787,36.5659 C782.1787,36.5659 782.1787,49.7144 782.1787,49.7144 C782.1787,49.7144 782.1787,62.8628 777.1787,62.8628 L694,62.8628 C689,62.8628 689,49.7144 689,49.7144 C689,49.7144 689,36.5659 694,36.5659" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" /><path d="M777.1787,36.5659 C772.1787,36.5659 772.1787,49.7144 772.1787,49.7144 C772.1787,62.8628 777.1787,62.8628 777.1787,62.8628" fill="none" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73.1787" x="694" y="54.561">Hub Sant&#233;</text></g><!--entity LRM--><g class="entity" data-entity="LRM" data-source-line="7" data-uid="ent0006" id="entity_LRM"><rect fill="#F1F1F1" height="36.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="49.6064" x="997.5" y="31.5659" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29.6064" x="1007.5" y="54.561">LRM</text></g><!--link R to db--><g class="link" data-entity-1="R" data-entity-2="db" data-source-line="9" data-uid="lnk7" id="link_R_db"><path d="M83.09,49.5659 C122.61,49.5659 177.88,49.5659 218.82,49.5659" fill="none" id="R-to-db" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="224.82,49.5659,215.82,45.5659,219.82,49.5659,215.82,53.5659,224.82,49.5659" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="100.8706" x="101.5" y="27.6328">Enregistrement</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="71.1128" x="120.5112" y="42.7656">orientation</text></g><!--link db to PTF--><g class="link" data-entity-1="db" data-entity-2="PTF" data-source-line="10" data-uid="lnk8" id="link_db_PTF"><path d="M310.21,49.5659 C321.85,49.5659 327.48,49.5659 339.12,49.5659" fill="none" id="db-to-PTF" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="345.12,49.5659,336.12,45.5659,340.12,49.5659,336.12,53.5659,345.12,49.5659" style="stroke:#181818;stroke-width:1;" /></g><!--link PTF to Hub--><g class="link" data-entity-1="PTF" data-entity-2="Hub" data-source-line="11" data-uid="lnk9" id="link_PTF_Hub"><path d="M473.52,49.5659 C536.75,49.5659 625.96,49.5659 682.51,49.5659" fill="none" id="PTF-to-Hub" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="688.51,49.5659,679.51,45.5659,683.51,49.5659,679.51,53.5659,688.51,49.5659" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="179.1563" x="491.75" y="42.6328">Transmission message json</text></g><!--link Hub to PTF--><g class="link" data-entity-1="Hub" data-entity-2="PTF" data-source-line="15" data-uid="lnk13" id="link_Hub_PTF"><path d="M700.55,36.5059 C691.31,33.6359 681.27,31.0259 671.75,29.5659 C631.99,23.4759 530.68,24.7259 490.75,29.5659 C485.13,30.2459 485.2246,30.0661 479.4346,31.1661" fill="none" id="Hub-to-PTF" style="stroke:#0000FF;stroke-width:1;" /><polygon fill="#0000FF" points="473.54,32.2859,483.1284,34.5358,478.4521,31.3527,481.6353,26.6764,473.54,32.2859" style="stroke:#0000FF;stroke-width:1;" /><text fill="#0000FF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="26.4951" x="568.25" y="19.6328">ACK</text></g><!--link Hub to PTF--><g class="link" data-entity-1="Hub" data-entity-2="PTF" data-source-line="16" data-uid="lnk14" id="link_Hub_PTF"><path d="M688.86,58.5259 C664.24,62.7959 633.48,67.4459 605.75,69.5659 C561.53,72.9559 517.7597,68.712 479.4397,62.792" fill="none" id="Hub-to-PTF-1" style="stroke:#FF0000;stroke-width:1;" /><polygon fill="#FF0000" points="473.51,61.8759,481.7938,67.2031,478.4514,62.6393,483.0152,59.2969,473.51,61.8759" style="stroke:#FF0000;stroke-width:1;" /><text fill="#FF0000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="47.2583" x="557.75" y="65.6328">Erreurs</text></g><!--link Hub to LRM--><g class="link" data-entity-1="Hub" data-entity-2="LRM" data-source-line="12" data-uid="lnk10" id="link_Hub_LRM"><path d="M782.25,49.5659 C843.56,49.5659 942.98,49.5659 991.15,49.5659" fill="none" id="Hub-to-LRM" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="997.15,49.5659,988.15,45.5659,992.15,49.5659,988.15,53.5659,997.15,49.5659" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="179.1563" x="800.25" y="42.6328">Transmission message json</text></g><!--link LRM to Hub--><g class="link" data-entity-1="LRM" data-entity-2="Hub" data-source-line="13" data-uid="lnk11" id="link_LRM_Hub"><path d="M997.23,35.4059 C991.79,32.9859 985.95,30.8459 980.25,29.5659 C941.01,20.7459 839.01,23.4759 799.25,29.5659 C789.73,31.0259 785.42,31.8562 776.18,34.7262" fill="none" id="LRM-to-Hub" style="stroke:#0000FF;stroke-width:1;" /><polygon fill="#0000FF" points="770.45,36.5059,780.2314,37.6563,775.225,35.0228,777.8584,30.0163,770.45,36.5059" style="stroke:#0000FF;stroke-width:1;" /><text fill="#0000FF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="26.4951" x="876.75" y="19.6328">ACK</text></g><!--link LRM to Hub--><g class="link" data-entity-1="LRM" data-entity-2="Hub" data-source-line="14" data-uid="lnk12" id="link_LRM_Hub"><path d="M997.31,55.5759 C975.49,60.4459 942.99,66.9359 914.25,69.5659 C869.32,73.6859 824.0563,67.8868 788.0163,61.0968" fill="none" id="LRM-to-Hub-1" style="stroke:#FF0000;stroke-width:1;" /><polygon fill="#FF0000" points="782.12,59.9859,790.2238,65.5831,787.0336,60.9116,791.705,57.7214,782.12,59.9859" style="stroke:#FF0000;stroke-width:1;" /><text fill="#FF0000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="47.2583" x="866.25" y="65.6328">Erreurs</text></g></g></svg></p>
+<div style="width:100%;" align="center" class="figure">
+    <p><svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css" viewBox="0 0 1053 93" zoomAndPan="magnify" data-diagram-type="DESCRIPTION" preserveAspectRatio="none" width="1053px" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:1053px;height:93px;background:#FFFFFF;" version="1.1" height="93px"><defs></defs><g>  <!-- entity R --><g data-entity="R" id="entity_R" data-uid="ent0002" class="entity" data-source-line="3"><ellipse cx="44.6504" cy="20.0659" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1"></ellipse><path d="M44.6504,28.0659 L44.6504,55.0659 M31.6504,36.0659 L57.6504,36.0659 M44.6504,55.0659 L31.6504,70.0659 M44.6504,55.0659 L57.6504,70.0659" style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="6" font-size="14" textLength="77.3008" y="84.561" font-family="sans-serif" fill="#000000">Régulateur</text></g>  <!-- entity db --><g data-entity="db" id="entity_db" data-uid="ent0003" class="entity" data-source-line="4"><path d="M225,37.0659 C225,27.0659 267.4126,27.0659 267.4126,27.0659 C267.4126,27.0659 309.8252,27.0659 309.8252,37.0659 L309.8252,62.3628 C309.8252,72.3628 267.4126,72.3628 267.4126,72.3628 C267.4126,72.3628 225,72.3628 225,62.3628 L225,37.0659" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1"></path><path d="M225,37.0659 C225,47.0659 267.4126,47.0659 267.4126,47.0659 C267.4126,47.0659 309.8252,47.0659 309.8252,37.0659" style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="235" font-size="14" textLength="64.8252" y="64.061" font-family="sans-serif" fill="#000000">Stockage</text></g>  <!-- entity PTF --><g data-entity="PTF" id="entity_PTF" data-uid="ent0004" class="entity" data-source-line="5"><rect rx="2.5" ry="2.5" width="128.3154" x="345.5" y="31.5659" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1" height="36.2969"></rect><text lengthAdjust="spacing" x="355.5" font-size="14" textLength="108.3154" y="54.561" font-family="sans-serif" fill="#000000">Plateforme SAS</text></g>  <!-- entity Hub --><g data-entity="Hub" id="entity_Hub" data-uid="ent0005" class="entity" data-source-line="6"><path d="M694,36.5659 L777.1787,36.5659 C782.1787,36.5659 782.1787,49.7144 782.1787,49.7144 C782.1787,49.7144 782.1787,62.8628 777.1787,62.8628 L694,62.8628 C689,62.8628 689,49.7144 689,49.7144 C689,49.7144 689,36.5659 694,36.5659" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1"></path><path d="M777.1787,36.5659 C772.1787,36.5659 772.1787,49.7144 772.1787,49.7144 C772.1787,62.8628 777.1787,62.8628 777.1787,62.8628" style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="694" font-size="14" textLength="73.1787" y="54.561" font-family="sans-serif" fill="#000000">Hub Santé</text></g>  <!-- entity LRM --><g data-entity="LRM" id="entity_LRM" data-uid="ent0006" class="entity" data-source-line="7"><rect rx="2.5" ry="2.5" width="49.6064" x="997.5" y="31.5659" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1" height="36.2969"></rect><text lengthAdjust="spacing" x="1007.5" font-size="14" textLength="29.6064" y="54.561" font-family="sans-serif" fill="#000000">LRM</text></g>  <!-- link R to db --><g data-entity-2="db" data-entity-1="R" id="link_R_db" data-uid="lnk7" class="link" data-source-line="9"><path d="M83.09,49.5659 C122.61,49.5659 177.88,49.5659 218.82,49.5659" style="stroke:#181818;stroke-width:1;" id="R-to-db" fill="none"></path><polygon style="stroke:#181818;stroke-width:1;" fill="#181818" points="224.82,49.5659,215.82,45.5659,219.82,49.5659,215.82,53.5659,224.82,49.5659"></polygon><text lengthAdjust="spacing" x="101.5" font-size="13" textLength="100.8706" y="27.6328" font-family="sans-serif" fill="#000000">Enregistrement</text><text lengthAdjust="spacing" x="120.5112" font-size="13" textLength="71.1128" y="42.7656" font-family="sans-serif" fill="#000000">orientation</text></g>  <!-- link db to PTF --><g data-entity-2="PTF" data-entity-1="db" id="link_db_PTF" data-uid="lnk8" class="link" data-source-line="10"><path d="M310.21,49.5659 C321.85,49.5659 327.48,49.5659 339.12,49.5659" style="stroke:#181818;stroke-width:1;" id="db-to-PTF" fill="none"></path><polygon style="stroke:#181818;stroke-width:1;" fill="#181818" points="345.12,49.5659,336.12,45.5659,340.12,49.5659,336.12,53.5659,345.12,49.5659"></polygon></g>  <!-- link PTF to Hub --><g data-entity-2="Hub" data-entity-1="PTF" id="link_PTF_Hub" data-uid="lnk9" class="link" data-source-line="11"><path d="M473.52,49.5659 C536.75,49.5659 625.96,49.5659 682.51,49.5659" style="stroke:#181818;stroke-width:1;" id="PTF-to-Hub" fill="none"></path><polygon style="stroke:#181818;stroke-width:1;" fill="#181818" points="688.51,49.5659,679.51,45.5659,683.51,49.5659,679.51,53.5659,688.51,49.5659"></polygon><text lengthAdjust="spacing" x="491.75" font-size="13" textLength="179.1563" y="42.6328" font-family="sans-serif" fill="#000000">Transmission message json</text></g>  <!-- link Hub to PTF --><g data-entity-2="PTF" data-entity-1="Hub" id="link_Hub_PTF" data-uid="lnk13" class="link" data-source-line="15"><path d="M700.55,36.5059 C691.31,33.6359 681.27,31.0259 671.75,29.5659 C631.99,23.4759 530.68,24.7259 490.75,29.5659 C485.13,30.2459 485.2246,30.0661 479.4346,31.1661" style="stroke:#0000FF;stroke-width:1;" id="Hub-to-PTF" fill="none"></path><polygon style="stroke:#0000FF;stroke-width:1;" fill="#0000FF" points="473.54,32.2859,483.1284,34.5358,478.4521,31.3527,481.6353,26.6764,473.54,32.2859"></polygon><text lengthAdjust="spacing" x="568.25" font-size="13" textLength="26.4951" y="19.6328" font-family="sans-serif" fill="#0000FF">ACK</text></g>  <!-- link Hub to PTF --><g data-entity-2="PTF" data-entity-1="Hub" id="link_Hub_PTF" data-uid="lnk14" class="link" data-source-line="16"><path d="M688.86,58.5259 C664.24,62.7959 633.48,67.4459 605.75,69.5659 C561.53,72.9559 517.7597,68.712 479.4397,62.792" style="stroke:#FF0000;stroke-width:1;" id="Hub-to-PTF-1" fill="none"></path><polygon style="stroke:#FF0000;stroke-width:1;" fill="#FF0000" points="473.51,61.8759,481.7938,67.2031,478.4514,62.6393,483.0152,59.2969,473.51,61.8759"></polygon><text lengthAdjust="spacing" x="557.75" font-size="13" textLength="47.2583" y="65.6328" font-family="sans-serif" fill="#FF0000">Erreurs</text></g>  <!-- link Hub to LRM --><g data-entity-2="LRM" data-entity-1="Hub" id="link_Hub_LRM" data-uid="lnk10" class="link" data-source-line="12"><path d="M782.25,49.5659 C843.56,49.5659 942.98,49.5659 991.15,49.5659" style="stroke:#181818;stroke-width:1;" id="Hub-to-LRM" fill="none"></path><polygon style="stroke:#181818;stroke-width:1;" fill="#181818" points="997.15,49.5659,988.15,45.5659,992.15,49.5659,988.15,53.5659,997.15,49.5659"></polygon><text lengthAdjust="spacing" x="800.25" font-size="13" textLength="179.1563" y="42.6328" font-family="sans-serif" fill="#000000">Transmission message json</text></g>  <!-- link LRM to Hub --><g data-entity-2="Hub" data-entity-1="LRM" id="link_LRM_Hub" data-uid="lnk11" class="link" data-source-line="13"><path d="M997.23,35.4059 C991.79,32.9859 985.95,30.8459 980.25,29.5659 C941.01,20.7459 839.01,23.4759 799.25,29.5659 C789.73,31.0259 785.42,31.8562 776.18,34.7262" style="stroke:#0000FF;stroke-width:1;" id="LRM-to-Hub" fill="none"></path><polygon style="stroke:#0000FF;stroke-width:1;" fill="#0000FF" points="770.45,36.5059,780.2314,37.6563,775.225,35.0228,777.8584,30.0163,770.45,36.5059"></polygon><text lengthAdjust="spacing" x="876.75" font-size="13" textLength="26.4951" y="19.6328" font-family="sans-serif" fill="#0000FF">ACK</text></g>  <!-- link LRM to Hub --><g data-entity-2="Hub" data-entity-1="LRM" id="link_LRM_Hub" data-uid="lnk12" class="link" data-source-line="14"><path d="M997.31,55.5759 C975.49,60.4459 942.99,66.9359 914.25,69.5659 C869.32,73.6859 824.0563,67.8868 788.0163,61.0968" style="stroke:#FF0000;stroke-width:1;" id="LRM-to-Hub-1" fill="none"></path><polygon style="stroke:#FF0000;stroke-width:1;" fill="#FF0000" points="782.12,59.9859,790.2238,65.5831,787.0336,60.9116,791.705,57.7214,782.12,59.9859"></polygon><text lengthAdjust="spacing" x="866.25" font-size="13" textLength="47.2583" y="65.6328" font-family="sans-serif" fill="#FF0000">Erreurs</text></g></g></svg></p>
 </div>
 
 <p>Le protocole utilisé pour la connexion des applications (PTF SAS et éditeurs de LRM) avec le Hub est le <a href="https://fr.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol">protocole AMQP</a>, en version 0-9-1.</p>
@@ -279,26 +281,23 @@ La plateforme numérique du SAS, ainsi que les éditeurs de LRM sont raccordés 
   <li>« info » pour les messages généraux d’informations, alertes et erreurs</li>
 </ul>
 
-<p>La structuration du nom des files est {𝑖𝑑𝑒𝑛𝑡𝑖𝑓𝑖𝑎𝑛𝑡𝐶𝑙𝑖𝑒𝑛𝑡}.{𝑡𝑦𝑝𝑜𝑙𝑜𝑔𝑖𝑒} donnant, par exemple, <em>fr.health.samu001.message</em></p>
+<p>La structuration du nom des files est {&#x1D456;&#x1D451;&#x1D452;&#x1D45B;&#x1D461;&#x1D456;&#x1D453;&#x1D456;&#x1D44E;&#x1D45B;&#x1D461;&#x1D436;&#x1D459;&#x1D456;&#x1D452;&#x1D45B;&#x1D461;}.{&#x1D461;&#x1D466;&#x1D45D;&#x1D45C;&#x1D459;&#x1D45C;&#x1D454;&#x1D456;&#x1D452;} donnant, par exemple, <em>fr.health.samu001.message</em></p>
 
 <p>En l'occurrence, les LRM écouteront sur leur file « message » et la plateforme SAS écoutera sur les files "ack" et "info".</p>
 
 <p>Le schéma ci-dessous détaille cette cinématique d'échange entre les différents acteurs</p>
 
-<div class="figure" style="width:100%;" align="center">
-    <p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="SEQUENCE" height="470px" preserveAspectRatio="none" style="width:570px;height:470px;background:#FFFFFF;" version="1.1" viewBox="0 0 570 470" width="570px" zoomAndPan="magnify"><defs /><g><g><title>Client B</title><rect fill="#000000" fill-opacity="0.00000" height="410.8594" width="8" x="35.2925" y="52.5938" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="39" x2="39" y1="52.5938" y2="463.4531" /></g><g><title>**Hub Sant&#233;**</title><rect fill="#000000" fill-opacity="0.00000" height="410.8594" width="8" x="249.0303" y="52.5938" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="252.8984" x2="252.8984" y1="52.5938" y2="463.4531" /></g><g><title>Client A</title><rect fill="#000000" fill-opacity="0.00000" height="410.8594" width="8" x="520.4937" y="52.5938" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="523.8691" x2="523.8691" y1="52.5938" y2="463.4531" /></g><g class="participant participant-head" data-participant="LRM"><rect fill="#E2E2F0" height="46.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="68.585" x="5" y="5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="54.585" x="12" y="24.9951">Client B</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="33.6328" x="22.4761" y="41.292">LRM</text></g><g class="participant participant-head" data-participant="Hub"><rect fill="#E2E2F0" height="46.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="96.2637" x="204.8984" y="5" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="82.2637" x="211.8984" y="24.9951">Hub Sant&#233;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4502" x="250.8052" y="41.292">&#160;</text></g><g class="participant participant-head" data-participant="PTF"><rect fill="#E2E2F0" height="46.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="79.249" x="484.8691" y="5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="54.5576" x="497.2148" y="24.9951">Client A</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="65.249" x="491.8691" y="41.292">PTF SAS</text></g><g class="message" data-participant-1="PTF" data-participant-2="Hub"><polygon fill="#181818" points="264.0303,79.7266,254.0303,83.7266,264.0303,87.7266,260.0303,83.7266" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="258.0303" x2="523.4937" y1="83.7266" y2="83.7266" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="212.2275" x="270.0303" y="78.6606">1. Envoi du message fonctionnel</text></g><g class="message" data-participant-1="Hub" data-participant-2="PTF"><polygon fill="#181818" points="512.4937,108.8594,522.4937,112.8594,512.4937,116.8594,516.4937,112.8594" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;stroke-dasharray:2.0,2.0;" x1="253.0303" x2="518.4937" y1="112.8594" y2="112.8594" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="173.8242" x="260.0303" y="107.7935">2. Acquittement technique</text></g><g class="message" data-participant-1="Hub" data-participant-2="Hub"><line style="stroke:#181818;stroke-width:1;" x1="253.0303" x2="295.0303" y1="141.9922" y2="141.9922" /><line style="stroke:#181818;stroke-width:1;" x1="295.0303" x2="295.0303" y1="141.9922" y2="154.9922" /><line style="stroke:#181818;stroke-width:1;" x1="254.0303" x2="295.0303" y1="154.9922" y2="154.9922" /><polygon fill="#181818" points="264.0303,150.9922,254.0303,154.9922,264.0303,158.9922,260.0303,154.9922" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="243.5215" x="260.0303" y="136.9263">2.1 Inscription dans la file B.message</text></g><g class="message" data-participant-1="Hub" data-participant-2="LRM"><polygon fill="#181818" points="50.2925,195.2578,40.2925,199.2578,50.2925,203.2578,46.2925,199.2578" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="44.2925" x2="252.0303" y1="199.2578" y2="199.2578" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="185.6055" x="56.2925" y="179.0591">3. Transmission du message</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="98.2935" x="56.2925" y="194.1919">au destinataire</text></g><g class="message" data-participant-1="LRM" data-participant-2="Hub"><polygon fill="#181818" points="241.0303,224.3906,251.0303,228.3906,241.0303,232.3906,245.0303,228.3906" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="39.2925" x2="247.0303" y1="228.3906" y2="228.3906" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="137.0078" x="46.2925" y="223.3247">4. Acquittement final</text></g><g class="message" data-participant-1="Hub" data-participant-2="Hub"><line style="stroke:#181818;stroke-width:1;" x1="253.0303" x2="295.0303" y1="257.5234" y2="257.5234" /><line style="stroke:#181818;stroke-width:1;" x1="295.0303" x2="295.0303" y1="257.5234" y2="270.5234" /><line style="stroke:#181818;stroke-width:1;" x1="254.0303" x2="295.0303" y1="270.5234" y2="270.5234" /><polygon fill="#181818" points="264.0303,266.5234,254.0303,270.5234,264.0303,274.5234,260.0303,270.5234" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="207.7144" x="260.0303" y="252.4575">4.1 Inscription dans la file A.ack</text></g><g class="message" data-participant-1="Hub" data-participant-2="PTF"><polygon fill="#181818" points="512.4937,310.7891,522.4937,314.7891,512.4937,318.7891,516.4937,314.7891" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="253.0303" x2="518.4937" y1="314.7891" y2="314.7891" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="229.8042" x="260.0303" y="294.5903">4.2 Transmission de l'acquittement</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="98.2935" x="260.0303" y="309.7231">au destinataire</text></g><g class="message" data-participant-1="LRM" data-participant-2="Hub"><polygon fill="#181818" points="241.0303,355.0547,251.0303,359.0547,241.0303,363.0547,245.0303,359.0547" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="39.2925" x2="247.0303" y1="359.0547" y2="359.0547" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="129.7397" x="46.2925" y="338.856">5. Message d'erreur</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="91.3301" x="46.2925" y="353.9888">(si applicable)</text></g><g class="message" data-participant-1="Hub" data-participant-2="Hub"><line style="stroke:#181818;stroke-width:1;" x1="253.0303" x2="295.0303" y1="388.1875" y2="388.1875" /><line style="stroke:#181818;stroke-width:1;" x1="295.0303" x2="295.0303" y1="388.1875" y2="401.1875" /><line style="stroke:#181818;stroke-width:1;" x1="254.0303" x2="295.0303" y1="401.1875" y2="401.1875" /><polygon fill="#181818" points="264.0303,397.1875,254.0303,401.1875,264.0303,405.1875,260.0303,401.1875" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="209.4536" x="260.0303" y="383.1216">5.1 Inscription dans la file A.info</text></g><g class="message" data-participant-1="Hub" data-participant-2="PTF"><polygon fill="#181818" points="512.4937,441.4531,522.4937,445.4531,512.4937,449.4531,516.4937,445.4531" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="253.0303" x2="518.4937" y1="445.4531" y2="445.4531" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="243.3311" x="260.0303" y="425.2544">5.2 Tranmission du message d'erreur</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="98.2935" x="260.0303" y="440.3872">au destinataire</text></g></g></svg></p>
+<div style="width:100%;" align="center" class="figure">
+    <p><svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css" viewBox="0 0 576 470" zoomAndPan="magnify" data-diagram-type="SEQUENCE" preserveAspectRatio="none" width="576px" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:576px;height:470px;background:#FFFFFF;" version="1.1" height="470px"><defs></defs><g><g><title>Client B</title><rect width="8" x="35.2925" y="52.5938" fill="#000000" fill-opacity="0.00000" height="410.8594"></rect><line y1="52.5938" x1="39" y2="463.4531" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="39"></line></g><g><title>**Hub Santé**</title><rect width="8" x="249.0303" y="52.5938" fill="#000000" fill-opacity="0.00000" height="410.8594"></rect><line y1="52.5938" x1="252.8984" y2="463.4531" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="252.8984"></line></g><g><title>Client A</title><rect width="8" x="527.2666" y="52.5938" fill="#000000" fill-opacity="0.00000" height="410.8594"></rect><line y1="52.5938" x1="530.6421" y2="463.4531" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="530.6421"></line></g><g data-participant="LRM" class="participant participant-head"><rect rx="2.5" ry="2.5" width="68.585" x="5" y="5" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0" height="46.5938"></rect><text lengthAdjust="spacing" x="12" font-size="14" textLength="54.585" y="24.9951" font-family="sans-serif" fill="#000000">Client B</text><text font-weight="bold" lengthAdjust="spacing" x="22.4761" font-size="14" textLength="33.6328" y="41.292" font-family="sans-serif" fill="#000000">LRM</text></g><g data-participant="Hub" class="participant participant-head"><rect rx="2.5" ry="2.5" width="96.2637" x="204.8984" y="5" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0" height="46.5938"></rect><text font-weight="bold" lengthAdjust="spacing" x="211.8984" font-size="14" textLength="82.2637" y="24.9951" font-family="sans-serif" fill="#000000">Hub Santé</text><text lengthAdjust="spacing" x="250.8052" font-size="14" textLength="4.4502" y="41.292" font-family="sans-serif" fill="#000000">&nbsp;</text></g><g data-participant="PTF" class="participant participant-head"><rect rx="2.5" ry="2.5" width="79.249" x="491.6421" y="5" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0" height="46.5938"></rect><text lengthAdjust="spacing" x="503.9878" font-size="14" textLength="54.5576" y="24.9951" font-family="sans-serif" fill="#000000">Client A</text><text font-weight="bold" lengthAdjust="spacing" x="498.6421" font-size="14" textLength="65.249" y="41.292" font-family="sans-serif" fill="#000000">PTF SAS</text></g><g data-participant-1="PTF" data-participant-2="Hub" class="message"><polygon style="stroke:#181818;stroke-width:1;" fill="#181818" points="264.0303,79.7266,254.0303,83.7266,264.0303,87.7266,260.0303,83.7266"></polygon><line y1="83.7266" x1="258.0303" y2="83.7266" style="stroke:#181818;stroke-width:1;" x2="530.2666"></line><text lengthAdjust="spacing" x="270.0303" font-size="13" textLength="212.2275" y="78.6606" font-family="sans-serif" fill="#000000">1. Envoi du message fonctionnel</text></g><g data-participant-1="Hub" data-participant-2="PTF" class="message"><polygon style="stroke:#181818;stroke-width:1;" fill="#181818" points="519.2666,108.8594,529.2666,112.8594,519.2666,116.8594,523.2666,112.8594"></polygon><line y1="112.8594" x1="253.0303" y2="112.8594" style="stroke:#181818;stroke-width:1;stroke-dasharray:2.0,2.0;" x2="525.2666"></line><text lengthAdjust="spacing" x="260.0303" font-size="13" textLength="173.8242" y="107.7935" font-family="sans-serif" fill="#000000">2. Acquittement technique</text></g><g data-participant-1="Hub" data-participant-2="Hub" class="message"><line y1="141.9922" x1="253.0303" y2="141.9922" style="stroke:#181818;stroke-width:1;" x2="295.0303"></line><line y1="141.9922" x1="295.0303" y2="154.9922" style="stroke:#181818;stroke-width:1;" x2="295.0303"></line><line y1="154.9922" x1="254.0303" y2="154.9922" style="stroke:#181818;stroke-width:1;" x2="295.0303"></line><polygon style="stroke:#181818;stroke-width:1;" fill="#181818" points="264.0303,150.9922,254.0303,154.9922,264.0303,158.9922,260.0303,154.9922"></polygon><text lengthAdjust="spacing" x="260.0303" font-size="13" textLength="243.5215" y="136.9263" font-family="sans-serif" fill="#000000">2.1 Inscription dans la file B.message</text></g><g data-participant-1="Hub" data-participant-2="LRM" class="message"><polygon style="stroke:#181818;stroke-width:1;" fill="#181818" points="50.2925,195.2578,40.2925,199.2578,50.2925,203.2578,46.2925,199.2578"></polygon><line y1="199.2578" x1="44.2925" y2="199.2578" style="stroke:#181818;stroke-width:1;" x2="252.0303"></line><text lengthAdjust="spacing" x="56.2925" font-size="13" textLength="185.6055" y="179.0591" font-family="sans-serif" fill="#000000">3. Transmission du message</text><text lengthAdjust="spacing" x="56.2925" font-size="13" textLength="98.2935" y="194.1919" font-family="sans-serif" fill="#000000">au destinataire</text></g><g data-participant-1="LRM" data-participant-2="Hub" class="message"><polygon style="stroke:#181818;stroke-width:1;" fill="#181818" points="241.0303,224.3906,251.0303,228.3906,241.0303,232.3906,245.0303,228.3906"></polygon><line y1="228.3906" x1="39.2925" y2="228.3906" style="stroke:#181818;stroke-width:1;" x2="247.0303"></line><text lengthAdjust="spacing" x="46.2925" font-size="13" textLength="137.0078" y="223.3247" font-family="sans-serif" fill="#000000">4. Acquittement final</text></g><g data-participant-1="Hub" data-participant-2="Hub" class="message"><line y1="257.5234" x1="253.0303" y2="257.5234" style="stroke:#181818;stroke-width:1;" x2="295.0303"></line><line y1="257.5234" x1="295.0303" y2="270.5234" style="stroke:#181818;stroke-width:1;" x2="295.0303"></line><line y1="270.5234" x1="254.0303" y2="270.5234" style="stroke:#181818;stroke-width:1;" x2="295.0303"></line><polygon style="stroke:#181818;stroke-width:1;" fill="#181818" points="264.0303,266.5234,254.0303,270.5234,264.0303,274.5234,260.0303,270.5234"></polygon><text lengthAdjust="spacing" x="260.0303" font-size="13" textLength="207.7144" y="252.4575" font-family="sans-serif" fill="#000000">4.1 Inscription dans la file A.ack</text></g><g data-participant-1="Hub" data-participant-2="PTF" class="message"><polygon style="stroke:#181818;stroke-width:1;" fill="#181818" points="519.2666,310.7891,529.2666,314.7891,519.2666,318.7891,523.2666,314.7891"></polygon><line y1="314.7891" x1="253.0303" y2="314.7891" style="stroke:#181818;stroke-width:1;" x2="525.2666"></line><text lengthAdjust="spacing" x="260.0303" font-size="13" textLength="229.8042" y="294.5903" font-family="sans-serif" fill="#000000">4.2 Transmission de l'acquittement</text><text lengthAdjust="spacing" x="260.0303" font-size="13" textLength="98.2935" y="309.7231" font-family="sans-serif" fill="#000000">au destinataire</text></g><g data-participant-1="LRM" data-participant-2="Hub" class="message"><polygon style="stroke:#181818;stroke-width:1;" fill="#181818" points="241.0303,355.0547,251.0303,359.0547,241.0303,363.0547,245.0303,359.0547"></polygon><line y1="359.0547" x1="39.2925" y2="359.0547" style="stroke:#181818;stroke-width:1;" x2="247.0303"></line><text lengthAdjust="spacing" x="46.2925" font-size="13" textLength="129.7397" y="338.856" font-family="sans-serif" fill="#000000">5. Message d'erreur</text><text lengthAdjust="spacing" x="46.2925" font-size="13" textLength="91.3301" y="353.9888" font-family="sans-serif" fill="#000000">(si applicable)</text></g><g data-participant-1="Hub" data-participant-2="Hub" class="message"><line y1="388.1875" x1="253.0303" y2="388.1875" style="stroke:#181818;stroke-width:1;" x2="295.0303"></line><line y1="388.1875" x1="295.0303" y2="401.1875" style="stroke:#181818;stroke-width:1;" x2="295.0303"></line><line y1="401.1875" x1="254.0303" y2="401.1875" style="stroke:#181818;stroke-width:1;" x2="295.0303"></line><polygon style="stroke:#181818;stroke-width:1;" fill="#181818" points="264.0303,397.1875,254.0303,401.1875,264.0303,405.1875,260.0303,401.1875"></polygon><text lengthAdjust="spacing" x="260.0303" font-size="13" textLength="209.4536" y="383.1216" font-family="sans-serif" fill="#000000">5.1 Inscription dans la file A.info</text></g><g data-participant-1="Hub" data-participant-2="PTF" class="message"><polygon style="stroke:#181818;stroke-width:1;" fill="#181818" points="519.2666,441.4531,529.2666,445.4531,519.2666,449.4531,523.2666,445.4531"></polygon><line y1="445.4531" x1="253.0303" y2="445.4531" style="stroke:#181818;stroke-width:1;" x2="525.2666"></line><text lengthAdjust="spacing" x="260.0303" font-size="13" textLength="250.104" y="425.2544" font-family="sans-serif" fill="#000000">5.2 Transmission du message d'erreur</text><text lengthAdjust="spacing" x="260.0303" font-size="13" textLength="98.2935" y="440.3872" font-family="sans-serif" fill="#000000">au destinataire</text></g></g></svg></p>
 </div>
 
-<h3 id="détail-des-échanges-entre-les-acteurs">Détail des échanges entre les acteurs</h3>
+<h3 id="structure-et-format-des-messages-transitant-via-le-hub-santé">Structure et format des messages transitant via le Hub Santé</h3>
 
-<h4 id="gestion-de-lenvoi-dun-message-ptf-sas---lrm-via-hub">Gestion de l'envoi d'un message PTF SAS -&gt; LRM via Hub</h4>
+<h4 id="enveloppe-edxl-de">Enveloppe EDXL-DE</h4>
 
-<p>Dans le cadre de l’interface mise en place entre les solutions logicielles éditeurs (LRM) et la plateforme numérique SAS, les requêtes seront transmises <strong>instantanément</strong> par la plateforme numérique du SAS au HubSanté pour transmission auprès des solutions éditeurs de LRM lors de la <strong>création ou la mise à jour d’un RDV</strong> et contiendront l’ensemble des données relatives au RDV <strong>au format JSON</strong> dans le contenu du message.</p>
+<p>Tous les messages transitant par l’intermédiaire du Hub Santé contiendront un entête de type "EDXL-DE" (cf. <a href="https://hub.esante.gouv.fr/resources/Accompagnement/tech/23.09%20DST%20v1.2%20-%20Hub%20Sante%20&amp;%20connecteurs.pdf">spécifications techniques (DST) du Hub Santé</a> &sect;3.4 et 3.4.3) dans lequel sera encapsulé le détail du message.</p>
 
-<p>Les champs ci-dessous correspondent à l’en-tête du message qui porte les informations de RDV pris par le régulateur pour le compte du patient. Ce message est envoyé instantanément de la plateforme SAS au HubSanté. 
-L'entête est de type "EDXL-DE" et les messages au format Json, cf. <a href="https://hub.esante.gouv.fr/resources/Accompagnement/tech/23.09%20DST%20v1.2%20-%20Hub%20Sante%20&amp;%20connecteurs.pdf">spécifications techniques (DST) du Hub Santé</a>.</p>
-
-<p>Le tableau ci-dessous précise les balises qui doivent être envoyées et qui sont nécessaires au routage des messages.</p>
+<p>Le tableau ci-dessous précise les balises de l’enveloppe EDXL-DE qui doivent être envoyées et qui sont nécessaires au routage des messages.</p>
 
 <table>
   <thead>
@@ -323,7 +322,7 @@ L'entête est de type "EDXL-DE" et les messages au format Json, cf. <a href="htt
       <td>senderID</td>
       <td>string</td>
       <td>Identifiant de l'émetteur</td>
-      <td>Valeur fixe par environnement. Ex : <code class="language-plaintext highlighter-rouge">fr.health.ptfsas</code></td>
+      <td><code class="language-plaintext highlighter-rouge">fr.health.ptfsas</code>, fr.health.samuXXX</td>
     </tr>
     <tr>
       <td><em>Entête EDXL-DE</em></td>
@@ -337,7 +336,7 @@ L'entête est de type "EDXL-DE" et les messages au format Json, cf. <a href="htt
       <td>dateTimeExpires</td>
       <td>Date time</td>
       <td>Date et heure d'expiration du message : les données ne doivent pas être délivrées au-delà de cette date</td>
-      <td>Ex : 2025-08-24T14:15:22+02:00</td>
+      <td>Ex : 2025-08-24T14:19:22+02:00</td>
     </tr>
     <tr>
       <td><em>Entête EDXL-DE</em></td>
@@ -351,7 +350,7 @@ L'entête est de type "EDXL-DE" et les messages au format Json, cf. <a href="htt
       <td>distributionKind</td>
       <td>string</td>
       <td>Type du message</td>
-      <td>Valeur fixe : <code class="language-plaintext highlighter-rouge">Report</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Report</code>, <code class="language-plaintext highlighter-rouge">Ack</code>, <code class="language-plaintext highlighter-rouge">Error</code></td>
     </tr>
     <tr>
       <td><em>Entête EDXL-DE</em></td>
@@ -371,33 +370,22 @@ L'entête est de type "EDXL-DE" et les messages au format Json, cf. <a href="htt
       <td><em>Entête EDXL-DE</em></td>
       <td>descriptor.explicitAddress.explicitAddressValue</td>
       <td>string</td>
-      <td>Identifiant du SAMU destinataire</td>
-      <td>fr.health.samuXXX Ex : fr.health.samu330</td>
+      <td>Identifiant du destinataire</td>
+      <td><code class="language-plaintext highlighter-rouge">fr.health.ptfsas</code>, fr.health.samuXXX</td>
     </tr>
     <tr>
       <td><em>Contenu</em></td>
       <td>content.contentObject.JsonContent.embeddedJsonContent</td>
       <td>json</td>
       <td>Contenu du message json encapsulé dans l'entête</td>
-      <td>Fichier json contenant les données transmises, cf. détail ci-dessous</td>
+      <td>Fichier json contenant les données transmises</td>
     </tr>
   </tbody>
 </table>
 
-<p><strong>Détail sur le contenu <code class="language-plaintext highlighter-rouge">embeddedJsonContent</code> encapsulé dans l'entête EXDL-DE</strong> : 
-il s'agit d'un message json avec la liste des champs décrite plus bas propre aux données de RDV transmises elle même encapsulée dans une entête RC-DE dont les caractéristiques sont décrites plus bas, dans <a href="./specifications_techniques-transmission-info-RDV-LRM.html#message-dacquittement-final-lrm---ptf-sas-via-hub">la section suivante</a>
-L'entête RC-DE contient un nombre de champs communs à l'entête EDXL-DE, ce qui permet de rendre le message auportortant sans l'entête EDXL-DE.</p>
+<h4 id="entête-rc-de">Entête RC-DE</h4>
 
-<h4 id="acquittement-technique-hub---ptf-sas">Acquittement technique Hub -&gt; PTF SAS</h4>
-
-<p>Un acquittement technique sera transmis du Hub vers la plateforme SAS afin d'informer de la bonne prise en charge du message et de l'inscription dans sa file d'envoi (file « message » du LRM). Cette fonctionnalité est intégrée au protocole AMQ sous la forme de <em>Consumer Acknowledgement</em> (cf. spécifications du Hub Santé §3.3.1).</p>
-
-<h4 id="message-dacquittement-final-lrm---ptf-sas-via-hub">Message d'acquittement final LRM -&gt; PTF SAS via Hub</h4>
-
-<p>Cet aquittement correspond à la validation auprès de l’émetteur (plateforme numérique SAS) de la bonne réception du message par le destinataire (Editeur LRM).
-Le cheminement est similaire au message envoyé mais pris en sens inverse.</p>
-
-<p>Le format des acquittements de réception finale est de type "RC-DE" selon le modèle et les balises précisées dans le tableau ci-dessous, en reprenant le <em>distrubtionId</em> du message concerné (cf spécifications du Hub Santé §3.3.2) :</p>
+<p>Le contenu des messages transmis pourra également être encapsulé dans un entête RC-DE au sein de l’enveloppe EDXL-DE. L'entête RC-DE contient un nombre de champs communs à l'entête EDXL-DE, ce qui permet de rendre le message autoportant sans l'entête EDXL-DE selon le modèle et les balises précisées dans le tableau ci-dessous (cf spécifications du Hub Santé &sect;3.4.5).</p>
 
 <table>
   <thead>
@@ -415,21 +403,21 @@ Le cheminement est similaire au message envoyé mais pris en sens inverse.</p>
       <td>messageId</td>
       <td>string</td>
       <td>Identifiant du message interne. Identique au champ <code class="language-plaintext highlighter-rouge">distributionID</code> de l'enveloppe EDXL-DE</td>
-      <td>Égal à <code class="language-plaintext highlighter-rouge">distributionId</code> du message initial</td>
+      <td>Égal à <code class="language-plaintext highlighter-rouge">distributionId</code> du message initial dans le cas d'un acquittement</td>
     </tr>
     <tr>
       <td><em>Entête RC-DE</em></td>
-      <td>sender.AddresseeType.name</td>
+      <td>sender.name</td>
       <td>string</td>
       <td>Identifiant de l'émetteur</td>
-      <td>fr.health.samuXXX Ex : fr.health.samu330</td>
+      <td><code class="language-plaintext highlighter-rouge">fr.health.ptfsas</code>, fr.health.samuXXX</td>
     </tr>
     <tr>
       <td><em>Entête RC-DE</em></td>
-      <td>sender.AddresseeType.URL</td>
+      <td>sender.URI</td>
       <td>string</td>
       <td>URL de l'émetteur</td>
-      <td>hubex:fr.fr.health.samuXXX</td>
+      <td><code class="language-plaintext highlighter-rouge">hubex:fr.health.ptfsas</code>, hubex:fr.health.samuXXX,</td>
     </tr>
     <tr>
       <td><em>Entête RC-DE</em></td>
@@ -450,121 +438,56 @@ Le cheminement est similaire au message envoyé mais pris en sens inverse.</p>
       <td>kind</td>
       <td>string</td>
       <td>Type du message</td>
-      <td>Valeur fixe : <code class="language-plaintext highlighter-rouge">Ack</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Report</code>, <code class="language-plaintext highlighter-rouge">Ack</code></td>
     </tr>
     <tr>
       <td><em>Entête RC-DE</em></td>
-      <td>recipients.recipient.explicitAddressScheme</td>
+      <td>recipient.name</td>
       <td>string</td>
       <td>Identifiant du SI pilotant le Hub</td>
-      <td>Valeur fixe : <code class="language-plaintext highlighter-rouge">Hubex</code></td>
+      <td><code class="language-plaintext highlighter-rouge">hubex:fr.health.ptfsas</code>, hubex:fr.health.samuXXX</td>
     </tr>
     <tr>
       <td><em>Entête RC-DE</em></td>
-      <td>recipients.recipient.explicitAddressValue</td>
+      <td>recipient.URI</td>
       <td>string</td>
       <td>Identifiant du destinataire</td>
-      <td>Valeur fixe par environnement. Ex : <code class="language-plaintext highlighter-rouge">fr.health.ptfsas</code></td>
-    </tr>
-    <tr>
-      <td> </td>
-      <td>reference</td>
-      <td>string</td>
-      <td>Identifiant du message référencé</td>
-      <td>Égal à distributionId du message initial</td>
+      <td><code class="language-plaintext highlighter-rouge">fr.health.ptfsas</code>, fr.health.samuXXX</td>
     </tr>
   </tbody>
 </table>
 
-<h4 id="message-derreur-lrm---ptf-sas-via-hub-et-hub---ptf-sas">Message d'erreur LRM -&gt; PTF SAS via Hub et Hub -&gt; PTF SAS</h4>
+<h4 id="message-de-référence-rc-ref">Message de référence RC-REF</h4>
 
-<p>En cas d'erreur, un message est posté sur la file « info » de la plateforme SAS (cf. spécifications du Hub Santé §3.3.4).Les champs ci-dessous correspondent à l’en-tête et au contenu du message :</p>
+<p>Le message de référence permet de faire référence à un message précédemment partagé (spécifications du Hub Santé &sect;3.4.6). Il est utilisé en cas d'acquittement final, cf. ci-dessous.
+Sa structure est la même que celle d'un message RC-DE, avec l'ajout d'un champ supplémentaire <code class="language-plaintext highlighter-rouge">reference</code> qui reprend le <code class="language-plaintext highlighter-rouge">distributionId</code> du message acquitté.</p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Élément</th>
-      <th>Champ</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Commentaire / valeur</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><em>Entête EDXL-DE</em></td>
-      <td>distributionID</td>
-      <td>string</td>
-      <td>Identifiant unique du message attribué par l’expéditeur</td>
-      <td>À définir</td>
-    </tr>
-    <tr>
-      <td><em>Entête EDXL-DE</em></td>
-      <td>senderID</td>
-      <td>string</td>
-      <td>Identifiant de l'émetteur</td>
-      <td>fr.health.samu.XXX Ex : fr.health.samu.330</td>
-    </tr>
-    <tr>
-      <td><em>Entête EDXL-DE</em></td>
-      <td>dateTimeSent</td>
-      <td>Date time</td>
-      <td>Date et heure d'envoi du message</td>
-      <td>Ex : 2025-08-24T14:15:22+02:00</td>
-    </tr>
-    <tr>
-      <td><em>Entête EDXL-DE</em></td>
-      <td>dateTimeExpires</td>
-      <td>Date time</td>
-      <td>Date et heure d'expiration du message : les données ne doivent pas être délivrées au-delà de cette date</td>
-      <td>Ex : 2025-08-24T14:15:22+02:00</td>
-    </tr>
-    <tr>
-      <td><em>Entête EDXL-DE</em></td>
-      <td>distributionStatus</td>
-      <td>string</td>
-      <td>Statut du message</td>
-      <td>Valeur fixe : <code class="language-plaintext highlighter-rouge">Actual</code></td>
-    </tr>
-    <tr>
-      <td><em>Entête EDXL-DE</em></td>
-      <td>distributionKind</td>
-      <td>string</td>
-      <td>Type du message</td>
-      <td>Valeur fixe : <code class="language-plaintext highlighter-rouge">Error</code></td>
-    </tr>
-    <tr>
-      <td><em>Entête EDXL-DE</em></td>
-      <td>descriptor.language</td>
-      <td>string</td>
-      <td>Langue du message échangé</td>
-      <td>Valeur fixe : <code class="language-plaintext highlighter-rouge">fr-FR</code></td>
-    </tr>
-    <tr>
-      <td><em>Entête EDXL-DE</em></td>
-      <td>descriptor.explicitAddress.explicitAddressScheme</td>
-      <td>string</td>
-      <td>Identifiant du SI pilotant le Hub</td>
-      <td>Valeur fixe : <code class="language-plaintext highlighter-rouge">Hubex</code></td>
-    </tr>
-    <tr>
-      <td><em>Entête EDXL-DE</em></td>
-      <td>descriptor.explicitAddress.explicitAddressValue</td>
-      <td>string</td>
-      <td>Identifiant du SAMU destinataire</td>
-      <td>Valeur fixe par environnement. Ex : <code class="language-plaintext highlighter-rouge">fr.health.ptfsas</code></td>
-    </tr>
-    <tr>
-      <td><em>Contenu</em></td>
-      <td>content.contentObject.embeddedJsonContent</td>
-      <td>json</td>
-      <td>Contenu du message json encapsulé dans l'entête</td>
-      <td>JSON avec errorCode et errorCause et contenu du message initial</td>
-    </tr>
-  </tbody>
-</table>
+<h3 id="détail-des-échanges-entre-la-plateforme-sas-et-le-hub-santé">Détail des échanges entre la plateforme SAS et le Hub Santé</h3>
 
-<p>L'erreur sera présente dans le contenu du message json qui respecte le modèle suivant, cf. spécifications du Hub Santé, §3.4.7 :</p>
+<h4 id="gestion-de-lenvoi-dun-message-ptf-sas---lrm-via-hub">Gestion de l'envoi d'un message PTF SAS -&gt; LRM via Hub</h4>
+
+<p>Le message contenant les informations de RDV pris par le régulateur pour le compte du patient est envoyé instantanément par la plateforme numérique SAS au HubSanté. Le message est transmis avec un entête de type "EDXL-DE" (cf <a href="./specifications_techniques-transmission-info-RDV-LRM.html#enveloppe-edxl-de">Enveloppe EDXL-DE</a>) encapsulant un entête de type RC-DE (cf <a href="./specifications_techniques-transmission-info-RDV-LRM.html#entête-rc-de">Enveloppe RC-DE</a>) et les contenus des messages au format Json (cf <a href="./specifications_techniques-transmission-info-RDV-LRM.html#données-transmises-au-lrm">Données transmises au LRM</a>).</p>
+
+<p>Il s'agit d'un message où les champs <code class="language-plaintext highlighter-rouge">distribution.kind</code> (entête EDXL-DE) et <code class="language-plaintext highlighter-rouge">kind</code> (entête RC-DE) sont valorisés à <code class="language-plaintext highlighter-rouge">Report</code>.</p>
+
+<h4 id="acquittement-technique-hub---ptf-sas">Acquittement technique Hub -&gt; PTF SAS</h4>
+
+<p>Un acquittement technique sera transmis du Hub vers la plateforme SAS afin d'informer de la bonne prise en charge du message et de l'inscription dans sa file d'envoi (file « message » du LRM). Cette fonctionnalité est intégrée au protocole AMQ sous la forme de <em>Consumer Acknowledgement</em> (cf. spécifications du Hub Santé &sect;3.3.1).</p>
+
+<h4 id="message-dacquittement-final-et-gestion-des-erreurs">Message d'acquittement final et gestion des erreurs</h4>
+
+<p>Les échanges entre le Hub Santé et la plateforme numérique SAS incluent également les acquittements de réception finale et la gestion des messages d’erreurs transmis par les éditeurs de LRM.
+Une fois le message intégré dans le système du client destinataire (Editeur LRM), ce dernier peut en informer la plateforme numérique SAS (transitant par le Hub) en lui envoyant un acquittement de réception finale sur un deuxième type de file dédié fr.health.ptfsas.&#x1D44E;&#x1D450;k permettant de remonter les accusés de réception finale. Le cheminement est similaire au message envoyé mais pris en sens inverse.</p>
+
+<p>Un troisième type de file, fr.health.ptfsas.&#x1D456;&#x1D45B;&#x1D453;&#x1D45C;, est mis en place pour remonter des informations et de potentielles erreurs aux émetteurs et destinataires des messages. A noter qu'il existe deux types d'erreur :</p>
+<ul>
+  <li>les messages "techniques" directement générés par le Hub et traduisant une impossibilité de remettre le message au destinataire</li>
+  <li>les messages d'erreurs "fonctionnels" envoyés depuis l’éditeur de LRM (transitant par le Hub) traduisant l'impossibilité de traiter correctement le message reçu (cf <a href="./specifications_techniques-transmission-info-RDV-LRM.html#message-derreur-lrm---hub">erreurs LRM</a>)</li>
+</ul>
+
+<p>Il s'agit de messages où le champ <code class="language-plaintext highlighter-rouge">distribution.kind</code> est valorisé à <code class="language-plaintext highlighter-rouge">Error</code> (entête EDXL-DE, les messages d'erreur ne comportent pas d'entête RC-DE)</p>
+
+<p>L'erreur sera présente dans le contenu du message json qui respecte le modèle suivant, cf. spécifications du Hub Santé, &sect;3.4.7 :</p>
 
 <table>
   <thead>
@@ -583,7 +506,7 @@ Le cheminement est similaire au message envoyé mais pris en sens inverse.</p>
     <tr>
       <td>errorCause</td>
       <td>Cause de l'erreur</td>
-      <td>La cause de l’erreur. Le distributionID de l’enveloppe EDXL y est précisé si le message a pu être désérialisé, ainsi que des éléments plus précis suivant l’erreur relevée.</td>
+      <td>La cause de l’erreur. Le <code class="language-plaintext highlighter-rouge">distributionID</code> de l’enveloppe EDXL-DE y est précisé si le message a pu être désérialisé, ainsi que des éléments plus précis suivant l’erreur relevée.</td>
     </tr>
     <tr>
       <td>sourceMessage</td>
@@ -592,12 +515,6 @@ Le cheminement est similaire au message envoyé mais pris en sens inverse.</p>
     </tr>
   </tbody>
 </table>
-
-<p>A noter qu'il existe deux types d'erreur :</p>
-<ul>
-  <li>les messages "techniques" directement générés par le Hub et traduisant une impossibilité de remettre le message au destinataire (LRM) (a)</li>
-  <li>les messages d'erreurs "fonctionnels" envoyés depuis le LRM (toujours en transitant par le Hub) traduisant l'impossibilité de traiter correctement le message reçu (b)</li>
-</ul>
 
 <p>A titre d'exemple, les codes d'erreur suivants pourront être envoyés du Hub vers la plateforme SAS :</p>
 
@@ -633,21 +550,67 @@ Le cheminement est similaire au message envoyé mais pris en sens inverse.</p>
   </tbody>
 </table>
 
-<p>Le LRM pourra envoyer des messages de type :</p>
+<h3 id="echanges-entre-léditeur-lrm-et-le-hub-santé">Echanges entre l'éditeur LRM et le Hub Santé</h3>
+
+<h4 id="message-dacquittement-final-lrm---ptf">Message d'acquittement final LRM -&gt; PTF</h4>
+
+<p>Cet acquittement correspond à la validation auprès de l’émetteur (plateforme numérique SAS) de la bonne réception du message par le destinataire (Editeur LRM).</p>
+
+<p>Le format des acquittements de réception finale est contenu dans une enveloppe de type "EDXL-DE" (cf <a href="./specifications_techniques-transmission-info-RDV-LRM.html#enveloppe-edxl-de">Enveloppe EDXL-DE</a>) et un message de type "RC-REF" (cf <a href="./specifications_techniques-transmission-info-RDV-LRM.html#message-de-référence-rc-ref">Message RC-REF</a>)</p>
+
+<p>En résumé, le message doit :</p>
 <ul>
-  <li>404 (NOT_FOUND) - L'identifiant du RDV a mettre à jour n'a pas été trouvé dans le cas d'un message de mise à jour</li>
+  <li>spécifier EDXL-DE.distributionKind à <code class="language-plaintext highlighter-rouge">Ack</code></li>
+  <li>spécifier RC-DE.kind à <code class="language-plaintext highlighter-rouge">Ack</code></li>
+  <li>faire référence au message à acquitter (par sa <code class="language-plaintext highlighter-rouge">distributionID</code>)</li>
 </ul>
 
-<h3 id="message-denvoi-de-rdv">Message d'envoi de RDV</h3>
+<h4 id="message-derreur-lrm---hub">Message d'erreur LRM -&gt; Hub</h4>
+
+<p>En cas d'erreur, un message est posté sur la file « info » de la plateforme SAS (cf. spécifications du Hub Santé <span class="fhir-conformance">3.3.4). Le message est transmis avec un entête de type "EDXL-DE" (cf <a href="./specifications_techniques-transmission-info-RDV-LRM.html#enveloppe-edxl-de">Enveloppe EDXL-DE</a>) où <code class="language-plaintext highlighter-rouge">distribution.kind</code> est valorisé à <code class="language-plaintext highlighter-rouge">Error</code>, encapsulant le contenu du message json qui respecte le modèle suivant (cf. spécifications du Hub Santé </span>3.4.7) :</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Champ</th>
+      <th>Description</th>
+      <th>Commentaire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>errorCode</td>
+      <td>Code de l'erreur ayant conduit au rejet du message</td>
+      <td>Cf. ci-après</td>
+    </tr>
+    <tr>
+      <td>errorCause</td>
+      <td>Cause de l'erreur</td>
+      <td>La cause de l’erreur. Le <code class="language-plaintext highlighter-rouge">distributionID</code> de l’enveloppe EDXL y est précisé si le message a pu être désérialisé, ainsi que des éléments plus précis suivant l’erreur relevée.</td>
+    </tr>
+    <tr>
+      <td>sourceMessage</td>
+      <td>Contenu du message rejeté</td>
+      <td>Contenu du message initial avec son entête</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Le LRM pourra envoyer des messages de type :</p>
+<ul>
+  <li>409 (CONFLICT) - L'identifiant du RDV à créér existe déjà</li>
+</ul>
+
+<h3 id="données-transmises-au-lrm">Données transmises au LRM</h3>
 
 <p>Lorsqu’un régulateur prend RDV pour un patient via la plateforme numérique SAS, celle-ci transmet un message de création de RDV qui suivra les modalités suivantes :</p>
 
 <ul>
-  <li><strong>Protocole</strong> : <span style="color:blue">AMQP 0-9-1<br />
+  <li><strong>Protocole</strong> : <span style="color:blue">AMQP 0-9-1<br/>
 </span></li>
-  <li><strong>En-tête</strong> : <span style="color:blue">EDXL-DE 
+  <li><strong>En-tête</strong> : <span style="color:blue">EDXL-DE, RC-DE 
 </span></li>
-  <li><strong>Sender</strong> : <span style="color:blue">ptfsas<br />
+  <li><strong>Sender</strong> : <span style="color:blue">fr.health.ptfsas<br/>
 </span></li>
   <li><strong>Format du message contenu</strong> : <span style="color:blue">JSON
 </span></li>
@@ -659,296 +622,224 @@ Le cheminement est similaire au message envoyé mais pris en sens inverse.</p>
   <tbody>
     <tr style="text-align: center;">
       <th style="width: 8%;"><strong>ID</strong></th>
-      <th style="width: 8%;"><strong>Donnée (Niveau 1)</strong></th>
-      <th style="width: 8%;"><strong>Donnée (Niveau 2)</strong></th>
+      <th style="width: 8%;"><strong>Objet</strong></th>
+      <th style="width: 8%;"><strong>Balise</strong></th>
       <th style="width: 30%;"><strong>Description</strong></th>
-      <th style="width: 6%;"><strong>Exemples</strong></th>
-      <th style="width: 10%;"><strong>Balise</strong></th>
+      <th style="width: 6%;"><strong>Exemple</strong></th>
       <th style="width: 8%;"><strong>Cardinalité</strong></th>
-      <th style="width: 5%;"><strong>Objet</strong></th>
-      <th style="width: 7%;"><strong>Format (ou type)</strong></th>
-      <th style="width: 10%;"><strong>Détails de format</strong></th>
+      <th style="width: 7%;"><strong>Type</strong></th>
     </tr>
     <tr>
       <td>1</td>
-      <td>Identifiant du rendez-vous</td>
       <td></td>
-      <td>Un identifiant technique unique par RDV est transmis. Cet identifiant est défini par la plateforme numérique SAS et peut prendre la forme d’un UUID par exemple.La solution éditeur devra s’appuyer sur cet ID pour la gestion des requêtes de mises à jour.</td>
-      <td>12348</td>
       <td>appointmentId</td>
+      <td>Identifiant technique unique du RDV</td>
+      <td>1efc111e-ce11-1d11-a111-11c1f11c111e12348</td>
       <td>1..1</td>
-      <td></td>
       <td>string</td>
-      <td></td>
     </tr>
     <tr>
       <td>2</td>
-      <td>Méthode</td>
       <td></td>
+      <td>method</td>
       <td>Indique un message de création ou de modification du rendez-vous</td>
       <td>createAppointment</td>
-      <td>method</td>
       <td>1..1</td>
-      <td></td>
       <td>string</td>
-      <td>ENUM: CreateAppointment, UpdateAppointment</td>
     </tr>
     <tr>
       <td>3</td>
-      <td>Date et heure de la prise de rendez-vous</td>
       <td></td>
-      <td>Indique la date et l’heure de la prise de RDV</td>
-      <td>2025-06-17T10:15:56+01:00</td>
       <td>created</td>
+      <td>Date et heure de la prise de RDV</td>
+      <td>2025-06-17T10:15:56+01:00</td>
       <td>1..1</td>
-      <td></td>
       <td>datetime</td>
-      <td></td>
     </tr>
     <tr>
       <td>4</td>
-      <td>Date et heure de début du rendez-vous</td>
       <td></td>
-      <td>Indique la date et l’horaire de début du rendez-vous</td>
-      <td>2025-06-17T14:00:00+01:00</td>
       <td>start</td>
+      <td>Date et heure de début du rendez-vous</td>
+      <td>2025-06-17T14:00:00+01:00</td>
       <td>1..1</td>
-      <td></td>
       <td>datetime</td>
-      <td></td>
     </tr>
     <tr>
       <td>5</td>
-      <td>Date et heure de fin du rendez-vous</td>
       <td></td>
-      <td>Indique la date et l’horaire de fin du rendez-vous</td>
-      <td>2025-06-17T14:20:00+01:00</td>
       <td>end</td>
+      <td>Date et heure de fin du rendez-vous</td>
+      <td>2025-06-17T14:20:00+01:00</td>
       <td>0..1</td>
-      <td></td>
       <td>datetime</td>
-      <td></td>
     </tr>
     <tr>
       <td>6</td>
-      <td>Statut du rendez-vous</td>
       <td></td>
-      <td>Indique le statut du rendez-vous</td>
-      <td>booked</td>
       <td>status</td>
+      <td>Statut du rendez-vous</td>
+      <td>booked</td>
       <td>1..1</td>
-      <td></td>
       <td>string</td>
-      <td>ENUM: pending, booked, fulfilled, noshow, cancelled</td>
     </tr>
     <tr>
       <td>7</td>
-      <td>Catégorie d'orientation</td>
       <td></td>
-      <td>Indique la catégorie de l’orientation de rendez-vous</td>
-      <td>SOS</td>
       <td>orientationCategory</td>
+      <td>Indique la catégorie de l’orientation SAS identifiée</td>
+      <td>SOS</td>
       <td>0..1</td>
-      <td></td>
       <td>string</td>
-      <td>ENUM: CPTS, MSP, CDS, SOS, PS, PDM</td>
     </tr>
     <tr>
       <td>8</td>
+      <td>practitioner</td>
       <td>Professionnel de santé</td>
-      <td></td>
       <td>Représente le professionnel de santé associé au rendez-vous</td>
       <td></td>
-      <td>practitioner</td>
       <td>0..1</td>
-      <td>X</td>
       <td>practitioner</td>
-      <td></td>
     </tr>
     <tr>
       <td>9</td>
-      <td></td>
-      <td>Identifiant RPPS</td>
-      <td>Identifiant national (RPPS) du PS</td>
-      <td>810002909371</td>
+      <td>practitioner</td>
       <td>rppsId</td>
+      <td>Identifiant national (RPPS avec préfixe) du PS effecteur de soins</td>
+      <td>810002909371</td>
       <td>1..1</td>
-      <td></td>
       <td>string</td>
-      <td>REGEX: ^81[0-9]{10}$</td>
     </tr>
     <tr>
       <td>10</td>
-      <td></td>
-      <td>Nom du PS</td>
+      <td>practitioner</td>
+      <td>lastName</td>
       <td>Nom du professionnel de santé</td>
       <td>Dupont</td>
-      <td>lastName</td>
       <td>1..1</td>
-      <td></td>
       <td>string</td>
-      <td></td>
     </tr>
     <tr>
       <td>11</td>
-      <td></td>
-      <td>Prénom du PS</td>
+      <td>practitioner</td>
+      <td>firstName</td>
       <td>Prénom du professionnel de santé</td>
       <td>Jean</td>
-      <td>firstName</td>
       <td>1..1</td>
-      <td></td>
       <td>string</td>
-      <td></td>
     </tr>
     <tr>
       <td>12</td>
-      <td></td>
-      <td>Spécialité</td>
-      <td>Code de la spécialité du professionnel de santé</td>
-      <td>SM54</td>
+      <td>practitioner</td>
       <td>specialityCode</td>
+      <td>Code de la spécialité du professionnel de santé</td>
+      <td>SM54 (pour médecine générale)</td>
       <td>0..1</td>
-      <td></td>
       <td>string</td>
-      <td></td>
     </tr>
     <tr>
       <td>13</td>
-      <td></td>
-      <td>Terminologie spécialité</td>
+      <td>practitioner</td>
+      <td>specialityUrl</td>
       <td>Url de la terminologie utilisée pour la spécialité</td>
       <td>https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale</td>
-      <td>specialityUrl</td>
       <td>0..1</td>
-      <td></td>
       <td>string</td>
-      <td></td>
     </tr>
     <tr>
       <td>14</td>
-      <td></td>
-      <td>Profession</td>
-      <td>Code de la profession du professionnel de santé</td>
-      <td>10</td>
-      <td>professionCode</td>
-      <td>0..1</td>
-      <td></td>
-      <td>string</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>15</td>
-      <td></td>
-      <td>Terminologie profession</td>
+      <td>practitioner</td>
+      <td>professionUrl</td>
       <td>Url de la terminologie utilisée pour la profession</td>
       <td>https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante</td>
-      <td>professionUrl</td>
       <td>0..1</td>
-      <td></td>
       <td>string</td>
-      <td></td>
+    </tr>
+     <tr>
+      <td>15</td>
+      <td>practitioner</td>
+      <td>professionCode</td>
+      <td>Code de la profession du professionnel de santé</td>
+      <td>10 (pour médecin)</td>
+      <td>0..1</td>
+      <td>string</td>
     </tr>
     <tr>
       <td>16</td>
-      <td>Structure</td>
+      <td>organization</td>
       <td></td>
       <td>Représente la structure du PS ou la structure associée au rendez-vous si le PS n'est pas connu</td>
       <td></td>
-      <td>organization</td>
       <td>0..1</td>
-      <td>X</td>
       <td>organization</td>
-      <td></td>
     </tr>
     <tr>
       <td>17</td>
-      <td></td>
-      <td>Identifiant national de la structure</td>
-      <td>Indique l'identifiant national de la structure</td>
-      <td>334173748400020</td>
+      <td>organization</td>
       <td>organizationId</td>
+      <td>Identifiant national de la structure (avec préfixe)</td>
+      <td>334173748400020</td>
       <td>1..1</td>
-      <td></td>
       <td>string</td>
-      <td></td>
     </tr>
     <tr>
       <td>18</td>
-      <td></td>
-      <td>Nom de la structure</td>
-      <td>Indique le nom de la structure</td>
-      <td>SOS Médecins de Rennes</td>
+      <td>organization</td>
       <td>name</td>
+      <td>Nom de la structure</td>
+      <td>SOS Médecins de Rennes</td>
       <td>1..1</td>
-      <td></td>
       <td>string</td>
-      <td></td>
     </tr>
     <tr>
       <td>19</td>
-      <td>Régulateur</td>
+      <td>regulator</td>
       <td></td>
       <td>Représente le régulateur ayant pris le RDV</td>
       <td></td>
-      <td>regulatorId</td>
       <td>1..1</td>
-      <td>X</td>
       <td>regulator</td>
-      <td></td>
     </tr>
     <tr>
       <td>20</td>
-      <td></td>
-      <td>Identifiant régulateur</td>
-      <td>Identifiant du régulateur ayant pris le RDV</td>
-      <td>3620100057/70326SR</td>
+      <td>regulator</td>
       <td>regulatorId</td>
-      <td>1..1</td>
-      <td></td>
+      <td>Identifiant associé au compte SAS du régulateur ayant pris le RDV</td>
+      <td>3620100057/70326SR</td>
+      <td>0..1</td>
       <td>string</td>
-      <td></td>
     </tr>
     <tr>
       <td>21</td>
-      <td></td>
-      <td>Nom du régulateur</td>
+      <td>regulator</td>
+      <td>regulatorName</td>
       <td>Nom du régulateur ayant pris le RDV</td>
       <td>Ricart</td>
-      <td>regulatorName</td>
       <td>1..1</td>
-      <td></td>
       <td>string</td>
-      <td></td>
     </tr>
     <tr>
       <td>22</td>
-      <td></td>
-      <td>Prénom du régulateur</td>
+      <td>regulator</td>
+      <td>regulatorFirstname</td>
       <td>Prénom du régulateur ayant pris le RDV</td>
       <td>Pauline</td>
-      <td>regulatorFirstname</td>
       <td>1..1</td>
-      <td></td>
       <td>string</td>
-      <td></td>
     </tr>
     <tr>
       <td>23</td>
-      <td></td>
-      <td>Mail du régulateur</td>
-      <td>Adresse mail du régulateur ayant pris le RDV</td>
-      <td>pauline.ricart@ghsas.fr</td>
+      <td>regulator</td>
       <td>regulatorEmail</td>
+      <td>Adresse email associée au compte SAS du régulateur ayant pris le RDV</td>
+      <td>pauline.ricart@ghsas.fr</td>
       <td>1..1</td>
-      <td></td>
       <td>string</td>
-      <td></td>
     </tr>
   </tbody>
 </table>
 
-<p><br />
+<p><br/>
 Cf. exemple ci-dessous de message de création</p>
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"appointment"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -986,11 +877,11 @@ Cf. exemple ci-dessous de message de création</p>
 <p>Le message transmis pour la mise à jour du RDV devra suivre les modalités suivantes :</p>
 
 <ul>
-  <li><strong>Protocole</strong> : <span style="color:blue">AMQP 0-9-1<br />
+  <li><strong>Protocole</strong> : <span style="color:blue">AMQP 0-9-1<br/>
 </span></li>
-  <li><strong>En-tête</strong> : <span style="color:blue">EDXL-DE
+  <li><strong>En-tête</strong> : <span style="color:blue">EDXL-DE, RC-DE
 </span></li>
-  <li><strong>Sender</strong> : <span style="color:blue">ptfsas 
+  <li><strong>Sender</strong> : <span style="color:blue">fr.health.ptfsas 
 </span></li>
   <li><strong>Format du message contenu</strong> : <span style="color:blue">JSON
 </span></li>
@@ -999,6 +890,8 @@ Cf. exemple ci-dessous de message de création</p>
 <p>Le fichier json encapsulé dans l'entête aura le champ <code class="language-plaintext highlighter-rouge">method</code> valorisé à <code class="language-plaintext highlighter-rouge">UpdateAppointment</code> et contiendra les données modifiées / ajoutées / supprimées par rapport au message de création (selon le format décrit au paragraphe précédent) afin que les données pour un même identifiant de RDV puissent être mises à jour</p>
 
 <p><strong>L’identifiant technique SAS du RDV (champ <code class="language-plaintext highlighter-rouge">appointmentId</code>)</strong> transmis sera stocké par la solution éditeur LRM pour identification du RDV sur lequel porte les mises à jour éventuelles.</p>
+
+<p><strong>En cas de réception d'un message de mise à jour sur un identifiant inconnu, la solution LRM devra pouvoir gérer le message en tant que création avec les données contenues dans le message à l'instant t.</strong></p>
 
 <p>Cf. exemple ci-dessous de message de modification</p>
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
@@ -1102,13 +995,13 @@ Cf. exemple ci-dessous de message de création</p>
     <p><strong>practitioner.specialtyCode</strong> : Code issu de la nomenclature des spécialités ordinales du NOS (<a href="https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale/">https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale/</a>)</p>
   </li>
   <li>
-    <p><strong>practitioner.professionCode</strong> : Code issu de la nomenclature des professions de santédu NOS (<a href="https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante/">https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante/</a>)</p>
+    <p><strong>practitioner.professionCode</strong> : Code issu de la nomenclature des professions de santé du NOS (<a href="https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante/">https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante/</a>)</p>
   </li>
   <li>
     <p><strong>organizationId</strong> : Identifiant unique propre à chaque structure de soins. Les champs sont valorisés comme suit : numéro du FINESS avec préfixe « 1 » ou numéro du SIRET avec préfixe « 3 »</p>
   </li>
   <li>
-    <p><strong>regulatorId</strong> : Identifiant unique du régulateur ayant pris le RDV. Il s'agira uniquemet d'un identifiant national "IDNPS"(identifiant présent sur la carte CPx du régulateur). En effet, certains régulateurs n’ayant pas encore d’identifiant national à date, un identifiant technique de type uuid est créé. Cet identifiant étant connu uniquement de la PTF SAS, il ne sera pas transmis dans le flux. 
+    <p><strong>regulatorId</strong> : Identifiant unique du régulateur ayant pris le RDV. Il s'agira uniquement d'un identifiant national "IDNPS"(identifiant présent sur la carte CPx du régulateur). En effet, certains régulateurs n’ayant pas encore d’identifiant national à date, un identifiant technique de type uuid est créé. Cet identifiant étant connu uniquement de la PTF SAS, il ne sera pas transmis dans le flux. 
 <em>Exemple d'identifiant national</em> : <code class="language-plaintext highlighter-rouge">3620100057/70326SR</code></p>
   </li>
   <li><strong>regulatorEmail</strong> : Il s'agit de l'adresse mail du compte du régulateur telle que déclarée dans la plateforme SAS. Elle correspond également à l'identifiant de connexion à la plateforme.</li>
@@ -1139,7 +1032,7 @@ Cf. exemple ci-dessous de message de création</p>
           </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
             </span><span class="nl">"messageId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.ptfsas_30c8e00d-68b2-4092-a4f2-a9cb19b416e9"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"sender"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-              </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ptfsas"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.ptfsas"</span><span class="p">,</span><span class="w">
               </span><span class="nl">"URI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hubex:fr.health.ptfsas"</span><span class="w">
             </span><span class="p">},</span><span class="w">
             </span><span class="nl">"sentAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-10-28T17:05:54+01:00"</span><span class="p">,</span><span class="w">
@@ -1147,7 +1040,7 @@ Cf. exemple ci-dessous de message de création</p>
             </span><span class="nl">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Report"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"recipient"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
               </span><span class="p">{</span><span class="w">
-                </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"samu330"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.samu330"</span><span class="p">,</span><span class="w">
                 </span><span class="nl">"URI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hubex:fr.health.samu330"</span><span class="w">
               </span><span class="p">}</span><span class="w">
             </span><span class="p">],</span><span class="w">
@@ -1203,7 +1096,7 @@ Cf. exemple ci-dessous de message de création</p>
           </span><span class="p">{</span><span class="w">
             </span><span class="nl">"messageId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.ptfsas_30c8e00d-68b2-4092-a4f2-a9cb19b416e9"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"sender"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-              </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ptfsas"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.ptfsas"</span><span class="p">,</span><span class="w">
               </span><span class="nl">"URI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hubex:fr.health.ptfsas"</span><span class="w">
             </span><span class="p">},</span><span class="w">
             </span><span class="nl">"sentAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-10-28T17:05:54+01:00"</span><span class="p">,</span><span class="w">
@@ -1211,7 +1104,7 @@ Cf. exemple ci-dessous de message de création</p>
             </span><span class="nl">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Report"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"recipient"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
               </span><span class="p">{</span><span class="w">
-                </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"samu330"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.samu330"</span><span class="p">,</span><span class="w">
                 </span><span class="nl">"URI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hubex:fr.health.samu330"</span><span class="w">
               </span><span class="p">}</span><span class="w">
             </span><span class="p">],</span><span class="w">
@@ -1265,7 +1158,7 @@ Cf. exemple ci-dessous de message de création</p>
                     </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                         </span><span class="nl">"messageId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.samu330_cf21c600-3bd2-49e6-8651-c97dac05d021"</span><span class="p">,</span><span class="w">
                         </span><span class="nl">"sender"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"samu330"</span><span class="p">,</span><span class="w">
+                            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.samu330"</span><span class="p">,</span><span class="w">
                             </span><span class="nl">"URI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hubex:fr.health.samu330"</span><span class="w">
                         </span><span class="p">},</span><span class="w">
                         </span><span class="nl">"sentAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-10-28T17:06:30+01:00"</span><span class="p">,</span><span class="w">
@@ -1273,7 +1166,7 @@ Cf. exemple ci-dessous de message de création</p>
                         </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Actual"</span><span class="p">,</span><span class="w">
                         </span><span class="nl">"recipient"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
                             </span><span class="p">{</span><span class="w">
-                                </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ptfsas"</span><span class="p">,</span><span class="w">
+                                </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.ptfsas"</span><span class="p">,</span><span class="w">
                                 </span><span class="nl">"URI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hubex:fr.health.ptfsas"</span><span class="w">
                             </span><span class="p">}</span><span class="w">
                         </span><span class="p">],</span><span class="w">
@@ -1336,7 +1229,7 @@ Cf. exemple ci-dessous de message de création</p>
                                                 </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                                                     </span><span class="nl">"messageId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.ptfsas_c461338a-97ea-41e5-b9fa-af87840890ff"</span><span class="p">,</span><span class="w">
                                                     </span><span class="nl">"sender"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                                                        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ptfsas"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.ptfsas"</span><span class="p">,</span><span class="w">
                                                         </span><span class="nl">"URI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hubex:fr.health.ptfsas"</span><span class="w">
                                                     </span><span class="p">},</span><span class="w">
                                                     </span><span class="nl">"sentAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-10-29T15:37:15+01:00"</span><span class="p">,</span><span class="w">
@@ -1344,7 +1237,7 @@ Cf. exemple ci-dessous de message de création</p>
                                                     </span><span class="nl">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Report"</span><span class="p">,</span><span class="w">
                                                     </span><span class="nl">"recipient"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
                                                         </span><span class="p">{</span><span class="w">
-                                                            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"samu330"</span><span class="p">,</span><span class="w">
+                                                            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.samu330"</span><span class="p">,</span><span class="w">
                                                             </span><span class="nl">"URI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hubex:fr.health.samu330"</span><span class="w">
                                                         </span><span class="p">}</span><span class="w">
                                                     </span><span class="p">],</span><span class="w">
@@ -1406,10 +1299,10 @@ Cf. exemple ci-dessous de message de création</p>
                     </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                         </span><span class="nl">"error"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                             </span><span class="nl">"errorCode"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                                </span><span class="nl">"statusCode"</span><span class="p">:</span><span class="w"> </span><span class="mi">404</span><span class="p">,</span><span class="w">
-                                </span><span class="nl">"statusString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NOT_FOUND"</span><span class="w">
+                                </span><span class="nl">"statusCode"</span><span class="p">:</span><span class="w"> </span><span class="mi">409</span><span class="p">,</span><span class="w">
+                                </span><span class="nl">"statusString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CONFLICT"</span><span class="w">
                             </span><span class="p">},</span><span class="w">
-                            </span><span class="nl">"errorCause"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Impossible de mettre à jour ce RDV, identifiant de RDV '30c8e00d-68b2-4092-a4f2-a9cb19b416e9' inconnu "</span><span class="p">,</span><span class="w">
+                            </span><span class="nl">"errorCause"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Impossible de créer ce RDV. L'identifiant du RDV à créér '30c8e00d-68b2-4092-a4f2-a9cb19b416e9' existe déjà dans la solution"</span><span class="p">,</span><span class="w">
                             </span><span class="nl">"sourceMessage"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                                 </span><span class="nl">"distributionID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.ptfsas_44fce1e7-461e-4b15-91e2-b4168bed531e"</span><span class="p">,</span><span class="w">
                                 </span><span class="nl">"distributionKind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Report"</span><span class="p">,</span><span class="w">
@@ -1431,7 +1324,7 @@ Cf. exemple ci-dessous de message de création</p>
                                                 </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                                                     </span><span class="nl">"messageId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.ptfsas_44fce1e7-461e-4b15-91e2-b4168bed531e"</span><span class="p">,</span><span class="w">
                                                     </span><span class="nl">"sender"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                                                        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ptfsas"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.ptfsas"</span><span class="p">,</span><span class="w">
                                                         </span><span class="nl">"URI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hubex:fr.health.ptfsas"</span><span class="w">
                                                     </span><span class="p">},</span><span class="w">
                                                     </span><span class="nl">"sentAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-10-28T17:29:59+01:00"</span><span class="p">,</span><span class="w">
@@ -1439,7 +1332,7 @@ Cf. exemple ci-dessous de message de création</p>
                                                     </span><span class="nl">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Report"</span><span class="p">,</span><span class="w">
                                                     </span><span class="nl">"recipient"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
                                                         </span><span class="p">{</span><span class="w">
-                                                            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"samu330"</span><span class="p">,</span><span class="w">
+                                                            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr.health.samu330"</span><span class="p">,</span><span class="w">
                                                             </span><span class="nl">"URI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hubex:fr.health.samu330"</span><span class="w">
                                                         </span><span class="p">}</span><span class="w">
                                                     </span><span class="p">],</span><span class="w">
@@ -1479,7 +1372,7 @@ Cf. exemple ci-dessous de message de création</p>
 
 <h3 id="déclencheurs-et-règles-dintégration-attendues">Déclencheurs et règles d'intégration attendues</h3>
 
-<p>Divers évènements dans la plateforme numérique SAS peuvent déclencher de manière instantanée le flux. À titre d’exemple, vous trouverez ci-dessous une liste non exhaustive de ces évènements :</p>
+<p>Divers évènements dans la plateforme numérique SAS peuvent déclencher de manière instantanée le flux. À titre d’exemple, une liste non exhaustive de ces évènements est présentée ci-dessous :</p>
 
 <ul>
   <li>Pour la création d’un message :
@@ -1498,12 +1391,12 @@ Cf. exemple ci-dessous de message de création</p>
   </li>
 </ul>
 
-<p><br />
+<p><br/>
 Le paragraphe ci-dessous détaille les différentes <strong>règles de gestions attendues</strong> par les éditeurs à la suite du déclenchement du flux et la transmission d’un message :</p>
 <ul>
   <li>A la réception du message, <strong>la solution éditeur stockera l’identifiant technique SAS du RDV transmis</strong> pour référence et gestion des mises à jour éventuelles</li>
   <li>Il est attendu pour les éditeurs ayant implémenté le flux de <strong>mettre en place une écoute de leurs files de messages instantanément</strong> afin de permettra le rattachement du RDV avec le DRM par le régulateur à la suite de la transmission des informations de RDV</li>
-  <li>Lorsque les données du RDV pris pour le compte du patient auront été transmises à la solution LRM, le régulateur OSNP devra pouvoir réaliser le rapprochement entre l’orientation et le DRM. Il est attendu que <strong>l’éditeur mette en place une solution pour que le régulateur puisse faire ce rapprochement au sein de la solution LRM</strong>. Par exemple, un tableau de bord, un espace pour la gestion des RDV pris, un affichage des données métier disponibles pour faciliter l’action (ex. nom du PS, , sélection DRM, heure de prise de RDV, heure du RDV, etc.), ou tout autre solution ergonomique que l’éditeur jugera pertinente. L’éditeur partagera à l’ANS la solution qu’il est prévu de mettre en place.</li>
+  <li>Lorsque les données du RDV pris pour le compte du patient auront été transmises à la solution LRM, le régulateur OSNP devra pouvoir réaliser le rapprochement entre l’orientation et le DRM. Il est attendu que <strong>l’éditeur mette en place une solution pour que le régulateur puisse faire ce rapprochement au sein de la solution LRM</strong>. Par exemple, un tableau de bord, un espace pour la gestion des RDV pris, un affichage des données métier disponibles pour faciliter l’action (ex. nom du PS, sélection DRM, heure de prise de RDV, heure du RDV, etc.), ou tout autre solution ergonomique que l’éditeur jugera pertinente. L’éditeur partagera à l’ANS la solution qu’il a prévu de mettre en place.</li>
   <li>Les règles d’association de l’orientation avec le DRM et la gestion des requêtes potentielles non associées seront gérées au cas par cas avec l’éditeur.</li>
   <li>Il est attendu de la part de l’éditeur de <strong>conserver un historique des messages reçus</strong> au niveau de l’échange et au niveau du résultat du traitement du message.</li>
 </ul>
@@ -1511,24 +1404,24 @@ Le paragraphe ci-dessous détaille les différentes <strong>règles de gestions 
 
 
 </div>
-        </div>  <!-- /inner-wrapper -->
-      </div>  <!-- /row -->
-    </div>  <!-- /container -->
-  </div>  <!-- /segment-content -->
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
 
-  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
-  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
 
-<script type="text/javascript" src="assets/js/window-hash.js"> </script>
+<script src="assets/js/window-hash.js" type="text/javascript"> </script>
   <a name="bottom"> </a>
-  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
-    <div class="container">  <!-- container -->
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container">    <!-- container -->
 
       <div style="background-color:var(--footer-nav-bg-color)">
         <table style="width:100%">
           <tbody>
             <tr>
-              <td style="text-align:left">&#xA0;
+              <td style="text-align:left">&nbsp;
 
                 <a href="specifications_techniques-sos-gestion_rdv.html">&lt;prev</a>
 
@@ -1536,7 +1429,7 @@ Le paragraphe ci-dessous détaille les différentes <strong>règles de gestions 
               <td style="text-align:center">
                 <a href="#top">top</a>
               </td>
-              <td style="text-align:right">&#xA0;
+              <td style="text-align:right">&nbsp;
 
                 <a href="ressources_casusage.html">next&gt;</a>
 
@@ -1548,51 +1441,51 @@ Le paragraphe ci-dessous détaille les différentes <strong>règles de gestions 
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Nov 4, 2025 10:04+0000">2025-11-04</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Nov 21, 2025 13:35+0000">2025-11-21</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA</a> |
-<a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://interop.esante.gouv.fr/ig/fhir/sas/history.html">Historique des versions</a>
-<a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://interop.esante.gouv.fr/ig/documentation">Documentation</a>
- | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/ansforge/IG-fhir-service-acces-aux-soins/issues/new">New Issue</a>
+<a style="color: var(--footer-hyperlink-text-color)" href="https://interop.esante.gouv.fr/ig/fhir/sas/history.html" target="_blank">Historique des versions</a>
+<a style="color: var(--footer-hyperlink-text-color)" href="https://interop.esante.gouv.fr/ig/documentation" target="_blank">Documentation</a>
+ | <a style="color: var(--footer-hyperlink-text-color)" href="https://github.com/ansforge/IG-fhir-service-acces-aux-soins/issues/new" target="_blank">New Issue</a>
 
-          </span>
+          
         </p>
-      </div>  <!-- /inner-wrapper -->
-    </div>  <!-- /container -->
-  </div>  <!-- /segment-footer -->
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
   
-  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
-    <div class="container">  <!-- container -->
-    </div>  <!-- /container -->
-  </div>  <!-- /segment-post-footer -->
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
   
-  <!-- JS and analytics only. -->
-  <!-- Bootstrap core JavaScript
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
   ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
-  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
-  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
-  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
-  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
 
-  <!-- Ajout ANS -->
+    <!-- Ajout ANS -->
   <script src="assets/js/app.js" type="text/javascript"> </script>
   <script src="assets/js/vendor.js" type="text/javascript"> </script>
-  <!-- Fin ajout ANS -->
+    <!-- Fin ajout ANS -->
 
-  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
   
 
-  <!-- Analytics Below
+    <!-- Analytics Below
   ================================================== -->
 
 
-  <!-- AJOUT ANS -->
+    <!-- AJOUT ANS -->
 
-<footer class="footer footer-principal" role="contentinfo">
+<footer role="contentinfo" class="footer footer-principal">
   <div class="footer__region1">
     <div class="container">
       <div class="row">
@@ -1600,17 +1493,17 @@ Le paragraphe ci-dessous détaille les différentes <strong>règles de gestions 
         <div class="col-md-6 col-lg-4 text-center text-md-left">
           <div class="logos">        
             <div class="logo logo--0">
-              <a href="https://solidarites-sante.gouv.fr" title="Ministère des Solidarités et de la Santé (nouvelle fenêtre)" target="_blank" rel="nofollow">
+              <a rel="nofollow" href="https://solidarites-sante.gouv.fr" title="Ministère des Solidarités et de la Santé (nouvelle fenêtre)" target="_blank">
                 
-                <img src="assets/images/logo-ministere.svg" alt="Ministère des Solidarités et de la Santé" width="133" height="77" loading="lazy" />
+                <img src="assets/images/logo-ministere.svg" alt="Ministère des Solidarités et de la Santé" width="133" loading="lazy" height="77"/>
                 
               </a>
             </div>
         
             <div class="logo logo--1">
-              <a href="https://esante.gouv.fr/" title="Agence du numérique en santé (nouvelle fenêtre)" target="_blank" rel="nofollow">
+              <a rel="nofollow" href="https://esante.gouv.fr/" title="Agence du numérique en santé (nouvelle fenêtre)" target="_blank">
                 
-                <img src="assets/images/logo-ANS-footer.svg" alt="Agence du numérique en santé" width="106" height="74" loading="lazy" />
+                <img src="assets/images/logo-ANS-footer.svg" alt="Agence du numérique en santé" width="106" loading="lazy" height="74"/>
               </a>
             </div>
           </div>
@@ -1620,7 +1513,7 @@ Le paragraphe ci-dessous détaille les différentes <strong>règles de gestions 
           <p class="footer__title">Agence du Numérique en Santé</p>
           <p>2-10 Rue d'Oradour-sur-Glane 75015 Paris</p>
 
-          <!-- <div class="m-social">
+            <!-- <div class="m-social">
             <ul class="m-social__list">        
               <li class="m-social__item">
                 <a class="m-social__link" href="https://www.linkedin.com/company/agence-du-numerique-en-sante/" target="_blank" rel="nofollow">
@@ -1662,12 +1555,11 @@ Le paragraphe ci-dessous détaille les différentes <strong>règles de gestions 
           <ul class="footer-list">
             <li class="footer-list__item footer-list__item--hasIcon">
               <a href="mailto:ci-sis@esante.gouv.fr" class="mailto-link">
-                <svg class="svg-icon svg-angle-right" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#angle-right"></use></svg>Contact</a>
+                <svg aria-hidden="true" focusable="false" class="svg-icon svg-angle-right"><use href="assets/images/icon-sprite.svg#angle-right"></use></svg>Contact</a>
               </li>
-              <!-- <li class="footer-list__item">
+                <!-- <li class="footer-list__item">
                 <a href="https://interop-pprod.esante.gouv.fr/ci-sis-specifications/wp-content/uploads/CGU_espace_de_tests_v1.1.pdf" class="file-link">Mentions légales</a>
-              </li>
-               -->
+              </li> -->
             </ul>
           </div>
 
@@ -1675,7 +1567,7 @@ Le paragraphe ci-dessous détaille les différentes <strong>règles de gestions 
       </div>
     </div>
     
-    <!-- <div class="footer__region2">
+      <!-- <div class="footer__region2">
       <div class="container">
         <div class="footer-contentinfo">
           <ul class="footer-list footer-list--inline">
@@ -1687,4 +1579,3 @@ Le paragraphe ci-dessous détaille les différentes <strong>règles de gestions 
   </footer>
   </body>
 </html>
-
