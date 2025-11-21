@@ -43,7 +43,7 @@ Le tableau ci-dessous précise les balises de l’enveloppe EDXL-DE qui doivent 
 | *Entête EDXL-DE* | distributionID | string | Identifiant unique du message attribué par l’expéditeur |Format `<senderId>_<internalId>` où `<internalId>` est un identifiant garanti unique |
 | *Entête EDXL-DE* | senderID | string | Identifiant de l'émetteur | `fr.health.ptfsas`, fr.health.samuXXX |
 | *Entête EDXL-DE* | dateTimeSent | Date time | Date et heure d'envoi du message | Ex : 2025-08-24T14:15:22+02:00 |
-| *Entête EDXL-DE* | dateTimeExpires | Date time | Date et heure d'expiration du message : les données ne doivent pas être délivrées au-delà de cette date | Ex : 2025-08-24T14:15:22+02:00 |
+| *Entête EDXL-DE* | dateTimeExpires | Date time | Date et heure d'expiration du message : les données ne doivent pas être délivrées au-delà de cette date | Ex : 2025-08-24T14:19:22+02:00 |
 | *Entête EDXL-DE* | distributionStatus | string | Statut du message | Valeur fixe : `Actual` |
 | *Entête EDXL-DE* | distributionKind | string | Type du message| `Report`, `Ack`, `Error` |
 | *Entête EDXL-DE*| descriptor.language | string | Langue du message échangé | Valeur fixe : `fr-FR` |
@@ -53,7 +53,7 @@ Le tableau ci-dessous précise les balises de l’enveloppe EDXL-DE qui doivent 
 
 #### Entête RC-DE
 
-Le contenu des messages transmis pourra également être encapsulé dans un entête RC-DE au sein de l’enveloppe EDXL-DE. L'entête RC-DE contient un nombre de champs communs à l'entête EDXL-DE, ce qui permet de rendre le message auportortant sans l'entête EDXL-DE selon le modèle et les balises précisées dans le tableau ci-dessous (cf spécifications du Hub Santé §3.4.5).
+Le contenu des messages transmis pourra également être encapsulé dans un entête RC-DE au sein de l’enveloppe EDXL-DE. L'entête RC-DE contient un nombre de champs communs à l'entête EDXL-DE, ce qui permet de rendre le message autoportant sans l'entête EDXL-DE selon le modèle et les balises précisées dans le tableau ci-dessous (cf spécifications du Hub Santé §3.4.5).
 
 | Élément | Champ | Type | Description | Commentaire / valeur |
 |--------|--------|------|------|-------------|
@@ -75,9 +75,9 @@ Sa structure est la même que celle d'un message RC-DE, avec l'ajout d'un champ 
 
 #### Gestion de l'envoi d'un message PTF SAS -> LRM via Hub 
 
-Le message contenant les informations de RDV pris par le régulateur pour le compte du patient est envoyé instantanément par la plateforme numérique SAS au HubSanté. Le message est transmis avec un entête est de type "EDXL-DE" (cf [Enveloppe EDXL-DE](./specifications_techniques-transmission-info-RDV-LRM.html#enveloppe-edxl-de)) encapsulant un entête de type RC-DE (cf [Enveloppe RC-DE](./specifications_techniques-transmission-info-RDV-LRM.html#entête-rc-de)) et les contenus des messages au format Json (cf [Données transmises au LRM](./specifications_techniques-transmission-info-RDV-LRM.html#données-transmises-au-lrm)).
+Le message contenant les informations de RDV pris par le régulateur pour le compte du patient est envoyé instantanément par la plateforme numérique SAS au HubSanté. Le message est transmis avec un entête de type "EDXL-DE" (cf [Enveloppe EDXL-DE](./specifications_techniques-transmission-info-RDV-LRM.html#enveloppe-edxl-de)) encapsulant un entête de type RC-DE (cf [Enveloppe RC-DE](./specifications_techniques-transmission-info-RDV-LRM.html#entête-rc-de)) et les contenus des messages au format Json (cf [Données transmises au LRM](./specifications_techniques-transmission-info-RDV-LRM.html#données-transmises-au-lrm)).
 
-Il s'agit d'un message où le champ `distribution.kind` (entête EDXL-DE) et `kind` (entête RC-DE) est valorisé à `Report`.
+Il s'agit d'un message où les champs `distribution.kind` (entête EDXL-DE) et `kind` (entête RC-DE) sont valorisés à `Report`.
 
 #### Acquittement technique Hub -> PTF SAS
 
@@ -427,7 +427,7 @@ Le fichier json encapsulé dans l'entête aura le champ `method` valorisé à `U
 
 **L’identifiant technique SAS du RDV (champ `appointmentId`)** transmis sera stocké par la solution éditeur LRM pour identification du RDV sur lequel porte les mises à jour éventuelles.
 
-**En cas de réception d'un message du mise à jour sur un identifiant inconnu, la solution LRM devra pouvoir gérer le message en tant que création avec les données contenues dans le message à l'instant t.** 
+**En cas de réception d'un message de mise à jour sur un identifiant inconnu, la solution LRM devra pouvoir gérer le message en tant que création avec les données contenues dans le message à l'instant t.** 
 
 Cf. exemple ci-dessous de message de modification
 ```json
@@ -521,11 +521,11 @@ Cette section détaille les champs à utiliser afin de renseigner les différent
 
 - **practitioner.specialtyCode** : Code issu de la nomenclature des spécialités ordinales du NOS (<https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale/>)
 
-- **practitioner.professionCode** : Code issu de la nomenclature des professions de santédu NOS (<https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante/>)
+- **practitioner.professionCode** : Code issu de la nomenclature des professions de santé du NOS (<https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante/>)
 
 - **organizationId** : Identifiant unique propre à chaque structure de soins. Les champs sont valorisés comme suit : numéro du FINESS avec préfixe « 1 » ou numéro du SIRET avec préfixe « 3 » 
 
-- **regulatorId** : Identifiant unique du régulateur ayant pris le RDV. Il s'agira uniquemet d'un identifiant national "IDNPS"(identifiant présent sur la carte CPx du régulateur). En effet, certains régulateurs n’ayant pas encore d’identifiant national à date, un identifiant technique de type uuid est créé. Cet identifiant étant connu uniquement de la PTF SAS, il ne sera pas transmis dans le flux. 
+- **regulatorId** : Identifiant unique du régulateur ayant pris le RDV. Il s'agira uniquement d'un identifiant national "IDNPS"(identifiant présent sur la carte CPx du régulateur). En effet, certains régulateurs n’ayant pas encore d’identifiant national à date, un identifiant technique de type uuid est créé. Cet identifiant étant connu uniquement de la PTF SAS, il ne sera pas transmis dans le flux. 
 *Exemple d'identifiant national* : `3620100057/70326SR`
 
 - **regulatorEmail** : Il s'agit de l'adresse mail du compte du régulateur telle que déclarée dans la plateforme SAS. Elle correspond également à l'identifiant de connexion à la plateforme. 
@@ -900,7 +900,7 @@ Dans ce cas, le type d'orientation est incorrect car il ne respecte pas la nomen
 
 ### Déclencheurs et règles d'intégration attendues
 
-Divers évènements dans la plateforme numérique SAS peuvent déclencher de manière instantanée le flux. À titre d’exemple, voune liste non exhaustive de ces évènements est présentée ci-dessous : 
+Divers évènements dans la plateforme numérique SAS peuvent déclencher de manière instantanée le flux. À titre d’exemple, une liste non exhaustive de ces évènements est présentée ci-dessous : 
 
 - Pour la création d’un message : 
     - lors de la prise de RDV ou demande de prise en charge par le régulateur pour le compte du patient dans une solution éditeur 
@@ -916,6 +916,6 @@ Divers évènements dans la plateforme numérique SAS peuvent déclencher de man
 Le paragraphe ci-dessous détaille les différentes **règles de gestions attendues** par les éditeurs à la suite du déclenchement du flux et la transmission d’un message : 
 - A la réception du message, **la solution éditeur stockera l’identifiant technique SAS du RDV transmis** pour référence et gestion des mises à jour éventuelles 
 - Il est attendu pour les éditeurs ayant implémenté le flux de **mettre en place une écoute de leurs files de messages instantanément** afin de permettra le rattachement du RDV avec le DRM par le régulateur à la suite de la transmission des informations de RDV 
-- Lorsque les données du RDV pris pour le compte du patient auront été transmises à la solution LRM, le régulateur OSNP devra pouvoir réaliser le rapprochement entre l’orientation et le DRM. Il est attendu que **l’éditeur mette en place une solution pour que le régulateur puisse faire ce rapprochement au sein de la solution LRM**. Par exemple, un tableau de bord, un espace pour la gestion des RDV pris, un affichage des données métier disponibles pour faciliter l’action (ex. nom du PS, sélection DRM, heure de prise de RDV, heure du RDV, etc.), ou tout autre solution ergonomique que l’éditeur jugera pertinente. L’éditeur partagera à l’ANS la solution qu’il est prévu de mettre en place.
+- Lorsque les données du RDV pris pour le compte du patient auront été transmises à la solution LRM, le régulateur OSNP devra pouvoir réaliser le rapprochement entre l’orientation et le DRM. Il est attendu que **l’éditeur mette en place une solution pour que le régulateur puisse faire ce rapprochement au sein de la solution LRM**. Par exemple, un tableau de bord, un espace pour la gestion des RDV pris, un affichage des données métier disponibles pour faciliter l’action (ex. nom du PS, sélection DRM, heure de prise de RDV, heure du RDV, etc.), ou tout autre solution ergonomique que l’éditeur jugera pertinente. L’éditeur partagera à l’ANS la solution qu’il a prévu de mettre en place.
 - Les règles d’association de l’orientation avec le DRM et la gestion des requêtes potentielles non associées seront gérées au cas par cas avec l’éditeur. 
 - Il est attendu de la part de l’éditeur de **conserver un historique des messages reçus** au niveau de l’échange et au niveau du résultat du traitement du message. 
