@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="sas-valueset-appointmentparticipanttype"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : EnsembleValeurs sas-valueset-appointmentparticipanttype</b></p><a name="sas-valueset-appointmentparticipanttype"> </a><a name="hcsas-valueset-appointmentparticipanttype"> </a><ul><li>Include ce(s) code(s) tel quil(s) est (sont) défini(s) dans <a href="http://terminology.hl7.org/7.0.0/CodeSystem-v3-ParticipationType.html"><code>http://terminology.hl7.org/CodeSystem/v3-ParticipationType</code></a><span title="Version is not explicitly stated, which means it is fixed to 5.0.0, the version found through the package references"> version &#x1F4E6;5.0.0</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Définition</b></td></tr><tr><td><a href="http://terminology.hl7.org/7.0.0/CodeSystem-v3-ParticipationType.html#v3-ParticipationType-ADM">ADM</a></td><td>The practitioner who is responsible for admitting a patient to a patient encounter.</td><td>The practitioner who is responsible for admitting a patient to a patient encounter.</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-appointmentparticipanttype"/>
+  <version value="1.1.0"/>
+  <name value="AppointmentParticipantTypeSAS"/>
+  <title value="Appointment Participant Type SAS"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2025-11-24T08:23:04+00:00"/>
+  <publisher value="ANS"/>
+  <contact>
+    <name value="ANS"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Type de participant du RDV SAS"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="FRANCE"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+      <concept>
+        <code value="ADM"/>
+        <display value="The practitioner who is responsible for admitting a patient to a patient encounter."/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>
