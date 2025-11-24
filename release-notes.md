@@ -1,12 +1,13 @@
-**Release 1.1.0-trial-implementation de l'Implémentation Guide Service d'Accès aux Soins.**
+**Release 1.2.0-trial-implementation de l'Implémentation Guide Service d'Accès aux Soins.**
 
-[Modifications apportées dans cette release](https://github.com/ansforge/IG-fhir-service-acces-aux-soins/pulls?q=is%3Apr+is%3Aclosed+milestone%3A1.1.0-trial-implementation)
-
-* Ajout d'un capability statement en mode draft pour les différents profils
-* Cas d'usage CPTS : 
-    - correction de l'URL de la TRE-R66 (Catégorie d'établissement)
-    - correction placement motif dans les exemples de ressources slot (le champ texte `motif` n'est pus rattaché au type de créneau)
-* Suppression du texte narratif auto-généré sur les exemples
-* Ajout de l'ensemble de la partie narrative (partie fonctionnelle, partie technique, FAQ,...) pour le cas d'usage SOS médecins et ajout d'exemples
-* Ajout de l'ensemble de la partie narrative (partie fonctionnelle, partie technique, FAQ,...) pour la spécification `Gestion des comptes régulateurs` et ajout d'exemples
-* Harmonisation de la description des profils pour mieux refléter le cas d'usage concerné
+Modifications apportées dans cette release
+* Ajout du cas d'usage redescente des informations de RDV aux LRM
+    - Partie narrative avec sommaire, spécifications fonctionnelles, techniques incluant schémas des flux et exemples
+    - Création des jeux de valeurs associés
+* Modifications et corrections apportées aux flux existants  :
+    - Suppression de la définition pour le paramètre de recherche _has
+    - Ajout des modes de recherche sur les exemples de Bundle
+    - Mise en place de la cohabitation entre deux versions du package FrCore
+        - package 1.1.0 utilisé pour les cas d'usage actuels
+        - package 2.1.0 ou supérieur sera utilisé dorénavant pour les nouveaux cas d'usage FHIR
+   
