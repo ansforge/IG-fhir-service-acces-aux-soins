@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+  <id value="SAS-GestionnaireAgenda-SOS"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : CapabilityStatement SAS-GestionnaireAgenda-SOS</b></p><a name="SAS-GestionnaireAgenda-SOS"> </a><a name="hcSAS-GestionnaireAgenda-SOS"> </a><h2 id="title">Profil SAS gestionnaire d'agenda SOS</h2><ul><li>Version du guide dimplémentation : {0} </li><li>Version de FHIR : 4.0.1 </li><li>Formats supportés : <code>application/fhir+json</code></li><li>Publié sur : 2024-10-01 00:00:00+0100 </li><li>Publié par : ANS </li></ul><blockquote class="impl-note"><p><strong>Note aux implémenteurs : capacités FHIR</strong></p><p>Toute capacité FHIR peut être 'autorisée' par le système sauf si elle est explicitement marquée comme 'SHALL NOT'. Quelques éléments sont marqués comme MAY dans le guide dimplémentation pour souligner leur pertinence potentielle pour le cas dusage.</p></blockquote><h3 id="shallIGs">DOIT prendre en charge les guides d’implémentation suivants.</h3><ul><li>https://interop.esante.gouv.fr/ig/fhir/sas</li></ul><h2 id="rest">Capacités RESTful FHIR</h2><div class="panel panel-default"><div class="panel-heading"><h3 id="mode1" class="panel-title">Mode: <code>server</code></h3></div><div class="panel-body"><div><p>Mise à disposition de créneaux de disponibilité SOS médecins</p>
+</div><div class="lead"><em>Security</em></div><blockquote><div><p>L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S
+) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes
+d’information de santé (CI-SIS)</p>
+</div></blockquote></div></div><h3 id="resourcesCap1">Capacités par ressource/profil</h3><h4 id="resourcesSummary1">Résumé</h4><p>Le tableau récapitulatif liste les ressources faisant partie de cette configuration, et pour chaque ressource, il liste :</p><ul><li>Les profils pertinents (le cas échéant)</li><li>Les interactions supportées par chaque ressource (<b><span class="bg-info">R</span></b>ead, <b><span class="bg-info">S</span></b>earch, <b><span class="bg-info">U</span></b>pdate, and <b><span class="bg-info">C</span></b>reate, are always shown, while <b><span class="bg-info">VR</span></b>ead, <b><span class="bg-info">P</span></b>atch, <b><span class="bg-info">D</span></b>elete, <b><span class="bg-info">H</span></b>istory on <b><span class="bg-info">I</span></b>nstance, or <b><span class="bg-info">H</span></b>istory on <b><span class="bg-info">T</span></b>les types sont seulement présents si au moins une des ressources les prend en charge.</li><li><span>Les paramètres de recherche (SearchParameters) requis, recommandés, optionnels (le cas échéant). </span></li><li>Les ressources liées activées pour <code>_include</code></li><li>Les autres ressources activées pour <code>_revinclude</code></li><li>Les opérations sur la ressource (le cas échéant)</li></ul><div class="table-responsive"><table class="table table-condensed table-hover"><thead><tr><th><b>Type de Ressource</b></th><th><b>Profil</b></th><th class="text-center"><b title="GET dune ressource (interaction read)">R</b></th><th class="text-center"><b title="GET de lensemble des ressources du type (interaction search)">S</b></th><th class="text-center"><b title="PUT dune nouvelle version de ressource (interaction update)">U</b></th><th class="text-center"><b title="POST dune nouvelle ressource (interaction create)">C</b></th><th><b title="Paramètres de recherche requis et recommandés">Recherches</b></th><th><code><b>_include</b></code></th><th><code><b>_revinclude</b></code></th><th><b>Opérations</b></th></tr></thead><tbody><tr><td><a href="#Schedule1-1">Schedule</a></td><td><a href="StructureDefinition-sas-sos-schedule-aggregator.html">https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator</a></td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center"/><td class="text-center"/><td>_has, SearchSchedule-actor</td><td><code>Schedule:actor:Location</code>, <code>Location:organization</code></td><td><code>Slot:schedule</code></td><td/></tr><tr><td><a href="#Slot1-2">Slot</a></td><td><a href="StructureDefinition-sas-sos-slot-aggregator.html">https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator</a></td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center"/><td class="text-center"/><td>SPDateDebutSlot</td><td/><td/><td/></tr><tr><td><a href="#Location1-3">Location</a></td><td><a href="StructureDefinition-sas-sos-location-aggregator.html">https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator</a></td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center"/><td class="text-center"/><td>Location-organization</td><td/><td/><td/></tr><tr><td><a href="#Organization1-4">Organization</a></td><td><a href="StructureDefinition-sas-sos-organization-aggregator.html">https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator</a></td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center"/><td class="text-center"/><td>Organization-identifier</td><td/><td/><td/></tr></tbody></table></div><hr/><div class="panel panel-default"><div class="panel-heading"><h4 id="Schedule1-1" class="panel-title"><span style="float: right;">Conformité de la ressource : supported </span>Schedule</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Profil système de base</span><br/><a href="StructureDefinition-sas-sos-schedule-aggregator.html">FrScheduleAgregateurSOS</a></div><div class="col-lg-3"><span class="lead">Conformité au Profil</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Politique de référence</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Résumé des interactions</span><br/><ul><li>Supporte <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class="row"><div class="col-lg-7"><span class="lead">Paramètres de recherche</span><table class="table table-condensed table-hover"><thead><tr><th>Conformité</th><th>Paramètre</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_has</td><td><code>special</code></td><td><div><p>Permet la sélection des ressources en fonction des propriétés des ressources qui y font référence (reverse chaining)</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/schedule.html#search">SearchSchedule-actor</a></td><td><code>reference</code></td><td><div><p>Permet de rechercher un agenda par acteur - lieu dans ce cas</p>
+</div></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="Slot1-2" class="panel-title"><span style="float: right;">Conformité de la ressource : supported </span>Slot</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Profil système de base</span><br/><a href="StructureDefinition-sas-sos-slot-aggregator.html">FrSlotAgregateurSOS</a></div><div class="col-lg-3"><span class="lead">Conformité au Profil</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Politique de référence</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Résumé des interactions</span><br/><ul><li>Supporte <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class="row"><div class="col-lg-7"><span class="lead">Paramètres de recherche</span><table class="table table-condensed table-hover"><thead><tr><th>Conformité</th><th>Paramètre</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href="SearchParameter-slot-sp-start.html">SPDateDebutSlot</a></td><td><code>date</code></td><td><div><p>Recherche d'une disponibilité sur la date et l'heure de début de disponibilité souhaité</p>
+</div></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="Location1-3" class="panel-title"><span style="float: right;">Conformité de la ressource : supported </span>Location</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Profil système de base</span><br/><a href="StructureDefinition-sas-sos-location-aggregator.html">FrLocationAgregateurSOS</a></div><div class="col-lg-3"><span class="lead">Conformité au Profil</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Politique de référence</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Résumé des interactions</span><br/><ul><li>Supporte <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class="row"><div class="col-lg-7"><span class="lead">Paramètres de recherche</span><table class="table table-condensed table-hover"><thead><tr><th>Conformité</th><th>Paramètre</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/location.html#search">Location-organization</a></td><td><code>reference</code></td><td><div><p>Recherche d'un lieu selon la structure rattachée</p>
+</div></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="Organization1-4" class="panel-title"><span style="float: right;">Conformité de la ressource : supported </span>Organization</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Profil système de base</span><br/><a href="StructureDefinition-sas-sos-organization-aggregator.html">FrOrganizationAgregateurSOS</a></div><div class="col-lg-3"><span class="lead">Conformité au Profil</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Politique de référence</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Résumé des interactions</span><br/><ul><li>Supporte <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class="row"><div class="col-lg-7"><span class="lead">Paramètres de recherche</span><table class="table table-condensed table-hover"><thead><tr><th>Conformité</th><th>Paramètre</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/organization.html#search">Organization-identifier</a></td><td><code>token</code></td><td><div><p>Recherche d'une structure par identifiant - SIRET dans ce cas</p>
+</div></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/fhir/sas/CapabilityStatement/SAS-GestionnaireAgenda-SOS"/>
+  <version value="1.2.0"/>
+  <name value="SAS_gestionnaireAgenda_SOS"/>
+  <title value="Profil SAS gestionnaire d'agenda SOS"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2024-10-01T00:00:00+01:00"/>
+  <publisher value="ANS"/>
+  <contact>
+    <name value="ANS"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Un gestionnaire d'agenda met à disposition d'un consommateur des créneaux de disponibilité. Cas d'usage SOS médecins"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="FRANCE"/>
+    </coding>
+  </jurisdiction>
+  <kind value="requirements"/>
+  <fhirVersion value="4.0.1"/>
+  <format value="application/fhir+json"/>
+  <implementationGuide value="https://interop.esante.gouv.fr/ig/fhir/sas"/>
+  <rest>
+    <mode value="server"/>
+    <documentation value="Mise à disposition de créneaux de disponibilité SOS médecins"/>
+    <security>
+      <cors value="false"/>
+      <description value="L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S&#xA;) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes&#xA;d’information de santé (CI-SIS)"/>
+    </security>
+    <resource>
+      <type value="Schedule"/>
+      <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator"/>
+      <interaction>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <code value="search-type"/>
+      </interaction>
+      <searchInclude value="Schedule:actor:Location"/>
+      <searchInclude value="Location:organization"/>
+      <searchRevInclude value="Slot:schedule"/>
+      <searchParam>
+        <name value="_has"/>
+        <type value="special"/>
+        <documentation value="Permet la sélection des ressources en fonction des propriétés des ressources qui y font référence (reverse chaining)"/>
+      </searchParam>
+      <searchParam>
+        <name value="SearchSchedule-actor"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Schedule-actor"/>
+        <type value="reference"/>
+        <documentation value="Permet de rechercher un agenda par acteur - lieu dans ce cas"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="Slot"/>
+      <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator"/>
+      <interaction>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <code value="search-type"/>
+      </interaction>
+      <searchParam>
+        <name value="SPDateDebutSlot"/>
+        <definition value="https://interop.esante.gouv.fr/ig/fhir/sas/SearchParameter/slot-sp-start"/>
+        <type value="date"/>
+        <documentation value="Recherche d'une disponibilité sur la date et l'heure de début de disponibilité souhaité"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="Location"/>
+      <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator"/>
+      <interaction>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <code value="search-type"/>
+      </interaction>
+      <searchParam>
+        <name value="Location-organization"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Location-organization"/>
+        <type value="reference"/>
+        <documentation value="Recherche d'un lieu selon la structure rattachée"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="Organization"/>
+      <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator"/>
+      <interaction>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <code value="search-type"/>
+      </interaction>
+      <searchParam>
+        <name value="Organization-identifier"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Organization-identifier"/>
+        <type value="token"/>
+        <documentation value="Recherche d'une structure par identifiant - SIRET dans ce cas"/>
+      </searchParam>
+    </resource>
+  </rest>
+</CapabilityStatement>

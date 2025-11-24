@@ -1,0 +1,135 @@
+# ans.fhir.fr.sas#1.2.0: Service d'Accès aux Soins
+
+## Pages
+
+* [Accueil](index.md)
+* [CPTS - Gestion des comptes régulateurs](specifications_techniques-cpts-gestion_regulateur.md)
+* [Sigles/Acronymes](acronymes.md)
+* [SOS Médecins - Recherche des créneaux](specifications_techniques-sos-recherche_creneaux.md)
+* [PS indiv. - Recherche des créneaux](specifications_techniques-ps-recherche_creneaux.md)
+* [FAQ](faq.md)
+* [Artifacts Summary](artifacts.md)
+* [PS indiv. - Gestion des comptes régulateurs](specifications_techniques-ps-gestion_regulateur.md)
+* [Annexes](annexes.md)
+* [Transmission des informations de rendez-vous aux LRM](specifications_techniques-transmission-info-RDV-LRM.md)
+* [Sécurité](securite.md)
+* [SOS Médecins - Gestion des comptes régulateurs](specifications_techniques-sos-gestion_regulateur.md)
+* [Autres Ressources](autres_ressources.md)
+* [Spécif. fonctionnelles](specifications_fonctionnelles.md)
+* [CPTS - Gestion de rendez-vous](specifications_techniques-cpts-gestion_rdv.md)
+* [CPTS - Recherche des créneaux](specifications_techniques-cpts-recherche_creneaux.md)
+* [Ressources par cas d'usage](ressources_casusage.md)
+* [PS indiv. - Gestion de rendez-vous](specifications_techniques-ps-gestion_rdv.md)
+* [SOS Médecins - Gestion de rendez-vous](specifications_techniques-sos-gestion_rdv.md)
+* [Téléchargements et usages](downloads.md)
+
+## Resources
+
+### CodeSystems
+
+* [Code système catégorie orientation SAS](CodeSystem-categorie-orientation-sas-codesystem.md)
+
+### ValueSets
+
+* [Value set catégorie orientation SAS](ValueSet-categorie-orientation-sas-valueset.md)
+* [Type créneaux SAS CPTS](ValueSet-sas-cpts-valueset-typecreneau.md)
+* [Statut participant SAS SOS](ValueSet-sas-sos-valueset-participant-status.md)
+* [Type créneaux SAS SOS](ValueSet-sas-sos-valueset-typecreneau.md)
+* [Appointment Participant Type SAS](ValueSet-sas-valueset-appointmentparticipanttype.md)
+* [Appointment reason SAS](ValueSet-sas-valueset-appointmentreason.md)
+* [Catégorie établissement SAS](ValueSet-sas-valueset-categorieetablissement.md)
+* [Type consultation SAS](ValueSet-sas-valueset-typeconsultation.md)
+* [Type identifiant SAS](ValueSet-sas-valueset-typeidentifiant.md)
+
+### Resource Profiles
+
+* [BundleAgregateur](StructureDefinition-BundleAgregateur.md)
+* [FrAppointmentSAS](StructureDefinition-FrAppointmentSAS.md)
+* [FrLocationAgregateur](StructureDefinition-FrLocationAgregateur.md)
+* [FrPractitionerAgregateur](StructureDefinition-FrPractitionerAgregateur.md)
+* [FrPractitionerRegul](StructureDefinition-FrPractitionerRegul.md)
+* [FrPractitionerRoleExerciceAgregateur](StructureDefinition-FrPractitionerRoleExerciceAgregateur.md)
+* [FrScheduleAgregateur](StructureDefinition-FrScheduleAgregateur.md)
+* [FrSlotAgregateur](StructureDefinition-FrSlotAgregateur.md)
+* [BundleAgregateurCPTS](StructureDefinition-sas-cpts-bundle-aggregator.md)
+* [FrHealthcareServiceAgregateurCPTS](StructureDefinition-sas-cpts-healthcareservice-aggregator.md)
+* [FrOrganizationAgregateurCPTS](StructureDefinition-sas-cpts-organization-aggregator.md)
+* [FrSlotAgregateurCPTS](StructureDefinition-sas-cpts-slot-aggregator.md)
+* [FrAppointmentSASSOS](StructureDefinition-sas-sos-appointment.md)
+* [BundleAgregateurSOS](StructureDefinition-sas-sos-bundle-aggregator.md)
+* [FrLocationAgregateurSOS](StructureDefinition-sas-sos-location-aggregator.md)
+* [FrOrganizationAgregateurSOS](StructureDefinition-sas-sos-organization-aggregator.md)
+* [FrScheduleAgregateurSOS](StructureDefinition-sas-sos-schedule-aggregator.md)
+* [FrSlotAgregateurSOS](StructureDefinition-sas-sos-slot-aggregator.md)
+
+### Extensions
+
+* [CategorieOrientation](StructureDefinition-sas-categorie-orientation.md)
+* [SASServiceTypeR5](StructureDefinition-sas-cpts-slot-servicetype-aggregator.md)
+
+### CapabilityStatements
+
+* [Profil SAS consommateur de créneaux CPTS](CapabilityStatement-SAS-Consommateur-CPTS.md)
+* [Profil SAS consommateur de créneaux SOS](CapabilityStatement-SAS-Consommateur-SOS.md)
+* [Profil SAS consommateur de créneaux](CapabilityStatement-SAS-Consommateur-psindiv.md)
+* [Profil SAS gestionnaire d'agenda CPTS](CapabilityStatement-SAS-GestionnaireAgenda-CPTS.md)
+* [Profil SAS gestionnaire d'agenda PS Indiv](CapabilityStatement-SAS-GestionnaireAgenda-PsIndiv.md)
+* [Profil SAS gestionnaire d'agenda RDV SOS](CapabilityStatement-SAS-GestionnaireAgenda-RDVSOS.md)
+* [Profil SAS gestionnaire d'agenda RDV ps indiv](CapabilityStatement-SAS-GestionnaireAgenda-RDVpsindiv.md)
+* [Profil SAS gestionnaire d'agenda SOS](CapabilityStatement-SAS-GestionnaireAgenda-SOS.md)
+* [Profil SAS gestionnaire de structure](CapabilityStatement-SAS-GestionnaireStructure.md)
+
+### ImplementationGuides
+
+* [Service d'Accès aux Soins](index.md)
+
+### SearchParameters
+
+* [SPServiceTypeCPTS](SearchParameter-cptsslot-sp-servicetype.md)
+* [SPDateDebutSlot](SearchParameter-slot-sp-start.md)
+
+### Examples
+
+* [1 (Appointment)](Appointment-1.md)
+* [2 (Appointment)](Appointment-2.md)
+* [ExampleBundleAgregateurSOS (Bundle)](Bundle-ExampleBundleAgregateurSOS.md)
+* [ExampleBundleCPTS1 (Bundle)](Bundle-ExampleBundleCPTS1.md)
+* [ExampleBundleCPTS2 (Bundle)](Bundle-ExampleBundleCPTS2.md)
+* [ExampleBundlePSIndiv (Bundle)](Bundle-ExampleBundlePSIndiv.md)
+* [ExampleHealthcareServiceCPTS1 (HealthcareService)](HealthcareService-ExampleHealthcareServiceCPTS1.md)
+* [ExampleHealthcareServiceCPTS2 (HealthcareService)](HealthcareService-ExampleHealthcareServiceCPTS2.md)
+* [Centre de consultation Rennes Nord (Location)](Location-1111111111.md)
+* [Centre de consultation Rennes Cleunay (Location)](Location-2222222222.md)
+* [Centre de consultation Lorient (Location)](Location-3333333333.md)
+* [CPTS AXE MAJEUR (Organization)](Organization-ExampleOrgaCPTS1.md)
+* [CPTS VAL D OISE CENTRE (Organization)](Organization-ExampleOrgaCPTS2.md)
+* [SOS Médecins de Rennes (Organization)](Organization-ExampleOrgaSOS1.md)
+* [SOS Médecins Lorient et agglomération (Organization)](Organization-ExampleOrgaSOS2.md)
+* [ExamplePractitioner (Practitioner)](Practitioner-ExamplePractitioner.md)
+* [ExamplePractitioner2 (Practitioner)](Practitioner-ExamplePractitioner2.md)
+* [ExamplePractitioner3 (Practitioner)](Practitioner-ExamplePractitioner3.md)
+* [ExamplePractitionerRegul1 (Practitioner)](Practitioner-ExamplePractitionerRegul1.md)
+* [ExamplePractitionerRegul2 (Practitioner)](Practitioner-ExamplePractitionerRegul2.md)
+* [ExamplePractitionerRegul3 (Practitioner)](Practitioner-ExamplePractitionerRegul3.md)
+* [ExamplePractitionerRegul4 (Practitioner)](Practitioner-ExamplePractitionerRegul4.md)
+* [ExamplePractitionerRoleAgregateur (PractitionerRole)](PractitionerRole-ExamplePractitionerRoleAgregateur.md)
+* [ExamplePractitionerRoleAgregateur2 (PractitionerRole)](PractitionerRole-ExamplePractitionerRoleAgregateur2.md)
+* [ExamplePractitionerRoleAgregateur3 (PractitionerRole)](PractitionerRole-ExamplePractitionerRoleAgregateur3.md)
+* [ExamplePractitionerRoleAgregateur4 (PractitionerRole)](PractitionerRole-ExamplePractitionerRoleAgregateur4.md)
+* [ExampleSchedule (Schedule)](Schedule-ExampleSchedule.md)
+* [ExampleSchedule1 (Schedule)](Schedule-ExampleSchedule1.md)
+* [ExampleSchedule2 (Schedule)](Schedule-ExampleSchedule2.md)
+* [ExampleSchedule3 (Schedule)](Schedule-ExampleSchedule3.md)
+* [ExampleScheduleSOS1 (Schedule)](Schedule-ExampleScheduleSOS1.md)
+* [ExampleScheduleSOS2 (Schedule)](Schedule-ExampleScheduleSOS2.md)
+* [ExampleScheduleSOS3 (Schedule)](Schedule-ExampleScheduleSOS3.md)
+* [ExampleSlotCPTS1 (Slot)](Slot-ExampleSlotCPTS1.md)
+* [ExampleSlotCPTS2 (Slot)](Slot-ExampleSlotCPTS2.md)
+* [ExampleSlotPSIndiv1 (Slot)](Slot-ExampleSlotPSIndiv1.md)
+* [ExampleSlotPSIndiv2 (Slot)](Slot-ExampleSlotPSIndiv2.md)
+* [ExampleSlotPSIndiv3 (Slot)](Slot-ExampleSlotPSIndiv3.md)
+* [ExampleSlotPSIndiv4 (Slot)](Slot-ExampleSlotPSIndiv4.md)
+* [ExampleSlotSOS1 (Slot)](Slot-ExampleSlotSOS1.md)
+* [ExampleSlotSOS2 (Slot)](Slot-ExampleSlotSOS2.md)
+* [ExampleSlotSOS3 (Slot)](Slot-ExampleSlotSOS3.md)
+* [ExampleSlotSOS4 (Slot)](Slot-ExampleSlotSOS4.md)
