@@ -32,7 +32,7 @@ Code système permettant de définir la catégorie d'orientation SAS spécifique
   "title" : "Code système catégorie orientation SAS",
   "status" : "active",
   "experimental" : true,
-  "date" : "2025-11-24T13:41:23+00:00",
+  "date" : "2025-11-24T14:06:07+00:00",
   "publisher" : "ANS",
   "contact" : [
     {
