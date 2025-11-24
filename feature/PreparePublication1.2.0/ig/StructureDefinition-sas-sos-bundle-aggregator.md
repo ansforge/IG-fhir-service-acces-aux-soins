@@ -40,7 +40,7 @@ Other representations of profile: [CSV](StructureDefinition-sas-sos-bundle-aggre
   "version" : "1.2.0",
   "name" : "BundleAgregateurSOS",
   "status" : "active",
-  "date" : "2025-11-24T08:39:07+00:00",
+  "date" : "2025-11-24T09:10:21+00:00",
   "publisher" : "ANS",
   "contact" : [
     {
