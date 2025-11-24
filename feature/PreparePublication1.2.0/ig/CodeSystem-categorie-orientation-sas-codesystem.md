@@ -1,4 +1,4 @@
-# Code système catégorie orientation SAS - Service d'Accès aux Soins v1.1.0
+# Code système catégorie orientation SAS - Service d'Accès aux Soins v1.2.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/CodeSystem/categorie-orientation-sas-codesystem | *Version*:1.1.0 |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/CodeSystem/categorie-orientation-sas-codesystem | *Version*:1.2.0 |
 | Active as of 2025-11-24 | *Computable Name*:CategorieOrientationSASCodeSystem |
 
  
@@ -27,12 +27,12 @@ Code système permettant de définir la catégorie d'orientation SAS spécifique
   "resourceType" : "CodeSystem",
   "id" : "categorie-orientation-sas-codesystem",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/CodeSystem/categorie-orientation-sas-codesystem",
-  "version" : "1.1.0",
+  "version" : "1.2.0",
   "name" : "CategorieOrientationSASCodeSystem",
   "title" : "Code système catégorie orientation SAS",
   "status" : "active",
   "experimental" : true,
-  "date" : "2025-11-24T08:23:04+00:00",
+  "date" : "2025-11-24T08:39:07+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

@@ -1,4 +1,4 @@
-# Type consultation SAS - Service d'Accès aux Soins v1.1.0
+# Type consultation SAS - Service d'Accès aux Soins v1.2.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-typeconsultation | *Version*:1.1.0 |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-typeconsultation | *Version*:1.2.0 |
 | Active as of 2025-11-24 | *Computable Name*:TypeConsultationSAS |
 
  
@@ -48,12 +48,12 @@ Type de consultations SAS
   "resourceType" : "ValueSet",
   "id" : "sas-valueset-typeconsultation",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-typeconsultation",
-  "version" : "1.1.0",
+  "version" : "1.2.0",
   "name" : "TypeConsultationSAS",
   "title" : "Type consultation SAS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2025-11-24T08:23:04+00:00",
+  "date" : "2025-11-24T08:39:07+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

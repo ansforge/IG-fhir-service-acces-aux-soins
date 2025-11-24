@@ -1,4 +1,4 @@
-# ExampleAppointmentBooked - Service d'Accès aux Soins v1.1.0
+# ExampleAppointmentBooked - Service d'Accès aux Soins v1.2.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)

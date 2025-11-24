@@ -1,4 +1,4 @@
-# CategorieOrientation - Service d'Accès aux Soins v1.1.0
+# CategorieOrientation - Service d'Accès aux Soins v1.2.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-categorie-orientation | *Version*:1.1.0 |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-categorie-orientation | *Version*:1.2.0 |
 | Active as of 2025-11-24 | *Computable Name*:CategorieOrientation |
 
 Extension créée afin d'ajouter la catégorie d'orientation dans un RDV
@@ -44,10 +44,10 @@ Other representations of profile: [CSV](StructureDefinition-sas-categorie-orient
   "resourceType" : "StructureDefinition",
   "id" : "sas-categorie-orientation",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-categorie-orientation",
-  "version" : "1.1.0",
+  "version" : "1.2.0",
   "name" : "CategorieOrientation",
   "status" : "active",
-  "date" : "2025-11-24T08:23:04+00:00",
+  "date" : "2025-11-24T08:39:07+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

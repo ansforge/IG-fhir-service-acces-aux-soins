@@ -1,4 +1,4 @@
-# Accueil - Service d'Accès aux Soins v1.1.0
+# Accueil - Service d'Accès aux Soins v1.2.0
 
 * [**Table of Contents**](toc.md)
 * **Accueil**
@@ -7,10 +7,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/ImplementationGuide/ans.fhir.fr.sas | *Version*:1.1.0 |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/ImplementationGuide/ans.fhir.fr.sas | *Version*:1.2.0 |
 | Active as of 2025-11-24 | *Computable Name*:SAS |
-
-> **Attention !**Cette version de l'Implementation Guide est en intégration continue et est soumise à des changements réguliers. La version officielle est accessible à l'adresse[https://interop.esante.gouv.fr/ig/fhir/sas](https://interop.esante.gouv.fr/ig/fhir/sas)
 
 ### Contexte métier
 
@@ -102,11 +100,11 @@ La fludification du parcours régulateurs inclut les éléments suivants :
   "resourceType" : "ImplementationGuide",
   "id" : "ans.fhir.fr.sas",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ImplementationGuide/ans.fhir.fr.sas",
-  "version" : "1.1.0",
+  "version" : "1.2.0",
   "name" : "SAS",
   "title" : "Service d'Accès aux Soins",
   "status" : "active",
-  "date" : "2025-11-24T08:23:04+00:00",
+  "date" : "2025-11-24T08:39:07+00:00",
   "publisher" : "ANS",
   "contact" : [
     {
@@ -206,7 +204,7 @@ La fludification du parcours régulateurs inclut les éléments suivants :
           },
           {
             "url" : "value",
-            "valueString" : "ci-build"
+            "valueString" : "trial-implementation"
           }
         ],
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -548,7 +546,7 @@ La fludification du parcours régulateurs inclut les éléments suivants :
           },
           {
             "url" : "value",
-            "valueString" : "ci-build"
+            "valueString" : "trial-implementation"
           }
         ],
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"

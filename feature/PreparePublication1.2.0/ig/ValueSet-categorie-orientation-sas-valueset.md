@@ -1,4 +1,4 @@
-# Value set catégorie orientation SAS - Service d'Accès aux Soins v1.1.0
+# Value set catégorie orientation SAS - Service d'Accès aux Soins v1.2.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/categorie-orientation-sas-valueset | *Version*:1.1.0 |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/categorie-orientation-sas-valueset | *Version*:1.2.0 |
 | Active as of 2025-11-24 | *Computable Name*:CategorieOrientationSASValueSet |
 
  
@@ -22,7 +22,7 @@ Valueset permettant de définir la catégorie d'orientation SAS. Il regroupe des
 
 Ce jeu de valeur (ValueSet) inclut les codes selon les règles suivantes :
 
-* Inclut tous les codes définis dans [`https://interop.esante.gouv.fr/ig/fhir/sas/CodeSystem/categorie-orientation-sas-codesystem`](CodeSystem-categorie-orientation-sas-codesystem.md)version 📦1.1.0
+* Inclut tous les codes définis dans [`https://interop.esante.gouv.fr/ig/fhir/sas/CodeSystem/categorie-orientation-sas-codesystem`](CodeSystem-categorie-orientation-sas-codesystem.md)version 📦1.2.0
 * Inclut ce(s) code(s) tel quil(s) est (sont) défini(s) dans [`https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement`](https://interop.esante.gouv.fr/ig/nos/1.3.0/CodeSystem-TRE-R66-CategorieEtablissement.html)version 📦1.3.0 
 
  
@@ -53,12 +53,12 @@ Ce jeu de valeur (ValueSet) contient 6 concepts
   "resourceType" : "ValueSet",
   "id" : "categorie-orientation-sas-valueset",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/categorie-orientation-sas-valueset",
-  "version" : "1.1.0",
+  "version" : "1.2.0",
   "name" : "CategorieOrientationSASValueSet",
   "title" : "Value set catégorie orientation SAS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2025-11-24T08:23:04+00:00",
+  "date" : "2025-11-24T08:39:07+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

@@ -1,4 +1,4 @@
-# Profil SAS consommateur de créneaux CPTS - Service d'Accès aux Soins v1.1.0
+# Profil SAS consommateur de créneaux CPTS - Service d'Accès aux Soins v1.2.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/CapabilityStatement/SAS-Consommateur-CPTS | *Version*:1.1.0 |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/CapabilityStatement/SAS-Consommateur-CPTS | *Version*:1.2.0 |
 | Draft as of 2024-10-01 | *Computable Name*:SAS_consommateur_CPTS |
 
  
@@ -136,7 +136,7 @@ Paramètres de recherche
   "resourceType" : "CapabilityStatement",
   "id" : "SAS-Consommateur-CPTS",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/CapabilityStatement/SAS-Consommateur-CPTS",
-  "version" : "1.1.0",
+  "version" : "1.2.0",
   "name" : "SAS_consommateur_CPTS",
   "title" : "Profil SAS consommateur de créneaux CPTS",
   "status" : "draft",

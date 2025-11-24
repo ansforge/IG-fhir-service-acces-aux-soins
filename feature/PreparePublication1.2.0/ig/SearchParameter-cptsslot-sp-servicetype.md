@@ -1,4 +1,4 @@
-# cptsslot-sp-servicetype - Service d'Accès aux Soins v1.1.0
+# cptsslot-sp-servicetype - Service d'Accès aux Soins v1.2.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/SearchParameter/cptsslot-sp-servicetype | *Version*:1.1.0 |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/SearchParameter/cptsslot-sp-servicetype | *Version*:1.2.0 |
 | Active as of 2025-11-24 | *Computable Name*:SPServiceTypeCPTS |
 
  
@@ -37,10 +37,10 @@ Paramètre de recherche sur le service type qui mime le paramètre R5. Permet de
   "resourceType" : "SearchParameter",
   "id" : "cptsslot-sp-servicetype",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/SearchParameter/cptsslot-sp-servicetype",
-  "version" : "1.1.0",
+  "version" : "1.2.0",
   "name" : "SPServiceTypeCPTS",
   "status" : "active",
-  "date" : "2025-11-24T08:23:04+00:00",
+  "date" : "2025-11-24T08:39:07+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

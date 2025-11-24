@@ -1,4 +1,4 @@
-# Statut participant SAS SOS - Service d'Accès aux Soins v1.1.0
+# Statut participant SAS SOS - Service d'Accès aux Soins v1.2.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-sos-valueset-participant-status | *Version*:1.1.0 |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-sos-valueset-participant-status | *Version*:1.2.0 |
 | Active as of 2025-11-24 | *Computable Name*:ParticipantStatusSASSOS |
 
  
@@ -48,12 +48,12 @@ Statut du participant RDV SAS SOS
   "resourceType" : "ValueSet",
   "id" : "sas-sos-valueset-participant-status",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-sos-valueset-participant-status",
-  "version" : "1.1.0",
+  "version" : "1.2.0",
   "name" : "ParticipantStatusSASSOS",
   "title" : "Statut participant SAS SOS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2025-11-24T08:23:04+00:00",
+  "date" : "2025-11-24T08:39:07+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

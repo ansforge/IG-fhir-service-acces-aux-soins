@@ -1,4 +1,4 @@
-# FrPractitionerRoleExerciceAgregateur - Service d'Accès aux Soins v1.1.0
+# FrPractitionerRoleExerciceAgregateur - Service d'Accès aux Soins v1.2.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur | *Version*:1.1.0 |
+| *Official URL*:http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur | *Version*:1.2.0 |
 | Active as of 2025-11-24 | *Computable Name*:FrPractitionerRoleExerciceAgregateur |
 
  
@@ -38,10 +38,10 @@ Other representations of profile: [CSV](StructureDefinition-FrPractitionerRoleEx
   "resourceType" : "StructureDefinition",
   "id" : "FrPractitionerRoleExerciceAgregateur",
   "url" : "http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur",
-  "version" : "1.1.0",
+  "version" : "1.2.0",
   "name" : "FrPractitionerRoleExerciceAgregateur",
   "status" : "active",
-  "date" : "2025-11-24T08:23:04+00:00",
+  "date" : "2025-11-24T08:39:07+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

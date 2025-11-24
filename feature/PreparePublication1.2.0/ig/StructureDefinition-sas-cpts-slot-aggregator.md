@@ -1,4 +1,4 @@
-# FrSlotAgregateurCPTS - Service d'Accès aux Soins v1.1.0
+# FrSlotAgregateurCPTS - Service d'Accès aux Soins v1.2.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator | *Version*:1.1.0 |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator | *Version*:1.2.0 |
 | Active as of 2025-11-24 | *Computable Name*:FrSlotAgregateurCPTS |
 
  
@@ -39,10 +39,10 @@ Other representations of profile: [CSV](StructureDefinition-sas-cpts-slot-aggreg
   "resourceType" : "StructureDefinition",
   "id" : "sas-cpts-slot-aggregator",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator",
-  "version" : "1.1.0",
+  "version" : "1.2.0",
   "name" : "FrSlotAgregateurCPTS",
   "status" : "active",
-  "date" : "2025-11-24T08:23:04+00:00",
+  "date" : "2025-11-24T08:39:07+00:00",
   "publisher" : "ANS",
   "contact" : [
     {
