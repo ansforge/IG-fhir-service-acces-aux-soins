@@ -1,6 +1,6 @@
 **Release 1.2.0-trial-implementation de l'Implémentation Guide Service d'Accès aux Soins.**
 
-[Modifications apportées dans cette release]
+Modifications apportées dans cette release
 * Ajout du cas d'usage redescente des informations de RDV aux LRM
     - Partie narrative avec sommaire, spécifications fonctionnelles, techniques incluant schémas des flux et exemples
     - Création des jeux de valeurs associés
