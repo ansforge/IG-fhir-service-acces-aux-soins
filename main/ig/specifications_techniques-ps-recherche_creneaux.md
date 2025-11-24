@@ -1,4 +1,4 @@
-# PS indiv. - Recherche des créneaux - Service d'Accès aux Soins v1.1.0
+# PS indiv. - Recherche des créneaux - Service d'Accès aux Soins v1.2.0
 
 * [**Table of Contents**](toc.md)
 * **PS indiv. - Recherche des créneaux**

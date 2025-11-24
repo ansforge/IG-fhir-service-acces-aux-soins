@@ -1,4 +1,4 @@
-# SASServiceTypeR5 - Service d'Accès aux Soins v1.1.0
+# SASServiceTypeR5 - Service d'Accès aux Soins v1.2.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType | *Version*:1.1.0 |
-| Active as of 2025-11-21 | *Computable Name*:SASServiceTypeR5 |
+| *Official URL*:http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType | *Version*:1.2.0 |
+| Active as of 2025-11-24 | *Computable Name*:SASServiceTypeR5 |
 
 Extension créée afin de permettre la reference à la ressource HealthcareService. Cette extension implemente l'élément serviceType de R5 https://hl7.org/fhir/slot-definitions.html#Slot.serviceType
 
@@ -43,10 +43,10 @@ Other representations of profile: [CSV](StructureDefinition-sas-cpts-slot-servic
   "resourceType" : "StructureDefinition",
   "id" : "sas-cpts-slot-servicetype-aggregator",
   "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType",
-  "version" : "1.1.0",
+  "version" : "1.2.0",
   "name" : "SASServiceTypeR5",
   "status" : "active",
-  "date" : "2025-11-21T13:35:41+00:00",
+  "date" : "2025-11-24T13:41:23+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

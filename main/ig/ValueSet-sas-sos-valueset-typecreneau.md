@@ -1,4 +1,4 @@
-# Type créneaux SAS SOS - Service d'Accès aux Soins v1.1.0
+# Type créneaux SAS SOS - Service d'Accès aux Soins v1.2.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-sos-valueset-typecreneau | *Version*:1.1.0 |
-| Active as of 2025-11-21 | *Computable Name*:TypeCreneauSASSOS |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-sos-valueset-typecreneau | *Version*:1.2.0 |
+| Active as of 2025-11-24 | *Computable Name*:TypeCreneauSASSOS |
 
  
 Type de Créneaux SAS SOS 
@@ -48,12 +48,12 @@ Type de Créneaux SAS SOS
   "resourceType" : "ValueSet",
   "id" : "sas-sos-valueset-typecreneau",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-sos-valueset-typecreneau",
-  "version" : "1.1.0",
+  "version" : "1.2.0",
   "name" : "TypeCreneauSASSOS",
   "title" : "Type créneaux SAS SOS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2025-11-21T13:35:41+00:00",
+  "date" : "2025-11-24T13:41:23+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

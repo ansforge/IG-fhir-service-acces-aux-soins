@@ -1,4 +1,4 @@
-# FrOrganizationAgregateurCPTS - Service d'Accès aux Soins v1.1.0
+# FrOrganizationAgregateurCPTS - Service d'Accès aux Soins v1.2.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-organization-aggregator | *Version*:1.1.0 |
-| Active as of 2025-11-21 | *Computable Name*:FrOrganizationAgregateurCPTS |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-organization-aggregator | *Version*:1.2.0 |
+| Active as of 2025-11-24 | *Computable Name*:FrOrganizationAgregateurCPTS |
 
  
 Profil dérivé de FrOrganization pour le cas d'usage agrégateur de la plateforme SAS - cas d'usage CPTS 
@@ -39,10 +39,10 @@ Other representations of profile: [CSV](StructureDefinition-sas-cpts-organizatio
   "resourceType" : "StructureDefinition",
   "id" : "sas-cpts-organization-aggregator",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-organization-aggregator",
-  "version" : "1.1.0",
+  "version" : "1.2.0",
   "name" : "FrOrganizationAgregateurCPTS",
   "status" : "active",
-  "date" : "2025-11-21T13:35:41+00:00",
+  "date" : "2025-11-24T13:41:23+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

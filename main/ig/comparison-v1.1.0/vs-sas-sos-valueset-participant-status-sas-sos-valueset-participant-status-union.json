@@ -1,0 +1,28 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "2709ae8c-c06c-4370-803f-c8b964115706-77",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/2709ae8c-c06c-4370-803f-c8b964115706-77",
+  "name" : "UnionParticipantStatusSASSOSAndParticipantStatusSASSOS",
+  "title" : "Union of Statut participant SAS SOS And Statut participant SAS SOS",
+  "status" : "active",
+  "date" : "2025-11-24T13:42:47+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "concept" : [{
+        "code" : "accepted",
+        "display" : "RDV accepté par le PS effecteur de soins"
+      },
+      {
+        "code" : "needs-action",
+        "display" : "RDV en attente de confirmation par le PS effecteur de soins"
+      }]
+    }]
+  }
+}

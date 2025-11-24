@@ -1,4 +1,4 @@
-# slot-sp-start - Service d'Accès aux Soins v1.1.0
+# slot-sp-start - Service d'Accès aux Soins v1.2.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/SearchParameter/slot-sp-start | *Version*:1.1.0 |
-| Active as of 2025-11-21 | *Computable Name*:SPDateDebutSlot |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/SearchParameter/slot-sp-start | *Version*:1.2.0 |
+| Active as of 2025-11-24 | *Computable Name*:SPDateDebutSlot |
 
  
 Paramètre de recherche date de début d'un créneau (date de début supérieure ou égale àet inférieure ou égale à) 
@@ -39,10 +39,10 @@ Paramètre de recherche date de début d'un créneau (date de début supérieure
   "resourceType" : "SearchParameter",
   "id" : "slot-sp-start",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/SearchParameter/slot-sp-start",
-  "version" : "1.1.0",
+  "version" : "1.2.0",
   "name" : "SPDateDebutSlot",
   "status" : "active",
-  "date" : "2025-11-21T13:35:41+00:00",
+  "date" : "2025-11-24T13:41:23+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

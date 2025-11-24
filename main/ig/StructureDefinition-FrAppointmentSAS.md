@@ -1,4 +1,4 @@
-# FrAppointmentSAS - Service d'Accès aux Soins v1.1.0
+# FrAppointmentSAS - Service d'Accès aux Soins v1.2.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://sas.fr/fhir/StructureDefinition/FrAppointmentSAS | *Version*:1.1.0 |
-| Active as of 2025-11-21 | *Computable Name*:FrAppointmentSAS |
+| *Official URL*:http://sas.fr/fhir/StructureDefinition/FrAppointmentSAS | *Version*:1.2.0 |
+| Active as of 2025-11-24 | *Computable Name*:FrAppointmentSAS |
 
  
 Profil de Appointment, dérivé de FrAppointment, pour le cas d'usage prise de RDV de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS 
@@ -38,10 +38,10 @@ Other representations of profile: [CSV](StructureDefinition-FrAppointmentSAS.csv
   "resourceType" : "StructureDefinition",
   "id" : "FrAppointmentSAS",
   "url" : "http://sas.fr/fhir/StructureDefinition/FrAppointmentSAS",
-  "version" : "1.1.0",
+  "version" : "1.2.0",
   "name" : "FrAppointmentSAS",
   "status" : "active",
-  "date" : "2025-11-21T13:35:41+00:00",
+  "date" : "2025-11-24T13:41:23+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

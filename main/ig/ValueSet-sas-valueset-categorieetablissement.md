@@ -1,4 +1,4 @@
-# Catégorie établissement SAS - Service d'Accès aux Soins v1.1.0
+# Catégorie établissement SAS - Service d'Accès aux Soins v1.2.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-categorieetablissement | *Version*:1.1.0 |
-| Active as of 2025-11-21 | *Computable Name*:CategorieEtablissementSAS |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-categorieetablissement | *Version*:1.2.0 |
+| Active as of 2025-11-24 | *Computable Name*:CategorieEtablissementSAS |
 
  
 Catégorie d'établissement utilisée dans contexte SAS - CPTS dans un premier temps 
@@ -48,12 +48,12 @@ Catégorie d'établissement utilisée dans contexte SAS - CPTS dans un premier t
   "resourceType" : "ValueSet",
   "id" : "sas-valueset-categorieetablissement",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-categorieetablissement",
-  "version" : "1.1.0",
+  "version" : "1.2.0",
   "name" : "CategorieEtablissementSAS",
   "title" : "Catégorie établissement SAS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2025-11-21T13:35:41+00:00",
+  "date" : "2025-11-24T13:41:23+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

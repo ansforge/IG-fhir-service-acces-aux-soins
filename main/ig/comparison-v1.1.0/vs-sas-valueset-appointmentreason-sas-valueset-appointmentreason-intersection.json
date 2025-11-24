@@ -1,0 +1,28 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "2709ae8c-c06c-4370-803f-c8b964115706-84",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/2709ae8c-c06c-4370-803f-c8b964115706-84",
+  "name" : "IntersectionAppointmentReasonSASAndAppointmentReasonSAS",
+  "title" : "Intersection of Appointment reason SAS And Appointment reason SAS",
+  "status" : "active",
+  "date" : "2025-11-24T13:42:47+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "concept" : [{
+        "code" : "ROUTINE",
+        "display" : "Créneau avec prise de RDV possible"
+      },
+      {
+        "code" : "WALKIN",
+        "display" : "Créneau sans prise de RDV possible à domicile"
+      }]
+    }]
+  }
+}

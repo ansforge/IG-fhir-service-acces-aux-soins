@@ -1,4 +1,4 @@
-# FrScheduleAgregateurSOS - Service d'Accès aux Soins v1.1.0
+# FrScheduleAgregateurSOS - Service d'Accès aux Soins v1.2.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator | *Version*:1.1.0 |
-| Active as of 2025-11-21 | *Computable Name*:FrScheduleAgregateurSOS |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator | *Version*:1.2.0 |
+| Active as of 2025-11-24 | *Computable Name*:FrScheduleAgregateurSOS |
 
  
 Profil de Schedule, dérivé de FrSchedule, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins 
@@ -40,10 +40,10 @@ Other representations of profile: [CSV](StructureDefinition-sas-sos-schedule-agg
   "resourceType" : "StructureDefinition",
   "id" : "sas-sos-schedule-aggregator",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator",
-  "version" : "1.1.0",
+  "version" : "1.2.0",
   "name" : "FrScheduleAgregateurSOS",
   "status" : "active",
-  "date" : "2025-11-21T13:35:41+00:00",
+  "date" : "2025-11-24T13:41:23+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

@@ -1,4 +1,4 @@
-# Sécurité - Service d'Accès aux Soins v1.1.0
+# Sécurité - Service d'Accès aux Soins v1.2.0
 
 * [**Table of Contents**](toc.md)
 * [**Autres Ressources**](autres_ressources.md)

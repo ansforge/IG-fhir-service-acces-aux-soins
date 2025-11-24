@@ -1,4 +1,4 @@
-# PS indiv. - Gestion de rendez-vous - Service d'Accès aux Soins v1.1.0
+# PS indiv. - Gestion de rendez-vous - Service d'Accès aux Soins v1.2.0
 
 * [**Table of Contents**](toc.md)
 * **PS indiv. - Gestion de rendez-vous**
