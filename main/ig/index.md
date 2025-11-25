@@ -8,7 +8,9 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/ImplementationGuide/ans.fhir.fr.sas | *Version*:1.2.0 |
-| Active as of 2025-11-24 | *Computable Name*:SAS |
+| Active as of 2025-11-25 | *Computable Name*:SAS |
+
+> **Attention !**Cette version de l'Implementation Guide est en intégration continue et est soumise à des changements réguliers. La version officielle est accessible à l'adresse[https://interop.esante.gouv.fr/ig/fhir/sas](https://interop.esante.gouv.fr/ig/fhir/sas)
 
 ### Contexte métier
 
@@ -104,7 +106,7 @@ La fludification du parcours régulateurs inclut les éléments suivants :
   "name" : "SAS",
   "title" : "Service d'Accès aux Soins",
   "status" : "active",
-  "date" : "2025-11-24T14:06:07+00:00",
+  "date" : "2025-11-25T08:03:17+00:00",
   "publisher" : "ANS",
   "contact" : [
     {
@@ -204,7 +206,7 @@ La fludification du parcours régulateurs inclut les éléments suivants :
           },
           {
             "url" : "value",
-            "valueString" : "trial-implementation"
+            "valueString" : "ci-build"
           }
         ],
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -546,7 +548,7 @@ La fludification du parcours régulateurs inclut les éléments suivants :
           },
           {
             "url" : "value",
-            "valueString" : "trial-implementation"
+            "valueString" : "ci-build"
           }
         ],
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
