@@ -25,7 +25,7 @@
   </tr>
   <tr>
     <td>IDNPS</td>
-    <td>IDEntifiant National de Professionel de Santé</td>
+    <td>IDentifiant National de Professionel de Santé</td>
   </tr>
   <tr>
     <td>IDNST</td>
