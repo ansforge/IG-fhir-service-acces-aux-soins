@@ -9,16 +9,16 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator | *Version*:1.2.0 |
-| Active as of 2025-11-25 | *Computable Name*:FrSlotAgregateurCPTS |
+| Active as of 2025-12-11 | *Computable Name*:FrSlotAgregateurCPTS |
 
  
 Profil de Slot, dérivé de FrSlot, pour le cas d'usage agrégateur de la plateforme SAS - cas d'usage CPTS 
 
-**Usages:**
+**Utilisations:**
 
-* Use this Profile: [BundleAgregateurCPTS](StructureDefinition-sas-cpts-bundle-aggregator.md)
-* Examples for this Profile: [Slot/ExampleSlotCPTS1](Slot-ExampleSlotCPTS1.md) and [Slot/ExampleSlotCPTS2](Slot-ExampleSlotCPTS2.md)
-* CapabilityStatements using this Profile: [Profil SAS consommateur de créneaux CPTS](CapabilityStatement-SAS-Consommateur-CPTS.md) and [Profil SAS gestionnaire d'agenda CPTS](CapabilityStatement-SAS-GestionnaireAgenda-CPTS.md)
+* Utiliser ce Profil: [BundleAgregateurCPTS](StructureDefinition-sas-cpts-bundle-aggregator.md)
+* Exemples pour ce Profil: [Slot/ExampleSlotCPTS1](Slot-ExampleSlotCPTS1.md) and [Slot/ExampleSlotCPTS2](Slot-ExampleSlotCPTS2.md)
+* CapabilityStatements utilisant ce Profil: [Profil SAS consommateur de créneaux CPTS](CapabilityStatement-SAS-Consommateur-CPTS.md) and [Profil SAS gestionnaire d'agenda CPTS](CapabilityStatement-SAS-GestionnaireAgenda-CPTS.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.sas|current/StructureDefinition/sas-cpts-slot-aggregator)
 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-sas-cpts-slot-aggreg
   "version" : "1.2.0",
   "name" : "FrSlotAgregateurCPTS",
   "status" : "active",
-  "date" : "2025-11-25T08:03:17+00:00",
+  "date" : "2025-12-11T11:06:01+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

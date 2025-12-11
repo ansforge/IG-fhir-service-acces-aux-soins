@@ -9,16 +9,16 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur | *Version*:1.2.0 |
-| Active as of 2025-11-25 | *Computable Name*:FrSlotAgregateur |
+| Active as of 2025-12-11 | *Computable Name*:FrSlotAgregateur |
 
  
 Profil de Slot, dérivé de FrSlot, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS 
 
-**Usages:**
+**Utilisations:**
 
-* Use this Profile: [BundleAgregateur](StructureDefinition-BundleAgregateur.md)
-* Examples for this Profile: [Slot/ExampleSlotPSIndiv1](Slot-ExampleSlotPSIndiv1.md), [Slot/ExampleSlotPSIndiv2](Slot-ExampleSlotPSIndiv2.md), [Slot/ExampleSlotPSIndiv3](Slot-ExampleSlotPSIndiv3.md) and [Slot/ExampleSlotPSIndiv4](Slot-ExampleSlotPSIndiv4.md)
-* CapabilityStatements using this Profile: [Profil SAS consommateur de créneaux](CapabilityStatement-SAS-Consommateur-psindiv.md) and [Profil SAS gestionnaire d'agenda PS Indiv](CapabilityStatement-SAS-GestionnaireAgenda-PsIndiv.md)
+* Utiliser ce Profil: [BundleAgregateur](StructureDefinition-BundleAgregateur.md)
+* Exemples pour ce Profil: [Slot/ExampleSlotPSIndiv1](Slot-ExampleSlotPSIndiv1.md), [Slot/ExampleSlotPSIndiv2](Slot-ExampleSlotPSIndiv2.md), [Slot/ExampleSlotPSIndiv3](Slot-ExampleSlotPSIndiv3.md) and [Slot/ExampleSlotPSIndiv4](Slot-ExampleSlotPSIndiv4.md)
+* CapabilityStatements utilisant ce Profil: [Profil SAS consommateur de créneaux](CapabilityStatement-SAS-Consommateur-psindiv.md) and [Profil SAS gestionnaire d'agenda PS Indiv](CapabilityStatement-SAS-GestionnaireAgenda-PsIndiv.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.sas|current/StructureDefinition/FrSlotAgregateur)
 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-FrSlotAgregateur.csv
   "version" : "1.2.0",
   "name" : "FrSlotAgregateur",
   "status" : "active",
-  "date" : "2025-11-25T08:03:17+00:00",
+  "date" : "2025-12-11T11:06:01+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

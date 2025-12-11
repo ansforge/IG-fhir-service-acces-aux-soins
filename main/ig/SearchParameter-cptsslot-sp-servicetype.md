@@ -9,24 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/SearchParameter/cptsslot-sp-servicetype | *Version*:1.2.0 |
-| Active as of 2025-11-25 | *Computable Name*:SPServiceTypeCPTS |
+| Active as of 2025-12-11 | *Computable Name*:SPServiceTypeCPTS |
 
  
 Paramètre de recherche sur le service type qui mime le paramètre R5. Permet de rechercher ou d'inclure la ressource reférencée HealthCare Service 
-
-## SPServiceTypeCPTS
-
-Paramètre `service-type-reference`:`reference`
-
-Paramètre de recherche sur le service type qui mime le paramètre R5. Permet de rechercher ou d'inclure la ressource reférencée HealthCare Service
-
-| | |
-| :--- | :--- |
-| Ressource | [Slot](http://hl7.org/fhir/R4/slot.html) |
-| Expression | `serviceType.extension.where(url='http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType').value` |
-| Multiples | * multipleAnd: It's up to the server whether the parameter may repeat in order to specify multiple values that must all be true
-* multipleOr: It's up to the server whether the parameter can have multiple values (separated by comma) where at least one must be true
- |
 
 
 
@@ -40,7 +26,7 @@ Paramètre de recherche sur le service type qui mime le paramètre R5. Permet de
   "version" : "1.2.0",
   "name" : "SPServiceTypeCPTS",
   "status" : "active",
-  "date" : "2025-11-25T08:03:17+00:00",
+  "date" : "2025-12-11T11:06:01+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

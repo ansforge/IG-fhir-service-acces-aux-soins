@@ -9,16 +9,16 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator | *Version*:1.2.0 |
-| Active as of 2025-11-25 | *Computable Name*:FrLocationAgregateurSOS |
+| Active as of 2025-12-11 | *Computable Name*:FrLocationAgregateurSOS |
 
  
 Profil de Location, dérivé de FrLocation, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins 
 
-**Usages:**
+**Utilisations:**
 
-* Use this Profile: [BundleAgregateurSOS](StructureDefinition-sas-sos-bundle-aggregator.md)
-* Examples for this Profile: [Centre de consultation Rennes Nord](Location-1111111111.md), [Centre de consultation Rennes Cleunay](Location-2222222222.md) and [Centre de consultation Lorient](Location-3333333333.md)
-* CapabilityStatements using this Profile: [Profil SAS consommateur de créneaux SOS](CapabilityStatement-SAS-Consommateur-SOS.md) and [Profil SAS gestionnaire d'agenda SOS](CapabilityStatement-SAS-GestionnaireAgenda-SOS.md)
+* Utiliser ce Profil: [BundleAgregateurSOS](StructureDefinition-sas-sos-bundle-aggregator.md)
+* Exemples pour ce Profil: [Centre de consultation Rennes Nord](Location-1111111111.md), [Centre de consultation Rennes Cleunay](Location-2222222222.md) and [Centre de consultation Lorient](Location-3333333333.md)
+* CapabilityStatements utilisant ce Profil: [Profil SAS consommateur de créneaux SOS](CapabilityStatement-SAS-Consommateur-SOS.md) and [Profil SAS gestionnaire d'agenda SOS](CapabilityStatement-SAS-GestionnaireAgenda-SOS.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.sas|current/StructureDefinition/sas-sos-location-aggregator)
 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-sas-sos-location-agg
   "version" : "1.2.0",
   "name" : "FrLocationAgregateurSOS",
   "status" : "active",
-  "date" : "2025-11-25T08:03:17+00:00",
+  "date" : "2025-12-11T11:06:01+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-categorieetablissement | *Version*:1.2.0 |
-| Active as of 2025-11-25 | *Computable Name*:CategorieEtablissementSAS |
+| Active as of 2025-12-11 | *Computable Name*:CategorieEtablissementSAS |
 
  
 Catégorie d'établissement utilisée dans contexte SAS - CPTS dans un premier temps 
@@ -18,9 +18,7 @@ Catégorie d'établissement utilisée dans contexte SAS - CPTS dans un premier t
 
 * [FrSlotAgregateurCPTS](StructureDefinition-sas-cpts-slot-aggregator.md)
 
-### Logical Definition (CLD)
-
-* Include ce(s) code(s) tel quil(s) est (sont) défini(s) dans [`https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement`](https://interop.esante.gouv.fr/ig/nos/1.3.0/CodeSystem-TRE-R66-CategorieEtablissement.html)version 📦1.3.0
+### Définition logique (CLD)
 
  
 
@@ -53,7 +51,7 @@ Catégorie d'établissement utilisée dans contexte SAS - CPTS dans un premier t
   "title" : "Catégorie établissement SAS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2025-11-25T08:03:17+00:00",
+  "date" : "2025-12-11T11:06:01+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

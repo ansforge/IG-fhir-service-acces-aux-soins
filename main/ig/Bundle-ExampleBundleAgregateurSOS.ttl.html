@@ -5,7 +5,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>ExampleBundleAgregateurSOS - TTL Representation - Service d'Accès aux Soins v1.2.0</title>
+    <title>ExampleBundleAgregateurSOS - TTL Representation - Service d&#39;Accès aux Soins v1.2.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -20,6 +20,7 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/style-ans.css"/>
     <link rel="stylesheet" href="assets/css/style-add-ans.css"/>
     <!-- Placeholder for child template CSS declarations -->
@@ -48,6 +49,7 @@
     h3,h4,h5,h6{--heading-prefix:"15.44"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <!-- Placeholder for child template header declarations -->
 <div id="family-nav">
     <a id="hl7-search-lnk" data-no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
@@ -220,9 +222,8 @@
       <div class="container">  <!-- container -->
         <div class="row">
           <div class="inner-wrapper">
-
 <div style="counter-reset: section 9" class="col-12">
-<!--ReleaseHeader--><p id="publish-box">Service d'Accès aux Soins - Local Development build (v1.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://interop.esante.gouv.fr/ig/fhir/sas/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+<!--ReleaseHeader--><p id="publish-box">Service d'Accès aux Soins - version de développement local (v1.2.0) construite par les outils de publication FHIR (HL7® FHIR® Standard). Voir le <a href='https://interop.esante.gouv.fr/ig/fhir/sas/history.html'>répertoire des versions publiées</a></p><!--EndReleaseHeader-->
 
 
 
@@ -289,8 +290,8 @@
 
  a fhir:Bundle ;
   <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot ;
-  <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:v</a> &quot;ExampleBundleAgregateurSOS&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.meta">fhir:meta</a> [
+  <a href="http://hl7.org/fhir/R4/resource.html#Bundle.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:v</a> &quot;ExampleBundleAgregateurSOS&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/resource.html#Bundle.meta">fhir:meta</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-bundle-aggregator&quot;^^xsd:anyURI ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-bundle-aggregator&gt;     ] )
@@ -390,8 +391,8 @@
   ] ) . # 
 
 &lt;https://exemple.com/ans-sas/Slot/ExampleSlotSOS1&gt; <a href="http://hl7.org/fhir/R4/slot.html">a</a> fhir:Slot ;
-  <a href="http://hl7.org/fhir/R4/slot.html#Slot.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;ExampleSlotSOS1&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/slot.html#Slot.meta">fhir:meta</a> [
+  <a href="http://hl7.org/fhir/R4/resource.html#Slot.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;ExampleSlotSOS1&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/resource.html#Slot.meta">fhir:meta</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator&quot;^^xsd:anyURI ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator&gt;     ] ) ;
@@ -405,7 +406,7 @@
 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau&gt;       ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;SNP&quot; ]     ] )
   ] ; # 
-  <a href="http://hl7.org/fhir/R4/slot.html#Slot.text">fhir:text</a> [
+  <a href="http://hl7.org/fhir/R4/domainresource.html#Slot.text">fhir:text</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">fhir:div</a> [ <a href="http://hl7.org/fhir/R4/narrative.html#xhtml">fhir:v</a> &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Slot_ExampleSlotSOS1\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : Slot ExampleSlotSOS1&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExampleSlotSOS1\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExampleSlotSOS1\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-sas-sos-slot-aggregator.html\&quot;&gt;FrSlotAgregateurSOS&lt;/a&gt;&lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Label de sécurités: Créneau accessible par le grand public (Détails : code TRE_R314-TypeCreneau PUBLIC = 'Créneau accessible par le grand public'), Créneau accessible par les Régulateurs et Organisateurs de Soins Non Programmés (Détails : code TRE_R314-TypeCreneau SNP = 'Créneau accessible par les Régulateurs et Organisateurs de Soins Non Programmés')&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;serviceType&lt;/b&gt;: &lt;span title=\&quot;Codes :{http://terminology.hl7.org/CodeSystem/v3-ActCode AMB}\&quot;&gt;ambulatory&lt;/span&gt;, &lt;span title=\&quot;Codes :{http://terminology.hl7.org/CodeSystem/v3-ActCode VR}\&quot;&gt;virtual&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;appointmentType&lt;/b&gt;: &lt;span title=\&quot;Codes :{http://terminology.hl7.org/CodeSystem/v2-0276 ROUTINE}\&quot;&gt;Routine appointment - default if not valued&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;schedule&lt;/b&gt;: &lt;a href=\&quot;Schedule-ExampleScheduleSOS1.html\&quot;&gt;Schedule&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Free&lt;/p&gt;&lt;p&gt;&lt;b&gt;start&lt;/b&gt;: 2023-08-18 09:00:00+0200&lt;/p&gt;&lt;p&gt;&lt;b&gt;end&lt;/b&gt;: 2023-08-18 09:30:00+0200&lt;/p&gt;&lt;p&gt;&lt;b&gt;comment&lt;/b&gt;: http://www.editeur.com/agenda-pfg/creneau1&lt;/p&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral ]
   ] ; # 
@@ -439,13 +440,13 @@
   <a href="http://hl7.org/fhir/R4/slot.html#Slot.comment">fhir:comment</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://www.editeur.com/agenda-pfg/creneau1&quot;] . # 
 
 &lt;https://exemple.com/ans-sas/Schedule/ExampleScheduleSOS1&gt; <a href="http://hl7.org/fhir/R4/schedule.html">a</a> fhir:Schedule ;
-  <a href="http://hl7.org/fhir/R4/schedule.html#Schedule.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;ExampleScheduleSOS1&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/schedule.html#Schedule.meta">fhir:meta</a> [
+  <a href="http://hl7.org/fhir/R4/resource.html#Schedule.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;ExampleScheduleSOS1&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/resource.html#Schedule.meta">fhir:meta</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator&quot;^^xsd:anyURI ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator&gt;     ] )
   ] ; # 
-  <a href="http://hl7.org/fhir/R4/schedule.html#Schedule.text">fhir:text</a> [
+  <a href="http://hl7.org/fhir/R4/domainresource.html#Schedule.text">fhir:text</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">fhir:div</a> [ <a href="http://hl7.org/fhir/R4/narrative.html#xhtml">fhir:v</a> &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Schedule_ExampleScheduleSOS1\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : Schedule ExampleScheduleSOS1&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExampleScheduleSOS1\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExampleScheduleSOS1\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-sas-sos-schedule-aggregator.html\&quot;&gt;FrScheduleAgregateurSOS&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;actor&lt;/b&gt;: &lt;a href=\&quot;Location-1111111111.html\&quot;&gt;Location Centre de consultation Rennes Nord&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral ]
   ] ; # 
@@ -455,13 +456,13 @@
   ] ) . # 
 
 &lt;https://exemple.com/ans-sas/Location/1111111111&gt; <a href="http://hl7.org/fhir/R4/location.html">a</a> fhir:Location ;
-  <a href="http://hl7.org/fhir/R4/location.html#Location.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1111111111&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/location.html#Location.meta">fhir:meta</a> [
+  <a href="http://hl7.org/fhir/R4/resource.html#Location.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1111111111&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/resource.html#Location.meta">fhir:meta</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator&quot;^^xsd:anyURI ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator&gt;     ] )
   ] ; # 
-  <a href="http://hl7.org/fhir/R4/location.html#Location.text">fhir:text</a> [
+  <a href="http://hl7.org/fhir/R4/domainresource.html#Location.text">fhir:text</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">fhir:div</a> [ <a href="http://hl7.org/fhir/R4/narrative.html#xhtml">fhir:v</a> &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Location_1111111111\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : Localisation 1111111111&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;1111111111\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc1111111111\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-sas-sos-location-aggregator.html\&quot;&gt;FrLocationAgregateurSOS&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: Identifiant interne/1111111111&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Centre de consultation Rennes Nord&lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: &lt;a href=\&quot;tel:+33193246789\&quot;&gt;+33193246789&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;address&lt;/b&gt;: 320 avenue Général Georges Patton RENNES 35700 &lt;/p&gt;&lt;p&gt;&lt;b&gt;managingOrganization&lt;/b&gt;: &lt;a href=\&quot;Organization-ExampleOrgaSOS1.html\&quot;&gt;Organization SOS Médecins de Rennes&lt;/a&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;hoursOfOperation&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;daysOfWeek&lt;/b&gt;: Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday&lt;/p&gt;&lt;p&gt;&lt;b&gt;openingTime&lt;/b&gt;: 08:00:00&lt;/p&gt;&lt;p&gt;&lt;b&gt;closingTime&lt;/b&gt;: 19:00:00&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral ]
   ] ; # 
@@ -498,13 +499,13 @@
   ] ) . # 
 
 &lt;https://exemple.com/ans-sas/Organization/ExampleOrgaSOS1&gt; <a href="http://hl7.org/fhir/R4/organization.html">a</a> fhir:Organization ;
-  <a href="http://hl7.org/fhir/R4/organization.html#Organization.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;ExampleOrgaSOS1&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/organization.html#Organization.meta">fhir:meta</a> [
+  <a href="http://hl7.org/fhir/R4/resource.html#Organization.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;ExampleOrgaSOS1&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/resource.html#Organization.meta">fhir:meta</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator&quot;^^xsd:anyURI ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator&gt;     ] )
   ] ; # 
-  <a href="http://hl7.org/fhir/R4/organization.html#Organization.text">fhir:text</a> [
+  <a href="http://hl7.org/fhir/R4/domainresource.html#Organization.text">fhir:text</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">fhir:div</a> [ <a href="http://hl7.org/fhir/R4/narrative.html#xhtml">fhir:v</a> &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Organization_ExampleOrgaSOS1\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : Organisation ExampleOrgaSOS1&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExampleOrgaSOS1\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExampleOrgaSOS1\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-sas-sos-organization-aggregator.html\&quot;&gt;FrOrganizationAgregateurSOS&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: Identification nationale de structure définie par l’ASIP-SANTE dans le CI_SIS/334173748400020&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: SOS Médecins de Rennes&lt;/p&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral ]
   ] ; # 
@@ -523,8 +524,8 @@
   <a href="http://hl7.org/fhir/R4/organization.html#Organization.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;SOS Médecins de Rennes&quot;] . # 
 
 &lt;https://exemple.com/ans-sas/Slot/ExampleSlotSOS2&gt; <a href="http://hl7.org/fhir/R4/slot.html">a</a> fhir:Slot ;
-  <a href="http://hl7.org/fhir/R4/slot.html#Slot.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;ExampleSlotSOS2&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/slot.html#Slot.meta">fhir:meta</a> [
+  <a href="http://hl7.org/fhir/R4/resource.html#Slot.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;ExampleSlotSOS2&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/resource.html#Slot.meta">fhir:meta</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator&quot;^^xsd:anyURI ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator&gt;     ] ) ;
@@ -534,7 +535,7 @@
 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau&gt;       ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;PUBLIC&quot; ]     ] )
   ] ; # 
-  <a href="http://hl7.org/fhir/R4/slot.html#Slot.text">fhir:text</a> [
+  <a href="http://hl7.org/fhir/R4/domainresource.html#Slot.text">fhir:text</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">fhir:div</a> [ <a href="http://hl7.org/fhir/R4/narrative.html#xhtml">fhir:v</a> &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Slot_ExampleSlotSOS2\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : Slot ExampleSlotSOS2&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExampleSlotSOS2\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExampleSlotSOS2\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-sas-sos-slot-aggregator.html\&quot;&gt;FrSlotAgregateurSOS&lt;/a&gt;&lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Label de sécurité: Créneau accessible par le grand public (Détails : code TRE_R314-TypeCreneau PUBLIC = 'Créneau accessible par le grand public')&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;serviceType&lt;/b&gt;: &lt;span title=\&quot;Codes :{http://terminology.hl7.org/CodeSystem/v3-ActCode AMB}\&quot;&gt;ambulatory&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;appointmentType&lt;/b&gt;: &lt;span title=\&quot;Codes :{http://terminology.hl7.org/CodeSystem/v2-0276 ROUTINE}\&quot;&gt;Routine appointment - default if not valued&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;schedule&lt;/b&gt;: &lt;a href=\&quot;Schedule-ExampleScheduleSOS2.html\&quot;&gt;Schedule&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Free&lt;/p&gt;&lt;p&gt;&lt;b&gt;start&lt;/b&gt;: 2023-08-19 11:00:00+0200&lt;/p&gt;&lt;p&gt;&lt;b&gt;end&lt;/b&gt;: 2023-08-19 11:30:00+0200&lt;/p&gt;&lt;p&gt;&lt;b&gt;comment&lt;/b&gt;: http://www.editeur.com/agenda-pfg/creneau2&lt;/p&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral ]
   ] ; # 
@@ -562,13 +563,13 @@
   <a href="http://hl7.org/fhir/R4/slot.html#Slot.comment">fhir:comment</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://www.editeur.com/agenda-pfg/creneau2&quot;] . # 
 
 &lt;https://exemple.com/ans-sas/Schedule/ExampleScheduleSOS2&gt; <a href="http://hl7.org/fhir/R4/schedule.html">a</a> fhir:Schedule ;
-  <a href="http://hl7.org/fhir/R4/schedule.html#Schedule.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;ExampleScheduleSOS2&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/schedule.html#Schedule.meta">fhir:meta</a> [
+  <a href="http://hl7.org/fhir/R4/resource.html#Schedule.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;ExampleScheduleSOS2&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/resource.html#Schedule.meta">fhir:meta</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator&quot;^^xsd:anyURI ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator&gt;     ] )
   ] ; # 
-  <a href="http://hl7.org/fhir/R4/schedule.html#Schedule.text">fhir:text</a> [
+  <a href="http://hl7.org/fhir/R4/domainresource.html#Schedule.text">fhir:text</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">fhir:div</a> [ <a href="http://hl7.org/fhir/R4/narrative.html#xhtml">fhir:v</a> &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Schedule_ExampleScheduleSOS2\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : Schedule ExampleScheduleSOS2&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExampleScheduleSOS2\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExampleScheduleSOS2\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-sas-sos-schedule-aggregator.html\&quot;&gt;FrScheduleAgregateurSOS&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;actor&lt;/b&gt;: &lt;a href=\&quot;Location-2222222222.html\&quot;&gt;Location Centre de consultation Rennes Cleunay&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral ]
   ] ; # 
@@ -578,13 +579,13 @@
   ] ) . # 
 
 &lt;https://exemple.com/ans-sas/Location/2222222222&gt; <a href="http://hl7.org/fhir/R4/location.html">a</a> fhir:Location ;
-  <a href="http://hl7.org/fhir/R4/location.html#Location.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;2222222222&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/location.html#Location.meta">fhir:meta</a> [
+  <a href="http://hl7.org/fhir/R4/resource.html#Location.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;2222222222&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/resource.html#Location.meta">fhir:meta</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator&quot;^^xsd:anyURI ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator&gt;     ] )
   ] ; # 
-  <a href="http://hl7.org/fhir/R4/location.html#Location.text">fhir:text</a> [
+  <a href="http://hl7.org/fhir/R4/domainresource.html#Location.text">fhir:text</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">fhir:div</a> [ <a href="http://hl7.org/fhir/R4/narrative.html#xhtml">fhir:v</a> &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Location_2222222222\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : Localisation 2222222222&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;2222222222\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc2222222222\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-sas-sos-location-aggregator.html\&quot;&gt;FrLocationAgregateurSOS&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: Identifiant interne/2222222222&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Centre de consultation Rennes Cleunay&lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: &lt;a href=\&quot;tel:+33145249912\&quot;&gt;+33145249912&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;address&lt;/b&gt;: 106 rue Eugène Pottier RENNES 35000 &lt;/p&gt;&lt;p&gt;&lt;b&gt;managingOrganization&lt;/b&gt;: &lt;a href=\&quot;Organization-ExampleOrgaSOS1.html\&quot;&gt;Organization SOS Médecins de Rennes&lt;/a&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;hoursOfOperation&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;daysOfWeek&lt;/b&gt;: Monday, Tuesday, Wednesday, Thursday&lt;/p&gt;&lt;p&gt;&lt;b&gt;openingTime&lt;/b&gt;: 09:00:00&lt;/p&gt;&lt;p&gt;&lt;b&gt;closingTime&lt;/b&gt;: 21:00:00&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral ]
   ] ; # 
@@ -621,8 +622,8 @@
   ] ) . # 
 
 &lt;https://exemple.com/ans-sas/Slot/ExampleSlotSOS3&gt; <a href="http://hl7.org/fhir/R4/slot.html">a</a> fhir:Slot ;
-  <a href="http://hl7.org/fhir/R4/slot.html#Slot.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;ExampleSlotSOS3&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/slot.html#Slot.meta">fhir:meta</a> [
+  <a href="http://hl7.org/fhir/R4/resource.html#Slot.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;ExampleSlotSOS3&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/resource.html#Slot.meta">fhir:meta</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator&quot;^^xsd:anyURI ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator&gt;     ] ) ;
@@ -632,7 +633,7 @@
 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau&gt;       ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;PUBLIC&quot; ]     ] )
   ] ; # 
-  <a href="http://hl7.org/fhir/R4/slot.html#Slot.text">fhir:text</a> [
+  <a href="http://hl7.org/fhir/R4/domainresource.html#Slot.text">fhir:text</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">fhir:div</a> [ <a href="http://hl7.org/fhir/R4/narrative.html#xhtml">fhir:v</a> &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Slot_ExampleSlotSOS3\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : Slot ExampleSlotSOS3&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExampleSlotSOS3\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExampleSlotSOS3\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-sas-sos-slot-aggregator.html\&quot;&gt;FrSlotAgregateurSOS&lt;/a&gt;&lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Label de sécurité: Créneau accessible par le grand public (Détails : code TRE_R314-TypeCreneau PUBLIC = 'Créneau accessible par le grand public')&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;serviceType&lt;/b&gt;: &lt;span title=\&quot;Codes :{http://terminology.hl7.org/CodeSystem/v3-ActCode VR}\&quot;&gt;virtual&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;appointmentType&lt;/b&gt;: &lt;span title=\&quot;Codes :{http://terminology.hl7.org/CodeSystem/v2-0276 ROUTINE}\&quot;&gt;Routine appointment - default if not valued&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;schedule&lt;/b&gt;: &lt;a href=\&quot;Schedule-ExampleScheduleSOS3.html\&quot;&gt;Schedule&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Free&lt;/p&gt;&lt;p&gt;&lt;b&gt;start&lt;/b&gt;: 2023-08-18 14:20:00+0200&lt;/p&gt;&lt;p&gt;&lt;b&gt;end&lt;/b&gt;: 2023-08-18 14:40:00+0200&lt;/p&gt;&lt;p&gt;&lt;b&gt;comment&lt;/b&gt;: http://www.editeur.com/agenda-pfg/creneau3&lt;/p&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral ]
   ] ; # 
@@ -660,13 +661,13 @@
   <a href="http://hl7.org/fhir/R4/slot.html#Slot.comment">fhir:comment</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://www.editeur.com/agenda-pfg/creneau3&quot;] . # 
 
 &lt;https://exemple.com/ans-sas/Schedule/ExampleScheduleSOS3&gt; <a href="http://hl7.org/fhir/R4/schedule.html">a</a> fhir:Schedule ;
-  <a href="http://hl7.org/fhir/R4/schedule.html#Schedule.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;ExampleScheduleSOS3&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/schedule.html#Schedule.meta">fhir:meta</a> [
+  <a href="http://hl7.org/fhir/R4/resource.html#Schedule.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;ExampleScheduleSOS3&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/resource.html#Schedule.meta">fhir:meta</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator&quot;^^xsd:anyURI ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator&gt;     ] )
   ] ; # 
-  <a href="http://hl7.org/fhir/R4/schedule.html#Schedule.text">fhir:text</a> [
+  <a href="http://hl7.org/fhir/R4/domainresource.html#Schedule.text">fhir:text</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">fhir:div</a> [ <a href="http://hl7.org/fhir/R4/narrative.html#xhtml">fhir:v</a> &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Schedule_ExampleScheduleSOS3\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : Schedule ExampleScheduleSOS3&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExampleScheduleSOS3\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExampleScheduleSOS3\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-sas-sos-schedule-aggregator.html\&quot;&gt;FrScheduleAgregateurSOS&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;actor&lt;/b&gt;: &lt;a href=\&quot;Location-3333333333.html\&quot;&gt;Location Centre de consultation Lorient&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral ]
   ] ; # 
@@ -676,13 +677,13 @@
   ] ) . # 
 
 &lt;https://exemple.com/ans-sas/Location/3333333333&gt; <a href="http://hl7.org/fhir/R4/location.html">a</a> fhir:Location ;
-  <a href="http://hl7.org/fhir/R4/location.html#Location.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;3333333333&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/location.html#Location.meta">fhir:meta</a> [
+  <a href="http://hl7.org/fhir/R4/resource.html#Location.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;3333333333&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/resource.html#Location.meta">fhir:meta</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator&quot;^^xsd:anyURI ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator&gt;     ] )
   ] ; # 
-  <a href="http://hl7.org/fhir/R4/location.html#Location.text">fhir:text</a> [
+  <a href="http://hl7.org/fhir/R4/domainresource.html#Location.text">fhir:text</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">fhir:div</a> [ <a href="http://hl7.org/fhir/R4/narrative.html#xhtml">fhir:v</a> &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Location_3333333333\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : Localisation 3333333333&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;3333333333\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc3333333333\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-sas-sos-location-aggregator.html\&quot;&gt;FrLocationAgregateurSOS&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: Identifiant interne/3333333333&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Centre de consultation Lorient&lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: &lt;a href=\&quot;tel:+33139555992\&quot;&gt;+33139555992&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;address&lt;/b&gt;: 12 impasse Royer Dubail LORIENT 56100 &lt;/p&gt;&lt;p&gt;&lt;b&gt;managingOrganization&lt;/b&gt;: &lt;a href=\&quot;Organization-ExampleOrgaSOS2.html\&quot;&gt;Organization SOS Médecins Lorient et agglomération&lt;/a&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;hoursOfOperation&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;daysOfWeek&lt;/b&gt;: Tuesday, Thursday, Saturday&lt;/p&gt;&lt;p&gt;&lt;b&gt;openingTime&lt;/b&gt;: 11:00:00&lt;/p&gt;&lt;p&gt;&lt;b&gt;closingTime&lt;/b&gt;: 18:00:00&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral ]
   ] ; # 
@@ -719,13 +720,13 @@
   ] ) . # 
 
 &lt;https://exemple.com/ans-sas/Organization/ExampleOrgaSOS2&gt; <a href="http://hl7.org/fhir/R4/organization.html">a</a> fhir:Organization ;
-  <a href="http://hl7.org/fhir/R4/organization.html#Organization.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;ExampleOrgaSOS2&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/organization.html#Organization.meta">fhir:meta</a> [
+  <a href="http://hl7.org/fhir/R4/resource.html#Organization.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;ExampleOrgaSOS2&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/resource.html#Organization.meta">fhir:meta</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator&quot;^^xsd:anyURI ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator&gt;     ] )
   ] ; # 
-  <a href="http://hl7.org/fhir/R4/organization.html#Organization.text">fhir:text</a> [
+  <a href="http://hl7.org/fhir/R4/domainresource.html#Organization.text">fhir:text</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">fhir:div</a> [ <a href="http://hl7.org/fhir/R4/narrative.html#xhtml">fhir:v</a> &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Organization_ExampleOrgaSOS2\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : Organisation ExampleOrgaSOS2&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExampleOrgaSOS2\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExampleOrgaSOS2\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-sas-sos-organization-aggregator.html\&quot;&gt;FrOrganizationAgregateurSOS&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: Identification nationale de structure définie par l’ASIP-SANTE dans le CI_SIS/392080466300010&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: SOS Médecins Lorient et agglomération&lt;/p&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral ]
   ] ; # 
@@ -744,8 +745,8 @@
   <a href="http://hl7.org/fhir/R4/organization.html#Organization.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;SOS Médecins Lorient et agglomération&quot;] . # 
 
 &lt;https://exemple.com/ans-sas/Slot/ExampleSlotSOS4&gt; <a href="http://hl7.org/fhir/R4/slot.html">a</a> fhir:Slot ;
-  <a href="http://hl7.org/fhir/R4/slot.html#Slot.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;ExampleSlotSOS4&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/slot.html#Slot.meta">fhir:meta</a> [
+  <a href="http://hl7.org/fhir/R4/resource.html#Slot.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;ExampleSlotSOS4&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/resource.html#Slot.meta">fhir:meta</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator&quot;^^xsd:anyURI ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator&gt;     ] ) ;
@@ -755,7 +756,7 @@
 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau&gt;       ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;PUBLIC&quot; ]     ] )
   ] ; # 
-  <a href="http://hl7.org/fhir/R4/slot.html#Slot.text">fhir:text</a> [
+  <a href="http://hl7.org/fhir/R4/domainresource.html#Slot.text">fhir:text</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">fhir:div</a> [ <a href="http://hl7.org/fhir/R4/narrative.html#xhtml">fhir:v</a> &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Slot_ExampleSlotSOS4\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : Slot ExampleSlotSOS4&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExampleSlotSOS4\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExampleSlotSOS4\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-sas-sos-slot-aggregator.html\&quot;&gt;FrSlotAgregateurSOS&lt;/a&gt;&lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Label de sécurité: Créneau accessible par le grand public (Détails : code TRE_R314-TypeCreneau PUBLIC = 'Créneau accessible par le grand public')&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;serviceType&lt;/b&gt;: &lt;span title=\&quot;Codes :{http://terminology.hl7.org/CodeSystem/v3-ActCode AMB}\&quot;&gt;ambulatory&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;appointmentType&lt;/b&gt;: &lt;span title=\&quot;Codes :{http://terminology.hl7.org/CodeSystem/v2-0276 ROUTINE}\&quot;&gt;Routine appointment - default if not valued&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;schedule&lt;/b&gt;: &lt;a href=\&quot;Schedule-ExampleScheduleSOS3.html\&quot;&gt;Schedule&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Free&lt;/p&gt;&lt;p&gt;&lt;b&gt;start&lt;/b&gt;: 2023-08-18 14:40:00+0200&lt;/p&gt;&lt;p&gt;&lt;b&gt;end&lt;/b&gt;: 2023-08-18 15:00:00+0200&lt;/p&gt;&lt;p&gt;&lt;b&gt;comment&lt;/b&gt;: http://www.editeur.com/agenda-pfg/creneau4&lt;/p&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral ]
   ] ; # 
@@ -829,7 +830,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Nov 25, 2025 08:03+0000">2025-11-25</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Dec 11, 2025 11:06+0000">2025-12-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

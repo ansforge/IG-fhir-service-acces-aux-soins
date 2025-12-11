@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-typeconsultation | *Version*:1.2.0 |
-| Active as of 2025-11-25 | *Computable Name*:TypeConsultationSAS |
+| Active as of 2025-12-11 | *Computable Name*:TypeConsultationSAS |
 
  
 Type de consultations SAS 
@@ -18,9 +18,7 @@ Type de consultations SAS
 
 * [FrSlotAgregateurSOS](StructureDefinition-sas-sos-slot-aggregator.md)
 
-### Logical Definition (CLD)
-
-* Include ce(s) code(s) tel quil(s) est (sont) défini(s) dans [`http://terminology.hl7.org/CodeSystem/v3-ActCode`](http://terminology.hl7.org/7.0.0/CodeSystem-v3-ActCode.html)version 📦9.0.0
+### Définition logique (CLD)
 
  
 
@@ -53,7 +51,7 @@ Type de consultations SAS
   "title" : "Type consultation SAS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2025-11-25T08:03:17+00:00",
+  "date" : "2025-12-11T11:06:01+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

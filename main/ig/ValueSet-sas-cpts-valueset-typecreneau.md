@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-cpts-valueset-typecreneau | *Version*:1.2.0 |
-| Active as of 2025-11-25 | *Computable Name*:TypeCreneauSASCPTS |
+| Active as of 2025-12-11 | *Computable Name*:TypeCreneauSASCPTS |
 
  
 Type de Créneaux SAS CPTS 
@@ -18,9 +18,7 @@ Type de Créneaux SAS CPTS
 
 * [FrSlotAgregateurCPTS](StructureDefinition-sas-cpts-slot-aggregator.md)
 
-### Logical Definition (CLD)
-
-* Include ce(s) code(s) tel quil(s) est (sont) défini(s) dans [`https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau`](https://interop.esante.gouv.fr/ig/nos/1.3.0/CodeSystem-TRE-R314-TypeCreneau.html)version 📦1.3.0
+### Définition logique (CLD)
 
  
 
@@ -53,7 +51,7 @@ Type de Créneaux SAS CPTS
   "title" : "Type créneaux SAS CPTS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2025-11-25T08:03:17+00:00",
+  "date" : "2025-12-11T11:06:01+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

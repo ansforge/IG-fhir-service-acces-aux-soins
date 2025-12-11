@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType | *Version*:1.2.0 |
-| Active as of 2025-11-25 | *Computable Name*:SASServiceTypeR5 |
+| Active as of 2025-12-11 | *Computable Name*:SASServiceTypeR5 |
 
 Extension créée afin de permettre la reference à la ressource HealthcareService. Cette extension implemente l'élément serviceType de R5 https://hl7.org/fhir/slot-definitions.html#Slot.serviceType
 
@@ -17,10 +17,10 @@ Extension créée afin de permettre la reference à la ressource HealthcareServi
 
 **Usage info**
 
-**Usages:**
+**Utilisations:**
 
-* Use this Extension: [FrSlotAgregateurCPTS](StructureDefinition-sas-cpts-slot-aggregator.md)
-* Examples for this Extension: [Bundle/ExampleBundleCPTS1](Bundle-ExampleBundleCPTS1.md), [Bundle/ExampleBundleCPTS2](Bundle-ExampleBundleCPTS2.md), [Slot/ExampleSlotCPTS1](Slot-ExampleSlotCPTS1.md) and [Slot/ExampleSlotCPTS2](Slot-ExampleSlotCPTS2.md)
+* Utiliser ce Extension: [FrSlotAgregateurCPTS](StructureDefinition-sas-cpts-slot-aggregator.md)
+* Exemples pour ce Extension: [Bundle/ExampleBundleCPTS1](Bundle-ExampleBundleCPTS1.md), [Bundle/ExampleBundleCPTS2](Bundle-ExampleBundleCPTS2.md), [Slot/ExampleSlotCPTS1](Slot-ExampleSlotCPTS1.md) and [Slot/ExampleSlotCPTS2](Slot-ExampleSlotCPTS2.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.sas|current/StructureDefinition/sas-cpts-slot-servicetype-aggregator)
 
@@ -32,7 +32,7 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 Other representations of profile: [CSV](StructureDefinition-sas-cpts-slot-servicetype-aggregator.csv), [Excel](StructureDefinition-sas-cpts-slot-servicetype-aggregator.xlsx), [Schematron](StructureDefinition-sas-cpts-slot-servicetype-aggregator.sch) 
 
-#### Constraints
+#### Contraintes
 
 
 
@@ -46,7 +46,7 @@ Other representations of profile: [CSV](StructureDefinition-sas-cpts-slot-servic
   "version" : "1.2.0",
   "name" : "SASServiceTypeR5",
   "status" : "active",
-  "date" : "2025-11-25T08:03:17+00:00",
+  "date" : "2025-12-11T11:06:01+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

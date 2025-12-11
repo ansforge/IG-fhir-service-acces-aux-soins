@@ -9,16 +9,16 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-organization-aggregator | *Version*:1.2.0 |
-| Active as of 2025-11-25 | *Computable Name*:FrOrganizationAgregateurCPTS |
+| Active as of 2025-12-11 | *Computable Name*:FrOrganizationAgregateurCPTS |
 
  
 Profil dérivé de FrOrganization pour le cas d'usage agrégateur de la plateforme SAS - cas d'usage CPTS 
 
-**Usages:**
+**Utilisations:**
 
-* Use this Profile: [BundleAgregateurCPTS](StructureDefinition-sas-cpts-bundle-aggregator.md)
-* Refer to this Profile: [FrHealthcareServiceAgregateurCPTS](StructureDefinition-sas-cpts-healthcareservice-aggregator.md)
-* Examples for this Profile: [CPTS AXE MAJEUR](Organization-ExampleOrgaCPTS1.md) and [CPTS VAL D OISE CENTRE](Organization-ExampleOrgaCPTS2.md)
+* Utiliser ce Profil: [BundleAgregateurCPTS](StructureDefinition-sas-cpts-bundle-aggregator.md)
+* Référer à ce Profil: [FrHealthcareServiceAgregateurCPTS](StructureDefinition-sas-cpts-healthcareservice-aggregator.md)
+* Exemples pour ce Profil: [CPTS AXE MAJEUR](Organization-ExampleOrgaCPTS1.md) and [CPTS VAL D OISE CENTRE](Organization-ExampleOrgaCPTS2.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.sas|current/StructureDefinition/sas-cpts-organization-aggregator)
 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-sas-cpts-organizatio
   "version" : "1.2.0",
   "name" : "FrOrganizationAgregateurCPTS",
   "status" : "active",
-  "date" : "2025-11-25T08:03:17+00:00",
+  "date" : "2025-12-11T11:06:01+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

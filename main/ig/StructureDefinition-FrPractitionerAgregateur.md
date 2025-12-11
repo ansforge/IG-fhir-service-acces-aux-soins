@@ -9,17 +9,17 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur | *Version*:1.2.0 |
-| Active as of 2025-11-25 | *Computable Name*:FrPractitionerAgregateur |
+| Active as of 2025-12-11 | *Computable Name*:FrPractitionerAgregateur |
 
  
 Profil de Practitioner, dérivé de FrPractitioner, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS 
 
-**Usages:**
+**Utilisations:**
 
-* Use this Profile: [BundleAgregateur](StructureDefinition-BundleAgregateur.md) and [BundleAgregateurCPTS](StructureDefinition-sas-cpts-bundle-aggregator.md)
-* Refer to this Profile: [FrPractitionerRoleExerciceAgregateur](StructureDefinition-FrPractitionerRoleExerciceAgregateur.md)
-* Examples for this Profile: [Practitioner/ExamplePractitioner](Practitioner-ExamplePractitioner.md), [Practitioner/ExamplePractitioner2](Practitioner-ExamplePractitioner2.md) and [Practitioner/ExamplePractitioner3](Practitioner-ExamplePractitioner3.md)
-* CapabilityStatements using this Profile: [Profil SAS consommateur de créneaux CPTS](CapabilityStatement-SAS-Consommateur-CPTS.md), [Profil SAS consommateur de créneaux](CapabilityStatement-SAS-Consommateur-psindiv.md), [Profil SAS gestionnaire d'agenda CPTS](CapabilityStatement-SAS-GestionnaireAgenda-CPTS.md) and [Profil SAS gestionnaire d'agenda PS Indiv](CapabilityStatement-SAS-GestionnaireAgenda-PsIndiv.md)
+* Utiliser ce Profil: [BundleAgregateur](StructureDefinition-BundleAgregateur.md) and [BundleAgregateurCPTS](StructureDefinition-sas-cpts-bundle-aggregator.md)
+* Référer à ce Profil: [FrPractitionerRoleExerciceAgregateur](StructureDefinition-FrPractitionerRoleExerciceAgregateur.md)
+* Exemples pour ce Profil: [Practitioner/ExamplePractitioner](Practitioner-ExamplePractitioner.md), [Practitioner/ExamplePractitioner2](Practitioner-ExamplePractitioner2.md) and [Practitioner/ExamplePractitioner3](Practitioner-ExamplePractitioner3.md)
+* CapabilityStatements utilisant ce Profil: [Profil SAS consommateur de créneaux CPTS](CapabilityStatement-SAS-Consommateur-CPTS.md), [Profil SAS consommateur de créneaux](CapabilityStatement-SAS-Consommateur-psindiv.md), [Profil SAS gestionnaire d'agenda CPTS](CapabilityStatement-SAS-GestionnaireAgenda-CPTS.md) and [Profil SAS gestionnaire d'agenda PS Indiv](CapabilityStatement-SAS-GestionnaireAgenda-PsIndiv.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.sas|current/StructureDefinition/FrPractitionerAgregateur)
 
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-FrPractitionerAgrega
   "version" : "1.2.0",
   "name" : "FrPractitionerAgregateur",
   "status" : "active",
-  "date" : "2025-11-25T08:03:17+00:00",
+  "date" : "2025-12-11T11:06:01+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

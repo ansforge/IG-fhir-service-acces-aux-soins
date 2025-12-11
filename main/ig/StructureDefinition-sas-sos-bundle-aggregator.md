@@ -9,14 +9,14 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-bundle-aggregator | *Version*:1.2.0 |
-| Active as of 2025-11-25 | *Computable Name*:BundleAgregateurSOS |
+| Active as of 2025-12-11 | *Computable Name*:BundleAgregateurSOS |
 
  
 Profil de Bundle qui représente le flux de réponse contenant les créneaux disponibles dans le cadre du service d'agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins 
 
-**Usages:**
+**Utilisations:**
 
-* Examples for this Profile: [Bundle/ExampleBundleAgregateurSOS](Bundle-ExampleBundleAgregateurSOS.md)
+* Exemples pour ce Profil: [Bundle/ExampleBundleAgregateurSOS](Bundle-ExampleBundleAgregateurSOS.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.sas|current/StructureDefinition/sas-sos-bundle-aggregator)
 
@@ -40,7 +40,7 @@ Other representations of profile: [CSV](StructureDefinition-sas-sos-bundle-aggre
   "version" : "1.2.0",
   "name" : "BundleAgregateurSOS",
   "status" : "active",
-  "date" : "2025-11-25T08:03:17+00:00",
+  "date" : "2025-12-11T11:06:01+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

@@ -9,15 +9,15 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://sas.fr/fhir/StructureDefinition/FrAppointmentSAS | *Version*:1.2.0 |
-| Active as of 2025-11-25 | *Computable Name*:FrAppointmentSAS |
+| Active as of 2025-12-11 | *Computable Name*:FrAppointmentSAS |
 
  
 Profil de Appointment, dérivé de FrAppointment, pour le cas d'usage prise de RDV de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS 
 
-**Usages:**
+**Utilisations:**
 
-* Examples for this Profile: [Appointment/1](Appointment-1.md) and [Appointment/2](Appointment-2.md)
-* CapabilityStatements using this Profile: [Profil SAS gestionnaire d'agenda RDV ps indiv](CapabilityStatement-SAS-GestionnaireAgenda-RDVpsindiv.md)
+* Exemples pour ce Profil: [Appointment/1](Appointment-1.md) and [Appointment/2](Appointment-2.md)
+* CapabilityStatements utilisant ce Profil: [Profil SAS gestionnaire d'agenda RDV ps indiv](CapabilityStatement-SAS-GestionnaireAgenda-RDVpsindiv.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.sas|current/StructureDefinition/FrAppointmentSAS)
 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-FrAppointmentSAS.csv
   "version" : "1.2.0",
   "name" : "FrAppointmentSAS",
   "status" : "active",
-  "date" : "2025-11-25T08:03:17+00:00",
+  "date" : "2025-12-11T11:06:01+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

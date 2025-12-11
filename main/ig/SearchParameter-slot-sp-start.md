@@ -9,26 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/SearchParameter/slot-sp-start | *Version*:1.2.0 |
-| Active as of 2025-11-25 | *Computable Name*:SPDateDebutSlot |
+| Active as of 2025-12-11 | *Computable Name*:SPDateDebutSlot |
 
  
 Paramètre de recherche date de début d'un créneau (date de début supérieure ou égale àet inférieure ou égale à) 
-
-## SPDateDebutSlot
-
-Paramètre `start`:`date`
-
-Paramètre de recherche date de début d'un créneau (date de début supérieure ou égale à <date1> et inférieure ou égale à <date2>)
-
-| | |
-| :--- | :--- |
-| Ressource | [Slot](http://hl7.org/fhir/R4/slot.html) |
-| Expression | `Slot.start` |
-| Processing Mode | Normal |
-| Multiples | * multipleAnd: The parameter may repeat in order to specify multiple values that must all be true
-* multipleOr: The parameter may only have one value (no comma separators)
- |
-| Comparateurs | Allowed: ge, le |
 
 
 
@@ -42,7 +26,7 @@ Paramètre de recherche date de début d'un créneau (date de début supérieure
   "version" : "1.2.0",
   "name" : "SPDateDebutSlot",
   "status" : "active",
-  "date" : "2025-11-25T08:03:17+00:00",
+  "date" : "2025-12-11T11:06:01+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

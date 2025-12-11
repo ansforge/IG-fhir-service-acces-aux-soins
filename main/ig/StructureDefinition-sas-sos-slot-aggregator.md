@@ -9,16 +9,16 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator | *Version*:1.2.0 |
-| Active as of 2025-11-25 | *Computable Name*:FrSlotAgregateurSOS |
+| Active as of 2025-12-11 | *Computable Name*:FrSlotAgregateurSOS |
 
  
 Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins 
 
-**Usages:**
+**Utilisations:**
 
-* Use this Profile: [BundleAgregateurSOS](StructureDefinition-sas-sos-bundle-aggregator.md)
-* Examples for this Profile: [Slot/ExampleSlotSOS1](Slot-ExampleSlotSOS1.md), [Slot/ExampleSlotSOS2](Slot-ExampleSlotSOS2.md), [Slot/ExampleSlotSOS3](Slot-ExampleSlotSOS3.md) and [Slot/ExampleSlotSOS4](Slot-ExampleSlotSOS4.md)
-* CapabilityStatements using this Profile: [Profil SAS consommateur de créneaux SOS](CapabilityStatement-SAS-Consommateur-SOS.md) and [Profil SAS gestionnaire d'agenda SOS](CapabilityStatement-SAS-GestionnaireAgenda-SOS.md)
+* Utiliser ce Profil: [BundleAgregateurSOS](StructureDefinition-sas-sos-bundle-aggregator.md)
+* Exemples pour ce Profil: [Slot/ExampleSlotSOS1](Slot-ExampleSlotSOS1.md), [Slot/ExampleSlotSOS2](Slot-ExampleSlotSOS2.md), [Slot/ExampleSlotSOS3](Slot-ExampleSlotSOS3.md) and [Slot/ExampleSlotSOS4](Slot-ExampleSlotSOS4.md)
+* CapabilityStatements utilisant ce Profil: [Profil SAS consommateur de créneaux SOS](CapabilityStatement-SAS-Consommateur-SOS.md) and [Profil SAS gestionnaire d'agenda SOS](CapabilityStatement-SAS-GestionnaireAgenda-SOS.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.sas|current/StructureDefinition/sas-sos-slot-aggregator)
 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-sas-sos-slot-aggrega
   "version" : "1.2.0",
   "name" : "FrSlotAgregateurSOS",
   "status" : "active",
-  "date" : "2025-11-25T08:03:17+00:00",
+  "date" : "2025-12-11T11:06:01+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>SOS Médecins - Gestion de rendez-vous - Service d'Accès aux Soins v1.2.0</title>
+    <title>SOS Médecins - Gestion de rendez-vous - Service d&#39;Accès aux Soins v1.2.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -18,6 +18,7 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/style-ans.css"/>
     <link rel="stylesheet" href="assets/css/style-add-ans.css"/>
     <!-- Placeholder for child template CSS declarations -->
@@ -46,6 +47,7 @@
     h3,h4,h5,h6{--heading-prefix:"11"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <!-- Placeholder for child template header declarations -->
 <div id="family-nav">
     <a id="hl7-search-lnk" data-no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
@@ -218,7 +220,6 @@
       <div class="container">  <!-- container -->
         <div class="row">
           <div class="inner-wrapper">
-
 <style type="text/css">
 h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
 h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
@@ -227,7 +228,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Service d'Accès aux Soins - Local Development build (v1.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://interop.esante.gouv.fr/ig/fhir/sas/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Service d'Accès aux Soins - version de développement local (v1.2.0) construite par les outils de publication FHIR (HL7® FHIR® Standard). Voir le <a href='https://interop.esante.gouv.fr/ig/fhir/sas/history.html'>répertoire des versions publiées</a></p><!--EndReleaseHeader-->
   <h2>SOS Médecins - Gestion de rendez-vous</h2>
   
 
@@ -366,20 +367,20 @@ détails sur la raison de l'échec</p>
 
 <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
   "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment">resourceType</a>" : "Appointment",
-  "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.id">id</a>" : "1",
-  "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.meta">meta</a>" : {
+  "<a href="http://hl7.org/fhir/R4/resource.html#Appointment.id">id</a>" : "1",
+  "<a href="http://hl7.org/fhir/R4/resource.html#Appointment.meta">meta</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
       <a href="StructureDefinition-FrAppointmentSAS.html" style="color: Maroon">&#x1F517;</a> "http://sas.fr/fhir/StructureDefinition/FrAppointmentSAS"
     ]
   },
-  "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.text">text</a>" : {
+  "<a href="http://hl7.org/fhir/R4/domainresource.html#Appointment.text">text</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "extensions",
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : RendezVous 1&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;1\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc1\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-FrAppointmentSAS.html\&quot;&gt;FrAppointmentSAS&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;FrAppointmentOperator&lt;/b&gt;: Identifier: Identifiant National de Professionnel de Santé/3456780581/11242343&lt;/p&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;urn:oid:1.1.111.1.11.1.1.1&lt;/code&gt;/b6e39355-8a61-4556-b340-36f7b95fec6a&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Booked&lt;/p&gt;&lt;p&gt;&lt;b&gt;start&lt;/b&gt;: 2022-09-04 14:00:00+0100&lt;/p&gt;&lt;p&gt;&lt;b&gt;end&lt;/b&gt;: 2022-09-04 14:15:00+0100&lt;/p&gt;&lt;p&gt;&lt;b&gt;created&lt;/b&gt;: 2022-09-04 10:00:00+0100&lt;/p&gt;&lt;h3&gt;Participants&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Actor&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Status&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;Identifier: Identifiant National de Professionnel de Santé/810100050075&lt;/td&gt;&lt;td&gt;Accepted&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
   },
-  "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.extension">extension</a>" : [
+  "<a href="http://hl7.org/fhir/R4/domainresource.html#Appointment.extension">extension</a>" : [
     {
       "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://interopsante.org/fhir/StructureDefinition/FrAppointmentOperator",
-      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueReference</a>" : {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueReference</a>" : {
         "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.identifier">identifier</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>" : {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
@@ -503,20 +504,20 @@ détails sur la raison de l'échec</p>
 
 <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
   "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment">resourceType</a>" : "Appointment",
-  "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.id">id</a>" : "2",
-  "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.meta">meta</a>" : {
+  "<a href="http://hl7.org/fhir/R4/resource.html#Appointment.id">id</a>" : "2",
+  "<a href="http://hl7.org/fhir/R4/resource.html#Appointment.meta">meta</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
       <a href="StructureDefinition-FrAppointmentSAS.html" style="color: Maroon">&#x1F517;</a> "http://sas.fr/fhir/StructureDefinition/FrAppointmentSAS"
     ]
   },
-  "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.text">text</a>" : {
+  "<a href="http://hl7.org/fhir/R4/domainresource.html#Appointment.text">text</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "extensions",
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : RendezVous 2&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;2\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc2\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-FrAppointmentSAS.html\&quot;&gt;FrAppointmentSAS&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;FrAppointmentOperator&lt;/b&gt;: Identifier: Identifiant National de Professionnel de Santé/3456780581/11242343&lt;/p&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;urn:oid:1.1.111.1.11.1.1.1&lt;/code&gt;/b6e39355-8a61-4556-b340-36f7b95fec6a&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Cancelled&lt;/p&gt;&lt;p&gt;&lt;b&gt;start&lt;/b&gt;: 2022-09-04 14:00:00+0100&lt;/p&gt;&lt;p&gt;&lt;b&gt;end&lt;/b&gt;: 2022-09-04 14:15:00+0100&lt;/p&gt;&lt;p&gt;&lt;b&gt;created&lt;/b&gt;: 2022-09-04 10:00:00+0100&lt;/p&gt;&lt;h3&gt;Participants&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Actor&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Status&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;Identifier: Identifiant National de Professionnel de Santé/810100050075&lt;/td&gt;&lt;td&gt;Accepted&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
   },
-  "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.extension">extension</a>" : [
+  "<a href="http://hl7.org/fhir/R4/domainresource.html#Appointment.extension">extension</a>" : [
     {
       "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://interopsante.org/fhir/StructureDefinition/FrAppointmentOperator",
-      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueReference</a>" : {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueReference</a>" : {
         "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.identifier">identifier</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>" : {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
@@ -726,7 +727,7 @@ Afin de tester un fichier, il suffit de sélectionner le format <code class="lan
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Nov 25, 2025 08:03+0000">2025-11-25</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.sas#1.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Dec 11, 2025 11:06+0000">2025-12-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

@@ -9,15 +9,15 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul | *Version*:1.2.0 |
-| Active as of 2025-11-25 | *Computable Name*:FrPractitionerRegul |
+| Active as of 2025-12-11 | *Computable Name*:FrPractitionerRegul |
 
  
 Profil de Practitioner, dérivé de FrPractitioner, pour la gestion des comptes régulateurs de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS 
 
-**Usages:**
+**Utilisations:**
 
-* Examples for this Profile: [Practitioner/ExamplePractitionerRegul1](Practitioner-ExamplePractitionerRegul1.md), [Practitioner/ExamplePractitionerRegul2](Practitioner-ExamplePractitionerRegul2.md), [Practitioner/ExamplePractitionerRegul3](Practitioner-ExamplePractitionerRegul3.md) and [Practitioner/ExamplePractitionerRegul4](Practitioner-ExamplePractitionerRegul4.md)
-* CapabilityStatements using this Profile: [Profil SAS gestionnaire de structure](CapabilityStatement-SAS-GestionnaireStructure.md)
+* Exemples pour ce Profil: [Practitioner/ExamplePractitionerRegul1](Practitioner-ExamplePractitionerRegul1.md), [Practitioner/ExamplePractitionerRegul2](Practitioner-ExamplePractitionerRegul2.md), [Practitioner/ExamplePractitionerRegul3](Practitioner-ExamplePractitionerRegul3.md) and [Practitioner/ExamplePractitionerRegul4](Practitioner-ExamplePractitionerRegul4.md)
+* CapabilityStatements utilisant ce Profil: [Profil SAS gestionnaire de structure](CapabilityStatement-SAS-GestionnaireStructure.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.sas|current/StructureDefinition/FrPractitionerRegul)
 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-FrPractitionerRegul.
   "version" : "1.2.0",
   "name" : "FrPractitionerRegul",
   "status" : "active",
-  "date" : "2025-11-25T08:03:17+00:00",
+  "date" : "2025-12-11T11:06:01+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

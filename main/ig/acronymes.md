@@ -17,7 +17,7 @@
 * Sigle / Acronyme: FINESS
   * Définition: Fichier National des Etablissements Sanitaires et Sociaux
 * Sigle / Acronyme: IDNPS
-  * Définition: IDEntifiant National de Professionel de Santé
+  * Définition: IDentifiant National de Professionel de Santé
 * Sigle / Acronyme: IDNST
   * Définition: IDentifiant National de STructure
 * Sigle / Acronyme: LRM

@@ -9,17 +9,17 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur | *Version*:1.2.0 |
-| Active as of 2025-11-25 | *Computable Name*:FrScheduleAgregateur |
+| Active as of 2025-12-11 | *Computable Name*:FrScheduleAgregateur |
 
  
 Profil de Schedule, dérivé de FrSchedule, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS 
 
-**Usages:**
+**Utilisations:**
 
-* Use this Profile: [BundleAgregateur](StructureDefinition-BundleAgregateur.md) and [BundleAgregateurCPTS](StructureDefinition-sas-cpts-bundle-aggregator.md)
-* Refer to this Profile: [FrSlotAgregateur](StructureDefinition-FrSlotAgregateur.md) and [FrSlotAgregateurCPTS](StructureDefinition-sas-cpts-slot-aggregator.md)
-* Examples for this Profile: [Schedule/ExampleSchedule](Schedule-ExampleSchedule.md), [Schedule/ExampleSchedule1](Schedule-ExampleSchedule1.md), [Schedule/ExampleSchedule2](Schedule-ExampleSchedule2.md) and [Schedule/ExampleSchedule3](Schedule-ExampleSchedule3.md)
-* CapabilityStatements using this Profile: [Profil SAS consommateur de créneaux CPTS](CapabilityStatement-SAS-Consommateur-CPTS.md), [Profil SAS consommateur de créneaux](CapabilityStatement-SAS-Consommateur-psindiv.md), [Profil SAS gestionnaire d'agenda CPTS](CapabilityStatement-SAS-GestionnaireAgenda-CPTS.md) and [Profil SAS gestionnaire d'agenda PS Indiv](CapabilityStatement-SAS-GestionnaireAgenda-PsIndiv.md)
+* Utiliser ce Profil: [BundleAgregateur](StructureDefinition-BundleAgregateur.md) and [BundleAgregateurCPTS](StructureDefinition-sas-cpts-bundle-aggregator.md)
+* Référer à ce Profil: [FrSlotAgregateur](StructureDefinition-FrSlotAgregateur.md) and [FrSlotAgregateurCPTS](StructureDefinition-sas-cpts-slot-aggregator.md)
+* Exemples pour ce Profil: [Schedule/ExampleSchedule](Schedule-ExampleSchedule.md), [Schedule/ExampleSchedule1](Schedule-ExampleSchedule1.md), [Schedule/ExampleSchedule2](Schedule-ExampleSchedule2.md) and [Schedule/ExampleSchedule3](Schedule-ExampleSchedule3.md)
+* CapabilityStatements utilisant ce Profil: [Profil SAS consommateur de créneaux CPTS](CapabilityStatement-SAS-Consommateur-CPTS.md), [Profil SAS consommateur de créneaux](CapabilityStatement-SAS-Consommateur-psindiv.md), [Profil SAS gestionnaire d'agenda CPTS](CapabilityStatement-SAS-GestionnaireAgenda-CPTS.md) and [Profil SAS gestionnaire d'agenda PS Indiv](CapabilityStatement-SAS-GestionnaireAgenda-PsIndiv.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.sas|current/StructureDefinition/FrScheduleAgregateur)
 
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-FrScheduleAgregateur
   "version" : "1.2.0",
   "name" : "FrScheduleAgregateur",
   "status" : "active",
-  "date" : "2025-11-25T08:03:17+00:00",
+  "date" : "2025-12-11T11:06:01+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

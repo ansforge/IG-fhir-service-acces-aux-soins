@@ -9,15 +9,15 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-appointment | *Version*:1.2.0 |
-| Active as of 2025-11-25 | *Computable Name*:FrAppointmentSASSOS |
+| Active as of 2025-12-11 | *Computable Name*:FrAppointmentSASSOS |
 
  
 Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins 
 
-**Usages:**
+**Utilisations:**
 
-* CapabilityStatements using this Profile: [Profil SAS gestionnaire d'agenda RDV SOS](CapabilityStatement-SAS-GestionnaireAgenda-RDVSOS.md)
-* This Profile is not used by any profiles in this Implementation Guide
+* CapabilityStatements utilisant ce Profil: [Profil SAS gestionnaire d'agenda RDV SOS](CapabilityStatement-SAS-GestionnaireAgenda-RDVSOS.md)
+* Ce Profil nest utilisé par aucun profil dans ce guide dimplémentation
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.sas|current/StructureDefinition/sas-sos-appointment)
 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-sas-sos-appointment.
   "version" : "1.2.0",
   "name" : "FrAppointmentSASSOS",
   "status" : "active",
-  "date" : "2025-11-25T08:03:17+00:00",
+  "date" : "2025-12-11T11:06:01+00:00",
   "publisher" : "ANS",
   "contact" : [
     {
