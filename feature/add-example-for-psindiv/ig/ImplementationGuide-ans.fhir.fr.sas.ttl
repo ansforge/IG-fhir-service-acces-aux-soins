@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "SAS"] ; # 
   fhir:title [ fhir:v "Service d'Accès aux Soins"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-01-06T16:43:23+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-01-06T16:49:45+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -2417,6 +2417,28 @@
        ] ;
        fhir:name [ fhir:v "ExampleSlotPSIndiv4" ] ;
        fhir:description [ fhir:v "Exemple 4 ressource slot PS indiv" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"^^xsd:anyURI ;
+         fhir:l <http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Slot"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/Slot/ExampleSlotPSIndiv5> ;
+         fhir:reference [ fhir:v "Slot/ExampleSlotPSIndiv5" ]
+       ] ;
+       fhir:name [ fhir:v "ExampleSlotPSIndiv5" ] ;
+       fhir:description [ fhir:v "Exemple 5 ressource slot PS indiv" ] ;
        fhir:example [
          a fhir:Canonical ;
          fhir:v "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"^^xsd:anyURI ;

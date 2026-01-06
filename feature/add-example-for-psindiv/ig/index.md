@@ -106,7 +106,7 @@ La fludification du parcours régulateurs inclut les éléments suivants :
   "name" : "SAS",
   "title" : "Service d'Accès aux Soins",
   "status" : "active",
-  "date" : "2026-01-06T16:43:23+00:00",
+  "date" : "2026-01-06T16:49:45+00:00",
   "publisher" : "ANS",
   "contact" : [
     {
@@ -1537,6 +1537,20 @@ La fludification du parcours régulateurs inclut les éléments suivants :
         },
         "name" : "ExampleSlotPSIndiv4",
         "description" : "Exemple 4 ressource slot PS indiv",
+        "exampleCanonical" : "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "Slot"
+          }
+        ],
+        "reference" : {
+          "reference" : "Slot/ExampleSlotPSIndiv5"
+        },
+        "name" : "ExampleSlotPSIndiv5",
+        "description" : "Exemple 5 ressource slot PS indiv",
         "exampleCanonical" : "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"
       },
       {

@@ -17,7 +17,7 @@ Profil de Slot, dérivé de FrSlot, pour le service d'agrégation de créneaux d
 **Utilisations:**
 
 * Utiliser ce Profil: [BundleAgregateur](StructureDefinition-BundleAgregateur.md)
-* Exemples pour ce Profil: [Slot/ExampleSlotPSIndiv1](Slot-ExampleSlotPSIndiv1.md), [Slot/ExampleSlotPSIndiv2](Slot-ExampleSlotPSIndiv2.md), [Slot/ExampleSlotPSIndiv3](Slot-ExampleSlotPSIndiv3.md) and [Slot/ExampleSlotPSIndiv4](Slot-ExampleSlotPSIndiv4.md)
+* Exemples pour ce Profil: [Slot/ExampleSlotPSIndiv1](Slot-ExampleSlotPSIndiv1.md), [Slot/ExampleSlotPSIndiv2](Slot-ExampleSlotPSIndiv2.md), [Slot/ExampleSlotPSIndiv3](Slot-ExampleSlotPSIndiv3.md), [Slot/ExampleSlotPSIndiv4](Slot-ExampleSlotPSIndiv4.md) and [Slot/ExampleSlotPSIndiv5](Slot-ExampleSlotPSIndiv5.md)
 * CapabilityStatements utilisant ce Profil: [Profil SAS consommateur de créneaux](CapabilityStatement-SAS-Consommateur-psindiv.md) and [Profil SAS gestionnaire d'agenda PS Indiv](CapabilityStatement-SAS-GestionnaireAgenda-PsIndiv.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.sas|current/StructureDefinition/FrSlotAgregateur)
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-FrSlotAgregateur.csv
   "version" : "1.2.0",
   "name" : "FrSlotAgregateur",
   "status" : "active",
-  "date" : "2026-01-06T16:43:23+00:00",
+  "date" : "2026-01-06T16:49:45+00:00",
   "publisher" : "ANS",
   "contact" : [
     {
