@@ -1,0 +1,418 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/sas/Bundle/ExampleBundleCPTS2> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ExampleBundleCPTS2"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-bundle-aggregator"^^xsd:anyURI ;
+       fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-bundle-aggregator>
+     ] )
+  ] ; # 
+  fhir:type [ fhir:v "searchset"] ; # 
+  fhir:total [ fhir:v "1"^^xsd:nonNegativeInteger] ; # 
+  fhir:link ( [
+     fhir:relation [ fhir:v "self" ] ;
+     fhir:url [
+       fhir:v "http://hapi.fhir.org/baseR4/Slot?_include=Slot:schedule&_include:iterate=Schedule:actor&start=ge2024-06-12T16:20:00.000+02:00&start=le2024-06-12T17:20:00.000+02:00&schedule.actor:Practitioner.identifier=urn:oid:1.2.250.1.71.4.2.1|810002909371&status=free&_include=Slot:service-type-reference"^^xsd:anyURI ;
+       fhir:l <http://hapi.fhir.org/baseR4/Slot?_include=Slot:schedule&_include:iterate=Schedule:actor&start=ge2024-06-12T16:20:00.000+02:00&start=le2024-06-12T17:20:00.000+02:00&schedule.actor:Practitioner.identifier=urn:oid:1.2.250.1.71.4.2.1&version=810002909371&status=free&_include=Slot:service-type-reference>
+     ]
+  ] ) ; # 
+  fhir:entry ( [
+     fhir:fullUrl [
+       fhir:v "https://<base_URl>/Slot/ExampleSlotCPTS2"^^xsd:anyURI ;
+       fhir:l <https://<base_URl>/Slot/ExampleSlotCPTS2>
+     ] ;
+     fhir:resource ( <https://<base_URl>/Slot/ExampleSlotCPTS2> ) ;
+     fhir:search [
+       fhir:mode [ fhir:v "match" ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://<base_URl>/Schedule/ExampleSchedule"^^xsd:anyURI ;
+       fhir:l <https://<base_URl>/Schedule/ExampleSchedule>
+     ] ;
+     fhir:resource ( <https://<base_URl>/Schedule/ExampleSchedule> ) ;
+     fhir:search [
+       fhir:mode [ fhir:v "include" ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://<base_URl>/Practitioner/ExamplePractitioner"^^xsd:anyURI ;
+       fhir:l <https://<base_URl>/Practitioner/ExamplePractitioner>
+     ] ;
+     fhir:resource ( <https://<base_URl>/Practitioner/ExamplePractitioner> ) ;
+     fhir:search [
+       fhir:mode [ fhir:v "include" ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://<base_URl>/PractitionerRole/ExamplePractitionerRoleAgregateur"^^xsd:anyURI ;
+       fhir:l <https://<base_URl>/PractitionerRole/ExamplePractitionerRoleAgregateur>
+     ] ;
+     fhir:resource ( <https://<base_URl>/PractitionerRole/ExamplePractitionerRoleAgregateur> ) ;
+     fhir:search [
+       fhir:mode [ fhir:v "include" ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://<base_URl>/HealthcareService/ExampleHealthcareServiceCPTS1"^^xsd:anyURI ;
+       fhir:l <https://<base_URl>/HealthcareService/ExampleHealthcareServiceCPTS1>
+     ] ;
+     fhir:resource ( <https://<base_URl>/HealthcareService/ExampleHealthcareServiceCPTS1> ) ;
+     fhir:search [
+       fhir:mode [ fhir:v "include" ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://<base_URl>/Organization/ExampleOrgaCPTS1"^^xsd:anyURI ;
+       fhir:l <https://<base_URl>/Organization/ExampleOrgaCPTS1>
+     ] ;
+     fhir:resource ( <https://<base_URl>/Organization/ExampleOrgaCPTS1> ) ;
+     fhir:search [
+       fhir:mode [ fhir:v "include" ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://<base_URl>/HealthcareService/ExampleHealthcareServiceCPTS2"^^xsd:anyURI ;
+       fhir:l <https://<base_URl>/HealthcareService/ExampleHealthcareServiceCPTS2>
+     ] ;
+     fhir:resource ( <https://<base_URl>/HealthcareService/ExampleHealthcareServiceCPTS2> ) ;
+     fhir:search [
+       fhir:mode [ fhir:v "include" ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://<base_URl>/Organization/ExampleOrgaCPTS2"^^xsd:anyURI ;
+       fhir:l <https://<base_URl>/Organization/ExampleOrgaCPTS2>
+     ] ;
+     fhir:resource ( <https://<base_URl>/Organization/ExampleOrgaCPTS2> ) ;
+     fhir:search [
+       fhir:mode [ fhir:v "include" ]
+     ]
+  ] ) . # 
+
+<https://<base_URl>/Slot/ExampleSlotCPTS2> a fhir:Slot ;
+  fhir:id [ fhir:v "ExampleSlotCPTS2"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator"^^xsd:anyURI ;
+       fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator>
+     ] ) ;
+     fhir:security ( [
+       fhir:system [
+         fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"^^xsd:anyURI ;
+         fhir:l <https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau>
+       ] ;
+       fhir:code [ fhir:v "PUBLIC" ]
+     ] [
+       fhir:system [
+         fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"^^xsd:anyURI ;
+         fhir:l <https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau>
+       ] ;
+       fhir:code [ fhir:v "CPTS" ]
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Slot_ExampleSlotCPTS2\"> </a><p class=\"res-header-id\"><b>Narratif généré : Slot ExampleSlotCPTS2</b></p><a name=\"ExampleSlotCPTS2\"> </a><a name=\"hcExampleSlotCPTS2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-cpts-slot-aggregator.html\">FrSlotAgregateurCPTS</a></p><p style=\"margin-bottom: 0px\">Label de sécurités: Créneau accessible par le grand public (Détails : code TRE_R314-TypeCreneau PUBLIC = 'Créneau accessible par le grand public'), Créneau accessible par les communautés professionnelles territoriales de santé (Détails : code TRE_R314-TypeCreneau CPTS = 'Créneau accessible par les communautés professionnelles territoriales de santé')</p></div><p><b>serviceType</b>: <span title=\"Codes :{http://terminology.hl7.org/CodeSystem/v3-ActCode AMB}\">Visite de contrôle</span>, <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement 604}\">Communauté Professionnelle Territoriale de Santé (CPTS)</span>, <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement 604}\">Communauté Professionnelle Territoriale de Santé (CPTS)</span></p><p><b>specialty</b>: <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM54}\">Médecine générale (SM)</span></p><p><b>appointmentType</b>: <span title=\"Codes :{http://terminology.hl7.org/CodeSystem/v2-0276 ROUTINE}\">Routine appointment - default if not valued</span></p><p><b>schedule</b>: <a href=\"Schedule-ExampleSchedule.html\">Schedule</a></p><p><b>status</b>: Free</p><p><b>start</b>: 2024-06-12 16:40:00+0200</p><p><b>end</b>: 2024-06-12 17:00:00+0200</p><p><b>comment</b>: https://exemple.com/rdv/com/</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:serviceType ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActCode>
+       ] ;
+       fhir:code [ fhir:v "AMB" ]
+     ] ) ;
+     fhir:text [ fhir:v "Visite de contrôle" ]
+  ] [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType>
+       ] ;
+       fhir:value [
+         a fhir:Reference ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/HealthcareService/ExampleHealthcareServiceCPTS1> ;
+         fhir:reference [ fhir:v "HealthcareService/ExampleHealthcareServiceCPTS1" ]
+       ]
+     ] ) ;
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement"^^xsd:anyURI ;
+         fhir:l <https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement>
+       ] ;
+       fhir:code [ fhir:v "604" ]
+     ] )
+  ] [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType>
+       ] ;
+       fhir:value [
+         a fhir:Reference ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/HealthcareService/ExampleHealthcareServiceCPTS2> ;
+         fhir:reference [ fhir:v "HealthcareService/ExampleHealthcareServiceCPTS2" ]
+       ]
+     ] ) ;
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement"^^xsd:anyURI ;
+         fhir:l <https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement>
+       ] ;
+       fhir:code [ fhir:v "604" ]
+     ] )
+  ] ) ; # 
+  fhir:specialty ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"^^xsd:anyURI ;
+         fhir:l <https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale>
+       ] ;
+       fhir:code [ fhir:v "SM54" ]
+     ] )
+  ] ) ; # 
+  fhir:appointmentType [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v2-0276"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v2-0276>
+       ] ;
+       fhir:code [ fhir:v "ROUTINE" ]
+     ] )
+  ] ; # 
+  fhir:schedule [
+     fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/Schedule/ExampleSchedule> ;
+     fhir:reference [ fhir:v "Schedule/ExampleSchedule" ]
+  ] ; # 
+  fhir:status [ fhir:v "free"] ; # 
+  fhir:start [ fhir:v "2024-06-12T16:40:00.000+02:00"^^xsd:dateTime] ; # 
+  fhir:end [ fhir:v "2024-06-12T17:00:00.000+02:00"^^xsd:dateTime] ; # 
+  fhir:comment [ fhir:v "https://exemple.com/rdv/com/"] . # 
+
+<https://<base_URl>/Schedule/ExampleSchedule> a fhir:Schedule ;
+  fhir:id [ fhir:v "ExampleSchedule"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"^^xsd:anyURI ;
+       fhir:l <http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Schedule_ExampleSchedule\"> </a><p class=\"res-header-id\"><b>Narratif généré : Schedule ExampleSchedule</b></p><a name=\"ExampleSchedule\"> </a><a name=\"hcExampleSchedule\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-FrScheduleAgregateur.html\">FrScheduleAgregateur</a></p></div><p><b>actor</b>: </p><ul><li><a href=\"Practitioner-ExamplePractitioner.html\">Practitioner Pierre Foret </a></li><li><a href=\"PractitionerRole-ExamplePractitionerRoleAgregateur.html\">PractitionerRole : telecom = ph: +33561855977</a></li></ul></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:actor ( [
+     fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/ExamplePractitioner> ;
+     fhir:reference [ fhir:v "Practitioner/ExamplePractitioner" ]
+  ] [
+     fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/PractitionerRole/ExamplePractitionerRoleAgregateur> ;
+     fhir:reference [ fhir:v "PractitionerRole/ExamplePractitionerRoleAgregateur" ]
+  ] ) . # 
+
+<https://<base_URl>/Practitioner/ExamplePractitioner> a fhir:Practitioner ;
+  fhir:id [ fhir:v "ExamplePractitioner"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur"^^xsd:anyURI ;
+       fhir:l <http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_ExamplePractitioner\"> </a><p class=\"res-header-id\"><b>Narratif généré : Praticien ExamplePractitioner</b></p><a name=\"ExamplePractitioner\"> </a><a name=\"hcExamplePractitioner\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-FrPractitionerAgregateur.html\">FrPractitionerAgregateur</a></p></div><p><b>identifier</b>: Identifiant National de Professionnel de Santé/810002909371</p><p><b>name</b>: Pierre Foret </p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://interopsante.org/fhir/CodeSystem/fr-v2-0203"^^xsd:anyURI ;
+           fhir:l <http://interopsante.org/fhir/CodeSystem/fr-v2-0203>
+         ] ;
+         fhir:code [ fhir:v "IDNPS" ]
+       ] )
+     ] ;
+     fhir:system [
+       fhir:v "urn:oid:1.2.250.1.71.4.2.1"^^xsd:anyURI ;
+       fhir:l <urn:oid:1.2.250.1.71.4.2.1>
+     ] ;
+     fhir:value [ fhir:v "810002909371" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Foret" ] ;
+     fhir:given ( [ fhir:v "Pierre" ] )
+  ] ) . # 
+
+<https://<base_URl>/PractitionerRole/ExamplePractitionerRoleAgregateur> a fhir:PractitionerRole ;
+  fhir:id [ fhir:v "ExamplePractitionerRoleAgregateur"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"^^xsd:anyURI ;
+       fhir:l <http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"PractitionerRole_ExamplePractitionerRoleAgregateur\"> </a><p class=\"res-header-id\"><b>Narratif généré : PractitionerRole ExamplePractitionerRoleAgregateur</b></p><a name=\"ExamplePractitionerRoleAgregateur\"> </a><a name=\"hcExamplePractitionerRoleAgregateur\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-FrPractitionerRoleExerciceAgregateur.html\">FrPractitionerRoleExerciceAgregateur</a></p></div><p><b>practitioner</b>: <a href=\"Practitioner-ExamplePractitioner.html\">Practitioner Pierre Foret </a></p><p><b>organization</b>: Identifier: 412345678912345</p><p><b>location</b>: <a href=\"#hcExamplePractitionerRoleAgregateur/ExampleLocation\">Location : identifier = Identifiant interne</a></p><p><b>telecom</b>: <a href=\"tel:+33561855977\">+33561855977</a></p><hr/><blockquote><p class=\"res-header-id\"><b>Narratif généré : Localisation #ExampleLocation</b></p><a name=\"ExamplePractitionerRoleAgregateur/ExampleLocation\"> </a><a name=\"hcExamplePractitionerRoleAgregateur/ExampleLocation\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-FrLocationAgregateur.html\">FrLocationAgregateur</a></p></div><p><b>identifier</b>: Identifiant interne/123456789</p><p><b>address</b>: 25 CHEMIN DE MOUNESTIE Aussonne 31840 </p></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:contained ( [
+     a fhir:Location ;
+     fhir:id [ fhir:v "ExampleLocation" ] ;
+     fhir:meta [
+       fhir:profile ( [
+         fhir:v "http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur"^^xsd:anyURI ;
+         fhir:l <http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur>
+       ] )
+     ] ;
+     fhir:identifier ( [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"^^xsd:anyURI ;
+             fhir:l <http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type>
+           ] ;
+           fhir:code [ fhir:v "INTRN" ]
+         ] )
+       ] ;
+       fhir:system [
+         fhir:v "https://editeur.com"^^xsd:anyURI ;
+         fhir:l <https://editeur.com>
+       ] ;
+       fhir:value [ fhir:v "123456789" ]
+     ] ) ;
+     fhir:address [
+       fhir:line ( [ fhir:v "25 CHEMIN DE MOUNESTIE" ] ) ;
+       fhir:city [ fhir:v "Aussonne" ] ;
+       fhir:postalCode [ fhir:v "31840" ]
+     ]
+  ] ) ; # 
+  fhir:practitioner [
+     fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/ExamplePractitioner> ;
+     fhir:reference [ fhir:v "Practitioner/ExamplePractitioner" ]
+  ] ; # 
+  fhir:organization [
+     fhir:identifier [
+       fhir:value [ fhir:v "412345678912345" ]
+     ]
+  ] ; # 
+  fhir:location ( [
+     fhir:l <#ExampleLocation> ;
+     fhir:reference [ fhir:v "#ExampleLocation" ]
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+33561855977" ]
+  ] ) . # 
+
+<https://<base_URl>/HealthcareService/ExampleHealthcareServiceCPTS1> a fhir:HealthcareService ;
+  fhir:id [ fhir:v "ExampleHealthcareServiceCPTS1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-healthcareservice-aggregator"^^xsd:anyURI ;
+       fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-healthcareservice-aggregator>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"HealthcareService_ExampleHealthcareServiceCPTS1\"> </a><p class=\"res-header-id\"><b>Narratif généré : ServiceDeSanté ExampleHealthcareServiceCPTS1</b></p><a name=\"ExampleHealthcareServiceCPTS1\"> </a><a name=\"hcExampleHealthcareServiceCPTS1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-cpts-healthcareservice-aggregator.html\">FrHealthcareServiceAgregateurCPTS</a></p></div><p><b>providedBy</b>: <a href=\"Organization-ExampleOrgaCPTS1.html\">Organization CPTS AXE MAJEUR</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:providedBy [
+     fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/Organization/ExampleOrgaCPTS1> ;
+     fhir:reference [ fhir:v "Organization/ExampleOrgaCPTS1" ]
+  ] . # 
+
+<https://<base_URl>/Organization/ExampleOrgaCPTS1> a fhir:Organization ;
+  fhir:id [ fhir:v "ExampleOrgaCPTS1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-organization-aggregator"^^xsd:anyURI ;
+       fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-organization-aggregator>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_ExampleOrgaCPTS1\"> </a><p class=\"res-header-id\"><b>Narratif généré : Organisation ExampleOrgaCPTS1</b></p><a name=\"ExampleOrgaCPTS1\"> </a><a name=\"hcExampleOrgaCPTS1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-cpts-organization-aggregator.html\">FrOrganizationAgregateurCPTS</a></p></div><p><b>identifier</b>: Identification nationale de structure définie par l’ANS dans le CI_SIS/1950047225</p><p><b>name</b>: CPTS AXE MAJEUR</p><p><b>telecom</b>: <a href=\"tel:+33102030405\">+33102030405</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"^^xsd:anyURI ;
+           fhir:l <https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203>
+         ] ;
+         fhir:code [ fhir:v "IDNST" ]
+       ] )
+     ] ;
+     fhir:system [
+       fhir:v "urn:oid:1.2.250.1.71.4.2.2"^^xsd:anyURI ;
+       fhir:l <urn:oid:1.2.250.1.71.4.2.2>
+     ] ;
+     fhir:value [ fhir:v "1950047225" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "CPTS AXE MAJEUR"] ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+33102030405" ]
+  ] ) . # 
+
+<https://<base_URl>/HealthcareService/ExampleHealthcareServiceCPTS2> a fhir:HealthcareService ;
+  fhir:id [ fhir:v "ExampleHealthcareServiceCPTS2"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-healthcareservice-aggregator"^^xsd:anyURI ;
+       fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-healthcareservice-aggregator>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"HealthcareService_ExampleHealthcareServiceCPTS2\"> </a><p class=\"res-header-id\"><b>Narratif généré : ServiceDeSanté ExampleHealthcareServiceCPTS2</b></p><a name=\"ExampleHealthcareServiceCPTS2\"> </a><a name=\"hcExampleHealthcareServiceCPTS2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-cpts-healthcareservice-aggregator.html\">FrHealthcareServiceAgregateurCPTS</a></p></div><p><b>providedBy</b>: <a href=\"Organization-ExampleOrgaCPTS2.html\">Organization CPTS VAL D OISE CENTRE</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:providedBy [
+     fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/Organization/ExampleOrgaCPTS2> ;
+     fhir:reference [ fhir:v "Organization/ExampleOrgaCPTS2" ]
+  ] . # 
+
+<https://<base_URl>/Organization/ExampleOrgaCPTS2> a fhir:Organization ;
+  fhir:id [ fhir:v "ExampleOrgaCPTS2"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-organization-aggregator"^^xsd:anyURI ;
+       fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-organization-aggregator>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_ExampleOrgaCPTS2\"> </a><p class=\"res-header-id\"><b>Narratif généré : Organisation ExampleOrgaCPTS2</b></p><a name=\"ExampleOrgaCPTS2\"> </a><a name=\"hcExampleOrgaCPTS2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-cpts-organization-aggregator.html\">FrOrganizationAgregateurCPTS</a></p></div><p><b>identifier</b>: Identification nationale de structure définie par l’ANS dans le CI_SIS/1950046227</p><p><b>name</b>: CPTS VAL D OISE CENTRE</p><p><b>telecom</b>: <a href=\"tel:+33139599280\">+33139599280</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"^^xsd:anyURI ;
+           fhir:l <https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203>
+         ] ;
+         fhir:code [ fhir:v "IDNST" ]
+       ] )
+     ] ;
+     fhir:system [
+       fhir:v "urn:oid:1.2.250.1.71.4.2.2"^^xsd:anyURI ;
+       fhir:l <urn:oid:1.2.250.1.71.4.2.2>
+     ] ;
+     fhir:value [ fhir:v "1950046227" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "CPTS VAL D OISE CENTRE"] ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+33139599280" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
