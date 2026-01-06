@@ -106,7 +106,7 @@ La fludification du parcours régulateurs inclut les éléments suivants :
   "name" : "SAS",
   "title" : "Service d'Accès aux Soins",
   "status" : "active",
-  "date" : "2026-01-06T16:49:45+00:00",
+  "date" : "2026-01-06T17:05:08+00:00",
   "publisher" : "ANS",
   "contact" : [
     {
