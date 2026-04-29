@@ -1,0 +1,53 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/ExamplePractitionerRegul4> a fhir:Practitioner ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ExamplePractitionerRegul4"] ; # 
+  fhir:meta [
+     fhir:source [
+       fhir:v "urn:oid:1.2.250.1.213.3.6"^^xsd:anyURI ;
+       fhir:l <urn:oid:1.2.250.1.213.3.6>
+     ] ;
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul"^^xsd:anyURI ;
+       fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : Praticien ExamplePractitionerRegul4</b></p><a name=\"ExamplePractitionerRegul4\"> </a><a name=\"hcExamplePractitionerRegul4\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Information Source: <a href=\"https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&amp;canonical=urn:oid:1.2.250.1.213.3.6\">urn:oid:1.2.250.1.213.3.6</a></p><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-FrPractitionerRegul.html\">FrPractitionerRegul</a></p></div><p><b>identifier</b>: Identifiant interne/1ef1c748-01a3-6180-b098-73283ce4e5b1</p><p><b>active</b>: true</p><p><b>name</b>: Sébastien Loridon </p><p><b>telecom</b>: <a href=\"mailto:sebastien.loridon@test.com\">sebastien.loridon@test.com</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://interopsante.org/fhir/CodeSystem/fr-v2-0203"^^xsd:anyURI ;
+           fhir:l <http://interopsante.org/fhir/CodeSystem/fr-v2-0203>
+         ] ;
+         fhir:code [ fhir:v "INTRN" ]
+       ] )
+     ] ;
+     fhir:system [
+       fhir:v "urn:oid:1.2.250.1.213.3.6"^^xsd:anyURI ;
+       fhir:l <urn:oid:1.2.250.1.213.3.6>
+     ] ;
+     fhir:value [ fhir:v "1ef1c748-01a3-6180-b098-73283ce4e5b1" ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Loridon" ] ;
+     fhir:given ( [ fhir:v "Sébastien" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "sebastien.loridon@test.com" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
