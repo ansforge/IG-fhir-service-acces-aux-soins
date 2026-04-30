@@ -23,8 +23,6 @@ Description: "Profil de Slot, dérivé de FrSlot, pour le service d'agrégation 
 * specialty.coding[specialtycoding].code 1..1
 * specialty.coding[specialtycoding] ^binding.strength = #required
 
-* specialty.text 0..*
-
 * appointmentType ^short = "Créneau avec ou sans RDV"
 * appointmentType ^binding.strength = #preferred
 * appointmentType ^binding.description = "ROUTINE – Créneau avec prise de RDV possible, WALKIN – Créneau sans prise de RDV possible"
