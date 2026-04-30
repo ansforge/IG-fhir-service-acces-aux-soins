@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur | *Version*:1.2.0 |
-| Active as of 2026-04-29 | *Computable Name*:FrSlotAgregateur |
+| Active as of 2026-04-30 | *Computable Name*:FrSlotAgregateur |
 
  
 Profil de Slot, dérivé de FrSlot, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS 
@@ -17,7 +17,7 @@ Profil de Slot, dérivé de FrSlot, pour le service d'agrégation de créneaux d
 **Utilisations:**
 
 * Utilise ce/t/te Profil: [BundleAgregateur](StructureDefinition-BundleAgregateur.md)
-* Exemples pour ce/t/te Profil: [Slot/ExampleSlotPSIndiv1](Slot-ExampleSlotPSIndiv1.md), [Slot/ExampleSlotPSIndiv2](Slot-ExampleSlotPSIndiv2.md), [Slot/ExampleSlotPSIndiv3](Slot-ExampleSlotPSIndiv3.md) and [Slot/ExampleSlotPSIndiv4](Slot-ExampleSlotPSIndiv4.md)
+* Exemples pour ce/t/te Profil: [Slot/ExampleSlotPSIndiv1](Slot-ExampleSlotPSIndiv1.md), [Slot/ExampleSlotPSIndiv2](Slot-ExampleSlotPSIndiv2.md), [Slot/ExampleSlotPSIndiv3](Slot-ExampleSlotPSIndiv3.md), [Slot/ExampleSlotPSIndiv4](Slot-ExampleSlotPSIndiv4.md) and [Slot/ExampleSlotPSIndiv5](Slot-ExampleSlotPSIndiv5.md)
 * CapabilityStatements utilisant ce Profil: [Profil SAS consommateur de créneaux](CapabilityStatement-SAS-Consommateur-psindiv.md) and [Profil SAS gestionnaire d'agenda PS Indiv](CapabilityStatement-SAS-GestionnaireAgenda-PsIndiv.md)
 
 Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.sas|current/StructureDefinition/FrSlotAgregateur)
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-FrSlotAgregateur.csv
   "version" : "1.2.0",
   "name" : "FrSlotAgregateur",
   "status" : "active",
-  "date" : "2026-04-29T07:27:44+00:00",
+  "date" : "2026-04-30T07:27:20+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

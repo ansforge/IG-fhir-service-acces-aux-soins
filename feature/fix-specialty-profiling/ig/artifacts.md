@@ -135,6 +135,7 @@ These are example instances that show what data produced and consumed by systems
 | [ExampleSlotPSIndiv2](Slot-ExampleSlotPSIndiv2.md) | Exemple 2 ressource slot PS indiv |
 | [ExampleSlotPSIndiv3](Slot-ExampleSlotPSIndiv3.md) | Exemple 3 ressource slot PS indiv |
 | [ExampleSlotPSIndiv4](Slot-ExampleSlotPSIndiv4.md) | Exemple 4 ressource slot PS indiv |
+| [ExampleSlotPSIndiv5](Slot-ExampleSlotPSIndiv5.md) | Exemple 5 ressource slot PS indiv |
 | [ExampleSlotSOS1](Slot-ExampleSlotSOS1.md) | Exemple 1 ressource slot sos |
 | [ExampleSlotSOS2](Slot-ExampleSlotSOS2.md) | Exemple 2 ressource slot sos |
 | [ExampleSlotSOS3](Slot-ExampleSlotSOS3.md) | Exemple 3 ressource slot sos |

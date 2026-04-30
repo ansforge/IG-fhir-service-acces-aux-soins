@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/ImplementationGuide/ans.fhir.fr.sas | *Version*:1.2.0 |
-| Active as of 2026-04-29 | *Computable Name*:SAS |
+| Active as of 2026-04-30 | *Computable Name*:SAS |
 
 >  **Attention !** Cette version de l'Implementation Guide est en intégration continue et est soumise à des changements réguliers. La version officielle est accessible à l'adresse [https://interop.esante.gouv.fr/ig/fhir/sas](https://interop.esante.gouv.fr/ig/fhir/sas) 
 
@@ -106,7 +106,7 @@ La fludification du parcours régulateurs inclut les éléments suivants :
   "name" : "SAS",
   "title" : "Service d'Accès aux Soins",
   "status" : "active",
-  "date" : "2026-04-29T07:27:44+00:00",
+  "date" : "2026-04-30T07:27:20+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -1316,6 +1316,18 @@ La fludification du parcours régulateurs inclut les éléments suivants :
       },
       "name" : "ExampleSlotPSIndiv4",
       "description" : "Exemple 4 ressource slot PS indiv",
+      "exampleCanonical" : "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Slot"
+      }],
+      "reference" : {
+        "reference" : "Slot/ExampleSlotPSIndiv5"
+      },
+      "name" : "ExampleSlotPSIndiv5",
+      "description" : "Exemple 5 ressource slot PS indiv",
       "exampleCanonical" : "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"
     },
     {
