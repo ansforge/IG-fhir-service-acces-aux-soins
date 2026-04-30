@@ -21,7 +21,7 @@ Description: "Profil de Slot, dérivé de FrSlot, pour le service d'agrégation 
     
 * specialty.coding[specialtycoding].system = "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"
 * specialty.coding[specialtycoding].code 1..1
-* specialty.coding[specialtycoding] from fr-practitioner-specialty (required)
+* specialty.coding[specialtycoding] from fr-contact-relationship (required)
 
 * specialty.text 0..1
 
