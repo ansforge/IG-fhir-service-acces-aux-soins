@@ -21,7 +21,9 @@ Description: "Profil de Slot, dérivé de FrSlot, pour le service d'agrégation 
     
 * specialty.coding[specialtycoding].system = "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"
 * specialty.coding[specialtycoding].code 1..1
-* specialty.coding[specialtycoding] ^binding.strength = #required
+* specialty.coding[specialtycoding] from fr-practitioner-specialty (required)
+
+* specialty.text 0..1
 
 * appointmentType ^short = "Créneau avec ou sans RDV"
 * appointmentType ^binding.strength = #preferred
