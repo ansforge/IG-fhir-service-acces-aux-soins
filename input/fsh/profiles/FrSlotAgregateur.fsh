@@ -21,7 +21,7 @@ Description: "Profil de Slot, dérivé de FrSlot, pour le service d'agrégation 
     
 * specialty.coding[specialtycoding].system 1..1
 * specialty.coding[specialtycoding].code 1..1
-* specialty.coding[specialtyVS] ^binding.strength = #required
+* specialty.coding[specialtycoding] ^binding.strength = #required
 
 * specialty.text 0..*
 
