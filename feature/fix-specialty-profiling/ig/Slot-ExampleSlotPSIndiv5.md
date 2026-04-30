@@ -12,7 +12,7 @@ Label de sécurité: Créneau accessible par l'ensemble des professionnels de sa
 
 **serviceType**: ambulatory, Visite urgente
 
-**specialty**: Médecine générale
+**specialty**: Médecine générale (SM), Médecine générale
 
 **appointmentType**: A previously unscheduled walk-in visit
 
@@ -49,6 +49,12 @@ Label de sécurité: Créneau accessible par l'ensemble des professionnels de sa
     "text" : "Visite urgente"
   }],
   "specialty" : [{
+    "coding" : [{
+      "system" : "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
+      "code" : "SM54"
+    }]
+  },
+  {
     "text" : "Médecine générale"
   }],
   "appointmentType" : {
