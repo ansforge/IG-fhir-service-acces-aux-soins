@@ -12,7 +12,7 @@ Label de sécurités: Créneau accessible par le grand public (Détails : code T
 
 **serviceType**: virtual, Visite de contrôle, Consultation de suivi pneumologie
 
-**specialty**: Pneumologie (SM)
+**specialty**: Pneumologie (SM), Pneumologie
 
 **appointmentType**: Routine appointment - default if not valued
 
@@ -62,6 +62,9 @@ Label de sécurités: Créneau accessible par le grand public (Détails : code T
       "system" : "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
       "code" : "SM41"
     }]
+  },
+  {
+    "text" : "Pneumologie"
   }],
   "appointmentType" : {
     "coding" : [{
