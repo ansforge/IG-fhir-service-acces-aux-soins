@@ -14,13 +14,16 @@
     "StructureDefinition-FrSlotAgregateur.html" : "FrSlotAgregateur"
   },
   {
-    "url" : "http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty",
+    "url" : "http://interopsante.org/fhir/ValueSet/fr-contact-relationship",
     "version" : "1.0.1",
     "status" : "active",
-    "name" : "fr-practitioner-specialty",
+    "name" : "fr-contact-relationship",
     "title" : null,
-    "description" : "The modalities of exercice of the practitioner, registered by an official organization for a period of time.",
-    "systems" : ["https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"],
+    "description" : "A set of codes that can be used to indicate the relationship between a Patient and a Related Person.",
+    "systems" : ["http://hl7.org/fhir/v2/0131",
+    "http://interopsante.org/fhir/CodeSystem/fr-contact-relationship"],
+    "oids" : ["2.16.840.1.113883.2.8.1.1"],
+    "sources" : ["2.16.840.1.113883.2.8.1.1"],
     "uses" : {
     },
     "StructureDefinition-FrSlotAgregateur.html" : "FrSlotAgregateur"
@@ -51,8 +54,8 @@
     "sources" : ["2.16.840.1.113883.1.11.13955"],
     "uses" : {
     },
-    "StructureDefinition-sas-cpts-slot-aggregator.html" : "FrSlotAgregateurCPTS",
-    "StructureDefinition-FrSlotAgregateur.html" : "FrSlotAgregateur"
+    "StructureDefinition-FrSlotAgregateur.html" : "FrSlotAgregateur",
+    "StructureDefinition-sas-cpts-slot-aggregator.html" : "FrSlotAgregateurCPTS"
   },
   {
     "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/categorie-orientation-sas-valueset",

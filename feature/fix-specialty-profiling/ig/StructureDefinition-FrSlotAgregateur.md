@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-FrSlotAgregateur.csv
   "version" : "1.2.0",
   "name" : "FrSlotAgregateur",
   "status" : "active",
-  "date" : "2026-04-30T13:33:12+00:00",
+  "date" : "2026-04-30T13:47:19+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -127,7 +127,7 @@ Other representations of profile: [CSV](StructureDefinition-FrSlotAgregateur.csv
       "max" : "*",
       "binding" : {
         "strength" : "required",
-        "valueSet" : "http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty"
+        "valueSet" : "http://interopsante.org/fhir/ValueSet/fr-contact-relationship"
       }
     },
     {
