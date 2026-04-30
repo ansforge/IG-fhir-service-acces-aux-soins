@@ -8,7 +8,7 @@ Usage: #example
 * serviceType[+].coding = $v3-ActCode#AMB
 * serviceType[+].text = "Visite urgente"
 * specialty[+].coding = https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale#SM54
-* specialty[=].coding = "Médecine générale"
+* specialty[=].text = "Médecine générale"
 * appointmentType[+].coding = $v2-0276#WALKIN
 * schedule = Reference(ExampleSchedule2)
 * start = "2021-11-05T11:00:00.000+00:00"
