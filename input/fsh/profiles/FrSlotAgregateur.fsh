@@ -12,19 +12,6 @@ Description: "Profil de Slot, dérivé de FrSlot, pour le service d'agrégation 
 * serviceType contains TypeConsultation 0..*
 * serviceType[TypeConsultation] from $v3-ActEncounterCode (required)
 * serviceType[TypeConsultation].coding.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
-
-* specialty ^definition = "Spécialités ou compétences particulières du PS associées au créneau"
-* specialty.coding ^slicing.discriminator.type = #value
-* specialty.coding ^slicing.discriminator.path = "system"
-* specialty.coding ^slicing.rules = #open
-* specialty.coding contains specialtycoding 0..*
-    
-* specialty.coding[specialtycoding].system = "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"
-* specialty.coding[specialtycoding].code 1..1
-* specialty.coding[specialtycoding] from fr-contact-relationship (required)
-
-* specialty.text 0..1
-
 * appointmentType ^short = "Créneau avec ou sans RDV"
 * appointmentType ^binding.strength = #preferred
 * appointmentType ^binding.description = "ROUTINE – Créneau avec prise de RDV possible, WALKIN – Créneau sans prise de RDV possible"
