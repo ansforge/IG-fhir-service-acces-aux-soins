@@ -1,9 +1,9 @@
 SAS : Validation Results
 =========================================
 
-err = 64, warn = 99, info = 176
+err = 63, warn = 99, info = 176
 IG Publisher Version: 2.2.7
-Generated Thu Apr 30 12:49:07 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.sas#1.2.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/sas)
+Generated Thu Apr 30 13:18:14 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.sas#1.2.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/sas)
  Build Errors : 0 / 10 / 1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Appointment-1 : 0 / 3 / 3
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Appointment-2 : 0 / 3 / 3
@@ -69,7 +69,7 @@ Generated Thu Apr 30 12:49:07 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.sas#1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/StructureDefinition-FrPractitionerRegul : 1 / 7 / 11
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/StructureDefinition-FrPractitionerRoleExerciceAgregateur : 3 / 0 / 7
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/StructureDefinition-FrScheduleAgregateur : 3 / 0 / 3
- /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/StructureDefinition-FrSlotAgregateur : 4 / 2 / 2
+ /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/StructureDefinition-FrSlotAgregateur : 3 / 2 / 2
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/StructureDefinition-sas-categorie-orientation : 1 / 1 / 1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/StructureDefinition-sas-cpts-bundle-aggregator : 1 / 0 / 1
  /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/StructureDefinition-sas-cpts-healthcareservice-aggregator : 1 / 0 / 3
@@ -419,7 +419,6 @@ ERROR: /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-a
 ERROR: StructureDefinition.where(url = 'http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur'): Conformance resource /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/StructureDefinition-FrSlotAgregateur.json - the canonical URL (https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrSlotAgregateur) does not match the URL (http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur). Use the special-url parameter if you really mean for it not to match
 ERROR: StructureDefinition/FrSlotAgregateur: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. Valid display is 'France (la)' (fr) (for the language(s) 'fr-FR')
 INFORMATION: StructureDefinition/FrSlotAgregateur: StructureDefinition.snapshot.element[24].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
-ERROR: StructureDefinition/FrSlotAgregateur: StructureDefinition.snapshot.element[44]: Constraint failed: sdf-10: 'provide either a binding reference or a description (or both) (binding.empty() or binding.valueSet.exists() or binding.description.exists())' (defined in http://hl7.org/fhir/StructureDefinition/StructureDefinition)
 WARNING: StructureDefinition/FrSlotAgregateur: StructureDefinition.snapshot.element[53].binding.valueSet: There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v2-0276'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '3.0.0', found versions: 2.0.0 (from hl7.terminology.r4#6.0.2), 3.0.0 (from hl7.terminology.r4#7.1.0). Suggested fix: change the canonical reference from 'http://terminology.hl7.org/ValueSet/v2-0276' to 'http://terminology.hl7.org/ValueSet/v2-0276|3.0.0'
 WARNING: StructureDefinition/FrSlotAgregateur: StructureDefinition.differential.element[9].binding.valueSet: There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v2-0276'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '3.0.0', found versions: 2.0.0 (from hl7.terminology.r4#6.0.2), 3.0.0 (from hl7.terminology.r4#7.1.0). Suggested fix: change the canonical reference from 'http://terminology.hl7.org/ValueSet/v2-0276' to 'http://terminology.hl7.org/ValueSet/v2-0276|3.0.0'
 ERROR: /home/runner/work/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/StructureDefinition-FrSlotAgregateur: URL Mismatch https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrSlotAgregateur vs http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur

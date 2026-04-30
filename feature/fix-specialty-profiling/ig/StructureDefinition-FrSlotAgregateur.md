@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-FrSlotAgregateur.csv
   "version" : "1.2.0",
   "name" : "FrSlotAgregateur",
   "status" : "active",
-  "date" : "2026-04-30T12:46:52+00:00",
+  "date" : "2026-04-30T13:16:04+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -126,7 +126,8 @@ Other representations of profile: [CSV](StructureDefinition-FrSlotAgregateur.csv
       "min" : 0,
       "max" : "*",
       "binding" : {
-        "strength" : "required"
+        "strength" : "required",
+        "valueSet" : "http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty"
       }
     },
     {
