@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-FrSlotAgregateur.csv
   "version" : "1.2.0",
   "name" : "FrSlotAgregateur",
   "status" : "active",
-  "date" : "2026-04-30T13:47:19+00:00",
+  "date" : "2026-04-30T14:01:16+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -102,44 +102,6 @@ Other representations of profile: [CSV](StructureDefinition-FrSlotAgregateur.csv
       "path" : "Slot.serviceType.coding.system",
       "min" : 1,
       "patternUri" : "http://terminology.hl7.org/CodeSystem/v3-ActCode"
-    },
-    {
-      "id" : "Slot.specialty",
-      "path" : "Slot.specialty",
-      "definition" : "Spécialités ou compétences particulières du PS associées au créneau"
-    },
-    {
-      "id" : "Slot.specialty.coding",
-      "path" : "Slot.specialty.coding",
-      "slicing" : {
-        "discriminator" : [{
-          "type" : "value",
-          "path" : "system"
-        }],
-        "rules" : "open"
-      }
-    },
-    {
-      "id" : "Slot.specialty.coding:specialtycoding",
-      "path" : "Slot.specialty.coding",
-      "sliceName" : "specialtycoding",
-      "min" : 0,
-      "max" : "*",
-      "binding" : {
-        "strength" : "required",
-        "valueSet" : "http://interopsante.org/fhir/ValueSet/fr-contact-relationship"
-      }
-    },
-    {
-      "id" : "Slot.specialty.coding:specialtycoding.system",
-      "path" : "Slot.specialty.coding.system",
-      "min" : 1,
-      "patternUri" : "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"
-    },
-    {
-      "id" : "Slot.specialty.coding:specialtycoding.code",
-      "path" : "Slot.specialty.coding.code",
-      "min" : 1
     },
     {
       "id" : "Slot.appointmentType",
