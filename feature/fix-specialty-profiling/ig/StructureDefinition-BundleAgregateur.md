@@ -40,7 +40,7 @@ Other representations of profile: [CSV](StructureDefinition-BundleAgregateur.csv
   "version" : "1.2.0",
   "name" : "BundleAgregateur",
   "status" : "active",
-  "date" : "2026-04-30T09:39:49+00:00",
+  "date" : "2026-04-30T09:58:38+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

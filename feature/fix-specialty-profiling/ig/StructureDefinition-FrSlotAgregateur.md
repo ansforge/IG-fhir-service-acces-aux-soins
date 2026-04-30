@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-FrSlotAgregateur.csv
   "version" : "1.2.0",
   "name" : "FrSlotAgregateur",
   "status" : "active",
-  "date" : "2026-04-30T09:39:49+00:00",
+  "date" : "2026-04-30T09:58:38+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -132,7 +132,8 @@ Other representations of profile: [CSV](StructureDefinition-FrSlotAgregateur.csv
     {
       "id" : "Slot.specialty.coding:specialtycoding.system",
       "path" : "Slot.specialty.coding.system",
-      "min" : 1
+      "min" : 1,
+      "patternUri" : "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"
     },
     {
       "id" : "Slot.specialty.coding:specialtycoding.code",
