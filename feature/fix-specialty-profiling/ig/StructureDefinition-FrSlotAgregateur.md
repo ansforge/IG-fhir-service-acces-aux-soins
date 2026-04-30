@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-FrSlotAgregateur.csv
   "version" : "1.2.0",
   "name" : "FrSlotAgregateur",
   "status" : "active",
-  "date" : "2026-04-30T08:30:02+00:00",
+  "date" : "2026-04-30T08:50:01+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -106,15 +106,38 @@ Other representations of profile: [CSV](StructureDefinition-FrSlotAgregateur.csv
     {
       "id" : "Slot.specialty",
       "path" : "Slot.specialty",
-      "binding" : {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-          "valueString" : "specialty"
+      "definition" : "Spécialités ou compétences particulières du PS associées au créneau"
+    },
+    {
+      "id" : "Slot.specialty.coding",
+      "path" : "Slot.specialty.coding",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "value",
+          "path" : "system"
         }],
-        "strength" : "required",
-        "description" : "Spécialités ou compétences particulières du PS associées au créneau",
-        "valueSet" : "http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty"
+        "rules" : "open"
       }
+    },
+    {
+      "id" : "Slot.specialty.coding:specialtycoding",
+      "path" : "Slot.specialty.coding",
+      "sliceName" : "specialtycoding",
+      "min" : 0,
+      "max" : "*",
+      "binding" : {
+        "strength" : "required"
+      }
+    },
+    {
+      "id" : "Slot.specialty.coding:specialtycoding.system",
+      "path" : "Slot.specialty.coding.system",
+      "min" : 1
+    },
+    {
+      "id" : "Slot.specialty.coding:specialtycoding.code",
+      "path" : "Slot.specialty.coding.code",
+      "min" : 1
     },
     {
       "id" : "Slot.appointmentType",
