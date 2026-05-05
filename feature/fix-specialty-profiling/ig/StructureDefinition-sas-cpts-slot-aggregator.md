@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator | *Version*:1.2.0 |
-| Active as of 2026-04-30 | *Computable Name*:FrSlotAgregateurCPTS |
+| Active as of 2026-05-05 | *Computable Name*:FrSlotAgregateurCPTS |
 
  
 Profil de Slot, dérivé de FrSlot, pour le cas d'usage agrégateur de la plateforme SAS - cas d'usage CPTS 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-sas-cpts-slot-aggreg
   "version" : "1.2.0",
   "name" : "FrSlotAgregateurCPTS",
   "status" : "active",
-  "date" : "2026-04-30T14:01:16+00:00",
+  "date" : "2026-05-05T11:38:46+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

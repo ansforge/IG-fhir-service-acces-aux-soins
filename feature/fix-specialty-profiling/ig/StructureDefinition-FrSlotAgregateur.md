@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur | *Version*:1.2.0 |
-| Active as of 2026-04-30 | *Computable Name*:FrSlotAgregateur |
+| Active as of 2026-05-05 | *Computable Name*:FrSlotAgregateur |
 
  
 Profil de Slot, dérivé de FrSlot, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-FrSlotAgregateur.csv
   "version" : "1.2.0",
   "name" : "FrSlotAgregateur",
   "status" : "active",
-  "date" : "2026-04-30T14:01:16+00:00",
+  "date" : "2026-05-05T11:38:46+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -102,6 +102,19 @@ Other representations of profile: [CSV](StructureDefinition-FrSlotAgregateur.csv
       "path" : "Slot.serviceType.coding.system",
       "min" : 1,
       "patternUri" : "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+    },
+    {
+      "id" : "Slot.specialty",
+      "path" : "Slot.specialty",
+      "binding" : {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+          "valueString" : "specialty"
+        }],
+        "strength" : "required",
+        "description" : "Spécialités ou compétences particulières du PS associées au créneau",
+        "valueSet" : "http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty"
+      }
     },
     {
       "id" : "Slot.appointmentType",

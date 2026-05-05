@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://sas.fr/fhir/StructureDefinition/BundleAgregateur | *Version*:1.2.0 |
-| Active as of 2026-04-30 | *Computable Name*:BundleAgregateur |
+| Active as of 2026-05-05 | *Computable Name*:BundleAgregateur |
 
  
 Profil de Bundle qui représente le flux de réponse contenant les créneaux disponibles dans le cadre du service d'agrégation de créneaux de la plateforme SAS - Cas d'usage PS Indiv 
@@ -40,7 +40,7 @@ Other representations of profile: [CSV](StructureDefinition-BundleAgregateur.csv
   "version" : "1.2.0",
   "name" : "BundleAgregateur",
   "status" : "active",
-  "date" : "2026-04-30T14:01:16+00:00",
+  "date" : "2026-05-05T11:38:46+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
