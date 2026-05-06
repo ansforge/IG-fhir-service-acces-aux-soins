@@ -106,7 +106,7 @@ La fludification du parcours régulateurs inclut les éléments suivants :
   "name" : "SAS",
   "title" : "Service d'Accès aux Soins",
   "status" : "active",
-  "date" : "2026-05-06T09:08:16+00:00",
+  "date" : "2026-05-06T11:48:14+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -196,6 +196,17 @@ La fludification du parcours régulateurs inclut les éléments suivants :
       {
         "url" : "value",
         "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "i18n-default-lang"
+      },
+      {
+        "url" : "value",
+        "valueString" : "fr-FR"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -486,6 +497,17 @@ La fludification du parcours régulateurs inclut les éléments suivants :
       {
         "url" : "value",
         "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "i18n-default-lang"
+      },
+      {
+        "url" : "value",
+        "valueString" : "fr-FR"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
