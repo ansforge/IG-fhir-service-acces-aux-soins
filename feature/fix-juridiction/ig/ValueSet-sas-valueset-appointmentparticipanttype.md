@@ -51,7 +51,7 @@ Ce jeu de valeurs n'est pas utilisé ici ; il peut être utilisé autre part (pa
   "title" : "Appointment Participant Type SAS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-05-06T11:59:43+00:00",
+  "date" : "2026-05-06T16:23:13+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
