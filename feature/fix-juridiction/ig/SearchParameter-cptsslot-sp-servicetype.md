@@ -26,7 +26,7 @@ Paramètre de recherche sur le service type qui mime le paramètre R5. Permet de
   "version" : "1.2.0",
   "name" : "SPServiceTypeCPTS",
   "status" : "active",
-  "date" : "2026-05-06T06:56:43+00:00",
+  "date" : "2026-05-06T06:58:56+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -40,7 +40,7 @@ Paramètre de recherche sur le service type qui mime le paramètre R5. Permet de
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
       "code" : "FR",
-      "display" : "FRANCE"
+      "display" : "France"
     }]
   }],
   "code" : "service-type-reference",

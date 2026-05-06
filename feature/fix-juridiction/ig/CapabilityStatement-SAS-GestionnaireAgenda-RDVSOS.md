@@ -44,7 +44,7 @@ Un gestionnaire d'agenda reçoit des rendez-vous SOS envoyés par un déclarant 
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
       "code" : "FR",
-      "display" : "FRANCE"
+      "display" : "France"
     }]
   }],
   "kind" : "requirements",

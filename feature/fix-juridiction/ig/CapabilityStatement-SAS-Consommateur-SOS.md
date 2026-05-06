@@ -44,7 +44,7 @@ Un consommateur consulte les créneaux SOS mis à disposition par un gestionnair
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
       "code" : "FR",
-      "display" : "FRANCE"
+      "display" : "France"
     }]
   }],
   "kind" : "requirements",

@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-sas-categorie-orient
   "version" : "1.2.0",
   "name" : "CategorieOrientation",
   "status" : "active",
-  "date" : "2026-05-06T06:56:43+00:00",
+  "date" : "2026-05-06T06:58:56+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -61,7 +61,7 @@ Other representations of profile: [CSV](StructureDefinition-sas-categorie-orient
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
       "code" : "FR",
-      "display" : "FRANCE"
+      "display" : "France"
     }]
   }],
   "fhirVersion" : "4.0.1",
