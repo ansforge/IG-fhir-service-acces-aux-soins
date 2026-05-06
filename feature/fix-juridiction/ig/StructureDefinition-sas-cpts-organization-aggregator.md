@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-sas-cpts-organizatio
   "version" : "1.2.0",
   "name" : "FrOrganizationAgregateurCPTS",
   "status" : "active",
-  "date" : "2026-05-06T06:58:56+00:00",
+  "date" : "2026-05-06T09:08:16+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -56,7 +56,7 @@ Other representations of profile: [CSV](StructureDefinition-sas-cpts-organizatio
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
       "code" : "FR",
-      "display" : "France"
+      "display" : "France (la)"
     }]
   }],
   "fhirVersion" : "4.0.1",
