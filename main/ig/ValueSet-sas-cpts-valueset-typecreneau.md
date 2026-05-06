@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-cpts-valueset-typecreneau | *Version*:1.2.0 |
-| Active as of 2025-12-11 | *Computable Name*:TypeCreneauSASCPTS |
+| Active as of 2026-05-06 | *Computable Name*:TypeCreneauSASCPTS |
 
  
 Type de Créneaux SAS CPTS 
@@ -51,55 +51,43 @@ Type de Créneaux SAS CPTS
   "title" : "Type créneaux SAS CPTS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2025-12-11T11:06:01+00:00",
+  "date" : "2026-05-06T06:43:41+00:00",
   "publisher" : "ANS",
-  "contact" : [
-    {
-      "name" : "ANS",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://esante.gouv.fr"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "ANS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
   "description" : "Type de Créneaux SAS CPTS",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "compose" : {
-    "include" : [
+    "include" : [{
+      "system" : "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
+      "concept" : [{
+        "code" : "PUBLIC",
+        "display" : "Créneau accessible par le grand public"
+      },
       {
-        "system" : "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
-        "concept" : [
-          {
-            "code" : "PUBLIC",
-            "display" : "Créneau accessible par le grand public"
-          },
-          {
-            "code" : "SNP",
-            "display" : "Créneau accessible par les Régulateurs et Organisateurs de Soins Non Programmés"
-          },
-          {
-            "code" : "PRO",
-            "display" : "Créneau accessible par les professionnels de santé"
-          },
-          {
-            "code" : "CPTS",
-            "display" : "Créneau accessible par les CPTS"
-          }
-        ]
-      }
-    ]
+        "code" : "SNP",
+        "display" : "Créneau accessible par les Régulateurs et Organisateurs de Soins Non Programmés"
+      },
+      {
+        "code" : "PRO",
+        "display" : "Créneau accessible par les professionnels de santé"
+      },
+      {
+        "code" : "CPTS",
+        "display" : "Créneau accessible par les CPTS"
+      }]
+    }]
   }
 }
 

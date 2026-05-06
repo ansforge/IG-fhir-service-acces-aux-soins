@@ -10,7 +10,7 @@ Profil: [FrScheduleAgregateur](StructureDefinition-FrScheduleAgregateur.md)
 
 **actor**: 
 
-* [Practitioner Pierre Foret](Practitioner-ExamplePractitioner.md)
+* [Practitioner Pierre Foret ](Practitioner-ExamplePractitioner.md)
 * [PractitionerRole : telecom = ph: +33561855977](PractitionerRole-ExamplePractitionerRoleAgregateur.md)
 
 
@@ -22,18 +22,14 @@ Profil: [FrScheduleAgregateur](StructureDefinition-FrScheduleAgregateur.md)
   "resourceType" : "Schedule",
   "id" : "ExampleSchedule",
   "meta" : {
-    "profile" : [
-      "http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"
-    ]
+    "profile" : ["http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"]
   },
-  "actor" : [
-    {
-      "reference" : "Practitioner/ExamplePractitioner"
-    },
-    {
-      "reference" : "PractitionerRole/ExamplePractitionerRoleAgregateur"
-    }
-  ]
+  "actor" : [{
+    "reference" : "Practitioner/ExamplePractitioner"
+  },
+  {
+    "reference" : "PractitionerRole/ExamplePractitionerRoleAgregateur"
+  }]
 }
 
 ```

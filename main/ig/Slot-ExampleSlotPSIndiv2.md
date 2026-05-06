@@ -12,7 +12,7 @@ Label de sécurité: Créneau accessible par l'ensemble des professionnels de sa
 
 **serviceType**: ambulatory, Visite urgente
 
-**specialty**: Médecine générale (SM)
+**specialty**: Médecine générale
 
 **appointmentType**: A previously unscheduled walk-in visit
 
@@ -34,43 +34,32 @@ Label de sécurité: Créneau accessible par l'ensemble des professionnels de sa
   "id" : "ExampleSlotPSIndiv2",
   "meta" : {
     "profile" : ["http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"],
-    "security" : [
-      {
-        "system" : "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
-        "code" : "PRO"
-      }
-    ]
+    "security" : [{
+      "system" : "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
+      "code" : "PRO"
+    }]
   },
-  "serviceType" : [
-    {
-      "coding" : [
-        {
-          "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-          "code" : "AMB"
-        }
-      ]
-    },
-    {
-      "text" : "Visite urgente"
-    }
-  ],
-  "specialty" : [
-    {
-      "coding" : [
-        {
-          "system" : "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
-          "code" : "SM54"
-        }
-      ]
-    }
-  ],
+  "serviceType" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "code" : "AMB"
+    }]
+  },
+  {
+    "text" : "Visite urgente"
+  }],
+  "specialty" : [{
+    "coding" : [{
+      "system" : "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
+      "code" : "SM54"
+    }],
+    "text" : "Médecine générale"
+  }],
   "appointmentType" : {
-    "coding" : [
-      {
-        "system" : "http://terminology.hl7.org/CodeSystem/v2-0276",
-        "code" : "WALKIN"
-      }
-    ]
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0276",
+      "code" : "WALKIN"
+    }]
   },
   "schedule" : {
     "reference" : "Schedule/ExampleSchedule2"

@@ -10,7 +10,7 @@ Profil: [FrScheduleAgregateur](StructureDefinition-FrScheduleAgregateur.md)
 
 **actor**: 
 
-* [Practitioner Sébastien THOMAS](Practitioner-ExamplePractitioner2.md)
+* [Practitioner Sébastien THOMAS ](Practitioner-ExamplePractitioner2.md)
 * [PractitionerRole](PractitionerRole-ExamplePractitionerRoleAgregateur3.md)
 
 
@@ -22,18 +22,14 @@ Profil: [FrScheduleAgregateur](StructureDefinition-FrScheduleAgregateur.md)
   "resourceType" : "Schedule",
   "id" : "ExampleSchedule2",
   "meta" : {
-    "profile" : [
-      "http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"
-    ]
+    "profile" : ["http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"]
   },
-  "actor" : [
-    {
-      "reference" : "Practitioner/ExamplePractitioner2"
-    },
-    {
-      "reference" : "PractitionerRole/ExamplePractitionerRoleAgregateur3"
-    }
-  ]
+  "actor" : [{
+    "reference" : "Practitioner/ExamplePractitioner2"
+  },
+  {
+    "reference" : "PractitionerRole/ExamplePractitionerRoleAgregateur3"
+  }]
 }
 
 ```

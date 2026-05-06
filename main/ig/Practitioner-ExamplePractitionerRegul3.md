@@ -28,37 +28,27 @@ Profil: [FrPractitionerRegul](StructureDefinition-FrPractitionerRegul.md)
   "id" : "ExamplePractitionerRegul3",
   "meta" : {
     "source" : "urn:oid:1.2.250.1.213.3.6",
-    "profile" : [
-      "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul"
-    ]
+    "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul"]
   },
-  "identifier" : [
-    {
-      "type" : {
-        "coding" : [
-          {
-            "system" : "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
-            "code" : "IDNPS"
-          }
-        ]
-      },
-      "system" : "urn:oid:1.2.250.1.71.4.2.1",
-      "value" : "810002673899"
-    }
-  ],
+  "identifier" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
+        "code" : "IDNPS"
+      }]
+    },
+    "system" : "urn:oid:1.2.250.1.71.4.2.1",
+    "value" : "810002673899"
+  }],
   "active" : false,
-  "name" : [
-    {
-      "family" : "MARIUS",
-      "given" : ["Jules"]
-    }
-  ],
-  "telecom" : [
-    {
-      "system" : "email",
-      "value" : "jules.marius@test.com"
-    }
-  ]
+  "name" : [{
+    "family" : "MARIUS",
+    "given" : ["Jules"]
+  }],
+  "telecom" : [{
+    "system" : "email",
+    "value" : "jules.marius@test.com"
+  }]
 }
 
 ```

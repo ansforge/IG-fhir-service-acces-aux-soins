@@ -9,18 +9,18 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-organization-aggregator | *Version*:1.2.0 |
-| Active as of 2025-12-11 | *Computable Name*:FrOrganizationAgregateurCPTS |
+| Active as of 2026-05-06 | *Computable Name*:FrOrganizationAgregateurCPTS |
 
  
 Profil dérivé de FrOrganization pour le cas d'usage agrégateur de la plateforme SAS - cas d'usage CPTS 
 
 **Utilisations:**
 
-* Utiliser ce Profil: [BundleAgregateurCPTS](StructureDefinition-sas-cpts-bundle-aggregator.md)
-* Référer à ce Profil: [FrHealthcareServiceAgregateurCPTS](StructureDefinition-sas-cpts-healthcareservice-aggregator.md)
-* Exemples pour ce Profil: [CPTS AXE MAJEUR](Organization-ExampleOrgaCPTS1.md) and [CPTS VAL D OISE CENTRE](Organization-ExampleOrgaCPTS2.md)
+* Utilise ce/t/te Profil: [BundleAgregateurCPTS](StructureDefinition-sas-cpts-bundle-aggregator.md)
+* Référence ce Profil: [FrHealthcareServiceAgregateurCPTS](StructureDefinition-sas-cpts-healthcareservice-aggregator.md)
+* Exemples pour ce/t/te Profil: [CPTS AXE MAJEUR](Organization-ExampleOrgaCPTS1.md) and [CPTS VAL D OISE CENTRE](Organization-ExampleOrgaCPTS2.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.sas|current/StructureDefinition/sas-cpts-organization-aggregator)
+Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.sas|current/StructureDefinition/sas-cpts-organization-aggregator)
 
 ### Formal Views of Profile Content
 
@@ -42,31 +42,23 @@ Other representations of profile: [CSV](StructureDefinition-sas-cpts-organizatio
   "version" : "1.2.0",
   "name" : "FrOrganizationAgregateurCPTS",
   "status" : "active",
-  "date" : "2025-12-11T11:06:01+00:00",
+  "date" : "2026-05-06T06:43:41+00:00",
   "publisher" : "ANS",
-  "contact" : [
-    {
-      "name" : "ANS",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://esante.gouv.fr"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "ANS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
   "description" : "Profil dérivé de FrOrganization pour le cas d'usage agrégateur de la plateforme SAS - cas d'usage CPTS",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "fhirVersion" : "4.0.1",
   "kind" : "resource",
   "abstract" : false,
@@ -74,50 +66,44 @@ Other representations of profile: [CSV](StructureDefinition-sas-cpts-organizatio
   "baseDefinition" : "http://interopsante.org/fhir/StructureDefinition/FrOrganization",
   "derivation" : "constraint",
   "differential" : {
-    "element" : [
-      {
-        "id" : "Organization.identifier",
-        "path" : "Organization.identifier",
-        "min" : 1,
-        "max" : "1",
-        "constraint" : [
-          {
-            "key" : "FINESS-invariant",
-            "severity" : "error",
-            "human" : "Le numéro FINESS doit être préfixé par 1 suivi de 9 caractères numériques",
-            "expression" : "value.matches('^1[0-9]{9}$')",
-            "source" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-organization-aggregator"
-          }
-        ]
-      },
-      {
-        "id" : "Organization.identifier.type",
-        "path" : "Organization.identifier.type",
-        "patternCodeableConcept" : {
-          "coding" : [
-            {
-              "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203",
-              "code" : "IDNST"
-            }
-          ]
-        }
-      },
-      {
-        "id" : "Organization.identifier.system",
-        "path" : "Organization.identifier.system",
-        "patternUri" : "urn:oid:1.2.250.1.71.4.2.2"
-      },
-      {
-        "id" : "Organization.name",
-        "path" : "Organization.name",
-        "mustSupport" : true
-      },
-      {
-        "id" : "Organization.telecom",
-        "path" : "Organization.telecom",
-        "mustSupport" : true
+    "element" : [{
+      "id" : "Organization.identifier",
+      "path" : "Organization.identifier",
+      "min" : 1,
+      "max" : "1",
+      "constraint" : [{
+        "key" : "FINESS-invariant",
+        "severity" : "error",
+        "human" : "Le numéro FINESS doit être préfixé par 1 suivi de 9 caractères numériques",
+        "expression" : "value.matches('^1[0-9]{9}$')",
+        "source" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-organization-aggregator"
+      }]
+    },
+    {
+      "id" : "Organization.identifier.type",
+      "path" : "Organization.identifier.type",
+      "patternCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203",
+          "code" : "IDNST"
+        }]
       }
-    ]
+    },
+    {
+      "id" : "Organization.identifier.system",
+      "path" : "Organization.identifier.system",
+      "patternUri" : "urn:oid:1.2.250.1.71.4.2.2"
+    },
+    {
+      "id" : "Organization.name",
+      "path" : "Organization.name",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Organization.telecom",
+      "path" : "Organization.telecom",
+      "mustSupport" : true
+    }]
   }
 }
 

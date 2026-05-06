@@ -144,11 +144,11 @@ Le LRM pourra envoyer des messages de type :
 Lorsqu’un régulateur prend RDV pour un patient via la plateforme numérique SAS, celle-ci transmet un message de création de RDV qui suivra les modalités suivantes :
 
 * **Protocole** : AMQP 0-9-1
-
-* **En-tête** : EDXL-DE, RC-DE
+ 
+* **En-tête** : EDXL-DE, RC-DE 
 * **Sender** : fr.health.ptfsas
-
-* **Format du message contenu** : JSON
+ 
+* **Format du message contenu** : JSON 
 
 Le message json contenant les données et encapsulé dans l'entête EDXL-DE (et dans l'entête RC-DE) respecte le format suivant :
 
@@ -355,14 +355,14 @@ La mise à jour des données du RDV peut porter sur chacun des éléments décri
 Le message transmis pour la mise à jour du RDV devra suivre les modalités suivantes :
 
 * **Protocole** : AMQP 0-9-1
-
-* **En-tête** : EDXL-DE, RC-DE
-* **Sender** : fr.health.ptfsas
-* **Format du message contenu** : JSON
+ 
+* **En-tête** : EDXL-DE, RC-DE 
+* **Sender** : fr.health.ptfsas 
+* **Format du message contenu** : JSON 
 
 Le fichier json encapsulé dans l'entête aura le champ `method` valorisé à `UpdateAppointment` et contiendra les données modifiées / ajoutées / supprimées par rapport au message de création (selon le format décrit au paragraphe précédent) afin que les données pour un même identifiant de RDV puissent être mises à jour
 
-**L’identifiant technique SAS du RDV (champ`appointmentId`)** transmis sera stocké par la solution éditeur LRM pour identification du RDV sur lequel porte les mises à jour éventuelles.
+**L’identifiant technique SAS du RDV (champ `appointmentId`)** transmis sera stocké par la solution éditeur LRM pour identification du RDV sur lequel porte les mises à jour éventuelles.
 
 **En cas de réception d'un message de mise à jour sur un identifiant inconnu, la solution LRM devra pouvoir gérer le message en tant que création avec les données contenues dans le message à l'instant t.**
 

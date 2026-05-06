@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-appointmentreason | *Version*:1.2.0 |
-| Active as of 2025-12-11 | *Computable Name*:AppointmentReasonSAS |
+| Active as of 2026-05-06 | *Computable Name*:AppointmentReasonSAS |
 
  
 Appointment reason SAS 
@@ -52,47 +52,36 @@ Appointment reason SAS
   "title" : "Appointment reason SAS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2025-12-11T11:06:01+00:00",
+  "date" : "2026-05-06T06:43:41+00:00",
   "publisher" : "ANS",
-  "contact" : [
-    {
-      "name" : "ANS",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://esante.gouv.fr"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "ANS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
   "description" : "Appointment reason SAS",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "compose" : {
-    "include" : [
+    "include" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0276",
+      "version" : "3.0.0",
+      "concept" : [{
+        "code" : "ROUTINE",
+        "display" : "Créneau avec prise de RDV possible"
+      },
       {
-        "system" : "http://terminology.hl7.org/CodeSystem/v2-0276",
-        "concept" : [
-          {
-            "code" : "ROUTINE",
-            "display" : "Créneau avec prise de RDV possible"
-          },
-          {
-            "code" : "WALKIN",
-            "display" : "Créneau sans prise de RDV possible à domicile"
-          }
-        ]
-      }
-    ]
+        "code" : "WALKIN",
+        "display" : "Créneau sans prise de RDV possible à domicile"
+      }]
+    }]
   }
 }
 

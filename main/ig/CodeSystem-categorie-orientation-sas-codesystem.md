@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/CodeSystem/categorie-orientation-sas-codesystem | *Version*:1.2.0 |
-| Active as of 2025-12-11 | *Computable Name*:CategorieOrientationSASCodeSystem |
+| Active as of 2026-05-06 | *Computable Name*:CategorieOrientationSASCodeSystem |
 
  
 Code système permettant de définir la catégorie d'orientation SAS spécifique qui n'est pas considéré comme un établissement de soins et qui permet de catégoriser l'orientation de soins 
@@ -32,51 +32,41 @@ Code système permettant de définir la catégorie d'orientation SAS spécifique
   "title" : "Code système catégorie orientation SAS",
   "status" : "active",
   "experimental" : true,
-  "date" : "2025-12-11T11:06:01+00:00",
+  "date" : "2026-05-06T06:43:41+00:00",
   "publisher" : "ANS",
-  "contact" : [
-    {
-      "name" : "ANS",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://esante.gouv.fr"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "ANS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
   "description" : "Code système permettant de définir la catégorie d'orientation SAS spécifique qui n'est pas considéré comme un établissement de soins et qui permet de catégoriser l'orientation de soins",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "caseSensitive" : true,
   "content" : "complete",
   "count" : 3,
-  "concept" : [
-    {
-      "code" : "001",
-      "display" : "PS",
-      "definition" : "Catégorie PS à titre individuel"
-    },
-    {
-      "code" : "002",
-      "display" : "PDM",
-      "definition" : "Catégorie Place de marché"
-    },
-    {
-      "code" : "003",
-      "display" : "SOS",
-      "definition" : "Catégorie SOS Médecins"
-    }
-  ]
+  "concept" : [{
+    "code" : "001",
+    "display" : "PS",
+    "definition" : "Catégorie PS à titre individuel"
+  },
+  {
+    "code" : "002",
+    "display" : "PDM",
+    "definition" : "Catégorie Place de marché"
+  },
+  {
+    "code" : "003",
+    "display" : "SOS",
+    "definition" : "Catégorie SOS Médecins"
+  }]
 }
 
 ```

@@ -33,33 +33,23 @@ Label de sécurité: Créneau accessible par le grand public (Détails : code TR
   "resourceType" : "Slot",
   "id" : "ExampleSlotSOS4",
   "meta" : {
-    "profile" : [
-      "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator"
-    ],
-    "security" : [
-      {
-        "system" : "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
-        "code" : "PUBLIC"
-      }
-    ]
+    "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator"],
+    "security" : [{
+      "system" : "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
+      "code" : "PUBLIC"
+    }]
   },
-  "serviceType" : [
-    {
-      "coding" : [
-        {
-          "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-          "code" : "AMB"
-        }
-      ]
-    }
-  ],
+  "serviceType" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "code" : "AMB"
+    }]
+  }],
   "appointmentType" : {
-    "coding" : [
-      {
-        "system" : "http://terminology.hl7.org/CodeSystem/v2-0276",
-        "code" : "ROUTINE"
-      }
-    ]
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0276",
+      "code" : "ROUTINE"
+    }]
   },
   "schedule" : {
     "reference" : "Schedule/ExampleScheduleSOS3"

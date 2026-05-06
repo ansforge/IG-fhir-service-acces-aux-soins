@@ -8,7 +8,7 @@
 
 Profil: [FrPractitionerRoleExerciceAgregateur](StructureDefinition-FrPractitionerRoleExerciceAgregateur.md)
 
-**practitioner**: [Practitioner Pierre Foret](Practitioner-ExamplePractitioner.md)
+**practitioner**: [Practitioner Pierre Foret ](Practitioner-ExamplePractitioner.md)
 
 **organization**: Identifier: 412345678912345
 
@@ -18,11 +18,11 @@ Profil: [FrPractitionerRoleExerciceAgregateur](StructureDefinition-FrPractitione
 
 -------
 
-> **Narratif généré : Localisation #ExampleLocation**
+> **Narratif généré : Localisation #ExampleLocation**  
 
 Profil: [FrLocationAgregateur](StructureDefinition-FrLocationAgregateur.md)
 
-**identifier**: Identifiant interne/123456789**address**: 25 CHEMIN DE MOUNESTIE Aussonne 31840
+**identifier**: Identifiant interne/123456789**address**: 25 CHEMIN DE MOUNESTIE Aussonne 31840 
 
 
 
@@ -33,40 +33,30 @@ Profil: [FrLocationAgregateur](StructureDefinition-FrLocationAgregateur.md)
   "resourceType" : "PractitionerRole",
   "id" : "ExamplePractitionerRoleAgregateur",
   "meta" : {
-    "profile" : [
-      "http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"
-    ]
+    "profile" : ["http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"]
   },
-  "contained" : [
-    {
-      "resourceType" : "Location",
-      "id" : "ExampleLocation",
-      "meta" : {
-        "profile" : [
-          "http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur"
-        ]
+  "contained" : [{
+    "resourceType" : "Location",
+    "id" : "ExampleLocation",
+    "meta" : {
+      "profile" : ["http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur"]
+    },
+    "identifier" : [{
+      "type" : {
+        "coding" : [{
+          "system" : "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type",
+          "code" : "INTRN"
+        }]
       },
-      "identifier" : [
-        {
-          "type" : {
-            "coding" : [
-              {
-                "system" : "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type",
-                "code" : "INTRN"
-              }
-            ]
-          },
-          "system" : "https://editeur.com",
-          "value" : "123456789"
-        }
-      ],
-      "address" : {
-        "line" : ["25 CHEMIN DE MOUNESTIE"],
-        "city" : "Aussonne",
-        "postalCode" : "31840"
-      }
+      "system" : "https://editeur.com",
+      "value" : "123456789"
+    }],
+    "address" : {
+      "line" : ["25 CHEMIN DE MOUNESTIE"],
+      "city" : "Aussonne",
+      "postalCode" : "31840"
     }
-  ],
+  }],
   "practitioner" : {
     "reference" : "Practitioner/ExamplePractitioner"
   },
@@ -75,17 +65,13 @@ Profil: [FrLocationAgregateur](StructureDefinition-FrLocationAgregateur.md)
       "value" : "412345678912345"
     }
   },
-  "location" : [
-    {
-      "reference" : "#ExampleLocation"
-    }
-  ],
-  "telecom" : [
-    {
-      "system" : "phone",
-      "value" : "+33561855977"
-    }
-  ]
+  "location" : [{
+    "reference" : "#ExampleLocation"
+  }],
+  "telecom" : [{
+    "system" : "phone",
+    "value" : "+33561855977"
+  }]
 }
 
 ```

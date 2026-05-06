@@ -9,19 +9,19 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator | *Version*:1.2.0 |
-| Active as of 2025-12-11 | *Computable Name*:FrScheduleAgregateurSOS |
+| Active as of 2026-05-06 | *Computable Name*:FrScheduleAgregateurSOS |
 
  
 Profil de Schedule, dérivé de FrSchedule, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins 
 
 **Utilisations:**
 
-* Utiliser ce Profil: [BundleAgregateurSOS](StructureDefinition-sas-sos-bundle-aggregator.md)
-* Référer à ce Profil: [FrSlotAgregateurSOS](StructureDefinition-sas-sos-slot-aggregator.md)
-* Exemples pour ce Profil: [Schedule/ExampleScheduleSOS1](Schedule-ExampleScheduleSOS1.md), [Schedule/ExampleScheduleSOS2](Schedule-ExampleScheduleSOS2.md) and [Schedule/ExampleScheduleSOS3](Schedule-ExampleScheduleSOS3.md)
+* Utilise ce/t/te Profil: [BundleAgregateurSOS](StructureDefinition-sas-sos-bundle-aggregator.md)
+* Référence ce Profil: [FrSlotAgregateurSOS](StructureDefinition-sas-sos-slot-aggregator.md)
+* Exemples pour ce/t/te Profil: [Schedule/ExampleScheduleSOS1](Schedule-ExampleScheduleSOS1.md), [Schedule/ExampleScheduleSOS2](Schedule-ExampleScheduleSOS2.md) and [Schedule/ExampleScheduleSOS3](Schedule-ExampleScheduleSOS3.md)
 * CapabilityStatements utilisant ce Profil: [Profil SAS consommateur de créneaux SOS](CapabilityStatement-SAS-Consommateur-SOS.md) and [Profil SAS gestionnaire d'agenda SOS](CapabilityStatement-SAS-GestionnaireAgenda-SOS.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.sas|current/StructureDefinition/sas-sos-schedule-aggregator)
+Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.sas|current/StructureDefinition/sas-sos-schedule-aggregator)
 
 ### Formal Views of Profile Content
 
@@ -43,31 +43,23 @@ Other representations of profile: [CSV](StructureDefinition-sas-sos-schedule-agg
   "version" : "1.2.0",
   "name" : "FrScheduleAgregateurSOS",
   "status" : "active",
-  "date" : "2025-12-11T11:06:01+00:00",
+  "date" : "2026-05-06T06:43:41+00:00",
   "publisher" : "ANS",
-  "contact" : [
-    {
-      "name" : "ANS",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://esante.gouv.fr"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "ANS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
   "description" : "Profil de Schedule, dérivé de FrSchedule, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "fhirVersion" : "4.0.1",
   "kind" : "resource",
   "abstract" : false,
@@ -75,25 +67,19 @@ Other representations of profile: [CSV](StructureDefinition-sas-sos-schedule-agg
   "baseDefinition" : "http://interopsante.org/fhir/StructureDefinition/FrSchedule",
   "derivation" : "constraint",
   "differential" : {
-    "element" : [
-      {
-        "id" : "Schedule.actor",
-        "path" : "Schedule.actor",
-        "type" : [
-          {
-            "code" : "Reference",
-            "targetProfile" : [
-              "http://interopsante.org/fhir/StructureDefinition/FrLocation"
-            ]
-          }
-        ]
-      },
-      {
-        "id" : "Schedule.actor.reference",
-        "path" : "Schedule.actor.reference",
-        "min" : 1
-      }
-    ]
+    "element" : [{
+      "id" : "Schedule.actor",
+      "path" : "Schedule.actor",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://interopsante.org/fhir/StructureDefinition/FrLocation"]
+      }]
+    },
+    {
+      "id" : "Schedule.actor.reference",
+      "path" : "Schedule.actor.reference",
+      "min" : 1
+    }]
   }
 }
 

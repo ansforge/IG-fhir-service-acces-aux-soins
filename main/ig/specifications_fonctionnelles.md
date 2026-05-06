@@ -46,7 +46,7 @@ L'objectif de cette interface est de permettre l'agrégation des créneaux de di
 
 Le schéma de présentation générale ci-dessous illustre ce cas d'usage :
 
-* **Présentation recherche de créneaux PS indiv. - CPTS**: ![](recherche_creneaux_1.png)
+* **Présentation recherche de créneaux PS indiv. - CPTS **: ![](recherche_creneaux_1.png)
 
 Les créneaux de disponibilités sont renseignés par les professionnels effecteurs de soins ou délégataires dans leur solution logicielle d'agenda. Le flux décrit ci-dessous permet de récupérer et d'afficher dans la plateforme numérique SAS les créneaux selon les modalités définies lors des Groupes de Travail en bilatérales avec l'ANS. Lors d'une recherche d'offre de soins sur la plateforme numérique SAS, le moteur de recherche va s'appuyer sur les référentiels nationaux pour identifier l'offre correspondant aux critères de recherche. Une **liste de 1 à 25 RPPS/ADELI** est envoyée aux solutions logicielles éditeurs pour identifier les créneaux de disponibilités des professionnels de santé (PS) correspondants. Les types de créneaux remontés dans la plateforme sont :
 
@@ -61,7 +61,7 @@ L’objectif de cette interface est de permettre l’agrégation des créneaux d
 
 Le schéma de présentation générale ci-dessous illustre ce cas d’usage :
 
-* **Présentation recherche de créneaux SOS Médecins**: ![](recherche_creneaux_2.png)
+* **Présentation recherche de créneaux SOS Médecins **: ![](recherche_creneaux_2.png)
 
 Les créneaux de disponibilités des Lieux Fixes de Consultation (LFC), lieux de consultation SOS Médecins, sont renseignés par les associations dans les solutions logicielles d’agendas. Le flux décrit ci-dessous permet de récupérer et d’afficher dans la plateforme numérique SAS les créneaux selon les modalités définies lors des Groupes de Travail en bilatérales avec l’ANS. Lors d’une recherche d’offre de soins sur la plateforme numérique SAS, le moteur de recherche va s’appuyer sur les référentiels nationaux enrichis pour identifier l’offre de soins correspondant aux critères de recherche. Une **liste de 1 à 10 SIRET**, identifiant national de structure (IDNST) d’une association SOS Médecins, est envoyée aux solutions logicielles éditeurs pour identifier les créneaux de disponibilités des Lieux Fixes de Consultation (LFC) correspondants. Les types de créneaux remontés dans la plateforme sont :
 
@@ -157,7 +157,7 @@ Dans le cadre de **l’alimentation du dossier de régulation médicale (DRM)** 
 
 L’objectif de cette interface, **flux INT_L02**, est de pouvoir alimenter de manière automatisée le LRM avec les informations de RDV pris pour le compte du patient dans les solutions logicielles éditeurs (LGA) ou dans la plateforme numérique du SAS. À la suite de la prise de RDV réalisée par la régulation pour le compte du patient, les informations de RDV sont centralisées au niveau de la plateforme nationale. Les travaux souhaités visent à poursuivre le parcours de la donnée pour rattachement de ces informations avec le dossier d’orientation correspondant (DRM), selon le schéma suivant :
 
-* **Redescente des informations de RDV vers les LRM**: ![](redescente_rdv_lrm.png)
+* **Redescente des informations de RDV vers les LRM **: ![](redescente_rdv_lrm.png)
 
 #### Cinématique des échanges
 

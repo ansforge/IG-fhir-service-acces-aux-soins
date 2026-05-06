@@ -9,18 +9,18 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-healthcareservice-aggregator | *Version*:1.2.0 |
-| Active as of 2025-12-11 | *Computable Name*:FrHealthcareServiceAgregateurCPTS |
+| Active as of 2026-05-06 | *Computable Name*:FrHealthcareServiceAgregateurCPTS |
 
  
 Profil dérivé de FrHealthcareService pour le cas d'usage agrégateur de la plateforme SAS - cas d'usage CPTS 
 
 **Utilisations:**
 
-* Utiliser ce Profil: [BundleAgregateurCPTS](StructureDefinition-sas-cpts-bundle-aggregator.md)
-* Référer à ce Profil: [FrSlotAgregateurCPTS](StructureDefinition-sas-cpts-slot-aggregator.md)
-* Exemples pour ce Profil: [HealthcareService/ExampleHealthcareServiceCPTS1](HealthcareService-ExampleHealthcareServiceCPTS1.md) and [HealthcareService/ExampleHealthcareServiceCPTS2](HealthcareService-ExampleHealthcareServiceCPTS2.md)
+* Utilise ce/t/te Profil: [BundleAgregateurCPTS](StructureDefinition-sas-cpts-bundle-aggregator.md)
+* Référence ce Profil: [FrSlotAgregateurCPTS](StructureDefinition-sas-cpts-slot-aggregator.md)
+* Exemples pour ce/t/te Profil: [HealthcareService/ExampleHealthcareServiceCPTS1](HealthcareService-ExampleHealthcareServiceCPTS1.md) and [HealthcareService/ExampleHealthcareServiceCPTS2](HealthcareService-ExampleHealthcareServiceCPTS2.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.sas|current/StructureDefinition/sas-cpts-healthcareservice-aggregator)
+Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.sas|current/StructureDefinition/sas-cpts-healthcareservice-aggregator)
 
 ### Formal Views of Profile Content
 
@@ -42,31 +42,23 @@ Other representations of profile: [CSV](StructureDefinition-sas-cpts-healthcares
   "version" : "1.2.0",
   "name" : "FrHealthcareServiceAgregateurCPTS",
   "status" : "active",
-  "date" : "2025-12-11T11:06:01+00:00",
+  "date" : "2026-05-06T06:43:41+00:00",
   "publisher" : "ANS",
-  "contact" : [
-    {
-      "name" : "ANS",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://esante.gouv.fr"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "ANS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
   "description" : "Profil dérivé de FrHealthcareService pour le cas d'usage agrégateur de la plateforme SAS - cas d'usage CPTS",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "fhirVersion" : "4.0.1",
   "kind" : "resource",
   "abstract" : false,
@@ -74,28 +66,22 @@ Other representations of profile: [CSV](StructureDefinition-sas-cpts-healthcares
   "baseDefinition" : "http://interopsante.org/fhir/StructureDefinition/FrHealthcareService",
   "derivation" : "constraint",
   "differential" : {
-    "element" : [
-      {
-        "id" : "HealthcareService.id",
-        "path" : "HealthcareService.id",
-        "min" : 1,
-        "mustSupport" : true
-      },
-      {
-        "id" : "HealthcareService.providedBy",
-        "path" : "HealthcareService.providedBy",
-        "min" : 1,
-        "type" : [
-          {
-            "code" : "Reference",
-            "targetProfile" : [
-              "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-organization-aggregator"
-            ]
-          }
-        ],
-        "mustSupport" : true
-      }
-    ]
+    "element" : [{
+      "id" : "HealthcareService.id",
+      "path" : "HealthcareService.id",
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "HealthcareService.providedBy",
+      "path" : "HealthcareService.providedBy",
+      "min" : 1,
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-organization-aggregator"]
+      }],
+      "mustSupport" : true
+    }]
   }
 }
 

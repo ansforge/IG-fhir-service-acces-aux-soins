@@ -32,67 +32,51 @@ Un gestionnaire de structure gère les ressources transmises par les déclarants
   "experimental" : false,
   "date" : "2024-10-01T00:00:00+01:00",
   "publisher" : "ANS",
-  "contact" : [
-    {
-      "name" : "ANS",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://esante.gouv.fr"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "ANS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
   "description" : "Un gestionnaire de structure gère les ressources transmises par les déclarants de ressource",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "kind" : "requirements",
   "fhirVersion" : "4.0.1",
   "format" : ["application/fhir+json"],
   "implementationGuide" : ["https://interop.esante.gouv.fr/ig/fhir/sas"],
-  "rest" : [
-    {
-      "mode" : "server",
-      "documentation" : "Réception des création et mises à jour de comptes practitioner",
-      "security" : {
-        "cors" : false,
-        "description" : "L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S\n) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes\nd’information de santé (CI-SIS)"
+  "rest" : [{
+    "mode" : "server",
+    "documentation" : "Réception des création et mises à jour de comptes practitioner",
+    "security" : {
+      "cors" : false,
+      "description" : "L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S\n) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes\nd’information de santé (CI-SIS)"
+    },
+    "resource" : [{
+      "type" : "Practitioner",
+      "profile" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul",
+      "interaction" : [{
+        "code" : "create"
       },
-      "resource" : [
-        {
-          "type" : "Practitioner",
-          "profile" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul",
-          "interaction" : [
-            {
-              "code" : "create"
-            },
-            {
-              "code" : "update"
-            }
-          ],
-          "updateCreate" : true,
-          "conditionalUpdate" : true,
-          "searchParam" : [
-            {
-              "name" : "identifier",
-              "definition" : "http://hl7.org/fhir/SearchParameter/Practitioner-identifier",
-              "type" : "token",
-              "documentation" : "Identitifant du professionel"
-            }
-          ]
-        }
-      ]
-    }
-  ]
+      {
+        "code" : "update"
+      }],
+      "updateCreate" : true,
+      "conditionalUpdate" : true,
+      "searchParam" : [{
+        "name" : "identifier",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Practitioner-identifier",
+        "type" : "token",
+        "documentation" : "Identitifant du professionel"
+      }]
+    }]
+  }]
 }
 
 ```

@@ -35,80 +35,58 @@ Label de sécurités: Créneau accessible par le grand public (Détails : code T
   "resourceType" : "Slot",
   "id" : "ExampleSlotCPTS2",
   "meta" : {
-    "profile" : [
-      "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator"
-    ],
-    "security" : [
-      {
-        "system" : "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
-        "code" : "PUBLIC"
-      },
-      {
-        "system" : "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
-        "code" : "CPTS"
-      }
-    ]
+    "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator"],
+    "security" : [{
+      "system" : "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
+      "code" : "PUBLIC"
+    },
+    {
+      "system" : "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
+      "code" : "CPTS"
+    }]
   },
-  "serviceType" : [
-    {
-      "coding" : [
-        {
-          "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-          "code" : "AMB"
-        }
-      ],
-      "text" : "Visite de contrôle"
-    },
-    {
-      "extension" : [
-        {
-          "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType",
-          "valueReference" : {
-            "reference" : "HealthcareService/ExampleHealthcareServiceCPTS1"
-          }
-        }
-      ],
-      "coding" : [
-        {
-          "system" : "https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement",
-          "code" : "604"
-        }
-      ]
-    },
-    {
-      "extension" : [
-        {
-          "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType",
-          "valueReference" : {
-            "reference" : "HealthcareService/ExampleHealthcareServiceCPTS2"
-          }
-        }
-      ],
-      "coding" : [
-        {
-          "system" : "https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement",
-          "code" : "604"
-        }
-      ]
-    }
-  ],
-  "specialty" : [
-    {
-      "coding" : [
-        {
-          "system" : "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
-          "code" : "SM54"
-        }
-      ]
-    }
-  ],
-  "appointmentType" : {
-    "coding" : [
-      {
-        "system" : "http://terminology.hl7.org/CodeSystem/v2-0276",
-        "code" : "ROUTINE"
+  "serviceType" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "code" : "AMB"
+    }],
+    "text" : "Visite de contrôle"
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType",
+      "valueReference" : {
+        "reference" : "HealthcareService/ExampleHealthcareServiceCPTS1"
       }
-    ]
+    }],
+    "coding" : [{
+      "system" : "https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement",
+      "code" : "604"
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType",
+      "valueReference" : {
+        "reference" : "HealthcareService/ExampleHealthcareServiceCPTS2"
+      }
+    }],
+    "coding" : [{
+      "system" : "https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement",
+      "code" : "604"
+    }]
+  }],
+  "specialty" : [{
+    "coding" : [{
+      "system" : "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
+      "code" : "SM54"
+    }]
+  }],
+  "appointmentType" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0276",
+      "code" : "ROUTINE"
+    }]
   },
   "schedule" : {
     "reference" : "Schedule/ExampleSchedule"

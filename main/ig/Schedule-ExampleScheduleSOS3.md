@@ -19,15 +19,11 @@ Profil: [FrScheduleAgregateurSOS](StructureDefinition-sas-sos-schedule-aggregato
   "resourceType" : "Schedule",
   "id" : "ExampleScheduleSOS3",
   "meta" : {
-    "profile" : [
-      "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator"
-    ]
+    "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator"]
   },
-  "actor" : [
-    {
-      "reference" : "Location/3333333333"
-    }
-  ]
+  "actor" : [{
+    "reference" : "Location/3333333333"
+  }]
 }
 
 ```

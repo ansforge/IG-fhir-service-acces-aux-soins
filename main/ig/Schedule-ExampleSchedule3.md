@@ -10,7 +10,7 @@ Profil: [FrScheduleAgregateur](StructureDefinition-FrScheduleAgregateur.md)
 
 **actor**: 
 
-* [Practitioner Guillaume MARCEL](Practitioner-ExamplePractitioner3.md)
+* [Practitioner Guillaume MARCEL ](Practitioner-ExamplePractitioner3.md)
 * [PractitionerRole : telecom = ph: +33658913859](PractitionerRole-ExamplePractitionerRoleAgregateur4.md)
 
 
@@ -22,18 +22,14 @@ Profil: [FrScheduleAgregateur](StructureDefinition-FrScheduleAgregateur.md)
   "resourceType" : "Schedule",
   "id" : "ExampleSchedule3",
   "meta" : {
-    "profile" : [
-      "http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"
-    ]
+    "profile" : ["http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"]
   },
-  "actor" : [
-    {
-      "reference" : "Practitioner/ExamplePractitioner3"
-    },
-    {
-      "reference" : "PractitionerRole/ExamplePractitionerRoleAgregateur4"
-    }
-  ]
+  "actor" : [{
+    "reference" : "Practitioner/ExamplePractitioner3"
+  },
+  {
+    "reference" : "PractitionerRole/ExamplePractitionerRoleAgregateur4"
+  }]
 }
 
 ```

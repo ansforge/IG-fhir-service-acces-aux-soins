@@ -12,7 +12,7 @@ Label de sécurités: Créneau accessible par le grand public (Détails : code T
 
 **serviceType**: virtual, Visite de contrôle, Consultation de suivi pneumologie
 
-**specialty**: Pneumologie (SM)
+**specialty**: Pneumologie (SM), Pneumologie
 
 **appointmentType**: Routine appointment - default if not valued
 
@@ -36,50 +36,41 @@ Label de sécurités: Créneau accessible par le grand public (Détails : code T
   "id" : "ExampleSlotPSIndiv3",
   "meta" : {
     "profile" : ["http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"],
-    "security" : [
-      {
-        "system" : "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
-        "code" : "PUBLIC"
-      },
-      {
-        "system" : "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
-        "code" : "PRO"
-      }
-    ]
+    "security" : [{
+      "system" : "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
+      "code" : "PUBLIC"
+    },
+    {
+      "system" : "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
+      "code" : "PRO"
+    }]
   },
-  "serviceType" : [
-    {
-      "coding" : [
-        {
-          "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-          "code" : "VR"
-        }
-      ]
-    },
-    {
-      "text" : "Visite de contrôle"
-    },
-    {
-      "text" : "Consultation de suivi pneumologie"
-    }
-  ],
-  "specialty" : [
-    {
-      "coding" : [
-        {
-          "system" : "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
-          "code" : "SM41"
-        }
-      ]
-    }
-  ],
+  "serviceType" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "code" : "VR"
+    }]
+  },
+  {
+    "text" : "Visite de contrôle"
+  },
+  {
+    "text" : "Consultation de suivi pneumologie"
+  }],
+  "specialty" : [{
+    "coding" : [{
+      "system" : "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
+      "code" : "SM41"
+    }]
+  },
+  {
+    "text" : "Pneumologie"
+  }],
   "appointmentType" : {
-    "coding" : [
-      {
-        "system" : "http://terminology.hl7.org/CodeSystem/v2-0276",
-        "code" : "ROUTINE"
-      }
-    ]
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0276",
+      "code" : "ROUTINE"
+    }]
   },
   "schedule" : {
     "reference" : "Schedule/ExampleSchedule3"

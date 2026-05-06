@@ -28,37 +28,27 @@ Profil: [FrPractitionerRegul](StructureDefinition-FrPractitionerRegul.md)
   "id" : "ExamplePractitionerRegul4",
   "meta" : {
     "source" : "urn:oid:1.2.250.1.213.3.6",
-    "profile" : [
-      "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul"
-    ]
+    "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul"]
   },
-  "identifier" : [
-    {
-      "type" : {
-        "coding" : [
-          {
-            "system" : "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
-            "code" : "INTRN"
-          }
-        ]
-      },
-      "system" : "urn:oid:1.2.250.1.213.3.6",
-      "value" : "1ef1c748-01a3-6180-b098-73283ce4e5b1"
-    }
-  ],
+  "identifier" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
+        "code" : "INTRN"
+      }]
+    },
+    "system" : "urn:oid:1.2.250.1.213.3.6",
+    "value" : "1ef1c748-01a3-6180-b098-73283ce4e5b1"
+  }],
   "active" : true,
-  "name" : [
-    {
-      "family" : "Loridon",
-      "given" : ["Sébastien"]
-    }
-  ],
-  "telecom" : [
-    {
-      "system" : "email",
-      "value" : "sebastien.loridon@test.com"
-    }
-  ]
+  "name" : [{
+    "family" : "Loridon",
+    "given" : ["Sébastien"]
+  }],
+  "telecom" : [{
+    "system" : "email",
+    "value" : "sebastien.loridon@test.com"
+  }]
 }
 
 ```

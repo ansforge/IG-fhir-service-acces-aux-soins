@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/categorie-orientation-sas-valueset | *Version*:1.2.0 |
-| Active as of 2025-12-11 | *Computable Name*:CategorieOrientationSASValueSet |
+| Active as of 2026-05-06 | *Computable Name*:CategorieOrientationSASValueSet |
 
  
 Valueset permettant de définir la catégorie d'orientation SAS. Il regroupe des codes de la TRE-R66 et du codesystem catégorie orientation SAS 
@@ -51,54 +51,42 @@ Valueset permettant de définir la catégorie d'orientation SAS. Il regroupe des
   "title" : "Value set catégorie orientation SAS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2025-12-11T11:06:01+00:00",
+  "date" : "2026-05-06T06:43:41+00:00",
   "publisher" : "ANS",
-  "contact" : [
-    {
-      "name" : "ANS",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://esante.gouv.fr"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "ANS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
   "description" : "Valueset permettant de définir la catégorie d'orientation SAS. Il regroupe des codes de la TRE-R66 et du codesystem catégorie orientation SAS",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "compose" : {
-    "include" : [
-      {
-        "system" : "https://interop.esante.gouv.fr/ig/fhir/sas/CodeSystem/categorie-orientation-sas-codesystem"
+    "include" : [{
+      "system" : "https://interop.esante.gouv.fr/ig/fhir/sas/CodeSystem/categorie-orientation-sas-codesystem"
+    },
+    {
+      "system" : "https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement",
+      "concept" : [{
+        "code" : "604",
+        "display" : "CPTS"
       },
       {
-        "system" : "https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement",
-        "concept" : [
-          {
-            "code" : "604",
-            "display" : "CPTS"
-          },
-          {
-            "code" : "603",
-            "display" : "MSP"
-          },
-          {
-            "code" : "124",
-            "display" : "CDS"
-          }
-        ]
-      }
-    ]
+        "code" : "603",
+        "display" : "MSP"
+      },
+      {
+        "code" : "124",
+        "display" : "CDS"
+      }]
+    }]
   }
 }
 

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-typeconsultation | *Version*:1.2.0 |
-| Active as of 2025-12-11 | *Computable Name*:TypeConsultationSAS |
+| Active as of 2026-05-06 | *Computable Name*:TypeConsultationSAS |
 
  
 Type de consultations SAS 
@@ -51,51 +51,40 @@ Type de consultations SAS
   "title" : "Type consultation SAS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2025-12-11T11:06:01+00:00",
+  "date" : "2026-05-06T06:43:41+00:00",
   "publisher" : "ANS",
-  "contact" : [
-    {
-      "name" : "ANS",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://esante.gouv.fr"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "ANS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
   "description" : "Type de consultations SAS",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "compose" : {
-    "include" : [
+    "include" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "version" : "10.0.0",
+      "concept" : [{
+        "code" : "AMB",
+        "display" : "Consultation au cabinet"
+      },
       {
-        "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-        "concept" : [
-          {
-            "code" : "AMB",
-            "display" : "Consultation au cabinet"
-          },
-          {
-            "code" : "HH",
-            "display" : "Consultation à domicile"
-          },
-          {
-            "code" : "VR",
-            "display" : "Téléconsultation"
-          }
-        ]
-      }
-    ]
+        "code" : "HH",
+        "display" : "Consultation à domicile"
+      },
+      {
+        "code" : "VR",
+        "display" : "Téléconsultation"
+      }]
+    }]
   }
 }
 

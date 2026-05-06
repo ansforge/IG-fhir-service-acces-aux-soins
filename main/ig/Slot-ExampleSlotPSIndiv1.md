@@ -36,59 +36,43 @@ Label de sécurité: Créneau accessible par le grand public (Détails : code TR
   "id" : "ExampleSlotPSIndiv1",
   "meta" : {
     "profile" : ["http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"],
-    "security" : [
-      {
-        "system" : "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
-        "code" : "PUBLIC"
-      }
-    ]
+    "security" : [{
+      "system" : "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau",
+      "code" : "PUBLIC"
+    }]
   },
-  "serviceType" : [
-    {
-      "coding" : [
-        {
-          "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-          "code" : "AMB"
-        }
-      ]
-    },
-    {
-      "coding" : [
-        {
-          "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-          "code" : "VR"
-        }
-      ]
-    },
-    {
-      "text" : "Visite de contrôle"
-    }
-  ],
-  "specialty" : [
-    {
-      "coding" : [
-        {
-          "system" : "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
-          "code" : "SM54"
-        }
-      ]
-    },
-    {
-      "coding" : [
-        {
-          "system" : "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
-          "code" : "SM05"
-        }
-      ]
-    }
-  ],
+  "serviceType" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "code" : "AMB"
+    }]
+  },
+  {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "code" : "VR"
+    }]
+  },
+  {
+    "text" : "Visite de contrôle"
+  }],
+  "specialty" : [{
+    "coding" : [{
+      "system" : "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
+      "code" : "SM54"
+    }]
+  },
+  {
+    "coding" : [{
+      "system" : "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
+      "code" : "SM05"
+    }]
+  }],
   "appointmentType" : {
-    "coding" : [
-      {
-        "system" : "http://terminology.hl7.org/CodeSystem/v2-0276",
-        "code" : "ROUTINE"
-      }
-    ]
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0276",
+      "code" : "ROUTINE"
+    }]
   },
   "schedule" : {
     "reference" : "Schedule/ExampleSchedule1"

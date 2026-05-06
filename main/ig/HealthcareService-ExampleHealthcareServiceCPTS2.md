@@ -19,9 +19,7 @@ Profil: [FrHealthcareServiceAgregateurCPTS](StructureDefinition-sas-cpts-healthc
   "resourceType" : "HealthcareService",
   "id" : "ExampleHealthcareServiceCPTS2",
   "meta" : {
-    "profile" : [
-      "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-healthcareservice-aggregator"
-    ]
+    "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-healthcareservice-aggregator"]
   },
   "providedBy" : {
     "reference" : "Organization/ExampleOrgaCPTS2"

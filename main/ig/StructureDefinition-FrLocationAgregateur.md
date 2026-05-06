@@ -9,16 +9,16 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur | *Version*:1.2.0 |
-| Active as of 2025-12-11 | *Computable Name*:FrLocationAgregateur |
+| Active as of 2026-05-06 | *Computable Name*:FrLocationAgregateur |
 
  
 Profil de Location, dérivé de FrLocation, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS 
 
 **Utilisations:**
 
-* Référer à ce Profil: [FrPractitionerRoleExerciceAgregateur](StructureDefinition-FrPractitionerRoleExerciceAgregateur.md)
+* Référence ce Profil: [FrPractitionerRoleExerciceAgregateur](StructureDefinition-FrPractitionerRoleExerciceAgregateur.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.sas|current/StructureDefinition/FrLocationAgregateur)
+Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.sas|current/StructureDefinition/FrLocationAgregateur)
 
 ### Formal Views of Profile Content
 
@@ -40,31 +40,23 @@ Other representations of profile: [CSV](StructureDefinition-FrLocationAgregateur
   "version" : "1.2.0",
   "name" : "FrLocationAgregateur",
   "status" : "active",
-  "date" : "2025-12-11T11:06:01+00:00",
+  "date" : "2026-05-06T06:43:41+00:00",
   "publisher" : "ANS",
-  "contact" : [
-    {
-      "name" : "ANS",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://esante.gouv.fr"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "ANS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
   "description" : "Profil de Location, dérivé de FrLocation, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "fhirVersion" : "4.0.1",
   "kind" : "resource",
   "abstract" : false,
@@ -72,45 +64,43 @@ Other representations of profile: [CSV](StructureDefinition-FrLocationAgregateur
   "baseDefinition" : "http://interopsante.org/fhir/StructureDefinition/FrLocation",
   "derivation" : "constraint",
   "differential" : {
-    "element" : [
-      {
-        "id" : "Location",
-        "path" : "Location"
-      },
-      {
-        "id" : "Location.address",
-        "path" : "Location.address",
-        "min" : 1
-      },
-      {
-        "id" : "Location.address.line",
-        "path" : "Location.address.line",
-        "min" : 1,
-        "max" : "1",
-        "binding" : {
-          "strength" : "extensible",
-          "description" : "Adresse de consultation – Voie"
-        }
-      },
-      {
-        "id" : "Location.address.city",
-        "path" : "Location.address.city",
-        "min" : 1,
-        "binding" : {
-          "strength" : "extensible",
-          "description" : "Adresse de consultation – Ville"
-        }
-      },
-      {
-        "id" : "Location.address.postalCode",
-        "path" : "Location.address.postalCode",
-        "min" : 1,
-        "binding" : {
-          "strength" : "extensible",
-          "description" : "Adresse de consultation – Code postal"
-        }
+    "element" : [{
+      "id" : "Location",
+      "path" : "Location"
+    },
+    {
+      "id" : "Location.address",
+      "path" : "Location.address",
+      "min" : 1
+    },
+    {
+      "id" : "Location.address.line",
+      "path" : "Location.address.line",
+      "min" : 1,
+      "max" : "1",
+      "binding" : {
+        "strength" : "extensible",
+        "description" : "Adresse de consultation – Voie"
       }
-    ]
+    },
+    {
+      "id" : "Location.address.city",
+      "path" : "Location.address.city",
+      "min" : 1,
+      "binding" : {
+        "strength" : "extensible",
+        "description" : "Adresse de consultation – Ville"
+      }
+    },
+    {
+      "id" : "Location.address.postalCode",
+      "path" : "Location.address.postalCode",
+      "min" : 1,
+      "binding" : {
+        "strength" : "extensible",
+        "description" : "Adresse de consultation – Code postal"
+      }
+    }]
   }
 }
 

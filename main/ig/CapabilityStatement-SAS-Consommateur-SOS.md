@@ -32,132 +32,104 @@ Un consommateur consulte les créneaux SOS mis à disposition par un gestionnair
   "experimental" : false,
   "date" : "2024-10-01T00:00:00+01:00",
   "publisher" : "ANS",
-  "contact" : [
-    {
-      "name" : "ANS",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://esante.gouv.fr"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "ANS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
   "description" : "Un consommateur consulte les créneaux SOS mis à disposition par un gestionnaire d’agenda. La platefome numérique SAS joue le rôle de consommateur et affiche les créneaux récupérés",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "kind" : "requirements",
   "fhirVersion" : "4.0.1",
   "format" : ["application/fhir+json"],
   "implementationGuide" : ["https://interop.esante.gouv.fr/ig/fhir/sas"],
-  "rest" : [
-    {
-      "mode" : "client",
-      "documentation" : "Consultation de créneaux SOS",
-      "security" : {
-        "cors" : false,
-        "description" : "L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S\n) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes\nd’information de santé (CI-SIS)"
+  "rest" : [{
+    "mode" : "client",
+    "documentation" : "Consultation de créneaux SOS",
+    "security" : {
+      "cors" : false,
+      "description" : "L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S\n) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes\nd’information de santé (CI-SIS)"
+    },
+    "resource" : [{
+      "type" : "Schedule",
+      "profile" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator",
+      "interaction" : [{
+        "code" : "read"
       },
-      "resource" : [
-        {
-          "type" : "Schedule",
-          "profile" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator",
-          "interaction" : [
-            {
-              "code" : "read"
-            },
-            {
-              "code" : "search-type"
-            }
-          ],
-          "searchInclude" : ["Schedule:actor:Location", "Location:organization"],
-          "searchRevInclude" : ["Slot:schedule"],
-          "searchParam" : [
-            {
-              "name" : "_has",
-              "type" : "special",
-              "documentation" : "Permet la sélection des ressources en fonction des propriétés des ressources qui y font référence (reverse chaining)"
-            },
-            {
-              "name" : "SearchSchedule-actor",
-              "definition" : "http://hl7.org/fhir/SearchParameter/Schedule-actor",
-              "type" : "reference",
-              "documentation" : "Permet de rechercher un agenda par acteur - lieu dans ce cas"
-            }
-          ]
-        },
-        {
-          "type" : "Slot",
-          "profile" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator",
-          "interaction" : [
-            {
-              "code" : "read"
-            },
-            {
-              "code" : "search-type"
-            }
-          ],
-          "searchParam" : [
-            {
-              "name" : "SPDateDebutSlot",
-              "definition" : "https://interop.esante.gouv.fr/ig/fhir/sas/SearchParameter/slot-sp-start",
-              "type" : "date",
-              "documentation" : "Recherche d'une disponibilité sur la date et l'heure de début de disponibilité souhaité"
-            }
-          ]
-        },
-        {
-          "type" : "Location",
-          "profile" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator",
-          "interaction" : [
-            {
-              "code" : "read"
-            },
-            {
-              "code" : "search-type"
-            }
-          ],
-          "searchParam" : [
-            {
-              "name" : "Location-organization",
-              "definition" : "http://hl7.org/fhir/SearchParameter/Location-organization",
-              "type" : "reference",
-              "documentation" : "Recherche d'un lieu selon la structure rattachée"
-            }
-          ]
-        },
-        {
-          "type" : "Organization",
-          "profile" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator",
-          "interaction" : [
-            {
-              "code" : "read"
-            },
-            {
-              "code" : "search-type"
-            }
-          ],
-          "searchParam" : [
-            {
-              "name" : "Organization-identifier",
-              "definition" : "http://hl7.org/fhir/SearchParameter/Organization-identifier",
-              "type" : "token",
-              "documentation" : "Recherche d'une structure par identifiant - SIRET dans ce cas"
-            }
-          ]
-        }
-      ]
-    }
-  ]
+      {
+        "code" : "search-type"
+      }],
+      "searchInclude" : ["Schedule:actor:Location", "Location:organization"],
+      "searchRevInclude" : ["Slot:schedule"],
+      "searchParam" : [{
+        "name" : "_has",
+        "type" : "special",
+        "documentation" : "Permet la sélection des ressources en fonction des propriétés des ressources qui y font référence (reverse chaining)"
+      },
+      {
+        "name" : "SearchSchedule-actor",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Schedule-actor",
+        "type" : "reference",
+        "documentation" : "Permet de rechercher un agenda par acteur - lieu dans ce cas"
+      }]
+    },
+    {
+      "type" : "Slot",
+      "profile" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator",
+      "interaction" : [{
+        "code" : "read"
+      },
+      {
+        "code" : "search-type"
+      }],
+      "searchParam" : [{
+        "name" : "SPDateDebutSlot",
+        "definition" : "https://interop.esante.gouv.fr/ig/fhir/sas/SearchParameter/slot-sp-start",
+        "type" : "date",
+        "documentation" : "Recherche d'une disponibilité sur la date et l'heure de début de disponibilité souhaité"
+      }]
+    },
+    {
+      "type" : "Location",
+      "profile" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator",
+      "interaction" : [{
+        "code" : "read"
+      },
+      {
+        "code" : "search-type"
+      }],
+      "searchParam" : [{
+        "name" : "Location-organization",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Location-organization",
+        "type" : "reference",
+        "documentation" : "Recherche d'un lieu selon la structure rattachée"
+      }]
+    },
+    {
+      "type" : "Organization",
+      "profile" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator",
+      "interaction" : [{
+        "code" : "read"
+      },
+      {
+        "code" : "search-type"
+      }],
+      "searchParam" : [{
+        "name" : "Organization-identifier",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Organization-identifier",
+        "type" : "token",
+        "documentation" : "Recherche d'une structure par identifiant - SIRET dans ce cas"
+      }]
+    }]
+  }]
 }
 
 ```
