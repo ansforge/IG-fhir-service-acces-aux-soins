@@ -12,10 +12,15 @@ version: 1.2.0
 fhirVersion: 4.0.1
 copyrightYear: 2020+
 releaseLabel: ci-build
-jurisdiction: urn:iso:std:iso:3166#FR "FRANCE"
+jurisdiction: urn:iso:std:iso:3166#FR "France (la)"
 
 parameters:
-    shownav: 'true'
+  shownav: 'true'
+  i18n-default-lang: fr-FR # Default language
+  apply-jurisdiction: true
+  path-expansion-params: '../../expansion-params.json' # for using French SNOMED CT Extension
+
+
     
 dependencies:
     hl7.fhir.fr.core:
