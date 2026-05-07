@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/SearchParameter/slot-sp-start | *Version*:1.2.0 |
-| Active as of 2026-05-06 | *Computable Name*:SPDateDebutSlot |
+| Active as of 2026-05-07 | *Computable Name*:SPDateDebutSlot |
 
  
 Paramètre de recherche date de début d'un créneau (date de début supérieure ou égale à  et inférieure ou égale à ) 
@@ -26,7 +26,7 @@ Paramètre de recherche date de début d'un créneau (date de début supérieure
   "version" : "1.2.0",
   "name" : "SPDateDebutSlot",
   "status" : "active",
-  "date" : "2026-05-06T16:23:13+00:00",
+  "date" : "2026-05-07T08:01:47+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

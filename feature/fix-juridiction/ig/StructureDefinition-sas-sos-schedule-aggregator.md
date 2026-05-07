@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator | *Version*:1.2.0 |
-| Active as of 2026-05-06 | *Computable Name*:FrScheduleAgregateurSOS |
+| Active as of 2026-05-07 | *Computable Name*:FrScheduleAgregateurSOS |
 
  
 Profil de Schedule, dérivé de FrSchedule, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins 
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-sas-sos-schedule-agg
   "version" : "1.2.0",
   "name" : "FrScheduleAgregateurSOS",
   "status" : "active",
-  "date" : "2026-05-06T16:23:13+00:00",
+  "date" : "2026-05-07T08:01:47+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

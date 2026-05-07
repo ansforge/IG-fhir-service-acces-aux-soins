@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul | *Version*:1.2.0 |
-| Active as of 2026-05-06 | *Computable Name*:FrPractitionerRegul |
+| Active as of 2026-05-07 | *Computable Name*:FrPractitionerRegul |
 
  
 Profil de Practitioner, dérivé de FrPractitioner, pour la gestion des comptes régulateurs de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-FrPractitionerRegul.
   "version" : "1.2.0",
   "name" : "FrPractitionerRegul",
   "status" : "active",
-  "date" : "2026-05-06T16:23:13+00:00",
+  "date" : "2026-05-07T08:01:47+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType | *Version*:1.2.0 |
-| Active as of 2026-05-06 | *Computable Name*:SASServiceTypeR5 |
+| Active as of 2026-05-07 | *Computable Name*:SASServiceTypeR5 |
 
 Extension créée afin de permettre la reference à la ressource HealthcareService. Cette extension implemente l'élément serviceType de R5 https://hl7.org/fhir/slot-definitions.html#Slot.serviceType
 
@@ -46,7 +46,7 @@ Other representations of profile: [CSV](StructureDefinition-sas-cpts-slot-servic
   "version" : "1.2.0",
   "name" : "SASServiceTypeR5",
   "status" : "active",
-  "date" : "2026-05-06T16:23:13+00:00",
+  "date" : "2026-05-07T08:01:47+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
