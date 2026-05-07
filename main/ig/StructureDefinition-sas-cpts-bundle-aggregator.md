@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-bundle-aggregator | *Version*:1.2.0 |
-| Active as of 2026-05-06 | *Computable Name*:BundleAgregateurCPTS |
+| Active as of 2026-05-07 | *Computable Name*:BundleAgregateurCPTS |
 
  
 Profil de Bundle qui représente le flux de réponse contenant les créneaux disponibles dans le cadre du service d'agrégation de créneaux de la plateforme SAS - Cas d'usage CPTS 
@@ -40,7 +40,7 @@ Other representations of profile: [CSV](StructureDefinition-sas-cpts-bundle-aggr
   "version" : "1.2.0",
   "name" : "BundleAgregateurCPTS",
   "status" : "active",
-  "date" : "2026-05-06T06:43:41+00:00",
+  "date" : "2026-05-07T11:54:31+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -54,7 +54,7 @@ Other representations of profile: [CSV](StructureDefinition-sas-cpts-bundle-aggr
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
       "code" : "FR",
-      "display" : "FRANCE"
+      "display" : "France (la)"
     }]
   }],
   "fhirVersion" : "4.0.1",

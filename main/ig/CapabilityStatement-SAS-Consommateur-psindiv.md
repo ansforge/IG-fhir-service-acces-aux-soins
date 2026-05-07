@@ -44,7 +44,7 @@ Un consommateur consulte les créneaux ps indiv mis à disposition par un gestio
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
       "code" : "FR",
-      "display" : "FRANCE"
+      "display" : "France (la)"
     }]
   }],
   "kind" : "requirements",
