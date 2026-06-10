@@ -31,4 +31,4 @@ Description: "Profil de Appointment, dérivé de FrAppointment, pour le cas d'us
 * participant.actor.identifier.system 1..
 * participant.actor.identifier.system = "urn:oid:1.2.250.1.71.4.2.1"
 * participant.actor.identifier.value 1..
-* participant.status = #accepted
+* participant.status from sas-valueset-participant-status (required)

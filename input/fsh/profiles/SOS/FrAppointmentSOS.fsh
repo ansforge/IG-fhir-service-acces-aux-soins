@@ -18,4 +18,4 @@ Description: "Profil de Slot, dérivé de FrSlot, pour le service d’agrégatio
 * start 1..
 * end 1..
 * created MS
-* participant.status from sas-sos-valueset-participant-status (required)
+* participant.status from sas-valueset-participant-status (required)
