@@ -1,0 +1,136 @@
+# FrSlotAgregateurSOS - Service d'Accès aux Soins v1.2.0
+
+## : FrSlotAgregateurSOS 
+
+ 
+Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins 
+
+**Utilisations:**
+
+* Utilise ce/t/te Profil: [BundleAgregateurSOS](StructureDefinition-sas-sos-bundle-aggregator.md)
+* Exemples pour ce/t/te Profil: [Slot/ExampleSlotSOS1](Slot-ExampleSlotSOS1.md), [Slot/ExampleSlotSOS2](Slot-ExampleSlotSOS2.md), [Slot/ExampleSlotSOS3](Slot-ExampleSlotSOS3.md) and [Slot/ExampleSlotSOS4](Slot-ExampleSlotSOS4.md)
+* CapabilityStatements utilisant ce Profil: [Profil SAS consommateur de créneaux SOS](CapabilityStatement-SAS-Consommateur-SOS.md) and [Profil SAS gestionnaire d'agenda SOS](CapabilityStatement-SAS-GestionnaireAgenda-SOS.md)
+
+Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.sas|current/StructureDefinition/sas-sos-slot-aggregator)
+
+### 
+
+ . 
+
+*   
+*   
+*   
+*   
+
+#### Bindings terminologiques (différentiel)
+
+#### Bindings terminologiques
+
+#### Contraintes
+
+** Résumé **
+
+**Structures**
+
+Cette structure fait référence à ces autres structures:
+
+* [FrScheduleAgregateurSOS (https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator)](StructureDefinition-sas-sos-schedule-aggregator.md)
+
+#### Bindings terminologiques (différentiel)
+
+ **View** 
+
+#### Bindings terminologiques
+
+#### Contraintes
+
+** Résumé **
+
+**Structures**
+
+Cette structure fait référence à ces autres structures:
+
+* [FrScheduleAgregateurSOS (https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator)](StructureDefinition-sas-sos-schedule-aggregator.md)
+
+ 
+
+ ,  
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "sas-sos-slot-aggregator",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator",
+  "version" : "1.2.0",
+  "name" : "FrSlotAgregateurSOS",
+  "status" : "active",
+  "date" : "2026-06-11T07:56:33+00:00",
+  "publisher" : "ANS",
+  "contact" : [{
+    "name" : "ANS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "fhirVersion" : "4.0.1",
+  "kind" : "resource",
+  "abstract" : false,
+  "type" : "Slot",
+  "baseDefinition" : "http://interopsante.org/fhir/StructureDefinition/FrSlot",
+  "derivation" : "constraint",
+  "differential" : {
+    "element" : [{
+      "id" : "Slot.meta.security",
+      "path" : "Slot.meta.security",
+      "binding" : {
+        "strength" : "required",
+        "description" : "type de créneau : public, SNP",
+        "valueSet" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-sos-valueset-typecreneau"
+      }
+    },
+    {
+      "id" : "Slot.serviceType.coding",
+      "path" : "Slot.serviceType.coding",
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-typeconsultation"
+      }
+    },
+    {
+      "id" : "Slot.appointmentType.coding",
+      "path" : "Slot.appointmentType.coding",
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-appointmentreason"
+      }
+    },
+    {
+      "id" : "Slot.schedule",
+      "path" : "Slot.schedule",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator"]
+      }]
+    },
+    {
+      "id" : "Slot.status",
+      "path" : "Slot.status",
+      "patternCode" : "free"
+    }]
+  }
+}
+
+```
