@@ -3469,7 +3469,19 @@ textarea.form-control {
 							
  
 
-/* Bootstrap 4 flex navbar supprimé : incompatible avec le HTML Bootstrap 3 du template HL7 */
+.navbar,
+.navbar .container,
+.navbar .container-fluid,
+.navbar .container-xs {
+    -ms-flex-align: center;
+    -ms-flex-pack: justify;
+    align-items: center;
+    display: -ms-flexbox;
+   display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
 .navbar-brand {
     display: inline-block;
@@ -3486,6 +3498,10 @@ textarea.form-control {
 }
 
 .navbar-nav {
+    display: -ms-flexbox;
+    display: flex; 
+    -ms-flex-direction: column;
+    flex-direction: column;
     list-style: none;
     margin-bottom: 0;
     padding-left: 0;

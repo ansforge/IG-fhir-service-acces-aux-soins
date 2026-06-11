@@ -44,8 +44,6 @@ Usage:
 var(--publish-box-border); */
 
 :root {
-  --ig-left: left;
-  --ig-right: right;
 
   --ig-status-text-color: maroon; /* 1. IG Title and status text color */
   --navbar-bg-color: #7b1fad; /* 2. Header container color */
@@ -53,8 +51,8 @@ var(--publish-box-border); */
   --footer-container-bg-color: #7b1fad; /* 4. Footer container color */
   --stripe-bg-color: #999999; /* 5. Header strip color */
 
-  --btn-hover-color: #9b2fdd;  /* 6. Menu button hover color */
-  --btn-active-color: #da0c23; /* 7. Menu button active color */
+  --btn-hover-color: #969cbb;  /* 6. Menu button hover color */
+  --btn-active-color: #969cbb; /* 7. Menu button active color */
   --btn-text-color: #e6e6e6; /* 8. Menu button text color */
   --btn-gradient-start-color: #428bca; /* 9. Menu item gradient start color */
   --btn-gradient-end-color: #357ebd; /* 10. Menu item gradient end  color */
@@ -81,13 +79,11 @@ var(--publish-box-border); */
   --footer-highlight-text-color: #ffff77; /* 26. Footer highlight font color */
 
   --breadcrumb-bg-color: #f5f5f5; /* 27. Breadcrumb font color */
-  --breadcrumb-text-color: #555555; /* 28. Breadcrumb font color */
+  --breadcrumb-text-color: ##555555; /* 28. Breadcrumb font color */
 
   --dragon-background-color: #fffbf7; /* 29. Dragon background color */
   --dragon-text-color: #101020; /* 30. Dragon font color */
 
-  --translation-background-color: #f0f0f0; /* 31. Translation box background color */
-  --translation-text-color: black; /* 32. Translation text color */
 }
 
 
@@ -171,10 +167,10 @@ body {
   margin-top: 4px;
   margin-bottom: 20px;
 }
-/* SCAFFOLDING OBJECTS
+/* SCAFFOlDING OBJECTS
 ----------------------------------------------------------------------------------------*/
 #logo {
-  float: var(--ig-left);
+  float: left;
   margin-top: 6px;
   margin-left: 20px;
   margin-bottom: 4px;
@@ -184,37 +180,28 @@ body {
   max-width: 100%;
 }
 
-#fcp-nav {
-  line-height: 50px;
-  float: var(--ig-right);
-}
-
-#fcp-nav a {
-  color: inherit;
-}
-
 #project-nav {
   line-height: 50px;
-  float: var(--ig-left);
+  float: left;
   margin-top: 8px;
   margin-bottom: 8px;
   color: #808080;
 }
 #project-logo {
-  float: var(--ig-left);
+  float: left;
   margin-left: 3px;
 }
 
 #family-nav {
     line-height: 50px;
-    float: var(--ig-right);
+    float: right;
     margin-top: 4px;
     margin-bottom: 8px;
     color: #808080;
 }
 
 #family-logo {
-  float: var(--ig-right);
+  float: right;
   margin-left: 6px;
 }
 
@@ -256,7 +243,7 @@ body {
   background-image: url('../images/dragon.png');
   background-size: 150px 150px;
   display: inline-block;
-  float: var(--ig-left);
+  float:left;
   margin-right: 10px;
   width: 150px;
   height: 150px;
@@ -289,48 +276,10 @@ body {
 blockquote.stu-note {
 	margin: 5px;
 	padding:10px;
-  background-color: var(--stu-note-background-color);
-  border-left-color: var(--stu-note-border-left-color);
+    background-color: var(--stu-note-background-color);
+    border-left-color: var(--stu-note-border-left-color);
 }
 
-div.fhir-conformance {
-  position: relative;
-  padding-left: 0;        /* no indentation */
-  margin-left: 0;         /* don't add any margin */
-}
-
-div.fhir-conformance::before {
-  content: '';
-  position: absolute;
-  left: -12px;            /* floats outside to the left */
-  top: 0.55em;
-  bottom: 0;
-  width: 8px;
-
-  border-left: 1px solid #aaa;
-  border-top: 1px solid #aaa;
-  border-bottom: 1px solid #aaa;
-}
-
-div.flaglist {
-  cursor: pointer;
-  width: 150px;
-  padding: 1px 2px 1px 2px;
-  margin: 0 10px 0 10px;
-  float: var(--ig-right);
-  color: var(--translation-text-color);
-  background-repeat: no-repeat;
-  box-shadow: 0 0 6px #888;
-  background-color: var(--translation-background-color);
-}
-
-img.flag {
-  vertical-align: middle;
-  border: 0;
-  height: 16px;
-  width: 16px;
-  margin: 0px 2px 0px 2px;
-}
 
 /* GENERIC OBJECTS
 ----------------------------------------------------------------------------------------*/
@@ -427,14 +376,6 @@ img.flag {
   border-color: #955159 #955159 transparent;
 }
 
-.nav-tabs > li {
-  float: var(--ig-left);
-}
-
-.ui-tabs .ui-tabs-nav li {
-  float: var(--ig-left);
-}
-
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
@@ -443,10 +384,6 @@ img.flag {
   border: 1px solid #955159;
   border-bottom-color: transparent;
   cursor: default;
-}
-
-ul.navbar-nav {
-  float: var(--ig-left);
 }
 
 .navbar-inverse .navbar-nav > .open > a,
@@ -538,14 +475,14 @@ a:focus {
   overflow: hidden;
 }
 .nav-listing > li {
-  float: var(--ig-left);
+  float: left;
   width: 25%;
 }
 .nav-listing > li > a {
   padding: 2px 6px;
 }
 .sectioncount {
-  x-float: var(--ig-right);
+  x-float: right;
   x-color: #555555;
   x-font-size: 12px;
 }
@@ -562,7 +499,7 @@ h6.underlined {
   padding-bottom: 0.2em;
 }
 p > img {
-  float: var(--ig-left);
+  float: left;
   margin-top: 0;
   margin-right: 10px;
   margin-bottom: 10px;
@@ -593,11 +530,6 @@ p > img {
 .table th.inverted h6 {
   color: inherit;
 }
-
-tr {
-  text-align: var(--ig-left);
-}
-
 pre {
   font-size: 12px;
 }
@@ -605,14 +537,14 @@ pre {
   font-size: 30px;
   margin-right: 10px;
   display: block;
-  float: var(--ig-left);
+  float: left;
 }
 /* BACK TO TOP
 ----------------------------------------------------------------------------------------*/
 a.to-top {
   background: url('../images/theme/up.png') no-repeat;
   display: block;
-  float: var(--ig-right);
+  float: right;
   width: 25px;
   height: 25px;
   text-indent: -9999px;
@@ -627,7 +559,7 @@ ul.markdown-toc
 {
   margin: 4px;
   padding: 4px;
-  float: var(--ig-right);
+  float: right;
   z-index: 10;
   width: 30%;
   background-color:  var(--toc-box-bg-color);
@@ -653,7 +585,7 @@ div.markdown-toc
 {
   margin: 4px;
   padding: 4px;
-  float: var(--ig-right);
+  float: right;
   z-index: 10;
   width: 30%;
   background-color:  var(--toc-box-bg-color);
@@ -703,14 +635,14 @@ a[href$=".sch"]:after, a[href$=".xlsx"]:after, a[href$=".zip"]:after, a[href$=".
 }
 
 /* =========== external links ============= */
-p a[href^="http://"]:not([no-external^="true"]):after,p a[href^="https://"]:not([no-external^="true"]):after {
+p a[href^="http://"]:not([data-no-external^="true"]):after,p a[href^="https://"]:not([data-no-external^="true"]):after {
     content: url(../images/external.png);
     display: inline-block;
     text-decoration: none;
     padding-left: 3px;
 }
 
-li a[href^="http://"]:not([no-external^="true"]):after,li a[href^="https://"]:not([no-external^="true"]):after {
+li a[href^="http://"]:not([data-no-external^="true"]):after,li a[href^="https://"]:not([data-no-external^="true"]):after {
     content: url(../images/external.png);
     display: inline-block;
     text-decoration: none;
@@ -719,56 +651,12 @@ li a[href^="http://"]:not([no-external^="true"]):after,li a[href^="https://"]:no
 
 /* ----------New content for ballot styling------*/
 
-span.new-content::before,
-li.new-content::before {
-  content: "New Content: ";
-  color: red;
-  font-weight: bold;
-  display: inline-block;
-  margin-right: 0.25em;
-}
-p.new-content::before,
-div.new-content::before {
+.new-content::before {
   white-space: pre;
   content: "New Content\A ";
   color: red;
-  font-weight: bold;
-}
-/* When both classes are present, ::before handles the label */
-p.fhir-conformance.new-content::before,
-div.fhir-conformance.new-content::before {
-  content: "New Content";
-  display: block;
-  color: red;
-  font-weight: bold;
-  position: static;
-  border: none;
-  width: auto;
-}
-
-/* Replicate the bracket using ::after for the combined case */
-p.fhir-conformance.new-content::after,
-div.fhir-conformance.new-content::after {
-  content: '';
-  position: absolute;
-  left: -12px;
-  top: 0.55em;
-  bottom: 0;
-  width: 8px;
-  border-left: 1px solid #aaa;
-  border-top: 1px solid #aaa;
-  border-bottom: 1px solid #aaa;
-}
-
-span.new-content,
-li.new-content{
-    padding: 2px;
-    color: #3c763d;
-    background-color: #dff0d8;
-    border-color: #d6e9c6;
-}
-p.new-content,
-div.new-content{
+  font-weight: bold;}
+.new-content{
     margin: 5px;
     padding: 10px;
     color: #3c763d;
@@ -776,90 +664,18 @@ div.new-content{
     border-color: #d6e9c6;
 }
 
-.changes-disabled .new-content::before {
-    all:unset;
-}
-.changes-disabled div.fhir-conformance.new-content::before {
-    all:unset;
-}
-.changes-disabled .new-content {
-    margin: revert;
-    padding: revert;
-    color: revert;
-    background-color: revert;
-    border-color: revert;
-}
-
-span.modified-content::before,
-li.modified-content::before {
-  content: "Modified Content: ";
-  color: red;
-  font-weight: bold;
-  display: inline-block;
-  margin-right: 0.25em;
-}
-p.modified-content::before,
-div.modified-content::before {
+.modified-content::before {
   white-space: pre;
   content: "Modified Content\A ";
   color: red;
-  font-weight: bold;
-}
-p.fhir-conformance.modified-content::before,
-div.fhir-conformance.modified-content::before {
-  content: "Modified Content";
-  display: block;
-  color: red;
-  font-weight: bold;
-  position: static;
-  border: none;
-  width: auto;
-}
-
-/* Replicate the bracket using ::after for the combined case */
-p.fhir-conformance.modified-content::after,
-div.fhir-conformance.modified-content::after {
-  content: '';
-  position: absolute;
-  left: -12px;
-  top: 0.55em;
-  bottom: 0;
-  width: 8px;
-  border-left: 1px solid #aaa;
-  border-top: 1px solid #aaa;
-  border-bottom: 1px solid #aaa;
-}
-
-span.modified-content,
-li.modified-content{
-    padding: 2px;
-    color: #784212;
-    background-color: #fef9e7;
-    border-color: #f9e79f;
-}
-p.modified-content,
-div.modified-content{
+  font-weight: bold;}
+.modified-content{
     margin: 5px;
     padding: 10px;
     color: #784212;
     background-color: #fef9e7;
     border-color: #f9e79f;
 }
-
-.changes-disabled .modified-content::before {
-    all:unset;
-}
-.changes-disabled div.fhir-conformance.modified-content::before {
-  all:unset;
-}
-.changes-disabled .modified-content {
-    margin: revert;
-    padding: revert;
-    color: revert;
-    background-color: revert;
-    border-color: revert;
-}
-
 
 .bg-success{
     color: #3c763d;
@@ -896,7 +712,7 @@ div.modified-content{
   margin-left: 7px;
   padding-left: 7px;
   padding-right: 7px;
-  float: var(--ig-right) ; /* none or right */
+  float: right ; /* none or right */
   border-radius: 6px;
   border: 0.5px solid #ffffff;
 }
@@ -938,10 +754,4 @@ div.modified-content{
   padding: 0px 0px; 
   border-width: 0px;
   background-color: transparent;
-}
-
-
-code[class*="language-"],
-pre[class*="language-"] {
-    text-shadow: none;
 }
