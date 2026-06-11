@@ -21,8 +21,8 @@ parameters:
   path-expansion-params: '../../expansion-params.json' # for using French SNOMED CT Extension
 
 dependencies: # https://build.fhir.org/ig/FHIR/ig-guidance/versions.html#depending-on-multiple-different-versions-of-the-same-package
-  v220@npm:hl7.fhir.fr.core: 2.2.0 #Version utilisée pour les nouveaux cas d'usage
-  hl7.fhir.fr.core: 1.1.0 #Version utilisée pour les cas d'usage PS Indiv, SOS et CPTS
+  hl7.fhir.fr.core: 2.2.0 #Version utilisée pour les nouveaux cas d'usage
+  hl7.fhir.fr.core#v110@npm:hl7.fhir.fr.core: 1.1.0 #Version utilisée pour les cas d'usage PS Indiv, SOS et CPTS
 
 pages:
     index.md:
