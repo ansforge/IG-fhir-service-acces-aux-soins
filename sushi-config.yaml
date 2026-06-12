@@ -16,18 +16,17 @@ jurisdiction: urn:iso:std:iso:3166#FR "France (la)"
 
 parameters:
   shownav: 'true'
-  i18n-default-lang: fr-FR # Default language
+  i18n-default-lang: fr # Default language
   apply-jurisdiction: true
   path-expansion-params: '../../expansion-params.json' # for using French SNOMED CT Extension
+  i18n-lang:
+      - en
+translation-sources:
+      - input/translations/en
 
 
-    
+ 
 dependencies:
-    hl7.fhir.fr.core:
-     id: frcore210
-     version: 2.1.0
-     reason: |
-      Version utilisée pour les nouveaux cas d'usage
     v110@npm:hl7.fhir.fr.core: 
      id: frcore110
      version: 1.1.0
