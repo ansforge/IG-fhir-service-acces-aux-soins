@@ -90,7 +90,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-sas-sos-schedul
   "version" : "1.2.0",
   "name" : "FrScheduleAgregateurSOS",
   "status" : "active",
-  "date" : "2026-06-12T12:31:55+00:00",
+  "date" : "2026-06-12T13:24:30+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
