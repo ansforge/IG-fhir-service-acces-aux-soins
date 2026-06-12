@@ -1,0 +1,64 @@
+# Appointment Participant Type SAS - Service d'Accès aux Soins v1.2.0
+
+## ValueSet: Appointment Participant Type SAS 
+
+ 
+Type de participant du RDV SAS 
+
+ **References** 
+
+Ce jeu de valeurs n'est pas utilisé ici ; il peut être utilisé autre part (par exemple dans les spécifications et / ou implémentations qui utilisent ce contenu)
+
+### Définition logique (CLD)
+
+ 
+
+### 
+
+-------
+
+ . 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "ValueSet",
+  "id" : "sas-valueset-appointmentparticipanttype",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-appointmentparticipanttype",
+  "version" : "1.2.0",
+  "name" : "AppointmentParticipantTypeSAS",
+  "title" : "Appointment Participant Type SAS",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-06-12T07:59:14+00:00",
+  "publisher" : "ANS",
+  "contact" : [{
+    "name" : "ANS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Type de participant du RDV SAS",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+      "concept" : [{
+        "code" : "ADM",
+        "display" : "The practitioner who is responsible for admitting a patient to a patient encounter."
+      }]
+    }]
+  }
+}
+
+```
