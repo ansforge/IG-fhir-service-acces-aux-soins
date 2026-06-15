@@ -83,7 +83,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-sas-cpts-organi
   "version" : "1.2.0",
   "name" : "FrOrganizationAgregateurCPTS",
   "status" : "active",
-  "date" : "2026-06-12T14:51:06+00:00",
+  "date" : "2026-06-15T12:26:42+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

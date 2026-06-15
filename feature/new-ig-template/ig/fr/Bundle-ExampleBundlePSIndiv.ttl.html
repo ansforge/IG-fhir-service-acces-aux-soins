@@ -324,96 +324,70 @@
   <a href="http://hl7.org/fhir/R4/resource.html#Bundle.meta">fhir:meta</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://sas.fr/fhir/StructureDefinition/BundleAgregateur&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://sas.fr/fhir/StructureDefinition/BundleAgregateur&gt;     ] )
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://sas.fr/fhir/StructureDefinition/BundleAgregateur&gt;     ] )
   ] ; # 
   <a href="http://hl7.org/fhir/R4/resource.html#Bundle.language">fhir:language</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;fr&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.type">fhir:type</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;searchset&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.total">fhir:total</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">fhir:v</a> &quot;4&quot;^^xsd:nonNegativeInteger] ; # 
   <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.link">fhir:link</a> ( [
 <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.link.relation">fhir:relation</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;self&quot; ] ;
-<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.link.url">fhir:url</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://exemple.com/ans-sas/Slot/?_include=Slot:schedule&amp;_include:iterate=Schedule:actor&amp;status=free&amp;start=ge2021-11-04T14:19:35.760+00:00&amp;start=le2021-11-06T23:59:59.999+00:00&amp;schedule.actor:Practitioner.identifier=urn:oid:1.2.250.1.71.4.2.1%7C810002673899,urn:oid:1.2.250.1.71.4.2.1%7C810100050075&amp;_count=1000&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;https://exemple.com/ans-sas/Slot/?_include=Slot:schedule&amp;_include:iterate=Schedule:actor&amp;status=free&amp;start=ge2021-11-04T14:19:35.760+00:00&amp;start=le2021-11-06T23:59:59.999+00:00&amp;schedule.actor:Practitioner.identifier=urn:oid:1.2.250.1.71.4.2.1%7C810002673899,urn:oid:1.2.250.1.71.4.2.1%7C810100050075&amp;_count=1000&gt;     ]
+<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.link.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://exemple.com/ans-sas/Slot/?_include=Slot:schedule&amp;_include:iterate=Schedule:actor&amp;status=free&amp;start=ge2021-11-04T14:19:35.760+00:00&amp;start=le2021-11-06T23:59:59.999+00:00&amp;schedule.actor:Practitioner.identifier=urn:oid:1.2.250.1.71.4.2.1%7C810002673899,urn:oid:1.2.250.1.71.4.2.1%7C810100050075&amp;_count=1000&quot;^^xsd:anyURI ]
   ] ) ; # 
   <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">fhir:entry</a> ( [
-<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:fullUrl</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv1&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv1&gt;     ] ;
+<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:fullUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv1&quot;^^xsd:anyURI ] ;
     ( <a href="http://hl7.org/fhir/R4/slot.html#Slot">fhir:resource</a> &lt;https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv1&gt; ) ;
 <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search">fhir:search</a> [
 <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search.mode">fhir:mode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;match&quot; ]     ]
   ] [
-<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:fullUrl</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://exemple.com/ans-sas/Schedule/ExampleSchedule1&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;https://exemple.com/ans-sas/Schedule/ExampleSchedule1&gt;     ] ;
+<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:fullUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://exemple.com/ans-sas/Schedule/ExampleSchedule1&quot;^^xsd:anyURI ] ;
     ( <a href="http://hl7.org/fhir/R4/schedule.html#Schedule">fhir:resource</a> &lt;https://exemple.com/ans-sas/Schedule/ExampleSchedule1&gt; ) ;
 <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search">fhir:search</a> [
 <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search.mode">fhir:mode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;include&quot; ]     ]
   ] [
-<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:fullUrl</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://exemple.com/ans-sas/Practitioner/ExamplePractitioner2&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;https://exemple.com/ans-sas/Practitioner/ExamplePractitioner2&gt;     ] ;
+<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:fullUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://exemple.com/ans-sas/Practitioner/ExamplePractitioner2&quot;^^xsd:anyURI ] ;
     ( <a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner">fhir:resource</a> &lt;https://exemple.com/ans-sas/Practitioner/ExamplePractitioner2&gt; )
   ] [
-<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:fullUrl</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur2&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur2&gt;     ] ;
+<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:fullUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur2&quot;^^xsd:anyURI ] ;
     ( <a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole">fhir:resource</a> &lt;https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur2&gt; ) ;
 <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search">fhir:search</a> [
 <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search.mode">fhir:mode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;include&quot; ]     ]
   ] [
-<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:fullUrl</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv2&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv2&gt;     ] ;
+<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:fullUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv2&quot;^^xsd:anyURI ] ;
     ( <a href="http://hl7.org/fhir/R4/slot.html#Slot">fhir:resource</a> &lt;https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv2&gt; ) ;
 <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search">fhir:search</a> [
 <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search.mode">fhir:mode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;match&quot; ]     ]
   ] [
-<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:fullUrl</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://exemple.com/ans-sas/Schedule/ExampleSchedule2&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;https://exemple.com/ans-sas/Schedule/ExampleSchedule2&gt;     ] ;
+<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:fullUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://exemple.com/ans-sas/Schedule/ExampleSchedule2&quot;^^xsd:anyURI ] ;
     ( <a href="http://hl7.org/fhir/R4/schedule.html#Schedule">fhir:resource</a> &lt;https://exemple.com/ans-sas/Schedule/ExampleSchedule2&gt; ) ;
 <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search">fhir:search</a> [
 <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search.mode">fhir:mode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;include&quot; ]     ]
   ] [
-<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:fullUrl</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur3&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur3&gt;     ] ;
+<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:fullUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur3&quot;^^xsd:anyURI ] ;
     ( <a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole">fhir:resource</a> &lt;https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur3&gt; ) ;
 <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search">fhir:search</a> [
 <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search.mode">fhir:mode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;include&quot; ]     ]
   ] [
-<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:fullUrl</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv3&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv3&gt;     ] ;
+<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:fullUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv3&quot;^^xsd:anyURI ] ;
     ( <a href="http://hl7.org/fhir/R4/slot.html#Slot">fhir:resource</a> &lt;https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv3&gt; ) ;
 <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search">fhir:search</a> [
 <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search.mode">fhir:mode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;match&quot; ]     ]
   ] [
-<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:fullUrl</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://exemple.com/ans-sas/Schedule/ExampleSchedule3&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;https://exemple.com/ans-sas/Schedule/ExampleSchedule3&gt;     ] ;
+<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:fullUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://exemple.com/ans-sas/Schedule/ExampleSchedule3&quot;^^xsd:anyURI ] ;
     ( <a href="http://hl7.org/fhir/R4/schedule.html#Schedule">fhir:resource</a> &lt;https://exemple.com/ans-sas/Schedule/ExampleSchedule3&gt; ) ;
 <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search">fhir:search</a> [
 <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search.mode">fhir:mode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;include&quot; ]     ]
   ] [
-<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:fullUrl</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://exemple.com/ans-sas/Practitioner/ExamplePractitioner3&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;https://exemple.com/ans-sas/Practitioner/ExamplePractitioner3&gt;     ] ;
+<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:fullUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://exemple.com/ans-sas/Practitioner/ExamplePractitioner3&quot;^^xsd:anyURI ] ;
     ( <a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner">fhir:resource</a> &lt;https://exemple.com/ans-sas/Practitioner/ExamplePractitioner3&gt; ) ;
 <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search">fhir:search</a> [
 <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search.mode">fhir:mode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;include&quot; ]     ]
   ] [
-<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:fullUrl</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur4&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur4&gt;     ] ;
+<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:fullUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur4&quot;^^xsd:anyURI ] ;
     ( <a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole">fhir:resource</a> &lt;https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur4&gt; ) ;
 <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search">fhir:search</a> [
 <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search.mode">fhir:mode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;include&quot; ]     ]
   ] [
-<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:fullUrl</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv4&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv4&gt;     ] ;
+<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:fullUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv4&quot;^^xsd:anyURI ] ;
     ( <a href="http://hl7.org/fhir/R4/slot.html#Slot">fhir:resource</a> &lt;https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv4&gt; ) ;
 <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search">fhir:search</a> [
 <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search.mode">fhir:mode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;match&quot; ]     ]
@@ -424,11 +398,9 @@
   <a href="http://hl7.org/fhir/R4/resource.html#Slot.meta">fhir:meta</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur&gt;     ] ) ;
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur&gt;     ] ) ;
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.security">fhir:security</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau&gt;       ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;PUBLIC&quot; ]     ] )
   ] ; # 
   <a href="http://hl7.org/fhir/R4/resource.html#Slot.language">fhir:language</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;fr&quot;] ; # 
@@ -438,41 +410,30 @@
   ] ; # 
   <a href="http://hl7.org/fhir/R4/slot.html#Slot.serviceType">fhir:serviceType</a> ( [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://terminology.hl7.org/CodeSystem/v3-ActCode&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://terminology.hl7.org/CodeSystem/v3-ActCode&gt;       ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://terminology.hl7.org/CodeSystem/v3-ActCode&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;AMB&quot; ]     ] )
   ] [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://terminology.hl7.org/CodeSystem/v3-ActCode&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://terminology.hl7.org/CodeSystem/v3-ActCode&gt;       ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://terminology.hl7.org/CodeSystem/v3-ActCode&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;VR&quot; ]     ] )
   ] [
 <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:text</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Visite de contrôle&quot; ]
   ] ) ; # 
   <a href="http://hl7.org/fhir/R4/slot.html#Slot.specialty">fhir:specialty</a> ( [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale&gt;       ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;SM54&quot; ]     ] )
   ] [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale&gt;       ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;SM05&quot; ]     ] )
   ] ) ; # 
   <a href="http://hl7.org/fhir/R4/slot.html#Slot.appointmentType">fhir:appointmentType</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://terminology.hl7.org/CodeSystem/v2-0276&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://terminology.hl7.org/CodeSystem/v2-0276&gt;       ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://terminology.hl7.org/CodeSystem/v2-0276&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;ROUTINE&quot; ]     ] )
   ] ; # 
   <a href="http://hl7.org/fhir/R4/slot.html#Slot.schedule">fhir:schedule</a> [
-<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Schedule/ExampleSchedule1 ;
 <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Schedule/ExampleSchedule1&quot; ]
   ] ; # 
   <a href="http://hl7.org/fhir/R4/slot.html#Slot.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;free&quot;] ; # 
@@ -485,7 +446,7 @@
   <a href="http://hl7.org/fhir/R4/resource.html#Schedule.meta">fhir:meta</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur&gt;     ] )
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur&gt;     ] )
   ] ; # 
   <a href="http://hl7.org/fhir/R4/resource.html#Schedule.language">fhir:language</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;fr&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/domainresource.html#Schedule.text">fhir:text</a> [
@@ -493,10 +454,8 @@
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">fhir:div</a> [ <a href="http://hl7.org/fhir/R4/narrative.html#xhtml">fhir:v</a> &quot;&lt;div xml:lang=\&quot;fr\&quot; lang=\&quot;fr\&quot;&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;French&lt;/b&gt;&lt;/p&gt;&lt;hr/&gt;&lt;a name=\&quot;Schedule_ExampleSchedule1\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : Schedule ExampleSchedule1&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExampleSchedule1\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExampleSchedule1\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-FrScheduleAgregateur.html\&quot;&gt;FrScheduleAgregateur&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;actor&lt;/b&gt;: &lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=\&quot;Practitioner-ExamplePractitioner2.html\&quot;&gt;Practitioner Sébastien THOMAS &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=\&quot;PractitionerRole-ExamplePractitionerRoleAgregateur2.html\&quot;&gt;PractitionerRole&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral ]
   ] ; # 
   <a href="http://hl7.org/fhir/R4/schedule.html#Schedule.actor">fhir:actor</a> ( [
-<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Practitioner/ExamplePractitioner2 ;
 <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Practitioner/ExamplePractitioner2&quot; ]
   ] [
-<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:PractitionerRole/ExamplePractitionerRoleAgregateur2 ;
 <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;PractitionerRole/ExamplePractitionerRoleAgregateur2&quot; ]
   ] ) . # 
 
@@ -505,7 +464,7 @@
   <a href="http://hl7.org/fhir/R4/resource.html#Practitioner.meta">fhir:meta</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur&gt;     ] )
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur&gt;     ] )
   ] ; # 
   <a href="http://hl7.org/fhir/R4/resource.html#Practitioner.language">fhir:language</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;fr&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/domainresource.html#Practitioner.text">fhir:text</a> [
@@ -515,13 +474,9 @@
   <a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.identifier">fhir:identifier</a> ( [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">fhir:type</a> [
       ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://interopsante.org/fhir/CodeSystem/fr-v2-0203&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://interopsante.org/fhir/CodeSystem/fr-v2-0203&gt;         ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://interopsante.org/fhir/CodeSystem/fr-v2-0203&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;IDNPS&quot; ]       ] )     ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;urn:oid:1.2.250.1.71.4.2.1&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;urn:oid:1.2.250.1.71.4.2.1&gt;     ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;urn:oid:1.2.250.1.71.4.2.1&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;810100050075&quot; ]
   ] ) ; # 
   <a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.name">fhir:name</a> ( [
@@ -534,7 +489,7 @@
   <a href="http://hl7.org/fhir/R4/resource.html#PractitionerRole.meta">fhir:meta</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur&gt;     ] )
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur&gt;     ] )
   ] ; # 
   <a href="http://hl7.org/fhir/R4/resource.html#PractitionerRole.language">fhir:language</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;fr&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/domainresource.html#PractitionerRole.text">fhir:text</a> [
@@ -547,17 +502,13 @@
 <a href="http://hl7.org/fhir/R4/resource.html#Location.meta">fhir:meta</a> [
       ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur&gt;       ] )     ] ;
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur&gt;       ] )     ] ;
     ( <a href="http://hl7.org/fhir/R4/location.html#Location.identifier">fhir:identifier</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">fhir:type</a> [
         ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type&gt;           ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;INTRN&quot; ]         ] )       ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;urn:oid:1.1.111.1.111.1.1.1&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;urn:oid:1.1.111.1.111.1.1.1&gt;       ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;urn:oid:1.1.111.1.111.1.1.1&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1&quot; ]     ] ) ;
 <a href="http://hl7.org/fhir/R4/location.html#Location.address">fhir:address</a> [
       ( <a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.line">fhir:line</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1 rue Mme DELMAS&quot; ] ) ;
@@ -565,24 +516,18 @@
 <a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.postalCode">fhir:postalCode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;47000&quot; ]     ]
   ] ) ; # 
   <a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.practitioner">fhir:practitioner</a> [
-<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Practitioner/ExamplePractitioner2 ;
 <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Practitioner/ExamplePractitioner2&quot; ]
   ] ; # 
   <a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.organization">fhir:organization</a> [
 <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.identifier">fhir:identifier</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">fhir:type</a> [
         ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://interopsante.org/fhir/CodeSystem/fr-v2-0203&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://interopsante.org/fhir/CodeSystem/fr-v2-0203&gt;           ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://interopsante.org/fhir/CodeSystem/fr-v2-0203&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;IDNST&quot; ]         ] )       ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;urn:oid:1.2.250.1.71.4.2.2&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;urn:oid:1.2.250.1.71.4.2.2&gt;       ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;urn:oid:1.2.250.1.71.4.2.2&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1810004421&quot; ]     ]
   ] ; # 
   <a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.location">fhir:location</a> ( [
-<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> &lt;#ExampleLocation3&gt; ;
 <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;#ExampleLocation3&quot; ]
   ] ) . # 
 
@@ -591,11 +536,9 @@
   <a href="http://hl7.org/fhir/R4/resource.html#Slot.meta">fhir:meta</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur&gt;     ] ) ;
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur&gt;     ] ) ;
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.security">fhir:security</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau&gt;       ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;PRO&quot; ]     ] )
   ] ; # 
   <a href="http://hl7.org/fhir/R4/resource.html#Slot.language">fhir:language</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;fr&quot;] ; # 
@@ -605,30 +548,23 @@
   ] ; # 
   <a href="http://hl7.org/fhir/R4/slot.html#Slot.serviceType">fhir:serviceType</a> ( [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://terminology.hl7.org/CodeSystem/v3-ActCode&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://terminology.hl7.org/CodeSystem/v3-ActCode&gt;       ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://terminology.hl7.org/CodeSystem/v3-ActCode&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;AMB&quot; ]     ] )
   ] [
 <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:text</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Visite urgente&quot; ]
   ] ) ; # 
   <a href="http://hl7.org/fhir/R4/slot.html#Slot.specialty">fhir:specialty</a> ( [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale&gt;       ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;SM54&quot; ]     ] ) ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:text</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Médecine générale&quot; ]
   ] ) ; # 
   <a href="http://hl7.org/fhir/R4/slot.html#Slot.appointmentType">fhir:appointmentType</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://terminology.hl7.org/CodeSystem/v2-0276&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://terminology.hl7.org/CodeSystem/v2-0276&gt;       ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://terminology.hl7.org/CodeSystem/v2-0276&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;WALKIN&quot; ]     ] )
   ] ; # 
   <a href="http://hl7.org/fhir/R4/slot.html#Slot.schedule">fhir:schedule</a> [
-<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Schedule/ExampleSchedule2 ;
 <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Schedule/ExampleSchedule2&quot; ]
   ] ; # 
   <a href="http://hl7.org/fhir/R4/slot.html#Slot.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;free&quot;] ; # 
@@ -640,7 +576,7 @@
   <a href="http://hl7.org/fhir/R4/resource.html#Schedule.meta">fhir:meta</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur&gt;     ] )
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur&gt;     ] )
   ] ; # 
   <a href="http://hl7.org/fhir/R4/resource.html#Schedule.language">fhir:language</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;fr&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/domainresource.html#Schedule.text">fhir:text</a> [
@@ -648,10 +584,8 @@
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">fhir:div</a> [ <a href="http://hl7.org/fhir/R4/narrative.html#xhtml">fhir:v</a> &quot;&lt;div xml:lang=\&quot;fr\&quot; lang=\&quot;fr\&quot;&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;French&lt;/b&gt;&lt;/p&gt;&lt;hr/&gt;&lt;a name=\&quot;Schedule_ExampleSchedule2\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : Schedule ExampleSchedule2&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExampleSchedule2\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExampleSchedule2\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-FrScheduleAgregateur.html\&quot;&gt;FrScheduleAgregateur&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;actor&lt;/b&gt;: &lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=\&quot;Practitioner-ExamplePractitioner2.html\&quot;&gt;Practitioner Sébastien THOMAS &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=\&quot;PractitionerRole-ExamplePractitionerRoleAgregateur3.html\&quot;&gt;PractitionerRole&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral ]
   ] ; # 
   <a href="http://hl7.org/fhir/R4/schedule.html#Schedule.actor">fhir:actor</a> ( [
-<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Practitioner/ExamplePractitioner2 ;
 <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Practitioner/ExamplePractitioner2&quot; ]
   ] [
-<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:PractitionerRole/ExamplePractitionerRoleAgregateur3 ;
 <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;PractitionerRole/ExamplePractitionerRoleAgregateur3&quot; ]
   ] ) . # 
 
@@ -660,7 +594,7 @@
   <a href="http://hl7.org/fhir/R4/resource.html#PractitionerRole.meta">fhir:meta</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur&gt;     ] )
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur&gt;     ] )
   ] ; # 
   <a href="http://hl7.org/fhir/R4/resource.html#PractitionerRole.language">fhir:language</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;fr&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/domainresource.html#PractitionerRole.text">fhir:text</a> [
@@ -673,17 +607,13 @@
 <a href="http://hl7.org/fhir/R4/resource.html#Location.meta">fhir:meta</a> [
       ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur&gt;       ] )     ] ;
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur&gt;       ] )     ] ;
     ( <a href="http://hl7.org/fhir/R4/location.html#Location.identifier">fhir:identifier</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">fhir:type</a> [
         ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type&gt;           ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;INTRN&quot; ]         ] )       ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;urn:oid:1.1.111.1.111.1.1.1&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;urn:oid:1.1.111.1.111.1.1.1&gt;       ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;urn:oid:1.1.111.1.111.1.1.1&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;2&quot; ]     ] ) ;
 <a href="http://hl7.org/fhir/R4/location.html#Location.address">fhir:address</a> [
       ( <a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.line">fhir:line</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;30 rue Mme DELMAS&quot; ] ) ;
@@ -691,24 +621,18 @@
 <a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.postalCode">fhir:postalCode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;47000&quot; ]     ]
   ] ) ; # 
   <a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.practitioner">fhir:practitioner</a> [
-<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Practitioner/ExamplePractitioner2 ;
 <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Practitioner/ExamplePractitioner2&quot; ]
   ] ; # 
   <a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.organization">fhir:organization</a> [
 <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.identifier">fhir:identifier</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">fhir:type</a> [
         ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://interopsante.org/fhir/CodeSystem/fr-v2-0203&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://interopsante.org/fhir/CodeSystem/fr-v2-0203&gt;           ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://interopsante.org/fhir/CodeSystem/fr-v2-0203&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;IDNST&quot; ]         ] )       ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;urn:oid:1.2.250.1.71.4.2.2&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;urn:oid:1.2.250.1.71.4.2.2&gt;       ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;urn:oid:1.2.250.1.71.4.2.2&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1810004956&quot; ]     ]
   ] ; # 
   <a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.location">fhir:location</a> ( [
-<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> &lt;#ExampleLocation2&gt; ;
 <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;#ExampleLocation2&quot; ]
   ] ) . # 
 
@@ -717,15 +641,11 @@
   <a href="http://hl7.org/fhir/R4/resource.html#Slot.meta">fhir:meta</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur&gt;     ] ) ;
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur&gt;     ] ) ;
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.security">fhir:security</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau&gt;       ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;PUBLIC&quot; ]     ] [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau&gt;       ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;PRO&quot; ]     ] )
   ] ; # 
   <a href="http://hl7.org/fhir/R4/resource.html#Slot.language">fhir:language</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;fr&quot;] ; # 
@@ -735,9 +655,7 @@
   ] ; # 
   <a href="http://hl7.org/fhir/R4/slot.html#Slot.serviceType">fhir:serviceType</a> ( [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://terminology.hl7.org/CodeSystem/v3-ActCode&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://terminology.hl7.org/CodeSystem/v3-ActCode&gt;       ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://terminology.hl7.org/CodeSystem/v3-ActCode&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;VR&quot; ]     ] )
   ] [
 <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:text</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Visite de contrôle&quot; ]
@@ -746,22 +664,17 @@
   ] ) ; # 
   <a href="http://hl7.org/fhir/R4/slot.html#Slot.specialty">fhir:specialty</a> ( [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale&gt;       ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;SM41&quot; ]     ] )
   ] [
 <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:text</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Pneumologie&quot; ]
   ] ) ; # 
   <a href="http://hl7.org/fhir/R4/slot.html#Slot.appointmentType">fhir:appointmentType</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://terminology.hl7.org/CodeSystem/v2-0276&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://terminology.hl7.org/CodeSystem/v2-0276&gt;       ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://terminology.hl7.org/CodeSystem/v2-0276&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;ROUTINE&quot; ]     ] )
   ] ; # 
   <a href="http://hl7.org/fhir/R4/slot.html#Slot.schedule">fhir:schedule</a> [
-<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Schedule/ExampleSchedule3 ;
 <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Schedule/ExampleSchedule3&quot; ]
   ] ; # 
   <a href="http://hl7.org/fhir/R4/slot.html#Slot.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;free&quot;] ; # 
@@ -774,7 +687,7 @@
   <a href="http://hl7.org/fhir/R4/resource.html#Schedule.meta">fhir:meta</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur&gt;     ] )
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur&gt;     ] )
   ] ; # 
   <a href="http://hl7.org/fhir/R4/resource.html#Schedule.language">fhir:language</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;fr&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/domainresource.html#Schedule.text">fhir:text</a> [
@@ -782,10 +695,8 @@
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">fhir:div</a> [ <a href="http://hl7.org/fhir/R4/narrative.html#xhtml">fhir:v</a> &quot;&lt;div xml:lang=\&quot;fr\&quot; lang=\&quot;fr\&quot;&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;French&lt;/b&gt;&lt;/p&gt;&lt;hr/&gt;&lt;a name=\&quot;Schedule_ExampleSchedule3\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : Schedule ExampleSchedule3&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExampleSchedule3\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExampleSchedule3\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-FrScheduleAgregateur.html\&quot;&gt;FrScheduleAgregateur&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;actor&lt;/b&gt;: &lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=\&quot;Practitioner-ExamplePractitioner3.html\&quot;&gt;Practitioner Guillaume MARCEL &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=\&quot;PractitionerRole-ExamplePractitionerRoleAgregateur4.html\&quot;&gt;PractitionerRole : telecom = ph: +33658913859&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral ]
   ] ; # 
   <a href="http://hl7.org/fhir/R4/schedule.html#Schedule.actor">fhir:actor</a> ( [
-<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Practitioner/ExamplePractitioner3 ;
 <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Practitioner/ExamplePractitioner3&quot; ]
   ] [
-<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:PractitionerRole/ExamplePractitionerRoleAgregateur4 ;
 <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;PractitionerRole/ExamplePractitionerRoleAgregateur4&quot; ]
   ] ) . # 
 
@@ -794,7 +705,7 @@
   <a href="http://hl7.org/fhir/R4/resource.html#Practitioner.meta">fhir:meta</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur&gt;     ] )
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur&gt;     ] )
   ] ; # 
   <a href="http://hl7.org/fhir/R4/resource.html#Practitioner.language">fhir:language</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;fr&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/domainresource.html#Practitioner.text">fhir:text</a> [
@@ -804,13 +715,9 @@
   <a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.identifier">fhir:identifier</a> ( [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">fhir:type</a> [
       ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://interopsante.org/fhir/CodeSystem/fr-v2-0203&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://interopsante.org/fhir/CodeSystem/fr-v2-0203&gt;         ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://interopsante.org/fhir/CodeSystem/fr-v2-0203&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;IDNPS&quot; ]       ] )     ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;urn:oid:1.2.250.1.71.4.2.1&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;urn:oid:1.2.250.1.71.4.2.1&gt;     ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;urn:oid:1.2.250.1.71.4.2.1&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;810002673899&quot; ]
   ] ) ; # 
   <a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.name">fhir:name</a> ( [
@@ -823,7 +730,7 @@
   <a href="http://hl7.org/fhir/R4/resource.html#PractitionerRole.meta">fhir:meta</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur&gt;     ] )
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur&gt;     ] )
   ] ; # 
   <a href="http://hl7.org/fhir/R4/resource.html#PractitionerRole.language">fhir:language</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;fr&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/domainresource.html#PractitionerRole.text">fhir:text</a> [
@@ -836,17 +743,13 @@
 <a href="http://hl7.org/fhir/R4/resource.html#Location.meta">fhir:meta</a> [
       ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur&gt;       ] )     ] ;
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur&gt;       ] )     ] ;
     ( <a href="http://hl7.org/fhir/R4/location.html#Location.identifier">fhir:identifier</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">fhir:type</a> [
         ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type&gt;           ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;INTRN&quot; ]         ] )       ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;urn:oid:1.1.111.1.111.1.1.1&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;urn:oid:1.1.111.1.111.1.1.1&gt;       ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;urn:oid:1.1.111.1.111.1.1.1&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1&quot; ]     ] ) ;
 <a href="http://hl7.org/fhir/R4/location.html#Location.address">fhir:address</a> [
       ( <a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.line">fhir:line</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1 rue Mme DELMAS&quot; ] ) ;
@@ -854,24 +757,18 @@
 <a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.postalCode">fhir:postalCode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;47000&quot; ]     ]
   ] ) ; # 
   <a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.practitioner">fhir:practitioner</a> [
-<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Practitioner/ExamplePractitioner3 ;
 <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Practitioner/ExamplePractitioner3&quot; ]
   ] ; # 
   <a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.organization">fhir:organization</a> [
 <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.identifier">fhir:identifier</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">fhir:type</a> [
         ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://interopsante.org/fhir/CodeSystem/fr-v2-0203&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://interopsante.org/fhir/CodeSystem/fr-v2-0203&gt;           ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://interopsante.org/fhir/CodeSystem/fr-v2-0203&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;IDNST&quot; ]         ] )       ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;urn:oid:1.2.250.1.71.4.2.2&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;urn:oid:1.2.250.1.71.4.2.2&gt;       ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;urn:oid:1.2.250.1.71.4.2.2&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1810004421&quot; ]     ]
   ] ; # 
   <a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.location">fhir:location</a> ( [
-<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> &lt;#ExampleLocation3&gt; ;
 <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;#ExampleLocation3&quot; ]
   ] ) ; # 
   <a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.telecom">fhir:telecom</a> ( [
@@ -884,15 +781,11 @@
   <a href="http://hl7.org/fhir/R4/resource.html#Slot.meta">fhir:meta</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur&gt;     ] ) ;
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur&gt;     ] ) ;
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.security">fhir:security</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau&gt;       ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;PUBLIC&quot; ]     ] [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau&gt;       ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;PRO&quot; ]     ] )
   ] ; # 
   <a href="http://hl7.org/fhir/R4/resource.html#Slot.language">fhir:language</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;fr&quot;] ; # 
@@ -902,9 +795,7 @@
   ] ; # 
   <a href="http://hl7.org/fhir/R4/slot.html#Slot.serviceType">fhir:serviceType</a> ( [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://terminology.hl7.org/CodeSystem/v3-ActCode&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://terminology.hl7.org/CodeSystem/v3-ActCode&gt;       ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://terminology.hl7.org/CodeSystem/v3-ActCode&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;HH&quot; ]     ] )
   ] [
 <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:text</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Visite de contrôle&quot; ]
@@ -913,26 +804,19 @@
   ] ) ; # 
   <a href="http://hl7.org/fhir/R4/slot.html#Slot.specialty">fhir:specialty</a> ( [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale&gt;       ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;SM41&quot; ]     ] )
   ] [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale&gt;       ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;SM54&quot; ]     ] )
   ] ) ; # 
   <a href="http://hl7.org/fhir/R4/slot.html#Slot.appointmentType">fhir:appointmentType</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://terminology.hl7.org/CodeSystem/v2-0276&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://terminology.hl7.org/CodeSystem/v2-0276&gt;       ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://terminology.hl7.org/CodeSystem/v2-0276&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;ROUTINE&quot; ]     ] )
   ] ; # 
   <a href="http://hl7.org/fhir/R4/slot.html#Slot.schedule">fhir:schedule</a> [
-<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Schedule/ExampleSchedule3 ;
 <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Schedule/ExampleSchedule3&quot; ]
   ] ; # 
   <a href="http://hl7.org/fhir/R4/slot.html#Slot.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;free&quot;] ; # 
@@ -995,8 +879,8 @@
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Le package ans.fhir.fr.sas#1.2.0 est basé sur <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Date de génération : 
-  <span title="2026-06-12 14:51:00 +0000">
-    2026-06-12
+  <span title="2026-06-15 12:26:00 +0000">
+    2026-06-15
   </span>
 
           <br/>

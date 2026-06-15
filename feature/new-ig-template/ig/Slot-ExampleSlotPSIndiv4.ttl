@@ -12,19 +12,13 @@
   fhir:meta [
      fhir:profile ( [
        fhir:v "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"^^xsd:anyURI ;
-       fhir:l <http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur>
+       fhir:link <http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur>
      ] ) ;
      fhir:security ( [
-       fhir:system [
-         fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"^^xsd:anyURI ;
-         fhir:l <https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau>
-       ] ;
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "PUBLIC" ]
      ] [
-       fhir:system [
-         fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"^^xsd:anyURI ;
-         fhir:l <https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau>
-       ] ;
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "PRO" ]
      ] )
   ] ; # 
@@ -34,10 +28,7 @@
   ] ; # 
   fhir:serviceType ( [
      fhir:coding ( [
-       fhir:system [
-         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ;
-         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActCode>
-       ] ;
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "HH" ]
      ] )
   ] [
@@ -47,32 +38,23 @@
   ] ) ; # 
   fhir:specialty ( [
      fhir:coding ( [
-       fhir:system [
-         fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"^^xsd:anyURI ;
-         fhir:l <https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale>
-       ] ;
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "SM41" ]
      ] )
   ] [
      fhir:coding ( [
-       fhir:system [
-         fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"^^xsd:anyURI ;
-         fhir:l <https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale>
-       ] ;
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "SM54" ]
      ] )
   ] ) ; # 
   fhir:appointmentType [
      fhir:coding ( [
-       fhir:system [
-         fhir:v "http://terminology.hl7.org/CodeSystem/v2-0276"^^xsd:anyURI ;
-         fhir:l <http://terminology.hl7.org/CodeSystem/v2-0276>
-       ] ;
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0276"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "ROUTINE" ]
      ] )
   ] ; # 
   fhir:schedule [
-     fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/Schedule/ExampleSchedule3> ;
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Schedule/ExampleSchedule3> ;
      fhir:reference [ fhir:v "Schedule/ExampleSchedule3" ]
   ] ; # 
   fhir:status [ fhir:v "free"] ; # 

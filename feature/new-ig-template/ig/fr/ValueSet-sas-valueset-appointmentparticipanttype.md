@@ -33,7 +33,7 @@ Ce jeu de valeurs n'est pas utilisé ici ; il peut être utilisé autre part (pa
   "title" : "Appointment Participant Type SAS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-06-12T14:51:06+00:00",
+  "date" : "2026-06-15T12:26:42+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -54,8 +54,7 @@ Ce jeu de valeurs n'est pas utilisé ici ; il peut être utilisé autre part (pa
     "include" : [{
       "system" : "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
       "concept" : [{
-        "code" : "ADM",
-        "display" : "The practitioner who is responsible for admitting a patient to a patient encounter."
+        "code" : "ADM"
       }]
     }]
   }

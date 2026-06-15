@@ -12,19 +12,13 @@
   fhir:meta [
      fhir:profile ( [
        fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator"^^xsd:anyURI ;
-       fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator>
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator>
      ] ) ;
      fhir:security ( [
-       fhir:system [
-         fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"^^xsd:anyURI ;
-         fhir:l <https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau>
-       ] ;
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "PUBLIC" ]
      ] [
-       fhir:system [
-         fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"^^xsd:anyURI ;
-         fhir:l <https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau>
-       ] ;
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "SNP" ]
      ] )
   ] ; # 
@@ -35,32 +29,23 @@
   ] ; # 
   fhir:serviceType ( [
      fhir:coding ( [
-       fhir:system [
-         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ;
-         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActCode>
-       ] ;
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "AMB" ]
      ] )
   ] [
      fhir:coding ( [
-       fhir:system [
-         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ;
-         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActCode>
-       ] ;
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "VR" ]
      ] )
   ] ) ; # 
   fhir:appointmentType [
      fhir:coding ( [
-       fhir:system [
-         fhir:v "http://terminology.hl7.org/CodeSystem/v2-0276"^^xsd:anyURI ;
-         fhir:l <http://terminology.hl7.org/CodeSystem/v2-0276>
-       ] ;
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0276"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "ROUTINE" ]
      ] )
   ] ; # 
   fhir:schedule [
-     fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/Schedule/ExampleScheduleSOS1> ;
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Schedule/ExampleScheduleSOS1> ;
      fhir:reference [ fhir:v "Schedule/ExampleScheduleSOS1" ]
   ] ; # 
   fhir:status [ fhir:v "free"] ; # 

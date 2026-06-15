@@ -33,7 +33,7 @@ Catégorie d'établissement utilisée dans contexte SAS - CPTS dans un premier t
   "title" : "Catégorie établissement SAS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-06-12T14:51:06+00:00",
+  "date" : "2026-06-15T12:26:42+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -54,8 +54,7 @@ Catégorie d'établissement utilisée dans contexte SAS - CPTS dans un premier t
     "include" : [{
       "system" : "https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement",
       "concept" : [{
-        "code" : "604",
-        "display" : "CPTS"
+        "code" : "604"
       }]
     }]
   }

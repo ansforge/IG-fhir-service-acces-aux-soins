@@ -12,7 +12,7 @@
   fhir:meta [
      fhir:profile ( [
        fhir:v "http://sas.fr/fhir/StructureDefinition/BundleAgregateur"^^xsd:anyURI ;
-       fhir:l <http://sas.fr/fhir/StructureDefinition/BundleAgregateur>
+       fhir:link <http://sas.fr/fhir/StructureDefinition/BundleAgregateur>
      ] )
   ] ; # 
   fhir:language [ fhir:v "fr"] ; # 
@@ -20,112 +20,73 @@
   fhir:total [ fhir:v "4"^^xsd:nonNegativeInteger] ; # 
   fhir:link ( [
      fhir:relation [ fhir:v "self" ] ;
-     fhir:url [
-       fhir:v "https://exemple.com/ans-sas/Slot/?_include=Slot:schedule&_include:iterate=Schedule:actor&status=free&start=ge2021-11-04T14:19:35.760+00:00&start=le2021-11-06T23:59:59.999+00:00&schedule.actor:Practitioner.identifier=urn:oid:1.2.250.1.71.4.2.1%7C810002673899,urn:oid:1.2.250.1.71.4.2.1%7C810100050075&_count=1000"^^xsd:anyURI ;
-       fhir:l <https://exemple.com/ans-sas/Slot/?_include=Slot:schedule&_include:iterate=Schedule:actor&status=free&start=ge2021-11-04T14:19:35.760+00:00&start=le2021-11-06T23:59:59.999+00:00&schedule.actor:Practitioner.identifier=urn:oid:1.2.250.1.71.4.2.1%7C810002673899,urn:oid:1.2.250.1.71.4.2.1%7C810100050075&_count=1000>
-     ]
+     fhir:url [ fhir:v "https://exemple.com/ans-sas/Slot/?_include=Slot:schedule&_include:iterate=Schedule:actor&status=free&start=ge2021-11-04T14:19:35.760+00:00&start=le2021-11-06T23:59:59.999+00:00&schedule.actor:Practitioner.identifier=urn:oid:1.2.250.1.71.4.2.1%7C810002673899,urn:oid:1.2.250.1.71.4.2.1%7C810100050075&_count=1000"^^xsd:anyURI ]
   ] ) ; # 
   fhir:entry ( [
-     fhir:fullUrl [
-       fhir:v "https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv1"^^xsd:anyURI ;
-       fhir:l <https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv1>
-     ] ;
+     fhir:fullUrl [ fhir:v "https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv1"^^xsd:anyURI ] ;
      fhir:resource ( <https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv1> ) ;
      fhir:search [
        fhir:mode [ fhir:v "match" ]
      ]
   ] [
-     fhir:fullUrl [
-       fhir:v "https://exemple.com/ans-sas/Schedule/ExampleSchedule1"^^xsd:anyURI ;
-       fhir:l <https://exemple.com/ans-sas/Schedule/ExampleSchedule1>
-     ] ;
+     fhir:fullUrl [ fhir:v "https://exemple.com/ans-sas/Schedule/ExampleSchedule1"^^xsd:anyURI ] ;
      fhir:resource ( <https://exemple.com/ans-sas/Schedule/ExampleSchedule1> ) ;
      fhir:search [
        fhir:mode [ fhir:v "include" ]
      ]
   ] [
-     fhir:fullUrl [
-       fhir:v "https://exemple.com/ans-sas/Practitioner/ExamplePractitioner2"^^xsd:anyURI ;
-       fhir:l <https://exemple.com/ans-sas/Practitioner/ExamplePractitioner2>
-     ] ;
+     fhir:fullUrl [ fhir:v "https://exemple.com/ans-sas/Practitioner/ExamplePractitioner2"^^xsd:anyURI ] ;
      fhir:resource ( <https://exemple.com/ans-sas/Practitioner/ExamplePractitioner2> )
   ] [
-     fhir:fullUrl [
-       fhir:v "https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur2"^^xsd:anyURI ;
-       fhir:l <https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur2>
-     ] ;
+     fhir:fullUrl [ fhir:v "https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur2"^^xsd:anyURI ] ;
      fhir:resource ( <https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur2> ) ;
      fhir:search [
        fhir:mode [ fhir:v "include" ]
      ]
   ] [
-     fhir:fullUrl [
-       fhir:v "https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv2"^^xsd:anyURI ;
-       fhir:l <https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv2>
-     ] ;
+     fhir:fullUrl [ fhir:v "https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv2"^^xsd:anyURI ] ;
      fhir:resource ( <https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv2> ) ;
      fhir:search [
        fhir:mode [ fhir:v "match" ]
      ]
   ] [
-     fhir:fullUrl [
-       fhir:v "https://exemple.com/ans-sas/Schedule/ExampleSchedule2"^^xsd:anyURI ;
-       fhir:l <https://exemple.com/ans-sas/Schedule/ExampleSchedule2>
-     ] ;
+     fhir:fullUrl [ fhir:v "https://exemple.com/ans-sas/Schedule/ExampleSchedule2"^^xsd:anyURI ] ;
      fhir:resource ( <https://exemple.com/ans-sas/Schedule/ExampleSchedule2> ) ;
      fhir:search [
        fhir:mode [ fhir:v "include" ]
      ]
   ] [
-     fhir:fullUrl [
-       fhir:v "https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur3"^^xsd:anyURI ;
-       fhir:l <https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur3>
-     ] ;
+     fhir:fullUrl [ fhir:v "https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur3"^^xsd:anyURI ] ;
      fhir:resource ( <https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur3> ) ;
      fhir:search [
        fhir:mode [ fhir:v "include" ]
      ]
   ] [
-     fhir:fullUrl [
-       fhir:v "https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv3"^^xsd:anyURI ;
-       fhir:l <https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv3>
-     ] ;
+     fhir:fullUrl [ fhir:v "https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv3"^^xsd:anyURI ] ;
      fhir:resource ( <https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv3> ) ;
      fhir:search [
        fhir:mode [ fhir:v "match" ]
      ]
   ] [
-     fhir:fullUrl [
-       fhir:v "https://exemple.com/ans-sas/Schedule/ExampleSchedule3"^^xsd:anyURI ;
-       fhir:l <https://exemple.com/ans-sas/Schedule/ExampleSchedule3>
-     ] ;
+     fhir:fullUrl [ fhir:v "https://exemple.com/ans-sas/Schedule/ExampleSchedule3"^^xsd:anyURI ] ;
      fhir:resource ( <https://exemple.com/ans-sas/Schedule/ExampleSchedule3> ) ;
      fhir:search [
        fhir:mode [ fhir:v "include" ]
      ]
   ] [
-     fhir:fullUrl [
-       fhir:v "https://exemple.com/ans-sas/Practitioner/ExamplePractitioner3"^^xsd:anyURI ;
-       fhir:l <https://exemple.com/ans-sas/Practitioner/ExamplePractitioner3>
-     ] ;
+     fhir:fullUrl [ fhir:v "https://exemple.com/ans-sas/Practitioner/ExamplePractitioner3"^^xsd:anyURI ] ;
      fhir:resource ( <https://exemple.com/ans-sas/Practitioner/ExamplePractitioner3> ) ;
      fhir:search [
        fhir:mode [ fhir:v "include" ]
      ]
   ] [
-     fhir:fullUrl [
-       fhir:v "https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur4"^^xsd:anyURI ;
-       fhir:l <https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur4>
-     ] ;
+     fhir:fullUrl [ fhir:v "https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur4"^^xsd:anyURI ] ;
      fhir:resource ( <https://exemple.com/ans-sas/PractitionerRole/ExamplePractitionerRoleAgregateur4> ) ;
      fhir:search [
        fhir:mode [ fhir:v "include" ]
      ]
   ] [
-     fhir:fullUrl [
-       fhir:v "https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv4"^^xsd:anyURI ;
-       fhir:l <https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv4>
-     ] ;
+     fhir:fullUrl [ fhir:v "https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv4"^^xsd:anyURI ] ;
      fhir:resource ( <https://exemple.com/ans-sas/Slot/ExampleSlotPSIndiv4> ) ;
      fhir:search [
        fhir:mode [ fhir:v "match" ]
@@ -137,13 +98,10 @@
   fhir:meta [
      fhir:profile ( [
        fhir:v "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"^^xsd:anyURI ;
-       fhir:l <http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur>
+       fhir:link <http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur>
      ] ) ;
      fhir:security ( [
-       fhir:system [
-         fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"^^xsd:anyURI ;
-         fhir:l <https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau>
-       ] ;
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "PUBLIC" ]
      ] )
   ] ; # 
@@ -154,18 +112,12 @@
   ] ; # 
   fhir:serviceType ( [
      fhir:coding ( [
-       fhir:system [
-         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ;
-         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActCode>
-       ] ;
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "AMB" ]
      ] )
   ] [
      fhir:coding ( [
-       fhir:system [
-         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ;
-         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActCode>
-       ] ;
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "VR" ]
      ] )
   ] [
@@ -173,32 +125,23 @@
   ] ) ; # 
   fhir:specialty ( [
      fhir:coding ( [
-       fhir:system [
-         fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"^^xsd:anyURI ;
-         fhir:l <https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale>
-       ] ;
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "SM54" ]
      ] )
   ] [
      fhir:coding ( [
-       fhir:system [
-         fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"^^xsd:anyURI ;
-         fhir:l <https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale>
-       ] ;
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "SM05" ]
      ] )
   ] ) ; # 
   fhir:appointmentType [
      fhir:coding ( [
-       fhir:system [
-         fhir:v "http://terminology.hl7.org/CodeSystem/v2-0276"^^xsd:anyURI ;
-         fhir:l <http://terminology.hl7.org/CodeSystem/v2-0276>
-       ] ;
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0276"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "ROUTINE" ]
      ] )
   ] ; # 
   fhir:schedule [
-     fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/Schedule/ExampleSchedule1> ;
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Schedule/ExampleSchedule1> ;
      fhir:reference [ fhir:v "Schedule/ExampleSchedule1" ]
   ] ; # 
   fhir:status [ fhir:v "free"] ; # 
@@ -211,7 +154,7 @@
   fhir:meta [
      fhir:profile ( [
        fhir:v "http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"^^xsd:anyURI ;
-       fhir:l <http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur>
+       fhir:link <http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur>
      ] )
   ] ; # 
   fhir:language [ fhir:v "fr"] ; # 
@@ -220,10 +163,10 @@
      fhir:div [ fhir:v "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><a name=\"Schedule_ExampleSchedule1\"> </a><p class=\"res-header-id\"><b>Narratif généré : Schedule ExampleSchedule1</b></p><a name=\"ExampleSchedule1\"> </a><a name=\"hcExampleSchedule1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-FrScheduleAgregateur.html\">FrScheduleAgregateur</a></p></div><p><b>actor</b>: </p><ul><li><a href=\"Practitioner-ExamplePractitioner2.html\">Practitioner Sébastien THOMAS </a></li><li><a href=\"PractitionerRole-ExamplePractitionerRoleAgregateur2.html\">PractitionerRole</a></li></ul></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:actor ( [
-     fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/ExamplePractitioner2> ;
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/ExamplePractitioner2> ;
      fhir:reference [ fhir:v "Practitioner/ExamplePractitioner2" ]
   ] [
-     fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/PractitionerRole/ExamplePractitionerRoleAgregateur2> ;
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/PractitionerRole/ExamplePractitionerRoleAgregateur2> ;
      fhir:reference [ fhir:v "PractitionerRole/ExamplePractitionerRoleAgregateur2" ]
   ] ) . # 
 
@@ -232,7 +175,7 @@
   fhir:meta [
      fhir:profile ( [
        fhir:v "http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur"^^xsd:anyURI ;
-       fhir:l <http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur>
+       fhir:link <http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur>
      ] )
   ] ; # 
   fhir:language [ fhir:v "fr"] ; # 
@@ -243,17 +186,11 @@
   fhir:identifier ( [
      fhir:type [
        fhir:coding ( [
-         fhir:system [
-           fhir:v "http://interopsante.org/fhir/CodeSystem/fr-v2-0203"^^xsd:anyURI ;
-           fhir:l <http://interopsante.org/fhir/CodeSystem/fr-v2-0203>
-         ] ;
+         fhir:system [ fhir:v "http://interopsante.org/fhir/CodeSystem/fr-v2-0203"^^xsd:anyURI ] ;
          fhir:code [ fhir:v "IDNPS" ]
        ] )
      ] ;
-     fhir:system [
-       fhir:v "urn:oid:1.2.250.1.71.4.2.1"^^xsd:anyURI ;
-       fhir:l <urn:oid:1.2.250.1.71.4.2.1>
-     ] ;
+     fhir:system [ fhir:v "urn:oid:1.2.250.1.71.4.2.1"^^xsd:anyURI ] ;
      fhir:value [ fhir:v "810100050075" ]
   ] ) ; # 
   fhir:name ( [
@@ -266,7 +203,7 @@
   fhir:meta [
      fhir:profile ( [
        fhir:v "http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"^^xsd:anyURI ;
-       fhir:l <http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur>
+       fhir:link <http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur>
      ] )
   ] ; # 
   fhir:language [ fhir:v "fr"] ; # 
@@ -280,23 +217,17 @@
      fhir:meta [
        fhir:profile ( [
          fhir:v "http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur"^^xsd:anyURI ;
-         fhir:l <http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur>
+         fhir:link <http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur>
        ] )
      ] ;
      fhir:identifier ( [
        fhir:type [
          fhir:coding ( [
-           fhir:system [
-             fhir:v "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"^^xsd:anyURI ;
-             fhir:l <http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type>
-           ] ;
+           fhir:system [ fhir:v "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"^^xsd:anyURI ] ;
            fhir:code [ fhir:v "INTRN" ]
          ] )
        ] ;
-       fhir:system [
-         fhir:v "urn:oid:1.1.111.1.111.1.1.1"^^xsd:anyURI ;
-         fhir:l <urn:oid:1.1.111.1.111.1.1.1>
-       ] ;
+       fhir:system [ fhir:v "urn:oid:1.1.111.1.111.1.1.1"^^xsd:anyURI ] ;
        fhir:value [ fhir:v "1" ]
      ] ) ;
      fhir:address [
@@ -306,29 +237,22 @@
      ]
   ] ) ; # 
   fhir:practitioner [
-     fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/ExamplePractitioner2> ;
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/ExamplePractitioner2> ;
      fhir:reference [ fhir:v "Practitioner/ExamplePractitioner2" ]
   ] ; # 
   fhir:organization [
      fhir:identifier [
        fhir:type [
          fhir:coding ( [
-           fhir:system [
-             fhir:v "http://interopsante.org/fhir/CodeSystem/fr-v2-0203"^^xsd:anyURI ;
-             fhir:l <http://interopsante.org/fhir/CodeSystem/fr-v2-0203>
-           ] ;
+           fhir:system [ fhir:v "http://interopsante.org/fhir/CodeSystem/fr-v2-0203"^^xsd:anyURI ] ;
            fhir:code [ fhir:v "IDNST" ]
          ] )
        ] ;
-       fhir:system [
-         fhir:v "urn:oid:1.2.250.1.71.4.2.2"^^xsd:anyURI ;
-         fhir:l <urn:oid:1.2.250.1.71.4.2.2>
-       ] ;
+       fhir:system [ fhir:v "urn:oid:1.2.250.1.71.4.2.2"^^xsd:anyURI ] ;
        fhir:value [ fhir:v "1810004421" ]
      ]
   ] ; # 
   fhir:location ( [
-     fhir:l <#ExampleLocation3> ;
      fhir:reference [ fhir:v "#ExampleLocation3" ]
   ] ) . # 
 
@@ -337,13 +261,10 @@
   fhir:meta [
      fhir:profile ( [
        fhir:v "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"^^xsd:anyURI ;
-       fhir:l <http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur>
+       fhir:link <http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur>
      ] ) ;
      fhir:security ( [
-       fhir:system [
-         fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"^^xsd:anyURI ;
-         fhir:l <https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau>
-       ] ;
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "PRO" ]
      ] )
   ] ; # 
@@ -354,10 +275,7 @@
   ] ; # 
   fhir:serviceType ( [
      fhir:coding ( [
-       fhir:system [
-         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ;
-         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActCode>
-       ] ;
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "AMB" ]
      ] )
   ] [
@@ -365,25 +283,19 @@
   ] ) ; # 
   fhir:specialty ( [
      fhir:coding ( [
-       fhir:system [
-         fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"^^xsd:anyURI ;
-         fhir:l <https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale>
-       ] ;
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "SM54" ]
      ] ) ;
      fhir:text [ fhir:v "Médecine générale" ]
   ] ) ; # 
   fhir:appointmentType [
      fhir:coding ( [
-       fhir:system [
-         fhir:v "http://terminology.hl7.org/CodeSystem/v2-0276"^^xsd:anyURI ;
-         fhir:l <http://terminology.hl7.org/CodeSystem/v2-0276>
-       ] ;
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0276"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "WALKIN" ]
      ] )
   ] ; # 
   fhir:schedule [
-     fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/Schedule/ExampleSchedule2> ;
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Schedule/ExampleSchedule2> ;
      fhir:reference [ fhir:v "Schedule/ExampleSchedule2" ]
   ] ; # 
   fhir:status [ fhir:v "free"] ; # 
@@ -395,7 +307,7 @@
   fhir:meta [
      fhir:profile ( [
        fhir:v "http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"^^xsd:anyURI ;
-       fhir:l <http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur>
+       fhir:link <http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur>
      ] )
   ] ; # 
   fhir:language [ fhir:v "fr"] ; # 
@@ -404,10 +316,10 @@
      fhir:div [ fhir:v "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><a name=\"Schedule_ExampleSchedule2\"> </a><p class=\"res-header-id\"><b>Narratif généré : Schedule ExampleSchedule2</b></p><a name=\"ExampleSchedule2\"> </a><a name=\"hcExampleSchedule2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-FrScheduleAgregateur.html\">FrScheduleAgregateur</a></p></div><p><b>actor</b>: </p><ul><li><a href=\"Practitioner-ExamplePractitioner2.html\">Practitioner Sébastien THOMAS </a></li><li><a href=\"PractitionerRole-ExamplePractitionerRoleAgregateur3.html\">PractitionerRole</a></li></ul></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:actor ( [
-     fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/ExamplePractitioner2> ;
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/ExamplePractitioner2> ;
      fhir:reference [ fhir:v "Practitioner/ExamplePractitioner2" ]
   ] [
-     fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/PractitionerRole/ExamplePractitionerRoleAgregateur3> ;
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/PractitionerRole/ExamplePractitionerRoleAgregateur3> ;
      fhir:reference [ fhir:v "PractitionerRole/ExamplePractitionerRoleAgregateur3" ]
   ] ) . # 
 
@@ -416,7 +328,7 @@
   fhir:meta [
      fhir:profile ( [
        fhir:v "http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"^^xsd:anyURI ;
-       fhir:l <http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur>
+       fhir:link <http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur>
      ] )
   ] ; # 
   fhir:language [ fhir:v "fr"] ; # 
@@ -430,23 +342,17 @@
      fhir:meta [
        fhir:profile ( [
          fhir:v "http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur"^^xsd:anyURI ;
-         fhir:l <http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur>
+         fhir:link <http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur>
        ] )
      ] ;
      fhir:identifier ( [
        fhir:type [
          fhir:coding ( [
-           fhir:system [
-             fhir:v "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"^^xsd:anyURI ;
-             fhir:l <http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type>
-           ] ;
+           fhir:system [ fhir:v "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"^^xsd:anyURI ] ;
            fhir:code [ fhir:v "INTRN" ]
          ] )
        ] ;
-       fhir:system [
-         fhir:v "urn:oid:1.1.111.1.111.1.1.1"^^xsd:anyURI ;
-         fhir:l <urn:oid:1.1.111.1.111.1.1.1>
-       ] ;
+       fhir:system [ fhir:v "urn:oid:1.1.111.1.111.1.1.1"^^xsd:anyURI ] ;
        fhir:value [ fhir:v "2" ]
      ] ) ;
      fhir:address [
@@ -456,29 +362,22 @@
      ]
   ] ) ; # 
   fhir:practitioner [
-     fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/ExamplePractitioner2> ;
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/ExamplePractitioner2> ;
      fhir:reference [ fhir:v "Practitioner/ExamplePractitioner2" ]
   ] ; # 
   fhir:organization [
      fhir:identifier [
        fhir:type [
          fhir:coding ( [
-           fhir:system [
-             fhir:v "http://interopsante.org/fhir/CodeSystem/fr-v2-0203"^^xsd:anyURI ;
-             fhir:l <http://interopsante.org/fhir/CodeSystem/fr-v2-0203>
-           ] ;
+           fhir:system [ fhir:v "http://interopsante.org/fhir/CodeSystem/fr-v2-0203"^^xsd:anyURI ] ;
            fhir:code [ fhir:v "IDNST" ]
          ] )
        ] ;
-       fhir:system [
-         fhir:v "urn:oid:1.2.250.1.71.4.2.2"^^xsd:anyURI ;
-         fhir:l <urn:oid:1.2.250.1.71.4.2.2>
-       ] ;
+       fhir:system [ fhir:v "urn:oid:1.2.250.1.71.4.2.2"^^xsd:anyURI ] ;
        fhir:value [ fhir:v "1810004956" ]
      ]
   ] ; # 
   fhir:location ( [
-     fhir:l <#ExampleLocation2> ;
      fhir:reference [ fhir:v "#ExampleLocation2" ]
   ] ) . # 
 
@@ -487,19 +386,13 @@
   fhir:meta [
      fhir:profile ( [
        fhir:v "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"^^xsd:anyURI ;
-       fhir:l <http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur>
+       fhir:link <http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur>
      ] ) ;
      fhir:security ( [
-       fhir:system [
-         fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"^^xsd:anyURI ;
-         fhir:l <https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau>
-       ] ;
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "PUBLIC" ]
      ] [
-       fhir:system [
-         fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"^^xsd:anyURI ;
-         fhir:l <https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau>
-       ] ;
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "PRO" ]
      ] )
   ] ; # 
@@ -510,10 +403,7 @@
   ] ; # 
   fhir:serviceType ( [
      fhir:coding ( [
-       fhir:system [
-         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ;
-         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActCode>
-       ] ;
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "VR" ]
      ] )
   ] [
@@ -523,10 +413,7 @@
   ] ) ; # 
   fhir:specialty ( [
      fhir:coding ( [
-       fhir:system [
-         fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"^^xsd:anyURI ;
-         fhir:l <https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale>
-       ] ;
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "SM41" ]
      ] )
   ] [
@@ -534,15 +421,12 @@
   ] ) ; # 
   fhir:appointmentType [
      fhir:coding ( [
-       fhir:system [
-         fhir:v "http://terminology.hl7.org/CodeSystem/v2-0276"^^xsd:anyURI ;
-         fhir:l <http://terminology.hl7.org/CodeSystem/v2-0276>
-       ] ;
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0276"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "ROUTINE" ]
      ] )
   ] ; # 
   fhir:schedule [
-     fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/Schedule/ExampleSchedule3> ;
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Schedule/ExampleSchedule3> ;
      fhir:reference [ fhir:v "Schedule/ExampleSchedule3" ]
   ] ; # 
   fhir:status [ fhir:v "free"] ; # 
@@ -555,7 +439,7 @@
   fhir:meta [
      fhir:profile ( [
        fhir:v "http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"^^xsd:anyURI ;
-       fhir:l <http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur>
+       fhir:link <http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur>
      ] )
   ] ; # 
   fhir:language [ fhir:v "fr"] ; # 
@@ -564,10 +448,10 @@
      fhir:div [ fhir:v "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><a name=\"Schedule_ExampleSchedule3\"> </a><p class=\"res-header-id\"><b>Narratif généré : Schedule ExampleSchedule3</b></p><a name=\"ExampleSchedule3\"> </a><a name=\"hcExampleSchedule3\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-FrScheduleAgregateur.html\">FrScheduleAgregateur</a></p></div><p><b>actor</b>: </p><ul><li><a href=\"Practitioner-ExamplePractitioner3.html\">Practitioner Guillaume MARCEL </a></li><li><a href=\"PractitionerRole-ExamplePractitionerRoleAgregateur4.html\">PractitionerRole : telecom = ph: +33658913859</a></li></ul></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:actor ( [
-     fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/ExamplePractitioner3> ;
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/ExamplePractitioner3> ;
      fhir:reference [ fhir:v "Practitioner/ExamplePractitioner3" ]
   ] [
-     fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/PractitionerRole/ExamplePractitionerRoleAgregateur4> ;
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/PractitionerRole/ExamplePractitionerRoleAgregateur4> ;
      fhir:reference [ fhir:v "PractitionerRole/ExamplePractitionerRoleAgregateur4" ]
   ] ) . # 
 
@@ -576,7 +460,7 @@
   fhir:meta [
      fhir:profile ( [
        fhir:v "http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur"^^xsd:anyURI ;
-       fhir:l <http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur>
+       fhir:link <http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur>
      ] )
   ] ; # 
   fhir:language [ fhir:v "fr"] ; # 
@@ -587,17 +471,11 @@
   fhir:identifier ( [
      fhir:type [
        fhir:coding ( [
-         fhir:system [
-           fhir:v "http://interopsante.org/fhir/CodeSystem/fr-v2-0203"^^xsd:anyURI ;
-           fhir:l <http://interopsante.org/fhir/CodeSystem/fr-v2-0203>
-         ] ;
+         fhir:system [ fhir:v "http://interopsante.org/fhir/CodeSystem/fr-v2-0203"^^xsd:anyURI ] ;
          fhir:code [ fhir:v "IDNPS" ]
        ] )
      ] ;
-     fhir:system [
-       fhir:v "urn:oid:1.2.250.1.71.4.2.1"^^xsd:anyURI ;
-       fhir:l <urn:oid:1.2.250.1.71.4.2.1>
-     ] ;
+     fhir:system [ fhir:v "urn:oid:1.2.250.1.71.4.2.1"^^xsd:anyURI ] ;
      fhir:value [ fhir:v "810002673899" ]
   ] ) ; # 
   fhir:name ( [
@@ -610,7 +488,7 @@
   fhir:meta [
      fhir:profile ( [
        fhir:v "http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"^^xsd:anyURI ;
-       fhir:l <http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur>
+       fhir:link <http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur>
      ] )
   ] ; # 
   fhir:language [ fhir:v "fr"] ; # 
@@ -624,23 +502,17 @@
      fhir:meta [
        fhir:profile ( [
          fhir:v "http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur"^^xsd:anyURI ;
-         fhir:l <http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur>
+         fhir:link <http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur>
        ] )
      ] ;
      fhir:identifier ( [
        fhir:type [
          fhir:coding ( [
-           fhir:system [
-             fhir:v "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"^^xsd:anyURI ;
-             fhir:l <http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type>
-           ] ;
+           fhir:system [ fhir:v "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"^^xsd:anyURI ] ;
            fhir:code [ fhir:v "INTRN" ]
          ] )
        ] ;
-       fhir:system [
-         fhir:v "urn:oid:1.1.111.1.111.1.1.1"^^xsd:anyURI ;
-         fhir:l <urn:oid:1.1.111.1.111.1.1.1>
-       ] ;
+       fhir:system [ fhir:v "urn:oid:1.1.111.1.111.1.1.1"^^xsd:anyURI ] ;
        fhir:value [ fhir:v "1" ]
      ] ) ;
      fhir:address [
@@ -650,29 +522,22 @@
      ]
   ] ) ; # 
   fhir:practitioner [
-     fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/ExamplePractitioner3> ;
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/ExamplePractitioner3> ;
      fhir:reference [ fhir:v "Practitioner/ExamplePractitioner3" ]
   ] ; # 
   fhir:organization [
      fhir:identifier [
        fhir:type [
          fhir:coding ( [
-           fhir:system [
-             fhir:v "http://interopsante.org/fhir/CodeSystem/fr-v2-0203"^^xsd:anyURI ;
-             fhir:l <http://interopsante.org/fhir/CodeSystem/fr-v2-0203>
-           ] ;
+           fhir:system [ fhir:v "http://interopsante.org/fhir/CodeSystem/fr-v2-0203"^^xsd:anyURI ] ;
            fhir:code [ fhir:v "IDNST" ]
          ] )
        ] ;
-       fhir:system [
-         fhir:v "urn:oid:1.2.250.1.71.4.2.2"^^xsd:anyURI ;
-         fhir:l <urn:oid:1.2.250.1.71.4.2.2>
-       ] ;
+       fhir:system [ fhir:v "urn:oid:1.2.250.1.71.4.2.2"^^xsd:anyURI ] ;
        fhir:value [ fhir:v "1810004421" ]
      ]
   ] ; # 
   fhir:location ( [
-     fhir:l <#ExampleLocation3> ;
      fhir:reference [ fhir:v "#ExampleLocation3" ]
   ] ) ; # 
   fhir:telecom ( [
@@ -685,19 +550,13 @@
   fhir:meta [
      fhir:profile ( [
        fhir:v "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"^^xsd:anyURI ;
-       fhir:l <http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur>
+       fhir:link <http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur>
      ] ) ;
      fhir:security ( [
-       fhir:system [
-         fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"^^xsd:anyURI ;
-         fhir:l <https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau>
-       ] ;
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "PUBLIC" ]
      ] [
-       fhir:system [
-         fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"^^xsd:anyURI ;
-         fhir:l <https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau>
-       ] ;
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "PRO" ]
      ] )
   ] ; # 
@@ -708,10 +567,7 @@
   ] ; # 
   fhir:serviceType ( [
      fhir:coding ( [
-       fhir:system [
-         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ;
-         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActCode>
-       ] ;
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "HH" ]
      ] )
   ] [
@@ -721,32 +577,23 @@
   ] ) ; # 
   fhir:specialty ( [
      fhir:coding ( [
-       fhir:system [
-         fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"^^xsd:anyURI ;
-         fhir:l <https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale>
-       ] ;
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "SM41" ]
      ] )
   ] [
      fhir:coding ( [
-       fhir:system [
-         fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"^^xsd:anyURI ;
-         fhir:l <https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale>
-       ] ;
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "SM54" ]
      ] )
   ] ) ; # 
   fhir:appointmentType [
      fhir:coding ( [
-       fhir:system [
-         fhir:v "http://terminology.hl7.org/CodeSystem/v2-0276"^^xsd:anyURI ;
-         fhir:l <http://terminology.hl7.org/CodeSystem/v2-0276>
-       ] ;
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0276"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "ROUTINE" ]
      ] )
   ] ; # 
   fhir:schedule [
-     fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/Schedule/ExampleSchedule3> ;
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Schedule/ExampleSchedule3> ;
      fhir:reference [ fhir:v "Schedule/ExampleSchedule3" ]
   ] ; # 
   fhir:status [ fhir:v "free"] ; # 

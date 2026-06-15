@@ -12,7 +12,7 @@
   fhir:meta [
      fhir:profile ( [
        fhir:v "http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"^^xsd:anyURI ;
-       fhir:l <http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur>
+       fhir:link <http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur>
      ] )
   ] ; # 
   fhir:text [
@@ -25,23 +25,17 @@
      fhir:meta [
        fhir:profile ( [
          fhir:v "http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur"^^xsd:anyURI ;
-         fhir:l <http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur>
+         fhir:link <http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur>
        ] )
      ] ;
      fhir:identifier ( [
        fhir:type [
          fhir:coding ( [
-           fhir:system [
-             fhir:v "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"^^xsd:anyURI ;
-             fhir:l <http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type>
-           ] ;
+           fhir:system [ fhir:v "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"^^xsd:anyURI ] ;
            fhir:code [ fhir:v "INTRN" ]
          ] )
        ] ;
-       fhir:system [
-         fhir:v "urn:oid:1.1.111.1.111.1.1.1"^^xsd:anyURI ;
-         fhir:l <urn:oid:1.1.111.1.111.1.1.1>
-       ] ;
+       fhir:system [ fhir:v "urn:oid:1.1.111.1.111.1.1.1"^^xsd:anyURI ] ;
        fhir:value [ fhir:v "2" ]
      ] ) ;
      fhir:address [
@@ -51,29 +45,22 @@
      ]
   ] ) ; # 
   fhir:practitioner [
-     fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/ExamplePractitioner2> ;
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/ExamplePractitioner2> ;
      fhir:reference [ fhir:v "Practitioner/ExamplePractitioner2" ]
   ] ; # 
   fhir:organization [
      fhir:identifier [
        fhir:type [
          fhir:coding ( [
-           fhir:system [
-             fhir:v "http://interopsante.org/fhir/CodeSystem/fr-v2-0203"^^xsd:anyURI ;
-             fhir:l <http://interopsante.org/fhir/CodeSystem/fr-v2-0203>
-           ] ;
+           fhir:system [ fhir:v "http://interopsante.org/fhir/CodeSystem/fr-v2-0203"^^xsd:anyURI ] ;
            fhir:code [ fhir:v "IDNST" ]
          ] )
        ] ;
-       fhir:system [
-         fhir:v "urn:oid:1.2.250.1.71.4.2.2"^^xsd:anyURI ;
-         fhir:l <urn:oid:1.2.250.1.71.4.2.2>
-       ] ;
+       fhir:system [ fhir:v "urn:oid:1.2.250.1.71.4.2.2"^^xsd:anyURI ] ;
        fhir:value [ fhir:v "1810004956" ]
      ]
   ] ; # 
   fhir:location ( [
-     fhir:l <#ExampleLocation2> ;
      fhir:reference [ fhir:v "#ExampleLocation2" ]
   ] ) . # 
 

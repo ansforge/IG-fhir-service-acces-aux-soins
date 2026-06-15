@@ -12,19 +12,13 @@
   fhir:meta [
      fhir:profile ( [
        fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator"^^xsd:anyURI ;
-       fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator>
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator>
      ] ) ;
      fhir:security ( [
-       fhir:system [
-         fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"^^xsd:anyURI ;
-         fhir:l <https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau>
-       ] ;
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "PUBLIC" ]
      ] [
-       fhir:system [
-         fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"^^xsd:anyURI ;
-         fhir:l <https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau>
-       ] ;
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "CPTS" ]
      ] )
   ] ; # 
@@ -34,72 +28,51 @@
   ] ; # 
   fhir:serviceType ( [
      fhir:coding ( [
-       fhir:system [
-         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ;
-         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActCode>
-       ] ;
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "AMB" ]
      ] ) ;
      fhir:text [ fhir:v "Visite de contrôle" ]
   ] [
      fhir:extension ( [
-       fhir:url [
-         fhir:v "http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType"^^xsd:anyURI ;
-         fhir:l <http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType>
-       ] ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType"^^xsd:anyURI ] ;
        fhir:value [
          a fhir:Reference ;
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/HealthcareService/ExampleHealthcareServiceCPTS1> ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/HealthcareService/ExampleHealthcareServiceCPTS1> ;
          fhir:reference [ fhir:v "HealthcareService/ExampleHealthcareServiceCPTS1" ]
        ]
      ] ) ;
      fhir:coding ( [
-       fhir:system [
-         fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement"^^xsd:anyURI ;
-         fhir:l <https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement>
-       ] ;
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "604" ]
      ] )
   ] [
      fhir:extension ( [
-       fhir:url [
-         fhir:v "http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType"^^xsd:anyURI ;
-         fhir:l <http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType>
-       ] ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType"^^xsd:anyURI ] ;
        fhir:value [
          a fhir:Reference ;
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/HealthcareService/ExampleHealthcareServiceCPTS2> ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/HealthcareService/ExampleHealthcareServiceCPTS2> ;
          fhir:reference [ fhir:v "HealthcareService/ExampleHealthcareServiceCPTS2" ]
        ]
      ] ) ;
      fhir:coding ( [
-       fhir:system [
-         fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement"^^xsd:anyURI ;
-         fhir:l <https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement>
-       ] ;
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "604" ]
      ] )
   ] ) ; # 
   fhir:specialty ( [
      fhir:coding ( [
-       fhir:system [
-         fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"^^xsd:anyURI ;
-         fhir:l <https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale>
-       ] ;
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "SM54" ]
      ] )
   ] ) ; # 
   fhir:appointmentType [
      fhir:coding ( [
-       fhir:system [
-         fhir:v "http://terminology.hl7.org/CodeSystem/v2-0276"^^xsd:anyURI ;
-         fhir:l <http://terminology.hl7.org/CodeSystem/v2-0276>
-       ] ;
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0276"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "ROUTINE" ]
      ] )
   ] ; # 
   fhir:schedule [
-     fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/Schedule/ExampleSchedule> ;
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Schedule/ExampleSchedule> ;
      fhir:reference [ fhir:v "Schedule/ExampleSchedule" ]
   ] ; # 
   fhir:status [ fhir:v "free"] ; # 

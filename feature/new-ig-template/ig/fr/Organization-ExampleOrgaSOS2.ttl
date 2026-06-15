@@ -12,7 +12,7 @@
   fhir:meta [
      fhir:profile ( [
        fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator"^^xsd:anyURI ;
-       fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator>
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator>
      ] )
   ] ; # 
   fhir:language [ fhir:v "fr"] ; # 
@@ -23,17 +23,11 @@
   fhir:identifier ( [
      fhir:type [
        fhir:coding ( [
-         fhir:system [
-           fhir:v "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"^^xsd:anyURI ;
-           fhir:l <http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type>
-         ] ;
+         fhir:system [ fhir:v "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"^^xsd:anyURI ] ;
          fhir:code [ fhir:v "IDNST" ]
        ] )
      ] ;
-     fhir:system [
-       fhir:v "urn:oid:1.2.250.1.71.4.2.2"^^xsd:anyURI ;
-       fhir:l <urn:oid:1.2.250.1.71.4.2.2>
-     ] ;
+     fhir:system [ fhir:v "urn:oid:1.2.250.1.71.4.2.2"^^xsd:anyURI ] ;
      fhir:value [ fhir:v "392080466300010" ]
   ] ) ; # 
   fhir:name [ fhir:v "SOS Médecins Lorient et agglomération"] . # 

@@ -12,7 +12,7 @@
   fhir:meta [
      fhir:profile ( [
        fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator"^^xsd:anyURI ;
-       fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator>
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator>
      ] )
   ] ; # 
   fhir:language [ fhir:v "en"] ; # 
@@ -23,17 +23,11 @@
   fhir:identifier ( [
      fhir:type [
        fhir:coding ( [
-         fhir:system [
-           fhir:v "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"^^xsd:anyURI ;
-           fhir:l <http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type>
-         ] ;
+         fhir:system [ fhir:v "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"^^xsd:anyURI ] ;
          fhir:code [ fhir:v "INTRN" ]
        ] )
      ] ;
-     fhir:system [
-       fhir:v "https://editeur.com"^^xsd:anyURI ;
-       fhir:l <https://editeur.com>
-     ] ;
+     fhir:system [ fhir:v "https://editeur.com"^^xsd:anyURI ] ;
      fhir:value [ fhir:v "2222222222" ]
   ] ) ; # 
   fhir:name [ fhir:v "Centre de consultation Rennes Cleunay"] ; # 
@@ -47,7 +41,7 @@
      fhir:postalCode [ fhir:v "35000" ]
   ] ; # 
   fhir:managingOrganization [
-     fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/Organization/ExampleOrgaSOS1> ;
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Organization/ExampleOrgaSOS1> ;
      fhir:reference [ fhir:v "Organization/ExampleOrgaSOS1" ]
   ] ; # 
   fhir:hoursOfOperation ( [

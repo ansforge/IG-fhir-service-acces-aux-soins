@@ -33,7 +33,7 @@ Valueset permettant de définir la catégorie d'orientation SAS. Il regroupe des
   "title" : "Value set catégorie orientation SAS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-06-12T14:51:06+00:00",
+  "date" : "2026-06-15T12:26:42+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -57,16 +57,13 @@ Valueset permettant de définir la catégorie d'orientation SAS. Il regroupe des
     {
       "system" : "https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement",
       "concept" : [{
-        "code" : "604",
-        "display" : "CPTS"
+        "code" : "604"
       },
       {
-        "code" : "603",
-        "display" : "MSP"
+        "code" : "603"
       },
       {
-        "code" : "124",
-        "display" : "CDS"
+        "code" : "124"
       }]
     }]
   }

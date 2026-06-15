@@ -10,13 +10,10 @@
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "ExamplePractitionerRegul4"] ; # 
   fhir:meta [
-     fhir:source [
-       fhir:v "urn:oid:1.2.250.1.213.3.6"^^xsd:anyURI ;
-       fhir:l <urn:oid:1.2.250.1.213.3.6>
-     ] ;
+     fhir:source [ fhir:v "urn:oid:1.2.250.1.213.3.6"^^xsd:anyURI ] ;
      fhir:profile ( [
        fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul"^^xsd:anyURI ;
-       fhir:l <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul>
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul>
      ] )
   ] ; # 
   fhir:language [ fhir:v "en"] ; # 
@@ -27,17 +24,11 @@
   fhir:identifier ( [
      fhir:type [
        fhir:coding ( [
-         fhir:system [
-           fhir:v "http://interopsante.org/fhir/CodeSystem/fr-v2-0203"^^xsd:anyURI ;
-           fhir:l <http://interopsante.org/fhir/CodeSystem/fr-v2-0203>
-         ] ;
+         fhir:system [ fhir:v "http://interopsante.org/fhir/CodeSystem/fr-v2-0203"^^xsd:anyURI ] ;
          fhir:code [ fhir:v "INTRN" ]
        ] )
      ] ;
-     fhir:system [
-       fhir:v "urn:oid:1.2.250.1.213.3.6"^^xsd:anyURI ;
-       fhir:l <urn:oid:1.2.250.1.213.3.6>
-     ] ;
+     fhir:system [ fhir:v "urn:oid:1.2.250.1.213.3.6"^^xsd:anyURI ] ;
      fhir:value [ fhir:v "1ef1c748-01a3-6180-b098-73283ce4e5b1" ]
   ] ) ; # 
   fhir:active [ fhir:v true] ; # 
