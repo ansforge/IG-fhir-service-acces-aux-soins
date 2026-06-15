@@ -7,7 +7,10 @@
     "title" : "Value set catégorie orientation SAS",
     "description" : "Valueset permettant de définir la catégorie d'orientation SAS. Il regroupe des codes de la TRE-R66 et du codesystem catégorie orientation SAS",
     "systems" : ["https://interop.esante.gouv.fr/ig/fhir/sas/CodeSystem/categorie-orientation-sas-codesystem",
-    "https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement"]
+    "https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement"],
+    "uses" : {
+    },
+    "StructureDefinition-sas-categorie-orientation.html" : "CategorieOrientation"
   },
   {
     "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-cpts-valueset-typecreneau",
@@ -16,7 +19,10 @@
     "name" : "TypeCreneauSASCPTS",
     "title" : "Type créneaux SAS CPTS",
     "description" : "Type de Créneaux SAS CPTS",
-    "systems" : ["https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"]
+    "systems" : ["https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"],
+    "uses" : {
+    },
+    "StructureDefinition-sas-cpts-slot-aggregator.html" : "FrSlotAgregateurCPTS"
   },
   {
     "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-sos-valueset-typecreneau",
@@ -25,7 +31,10 @@
     "name" : "TypeCreneauSASSOS",
     "title" : "Type créneaux SAS SOS",
     "description" : "Type de Créneaux SAS SOS",
-    "systems" : ["https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"]
+    "systems" : ["https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"],
+    "uses" : {
+    },
+    "StructureDefinition-sas-sos-slot-aggregator.html" : "FrSlotAgregateurSOS"
   },
   {
     "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-appointmentparticipanttype",
@@ -43,7 +52,11 @@
     "name" : "AppointmentReasonSAS",
     "title" : "Appointment reason SAS",
     "description" : "Appointment reason SAS",
-    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0276"]
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0276"],
+    "uses" : {
+    },
+    "StructureDefinition-sas-cpts-slot-aggregator.html" : "FrSlotAgregateurCPTS",
+    "StructureDefinition-sas-sos-slot-aggregator.html" : "FrSlotAgregateurSOS"
   },
   {
     "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-categorieetablissement",
@@ -52,7 +65,10 @@
     "name" : "CategorieEtablissementSAS",
     "title" : "Catégorie établissement SAS",
     "description" : "Catégorie d'établissement utilisée dans contexte SAS - CPTS dans un premier temps",
-    "systems" : ["https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement"]
+    "systems" : ["https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement"],
+    "uses" : {
+    },
+    "StructureDefinition-sas-cpts-slot-aggregator.html" : "FrSlotAgregateurCPTS"
   },
   {
     "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-participant-status",
@@ -61,7 +77,11 @@
     "name" : "ParticipantStatusSAS",
     "title" : "Statut participant RDV SAS",
     "description" : "Statut du participant RDV SAS",
-    "systems" : ["http://hl7.org/fhir/participationstatus"]
+    "systems" : ["http://hl7.org/fhir/participationstatus"],
+    "uses" : {
+    },
+    "StructureDefinition-FrAppointmentSAS.html" : "FrAppointmentSAS",
+    "StructureDefinition-sas-sos-appointment.html" : "FrAppointmentSASSOS"
   },
   {
     "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-typeconsultation",
@@ -70,7 +90,10 @@
     "name" : "TypeConsultationSAS",
     "title" : "Type consultation SAS",
     "description" : "Type de consultations SAS",
-    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"]
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+    "uses" : {
+    },
+    "StructureDefinition-sas-sos-slot-aggregator.html" : "FrSlotAgregateurSOS"
   },
   {
     "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-typeidentifiant",
@@ -79,6 +102,9 @@
     "name" : "TypeIdentifiantSAS",
     "title" : "Type identifiant SAS",
     "description" : "Type d'identifiant SAS",
-    "systems" : ["http://interopsante.org/fhir/CodeSystem/fr-v2-0203"]
+    "systems" : ["http://interopsante.org/fhir/CodeSystem/fr-v2-0203"],
+    "uses" : {
+    },
+    "StructureDefinition-sas-sos-appointment.html" : "FrAppointmentSASSOS"
   }]
 }
