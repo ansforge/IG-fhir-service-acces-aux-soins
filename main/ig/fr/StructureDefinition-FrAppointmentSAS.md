@@ -28,6 +28,8 @@ Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https:/
 
 Cette structure est dérivée de [FrAppointment](https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&canonical=http://interopsante.org/fhir/StructureDefinition/FrAppointment) 
 
+#### Bindings terminologiques (différentiel)
+
 #### Bindings terminologiques
 
 #### Contraintes
@@ -57,6 +59,8 @@ Cette structure fait référence à ces autres structures:
  **Vue différentielle** 
 
 Cette structure est dérivée de [FrAppointment](https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&canonical=http://interopsante.org/fhir/StructureDefinition/FrAppointment) 
+
+#### Bindings terminologiques (différentiel)
 
  **Vue d'ensembleView** 
 
@@ -96,7 +100,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FrAppointmentSA
   "version" : "1.2.0",
   "name" : "FrAppointmentSAS",
   "status" : "active",
-  "date" : "2026-06-15T12:59:24+00:00",
+  "date" : "2026-06-15T13:14:04+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -257,7 +261,10 @@ Autres représentations du profil : [CSV](../StructureDefinition-FrAppointmentSA
     {
       "id" : "Appointment.participant.status",
       "path" : "Appointment.participant.status",
-      "patternCode" : "accepted"
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-participant-status"
+      }
     }]
   }
 }

@@ -19,7 +19,7 @@
   fhir:name [ fhir:v "SAS"] ; # 
   fhir:title [ fhir:v "Service d'Accès aux Soins"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-06-15T12:59:24+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-06-15T13:14:04+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -1168,6 +1168,25 @@
          a fhir:canonical ;
          fhir:v "http://sas.fr/fhir/StructureDefinition/FrAppointmentSAS"^^xsd:anyURI ;
          fhir:link <http://sas.fr/fhir/StructureDefinition/FrAppointmentSAS>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Appointment"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Appointment/12345678> ;
+         fhir:reference [ fhir:v "Appointment/12345678" ]
+       ] ;
+       fhir:name [ fhir:v "ExampleAppointmentSOS" ] ;
+       fhir:description [ fhir:v "Exemple RDV SOS pending PS non connu" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-appointment"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-appointment>
        ]
      ] [
        fhir:extension ( [
@@ -2444,11 +2463,11 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-sos-valueset-participant-status> ;
-         fhir:reference [ fhir:v "ValueSet/sas-sos-valueset-participant-status" ]
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-participant-status> ;
+         fhir:reference [ fhir:v "ValueSet/sas-valueset-participant-status" ]
        ] ;
-       fhir:name [ fhir:v "Statut participant SAS SOS" ] ;
-       fhir:description [ fhir:v "Statut du participant RDV SAS SOS" ] ;
+       fhir:name [ fhir:v "Statut participant RDV SAS" ] ;
+       fhir:description [ fhir:v "Statut du participant RDV SAS" ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false

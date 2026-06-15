@@ -25,18 +25,6 @@
     "StructureDefinition-sas-cpts-slot-aggregator.html" : "FrSlotAgregateurCPTS"
   },
   {
-    "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-sos-valueset-participant-status",
-    "version" : "1.2.0",
-    "status" : "active",
-    "name" : "ParticipantStatusSASSOS",
-    "title" : "Statut participant SAS SOS",
-    "description" : "Statut du participant RDV SAS SOS",
-    "systems" : ["http://hl7.org/fhir/participationstatus"],
-    "uses" : {
-    },
-    "StructureDefinition-sas-sos-appointment.html" : "FrAppointmentSASSOS"
-  },
-  {
     "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-sos-valueset-typecreneau",
     "version" : "1.2.0",
     "status" : "active",
@@ -81,6 +69,19 @@
     "uses" : {
     },
     "StructureDefinition-sas-cpts-slot-aggregator.html" : "FrSlotAgregateurCPTS"
+  },
+  {
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-participant-status",
+    "version" : "1.2.0",
+    "status" : "active",
+    "name" : "ParticipantStatusSAS",
+    "title" : "Statut participant RDV SAS",
+    "description" : "Statut du participant RDV SAS",
+    "systems" : ["http://hl7.org/fhir/participationstatus"],
+    "uses" : {
+    },
+    "StructureDefinition-sas-sos-appointment.html" : "FrAppointmentSASSOS",
+    "StructureDefinition-FrAppointmentSAS.html" : "FrAppointmentSAS"
   },
   {
     "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-typeconsultation",

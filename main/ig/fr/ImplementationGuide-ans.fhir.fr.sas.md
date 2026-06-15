@@ -14,7 +14,7 @@
   "name" : "SAS",
   "title" : "Service d'Accès aux Soins",
   "status" : "active",
-  "date" : "2026-06-15T12:59:24+00:00",
+  "date" : "2026-06-15T13:14:04+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -847,6 +847,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Appointment"
+      }],
+      "reference" : {
+        "reference" : "Appointment/12345678"
+      },
+      "name" : "ExampleAppointmentSOS",
+      "description" : "Exemple RDV SOS pending PS non connu",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-appointment"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Bundle"
       }],
       "reference" : {
@@ -1666,10 +1678,10 @@
         "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "ValueSet/sas-sos-valueset-participant-status"
+        "reference" : "ValueSet/sas-valueset-participant-status"
       },
-      "name" : "Statut participant SAS SOS",
-      "description" : "Statut du participant RDV SAS SOS",
+      "name" : "Statut participant RDV SAS",
+      "description" : "Statut du participant RDV SAS",
       "exampleBoolean" : false
     },
     {

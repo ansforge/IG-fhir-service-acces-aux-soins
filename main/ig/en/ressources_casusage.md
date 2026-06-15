@@ -28,6 +28,7 @@ Liste des ressources (profils, paramètres de recherche, terminologies, exemples
 | [sas-valueset-appointmentparticipanttype](ValueSet-sas-valueset-appointmentparticipanttype.md) | ValueSet | Type de participant du RDV SAS |
 | [sas-valueset-appointmentreason](ValueSet-sas-valueset-appointmentreason.md) | ValueSet | Appointment reason SAS |
 | [sas-valueset-categorieetablissement](ValueSet-sas-valueset-categorieetablissement.md) | ValueSet | Catégorie d'établissement utilisée dans contexte SAS - CPTS dans un premier temps |
+| [sas-valueset-participant-status](ValueSet-sas-valueset-participant-status.md) | ValueSet | Statut du participant RDV SAS |
 | [sas-valueset-typeconsultation](ValueSet-sas-valueset-typeconsultation.md) | ValueSet | Type de consultations SAS |
 | [sas-valueset-typeidentifiant](ValueSet-sas-valueset-typeidentifiant.md) | ValueSet | Type d'identifiant SAS |
 
@@ -62,6 +63,5 @@ Liste des ressources (profils, paramètres de recherche, terminologies, exemples
 | [sas-sos-organization-aggregator](StructureDefinition-sas-sos-organization-aggregator.md) | StructureDefinition | Profil d'Organization, dérivé de FrOrganization, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins |
 | [sas-sos-schedule-aggregator](StructureDefinition-sas-sos-schedule-aggregator.md) | StructureDefinition | Profil de Schedule, dérivé de FrSchedule, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins |
 | [sas-sos-slot-aggregator](StructureDefinition-sas-sos-slot-aggregator.md) | StructureDefinition | Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins |
-| [sas-sos-valueset-participant-status](ValueSet-sas-sos-valueset-participant-status.md) | ValueSet | Statut du participant RDV SAS SOS |
 | [sas-sos-valueset-typecreneau](ValueSet-sas-sos-valueset-typecreneau.md) | ValueSet | Type de Créneaux SAS SOS |
 

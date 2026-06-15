@@ -33,7 +33,7 @@ Type de consultations SAS
   "title" : "Type consultation SAS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-06-15T12:59:24+00:00",
+  "date" : "2026-06-15T13:14:04+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
