@@ -86,7 +86,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FrPractitionerR
   "version" : "1.2.0",
   "name" : "FrPractitionerRoleExerciceAgregateur",
   "status" : "active",
-  "date" : "2026-06-17T07:51:28+00:00",
+  "date" : "2026-06-22T16:38:09+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
