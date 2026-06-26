@@ -1,4 +1,4 @@
-name: Workflow   Tests/gitHubpages
+name: Workflow CI-build (GitHub pages)
 on:
   workflow_call:
   push:
@@ -7,12 +7,15 @@ on:
 jobs:
   run-gitHubPages:
     runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/ansforge/fhir-ig-builder:latest
     steps:
       - uses: actions/checkout@v4
         with:      
           path: igSource
 
       - name: Copy "all" to "use cases" specs
+        shell: bash
         run: |
              path_spec="./igSource/input/pagecontent"
              for lines in $(cat "${path_spec}/specifications_techniques.txt"); do
@@ -28,3 +31,4 @@ jobs:
           repo_ig: "./igSource"   
           github_page: "true"
           github_page_token: ${{ secrets.ANS_IG_API_TOKEN  }}
+          container_mode: "true"
