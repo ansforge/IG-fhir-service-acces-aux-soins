@@ -15,6 +15,7 @@ jobs:
           path: igSource
 
       - name: Copy "all" to "use cases" specs
+        shell: bash
         run: |
              path_spec="./igSource/input/pagecontent"
              for lines in $(cat "${path_spec}/specifications_techniques.txt"); do
