@@ -1,0 +1,34 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/sas/HealthcareService/ExampleHealthcareServiceCPTS2> a fhir:HealthcareService ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "ExampleHealthcareServiceCPTS2"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-healthcareservice-aggregator" ;
+       fhir:index -1 ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-healthcareservice-aggregator>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "fr"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : ServiceDeSanté ExampleHealthcareServiceCPTS2</b></p><a name=\"ExampleHealthcareServiceCPTS2\"> </a><a name=\"hcExampleHealthcareServiceCPTS2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-cpts-healthcareservice-aggregator.html\">FrHealthcareServiceAgregateurCPTS</a></p></div><p><b>providedBy</b>: <a href=\"Organization-ExampleOrgaCPTS2.html\">Organization CPTS VAL D OISE CENTRE</a></p></div>"
+  ] ;
+  fhir:HealthcareService.providedBy [
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Organization/ExampleOrgaCPTS2> ;
+     fhir:Reference.reference [ fhir:value "Organization/ExampleOrgaCPTS2" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/sas/HealthcareService/ExampleHealthcareServiceCPTS2.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

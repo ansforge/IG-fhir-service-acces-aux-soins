@@ -1,0 +1,80 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/sas/PractitionerRole/ExamplePractitionerRoleAgregateur> a fhir:PractitionerRole ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "ExamplePractitionerRoleAgregateur"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur" ;
+       fhir:index -1 ;
+       fhir:link <http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "fr"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : PractitionerRole ExamplePractitionerRoleAgregateur</b></p><a name=\"ExamplePractitionerRoleAgregateur\"> </a><a name=\"hcExamplePractitionerRoleAgregateur\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-FrPractitionerRoleExerciceAgregateur.html\">FrPractitionerRoleExerciceAgregateur</a></p></div><p><b>practitioner</b>: <a href=\"Practitioner-ExamplePractitioner.html\">Practitioner Pierre Foret </a></p><p><b>organization</b>: Identifier: 412345678912345</p><p><b>location</b>: <a href=\"#hcExamplePractitionerRoleAgregateur/ExampleLocation\">Location : identifier = Identifiant interne</a></p><p><b>telecom</b>: <a href=\"tel:+33561855977\">+33561855977</a></p><hr/><blockquote><p class=\"res-header-id\"><b>Narratif généré : Localisation #ExampleLocation</b></p><a name=\"ExamplePractitionerRoleAgregateur/ExampleLocation\"> </a><a name=\"hcExamplePractitionerRoleAgregateur/ExampleLocation\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-FrLocationAgregateur.html\">FrLocationAgregateur</a></p></div><p><b>identifier</b>: Identifiant interne/123456789</p><p><b>address</b>: 25 CHEMIN DE MOUNESTIE Aussonne 31840 </p></blockquote></div>"
+  ] ;
+  fhir:DomainResource.contained [
+     a fhir:Location ;
+     fhir:index -1 ;
+     fhir:Resource.id [ fhir:value "ExampleLocation" ] ;
+     fhir:Resource.meta [
+       fhir:Meta.profile [
+         fhir:value "http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur" ;
+         fhir:index -1 ;
+         fhir:link <http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur>
+       ]
+     ] ;
+     fhir:Location.identifier [
+       fhir:index -1 ;
+       fhir:Identifier.type [
+         fhir:CodeableConcept.coding [
+           fhir:index -1 ;
+           fhir:Coding.system [ fhir:value "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type" ] ;
+           fhir:Coding.code [ fhir:value "INTRN" ]
+         ]
+       ] ;
+       fhir:Identifier.system [ fhir:value "https://editeur.com" ] ;
+       fhir:Identifier.value [ fhir:value "123456789" ]
+     ] ;
+     fhir:Location.address [
+       fhir:Address.line [
+         fhir:value "25 CHEMIN DE MOUNESTIE" ;
+         fhir:index -1
+       ] ;
+       fhir:Address.city [ fhir:value "Aussonne" ] ;
+       fhir:Address.postalCode [ fhir:value "31840" ]
+     ]
+  ] ;
+  fhir:PractitionerRole.practitioner [
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/ExamplePractitioner> ;
+     fhir:Reference.reference [ fhir:value "Practitioner/ExamplePractitioner" ]
+  ] ;
+  fhir:PractitionerRole.organization [
+     fhir:Reference.identifier [
+       fhir:Identifier.value [ fhir:value "412345678912345" ]
+     ]
+  ] ;
+  fhir:PractitionerRole.location [
+     fhir:index -1 ;
+     fhir:Reference.reference [ fhir:value "#ExampleLocation" ]
+  ] ;
+  fhir:PractitionerRole.telecom [
+     fhir:index -1 ;
+     fhir:ContactPoint.system [ fhir:value "phone" ] ;
+     fhir:ContactPoint.value [ fhir:value "+33561855977" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/sas/PractitionerRole/ExamplePractitionerRoleAgregateur.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
