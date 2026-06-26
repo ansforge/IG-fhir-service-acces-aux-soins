@@ -1,6 +1,5 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -8,50 +7,63 @@
 
 <https://interop.esante.gouv.fr/ig/fhir/sas/Slot/ExampleSlotPSIndiv2> a fhir:Slot ;
   fhir:nodeRole fhir:treeRoot ;
-  fhir:id [ fhir:v "ExampleSlotPSIndiv2"] ; # 
-  fhir:meta [
-     fhir:profile ( [
-       fhir:v "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur"^^xsd:anyURI ;
+  fhir:Resource.id [ fhir:value "ExampleSlotPSIndiv2"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur" ;
+       fhir:index -1 ;
        fhir:link <http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur>
-     ] ) ;
-     fhir:security ( [
-       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "PRO" ]
-     ] )
-  ] ; # 
-  fhir:language [ fhir:v "fr"] ; # 
-  fhir:text [
-     fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : Slot ExampleSlotPSIndiv2</b></p><a name=\"ExampleSlotPSIndiv2\"> </a><a name=\"hcExampleSlotPSIndiv2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-FrSlotAgregateur.html\">FrSlotAgregateur</a></p><p style=\"margin-bottom: 0px\">Label de sécurité: <a href=\"https://smt.esante.gouv.fr/fhir/ValueSet/TRE-R314-TypeCreneau\">Créneau accessible par l'ensemble des professionnels de santé (Détails : code TRE_R314_TypeCreneau PRO = 'Créneau accessible par l'ensemble des professionnels de santé')</a></p></div><p><b>serviceType</b>: <span title=\"Codes :{http://terminology.hl7.org/CodeSystem/v3-ActCode AMB}\">ambulatory</span>, <span title=\"Codes :\">Visite urgente</span></p><p><b>specialty</b>: <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM54}\">Médecine générale</span></p><p><b>appointmentType</b>: <span title=\"Codes :{http://terminology.hl7.org/CodeSystem/v2-0276 WALKIN}\">A previously unscheduled walk-in visit</span></p><p><b>schedule</b>: <a href=\"Schedule-ExampleSchedule2.html\">Schedule</a></p><p><b>status</b>: Free</p><p><b>start</b>: 2021-11-05 11:00:00+0000</p><p><b>end</b>: 2021-11-05 11:30:00+0000</p></div>"^^rdf:XMLLiteral ]
-  ] ; # 
-  fhir:serviceType ( [
-     fhir:coding ( [
-       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "AMB" ]
-     ] )
-  ] [
-     fhir:text [ fhir:v "Visite urgente" ]
-  ] ) ; # 
-  fhir:specialty ( [
-     fhir:coding ( [
-       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "SM54" ]
-     ] ) ;
-     fhir:text [ fhir:v "Médecine générale" ]
-  ] ) ; # 
-  fhir:appointmentType [
-     fhir:coding ( [
-       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0276"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "WALKIN" ]
-     ] )
-  ] ; # 
-  fhir:schedule [
+     ] ;
+     fhir:Meta.security [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau" ] ;
+       fhir:Coding.code [ fhir:value "PRO" ]
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "fr"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : Slot ExampleSlotPSIndiv2</b></p><a name=\"ExampleSlotPSIndiv2\"> </a><a name=\"hcExampleSlotPSIndiv2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-FrSlotAgregateur.html\">FrSlotAgregateur</a></p><p style=\"margin-bottom: 0px\">Label de sécurité: <a href=\"https://smt.esante.gouv.fr/fhir/ValueSet/TRE-R314-TypeCreneau\">Créneau accessible par l'ensemble des professionnels de santé (Détails : code TRE_R314_TypeCreneau PRO = 'Créneau accessible par l'ensemble des professionnels de santé')</a></p></div><p><b>serviceType</b>: <span title=\"Codes :{http://terminology.hl7.org/CodeSystem/v3-ActCode AMB}\">ambulatory</span>, <span title=\"Codes :\">Visite urgente</span></p><p><b>specialty</b>: <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM54}\">Médecine générale</span></p><p><b>appointmentType</b>: <span title=\"Codes :{http://terminology.hl7.org/CodeSystem/v2-0276 WALKIN}\">A previously unscheduled walk-in visit</span></p><p><b>schedule</b>: <a href=\"Schedule-ExampleSchedule2.html\">Schedule</a></p><p><b>status</b>: Free</p><p><b>start</b>: 2021-11-05 11:00:00+0000</p><p><b>end</b>: 2021-11-05 11:30:00+0000</p></div>"
+  ] ;
+  fhir:Slot.serviceType [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ] ;
+       fhir:Coding.code [ fhir:value "AMB" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeableConcept.text [ fhir:value "Visite urgente" ]
+  ] ;
+  fhir:Slot.specialty [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale" ] ;
+       fhir:Coding.code [ fhir:value "SM54" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Médecine générale" ]
+  ] ;
+  fhir:Slot.appointmentType [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0276" ] ;
+       fhir:Coding.code [ fhir:value "WALKIN" ]
+     ]
+  ] ;
+  fhir:Slot.schedule [
      fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Schedule/ExampleSchedule2> ;
-     fhir:reference [ fhir:v "Schedule/ExampleSchedule2" ]
-  ] ; # 
-  fhir:status [ fhir:v "free"] ; # 
-  fhir:start [ fhir:v "2021-11-05T11:00:00.000+00:00"^^xsd:dateTime] ; # 
-  fhir:end [ fhir:v "2021-11-05T11:30:00.000+00:00"^^xsd:dateTime] . # 
+     fhir:Reference.reference [ fhir:value "Schedule/ExampleSchedule2" ]
+  ] ;
+  fhir:Slot.status [ fhir:value "free"] ;
+  fhir:Slot.start [ fhir:value "2021-11-05T11:00:00.000+00:00"^^xsd:dateTime] ;
+  fhir:Slot.end [ fhir:value "2021-11-05T11:30:00.000+00:00"^^xsd:dateTime] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/sas/Slot/ExampleSlotPSIndiv2.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 

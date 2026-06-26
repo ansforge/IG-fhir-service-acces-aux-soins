@@ -1,6 +1,5 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -8,25 +7,33 @@
 
 <https://interop.esante.gouv.fr/ig/fhir/sas/Schedule/ExampleSchedule> a fhir:Schedule ;
   fhir:nodeRole fhir:treeRoot ;
-  fhir:id [ fhir:v "ExampleSchedule"] ; # 
-  fhir:meta [
-     fhir:profile ( [
-       fhir:v "http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur"^^xsd:anyURI ;
+  fhir:Resource.id [ fhir:value "ExampleSchedule"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur" ;
+       fhir:index -1 ;
        fhir:link <http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur>
-     ] )
-  ] ; # 
-  fhir:language [ fhir:v "fr"] ; # 
-  fhir:text [
-     fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : Schedule ExampleSchedule</b></p><a name=\"ExampleSchedule\"> </a><a name=\"hcExampleSchedule\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-FrScheduleAgregateur.html\">FrScheduleAgregateur</a></p></div><p><b>actor</b>: </p><ul><li><a href=\"Practitioner-ExamplePractitioner.html\">Practitioner Pierre Foret </a></li><li><a href=\"PractitionerRole-ExamplePractitionerRoleAgregateur.html\">PractitionerRole : telecom = ph: +33561855977</a></li></ul></div>"^^rdf:XMLLiteral ]
-  ] ; # 
-  fhir:actor ( [
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "fr"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : Schedule ExampleSchedule</b></p><a name=\"ExampleSchedule\"> </a><a name=\"hcExampleSchedule\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-FrScheduleAgregateur.html\">FrScheduleAgregateur</a></p></div><p><b>actor</b>: </p><ul><li><a href=\"Practitioner-ExamplePractitioner.html\">Practitioner Pierre Foret </a></li><li><a href=\"PractitionerRole-ExamplePractitionerRoleAgregateur.html\">PractitionerRole : telecom = ph: +33561855977</a></li></ul></div>"
+  ] ;
+  fhir:Schedule.actor [
+     fhir:index -1 ;
      fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/ExamplePractitioner> ;
-     fhir:reference [ fhir:v "Practitioner/ExamplePractitioner" ]
-  ] [
+     fhir:Reference.reference [ fhir:value "Practitioner/ExamplePractitioner" ]
+  ], [
+     fhir:index -1 ;
      fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/PractitionerRole/ExamplePractitionerRoleAgregateur> ;
-     fhir:reference [ fhir:v "PractitionerRole/ExamplePractitionerRoleAgregateur" ]
-  ] ) . # 
+     fhir:Reference.reference [ fhir:value "PractitionerRole/ExamplePractitionerRoleAgregateur" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/sas/Schedule/ExampleSchedule.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 

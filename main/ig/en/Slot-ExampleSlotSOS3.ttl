@@ -1,6 +1,5 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -8,42 +7,52 @@
 
 <https://interop.esante.gouv.fr/ig/fhir/sas/Slot/ExampleSlotSOS3> a fhir:Slot ;
   fhir:nodeRole fhir:treeRoot ;
-  fhir:id [ fhir:v "ExampleSlotSOS3"] ; # 
-  fhir:meta [
-     fhir:profile ( [
-       fhir:v "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator"^^xsd:anyURI ;
+  fhir:Resource.id [ fhir:value "ExampleSlotSOS3"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator" ;
+       fhir:index -1 ;
        fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator>
-     ] ) ;
-     fhir:security ( [
-       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "PUBLIC" ]
-     ] )
-  ] ; # 
-  fhir:language [ fhir:v "en"] ; # 
-  fhir:text [
-     fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Slot ExampleSlotSOS3</b></p><a name=\"en-ExampleSlotSOS3\"> </a><a name=\"en-hcExampleSlotSOS3\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-sas-sos-slot-aggregator.html\">FrSlotAgregateurSOS</a></p><p style=\"margin-bottom: 0px\">Security Label: <a href=\"https://smt.esante.gouv.fr/fhir/ValueSet/TRE-R314-TypeCreneau\">Créneau accessible par le grand public (Details: TRE_R314_TypeCreneau code PUBLIC = 'Créneau accessible par le grand public')</a></p></div><p><b>serviceType</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode VR}\">virtual</span></p><p><b>appointmentType</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0276 ROUTINE}\">Routine appointment - default if not valued</span></p><p><b>schedule</b>: <a href=\"Schedule-ExampleScheduleSOS3.html\">Schedule</a></p><p><b>status</b>: Free</p><p><b>start</b>: 2023-08-18 14:20:00+0200</p><p><b>end</b>: 2023-08-18 14:40:00+0200</p><p><b>comment</b>: http://www.editeur.com/agenda-pfg/creneau3</p></div>"^^rdf:XMLLiteral ]
-  ] ; # 
-  fhir:serviceType ( [
-     fhir:coding ( [
-       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "VR" ]
-     ] )
-  ] ) ; # 
-  fhir:appointmentType [
-     fhir:coding ( [
-       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0276"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "ROUTINE" ]
-     ] )
-  ] ; # 
-  fhir:schedule [
+     ] ;
+     fhir:Meta.security [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau" ] ;
+       fhir:Coding.code [ fhir:value "PUBLIC" ]
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Slot ExampleSlotSOS3</b></p><a name=\"en-ExampleSlotSOS3\"> </a><a name=\"en-hcExampleSlotSOS3\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-sas-sos-slot-aggregator.html\">FrSlotAgregateurSOS</a></p><p style=\"margin-bottom: 0px\">Security Label: <a href=\"https://smt.esante.gouv.fr/fhir/ValueSet/TRE-R314-TypeCreneau\">Créneau accessible par le grand public (Details: TRE_R314_TypeCreneau code PUBLIC = 'Créneau accessible par le grand public')</a></p></div><p><b>serviceType</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode VR}\">virtual</span></p><p><b>appointmentType</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0276 ROUTINE}\">Routine appointment - default if not valued</span></p><p><b>schedule</b>: <a href=\"Schedule-ExampleScheduleSOS3.html\">Schedule</a></p><p><b>status</b>: Free</p><p><b>start</b>: 2023-08-18 14:20:00+0200</p><p><b>end</b>: 2023-08-18 14:40:00+0200</p><p><b>comment</b>: http://www.editeur.com/agenda-pfg/creneau3</p></div>"
+  ] ;
+  fhir:Slot.serviceType [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ] ;
+       fhir:Coding.code [ fhir:value "VR" ]
+     ]
+  ] ;
+  fhir:Slot.appointmentType [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0276" ] ;
+       fhir:Coding.code [ fhir:value "ROUTINE" ]
+     ]
+  ] ;
+  fhir:Slot.schedule [
      fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Schedule/ExampleScheduleSOS3> ;
-     fhir:reference [ fhir:v "Schedule/ExampleScheduleSOS3" ]
-  ] ; # 
-  fhir:status [ fhir:v "free"] ; # 
-  fhir:start [ fhir:v "2023-08-18T14:20:00.000+02:00"^^xsd:dateTime] ; # 
-  fhir:end [ fhir:v "2023-08-18T14:40:00.000+02:00"^^xsd:dateTime] ; # 
-  fhir:comment [ fhir:v "http://www.editeur.com/agenda-pfg/creneau3"] . # 
+     fhir:Reference.reference [ fhir:value "Schedule/ExampleScheduleSOS3" ]
+  ] ;
+  fhir:Slot.status [ fhir:value "free"] ;
+  fhir:Slot.start [ fhir:value "2023-08-18T14:20:00.000+02:00"^^xsd:dateTime] ;
+  fhir:Slot.end [ fhir:value "2023-08-18T14:40:00.000+02:00"^^xsd:dateTime] ;
+  fhir:Slot.comment [ fhir:value "http://www.editeur.com/agenda-pfg/creneau3"] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/sas/Slot/ExampleSlotSOS3.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 
