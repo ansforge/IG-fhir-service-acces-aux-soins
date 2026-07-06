@@ -61,7 +61,7 @@ Remarque : l'échec d'une recherche est la non-possibilité d'exécuter la requ
 | **ID** | **Description** | **Paramètre** | **Type** | **Obligatoire** | **Cardinalité** |
 | 1 | Date de début de la recherche de créneaux | startavec le préfixe ge | date | Oui | 1..1 |
 | 2 | Date de fin de la recherche de créneaux | startavec le préfixe le | date | Oui | 1..1 |
-| 3 | Liste des identifiants nationaux de structure des associations SOS Médecins(SIRET avec préfixe correspondant) | actor:Location.organization.identifier | token | Oui | 1..25 |
+| 3 | Liste des identifiants nationaux de structure des associations SOS Médecins(SIRET avec préfixe correspondant) | actor:Location.organization.identifier | token | Oui | 1..10 |
 | 4 | Statut des créneaux | status | tokenvaleur: free | Oui | 1..1 |
 
 Par ailleurs, en complément des ressources Slot, afin de récupérer l'ensemble des informations qui leur sont rattachées et qui seront potentiellement exploitées par le SAS, deux paramètres supplémentaires sont exploités :
@@ -151,22 +151,20 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
 * L'utilisation de la nomenclature standard slotstatus ([http://hl7.org/fhir/R4/valueset-slotstatus.html](http://hl7.org/fhir/R4/valueset-slotstatus.html)) est attendue. Cependant, la plateforme numérique SAS ne récupérant que des créneaux disponibles, ce champ aura systématiquement la valeur `free`.
  
 * **Type de créneau :** 
-* Afin de répondre aux besoins de la plateforme numérique SAS, une nomenclature dédiée a été mise en oeuvre ([https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau](https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau)). 3 types de créneaux sont présentés ci-dessous. A noter qu'un créneau peut porter une combinaison de ces valeurs : 
+* Afin de répondre aux besoins de la plateforme numérique SAS, une nomenclature dédiée a été mise en oeuvre ([https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau](https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau)). 3 types de créneaux sont présentés dont deux ci-dessous utilisés pour ce cas d'usage. A noter qu'un créneau peut porter une combinaison de ces valeurs : 
 * PUBLIC – Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible par le grand public
-* PRO – Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible à l'ensemble des PS
 * SNP – Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible par les Régulateurs et OSNP
  
  
 * **Type de consultation :** 
-* L'utilisation de la nomenclature standard ActEncounterCode ([https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html](https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html)) est attendue. Cette nomenclature contient différentes notions, cependant, la plateforme numérique SAS gère les 3 types de créneaux ci-dessous. A noter qu'un créneau peut porter une combinaison de ces valeurs : 
+* L'utilisation de la nomenclature standard ActEncounterCode ([https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html](https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html)) est attendue. Cette nomenclature contient différentes notions, cependant, la plateforme numérique SAS gère 3 types de créneaux dont deux ci-dessous utilisés pour ce cas d'usage. A noter qu'un créneau peut porter une combinaison de ces valeurs : 
 * AMB – Consultation au cabinet
-* HH – Consultation à domicile
 * VR – Téléconsultation
  
 * **Créneau avec ou sans RDV :**
 * L'utilisation de la nomenclature standard AppointmentReasonCodes ([https://www.hl7.org/fhir/v2/0276/index.html](https://www.hl7.org/fhir/v2/0276/index.html)) est attendue. Cette nomenclature contient différentes notions, cependant, la plateforme numérique SAS gère les 2 valeurs ci-dessous : 
 * ROUTINE – Créneau avec prise de RDV possible.
-* WALKIN – Créneau sans prise de RDV possible
+* WALKIN – Créneau sans prise de RDV possible Seuls les créneaux avec prise de RDV `ROUTINE` sont attendus pour ce cas d'usage.
  
  
 * **URL de redirection pour la prise de RDV :** 

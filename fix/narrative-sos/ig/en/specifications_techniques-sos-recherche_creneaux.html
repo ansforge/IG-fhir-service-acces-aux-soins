@@ -434,7 +434,7 @@ Plus de précision sur la spécification FHIR :
   <td><p>actor:Location<br />.organization.identifier</p></td>
   <td><p>token</p></td>
   <td><p>Oui</p></td>
-  <td><p>1..25</p></td>
+  <td><p>1..10</p></td>
 </tr>
 <tr>
   <td><p>4</p></td>
@@ -472,19 +472,19 @@ HTTP 200 OK
   resourceType: Bundle
   type: searchset
   total: 4
-  Slot1 (match)
-  Schedule1
-  Location1
+  Slot1 (include)
+  Schedule1 (match)
+  Location1 (include)
   Organization1
-  Slot2 (match)
-  Schedule2
-  Location2
-  Organization2
-  Slot3 (match)
-  Schedule3
-  Location3
-  Organization3
-  Slot4 (match)
+  Slot2 (include)
+  Schedule2 (match)
+  Location2 (include)
+  Organization2 (include)
+  Slot3 (include)
+  Schedule3 (match)
+  Location3 (include)
+  Organization3 (include)
+  Slot4 (include)
   </pre>
 </details>
 <p><br /></p>
@@ -573,10 +573,9 @@ HTTP 200 OK
   </li>
   <li><strong>Type de créneau :</strong>
     <ul>
-      <li>Afin de répondre aux besoins de la plateforme numérique SAS, une nomenclature dédiée a été mise en oeuvre (<a href="https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau">https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau</a>). 3 types de créneaux sont présentés ci-dessous. A noter qu'un créneau peut porter une combinaison de ces valeurs :
+      <li>Afin de répondre aux besoins de la plateforme numérique SAS, une nomenclature dédiée a été mise en oeuvre (<a href="https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau">https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau</a>). 3 types de créneaux sont présentés dont deux ci-dessous utilisés pour ce cas d'usage. A noter qu'un créneau peut porter une combinaison de ces valeurs :
         <ul>
           <li>PUBLIC – Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible par le grand public</li>
-          <li>PRO – Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible à l'ensemble des PS</li>
           <li>SNP – Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible par les Régulateurs et OSNP</li>
         </ul>
       </li>
@@ -584,10 +583,9 @@ HTTP 200 OK
   </li>
   <li><strong>Type de consultation :</strong>
     <ul>
-      <li>L'utilisation de la nomenclature standard ActEncounterCode (<a href="https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html">https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html</a>) est attendue. Cette nomenclature contient différentes notions, cependant, la plateforme numérique SAS gère les 3 types de créneaux ci-dessous. A noter qu'un créneau peut porter une combinaison de ces valeurs :
+      <li>L'utilisation de la nomenclature standard ActEncounterCode (<a href="https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html">https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html</a>) est attendue. Cette nomenclature contient différentes notions, cependant, la plateforme numérique SAS gère 3 types de créneaux dont deux ci-dessous utilisés pour ce cas d'usage. A noter qu'un créneau peut porter une combinaison de ces valeurs :
         <ul>
           <li>AMB – Consultation au cabinet</li>
-          <li>HH – Consultation à domicile</li>
           <li>VR – Téléconsultation</li>
         </ul>
       </li>
@@ -595,7 +593,8 @@ HTTP 200 OK
       <li>L'utilisation de la nomenclature standard AppointmentReasonCodes (<a href="https://www.hl7.org/fhir/v2/0276/index.html">https://www.hl7.org/fhir/v2/0276/index.html</a>) est attendue. Cette nomenclature contient différentes notions, cependant, la plateforme numérique SAS gère les 2 valeurs ci-dessous :
         <ul>
           <li>ROUTINE – Créneau avec prise de RDV possible.</li>
-          <li>WALKIN – Créneau sans prise de RDV possible</li>
+          <li>WALKIN – Créneau sans prise de RDV possible
+Seuls les créneaux avec prise de RDV <code class="language-plaintext highlighter-rouge">ROUTINE</code> sont attendus pour ce cas d'usage.</li>
         </ul>
       </li>
     </ul>
@@ -758,7 +757,7 @@ Afin de tester un fichier, il suffit de sélectionner le format <code class="lan
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Package ans.fhir.fr.sas#1.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-07-06 09:21:00 +0000">
+  <span title="2026-07-06 09:46:00 +0000">
     2026-07-06
   </span>
 
