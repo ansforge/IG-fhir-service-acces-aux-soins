@@ -283,6 +283,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul id="markdown-toc">
   <li><a href="#agrégateur---recherche-de-créneaux" id="markdown-toc-agrégateur---recherche-de-créneaux">Agrégateur - Recherche de créneaux</a></li>
   <li><a href="#gestion-des-comptes-régulateurs" id="markdown-toc-gestion-des-comptes-régulateurs">Gestion des comptes régulateurs</a></li>
+  <li><a href="#délégation-dauthentification" id="markdown-toc-délégation-dauthentification">Délégation d'authentification</a></li>
   <li><a href="#gestion-des-informations-de-rendez-vous" id="markdown-toc-gestion-des-informations-de-rendez-vous">Gestion des informations de rendez-vous</a></li>
   <li><a href="#transmission-des-informations-de-rdv-aux-lrm" id="markdown-toc-transmission-des-informations-de-rdv-aux-lrm">Transmission des informations de RDV aux LRM</a></li>
 </ul>
@@ -475,6 +476,38 @@ Le schéma ci-dessous illustre les éléments décrits ci-dessus :</li>
   <li>Certains régulateurs n’ayant pas encore d’identifiant national à date, il est attendu que l’éditeur soit en mesure de gérer les comptes soit sur la base de l’identifiant national ou de l’identifiant technique SAS selon ce qui est transmis par la plateforme numérique SAS</li>
 </ul>
 
+<h3 id="délégation-dauthentification">Délégation d'authentification</h3>
+<p>L’objectif de cette interface, <strong>flux INT_SSO</strong>, est de permettre à l’utilisateur de ne pas avoir à se réauthentifier d’une 
+solution logicielle à l’autre et ainsi fluidifier le parcours utilisateur. Le but étant pour les solutions logicielles éditeurs 
+de déléguer l’authentification à la plateforme numérique SAS.</p>
+
+<p>Le schéma de présentation générale ci-dessous illustre le cas d'usage :</p>
+
+<table align="center">
+    <tr>
+        <td align="center">
+            <div class="figure">
+                <img src="SSO.png" alt="Délégation d'authentification" title="Délégation d'authentification - SSO" />
+            </div>
+        </td>    
+    </tr>
+    <tr>
+        <td align="center">
+            <b>Délégation d'authentification</b>
+        </td>
+    </tr>
+</table>
+
+<p>Après avoir agrégé les créneaux de disponibilités à la suite d’une recherche d’offre de santé, le régulateur sélectionne 
+un créneau et est redirigé vers la plateforme de prise de RDV éditeur sans avoir à se réauthentifier. Dans la solution 
+logicielle éditeur, le régulateur va pouvoir ensuite prendre RDV pour le patient. 
+Au moment de la redirection, la solution logicielle éditeur va contrôler la provenance de l’utilisateur (paramètre 
+« origin » ajouté à l’URL de redirection) et si celui-ci n’est pas authentifié, déléguer l’authentification à la plateforme 
+numérique SAS. En lien avec le flux <strong>INT_R02</strong> sur la gestion des comptes régulateurs, la solution logicielle éditeur 
+contrôlera et donnera les droits et habilitations correspondants à l’utilisateur.</p>
+
+<p>Les échangent reposent sur le protocole OpenID Connect (OIDC), cf. <a href="https://esante.gouv.fr/sites/default/files/media/document/SAS_DOC_SPEC%20INT_SSO_Delegation-dauthentification_20230609_V2.2.pdf">spécifications détaillées</a></p>
+
 <h3 id="gestion-des-informations-de-rendez-vous">Gestion des informations de rendez-vous</h3>
 
 <p>L'objectif de cette interface, <strong>flux INT_R03</strong>, est de permettre la transmission des données liées à l'usage de la fonctionnalité de prise de RDV par les régulateurs provenant de la plateforme numérique SAS, dans les solutions logicielles d'agenda.
@@ -663,7 +696,7 @@ Le schéma ci-dessous illustre l'échange à mettre en oeuvre :</p>
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Package ans.fhir.fr.sas#1.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-07-06 14:21:00 +0000">
+  <span title="2026-07-06 14:41:00 +0000">
     2026-07-06
   </span>
 
