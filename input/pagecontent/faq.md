@@ -84,7 +84,7 @@ Les éditeurs ont la possibilité de récupérer les référentiels nationaux de
 <tr>
   <td><p>Extractions à plat</p></td>
   <td>
-    <p><strong>Par le téléchargement des fichiers plats : Extractions en libre accès - <a href="https://annuaire.sante.fr/web/site-pro/extractions-publiques">L'Annuaire Santé</a></strong>
+    <p><strong>Par le téléchargement des fichiers plats : Extractions en libre accès - <a href="https://www.data.gouv.fr/datasets/annuaire-sante-extractions-des-donnees-en-libre-acces-des-professionnels-intervenant-dans-le-systeme-de-sante-rpps">L'Annuaire Santé</a></strong>
     <ul>
       <li>Intitulé du dossier à télécharger : ps_libreacces</li>
       <li>Intitulé du fichier cible : PS_LibreAcces_Personne_activite</li>
@@ -96,7 +96,6 @@ Les éditeurs ont la possibilité de récupérer les référentiels nationaux de
       <li>colonne "Ancien identifiant de la structure" pour RPPS rang ou Adeli rang (avec préfixe)</li>
     </ul>
     La donnée "ancien identifiant de la structure" prend la valeur FINESS ou SIRET (avec préfixe) s'ils sont connus, sinon le champ sera complété avec la donnée RPPS_rang ou Adeli_Rang (avec préfixe).<br>
-    Documentation de référence : <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/Annuaire_sante_fr_DSFT_Extractions_donnees_libre_acces_V2.3.1.pdf">Annuaire_sante_fr_DSFT_Extractions_donnees_libre_acces_V2.3.1</a>
     </p>
   </td>
 </tr>
@@ -104,8 +103,7 @@ Les éditeurs ont la possibilité de récupérer les référentiels nationaux de
   <td><p>Interfaces FHIR</p></td>
   <td>
     <p><strong>Par la récupération via une API mise à disposition par l'ANS</strong><br>
-    Une API en libre accès, permettant d'exposer les données des référentiels Personnes physiques/Personnes morales au format JSON, structurés selon la norme d'interopérabilité FHIR est mise à disposition avec la documentation associée ci-dessous :<br>
-    <https://ansforge.github.io/annuaire-sante-fhir-documentation/>
+    Une API en libre accès, permettant d'exposer les données des référentiels Personnes physiques/Personnes morales au format JSON, structurés selon la norme d'interopérabilité FHIR est mise à disposition avec <a href="https://ansforge.github.io/annuaire-sante-fhir-documentation">la documentation associée</a>
     </p>
   </td>
 </tr>
