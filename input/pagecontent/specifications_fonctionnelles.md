@@ -166,6 +166,38 @@ Le schéma ci-dessous illustre les éléments décrits ci-dessus :
 - Il est attendu pour les éditeurs ayant implémenté le flux INT_R01 d’agrégation des créneaux de disponibilités, de réutiliser le endpoint et la sécurisation mTLS associée pour le flux INT_R02 de gestion des comptes régulateurs
 - Certains régulateurs n’ayant pas encore d’identifiant national à date, il est attendu que l’éditeur soit en mesure de gérer les comptes soit sur la base de l’identifiant national ou de l’identifiant technique SAS selon ce qui est transmis par la plateforme numérique SAS
 
+### Délégation d'authentification
+L’objectif de cette interface, **flux INT_SSO**, est de permettre à l’utilisateur de ne pas avoir à se réauthentifier d’une 
+solution logicielle à l’autre et ainsi fluidifier le parcours utilisateur. Le but étant pour les solutions logicielles éditeurs 
+de déléguer l’authentification à la plateforme numérique SAS.
+
+Le schéma de présentation générale ci-dessous illustre le cas d'usage :
+
+<table align="center">
+    <tr>
+        <td align ="center">
+            <div class="figure">
+                <img src="SSO.png" alt="Délégation d'authentification" title="Délégation d'authentification - SSO">
+            </div>
+        </td>    
+    </tr>
+    <tr>
+        <td align ="center">
+            <b>Délégation d'authentification</b>
+        </td>
+    </tr>
+</table>
+
+Après avoir agrégé les créneaux de disponibilités à la suite d’une recherche d’offre de santé, le régulateur sélectionne 
+un créneau et est redirigé vers la plateforme de prise de RDV éditeur sans avoir à se réauthentifier. Dans la solution 
+logicielle éditeur, le régulateur va pouvoir ensuite prendre RDV pour le patient. 
+Au moment de la redirection, la solution logicielle éditeur va contrôler la provenance de l’utilisateur (paramètre 
+« origin » ajouté à l’URL de redirection) et si celui-ci n’est pas authentifié, déléguer l’authentification à la plateforme 
+numérique SAS. En lien avec le flux **INT_R02** sur la gestion des comptes régulateurs, la solution logicielle éditeur 
+contrôlera et donnera les droits et habilitations correspondants à l’utilisateur. 
+
+Les échangent reposent sur le protocole OpenID Connect (OIDC), cf. [spécifications détaillées](https://esante.gouv.fr/sites/default/files/media/document/SAS_DOC_SPEC%20INT_SSO_Delegation-dauthentification_20230609_V2.2.pdf)
+
 ### Gestion des informations de rendez-vous
 
 L'objectif de cette interface, **flux INT_R03**, est de permettre la transmission des données liées à l'usage de la fonctionnalité de prise de RDV par les régulateurs provenant de la plateforme numérique SAS, dans les solutions logicielles d'agenda.
