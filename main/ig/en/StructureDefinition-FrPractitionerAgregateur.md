@@ -34,7 +34,7 @@ Other representations of profile: [CSV](../StructureDefinition-FrPractitionerAgr
   "version" : "1.2.0",
   "name" : "FrPractitionerAgregateur",
   "status" : "active",
-  "date" : "2026-07-06T10:07:23+00:00",
+  "date" : "2026-07-06T12:34:55+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
