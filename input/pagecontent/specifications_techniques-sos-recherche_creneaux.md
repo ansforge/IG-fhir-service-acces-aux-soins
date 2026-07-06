@@ -131,7 +131,7 @@ Plus de précision sur la spécification FHIR :
   <td><p>actor:Location<br>.organization.identifier</p></td>
   <td><p>token</p></td>
   <td><p>Oui</p></td>
-  <td><p>1..25</p></td>
+  <td><p>1..10</p></td>
 </tr>
 <tr>
   <td><p>4</p></td>
@@ -168,19 +168,19 @@ HTTP 200 OK
   resourceType: Bundle
   type: searchset
   total: 4
-  Slot1 (match)
-  Schedule1
-  Location1
-  Organization1
-  Slot2 (match)
-  Schedule2
-  Location2
-  Organization2
-  Slot3 (match)
-  Schedule3
-  Location3
-  Organization3
-  Slot4 (match)
+  Slot1 (include)
+  Schedule1 (match)
+  Location1 (include)
+  Organization1 (include)
+  Slot2 (include)
+  Schedule2 (match)
+  Location2 (include)
+  Organization2 (include)
+  Slot3 (include)
+  Schedule3 (match)
+  Location3 (include)
+  Organization3 (include)
+  Slot4 (include)
   </pre>
 </details>
 <br>
@@ -244,19 +244,18 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
 - **Statut du créneau :**
   - L'utilisation de la nomenclature standard slotstatus (<http://hl7.org/fhir/R4/valueset-slotstatus.html>) est attendue. Cependant, la plateforme numérique SAS ne récupérant que des créneaux disponibles, ce champ aura systématiquement la valeur `free`.
 - **Type de créneau :**
-  - Afin de répondre aux besoins de la plateforme numérique SAS, une nomenclature dédiée a été mise en oeuvre (<https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau>). 3 types de créneaux sont présentés ci-dessous. A noter qu'un créneau peut porter une combinaison de ces valeurs :
+  - Afin de répondre aux besoins de la plateforme numérique SAS, une nomenclature dédiée a été mise en oeuvre (<https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau>). 3 types de créneaux sont présentés dont deux ci-dessous utilisés pour ce cas d'usage. A noter qu'un créneau peut porter une combinaison de ces valeurs :
     - PUBLIC – Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible par le grand public
-    - PRO – Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible à l'ensemble des PS
     - SNP – Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible par les Régulateurs et OSNP
 - **Type de consultation :**
-  - L'utilisation de la nomenclature standard ActEncounterCode (<https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html>) est attendue. Cette nomenclature contient différentes notions, cependant, la plateforme numérique SAS gère les 3 types de créneaux ci-dessous. A noter qu'un créneau peut porter une combinaison de ces valeurs :
+  - L'utilisation de la nomenclature standard ActEncounterCode (<https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html>) est attendue. Cette nomenclature contient différentes notions, cependant, la plateforme numérique SAS gère 3 types de créneaux dont deux ci-dessous utilisés pour ce cas d'usage. A noter qu'un créneau peut porter une combinaison de ces valeurs :
     - AMB – Consultation au cabinet
-    - HH – Consultation à domicile
     - VR – Téléconsultation
   - **Créneau avec ou sans RDV :**
   - L'utilisation de la nomenclature standard AppointmentReasonCodes (<https://www.hl7.org/fhir/v2/0276/index.html>) est attendue. Cette nomenclature contient différentes notions, cependant, la plateforme numérique SAS gère les 2 valeurs ci-dessous :
     - ROUTINE – Créneau avec prise de RDV possible.
-    - WALKIN – Créneau sans prise de RDV possible  
+    - WALKIN – Créneau sans prise de RDV possible</br>
+    Seuls les créneaux avec prise de RDV `ROUTINE` sont attendus pour ce cas d'usage.   
 - **URL de redirection pour la prise de RDV :**
   - Il est attendu l'URL de redirection vers l'agenda du PS concerné. Si l'utilisateur vient du SAS et n'est pas authentifié, il est demandé de le rediriger vers la page d'authentification de la solution éditeur avant d'accéder à l'agenda du PS. Afin de faciliter l'implémentation de la règle métier, la PTF numérique SAS ajoute un paramètre `origin` à l'URL transmise par l'éditeur au moment de la redirection pour identifier la provenance.
 - **ID de l’association SOS Médecins (SIRET)  :**
