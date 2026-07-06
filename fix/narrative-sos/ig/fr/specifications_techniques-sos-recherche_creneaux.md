@@ -164,7 +164,7 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
 * **Créneau avec ou sans RDV :**
 * L'utilisation de la nomenclature standard AppointmentReasonCodes ([https://www.hl7.org/fhir/v2/0276/index.html](https://www.hl7.org/fhir/v2/0276/index.html)) est attendue. Cette nomenclature contient différentes notions, cependant, la plateforme numérique SAS gère les 2 valeurs ci-dessous : 
 * ROUTINE – Créneau avec prise de RDV possible.
-* WALKIN – Créneau sans prise de RDV possible Seuls les créneaux avec prise de RDV `ROUTINE` sont attendus pour ce cas d'usage.
+* WALKIN – Créneau sans prise de RDV possible</br> Seuls les créneaux avec prise de RDV `ROUTINE` sont attendus pour ce cas d'usage.
  
  
 * **URL de redirection pour la prise de RDV :** 
