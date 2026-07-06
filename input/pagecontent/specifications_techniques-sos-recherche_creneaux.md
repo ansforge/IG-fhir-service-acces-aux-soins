@@ -171,7 +171,7 @@ HTTP 200 OK
   Slot1 (include)
   Schedule1 (match)
   Location1 (include)
-  Organization1
+  Organization1 (include)
   Slot2 (include)
   Schedule2 (match)
   Location2 (include)
@@ -254,7 +254,7 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
   - **Créneau avec ou sans RDV :**
   - L'utilisation de la nomenclature standard AppointmentReasonCodes (<https://www.hl7.org/fhir/v2/0276/index.html>) est attendue. Cette nomenclature contient différentes notions, cependant, la plateforme numérique SAS gère les 2 valeurs ci-dessous :
     - ROUTINE – Créneau avec prise de RDV possible.
-    - WALKIN – Créneau sans prise de RDV possible
+    - WALKIN – Créneau sans prise de RDV possible</br>
     Seuls les créneaux avec prise de RDV `ROUTINE` sont attendus pour ce cas d'usage.   
 - **URL de redirection pour la prise de RDV :**
   - Il est attendu l'URL de redirection vers l'agenda du PS concerné. Si l'utilisateur vient du SAS et n'est pas authentifié, il est demandé de le rediriger vers la page d'authentification de la solution éditeur avant d'accéder à l'agenda du PS. Afin de faciliter l'implémentation de la règle métier, la PTF numérique SAS ajoute un paramètre `origin` à l'URL transmise par l'éditeur au moment de la redirection pour identifier la provenance.
