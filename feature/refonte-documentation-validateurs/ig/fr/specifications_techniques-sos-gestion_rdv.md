@@ -162,5 +162,5 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
 
 ### Validateur ressources
 
-Cf. ./validateurs.html
+Cf. [page dédiée](./validateurs.md)
 

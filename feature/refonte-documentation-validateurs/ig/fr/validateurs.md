@@ -10,9 +10,11 @@ Le validateur est disponible sur l'espace de test (plateforme Gazelle) de l'ANS 
 
 Pour effectuer la validation d'un fichier, il suffit de sélectionner le format `JSON`, d'ajouter le fichier via le bouton `Add…`, de sélectionner un validateur parmi la liste puis de cliquer sur `valider`.
 
+* **Figure 1 - Accès au validateur**: ![](validateur_creneaux-PS_1.png)
+
 Un rapport de test mettant en valeur les erreurs bloquantes et les différents warnings s'affichera :
 
-* **Figure 2 - Rapport validateur agrégateur de créneaux**: ![](validateur_creneaux-PS_2.png)
+* **Figure 2 - Rapport de validation**: ![](validateur_creneaux-PS_2.png)
 
 Pour que le validateur puisse effectuer correctement les contrôles au niveau de la structure, il est nécessaire que le fichier json contienne pour chacune des ressources, le meta.profile (URL canonique) correspondant.
 
