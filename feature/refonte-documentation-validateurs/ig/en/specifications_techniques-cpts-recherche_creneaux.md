@@ -158,40 +158,5 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
 
 ### Validateur ressources
 
-Le validateur mis à disposition des développeurs dans le cadre du projet SAS offre la possibilité de tester le format des bundles de réponse générés. Il permet de vérifier que les réponses sont correctement formatées, que l'ensemble des informations obligatoires sont bien présentes et que les données codifiées exploitent les bonnes nomenclatures. Pour que le validateur puisse effectuer correctement les contrôles au niveau de la structure, il est nécessaire de renseigner pour chacun des "resourceType" correspondant, le meta.profile "URL" ci-dessous :
-
-* https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-bundle-aggregator
-* https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator
-* http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur
-* http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur
-* http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur
-* http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur
-* https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-healthcareservice-aggregator
-* https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator
-
-**Note :**
- **Il y a actuellement des inconsistances dans les URLs canoniques des différents profils contenus dans ce guide, certaines URLs sont au format "http://sas.fr/fhir/…" et d'autres au format "https://interop.esante.gouv.fr/ig/fhir/sas/…". L'uniformisation n'a pas été effectuée pour cette release pour éviter les changements non rétrocompatibles. Ce changement sera à anticiper lors des prochaines releases.**
-
-Ci-dessous un exemple :
-
-```
-"id": "a079787b-a509-4a5f-8353-5e99b1c90cf3",
-"resourceType": "Bundle",
-"type": "searchset",
-"total": 1,
-"meta": {
-  "profile": [
-    "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-bundle-aggregator"
-  ]
-},
-
-```
-
-Le validateur est disponible sur l'espace de test de l'ANS : [https://interop.esante.gouv.fr/evs/fhir/validator.seam?standard=37](https://interop.esante.gouv.fr/evs/fhir/validator.seam?standard=37). Il est désormais nécessaire de s'authentifier afin d'accéder aux services de l'espace de tests. Afin de tester un fichier, il suffit de sélectionner le format `JSON`, d'ajouter le fichier via le bouton `Add…`, de sélectionner le modèle `BundleAgregateurCPTS` puis de cliquer sur `valider` :
-
-* **Figure 1 - Accès au validateur agrégateur de créneaux**: ![](validateur_creneaux-CPTS_1.png)
-
-Vous obtiendrez alors un rapport de test mettant en valeur les erreurs bloquantes et les différents warnings :
-
-* **Figure 2 - Rapport validateur agrégateur de créneaux**: ![](validateur_creneaux-CPTS_2.png)
+Cf. xxx
 

@@ -152,33 +152,5 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
 
 ### Validateur ressources
 
-Le validateur mis à disposition des développeurs dans le cadre du projet SAS offre la possibilité de tester le format des bundles de réponse générés. Il permet de vérifier que les réponses sont correctement formatées, que l'ensemble des informations obligatoires sont bien présentes et que les données codifiées exploitent les bonnes nomenclatures. Pour que le validateur puisse effectuer correctement les contrôles au niveau de la structure, il est nécessaire de renseigner pour chacun des "resourceType" correspondant, le meta.profile "URL" ci-dessous :
-
-* http://sas.fr/fhir/StructureDefinition/BundleAgregateur
-* http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur
-* http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur
-* http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur
-* http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur
-* http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur
-
-Ci-dessous un exemple :
-
-```
-"resourceType": "Bundle",
-"id": "8cbb33dc-779e-45e9-a5f6-ea66101288c5",
-"meta": {
-  "profile": [
-    "http://sas.fr/fhir/StructureDefinition/BundleAgregateur"
-  ]
-},
-
-```
-
-Le validateur est disponible sur l'espace de test de l'ANS : [https://interop.esante.gouv.fr/evs/fhir/validator.seam?standard=37](https://interop.esante.gouv.fr/evs/fhir/validator.seam?standard=37). Il est désormais nécessaire de s'authentifier afin d'accéder aux services de l'espace de tests. Afin de tester un fichier, il suffit de sélectionner le format `JSON`, d'ajouter le fichier via le bouton `Add…`, de sélectionner le modèle `FrBundleAgregateurSAS` puis de cliquer sur `valider` :
-
-* **Figure 1 - Accès au validateur agrégateur de créneaux**: ![](validateur_creneaux-PS_1.png)
-
-Vous obtiendrez alors un rapport de test mettant en valeur les erreurs bloquantes et les différents warnings :
-
-* **Figure 2 - Rapport validateur agrégateur de créneaux**: ![](validateur_creneaux-PS_2.png)
+Cf. xxx
 
