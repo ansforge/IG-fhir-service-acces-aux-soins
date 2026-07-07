@@ -6,6 +6,21 @@ Le validateur est disponible sur l'espace de test (plateforme Gazelle) de l'ANS 
 
 Pour effectuer la validation d'un fichier, il suffit de sélectionner le format `JSON`, d'ajouter le fichier via le bouton `Add…`, de sélectionner un validateur parmi la liste puis de cliquer sur `valider`.
 
+<table align="center">
+    <tr>
+        <td align ="center">
+            <div class="figure">
+                <img src="validateur_creneaux-PS_1.png" alt="Accès au validateur agrégateur de créneaux" title="Accès au validateur agrégateur de créneaux">
+            </div>
+        </td>    
+    </tr>
+    <tr>
+        <td align ="center">
+            <b>Figure 1 - Accès au validateur</b>
+        </td>
+    </tr>
+</table>
+
 Un rapport de test mettant en valeur les erreurs bloquantes et les différents warnings s'affichera :
 
 <table align="center">
@@ -18,7 +33,7 @@ Un rapport de test mettant en valeur les erreurs bloquantes et les différents w
     </tr>
     <tr>
         <td align ="center">
-            <b>Figure 2 - Rapport validateur agrégateur de créneaux</b>
+            <b>Figure 2 - Rapport de validation</b>
         </td>
     </tr>
 </table>

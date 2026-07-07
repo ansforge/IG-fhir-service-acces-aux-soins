@@ -245,4 +245,4 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
     - WALKIN – Créneau sans prise de RDV possible
 
 ### Validateur ressources
-Cf. xxx
+Cf. [page dédiée](./validateurs.html)
