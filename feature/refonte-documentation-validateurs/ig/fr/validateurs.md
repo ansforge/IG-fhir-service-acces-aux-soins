@@ -46,23 +46,23 @@ Tableau des validateurs à utiliser par cas d'usage
 
 | | | | |
 | :--- | :--- | :--- | :--- |
-| Agrégateur - PS indiv. | Bundle | FrBundleAgregateur | http://sas.fr/fhir/StructureDefinition/BundleAgregateur |
+| Agrégateur - PS indiv. | Bundle | BundleAgregateur | http://sas.fr/fhir/StructureDefinition/BundleAgregateur |
 | Agrégateur - PS indiv. | Slot | FrSlotAgregateur | http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur |
 | Agrégateur - PS indiv. | Schedule | FrScheduleAgregateur | http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur |
 | Agrégateur - PS indiv. | Practitioner | FrPractitionerAgregateur | http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur |
 | Agrégateur - PS indiv. | PractitionerRole | FrPractitionerRoleExerciceAgregateur | http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur |
 | Agrégateur - PS indiv. | Location | FrLocationAgregateur | http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur |
-| Agrégateur - CPTS | Bundle |   | https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-bundle-aggregator |
-| Agrégateur - CPTS | Slot |   | https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator |
+| Agrégateur - CPTS | Bundle | BundleAgregateurCPTS | https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-bundle-aggregator |
+| Agrégateur - CPTS | Slot | FrSlotAgregateurCPTS | https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator |
 | Agrégateur - CPTS | Schedule | FrScheduleAgregateur | http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur |
 | Agrégateur - CPTS | Practitioner | FrPractitionerAgregateur | http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur |
 | Agrégateur - CPTS | PractitionerRole | FrPractitionerRoleExerciceAgregateur | http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur |
 | Agrégateur - CPTS | Location | FrLocationAgregateur | http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur |
-| Agrégateur - CPTS | Healthcare Service |   | https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-healthcareservice-aggregator |
-| Agrégateur - CPTS | Organization |   | https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-organization-aggregator |
-| Agrégateur - SOS | Bundle |   | https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-bundle-aggregator |
-| Agrégateur - SOS | Slot |   | https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator |
-| Agrégateur - SOS | Schedule |   | https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator |
-| Agrégateur - SOS | Location |   | https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator |
-| Agrégateur - SOS | Organization |   | https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator |
+| Agrégateur - CPTS | Healthcare Service | FrHealthcareServiceAgregateurCPTS | https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-healthcareservice-aggregator |
+| Agrégateur - CPTS | Organization | FrOrganizationAgregateurCPTS | https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-organization-aggregator |
+| Agrégateur - SOS | Bundle | BundleAgregateurSOS | https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-bundle-aggregator |
+| Agrégateur - SOS | Slot | FrSlotAgregateurSOS | https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator |
+| Agrégateur - SOS | Schedule | FrScheduleAgregateurSOS | https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator |
+| Agrégateur - SOS | Location | FrLocationAgregateurSOS | https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator |
+| Agrégateur - SOS | Organization | FrOrganizationAgregateurSOS | https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator |
 

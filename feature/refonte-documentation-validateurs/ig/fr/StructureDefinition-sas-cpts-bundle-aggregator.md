@@ -109,7 +109,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-sas-cpts-bundle
   "version" : "1.2.0",
   "name" : "BundleAgregateurCPTS",
   "status" : "active",
-  "date" : "2026-07-07T12:24:20+00:00",
+  "date" : "2026-07-08T16:00:07+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
