@@ -191,6 +191,7 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
     - Type d'identifiant (ID 6) : le champ type.coding.code est valorisé à `INTRN` et `type.coding.system` à `http://interopsante.org/fhir/CodeSystem/fr-v2-0203`.
 - **Statut du RDV :**
   - L'utilisation de la nomenclature standard AppointmentStatus (<http://hl7.org/fhir/appointmentstatus>) est attendue. La plateforme numérique SAS exploite à date les valeurs suivantes :
+    - PENDING : RDV en attente de confirmation
     - BOOKED : RDV pris et confirmé
     - FULFILLED : RDV honoré
     - NOSHOW : RDV non honoré
