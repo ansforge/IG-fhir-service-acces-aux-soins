@@ -176,6 +176,9 @@
         <a href="faq.html">FAQ</a>
       </li>
       <li>
+        <a href="validateurs.html">Validateurs</a>
+      </li>
+      <li>
         <a href="acronymes.html">Acronymes</a>
       </li>
       <li>
@@ -591,63 +594,7 @@ HTTP 200 OK
 </ul>
 
 <h3 id="validateur-ressources">Validateur ressources</h3>
-<p>Le validateur mis à disposition des développeurs dans le cadre du projet SAS offre la possibilité de tester le format des bundles de réponse générés. Il permet de vérifier que les réponses sont correctement formatées, que l'ensemble des informations obligatoires sont bien présentes et que les données codifiées exploitent les bonnes nomenclatures.
-Pour que le validateur puisse effectuer correctement les contrôles au niveau de la structure, il est nécessaire de renseigner pour chacun des "resourceType" correspondant, le meta.profile "URL" ci-dessous :</p>
-<ul>
-  <li>http://sas.fr/fhir/StructureDefinition/BundleAgregateur</li>
-  <li>http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur</li>
-  <li>http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur</li>
-  <li>http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur</li>
-  <li>http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur</li>
-  <li>http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur</li>
-</ul>
-
-<p>Ci-dessous un exemple :</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"resourceType": "Bundle",
-"id": "8cbb33dc-779e-45e9-a5f6-ea66101288c5",
-"meta": {
-  "profile": [
-    "http://sas.fr/fhir/StructureDefinition/BundleAgregateur"
-  ]
-},
-</code></pre></div></div>
-
-<p>Le validateur est disponible sur l'espace de test de l'ANS : <a href="https://interop.esante.gouv.fr/evs/fhir/validator.seam?standard=37">https://interop.esante.gouv.fr/evs/fhir/validator.seam?standard=37</a>.  Il est désormais nécessaire de s'authentifier afin d'accéder aux services de l'espace de tests. 
-Afin de tester un fichier, il suffit de sélectionner le format <code class="language-plaintext highlighter-rouge">JSON</code>, d'ajouter le fichier via le bouton <code class="language-plaintext highlighter-rouge">Add…</code>, de sélectionner le modèle <code class="language-plaintext highlighter-rouge">FrBundleAgregateurSAS</code> puis de cliquer sur <code class="language-plaintext highlighter-rouge">valider</code> :</p>
-
-<table align="center">
-    <tr>
-        <td align="center">
-            <div class="figure">
-                <img src="validateur_creneaux-PS_1.png" alt="Accès au validateur agrégateur de créneaux" title="Accès au validateur agrégateur de créneaux" />
-            </div>
-        </td>    
-    </tr>
-    <tr>
-        <td align="center">
-            <b>Figure 1 - Accès au validateur agrégateur de créneaux</b>
-        </td>
-    </tr>
-</table>
-
-<p>Vous obtiendrez alors un rapport de test mettant en valeur les erreurs bloquantes et les différents warnings :</p>
-
-<table align="center">
-    <tr>
-        <td align="center">
-            <div class="figure">
-                <img src="validateur_creneaux-PS_2.png" alt="Rapport validateur agrégateur de créneaux" title="Rapport validateur agrégateur de créneaux" />
-            </div>
-        </td>    
-    </tr>
-    <tr>
-        <td align="center">
-            <b>Figure 2 - Rapport validateur agrégateur de créneaux</b>
-        </td>
-    </tr>
-</table>
-<p><br /><br /></p>
+<p>Cf. <a href="./validateurs.html">page dédiée</a></p>
 
 
 
@@ -697,8 +644,8 @@ Afin de tester un fichier, il suffit de sélectionner le format <code class="lan
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Package ans.fhir.fr.sas#1.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-07-06 15:16:00 +0000">
-    2026-07-06
+  <span title="2026-07-09 08:50:00 +0000">
+    2026-07-09
   </span>
 
           <br/>

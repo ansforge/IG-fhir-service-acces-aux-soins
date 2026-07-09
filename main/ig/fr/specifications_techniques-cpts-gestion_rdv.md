@@ -162,28 +162,5 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
 
 ### Validateur ressources
 
-Un validateur mis à disposition des développeurs dans le cadre du projet SAS offre la possibilité de tester le format des requêtes POST et PUT à générer. Il permet de vérifier que les requêtes sont correctement formatées, que l'ensemble des informations obligatoires sont bien présentes et que les données codifiées exploitent les bonnes nomenclatures. Pour que le validateur puisse effectuer correctement les contrôles au niveau de la structure, il est nécessaire de renseigner pour le resourceType `Appointment`, le meta.profile `URL` ci-après :
-
-* http://sas.fr/fhir/StructureDefinition/FrAppointmentSAS
-
-Ci-dessous un exemple :
-
-```
-"resourceType": "Appointment",
-"id": "1",
-"meta": {
-  "profile": [
-    "http://interopsante.org/fhir/StructureDefinition/FrAppointmentSAS"
-  ]
-},
-
-```
-
-Le validateur est disponible sur l'espace de test de l'ANS : [https://interop.esante.gouv.fr/EVSClient/fhir/validator.seam?extension=SAS&standard=FHIR+%28SAS%29&type=FHIR&cid=750](https://interop.esante.gouv.fr/EVSClient/fhir/validator.seam?extension=SAS&standard=FHIR+%28SAS%29&type=FHIR&cid=750). Il est désormais nécessaire de s'authentifier afin d'accéder aux services de l'espace de tests. Afin de tester un fichier, il suffit de sélectionner le format `JSON`, d’ajouter le fichier via le bouton `Add…`, de sélectionner le modèle `FrAppointmentSAS` puis de cliquer sur `valider` :
-
-* **Figure 3 - Accès au validateur rendez-vous**: ![](validateur_rendez_vous_1.png)
-
-Vous obtiendrez alors un rapport de test mettant en valeur les erreurs bloquantes et les différents warning :
-
-* **Figure 4 - Rapport validateur rendez-vous**: ![](validateur_rendez_vous_2.png)
+Cf. [page dédiée](./validateurs.md)
 
