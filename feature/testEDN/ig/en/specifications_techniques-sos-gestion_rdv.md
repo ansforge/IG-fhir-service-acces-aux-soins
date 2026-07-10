@@ -1,6 +1,6 @@
-# SOS Médecins - Gestion de rendez-vous - Service d'Accès aux Soins v1.2.0
+# SOS Médecins - Gestion des rendez-vous pris - Service d'Accès aux Soins v1.2.0
 
-## SOS Médecins - Gestion de rendez-vous
+## SOS Médecins - Gestion des rendez-vous pris
 
  
 There is no translation page available for the current page, so it has been rendered in the default language 
@@ -146,6 +146,7 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
  
 * **Statut du RDV :** 
 * L'utilisation de la nomenclature standard AppointmentStatus ([http://hl7.org/fhir/appointmentstatus](http://hl7.org/fhir/appointmentstatus)) est attendue. La plateforme numérique SAS exploite à date les valeurs suivantes : 
+* PENDING : RDV en attente de confirmation
 * BOOKED : RDV pris et confirmé
 * FULFILLED : RDV honoré
 * NOSHOW : RDV non honoré

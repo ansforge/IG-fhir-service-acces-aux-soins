@@ -34,7 +34,7 @@ Other representations of profile: [CSV](../StructureDefinition-sas-sos-schedule-
   "version" : "1.2.0",
   "name" : "FrScheduleAgregateurSOS",
   "status" : "active",
-  "date" : "2026-07-10T07:56:32+00:00",
+  "date" : "2026-07-10T08:06:49+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

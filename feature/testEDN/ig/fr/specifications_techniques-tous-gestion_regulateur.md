@@ -1,6 +1,6 @@
-# CPTS - Gestion des comptes régulateurs - Service d'Accès aux Soins v1.2.0
+# Gestion des comptes régulateurs - Service d'Accès aux Soins v1.2.0
 
-## CPTS - Gestion des comptes régulateurs
+## Gestion des comptes régulateurs
 
 ### Caractéristiques de l'API
 

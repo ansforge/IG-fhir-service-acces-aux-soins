@@ -14,7 +14,7 @@
   "name" : "SAS",
   "title" : "Service d'Accès aux Soins",
   "status" : "active",
-  "date" : "2026-07-10T07:56:32+00:00",
+  "date" : "2026-07-10T08:06:49+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -1790,24 +1790,6 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "specifications_techniques-ps-gestion_regulateur.html"
-        }],
-        "nameUrl" : "specifications_techniques-ps-gestion_regulateur.html",
-        "title" : "PS indiv. - Gestion des comptes régulateurs",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "specifications_techniques-ps-gestion_rdv.html"
-        }],
-        "nameUrl" : "specifications_techniques-ps-gestion_rdv.html",
-        "title" : "PS indiv. - Gestion de rendez-vous",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
           "valueUrl" : "specifications_techniques-cpts-recherche_creneaux.html"
         }],
         "nameUrl" : "specifications_techniques-cpts-recherche_creneaux.html",
@@ -1817,19 +1799,19 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "specifications_techniques-cpts-gestion_regulateur.html"
+          "valueUrl" : "specifications_techniques-tous-gestion_regulateur.html"
         }],
-        "nameUrl" : "specifications_techniques-cpts-gestion_regulateur.html",
-        "title" : "CPTS - Gestion des comptes régulateurs",
+        "nameUrl" : "specifications_techniques-tous-gestion_regulateur.html",
+        "title" : "Gestion des comptes régulateurs",
         "generation" : "markdown"
       },
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "specifications_techniques-cpts-gestion_rdv.html"
+          "valueUrl" : "specifications_techniques-ps-cpts-gestion_rdv.html"
         }],
-        "nameUrl" : "specifications_techniques-cpts-gestion_rdv.html",
-        "title" : "CPTS - Gestion de rendez-vous",
+        "nameUrl" : "specifications_techniques-ps-cpts-gestion_rdv.html",
+        "title" : "PS indiv./CPTS - Gestion des rendez-vous pris",
         "generation" : "markdown"
       },
       {
@@ -1844,19 +1826,10 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "specifications_techniques-sos-gestion_regulateur.html"
-        }],
-        "nameUrl" : "specifications_techniques-sos-gestion_regulateur.html",
-        "title" : "SOS Médecins - Gestion des comptes régulateurs",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
           "valueUrl" : "specifications_techniques-sos-gestion_rdv.html"
         }],
         "nameUrl" : "specifications_techniques-sos-gestion_rdv.html",
-        "title" : "SOS Médecins - Gestion de rendez-vous",
+        "title" : "SOS Médecins - Gestion des rendez-vous pris",
         "generation" : "markdown"
       },
       {

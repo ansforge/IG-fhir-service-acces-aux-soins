@@ -1,6 +1,9 @@
-# SOS Médecins - Gestion des comptes régulateurs - Service d'Accès aux Soins v1.2.0
+# Gestion des comptes régulateurs - Service d'Accès aux Soins v1.2.0
 
-## SOS Médecins - Gestion des comptes régulateurs
+## Gestion des comptes régulateurs
+
+ 
+There is no translation page available for the current page, so it has been rendered in the default language 
 
 ### Caractéristiques de l'API
 

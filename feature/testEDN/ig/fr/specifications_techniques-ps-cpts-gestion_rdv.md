@@ -1,6 +1,6 @@
-# PS indiv. - Gestion de rendez-vous - Service d'Accès aux Soins v1.2.0
+# PS indiv./CPTS - Gestion des rendez-vous pris - Service d'Accès aux Soins v1.2.0
 
-## PS indiv. - Gestion de rendez-vous
+## PS indiv./CPTS - Gestion des rendez-vous pris
 
 ### Caractéristiques de l'API
 
@@ -143,6 +143,7 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
  
 * **Statut du RDV :** 
 * L'utilisation de la nomenclature standard AppointmentStatus ([http://hl7.org/fhir/appointmentstatus](http://hl7.org/fhir/appointmentstatus)) est attendue. La plateforme numérique SAS exploite à date les valeurs suivantes : 
+* PENDING : RDV en attente de confirmation
 * BOOKED : RDV pris et confirmé
 * FULFILLED : RDV honoré
 * NOSHOW : RDV non honoré
