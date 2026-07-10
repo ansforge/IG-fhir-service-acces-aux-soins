@@ -15,6 +15,7 @@ Description: "Profil de Slot, dérivé de FrSlot, pour le service d’agrégatio
 * identifier 1..1
 * identifier.system 1..
 * identifier.value 1..
+* status from sas-valueset-appointment-status
 * start 1..
 * end 1..
 * created MS
