@@ -1,13 +1,13 @@
 SAS : Validation Results
 =========================================
 
-err = 21, warn = 121, info = 206
+err = 21, warn = 122, info = 214
 IG Publisher Version: 2.2.10
-Generated Thu Jul 09 14:25:43 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.sas#1.2.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/sas)
+Generated Fri Jul 10 07:59:07 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.sas#1.2.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/sas)
  Build Errors : 0 / 18 / 2
- /__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Appointment-1 : 0 / 3 / 4
- /__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Appointment-12345678 : 0 / 2 / 4
- /__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Appointment-2 : 0 / 3 / 4
+ /__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Appointment-1 : 0 / 3 / 5
+ /__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Appointment-12345678 : 0 / 2 / 5
+ /__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Appointment-2 : 0 / 3 / 5
  /__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundleAgregateurSOS : 0 / 6 / 47
  /__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundleCPTS1 : 0 / 5 / 27
  /__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Bundle-ExampleBundleCPTS2 : 0 / 7 / 32
@@ -86,6 +86,7 @@ Generated Thu Jul 09 14:25:43 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.sas#1
  /__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/ValueSet-categorie-orientation-sas-valueset : 0 / 1 / 1
  /__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/ValueSet-sas-cpts-valueset-typecreneau : 0 / 1 / 3
  /__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/ValueSet-sas-sos-valueset-typecreneau : 0 / 1 / 1
+ /__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/ValueSet-sas-valueset-appointment-status : 0 / 1 / 6
  /__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/ValueSet-sas-valueset-appointmentparticipanttype : 0 / 1 / 1
  /__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/ValueSet-sas-valueset-appointmentreason : 0 / 1 / 3
  /__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/ValueSet-sas-valueset-categorieetablissement : 0 / 1 / 1
@@ -118,6 +119,7 @@ WARNING: 5: An HTML fragment from the set [expansion-params.xhtml, expansion-par
 INFORMATION: Appointment/1: Appointment.extension[0].value.ofType(Reference).identifier.type: Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-v2-0203|1.0.1
 WARNING: Appointment/1: Appointment.extension[0].value.ofType(Reference).identifier.system: No definition could be found for URL value 'urn:oid:1.2.250.1.71.4.2.1'
 WARNING: Appointment/1: Appointment.identifier[0].system: No definition could be found for URL value 'urn:oid:1.1.111.1.11.1.1.1'
+INFORMATION: Appointment/1: Appointment.status: Reference to draft CodeSystem http://hl7.org/fhir/appointmentstatus|4.0.1
 INFORMATION: Appointment/1: Appointment.participant[0].actor.identifier.type: Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-v2-0203|1.0.1
 WARNING: Appointment/1: Appointment.participant[0].actor.identifier.system: No definition could be found for URL value 'urn:oid:1.2.250.1.71.4.2.1'
 INFORMATION: Appointment/1: Appointment.participant[0].status: Reference to draft CodeSystem http://hl7.org/fhir/participationstatus|4.0.1
@@ -126,11 +128,13 @@ INFORMATION: Appointment/12345678: Appointment.extension[0].value.ofType(Referen
 WARNING: Appointment/12345678: Appointment.extension[0].value.ofType(Reference).identifier.system: No definition could be found for URL value 'urn:oid:1.2.250.1.71.4.2.1'
 INFORMATION: Appointment/12345678: Appointment.extension[0].value.ofType(Reference).identifier.type.coding[0]: Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-v2-0203|1.0.1
 WARNING: Appointment/12345678: Appointment.identifier[0].system: No definition could be found for URL value 'urn:oid:1.1.111.1.11.1.1.1'
+INFORMATION: Appointment/12345678: Appointment.status: Reference to draft CodeSystem http://hl7.org/fhir/appointmentstatus|4.0.1
 INFORMATION: Appointment/12345678: Appointment.participant[0].status: Reference to draft CodeSystem http://hl7.org/fhir/participationstatus|4.0.1
 == fsh-generated/resources/Appointment-2.json ==
 INFORMATION: Appointment/2: Appointment.extension[0].value.ofType(Reference).identifier.type: Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-v2-0203|1.0.1
 WARNING: Appointment/2: Appointment.extension[0].value.ofType(Reference).identifier.system: No definition could be found for URL value 'urn:oid:1.2.250.1.71.4.2.1'
 WARNING: Appointment/2: Appointment.identifier[0].system: No definition could be found for URL value 'urn:oid:1.1.111.1.11.1.1.1'
+INFORMATION: Appointment/2: Appointment.status: Reference to draft CodeSystem http://hl7.org/fhir/appointmentstatus|4.0.1
 INFORMATION: Appointment/2: Appointment.participant[0].actor.identifier.type: Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-v2-0203|1.0.1
 WARNING: Appointment/2: Appointment.participant[0].actor.identifier.system: No definition could be found for URL value 'urn:oid:1.2.250.1.71.4.2.1'
 INFORMATION: Appointment/2: Appointment.participant[0].status: Reference to draft CodeSystem http://hl7.org/fhir/participationstatus|4.0.1
@@ -377,7 +381,7 @@ INFORMATION: StructureDefinition/FrAppointmentSAS: StructureDefinition.snapshot.
 INFORMATION: StructureDefinition/FrAppointmentSAS: StructureDefinition.snapshot.element[89].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 INFORMATION: StructureDefinition/FrAppointmentSAS: StructureDefinition.snapshot.element[94].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 INFORMATION: StructureDefinition/FrAppointmentSAS: StructureDefinition.snapshot.element[95].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
-INFORMATION: StructureDefinition/FrAppointmentSAS: StructureDefinition.differential.element[20].pattern.ofType(Coding): Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-v2-0203|1.0.1
+INFORMATION: StructureDefinition/FrAppointmentSAS: StructureDefinition.differential.element[21].pattern.ofType(Coding): Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-v2-0203|1.0.1
 INFORMATION: Resource: The resource StructureDefinition/FrAppointmentSAS could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 ERROR: /__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/StructureDefinition-FrAppointmentSAS: URL Mismatch https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrAppointmentSAS vs http://sas.fr/fhir/StructureDefinition/FrAppointmentSAS
 == fsh-generated/resources/StructureDefinition-FrLocationAgregateur.json ==
@@ -508,6 +512,13 @@ INFORMATION: ValueSet/sas-cpts-valueset-typecreneau: ValueSet.compose.include[0]
 WARNING: Resource: The resource ValueSet/sas-cpts-valueset-typecreneau should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/ValueSet-sas-sos-valueset-typecreneau.json ==
 WARNING: Resource: The resource ValueSet/sas-sos-valueset-typecreneau should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/ValueSet-sas-valueset-appointment-status.json ==
+INFORMATION: ValueSet/sas-valueset-appointment-status: ValueSet.compose.include[0].concept[0]: Reference to draft CodeSystem http://hl7.org/fhir/appointmentstatus|4.0.1
+INFORMATION: ValueSet/sas-valueset-appointment-status: ValueSet.compose.include[0].concept[1]: Reference to draft CodeSystem http://hl7.org/fhir/appointmentstatus|4.0.1
+INFORMATION: ValueSet/sas-valueset-appointment-status: ValueSet.compose.include[0].concept[2]: Reference to draft CodeSystem http://hl7.org/fhir/appointmentstatus|4.0.1
+INFORMATION: ValueSet/sas-valueset-appointment-status: ValueSet.compose.include[0].concept[3]: Reference to draft CodeSystem http://hl7.org/fhir/appointmentstatus|4.0.1
+INFORMATION: ValueSet/sas-valueset-appointment-status: ValueSet.compose.include[0].concept[4]: Reference to draft CodeSystem http://hl7.org/fhir/appointmentstatus|4.0.1
+WARNING: Resource: The resource ValueSet/sas-valueset-appointment-status should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/ValueSet-sas-valueset-appointmentparticipanttype.json ==
 WARNING: Resource: The resource ValueSet/sas-valueset-appointmentparticipanttype should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/ValueSet-sas-valueset-appointmentreason.json ==

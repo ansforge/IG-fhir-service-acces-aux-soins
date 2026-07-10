@@ -11,7 +11,7 @@
   <name value="SAS"/>
   <title value="Service d'Accès aux Soins"/>
   <status value="active"/>
-  <date value="2026-07-09T14:22:57+00:00"/>
+  <date value="2026-07-10T07:56:32+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -1413,6 +1413,17 @@
       </reference>
       <name value="Statut participant RDV SAS"/>
       <description value="Statut du participant RDV SAS"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/sas-valueset-appointment-status"/>
+      </reference>
+      <name value="Statut RDV SAS"/>
+      <description value="Etat du RDV SAS"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

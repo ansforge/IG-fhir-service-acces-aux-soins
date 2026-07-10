@@ -11,7 +11,7 @@
   "name" : "SAS",
   "title" : "Service d'Accès aux Soins",
   "status" : "active",
-  "date" : "2026-07-09T14:22:57+00:00",
+  "date" : "2026-07-10T07:56:32+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -1675,6 +1675,18 @@
       },
       "name" : "Statut participant RDV SAS",
       "description" : "Statut du participant RDV SAS",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/sas-valueset-appointment-status"
+      },
+      "name" : "Statut RDV SAS",
+      "description" : "Etat du RDV SAS",
       "exampleBoolean" : false
     },
     {

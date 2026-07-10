@@ -18,7 +18,7 @@
   fhir:ImplementationGuide.name [ fhir:value "SAS"] ;
   fhir:ImplementationGuide.title [ fhir:value "Service d'Accès aux Soins"] ;
   fhir:ImplementationGuide.status [ fhir:value "active"] ;
-  fhir:ImplementationGuide.date [ fhir:value "2026-07-09T14:22:57+00:00"^^xsd:dateTime] ;
+  fhir:ImplementationGuide.date [ fhir:value "2026-07-10T07:56:32+00:00"^^xsd:dateTime] ;
   fhir:ImplementationGuide.publisher [ fhir:value "ANS"] ;
   fhir:ImplementationGuide.contact [
      fhir:index -1 ;
@@ -2059,6 +2059,20 @@
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Statut participant RDV SAS" ] ;
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Statut du participant RDV SAS" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-appointment-status> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/sas-valueset-appointment-status" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Statut RDV SAS" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Etat du RDV SAS" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index -1 ;

@@ -210,7 +210,7 @@ ref-1:SHALL have a contained resource if a local reference is provided {referenc
 "Appointment.status","Appointment.status","","","",1,1,"","Y","Y","code {[]} {[]}
 ","proposed | pending | booked | arrived | fulfilled | cancelled | noshow | entered-in-error | checked-in | waitlist","The overall status of the Appointment. Each of the participants has their own participation status which indicates their involvement in the process, however this status indicates the shared status.","If the Appointment's status is ""cancelled"" then all participants are expected to have their calendars released for the appointment period, and as such any Slots that were marked as BUSY can be re-set to FREE.
 
-This element is labeled as a modifier because the status contains the code entered-in-error that mark the Appointment as not currently valid.","","","","","","","","",,"required","The free/busy status of an appointment.","http://hl7.org/fhir/ValueSet/appointmentstatus","",,,,"Appointment.status",1,1,"ele-1
+This element is labeled as a modifier because the status contains the code entered-in-error that mark the Appointment as not currently valid.","","","","","","","","",,"required","","https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-appointment-status","",,,,"Appointment.status",1,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Appointment.cancelationReason","Appointment.cancelationReason","","","",0,1,"","","Y","CodeableConcept {[]} {[]}
