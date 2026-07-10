@@ -247,6 +247,14 @@
   ] ;
   fhir:PractitionerRole.organization [
      fhir:Reference.identifier [
+       fhir:Identifier.type [
+         fhir:CodeableConcept.coding [
+           fhir:index -1 ;
+           fhir:Coding.system [ fhir:value "http://interopsante.org/fhir/CodeSystem/fr-v2-0203" ] ;
+           fhir:Coding.code [ fhir:value "IDNST" ]
+         ]
+       ] ;
+       fhir:Identifier.system [ fhir:value "urn:oid:1.2.250.1.71.4.2.2" ] ;
        fhir:Identifier.value [ fhir:value "412345678912345" ]
      ]
   ] ;
