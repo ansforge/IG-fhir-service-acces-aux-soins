@@ -22,6 +22,7 @@ Description: "Profil de Appointment, dérivé de FrAppointment, pour le cas d'us
 * identifier 1..1
 * identifier.system 1..
 * identifier.value 1..
+* status from sas-valueset-appointment-status (required)
 * start 1..
 * end 1..
 * created MS
