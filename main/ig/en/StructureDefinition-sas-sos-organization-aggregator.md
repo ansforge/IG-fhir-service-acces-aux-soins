@@ -34,7 +34,7 @@ Other representations of profile: [CSV](../StructureDefinition-sas-sos-organizat
   "version" : "1.2.0",
   "name" : "FrOrganizationAgregateurSOS",
   "status" : "active",
-  "date" : "2026-07-09T08:50:24+00:00",
+  "date" : "2026-07-10T14:30:27+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
