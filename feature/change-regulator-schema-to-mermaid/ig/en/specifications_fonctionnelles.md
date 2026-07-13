@@ -86,8 +86,6 @@ Dans le cas où un créneau CPTS est transmis, la transmission de l’informatio
 Le schéma ci-dessous présente une synthèse de la structure attendue :
 
 
-mecanisme_transmission_regulateurs.svg
-
 ##### SOS Médecins
 
 La structure de réponse attendue inclut l’ensemble des créneaux de consultation disponibles correspondant à la requête réalisée par la plateforme numérique SAS. 1 à n créneaux de consultation (Slot) peuvent être rattachés à 1 agenda (Schedule) qui représente 1 lieu fixe de consultation (Location), lui-même rattaché à 1 association SOS Médecins (Organization). Si des créneaux de consultation sont proposés pour plusieurs LFC, on aura autant d’agendas (Schedule) que de LFC (Location).
@@ -116,7 +114,7 @@ Afin de limiter le nombre d’appels émis vers les solutions logicielles édite
 * Pour la création ou modification de compte, le déclenchement de la requête est lié à la connexion de l’utilisateur à la plateforme numérique SAS. Lors de la connexion du régulateur, un contrôle est effectué afin d’identifier si des actions sont à mener dans les solutions logicielles éditeurs. Dans le cas où des solutions sont identifiées, les requêtes correspondantes sont émises et l’état du compte est mis à jour dans la plateforme numérique SAS.
 * Pour la suppression ou retrait d’habilitation uniquement, le déclenchement de la requête est émis instantanément. Le schéma ci-dessous illustre les éléments décrits ci-dessus :
 
-%%{init: { "theme": "base", "themeVariables": { "fontFamily": "futura-pt, Arial, sans-serif", "fontSize": "12px" } }}%% flowchart TB GEST([👤
+%%{init: { "theme": "base", "themeVariables": { "fontFamily": "verdana", "fontSize": "12px" } }}%% flowchart TB GEST([👤
 
 Gestionnaire]) REG([👤
 
