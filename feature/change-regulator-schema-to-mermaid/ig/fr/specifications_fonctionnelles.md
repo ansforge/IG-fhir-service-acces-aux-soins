@@ -111,174 +111,54 @@ Afin de limiter le nombre d’appels émis vers les solutions logicielles édite
 * Pour la création ou modification de compte, le déclenchement de la requête est lié à la connexion de l’utilisateur à la plateforme numérique SAS. Lors de la connexion du régulateur, un contrôle est effectué afin d’identifier si des actions sont à mener dans les solutions logicielles éditeurs. Dans le cas où des solutions sont identifiées, les requêtes correspondantes sont émises et l’état du compte est mis à jour dans la plateforme numérique SAS.
 * Pour la suppression ou retrait d’habilitation uniquement, le déclenchement de la requête est émis instantanément. Le schéma ci-dessous illustre les éléments décrits ci-dessus :
 
-```
-flowchart TB
- 
-%% Acteurs
-GEST([👤<br/>Gestionnaire])
-REG([👤<br/>Régulateur])
- 
-%% Nœuds
-SUP["Suppression ou retrait<br/>d'habilitation d'un<br/>compte régulateur"]
- 
-CON["Connexion à la PTF<br/>numérique SAS"]
- 
-CTRL{"Contrôle si des<br/>actions sont à mener"}
- 
-REQ["Envoi d'une requête POST<br/>ou PUT aux solutions<br/>logicielles concernées"]
- 
-TRAIT["Traitement de la requête<br/>et envoi de la réponse à<br/>la PTF numérique SAS"]
- 
-REP{"Traitement de<br/>la réponse"}
- 
-RIEN["Pas d'action"]
- 
-MAJ["Mise à jour de<br/>l'état du compte"]
-GEST --> SUP
-REG --> CON
- 
-%% Flux principal
-CON --> CTRL
- 
-CTRL -->|Oui| REQ
-CTRL -->|Non| RIEN
- 
-SUP --> REQ
- 
-REQ --> TRAIT
- 
-TRAIT --> REP
- 
-REP -->|OK| MAJ
-REP -->|KO| RIEN
- 
-%% Légende
-subgraph LEG["Légende"]
-    direction TB
-    L1["Action SAS"]
-    L2["Action éditeur"]
-end
- 
-%%
-MAJ ~~~ L1
- 
-%% Styles
-classDef sas fill:#ffffff,stroke:#000000,stroke-width:2px,color:#000;
-classDef editeur fill:#FFE4B5,stroke:#F4A62A,stroke-width:2px,color:#000;
- 
-%%
-class CON,SUP,REQ,CTRL,REP,RIEN,MAJ,L1 sas;
- 
-%% Action éditeur
-class TRAIT,L2 editeur;
+Worflowregulateur.svg" />
 
-```
+```mermaid %%{init: { "theme": "base", "themeVariables": { "fontFamily": futura-pt, Arial, sans-serif", "fontSize": "14px" } }}%% flowchart TB GEST([👤
 
-**Autres règles de gestion fonctionnelles à prendre en compte par les éditeurs :**
+Gestionnaire]) REG([👤
 
-* A la création du compte, ne pas avoir d’étape « vérification du mail » ni de mail de confirmation de création de compte
-* L’ANS et l’éditeur conviendront du fonctionnement attendu pour la génération d’un mot de passe suite à la création du compte. L’attendu est de générer un mot de passe de manière automatisée (réinitialisable via la fonctionnalité « mot de passe oublié »)
-* La solution logicielle éditeur devra proposer un niveau d’habilitation dédié aux régulateurs et répondant aux besoins de la plateforme numérique SAS. L’utilisateur ne doit pouvoir en disposer que lorsqu’il se connecte via la plateforme numérique SAS (présence du paramètre origin=sas lors de la redirection). Si l’utilisateur se connecte par un autre biais, les fonctionnalités associées à cette habilitation ne doivent pas être disponibles
-* Lors de la première connexion, à la suite de la création du compte, le régulateur devra souscrire et valider individuellement les conditions contractuelles de l’éditeur préalablement transmises (CGU)
-* Il est attendu pour les éditeurs ayant implémenté le flux INT_R01 d’agrégation des créneaux de disponibilités, de réutiliser le endpoint et la sécurisation mTLS associée pour le flux INT_R02 de gestion des comptes régulateurs
-* Certains régulateurs n’ayant pas encore d’identifiant national à date, il est attendu que l’éditeur soit en mesure de gérer les comptes soit sur la base de l’identifiant national ou de l’identifiant technique SAS selon ce qui est transmis par la plateforme numérique SAS
+Régulateur]) SUP["Suppression ou retrait
 
-### Délégation d'authentification
+d'habilitation d'un
 
-L’objectif de cette interface, **flux INT_SSO**, est de permettre à l’utilisateur de ne pas avoir à se réauthentifier d’une solution logicielle à l’autre et ainsi fluidifier le parcours utilisateur. Le but étant pour les solutions logicielles éditeurs de déléguer l’authentification à la plateforme numérique SAS.
+compte régulateur"] CON["Connexion à la PTF
 
-Le schéma de présentation générale ci-dessous illustre le cas d'usage :
+numérique SAS"] CTRL{"Contrôle si des
+
+actions sont à mener"} REQ["Envoi d'une requête POST
+
+ou PUT aux solutions
+
+logicielles concernées"] TRAIT["Traitement de la requête
+
+et envoi de la réponse à
+
+la PTF numérique SAS"] REP{"Traitement de
+
+la réponse"} RIEN["Pas d'action"] MAJ["Mise à jour de
+
+l'état du compte"] GEST --> SUP REG --> CON CON --> CTRL CTRL -->|Oui| REQ CTRL -->|Non| RIEN SUP --> REQ REQ --> TRAIT TRAIT --> REP REP -->|OK| MAJ REP -->|KO| RIEN subgraph LEG["Légende"] direction TB L1["Action SAS"] L2["Action éditeur"] end MAJ ~~~ L1 %% Styles classDef sas fill:#ffffff,stroke:#000000,stroke-width:2px,color:#000; classDef editeur fill:#FFE4B5,stroke:#F4A62A,stroke-width:2px,color:#000; class CON,SUP,REQ,CTRL,REP,RIEN,MAJ,L1 sas; class TRAIT,L2 editeur; ``` **Autres règles de gestion fonctionnelles à prendre en compte par les éditeurs :** - A la création du compte, ne pas avoir d’étape « vérification du mail » ni de mail de confirmation de création de compte - L’ANS et l’éditeur conviendront du fonctionnement attendu pour la génération d’un mot de passe suite à la création du compte. L’attendu est de générer un mot de passe de manière automatisée (réinitialisable via la fonctionnalité « mot de passe oublié ») - La solution logicielle éditeur devra proposer un niveau d’habilitation dédié aux régulateurs et répondant aux besoins de la plateforme numérique SAS. L’utilisateur ne doit pouvoir en disposer que lorsqu’il se connecte via la plateforme numérique SAS (présence du paramètre origin=sas lors de la redirection). Si l’utilisateur se connecte par un autre biais, les fonctionnalités associées à cette habilitation ne doivent pas être disponibles - Lors de la première connexion, à la suite de la création du compte, le régulateur devra souscrire et valider individuellement les conditions contractuelles de l’éditeur préalablement transmises (CGU) - Il est attendu pour les éditeurs ayant implémenté le flux INT_R01 d’agrégation des créneaux de disponibilités, de réutiliser le endpoint et la sécurisation mTLS associée pour le flux INT_R02 de gestion des comptes régulateurs - Certains régulateurs n’ayant pas encore d’identifiant national à date, il est attendu que l’éditeur soit en mesure de gérer les comptes soit sur la base de l’identifiant national ou de l’identifiant technique SAS selon ce qui est transmis par la plateforme numérique SAS ### Délégation d'authentification L’objectif de cette interface, **flux INT_SSO**, est de permettre à l’utilisateur de ne pas avoir à se réauthentifier d’une solution logicielle à l’autre et ainsi fluidifier le parcours utilisateur. Le but étant pour les solutions logicielles éditeurs de déléguer l’authentification à la plateforme numérique SAS. Le schéma de présentation générale ci-dessous illustre le cas d'usage :
 
 * **Délégation d'authentification**: ![](SSO.png)
 
-Après avoir agrégé les créneaux de disponibilités à la suite d’une recherche d’offre de santé, le régulateur sélectionne un créneau et est redirigé vers la plateforme de prise de RDV éditeur sans avoir à se réauthentifier. Dans la solution logicielle éditeur, le régulateur va pouvoir ensuite prendre RDV pour le patient. Au moment de la redirection, la solution logicielle éditeur va contrôler la provenance de l’utilisateur (paramètre « origin » ajouté à l’URL de redirection) et si celui-ci n’est pas authentifié, déléguer l’authentification à la plateforme numérique SAS. En lien avec le flux **INT_R02** sur la gestion des comptes régulateurs, la solution logicielle éditeur contrôlera et donnera les droits et habilitations correspondants à l’utilisateur.
-
-Les échangent reposent sur le protocole OpenID Connect (OIDC), cf. [spécifications détaillées](https://esante.gouv.fr/sites/default/files/media/document/SAS_DOC_SPEC%20INT_SSO_Delegation-dauthentification_20230609_V2.2.pdf)
-
-### Gestion des informations de rendez-vous
-
-L'objectif de cette interface, **flux INT_R03**, est de permettre la transmission des données liées à l'usage de la fonctionnalité de prise de RDV par les régulateurs provenant de la plateforme numérique SAS, dans les solutions logicielles d'agenda. Le schéma de présentation générale ci-dessous illustre le cas d'usage :
+Après avoir agrégé les créneaux de disponibilités à la suite d’une recherche d’offre de santé, le régulateur sélectionne un créneau et est redirigé vers la plateforme de prise de RDV éditeur sans avoir à se réauthentifier. Dans la solution logicielle éditeur, le régulateur va pouvoir ensuite prendre RDV pour le patient. Au moment de la redirection, la solution logicielle éditeur va contrôler la provenance de l’utilisateur (paramètre « origin » ajouté à l’URL de redirection) et si celui-ci n’est pas authentifié, déléguer l’authentification à la plateforme numérique SAS. En lien avec le flux **INT_R02** sur la gestion des comptes régulateurs, la solution logicielle éditeur contrôlera et donnera les droits et habilitations correspondants à l’utilisateur. Les échangent reposent sur le protocole OpenID Connect (OIDC), cf. [spécifications détaillées](https://esante.gouv.fr/sites/default/files/media/document/SAS_DOC_SPEC%20INT_SSO_Delegation-dauthentification_20230609_V2.2.pdf) ### Gestion des informations de rendez-vous L'objectif de cette interface, **flux INT_R03**, est de permettre la transmission des données liées à l'usage de la fonctionnalité de prise de RDV par les régulateurs provenant de la plateforme numérique SAS, dans les solutions logicielles d'agenda. Le schéma de présentation générale ci-dessous illustre le cas d'usage :
 
 * **Présentation gestion de rendez-vous**: ![](creation_rendez_vous_1.png)
 
-Après avoir sélectionné un créneau depuis la plateforme numérique SAS et avoir été redirigé vers la plateforme de prise de RDV éditeur, le régulateur prend directement RDV pour le patient dans la solution éditeur. Dès que le RDV est pris, les informations associées sont transmises à la plateforme numérique SAS via le flux INT_R03 mis en place. Lors de chaque mise à jour du RDV (annulation, modification, honoré, non honoré), l'information est transmise par le biais de ce flux à la plateforme numérique SAS. Ces données sont utilisées pour suivre l'activité réelle engendrée par le SAS, permettre l'analyse du dispositif de l'avenant 9 par la CNAM et assurer la traçabilité des RDV patients pour le suivi dans le LRM à terme. Pour la mise en place de ce flux, il est nécessaire de s'assurer d'une technologie commune aux différentes plateformes. Les échanges reposent sur des webservices se basant sur l'API REST du standard HL7 FHIR, et respectant les spécifications des flux 6a et 6b du volet Gestion d'agendas partagés du Cadre d'Interopérabilité des Systèmes d'Information de Santé (CI-SIS).
-
-#### Création de rendez-vous
-
-##### Description du cas d'usage
-
-Lorsqu'un régulateur prend RDV pour un patient au sein de la solution logicielle éditeur, celle-ci transmet une requête de création de RDV. Le schéma ci-dessous illustre l'échange à mettre en oeuvre :
+Après avoir sélectionné un créneau depuis la plateforme numérique SAS et avoir été redirigé vers la plateforme de prise de RDV éditeur, le régulateur prend directement RDV pour le patient dans la solution éditeur. Dès que le RDV est pris, les informations associées sont transmises à la plateforme numérique SAS via le flux INT_R03 mis en place. Lors de chaque mise à jour du RDV (annulation, modification, honoré, non honoré), l'information est transmise par le biais de ce flux à la plateforme numérique SAS. Ces données sont utilisées pour suivre l'activité réelle engendrée par le SAS, permettre l'analyse du dispositif de l'avenant 9 par la CNAM et assurer la traçabilité des RDV patients pour le suivi dans le LRM à terme. Pour la mise en place de ce flux, il est nécessaire de s'assurer d'une technologie commune aux différentes plateformes. Les échanges reposent sur des webservices se basant sur l'API REST du standard HL7 FHIR, et respectant les spécifications des flux 6a et 6b du volet Gestion d'agendas partagés du Cadre d'Interopérabilité des Systèmes d'Information de Santé (CI-SIS). #### Création de rendez-vous ##### Description du cas d'usage Lorsqu'un régulateur prend RDV pour un patient au sein de la solution logicielle éditeur, celle-ci transmet une requête de création de RDV. Le schéma ci-dessous illustre l'échange à mettre en oeuvre :
 
 
-#### Mise à jour de rendez-vous
-
-##### Description du cas d'usage
-
-La mise à jour des données du RDV peut porter sur chacun des éléments de la ressource transmise (dates du créneau, PS effecteurs des soins, statut du RDV, etc.). Le schéma ci-dessous illustre l'échange à mettre en oeuvre :
+#### Mise à jour de rendez-vous ##### Description du cas d'usage La mise à jour des données du RDV peut porter sur chacun des éléments de la ressource transmise (dates du créneau, PS effecteurs des soins, statut du RDV, etc.). Le schéma ci-dessous illustre l'échange à mettre en oeuvre :
 
 
-### Transmission des informations de RDV aux LRM
-
-#### Description du cas d'usage
-
-Dans le cadre de **l’alimentation du dossier de régulation médicale (DRM)** avec **les informations du RDV pris** pour le compte du patient **dans les solutions logicielles éditeurs** ou **dans la plateforme numérique SAS (via l’agenda SAS ou en sus des disponibilités)**, cette section s’intéressera à la mise en place du parcours de la donnée jusqu’à l’association avec le DRM associé.
-
-L’objectif de cette interface, **flux INT_L02**, est de pouvoir alimenter de manière automatisée le LRM avec les informations de RDV pris pour le compte du patient dans les solutions logicielles éditeurs (LGA) ou dans la plateforme numérique du SAS. À la suite de la prise de RDV réalisée par la régulation pour le compte du patient, les informations de RDV sont centralisées au niveau de la plateforme nationale. Les travaux souhaités visent à poursuivre le parcours de la donnée pour rattachement de ces informations avec le dossier d’orientation correspondant (DRM), selon le schéma suivant :
+### Transmission des informations de RDV aux LRM #### Description du cas d'usage Dans le cadre de **l’alimentation du dossier de régulation médicale (DRM)** avec **les informations du RDV pris** pour le compte du patient **dans les solutions logicielles éditeurs** ou **dans la plateforme numérique SAS (via l’agenda SAS ou en sus des disponibilités)**, cette section s’intéressera à la mise en place du parcours de la donnée jusqu’à l’association avec le DRM associé. L’objectif de cette interface, **flux INT_L02**, est de pouvoir alimenter de manière automatisée le LRM avec les informations de RDV pris pour le compte du patient dans les solutions logicielles éditeurs (LGA) ou dans la plateforme numérique du SAS. À la suite de la prise de RDV réalisée par la régulation pour le compte du patient, les informations de RDV sont centralisées au niveau de la plateforme nationale. Les travaux souhaités visent à poursuivre le parcours de la donnée pour rattachement de ces informations avec le dossier d’orientation correspondant (DRM), selon le schéma suivant :
 
 * **Redescente des informations de RDV vers les LRM **: ![](redescente_rdv_lrm.png)
 
-#### Cinématique des échanges
-
-Les échanges entre la plateforme SAS et les solutions de LRM se feront au travers du [Hub Santé](https://hub.esante.gouv.fr/), selon le schéma et la cinématique suivante
+#### Cinématique des échanges Les échanges entre la plateforme SAS et les solutions de LRM se feront au travers du [Hub Santé](https://hub.esante.gouv.fr/), selon le schéma et la cinématique suivante
 
 * **Schéma de représentation globale du parcours**: ![](SchemaGlobalRedescenteLRM.png)
 
 
-Nous nous intéresserons dans la suite de la page et dans [la partie technique](./specifications_techniques-transmission-info-RDV-LRM.md) au séquencement et format des échanges entre la plateforme numérique SAS, le Hub et la solution éditeur LRM.
-
-#### Attendu et rôles des parties
-
-##### Role de la plateforme numérique SAS
-
-**La plateforme numérique SAS consolide et enregistre les données associées aux RDVs pris** par les régulateurs et réalise les actions suivantes :
-
-* La plateforme transmet les informations d’orientations de manière instantanée au format spécifié et avec la liste des données métier disponibles
-* La plateforme cible le SAS concerné pour transmission des orientations au LRM associé
-* Les messages transmis incluent la création d’un RDV et les mises à jours potentielles
-
-##### Rôle du Hubsanté
-
-Le Hub assure la couche de transport sécurisée et la transmission des données de la plateforme numérique SAS vers la solution de LRM :
-
-* Le Hub transmet au SAMU ciblé en fonction du message
-* Le Hub suit l'acquittement du message et les erreurs transmises par la solution LRM
-* Le Hub assure la transmission de l’acquittement des messages ou des erreurs à la plateforme numérique SAS
-
-##### Rôle du logiciel de régulation médicale
-
-* L’éditeur LRM intègre les données de l’orientation dans sa solution pour association avec le DRM
-* L’éditeur LRM met en place les actions attendues pour permettre au régulateur de rattacher les données de l’orientation avec le DRM souhaité sans ressaisie suite à une décision SAS
-* L’éditeur LRM gère l’identifiant de RDV transmis pour intégrer automatiquement les potentiels messages de mise à jour de l’orientation post-rattachement
-
-#### Données à échanger
-
-Lorsqu’un RDV est pris par le régulateur (depuis l’agenda SAS, une solution éditeur, en surnuméraire ou via place de marché), les données de l’orientation sont consolidées par la plateforme numérique SAS et **transmises instantanément à la solution de LRM. Les données fonctionnelles transmises sont les suivantes** :
-
-* La date et l’horaire du RDV
-* L’identifiant national (RPPS), le nom et le prénom de l’effecteur de soins
-* La spécialité de l’effecteur de soins
-* La profession de l’effecteur de soins
-* Le statut du rendez-vous
-* La catégorie d’orientation
-* La date et l’horaire de la prise de RDV
-* Le nom et l’identifiant national de la structure associée au RDV
-* Le régulateur ayant pris le RDV : Identifiant, nom, prénom et adresse e-mail
-
-Le message transmis (fichier json) contiendra les champs correspondants dont certains seront systématiquement remplis et d'autres optionnels.
-
-#### Rattachement au DRM dans la solution LRM
-
-Les orientations transmises automatiquement au LRM sont affichées au niveau du LRM pour que le régulateur soit en mesure de réaliser le **rattachement avec le bon dossier d’orientation au sein du DRM** correspondant, permettant ainsi d’**alimenter les données du RDV pris pour le compte du patient sans ressaisie**.
-
-D’un point de vue implémentation, l’action de **rapprochement entre l’orientation et le DRM par le régulateur** pourra se traduire à titre d’exemple par la mise en place d’un tableau de bord ou d’un espace pour la gestion des RDV pris au sein du LRM en s’appuyant sur la donnée métier disponible ou par l’affichage d’une liste déroulante des orientations non associées depuis le DRM ou tout autre implémentation que l’éditeur jugera pertinente au sein de sa solution. **L’ANS et l’éditeur conviendront, lors de l’atelier de cadrage**, du moyen d’association défini dans la solution éditeur pour que le régulateur puisse alimenter simplement le DRM avec les données de l’orientation réalisée. Ceci, pour notamment faciliter l’accompagnement au déploiement et de formation des utilisateurs.
+Nous nous intéresserons dans la suite de la page et dans [la partie technique](./specifications_techniques-transmission-info-RDV-LRM.html) au séquencement et format des échanges entre la plateforme numérique SAS, le Hub et la solution éditeur LRM. #### Attendu et rôles des parties ##### Role de la plateforme numérique SAS **La plateforme numérique SAS consolide et enregistre les données associées aux RDVs pris** par les régulateurs et réalise les actions suivantes : - La plateforme transmet les informations d’orientations de manière instantanée au format spécifié et avec la liste des données métier disponibles - La plateforme cible le SAS concerné pour transmission des orientations au LRM associé - Les messages transmis incluent la création d’un RDV et les mises à jours potentielles ##### Rôle du Hubsanté Le Hub assure la couche de transport sécurisée et la transmission des données de la plateforme numérique SAS vers la solution de LRM : - Le Hub transmet au SAMU ciblé en fonction du message - Le Hub suit l'acquittement du message et les erreurs transmises par la solution LRM - Le Hub assure la transmission de l’acquittement des messages ou des erreurs à la plateforme numérique SAS ##### Rôle du logiciel de régulation médicale - L’éditeur LRM intègre les données de l’orientation dans sa solution pour association avec le DRM - L’éditeur LRM met en place les actions attendues pour permettre au régulateur de rattacher les données de l’orientation avec le DRM souhaité sans ressaisie suite à une décision SAS - L’éditeur LRM gère l’identifiant de RDV transmis pour intégrer automatiquement les potentiels messages de mise à jour de l’orientation post-rattachement #### Données à échanger Lorsqu’un RDV est pris par le régulateur (depuis l’agenda SAS, une solution éditeur, en surnuméraire ou via place de marché), les données de l’orientation sont consolidées par la plateforme numérique SAS et **transmises instantanément à la solution de LRM. Les données fonctionnelles transmises sont les suivantes** : - La date et l’horaire du RDV - L’identifiant national (RPPS), le nom et le prénom de l’effecteur de soins - La spécialité de l’effecteur de soins - La profession de l’effecteur de soins - Le statut du rendez-vous - La catégorie d’orientation - La date et l’horaire de la prise de RDV - Le nom et l’identifiant national de la structure associée au RDV - Le régulateur ayant pris le RDV : Identifiant, nom, prénom et adresse e-mail Le message transmis (fichier json) contiendra les champs correspondants dont certains seront systématiquement remplis et d'autres optionnels. #### Rattachement au DRM dans la solution LRM Les orientations transmises automatiquement au LRM sont affichées au niveau du LRM pour que le régulateur soit en mesure de réaliser le **rattachement avec le bon dossier d’orientation au sein du DRM** correspondant, permettant ainsi d’**alimenter les données du RDV pris pour le compte du patient sans ressaisie**. D’un point de vue implémentation, l’action de **rapprochement entre l’orientation et le DRM par le régulateur** pourra se traduire à titre d’exemple par la mise en place d’un tableau de bord ou d’un espace pour la gestion des RDV pris au sein du LRM en s’appuyant sur la donnée métier disponible ou par l’affichage d’une liste déroulante des orientations non associées depuis le DRM ou tout autre implémentation que l’éditeur jugera pertinente au sein de sa solution. **L’ANS et l’éditeur conviendront, lors de l’atelier de cadrage**, du moyen d’association défini dans la solution éditeur pour que le régulateur puisse alimenter simplement le DRM avec les données de l’orientation réalisée. Ceci, pour notamment faciliter l’accompagnement au déploiement et de formation des utilisateurs.
 
