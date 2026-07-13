@@ -100,7 +100,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-sas-sos-appoint
   "version" : "1.2.0",
   "name" : "FrAppointmentSASSOS",
   "status" : "active",
-  "date" : "2026-07-13T14:41:42+00:00",
+  "date" : "2026-07-13T16:20:43+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

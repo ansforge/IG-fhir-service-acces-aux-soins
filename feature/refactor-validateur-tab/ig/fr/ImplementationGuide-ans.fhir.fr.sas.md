@@ -14,7 +14,7 @@
   "name" : "SAS",
   "title" : "Service d'Accès aux Soins",
   "status" : "active",
-  "date" : "2026-07-13T14:41:42+00:00",
+  "date" : "2026-07-13T16:20:43+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -1894,10 +1894,10 @@
         {
           "extension" : [{
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "validateurs.html"
+            "valueUrl" : "tests.html"
           }],
-          "nameUrl" : "validateurs.html",
-          "title" : "Validateurs",
+          "nameUrl" : "tests.html",
+          "title" : "Tests",
           "generation" : "markdown"
         },
         {

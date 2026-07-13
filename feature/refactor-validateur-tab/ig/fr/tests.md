@@ -1,9 +1,6 @@
-# Validateurs - Service d'Accès aux Soins v1.2.0
+# Tests - Service d'Accès aux Soins v1.2.0
 
-## Validateurs
-
- 
-There is no translation page available for the current page, so it has been rendered in the default language 
+## Tests
 
 ### Validateur ressources
 
@@ -68,4 +65,8 @@ Tableau des validateurs à utiliser par cas d'usage
 | Agrégateur - SOS | Schedule | FrScheduleAgregateurSOS | https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator |
 | Agrégateur - SOS | Location | FrLocationAgregateurSOS | https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator |
 | Agrégateur - SOS | Organization | FrOrganizationAgregateurSOS | https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator |
+
+### Tests automatisés
+
+L'ANS a mis en plus un POC d'automatisation des tests des flux avec la plateforme numérique du SAS. Les tests reposent sur l'outil [Inferno](https://inferno-framework.github.io/). Un [kit de test](https://github.com/ansforge/interop-outil-fhir-sas-test-kit) pour les cas d'usage PS à titre individuel / CPTS, SOS et place de marché a été mis en place. Les industriels peuvent directement tester leurs solutions sur des environnements hors PROD à l'aide du [lien suivant](https://interop.esante.gouv.fr/inferno/sas), disponible sur la plateforme de test. Les industriels peuvent également intégrer l'outil dans leur environnement CI/CD afin de réaliser des tests de non régression automatisés.
 
