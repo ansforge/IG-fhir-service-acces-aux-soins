@@ -149,7 +149,14 @@ Afin de limiter le nombre d’appels émis vers les solutions logicielles édite
 Le schéma ci-dessous illustre les éléments décrits ci-dessus :
 
 
-<div class="mermaid" style="width:100%;" align="center">
+<style>
+.mermaid iframe {
+    width: auto !important;
+}
+</style>
+
+<div class="mermaid" style="width:100%; text-align:center;">
+
 %%{init: {
   "theme": "base",
   "themeVariables": {
