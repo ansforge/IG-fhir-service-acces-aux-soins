@@ -57,7 +57,7 @@ Plus de précision sur la spécification FHIR : [https://www.hl7.org/fhir/http.h
 
 #### Exemples de requêtes
 
-**Requête :**
+##### Requête :
 
 `post[BASE]/Appointment`
 
@@ -65,7 +65,7 @@ Plus de précision sur la spécification FHIR : [https://www.hl7.org/fhir/http.h
 
 La requête ci-dessous correspond à la transmission d'un RDV pris par le régulateur avec un identifiant national 3456780581/11242343 avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h.
 
-**Requête :**
+##### Requête :
 
 `post[BASE]/Appointment`
 
@@ -73,7 +73,7 @@ La requête ci-dessous correspond à la transmission d'un RDV pris par le régul
 
 La requête ci-dessous correspond à la transmission d'un RDV pris par le régulateur avec un identifiant national 3456780581/11242343 avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h.
 
-**Requête :**
+##### Requête :
 
 `post[BASE]/Appointment`
 
