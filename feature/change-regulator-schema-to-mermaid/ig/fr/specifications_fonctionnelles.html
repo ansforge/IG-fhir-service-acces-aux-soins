@@ -452,15 +452,66 @@ d’Interopérabilité des Systèmes d’Information de Santé (CI-SIS).</p>
 Le schéma ci-dessous illustre les éléments décrits ci-dessus :</li>
 </ul>
 
-<table align="center">
-    <tr>
-        <td align="center">
-            <div class="figure">
-                <img src="mecanisme_transmission_regulateurs.png" width="80%" height="80%" />
-            </div>
-        </td>    
-    </tr>
-</table>
+<pre><code class="language-mermaid">flowchart TB
+ 
+%% Acteurs
+GEST([👤&lt;br/&gt;Gestionnaire])
+REG([👤&lt;br/&gt;Régulateur])
+ 
+%% Nœuds
+SUP["Suppression ou retrait&lt;br/&gt;d'habilitation d'un&lt;br/&gt;compte régulateur"]
+ 
+CON["Connexion à la PTF&lt;br/&gt;numérique SAS"]
+ 
+CTRL{"Contrôle si des&lt;br/&gt;actions sont à mener"}
+ 
+REQ["Envoi d'une requête POST&lt;br/&gt;ou PUT aux solutions&lt;br/&gt;logicielles concernées"]
+ 
+TRAIT["Traitement de la requête&lt;br/&gt;et envoi de la réponse à&lt;br/&gt;la PTF numérique SAS"]
+ 
+REP{"Traitement de&lt;br/&gt;la réponse"}
+ 
+RIEN["Pas d'action"]
+ 
+MAJ["Mise à jour de&lt;br/&gt;l'état du compte"]
+GEST --&gt; SUP
+REG --&gt; CON
+ 
+%% Flux principal
+CON --&gt; CTRL
+ 
+CTRL --&gt;|Oui| REQ
+CTRL --&gt;|Non| RIEN
+ 
+SUP --&gt; REQ
+ 
+REQ --&gt; TRAIT
+ 
+TRAIT --&gt; REP
+ 
+REP --&gt;|OK| MAJ
+REP --&gt;|KO| RIEN
+ 
+%% Légende
+subgraph LEG["Légende"]
+    direction TB
+    L1["Action SAS"]
+    L2["Action éditeur"]
+end
+ 
+%%
+MAJ ~~~ L1
+ 
+%% Styles
+classDef sas fill:#ffffff,stroke:#000000,stroke-width:2px,color:#000;
+classDef editeur fill:#FFE4B5,stroke:#F4A62A,stroke-width:2px,color:#000;
+ 
+%%
+class CON,SUP,REQ,CTRL,REP,RIEN,MAJ,L1 sas;
+ 
+%% Action éditeur
+class TRAIT,L2 editeur;
+</code></pre>
 
 <p><strong>Autres règles de gestion fonctionnelles à prendre en compte par les éditeurs :</strong></p>
 <ul>
@@ -692,7 +743,7 @@ Le schéma ci-dessous illustre l'échange à mettre en oeuvre :</p>
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Le package ans.fhir.fr.sas#1.2.0 est basé sur <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Date de génération : 
-  <span title="2026-07-13 08:03:00 +0000">
+  <span title="2026-07-13 08:07:00 +0000">
     2026-07-13
   </span>
 
