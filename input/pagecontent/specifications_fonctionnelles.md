@@ -105,10 +105,6 @@ Le schéma ci-dessous présente une synthèse de la structure attendue :
     <p>{% include ressources-exploitees-fhir.svg %}</p>
 </div>
 
-<div class="figure" style="width:100%; text-align:center;">
-  mecanisme_transmission_regulateurs.svg
-</div>
-
 
 ##### SOS Médecins
 La structure de réponse attendue inclut l’ensemble des créneaux de consultation disponibles correspondant à la requête réalisée par la plateforme numérique SAS.
@@ -157,7 +153,7 @@ Le schéma ci-dessous illustre les éléments décrits ci-dessus :
 %%{init: {
   "theme": "base",
   "themeVariables": {
-    "fontFamily": "futura-pt, Arial, sans-serif",
+    "fontFamily": "verdana",
     "fontSize": "12px"
   }
 }}%%
@@ -217,6 +213,7 @@ class CON,SUP,REQ,CTRL,REP,RIEN,MAJ,L1 sas;
  
 class TRAIT,L2 editeur;
 </div>
+
 
 **Autres règles de gestion fonctionnelles à prendre en compte par les éditeurs :**
 - A la création du compte, ne pas avoir d’étape « vérification du mail » ni de mail de confirmation de création de compte
