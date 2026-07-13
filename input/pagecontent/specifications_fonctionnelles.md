@@ -147,14 +147,23 @@ Afin de limiter le nombre d’appels émis vers les solutions logicielles édite
 - Pour la suppression ou retrait d’habilitation uniquement, le déclenchement de la requête est émis instantanément.
 Le schéma ci-dessous illustre les éléments décrits ci-dessus :
 
+<div align="center">
+  Worflowregulateur.svg" />
+</div>
+
+
+<div class="figure" style="width:100%;" align ="center">
+    <p>{% include Workflowregulateur.svg %}</p>
+</div>
+
+<div style="text-align:center">
+
 ```mermaid
 flowchart TB
  
-%% Acteurs
 GEST([👤<br/>Gestionnaire])
 REG([👤<br/>Régulateur])
  
-%% Nœuds
 SUP["Suppression ou retrait<br/>d'habilitation d'un<br/>compte régulateur"]
  
 CON["Connexion à la PTF<br/>numérique SAS"]
@@ -173,7 +182,6 @@ MAJ["Mise à jour de<br/>l'état du compte"]
 GEST --> SUP
 REG --> CON
  
-%% Flux principal
 CON --> CTRL
  
 CTRL -->|Oui| REQ
@@ -188,24 +196,22 @@ TRAIT --> REP
 REP -->|OK| MAJ
 REP -->|KO| RIEN
  
-%% Légende
+
 subgraph LEG["Légende"]
     direction TB
     L1["Action SAS"]
     L2["Action éditeur"]
 end
  
-%%
 MAJ ~~~ L1
  
 %% Styles
 classDef sas fill:#ffffff,stroke:#000000,stroke-width:2px,color:#000;
 classDef editeur fill:#FFE4B5,stroke:#F4A62A,stroke-width:2px,color:#000;
  
-%%
+
 class CON,SUP,REQ,CTRL,REP,RIEN,MAJ,L1 sas;
  
-%% Action éditeur
 class TRAIT,L2 editeur;
 ```
 
