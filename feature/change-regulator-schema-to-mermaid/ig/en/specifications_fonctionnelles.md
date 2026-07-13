@@ -86,6 +86,8 @@ Dans le cas où un créneau CPTS est transmis, la transmission de l’informatio
 Le schéma ci-dessous présente une synthèse de la structure attendue :
 
 
+mecanisme_transmission_regulateurs.svg
+
 ##### SOS Médecins
 
 La structure de réponse attendue inclut l’ensemble des créneaux de consultation disponibles correspondant à la requête réalisée par la plateforme numérique SAS. 1 à n créneaux de consultation (Slot) peuvent être rattachés à 1 agenda (Schedule) qui représente 1 lieu fixe de consultation (Location), lui-même rattaché à 1 association SOS Médecins (Organization). Si des créneaux de consultation sont proposés pour plusieurs LFC, on aura autant d’agendas (Schedule) que de LFC (Location).
