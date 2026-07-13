@@ -152,13 +152,19 @@ Le schéma ci-dessous illustre les éléments décrits ci-dessus :
 </div>
 
 
-<div class="figure" style="width:100%;" align ="center">
-    <p>{% include Workflowregulateur.svg %}</p>
-</div>
-
 <div style="text-align:center">
 
 ```mermaid
+
+%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "fontFamily":  futura-pt, Arial, sans-serif",
+    "fontSize": "14px"
+  }
+}}%%
+
+
 flowchart TB
  
 GEST([👤<br/>Gestionnaire])
