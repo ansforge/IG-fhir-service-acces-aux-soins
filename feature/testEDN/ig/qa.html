@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = 14, errors = 21, warn = 120, info = 214-->
+<!-- broken links = 16, errors = 21, warn = 118, info = 214-->
 <head>
   <title>SAS : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
@@ -47,17 +47,58 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for SAS</h1>
- <p>Generated Fri Jul 10 08:09:27 UTC 2026, FHIR version 4.0.1 for ans.fhir.fr.sas#1.2.0 (canonical = <a href="https://interop.esante.gouv.fr/ig/fhir/sas">https://interop.esante.gouv.fr/ig/fhir/sas</a> (<a href="https://interop.esante.gouv.fr/ig/fhir/sas/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a> &amp; <a href="qa-ipreview.html">IP</a></p>
+ <p>Generated Mon Jul 13 17:40:47 UTC 2026, FHIR version 4.0.1 for ans.fhir.fr.sas#1.2.0 (canonical = <a href="https://interop.esante.gouv.fr/ig/fhir/sas">https://interop.esante.gouv.fr/ig/fhir/sas</a> (<a href="https://interop.esante.gouv.fr/ig/fhir/sas/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a> &amp; <a href="qa-ipreview.html">IP</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
  <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v2.2.10</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = ans.fhir.fr.sas, Canonical = https://interop.esante.gouv.fr/ig/fhir/sas</td></tr>
  <tr><td>Realm Check for n/a:</td><td><span style="color: maroon; font-weight: bold"></span><ul><li>n/a</li></ul></td></tr>
  <tr><td>Language Info:</td><td>Stated Languages: n/a. IG Resource Lang: fr. 1 of 88 (1%) of resources have a language. <a href="https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-resource-language-policy">Population Policy</a>: NONE</td></tr>
  <tr><td><a href="https://confluence.hl7.org/spaces/FHIR/pages/144970227/IG+Publication+Request+Documentation">Publication Request</a>:</td><td><table class="grid">
+ <tr><td>package-id</d><td>ans.fhir.fr.sas</td></tr>
+ <tr><td>version</d><td>1.2.0</td></tr>
+ <tr><td>path</d><td>https://interop.esante.gouv.fr/ig/fhir/sas/1.2.0</td></tr>
+ <tr><td>Pub-Mode</d><td>milestone</td></tr>
+ <tr><td>status</d><td>normative+trial-use</td></tr>
+ <tr><td>Release-Label</d><td>ci-build</td></tr>
+ <tr><td>Sequence (Group)</d><td>trial-use</td></tr>
+ <tr><td>desc</d><td>Publication 1.2.0 du guide d’implémentation Service d'accès aux soins. Cette release ajoute la spécification de redescente des informations de RDV aux LRM</td></tr>
+ <tr><td>descmd</d><td><p><strong>Release 1.2.0-trial-implementation de l'Implémentation Guide Service d'Accès aux Soins.</strong></p>
+<p>Modifications apportées dans cette release</p>
+<ul>
+<li>Ajout du cas d'usage redescente des informations de RDV aux LRM
+<ul>
+<li>Partie narrative avec sommaire, spécifications fonctionnelles, techniques incluant schémas des flux et exemples</li>
+<li>Création des jeux de valeurs associés</li>
+</ul>
+</li>
+<li>Modifications et corrections apportées aux flux existants  :
+<ul>
+<li>Suppression de la définition pour le paramètre de recherche _has</li>
+<li>Ajout des modes de recherche sur les exemples de Bundle</li>
+<li>Mise en place de la cohabitation entre deux versions du package FrCore
+<ul>
+<li>package 1.1.0 utilisé pour les cas d'usage actuels</li>
+<li>package 2.1.0 ou supérieur sera utilisé dorénavant pour les nouveaux cas d'usage FHIR</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</td></tr>
  <tr><td>RelatedIgs</d><td>(None Found)</td></tr>
 </table>
-<ul><li>Version 1.2.0 has already been published <img src="icon-warning.png" height="16px" width="16px"/></li>
-<li>Publication Request is for version v1.2.0 which is already published <img src="icon-error.gif" height="16px" width="16px"/></li>
+<ul><li>Error fetching package-list from https://interop.esante.gouv.fr/ig/fhir/sas: Read timed out <img src="icon-error.gif" height="16px" width="16px"/></li>
+<li>This IG has never been published, so the version should start with '0.' or include a patch version e.g. '-ballot' <img src="icon-warning.png" height="16px" width="16px"/></li>
+<li>This appears to be the first publication, so first must be true <img src="icon-error.gif" height="16px" width="16px"/></li>
+<li>descmd cannot contain a ' <img src="icon-error.gif" height="16px" width="16px"/></li>
+<li>This IG is not yet published at all, so there must be "first" : true in the publication request <img src="icon-error.gif" height="16px" width="16px"/></li>
+<li>No publication request category found (needed for first publication - consult FHIR product director for a value <img src="icon-error.gif" height="16px" width="16px"/></li>
+<li>No publication request title found (needed for first publication) <img src="icon-error.gif" height="16px" width="16px"/></li>
+<li>No publication description (`registry-description`) found (needed for first publication) <img src="icon-error.gif" height="16px" width="16px"/></li>
+<li>No publication country (`registry-country`) found (needed for first publication) <img src="icon-error.gif" height="16px" width="16px"/></li>
+<li>No publication authority (`registry-authority`) found (needed for first publication) <img src="icon-error.gif" height="16px" width="16px"/></li>
+<li>No publication request introduction found (needed for first publication) <img src="icon-error.gif" height="16px" width="16px"/></li>
+<li>No publication request ci-build found (needed for first publication) <img src="icon-error.gif" height="16px" width="16px"/></li>
 </ul>
 </td></tr>
  <tr><td>Supressed Messages:</td><td><a href="#suppressed">19 Suppressed Issues</a>
@@ -129,18 +170,18 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
 </ul>
 </td></tr>
  <tr><td>Modifier Extensions:</td><td><span style="color: grey">(none)</span></td></tr>
- <tr><td>Previous Version Comparison:</td><td> </td></tr>
+ <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at https://interop.esante.gouv.fr/ig/fhir/sas (Problem #1 with package-list.json at https://interop.esante.gouv.fr/ig/fhir/sas: Read timed out)</td></tr>
  <tr><td>IPA Comparison:</td><td> n/a</td></tr>
  <tr><td>IPS Comparison:</td><td> n/a</td></tr>
  <tr><td>Validation Flags:</td><td> On: autoLoad; Off: hintAboutNonMustSupport, anyExtensionsAllowed, checkAggregation, showReferenceMessages, noExperimentalContent, displayWarnings</td></tr>
- <tr><td>Summary:</td><td> errors = 21, warn = 120, info = 214, broken links = 14, pinned = n/a.  <button onclick="toggleCodes()">Show Message Ids</button></td></tr>
+ <tr><td>Summary:</td><td> errors = 21, warn = 118, info = 214, broken links = 16, pinned = n/a.  <button onclick="toggleCodes()">Show Message Ids</button></td></tr>
 </table>
  <table class="grid">
    <tr>
      <td><b>Filename</b></td><td><b>Errors</b></td><td><b>Warnings</b></td><td><b>Hints</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>12</b></td><td><b>16</b></td><td><b>2</b></td>
+     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>14</b></td><td><b>14</b></td><td><b>2</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#___w_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_fsh-generated_includes_fsh-link-references"><b>/__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/includes/fsh-link-references</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
@@ -506,19 +547,10 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><a href="#___w_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_input_pagecontent_specifications_techniques"><b>/__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/input/pagecontent/specifications_techniques</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
-     <td><a href="#___w_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_input_pagecontent_specifications_techniques"><b>/__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/input/pagecontent/specifications_techniques</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
-   </tr>
-   <tr style="background-color: #EFFFEF">
      <td><a href="#___w_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_input_pagecontent_specifications_techniques-cpts-recherche_creneaux"><b>/__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/input/pagecontent/specifications_techniques-cpts-recherche_creneaux</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
-     <td><a href="#___w_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_input_pagecontent_specifications_techniques-ps-cpts-gestion_rdv"><b>/__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/input/pagecontent/specifications_techniques-ps-cpts-gestion_rdv</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
-   </tr>
-   <tr style="background-color: #EFFFEF">
      <td><a href="#___w_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_input_pagecontent_specifications_techniques-ps-recherche_creneaux"><b>/__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/input/pagecontent/specifications_techniques-ps-recherche_creneaux</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
-   </tr>
-   <tr style="background-color: #EFFFEF">
-     <td><a href="#___w_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_input_pagecontent_specifications_techniques-sos-gestion_rdv"><b>/__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/input/pagecontent/specifications_techniques-sos-gestion_rdv</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#___w_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_input_pagecontent_specifications_techniques-sos-recherche_creneaux"><b>/__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/input/pagecontent/specifications_techniques-sos-recherche_creneaux</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
@@ -531,6 +563,9 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#___w_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_input_pagecontent_specifications_techniques-transmission-info-RDV-LRM"><b>/__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/input/pagecontent/specifications_techniques-transmission-info-RDV-LRM</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#___w_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_input_pagecontent_specifications_techniques_tous_RDV_V3"><b>/__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/input/pagecontent/specifications_techniques_tous_RDV_V3</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#___w_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_input_pagecontent_validateurs"><b>/__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/input/pagecontent/validateurs</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
@@ -557,37 +592,37 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>output/en/faq.html</b></td><td><b>warning</b></td><td><b>Illegal HTML: illegal html element: ins (Requête)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="en/faq.html#l1526">en&#8203;/faq&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/p&#8203;/a at Line 995, column 6</a></b></td><td><b>error</b></td><td><b>The link './specifications_techniques-ps-gestion_regulateur.html#r%C3%A8gles-de-gestion' for &quot;règles de gestion comptes régulateurs&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">HTML_LINK_CHECK_FAILED</span></td>
+     <td><b><a href="en/faq.html#l1517">en&#8203;/faq&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/p&#8203;/a at Line 989, column 6</a></b></td><td><b>error</b></td><td><b>The link './specifications_techniques-ps-gestion_regulateur.html#r%C3%A8gles-de-gestion' for &quot;règles de gestion comptes régulateurs&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">HTML_LINK_CHECK_FAILED</span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b><a href="en/index.html#l515">en&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/blockquote&#8203;/p&#8203;/a at Line 337, column 184</a></b></td><td><b>warning</b></td><td><b>The link 'https://interop.esante.gouv.fr/ig/fhir/sas' for &quot;https://interop.esante.gouv.fr/ig/fhir/sas&quot; is a canonical link and is therefore unsafe with regard to versions</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">HTML_LINK_VERSIONLESS_CANONICAL</span></td>
+     <td><b><a href="en/index.html#l506">en&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/blockquote&#8203;/p&#8203;/a at Line 331, column 184</a></b></td><td><b>warning</b></td><td><b>The link 'https://interop.esante.gouv.fr/ig/fhir/sas' for &quot;https://interop.esante.gouv.fr/ig/fhir/sas&quot; is a canonical link and is therefore unsafe with regard to versions</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">HTML_LINK_VERSIONLESS_CANONICAL</span></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="en/index.html#l829">en&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ol&#8203;/li&#8203;/ul&#8203;/li&#8203;/a at Line 407, column 12</a></b></td><td><b>error</b></td><td><b>The link './specifications_techniques-ps-gestion_regulateur.html' for &quot;Gestion des comptes régulateurs&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">HTML_LINK_CHECK_FAILED</span></td>
+     <td><b><a href="en/index.html#l820">en&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ol&#8203;/li&#8203;/ul&#8203;/li&#8203;/a at Line 401, column 12</a></b></td><td><b>error</b></td><td><b>The link './specifications_techniques-ps-gestion_regulateur.html' for &quot;Gestion des comptes régulateurs&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">HTML_LINK_CHECK_FAILED</span></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="en/index.html#l833">en&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ol&#8203;/li&#8203;/ul&#8203;/li&#8203;/a at Line 408, column 12</a></b></td><td><b>error</b></td><td><b>The link './specifications_techniques-ps-gestion_rdv.html' for &quot;Gestion de rendez-vous&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">HTML_LINK_CHECK_FAILED</span></td>
+     <td><b><a href="en/index.html#l824">en&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ol&#8203;/li&#8203;/ul&#8203;/li&#8203;/a at Line 402, column 12</a></b></td><td><b>error</b></td><td><b>The link './specifications_techniques-ps-gestion_rdv.html' for &quot;Gestion de rendez-vous&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">HTML_LINK_CHECK_FAILED</span></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="en/index.html#l861">en&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ol&#8203;/li&#8203;/ul&#8203;/li&#8203;/a at Line 421, column 12</a></b></td><td><b>error</b></td><td><b>The link './specifications_techniques-cpts-gestion_regulateur.html' for &quot;Gestion des comptes régulateurs&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">HTML_LINK_CHECK_FAILED</span></td>
+     <td><b><a href="en/index.html#l852">en&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ol&#8203;/li&#8203;/ul&#8203;/li&#8203;/a at Line 415, column 12</a></b></td><td><b>error</b></td><td><b>The link './specifications_techniques-cpts-gestion_regulateur.html' for &quot;Gestion des comptes régulateurs&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">HTML_LINK_CHECK_FAILED</span></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="en/index.html#l865">en&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ol&#8203;/li&#8203;/ul&#8203;/li&#8203;/a at Line 422, column 12</a></b></td><td><b>error</b></td><td><b>The link './specifications_techniques-cpts-gestion_rdv.html' for &quot;Gestion de rendez-vous&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">HTML_LINK_CHECK_FAILED</span></td>
+     <td><b><a href="en/index.html#l856">en&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ol&#8203;/li&#8203;/ul&#8203;/li&#8203;/a at Line 416, column 12</a></b></td><td><b>error</b></td><td><b>The link './specifications_techniques-cpts-gestion_rdv.html' for &quot;Gestion de rendez-vous&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">HTML_LINK_CHECK_FAILED</span></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="en/index.html#l893">en&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ol&#8203;/li&#8203;/ul&#8203;/li&#8203;/a at Line 435, column 12</a></b></td><td><b>error</b></td><td><b>The link './specifications_techniques-sos-gestion_regulateur.html' for &quot;Gestion des comptes régulateurs&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">HTML_LINK_CHECK_FAILED</span></td>
+     <td><b><a href="en/index.html#l884">en&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ol&#8203;/li&#8203;/ul&#8203;/li&#8203;/a at Line 429, column 12</a></b></td><td><b>error</b></td><td><b>The link './specifications_techniques-sos-gestion_regulateur.html' for &quot;Gestion des comptes régulateurs&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">HTML_LINK_CHECK_FAILED</span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="en/index.html#l888">en&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ol&#8203;/li&#8203;/ul&#8203;/li&#8203;/a at Line 430, column 12</a></b></td><td><b>error</b></td><td><b>The link './specifications_techniques-sos-gestion_rdv.html' for &quot;Gestion de rendez-vous&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">HTML_LINK_CHECK_FAILED</span></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>output&#8203;/en&#8203;/specifications_techniques-cpts-recherche_creneaux&#8203;.html</b></td><td><b>warning</b></td><td><b>Illegal HTML: illegal html element: référence ()</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
-   <tr style="background-color: #ffebcc">
-     <td><b>output&#8203;/en&#8203;/specifications_techniques-ps-cpts-gestion_rdv&#8203;.html</b></td><td><b>warning</b></td><td><b>The html source has duplicate anchor Ids: _ftn1,_ftnref1</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
-   </tr>
-   <tr style="background-color: #ffebcc">
-     <td><b>output&#8203;/en&#8203;/specifications_techniques-sos-gestion_rdv&#8203;.html</b></td><td><b>warning</b></td><td><b>The html source has duplicate anchor Ids: _ftn1,_ftnref1</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
-   </tr>
    <tr style="background-color: #ffffe6">
      <td><b>en&#8203;/specifications_techniques-transmission-info-RDV-LRM&#8203;.html</b></td><td><b>information</b></td><td><b>No conformance term found in the text: 3.3.4). Le message est transmis avec un entête de type &quot;EDXL-DE&quot; (cf Enveloppe EDXL-DE) où distribution.kind est valorisé à Error, encapsulant le contenu du message json qui respecte le modèle suivant (cf. spécifications du Hub Santé </b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CONFORMANCE_STATEMENT_NOCONFWORD</span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>output&#8203;/en&#8203;/specifications_techniques_tous_RDV_V3&#8203;.html</b></td><td><b>warning</b></td><td><b>The html source has duplicate anchor Ids: _ftn1,_ftnref1</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>output&#8203;/fr&#8203;/SearchParameter-slot-sp-start&#8203;.html</b></td><td><b>warning</b></td><td><b>Illegal HTML: illegal html element: date1 ( et inférieure ou égale à ))</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
@@ -596,37 +631,37 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>output/fr/faq.html</b></td><td><b>warning</b></td><td><b>Illegal HTML: illegal html element: ins (Requête)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="fr/faq.html#l1520">fr&#8203;/faq&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/p&#8203;/a at Line 988, column 6</a></b></td><td><b>error</b></td><td><b>The link './specifications_techniques-ps-gestion_regulateur.html#r%C3%A8gles-de-gestion' for &quot;règles de gestion comptes régulateurs&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">HTML_LINK_CHECK_FAILED</span></td>
+     <td><b><a href="fr/faq.html#l1511">fr&#8203;/faq&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/p&#8203;/a at Line 982, column 6</a></b></td><td><b>error</b></td><td><b>The link './specifications_techniques-ps-gestion_regulateur.html#r%C3%A8gles-de-gestion' for &quot;règles de gestion comptes régulateurs&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">HTML_LINK_CHECK_FAILED</span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b><a href="fr/index.html#l509">fr&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/blockquote&#8203;/p&#8203;/a at Line 330, column 184</a></b></td><td><b>warning</b></td><td><b>The link 'https://interop.esante.gouv.fr/ig/fhir/sas' for &quot;https://interop.esante.gouv.fr/ig/fhir/sas&quot; is a canonical link and is therefore unsafe with regard to versions</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">HTML_LINK_VERSIONLESS_CANONICAL</span></td>
+     <td><b><a href="fr/index.html#l500">fr&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/blockquote&#8203;/p&#8203;/a at Line 324, column 184</a></b></td><td><b>warning</b></td><td><b>The link 'https://interop.esante.gouv.fr/ig/fhir/sas' for &quot;https://interop.esante.gouv.fr/ig/fhir/sas&quot; is a canonical link and is therefore unsafe with regard to versions</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">HTML_LINK_VERSIONLESS_CANONICAL</span></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="fr/index.html#l823">fr&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ol&#8203;/li&#8203;/ul&#8203;/li&#8203;/a at Line 400, column 12</a></b></td><td><b>error</b></td><td><b>The link './specifications_techniques-ps-gestion_regulateur.html' for &quot;Gestion des comptes régulateurs&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">HTML_LINK_CHECK_FAILED</span></td>
+     <td><b><a href="fr/index.html#l814">fr&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ol&#8203;/li&#8203;/ul&#8203;/li&#8203;/a at Line 394, column 12</a></b></td><td><b>error</b></td><td><b>The link './specifications_techniques-ps-gestion_regulateur.html' for &quot;Gestion des comptes régulateurs&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">HTML_LINK_CHECK_FAILED</span></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="fr/index.html#l827">fr&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ol&#8203;/li&#8203;/ul&#8203;/li&#8203;/a at Line 401, column 12</a></b></td><td><b>error</b></td><td><b>The link './specifications_techniques-ps-gestion_rdv.html' for &quot;Gestion de rendez-vous&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">HTML_LINK_CHECK_FAILED</span></td>
+     <td><b><a href="fr/index.html#l818">fr&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ol&#8203;/li&#8203;/ul&#8203;/li&#8203;/a at Line 395, column 12</a></b></td><td><b>error</b></td><td><b>The link './specifications_techniques-ps-gestion_rdv.html' for &quot;Gestion de rendez-vous&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">HTML_LINK_CHECK_FAILED</span></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="fr/index.html#l855">fr&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ol&#8203;/li&#8203;/ul&#8203;/li&#8203;/a at Line 414, column 12</a></b></td><td><b>error</b></td><td><b>The link './specifications_techniques-cpts-gestion_regulateur.html' for &quot;Gestion des comptes régulateurs&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">HTML_LINK_CHECK_FAILED</span></td>
+     <td><b><a href="fr/index.html#l846">fr&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ol&#8203;/li&#8203;/ul&#8203;/li&#8203;/a at Line 408, column 12</a></b></td><td><b>error</b></td><td><b>The link './specifications_techniques-cpts-gestion_regulateur.html' for &quot;Gestion des comptes régulateurs&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">HTML_LINK_CHECK_FAILED</span></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="fr/index.html#l859">fr&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ol&#8203;/li&#8203;/ul&#8203;/li&#8203;/a at Line 415, column 12</a></b></td><td><b>error</b></td><td><b>The link './specifications_techniques-cpts-gestion_rdv.html' for &quot;Gestion de rendez-vous&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">HTML_LINK_CHECK_FAILED</span></td>
+     <td><b><a href="fr/index.html#l850">fr&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ol&#8203;/li&#8203;/ul&#8203;/li&#8203;/a at Line 409, column 12</a></b></td><td><b>error</b></td><td><b>The link './specifications_techniques-cpts-gestion_rdv.html' for &quot;Gestion de rendez-vous&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">HTML_LINK_CHECK_FAILED</span></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="fr/index.html#l887">fr&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ol&#8203;/li&#8203;/ul&#8203;/li&#8203;/a at Line 428, column 12</a></b></td><td><b>error</b></td><td><b>The link './specifications_techniques-sos-gestion_regulateur.html' for &quot;Gestion des comptes régulateurs&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">HTML_LINK_CHECK_FAILED</span></td>
+     <td><b><a href="fr/index.html#l878">fr&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ol&#8203;/li&#8203;/ul&#8203;/li&#8203;/a at Line 422, column 12</a></b></td><td><b>error</b></td><td><b>The link './specifications_techniques-sos-gestion_regulateur.html' for &quot;Gestion des comptes régulateurs&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">HTML_LINK_CHECK_FAILED</span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="fr/index.html#l882">fr&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ol&#8203;/li&#8203;/ul&#8203;/li&#8203;/a at Line 423, column 12</a></b></td><td><b>error</b></td><td><b>The link './specifications_techniques-sos-gestion_rdv.html' for &quot;Gestion de rendez-vous&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">HTML_LINK_CHECK_FAILED</span></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>output&#8203;/fr&#8203;/specifications_techniques-cpts-recherche_creneaux&#8203;.html</b></td><td><b>warning</b></td><td><b>Illegal HTML: illegal html element: référence ()</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
-   <tr style="background-color: #ffebcc">
-     <td><b>output&#8203;/fr&#8203;/specifications_techniques-ps-cpts-gestion_rdv&#8203;.html</b></td><td><b>warning</b></td><td><b>The html source has duplicate anchor Ids: _ftn1,_ftnref1</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
-   </tr>
-   <tr style="background-color: #ffebcc">
-     <td><b>output&#8203;/fr&#8203;/specifications_techniques-sos-gestion_rdv&#8203;.html</b></td><td><b>warning</b></td><td><b>The html source has duplicate anchor Ids: _ftn1,_ftnref1</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
-   </tr>
    <tr style="background-color: #ffffe6">
      <td><b>fr&#8203;/specifications_techniques-transmission-info-RDV-LRM&#8203;.html</b></td><td><b>information</b></td><td><b>No conformance term found in the text: 3.3.4). Le message est transmis avec un entête de type &quot;EDXL-DE&quot; (cf Enveloppe EDXL-DE) où distribution.kind est valorisé à Error, encapsulant le contenu du message json qui respecte le modèle suivant (cf. spécifications du Hub Santé </b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CONFORMANCE_STATEMENT_NOCONFWORD</span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>output&#8203;/fr&#8203;/specifications_techniques_tous_RDV_V3&#8203;.html</b></td><td><b>warning</b></td><td><b>The html source has duplicate anchor Ids: _ftn1,_ftnref1</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>1</b></td><td><b>warning</b></td><td><b>An HTML fragment from the set [ip-statements.xhtml, ip-statements.xhtml] is not included anywhere in the produced implementation guide</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
@@ -2828,7 +2863,7 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
 </table>
 <hr/>
 <a name="___w_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_input_pagecontent_specifications_techniques"> </a>
-<h2><a href="">input/pagecontent/specifications_techniques.txt</a> <span id="svi121" class="toggle" onclick="toggle('vi121')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi121')">(0)</span></h2>
+<h2><a href="">input/pagecontent/specifications_techniques.md</a> <span id="svi121" class="toggle" onclick="toggle('vi121')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi121')">(0)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi121"></div>
  <table class="grid">
    <tr>
@@ -2836,8 +2871,8 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
 </table>
 <hr/>
-<a name="___w_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_input_pagecontent_specifications_techniques"> </a>
-<h2><a href="">input/pagecontent/specifications_techniques.md</a> <span id="svi122" class="toggle" onclick="toggle('vi122')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi122')">(0)</span></h2>
+<a name="___w_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_input_pagecontent_specifications_techniques-cpts-recherche_creneaux"> </a>
+<h2><a href="">input/pagecontent/specifications_techniques-cpts-recherche_creneaux.md</a> <span id="svi122" class="toggle" onclick="toggle('vi122')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi122')">(0)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi122"></div>
  <table class="grid">
    <tr>
@@ -2845,8 +2880,8 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
 </table>
 <hr/>
-<a name="___w_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_input_pagecontent_specifications_techniques-cpts-recherche_creneaux"> </a>
-<h2><a href="">input/pagecontent/specifications_techniques-cpts-recherche_creneaux.md</a> <span id="svi123" class="toggle" onclick="toggle('vi123')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi123')">(0)</span></h2>
+<a name="___w_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_input_pagecontent_specifications_techniques-ps-recherche_creneaux"> </a>
+<h2><a href="">input/pagecontent/specifications_techniques-ps-recherche_creneaux.md</a> <span id="svi123" class="toggle" onclick="toggle('vi123')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi123')">(0)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi123"></div>
  <table class="grid">
    <tr>
@@ -2854,8 +2889,8 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
 </table>
 <hr/>
-<a name="___w_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_input_pagecontent_specifications_techniques-ps-cpts-gestion_rdv"> </a>
-<h2><a href="">input/pagecontent/specifications_techniques-ps-cpts-gestion_rdv.md</a> <span id="svi124" class="toggle" onclick="toggle('vi124')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi124')">(0)</span></h2>
+<a name="___w_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_input_pagecontent_specifications_techniques-sos-recherche_creneaux"> </a>
+<h2><a href="">input/pagecontent/specifications_techniques-sos-recherche_creneaux.md</a> <span id="svi124" class="toggle" onclick="toggle('vi124')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi124')">(0)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi124"></div>
  <table class="grid">
    <tr>
@@ -2863,8 +2898,8 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
 </table>
 <hr/>
-<a name="___w_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_input_pagecontent_specifications_techniques-ps-recherche_creneaux"> </a>
-<h2><a href="">input/pagecontent/specifications_techniques-ps-recherche_creneaux.md</a> <span id="svi125" class="toggle" onclick="toggle('vi125')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi125')">(0)</span></h2>
+<a name="___w_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_input_pagecontent_specifications_techniques-tous-gestion_rdv"> </a>
+<h2><a href="">input/pagecontent/specifications_techniques-tous-gestion_rdv.md</a> <span id="svi125" class="toggle" onclick="toggle('vi125')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi125')">(0)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi125"></div>
  <table class="grid">
    <tr>
@@ -2872,8 +2907,8 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
 </table>
 <hr/>
-<a name="___w_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_input_pagecontent_specifications_techniques-sos-gestion_rdv"> </a>
-<h2><a href="">input/pagecontent/specifications_techniques-sos-gestion_rdv.md</a> <span id="svi126" class="toggle" onclick="toggle('vi126')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi126')">(0)</span></h2>
+<a name="___w_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_input_pagecontent_specifications_techniques-tous-gestion_regulateur"> </a>
+<h2><a href="">input/pagecontent/specifications_techniques-tous-gestion_regulateur.md</a> <span id="svi126" class="toggle" onclick="toggle('vi126')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi126')">(0)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi126"></div>
  <table class="grid">
    <tr>
@@ -2881,8 +2916,8 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
 </table>
 <hr/>
-<a name="___w_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_input_pagecontent_specifications_techniques-sos-recherche_creneaux"> </a>
-<h2><a href="">input/pagecontent/specifications_techniques-sos-recherche_creneaux.md</a> <span id="svi127" class="toggle" onclick="toggle('vi127')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi127')">(0)</span></h2>
+<a name="___w_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_input_pagecontent_specifications_techniques-transmission-info-RDV-LRM"> </a>
+<h2><a href="">input/pagecontent/specifications_techniques-transmission-info-RDV-LRM.md</a> <span id="svi127" class="toggle" onclick="toggle('vi127')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi127')">(0)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi127"></div>
  <table class="grid">
    <tr>
@@ -2890,8 +2925,8 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
 </table>
 <hr/>
-<a name="___w_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_input_pagecontent_specifications_techniques-tous-gestion_rdv"> </a>
-<h2><a href="">input/pagecontent/specifications_techniques-tous-gestion_rdv.md</a> <span id="svi128" class="toggle" onclick="toggle('vi128')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi128')">(0)</span></h2>
+<a name="___w_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_input_pagecontent_specifications_techniques_tous_RDV_V3"> </a>
+<h2><a href="">input/pagecontent/specifications_techniques_tous_RDV_V3.xml</a> <span id="svi128" class="toggle" onclick="toggle('vi128')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi128')">(0)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi128"></div>
  <table class="grid">
    <tr>
@@ -2899,8 +2934,8 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
 </table>
 <hr/>
-<a name="___w_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_input_pagecontent_specifications_techniques-tous-gestion_regulateur"> </a>
-<h2><a href="">input/pagecontent/specifications_techniques-tous-gestion_regulateur.md</a> <span id="svi129" class="toggle" onclick="toggle('vi129')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi129')">(0)</span></h2>
+<a name="___w_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_input_pagecontent_validateurs"> </a>
+<h2><a href="">input/pagecontent/validateurs.md</a> <span id="svi129" class="toggle" onclick="toggle('vi129')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi129')">(0)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi129"></div>
  <table class="grid">
    <tr>
@@ -2908,8 +2943,8 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
 </table>
 <hr/>
-<a name="___w_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_input_pagecontent_specifications_techniques-transmission-info-RDV-LRM"> </a>
-<h2><a href="">input/pagecontent/specifications_techniques-transmission-info-RDV-LRM.md</a> <span id="svi130" class="toggle" onclick="toggle('vi130')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi130')">(0)</span></h2>
+<a name="___w_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_temp_pages__includes_artifacts"> </a>
+<h2><a href="">temp/pages/_includes/artifacts.xml</a> <span id="svi130" class="toggle" onclick="toggle('vi130')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi130')">(0)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi130"></div>
  <table class="grid">
    <tr>
@@ -2917,8 +2952,8 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
 </table>
 <hr/>
-<a name="___w_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_input_pagecontent_validateurs"> </a>
-<h2><a href="">input/pagecontent/validateurs.md</a> <span id="svi131" class="toggle" onclick="toggle('vi131')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi131')">(0)</span></h2>
+<a name="___w_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_template_config"> </a>
+<h2><a href="">template/config</a> <span id="svi131" class="toggle" onclick="toggle('vi131')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi131')">(0)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi131"></div>
  <table class="grid">
    <tr>
@@ -2926,27 +2961,9 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
 </table>
 <hr/>
-<a name="___w_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_temp_pages__includes_artifacts"> </a>
-<h2><a href="">temp/pages/_includes/artifacts.xml</a> <span id="svi132" class="toggle" onclick="toggle('vi132')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi132')">(0)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi132"></div>
- <table class="grid">
-   <tr>
-     <td>&check;</td>
-   </tr>
-</table>
-<hr/>
-<a name="___w_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_template_config"> </a>
-<h2><a href="">template/config</a> <span id="svi133" class="toggle" onclick="toggle('vi133')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi133')">(0)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi133"></div>
- <table class="grid">
-   <tr>
-     <td>&check;</td>
-   </tr>
-</table>
-<hr/>
 <a name="___w_IG-fhir-service-acces-aux-soins_IG-fhir-service-acces-aux-soins_igSource_template_config__config"> </a>
-<h2><a href="">template/config/_config.yml</a> <span id="svi134" class="toggle" onclick="toggle('vi134')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi134')">(0)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi134"></div>
+<h2><a href="">template/config/_config.yml</a> <span id="svi132" class="toggle" onclick="toggle('vi132')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi132')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi132"></div>
  <table class="grid">
    <tr>
      <td>&check;</td>
