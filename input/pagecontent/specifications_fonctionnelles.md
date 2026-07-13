@@ -151,7 +151,7 @@ Le schéma ci-dessous illustre les éléments décrits ci-dessus :
 
 <style>
 .mermaid iframe {
-    width: auto !important;
+    width: auto;
 }
 </style>
 
