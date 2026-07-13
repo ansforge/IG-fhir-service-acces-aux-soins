@@ -33,7 +33,7 @@ Other representations of profile: [CSV](../StructureDefinition-sas-cpts-slot-agg
   "version" : "1.2.0",
   "name" : "FrSlotAgregateurCPTS",
   "status" : "active",
-  "date" : "2026-07-13T12:00:20+00:00",
+  "date" : "2026-07-13T12:22:37+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
