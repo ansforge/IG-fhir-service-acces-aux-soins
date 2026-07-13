@@ -457,77 +457,19 @@ Le schéma ci-dessous illustre les éléments décrits ci-dessus :</li>
 </ul>
 
 <div align="center">
-  Worflowregulateur.svg" /&gt;
-</div>
-
-<div style="text-align:center">
 
 ```mermaid
-
 %%{init: {
   "theme": "base",
   "themeVariables": {
-    "fontFamily":  futura-pt, Arial, sans-serif",
-    "fontSize": "14px"
+    "fontFamily": "futura-pt, Arial, sans-serif",
+    "fontSize": "12px"
   }
 }}%%
 
-
 flowchart TB
- 
-GEST([👤<br />Gestionnaire])
-REG([👤<br />Régulateur])
- 
-SUP["Suppression ou retrait<br />d'habilitation d'un<br />compte régulateur"]
- 
-CON["Connexion à la PTF<br />numérique SAS"]
- 
-CTRL{"Contrôle si des<br />actions sont à mener"}
- 
-REQ["Envoi d'une requête POST<br />ou PUT aux solutions<br />logicielles concernées"]
- 
-TRAIT["Traitement de la requête<br />et envoi de la réponse à<br />la PTF numérique SAS"]
- 
-REP{"Traitement de<br />la réponse"}
- 
-RIEN["Pas d'action"]
- 
-MAJ["Mise à jour de<br />l'état du compte"]
-GEST --&gt; SUP
-REG --&gt; CON
- 
-CON --&gt; CTRL
- 
-CTRL --&gt;|Oui| REQ
-CTRL --&gt;|Non| RIEN
- 
-SUP --&gt; REQ
- 
-REQ --&gt; TRAIT
- 
-TRAIT --&gt; REP
- 
-REP --&gt;|OK| MAJ
-REP --&gt;|KO| RIEN
- 
-
-subgraph LEG["Légende"]
-    direction TB
-    L1["Action SAS"]
-    L2["Action éditeur"]
-end
- 
-MAJ ~~~ L1
- 
-%% Styles
-classDef sas fill:#ffffff,stroke:#000000,stroke-width:2px,color:#000;
-classDef editeur fill:#FFE4B5,stroke:#F4A62A,stroke-width:2px,color:#000;
- 
-
-class CON,SUP,REQ,CTRL,REP,RIEN,MAJ,L1 sas;
- 
-class TRAIT,L2 editeur;
-```
+A[Début] --&gt; B[Fin]
+`
 
 **Autres règles de gestion fonctionnelles à prendre en compte par les éditeurs :**
 - A la création du compte, ne pas avoir d’étape « vérification du mail » ni de mail de confirmation de création de compte
@@ -755,7 +697,7 @@ D’un point de vue implémentation, l’action de **rapprochement entre l’ori
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Package ans.fhir.fr.sas#1.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-07-13 09:42:00 +0000">
+  <span title="2026-07-13 09:54:00 +0000">
     2026-07-13
   </span>
 

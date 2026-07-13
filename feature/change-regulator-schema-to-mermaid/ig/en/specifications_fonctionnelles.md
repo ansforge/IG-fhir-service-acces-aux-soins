@@ -114,33 +114,7 @@ Afin de limiter le nombre d’appels émis vers les solutions logicielles édite
 * Pour la création ou modification de compte, le déclenchement de la requête est lié à la connexion de l’utilisateur à la plateforme numérique SAS. Lors de la connexion du régulateur, un contrôle est effectué afin d’identifier si des actions sont à mener dans les solutions logicielles éditeurs. Dans le cas où des solutions sont identifiées, les requêtes correspondantes sont émises et l’état du compte est mis à jour dans la plateforme numérique SAS.
 * Pour la suppression ou retrait d’habilitation uniquement, le déclenchement de la requête est émis instantanément. Le schéma ci-dessous illustre les éléments décrits ci-dessus :
 
-Worflowregulateur.svg" />
-
-```mermaid %%{init: { "theme": "base", "themeVariables": { "fontFamily": futura-pt, Arial, sans-serif", "fontSize": "14px" } }}%% flowchart TB GEST([👤
-
-Gestionnaire]) REG([👤
-
-Régulateur]) SUP["Suppression ou retrait
-
-d'habilitation d'un
-
-compte régulateur"] CON["Connexion à la PTF
-
-numérique SAS"] CTRL{"Contrôle si des
-
-actions sont à mener"} REQ["Envoi d'une requête POST
-
-ou PUT aux solutions
-
-logicielles concernées"] TRAIT["Traitement de la requête
-
-et envoi de la réponse à
-
-la PTF numérique SAS"] REP{"Traitement de
-
-la réponse"} RIEN["Pas d'action"] MAJ["Mise à jour de
-
-l'état du compte"] GEST --> SUP REG --> CON CON --> CTRL CTRL -->|Oui| REQ CTRL -->|Non| RIEN SUP --> REQ REQ --> TRAIT TRAIT --> REP REP -->|OK| MAJ REP -->|KO| RIEN subgraph LEG["Légende"] direction TB L1["Action SAS"] L2["Action éditeur"] end MAJ ~~~ L1 %% Styles classDef sas fill:#ffffff,stroke:#000000,stroke-width:2px,color:#000; classDef editeur fill:#FFE4B5,stroke:#F4A62A,stroke-width:2px,color:#000; class CON,SUP,REQ,CTRL,REP,RIEN,MAJ,L1 sas; class TRAIT,L2 editeur; ``` **Autres règles de gestion fonctionnelles à prendre en compte par les éditeurs :** - A la création du compte, ne pas avoir d’étape « vérification du mail » ni de mail de confirmation de création de compte - L’ANS et l’éditeur conviendront du fonctionnement attendu pour la génération d’un mot de passe suite à la création du compte. L’attendu est de générer un mot de passe de manière automatisée (réinitialisable via la fonctionnalité « mot de passe oublié ») - La solution logicielle éditeur devra proposer un niveau d’habilitation dédié aux régulateurs et répondant aux besoins de la plateforme numérique SAS. L’utilisateur ne doit pouvoir en disposer que lorsqu’il se connecte via la plateforme numérique SAS (présence du paramètre origin=sas lors de la redirection). Si l’utilisateur se connecte par un autre biais, les fonctionnalités associées à cette habilitation ne doivent pas être disponibles - Lors de la première connexion, à la suite de la création du compte, le régulateur devra souscrire et valider individuellement les conditions contractuelles de l’éditeur préalablement transmises (CGU) - Il est attendu pour les éditeurs ayant implémenté le flux INT_R01 d’agrégation des créneaux de disponibilités, de réutiliser le endpoint et la sécurisation mTLS associée pour le flux INT_R02 de gestion des comptes régulateurs - Certains régulateurs n’ayant pas encore d’identifiant national à date, il est attendu que l’éditeur soit en mesure de gérer les comptes soit sur la base de l’identifiant national ou de l’identifiant technique SAS selon ce qui est transmis par la plateforme numérique SAS ### Délégation d'authentification L’objectif de cette interface, **flux INT_SSO**, est de permettre à l’utilisateur de ne pas avoir à se réauthentifier d’une solution logicielle à l’autre et ainsi fluidifier le parcours utilisateur. Le but étant pour les solutions logicielles éditeurs de déléguer l’authentification à la plateforme numérique SAS. Le schéma de présentation générale ci-dessous illustre le cas d'usage :
+```mermaid %%{init: { "theme": "base", "themeVariables": { "fontFamily": "futura-pt, Arial, sans-serif", "fontSize": "12px" } }}%% flowchart TB A[Début] --> B[Fin] ` **Autres règles de gestion fonctionnelles à prendre en compte par les éditeurs :** - A la création du compte, ne pas avoir d’étape « vérification du mail » ni de mail de confirmation de création de compte - L’ANS et l’éditeur conviendront du fonctionnement attendu pour la génération d’un mot de passe suite à la création du compte. L’attendu est de générer un mot de passe de manière automatisée (réinitialisable via la fonctionnalité « mot de passe oublié ») - La solution logicielle éditeur devra proposer un niveau d’habilitation dédié aux régulateurs et répondant aux besoins de la plateforme numérique SAS. L’utilisateur ne doit pouvoir en disposer que lorsqu’il se connecte via la plateforme numérique SAS (présence du paramètre origin=sas lors de la redirection). Si l’utilisateur se connecte par un autre biais, les fonctionnalités associées à cette habilitation ne doivent pas être disponibles - Lors de la première connexion, à la suite de la création du compte, le régulateur devra souscrire et valider individuellement les conditions contractuelles de l’éditeur préalablement transmises (CGU) - Il est attendu pour les éditeurs ayant implémenté le flux INT_R01 d’agrégation des créneaux de disponibilités, de réutiliser le endpoint et la sécurisation mTLS associée pour le flux INT_R02 de gestion des comptes régulateurs - Certains régulateurs n’ayant pas encore d’identifiant national à date, il est attendu que l’éditeur soit en mesure de gérer les comptes soit sur la base de l’identifiant national ou de l’identifiant technique SAS selon ce qui est transmis par la plateforme numérique SAS ### Délégation d'authentification L’objectif de cette interface, **flux INT_SSO**, est de permettre à l’utilisateur de ne pas avoir à se réauthentifier d’une solution logicielle à l’autre et ainsi fluidifier le parcours utilisateur. Le but étant pour les solutions logicielles éditeurs de déléguer l’authentification à la plateforme numérique SAS. Le schéma de présentation générale ci-dessous illustre le cas d'usage :
 
 * **Délégation d'authentification**: ![](SSO.png)
 
