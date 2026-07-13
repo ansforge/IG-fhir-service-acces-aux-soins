@@ -147,12 +147,7 @@ Afin de limiter le nombre d’appels émis vers les solutions logicielles édite
 - Pour la suppression ou retrait d’habilitation uniquement, le déclenchement de la requête est émis instantanément.
 Le schéma ci-dessous illustre les éléments décrits ci-dessus :
 
-<div align="center">
-  Worflowregulateur.svg" />
-</div>
 
-
-<div style="text-align:center">
 
 ```mermaid
 
@@ -160,7 +155,7 @@ Le schéma ci-dessous illustre les éléments décrits ci-dessus :
   "theme": "base",
   "themeVariables": {
     "fontFamily":  futura-pt, Arial, sans-serif",
-    "fontSize": "14px"
+    "fontSize": "12px"
   }
 }}%%
 
