@@ -1,0 +1,597 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/sas/Bundle/ExampleBundleAgregateurSOS> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "ExampleBundleAgregateurSOS"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-bundle-aggregator" ;
+       fhir:index -1 ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-bundle-aggregator>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:Bundle.type [ fhir:value "searchset"] ;
+  fhir:Bundle.total [ fhir:value "4"^^xsd:nonNegativeInteger] ;
+  fhir:Bundle.link [
+     fhir:index -1 ;
+     fhir:Bundle.link.relation [ fhir:value "self" ] ;
+     fhir:Bundle.link.url [ fhir:value "https://editeur.fr/Schedule?_revinclude=Slot:schedule&_include=Schedule:actor:Location&_include:iterate=Location:organization&_has:Slot:schedule:start=ge2023-08-18T09:00:00+02:00&_has:Slot:schedule:start=le2023-08-20T08:00:00+02:00&_has:Slot:schedule:status=free&actor:Location.organization.identifier=urn:oid:1.2.250.1.71.4.2.2%7C334173748400020,urn:oid:1.2.250.1.71.4.2.2%7C392080466300010&_count=1000" ]
+  ] ;
+  fhir:Bundle.entry [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://exemple.com/ans-sas/Slot/ExampleSlotSOS1" ] ;
+     fhir:Bundle.entry.resource <https://exemple.com/ans-sas/Slot/ExampleSlotSOS1> ;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "include" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://exemple.com/ans-sas/Schedule/ExampleScheduleSOS1" ] ;
+     fhir:Bundle.entry.resource <https://exemple.com/ans-sas/Schedule/ExampleScheduleSOS1> ;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "match" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://exemple.com/ans-sas/Location/1111111111" ] ;
+     fhir:Bundle.entry.resource <https://exemple.com/ans-sas/Location/1111111111> ;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "include" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://exemple.com/ans-sas/Organization/ExampleOrgaSOS1" ] ;
+     fhir:Bundle.entry.resource <https://exemple.com/ans-sas/Organization/ExampleOrgaSOS1> ;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "include" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://exemple.com/ans-sas/Slot/ExampleSlotSOS2" ] ;
+     fhir:Bundle.entry.resource <https://exemple.com/ans-sas/Slot/ExampleSlotSOS2> ;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "include" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://exemple.com/ans-sas/Schedule/ExampleScheduleSOS2" ] ;
+     fhir:Bundle.entry.resource <https://exemple.com/ans-sas/Schedule/ExampleScheduleSOS2> ;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "match" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://exemple.com/ans-sas/Location/2222222222" ] ;
+     fhir:Bundle.entry.resource <https://exemple.com/ans-sas/Location/2222222222> ;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "include" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://exemple.com/ans-sas/Slot/ExampleSlotSOS3" ] ;
+     fhir:Bundle.entry.resource <https://exemple.com/ans-sas/Slot/ExampleSlotSOS3> ;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "include" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://exemple.com/ans-sas/Schedule/ExampleScheduleSOS3" ] ;
+     fhir:Bundle.entry.resource <https://exemple.com/ans-sas/Schedule/ExampleScheduleSOS3> ;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "match" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://exemple.com/ans-sas/Location/3333333333" ] ;
+     fhir:Bundle.entry.resource <https://exemple.com/ans-sas/Location/3333333333> ;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "include" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://exemple.com/ans-sas/Organization/ExampleOrgaSOS2" ] ;
+     fhir:Bundle.entry.resource <https://exemple.com/ans-sas/Organization/ExampleOrgaSOS2> ;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "include" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://exemple.com/ans-sas/Slot/ExampleSlotSOS4" ] ;
+     fhir:Bundle.entry.resource <https://exemple.com/ans-sas/Slot/ExampleSlotSOS4> ;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "include" ]
+     ]
+  ] .
+
+<https://exemple.com/ans-sas/Slot/ExampleSlotSOS1> a fhir:Slot ;
+  fhir:Resource.id [ fhir:value "ExampleSlotSOS1"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator" ;
+       fhir:index -1 ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator>
+     ] ;
+     fhir:Meta.security [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau" ] ;
+       fhir:Coding.code [ fhir:value "PUBLIC" ]
+     ], [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau" ] ;
+       fhir:Coding.code [ fhir:value "SNP" ]
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ]
+  ] ;
+  fhir:Slot.serviceType [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ] ;
+       fhir:Coding.code [ fhir:value "AMB" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ] ;
+       fhir:Coding.code [ fhir:value "VR" ]
+     ]
+  ] ;
+  fhir:Slot.appointmentType [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0276" ] ;
+       fhir:Coding.code [ fhir:value "ROUTINE" ]
+     ]
+  ] ;
+  fhir:Slot.schedule [
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Schedule/ExampleScheduleSOS1> ;
+     fhir:Reference.reference [ fhir:value "Schedule/ExampleScheduleSOS1" ]
+  ] ;
+  fhir:Slot.status [ fhir:value "free"] ;
+  fhir:Slot.start [ fhir:value "2023-08-18T09:00:00.000+02:00"^^xsd:dateTime] ;
+  fhir:Slot.end [ fhir:value "2023-08-18T09:30:00.000+02:00"^^xsd:dateTime] ;
+  fhir:Slot.comment [ fhir:value "http://www.editeur.com/agenda-pfg/creneau1"] .
+
+<https://exemple.com/ans-sas/Schedule/ExampleScheduleSOS1> a fhir:Schedule ;
+  fhir:Resource.id [ fhir:value "ExampleScheduleSOS1"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator" ;
+       fhir:index -1 ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ]
+  ] ;
+  fhir:Schedule.actor [
+     fhir:index -1 ;
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Location/1111111111> ;
+     fhir:Reference.reference [ fhir:value "Location/1111111111" ]
+  ] .
+
+<https://exemple.com/ans-sas/Location/1111111111> a fhir:Location ;
+  fhir:Resource.id [ fhir:value "1111111111"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator" ;
+       fhir:index -1 ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ]
+  ] ;
+  fhir:Location.identifier [
+     fhir:index -1 ;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type" ] ;
+         fhir:Coding.code [ fhir:value "INTRN" ]
+       ]
+     ] ;
+     fhir:Identifier.system [ fhir:value "https://editeur.com" ] ;
+     fhir:Identifier.value [ fhir:value "1111111111" ]
+  ] ;
+  fhir:Location.name [ fhir:value "Centre de consultation Rennes Nord"] ;
+  fhir:Location.telecom [
+     fhir:index -1 ;
+     fhir:ContactPoint.system [ fhir:value "phone" ] ;
+     fhir:ContactPoint.value [ fhir:value "+33193246789" ]
+  ] ;
+  fhir:Location.address [
+     fhir:Address.line [
+       fhir:value "320 avenue Général Georges Patton" ;
+       fhir:index -1
+     ] ;
+     fhir:Address.city [ fhir:value "RENNES" ] ;
+     fhir:Address.postalCode [ fhir:value "35700" ]
+  ] ;
+  fhir:Location.managingOrganization [
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Organization/ExampleOrgaSOS1> ;
+     fhir:Reference.reference [ fhir:value "Organization/ExampleOrgaSOS1" ]
+  ] ;
+  fhir:Location.hoursOfOperation [
+     fhir:index -1 ;
+     fhir:Location.hoursOfOperation.daysOfWeek [
+       fhir:value "tue" ;
+       fhir:index -1
+     ], [
+       fhir:value "wed" ;
+       fhir:index -1
+     ], [
+       fhir:value "thu" ;
+       fhir:index -1
+     ], [
+       fhir:value "fri" ;
+       fhir:index -1
+     ], [
+       fhir:value "sat" ;
+       fhir:index -1
+     ], [
+       fhir:value "sun" ;
+       fhir:index -1
+     ] ;
+     fhir:Location.hoursOfOperation.openingTime [ fhir:value "08:00:00"^^xsd:time ] ;
+     fhir:Location.hoursOfOperation.closingTime [ fhir:value "19:00:00"^^xsd:time ]
+  ] .
+
+<https://exemple.com/ans-sas/Organization/ExampleOrgaSOS1> a fhir:Organization ;
+  fhir:Resource.id [ fhir:value "ExampleOrgaSOS1"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator" ;
+       fhir:index -1 ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ]
+  ] ;
+  fhir:Organization.identifier [
+     fhir:index -1 ;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type" ] ;
+         fhir:Coding.code [ fhir:value "IDNST" ]
+       ]
+     ] ;
+     fhir:Identifier.system [ fhir:value "urn:oid:1.2.250.1.71.4.2.2" ] ;
+     fhir:Identifier.value [ fhir:value "334173748400020" ]
+  ] ;
+  fhir:Organization.name [ fhir:value "SOS Médecins de Rennes"] .
+
+<https://exemple.com/ans-sas/Slot/ExampleSlotSOS2> a fhir:Slot ;
+  fhir:Resource.id [ fhir:value "ExampleSlotSOS2"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator" ;
+       fhir:index -1 ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator>
+     ] ;
+     fhir:Meta.security [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau" ] ;
+       fhir:Coding.code [ fhir:value "PUBLIC" ]
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ]
+  ] ;
+  fhir:Slot.serviceType [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ] ;
+       fhir:Coding.code [ fhir:value "AMB" ]
+     ]
+  ] ;
+  fhir:Slot.appointmentType [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0276" ] ;
+       fhir:Coding.code [ fhir:value "ROUTINE" ]
+     ]
+  ] ;
+  fhir:Slot.schedule [
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Schedule/ExampleScheduleSOS2> ;
+     fhir:Reference.reference [ fhir:value "Schedule/ExampleScheduleSOS2" ]
+  ] ;
+  fhir:Slot.status [ fhir:value "free"] ;
+  fhir:Slot.start [ fhir:value "2023-08-19T11:00:00.000+02:00"^^xsd:dateTime] ;
+  fhir:Slot.end [ fhir:value "2023-08-19T11:30:00.000+02:00"^^xsd:dateTime] ;
+  fhir:Slot.comment [ fhir:value "http://www.editeur.com/agenda-pfg/creneau2"] .
+
+<https://exemple.com/ans-sas/Schedule/ExampleScheduleSOS2> a fhir:Schedule ;
+  fhir:Resource.id [ fhir:value "ExampleScheduleSOS2"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator" ;
+       fhir:index -1 ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ]
+  ] ;
+  fhir:Schedule.actor [
+     fhir:index -1 ;
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Location/2222222222> ;
+     fhir:Reference.reference [ fhir:value "Location/2222222222" ]
+  ] .
+
+<https://exemple.com/ans-sas/Location/2222222222> a fhir:Location ;
+  fhir:Resource.id [ fhir:value "2222222222"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator" ;
+       fhir:index -1 ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ]
+  ] ;
+  fhir:Location.identifier [
+     fhir:index -1 ;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type" ] ;
+         fhir:Coding.code [ fhir:value "INTRN" ]
+       ]
+     ] ;
+     fhir:Identifier.system [ fhir:value "https://editeur.com" ] ;
+     fhir:Identifier.value [ fhir:value "2222222222" ]
+  ] ;
+  fhir:Location.name [ fhir:value "Centre de consultation Rennes Cleunay"] ;
+  fhir:Location.telecom [
+     fhir:index -1 ;
+     fhir:ContactPoint.system [ fhir:value "phone" ] ;
+     fhir:ContactPoint.value [ fhir:value "+33145249912" ]
+  ] ;
+  fhir:Location.address [
+     fhir:Address.line [
+       fhir:value "106 rue Eugène Pottier" ;
+       fhir:index -1
+     ] ;
+     fhir:Address.city [ fhir:value "RENNES" ] ;
+     fhir:Address.postalCode [ fhir:value "35000" ]
+  ] ;
+  fhir:Location.managingOrganization [
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Organization/ExampleOrgaSOS1> ;
+     fhir:Reference.reference [ fhir:value "Organization/ExampleOrgaSOS1" ]
+  ] ;
+  fhir:Location.hoursOfOperation [
+     fhir:index -1 ;
+     fhir:Location.hoursOfOperation.daysOfWeek [
+       fhir:value "mon" ;
+       fhir:index -1
+     ], [
+       fhir:value "tue" ;
+       fhir:index -1
+     ], [
+       fhir:value "wed" ;
+       fhir:index -1
+     ], [
+       fhir:value "thu" ;
+       fhir:index -1
+     ] ;
+     fhir:Location.hoursOfOperation.openingTime [ fhir:value "09:00:00"^^xsd:time ] ;
+     fhir:Location.hoursOfOperation.closingTime [ fhir:value "21:00:00"^^xsd:time ]
+  ] .
+
+<https://exemple.com/ans-sas/Slot/ExampleSlotSOS3> a fhir:Slot ;
+  fhir:Resource.id [ fhir:value "ExampleSlotSOS3"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator" ;
+       fhir:index -1 ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator>
+     ] ;
+     fhir:Meta.security [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau" ] ;
+       fhir:Coding.code [ fhir:value "PUBLIC" ]
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ]
+  ] ;
+  fhir:Slot.serviceType [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ] ;
+       fhir:Coding.code [ fhir:value "VR" ]
+     ]
+  ] ;
+  fhir:Slot.appointmentType [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0276" ] ;
+       fhir:Coding.code [ fhir:value "ROUTINE" ]
+     ]
+  ] ;
+  fhir:Slot.schedule [
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Schedule/ExampleScheduleSOS3> ;
+     fhir:Reference.reference [ fhir:value "Schedule/ExampleScheduleSOS3" ]
+  ] ;
+  fhir:Slot.status [ fhir:value "free"] ;
+  fhir:Slot.start [ fhir:value "2023-08-18T14:20:00.000+02:00"^^xsd:dateTime] ;
+  fhir:Slot.end [ fhir:value "2023-08-18T14:40:00.000+02:00"^^xsd:dateTime] ;
+  fhir:Slot.comment [ fhir:value "http://www.editeur.com/agenda-pfg/creneau3"] .
+
+<https://exemple.com/ans-sas/Schedule/ExampleScheduleSOS3> a fhir:Schedule ;
+  fhir:Resource.id [ fhir:value "ExampleScheduleSOS3"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator" ;
+       fhir:index -1 ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ]
+  ] ;
+  fhir:Schedule.actor [
+     fhir:index -1 ;
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Location/3333333333> ;
+     fhir:Reference.reference [ fhir:value "Location/3333333333" ]
+  ] .
+
+<https://exemple.com/ans-sas/Location/3333333333> a fhir:Location ;
+  fhir:Resource.id [ fhir:value "3333333333"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator" ;
+       fhir:index -1 ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ]
+  ] ;
+  fhir:Location.identifier [
+     fhir:index -1 ;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type" ] ;
+         fhir:Coding.code [ fhir:value "INTRN" ]
+       ]
+     ] ;
+     fhir:Identifier.system [ fhir:value "https://editeur.com" ] ;
+     fhir:Identifier.value [ fhir:value "3333333333" ]
+  ] ;
+  fhir:Location.name [ fhir:value "Centre de consultation Lorient"] ;
+  fhir:Location.telecom [
+     fhir:index -1 ;
+     fhir:ContactPoint.system [ fhir:value "phone" ] ;
+     fhir:ContactPoint.value [ fhir:value "+33139555992" ]
+  ] ;
+  fhir:Location.address [
+     fhir:Address.line [
+       fhir:value "12 impasse Royer Dubail" ;
+       fhir:index -1
+     ] ;
+     fhir:Address.city [ fhir:value "LORIENT" ] ;
+     fhir:Address.postalCode [ fhir:value "56100" ]
+  ] ;
+  fhir:Location.managingOrganization [
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Organization/ExampleOrgaSOS2> ;
+     fhir:Reference.reference [ fhir:value "Organization/ExampleOrgaSOS2" ]
+  ] ;
+  fhir:Location.hoursOfOperation [
+     fhir:index -1 ;
+     fhir:Location.hoursOfOperation.daysOfWeek [
+       fhir:value "tue" ;
+       fhir:index -1
+     ], [
+       fhir:value "thu" ;
+       fhir:index -1
+     ], [
+       fhir:value "sat" ;
+       fhir:index -1
+     ] ;
+     fhir:Location.hoursOfOperation.openingTime [ fhir:value "11:00:00"^^xsd:time ] ;
+     fhir:Location.hoursOfOperation.closingTime [ fhir:value "18:00:00"^^xsd:time ]
+  ] .
+
+<https://exemple.com/ans-sas/Organization/ExampleOrgaSOS2> a fhir:Organization ;
+  fhir:Resource.id [ fhir:value "ExampleOrgaSOS2"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator" ;
+       fhir:index -1 ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ]
+  ] ;
+  fhir:Organization.identifier [
+     fhir:index -1 ;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type" ] ;
+         fhir:Coding.code [ fhir:value "IDNST" ]
+       ]
+     ] ;
+     fhir:Identifier.system [ fhir:value "urn:oid:1.2.250.1.71.4.2.2" ] ;
+     fhir:Identifier.value [ fhir:value "392080466300010" ]
+  ] ;
+  fhir:Organization.name [ fhir:value "SOS Médecins Lorient et agglomération"] .
+
+<https://exemple.com/ans-sas/Slot/ExampleSlotSOS4> a fhir:Slot ;
+  fhir:Resource.id [ fhir:value "ExampleSlotSOS4"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator" ;
+       fhir:index -1 ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator>
+     ] ;
+     fhir:Meta.security [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau" ] ;
+       fhir:Coding.code [ fhir:value "PUBLIC" ]
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ]
+  ] ;
+  fhir:Slot.serviceType [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ] ;
+       fhir:Coding.code [ fhir:value "AMB" ]
+     ]
+  ] ;
+  fhir:Slot.appointmentType [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0276" ] ;
+       fhir:Coding.code [ fhir:value "ROUTINE" ]
+     ]
+  ] ;
+  fhir:Slot.schedule [
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Schedule/ExampleScheduleSOS3> ;
+     fhir:Reference.reference [ fhir:value "Schedule/ExampleScheduleSOS3" ]
+  ] ;
+  fhir:Slot.status [ fhir:value "free"] ;
+  fhir:Slot.start [ fhir:value "2023-08-18T14:40:00.000+02:00"^^xsd:dateTime] ;
+  fhir:Slot.end [ fhir:value "2023-08-18T15:00:00.000+02:00"^^xsd:dateTime] ;
+  fhir:Slot.comment [ fhir:value "http://www.editeur.com/agenda-pfg/creneau4"] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/sas/Bundle/ExampleBundleAgregateurSOS.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
