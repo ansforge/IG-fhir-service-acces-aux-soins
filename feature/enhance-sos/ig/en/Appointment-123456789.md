@@ -12,7 +12,7 @@ Profile: [FrAppointmentSASSOS](StructureDefinition-sas-sos-appointment.md)
 
 **FrAppointmentOperator**: Identifier: Identifiant National de Professionnel de Santé/3456780581/11242343
 
-**identifier**: `urn:oid:1.1.111.1.11.1.1.1`/b6e39355-8a61-4556-b340-36f7b95fec6b
+**identifier**: `urn:oid:1.1.111.1.11.1.1.1`/b6e39355-8a61-4556-b340-36f7b95fec6a
 
 **status**: Booked
 
@@ -55,7 +55,7 @@ Profile: [FrAppointmentSASSOS](StructureDefinition-sas-sos-appointment.md)
   }],
   "identifier" : [{
     "system" : "urn:oid:1.1.111.1.11.1.1.1",
-    "value" : "b6e39355-8a61-4556-b340-36f7b95fec6b"
+    "value" : "b6e39355-8a61-4556-b340-36f7b95fec6a"
   }],
   "status" : "booked",
   "start" : "2022-09-04T14:00:00+01:00",
