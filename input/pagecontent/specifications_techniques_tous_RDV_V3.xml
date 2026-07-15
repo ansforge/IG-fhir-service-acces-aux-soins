@@ -162,7 +162,7 @@ détails sur la raison de l'échec</p>
 </div> /-->
 
 
-<div class="nav nav-tabs" id="nav-tab" role="tablist">
+<!--<ul class="nav nav-tabs" id="nav-tab" role="tablist">
     <a class="nav-link active" id="nav-ps-indiv-cpts-tab" data-toggle="tab" href="#nav-ps-indiv-cpts" role="tab" aria-controls="nav-ps-indiv-cpts" aria-selected="true">PS indiv/CPTS</a>
     <a class="nav-link" id="nav-sos-tab" data-toggle="tab" href="#nav-sos" role="tab" aria-controls="nav-sos" aria-selected="false">SOS Médecins</a>
     <a class="nav-link" id="nav-pdm-tab" data-toggle="tab" href="#nav-pdm" role="tab" aria-controls="nav-pdm" aria-selected="false">Place de Marché</a>
@@ -186,19 +186,46 @@ détails sur la raison de l'échec</p>
         </pre>
     </div>
     <div class="tab-pane fade" id="nav-pdm" role="tabpanel" aria-labelledby="nav-pdm-tab">
-        <!-- <p><strong>Requête :</strong></p>
-        <p><code>post[BASE]/Appointment</code></p>
-        <p><strong>Corps de la requête :</strong></p>
-        <p>La requête ci-dessous correspond à la transmission d'un RDV pris par le régulateur avec un identifiant national 3456780581/11242343 avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h.</p>
-        {% include Appointment-1-json-html.xhtml %} /-->
         <p>TEST SIMPLE</p>
         <pre>
             TEST JSON
         </pre>
     </div>
+</div>/-->
+
+<ul class="nav nav-tabs" role="tablist">
+  <li class="active">
+    <a href="#nav-ps-indiv-cpts" data-toggle="tab">PS indiv/CPTS</a>
+  </li>
+
+  <li>
+    <a href="#nav-sos" data-toggle="tab">SOS Médecins</a>
+  </li>
+
+  <li>
+    <a href="#nav-pdm" data-toggle="tab">Place de Marché</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+  <div id="nav-ps-indiv-cpts" class="tab-pane fade in active" role="tabpanel">
+    Test
+  </div>
+
+  <div id="nav-sos" class="tab-pane fade" role="tabpanel">
+    Testsos
+  </div>
+
+  <div id="nav-pdm" class="tab-pane fade" role="tabpanel">
+    Testpdm
+  </div>
 </div>
 
-
+<!-- <p><strong>Requête :</strong></p>
+        <p><code>post[BASE]/Appointment</code></p>
+        <p><strong>Corps de la requête :</strong></p>
+        <p>La requête ci-dessous correspond à la transmission d'un RDV pris par le régulateur avec un identifiant national 3456780581/11242343 avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h.</p>
+        {% include Appointment-1-json-html.xhtml %} /-->
 <h3>Mise à jour de rendez-vous</h3>
 <h4>Construction de la requête de base</h4>
 <table>
