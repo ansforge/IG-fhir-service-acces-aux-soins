@@ -71,7 +71,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-sas-categorie-o
   "version" : "1.2.0",
   "name" : "CategorieOrientation",
   "status" : "active",
-  "date" : "2026-07-15T08:14:55+00:00",
+  "date" : "2026-07-15T08:26:44+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
