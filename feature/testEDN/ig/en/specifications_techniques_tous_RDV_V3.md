@@ -60,29 +60,11 @@ Plus de précision sur la spécification FHIR : [https://www.hl7.org/fhir/http.h
 
 #### Exemples de requêtes
 
-TEST SIMPLE
+Test
 
-```
+Testsos
 
-            TEST JSON
-        
-```
-
-TEST SIMPLE
-
-```
-
-            TEST JSON
-        
-```
-
-TEST SIMPLE
-
-```
-
-            TEST JSON
-        
-```
+Testpdm
 
 ### Mise à jour de rendez-vous
 
