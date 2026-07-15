@@ -150,21 +150,21 @@ Le schéma ci-dessous illustre les éléments décrits ci-dessus :
 
 
 <style>
-.mermaid iframe {
-    display: block;
-    width: fit-content !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+.mermaid {
+    text-align: center;
 }
 </style>
 
-<div class="mermaid" style="width:100%; text-align:center;">
+<div class="mermaid">
 
 %%{init: {
   "theme": "base",
   "themeVariables": {
     "fontFamily": "verdana",
     "fontSize": "12px"
+  },
+  "flowchart": {
+    "useMaxWidth": true
   }
 }}%%
 
