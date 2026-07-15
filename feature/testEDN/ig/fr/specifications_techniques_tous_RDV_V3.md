@@ -65,9 +65,21 @@ Plus de précision sur la spécification FHIR : [https://www.hl7.org/fhir/http.h
 
  La requête ci-dessous correspond à la transmission d'un rendez-vous pris par le régulateur avec un identifiant national 3456780581/11242343 avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h. 
 
-Testsos
+**Requête :**
 
-Testpdm
+ `POST [BASE]/Appointment` 
+
+**Corps de la requête :**
+
+ La requête ci-dessous correspond à la transmission d'un rendez-vous pris par le régulateur avec un identifiant national 3456780581/11242343 avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h. 
+
+**Requête :**
+
+ `POST [BASE]/Appointment` 
+
+**Corps de la requête :**
+
+ La requête ci-dessous correspond à la transmission d'un rendez-vous pris par le régulateur avec un identifiant national 3456780581/11242343 avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h. 
 
 ### Mise à jour de rendez-vous
 

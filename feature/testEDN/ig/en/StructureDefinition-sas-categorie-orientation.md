@@ -34,7 +34,7 @@ Other representations of profile: [CSV](../StructureDefinition-sas-categorie-ori
   "version" : "1.2.0",
   "name" : "CategorieOrientation",
   "status" : "active",
-  "date" : "2026-07-15T14:20:54+00:00",
+  "date" : "2026-07-15T14:44:09+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
