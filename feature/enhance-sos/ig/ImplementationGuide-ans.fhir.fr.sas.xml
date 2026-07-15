@@ -11,7 +11,7 @@
   <name value="SAS"/>
   <title value="Service d'Accès aux Soins"/>
   <status value="active"/>
-  <date value="2026-07-15T09:48:09+00:00"/>
+  <date value="2026-07-15T12:35:13+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -652,20 +652,20 @@
       <reference>
         <reference value="Appointment/12345678"/>
       </reference>
-      <name value="ExampleAppointmentSOS"/>
+      <name value="ExampleAppointmentSOS1"/>
       <description value="Exemple RDV SOS pending PS non connu"/>
       <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-appointment"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Bundle"/>
+        <valueString value="Appointment"/>
       </extension>
       <reference>
-        <reference value="Bundle/ExampleBundleAgregateurSOS"/>
+        <reference value="Appointment/123456789"/>
       </reference>
-      <name value="ExampleBundleAgregateurSOS"/>
-      <description value="Exemple Bundle SOS"/>
-      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-bundle-aggregator"/>
+      <name value="ExampleAppointmentSOS2"/>
+      <description value="Exemple RDV SOS accepted PS connu"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-appointment"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -699,6 +699,17 @@
       <name value="ExampleBundlePSIndiv"/>
       <description value="Exemple Bundle PS indiv"/>
       <exampleCanonical value="http://sas.fr/fhir/StructureDefinition/BundleAgregateur"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/ExampleBundleSOS"/>
+      </reference>
+      <name value="ExampleBundleSOS"/>
+      <description value="Exemple Bundle SOS"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-bundle-aggregator"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

@@ -462,7 +462,7 @@ Plus de précision sur la spécification FHIR :
 
 <p><strong>Requête :</strong></p>
 
-<p><code>get[BASE]/Schedule?_revinclude=Slot:schedule&amp;_include=Schedule:actor:Location&amp;_include:iterate=Location:organization&amp;_has:Slot:schedule:start=ge2023-08-18T10:00:00+02:00<br/>&amp;_has:Slot:schedule:start=le2023-08-20T09:00:00+02:00&amp;_has:Slot:schedule:status=free&amp;actor:Location.organization.identifier=urn:oid:1.2.250.1.71.4.2.27C334173748400020<br/>,urn:oid:1.2.250.1.71.4.2.2%7C340426662900033</code></p>
+<p><code>get[BASE]/Schedule?_revinclude=Slot:schedule&amp;_include=Schedule:actor:Location&amp;_include:iterate=Location:organization&amp;_has:Slot:schedule:start=ge2023-08-18T10:00:00+02:00<br/>&amp;_has:Slot:schedule:start=le2023-08-20T09:00:00+02:00&amp;_has:Slot:schedule:status=free&amp;actor:Location.organization.identifier=urn:oid:1.2.250.1.71.4.2.2%7C334173748400020<br/>,urn:oid:1.2.250.1.71.4.2.2%7C340426662900033</code></p>
 
 <p><strong>Réponse simplifiée&nbsp;:</strong></p>
 
@@ -496,30 +496,30 @@ HTTP 200 OK
 <ul>
   <li>2 créneaux disponibles via l’association SOS Médecins de Rennes (SIRET : 334173748400020) :
     <ul>
-      <li>1 créneau au PFG : Centre de consultation Rennes Nord :
+      <li>1 créneau au LFC : Centre de consultation Rennes Nord :
         <ul>
           <li>Adresse : 320 avenue Général George Patton (35700)</li>
-          <li>ID du PFG : 1111111111</li>
+          <li>ID du LFC : 1111111111</li>
           <li>Statut du créneau : disponible</li>
           <li>Date et horaires : 18 août 2023 de 9h à 9h30</li>
           <li>URL du créneau : http://www.editeur.com/agenda-pfg/creneau1</li>
-          <li>Téléphone du PFG : 0193246789</li>
-          <li>Jours et horaires d’ouverture du PFG : du mardi au dimanche de 8h00 à 19h00</li>
+          <li>Téléphone du LFC : 0193246789</li>
+          <li>Jours et horaires d’ouverture du LFC : du mardi au dimanche de 8h00 à 19h00</li>
           <li>Avec prise de RDV</li>
           <li>Type de créneau : visible du grand public et réservé SAS</li>
           <li>Type de consultation : au cabinet ou en téléconsultation</li>
         </ul>
       </li>
-      <li>1 créneau au PFG : Centre de consultation Rennes Cleunay :
+      <li>1 créneau au LFC : Centre de consultation Rennes Cleunay :
         <ul>
           <li>Adresse : 320 avenue Général George Patton (35700)</li>
           <li>Adresse : 106 rue Eugène Pottier (35000)</li>
-          <li>ID du PFG : 2222222222</li>
+          <li>ID du LFC : 2222222222</li>
           <li>Statut du créneau : free</li>
           <li>Date et horaires : 19 août 2023 de 11h à 11h30</li>
           <li>URL du créneau : http://www.editeur.com/agenda-pfg/creneau2</li>
-          <li>Téléphone du PFG : 0145249912</li>
-          <li>Jours et horaires d’ouverture du PFG : du lundi au jeudi de 9h00 à 21h00</li>
+          <li>Téléphone du LFC : 0145249912</li>
+          <li>Jours et horaires d’ouverture du LFC : du lundi au jeudi de 9h00 à 21h00</li>
           <li>Avec prise de RDV</li>
           <li>Type de créneau : visible du grand public</li>
           <li>Type de consultation : au cabinet</li>
@@ -529,12 +529,12 @@ HTTP 200 OK
   </li>
   <li>2 créneaux disponibles via l’association SOS Médecins Lorient et agglomération (SIRET : 392080466300010) :
     <ul>
-      <li>Les 2 créneaux sont rattachés au PFG : Centre de consultation Lorient :
+      <li>Les 2 créneaux sont rattachés au LFC : Centre de consultation Lorient :
         <ul>
           <li>Adresse : 12 impasse Royer Dubail (56100)</li>
-          <li>ID du PFG : 3333333333</li>
-          <li>Téléphone du PFG : 0139555992</li>
-          <li>Jours et horaires d’ouverture du PFG : mardi, jeudi et samedi de 11h00 à 18h00</li>
+          <li>ID du LFC : 3333333333</li>
+          <li>Téléphone du LFC : 0139555992</li>
+          <li>Jours et horaires d’ouverture du LFC : mardi, jeudi et samedi de 11h00 à 18h00</li>
           <li>Caractéristiques du créneau 1 :
             <ul>
               <li>Date et horaires : 18 août 2023 de 14h20 à 14h40</li>
@@ -558,7 +558,7 @@ HTTP 200 OK
   </li>
 </ul>
 
-<p>Pour consulter l'exemple en plein écran, cliquer <a href="./Bundle-ExampleBundleAgregateurSOS.json.html">ici</a>.</p>
+<p><a name="l1113">​</a>Pour consulter l'exemple en plein écran, cliquer <a href="./Bundle-ExampleBundleAgregateurSOS.json.html">ici</a>.</p>
 
 <iframe scrolling="yes" src="./Bundle-ExampleBundleAgregateurSOS.json" width="100%" style="border: 1px solid #cccccc; border-radius: 4px; background: #f5f2f0;" height="300"></iframe>
 <p><br/></p>
@@ -594,7 +594,7 @@ HTTP 200 OK
       <li>L'utilisation de la nomenclature standard AppointmentReasonCodes (<a href="https://www.hl7.org/fhir/v2/0276/index.html">https://www.hl7.org/fhir/v2/0276/index.html</a>) est attendue. Cette nomenclature contient différentes notions, cependant, la plateforme numérique SAS gère les 2 valeurs ci-dessous :
         <ul>
           <li>ROUTINE – Créneau avec prise de RDV possible.</li>
-          <li>WALKIN – Créneau sans prise de RDV possible&lt;/br&gt;
+          <li>WALKIN – Créneau sans prise de RDV possible.
 Seuls les créneaux avec prise de RDV <code class="language-plaintext highlighter-rouge">ROUTINE</code> sont attendus pour ce cas d'usage.</li>
         </ul>
       </li>
@@ -618,13 +618,13 @@ Seuls les créneaux avec prise de RDV <code class="language-plaintext highlighte
   </li>
   <li><strong>ID du lieu fixe de consultation :</strong>
     <ul>
-      <li>Identifiant unique permettant d’identifier individuellement chaque point lieu fixe de consultation. Deux combinaisons sont possibles selon que le PFG ait un identifiant national de structure (IDNST) connu ou non :
+      <li>Identifiant unique permettant d’identifier individuellement chaque point lieu fixe de consultation. Deux combinaisons sont possibles selon que le LFC ait un identifiant national de structure (IDNST) connu ou non :
         <ul>
-          <li>Lorsque le <strong>PFG a un identifiant national de structure</strong> connu, les différents champs sont valorisés comme suit :</li>
+          <li>Lorsque le <strong>LFC a un identifiant national de structure</strong> connu, les différents champs sont valorisés comme suit :</li>
           <li>identifier.value (valeur de l’identifiant) : valeur de l’IDNST avec préfixe</li>
           <li>identifier.system (autorité d’affectation) : urn:oid:1.2.250.1.71.4.2.2</li>
           <li>identifier.type (type d’identifiant) : le champ type.coding.code est valorisé à <code class="language-plaintext highlighter-rouge">IDNST</code> et type.coding.system à <code class="language-plaintext highlighter-rouge">http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type</code></li>
-          <li>Lorsque le <strong>l’identifiant national de structure du PFG n’est pas connu</strong>, les différents champs sont valorisés comme suit :
+          <li>Lorsque le <strong>l’identifiant national de structure du LFC n’est pas connu</strong>, les différents champs sont valorisés comme suit :
             <ul>
               <li>identifier.value (valeur de l’identifiant) : Identifiant technique défini par la solution logicielle éditeur avec un format de type UUID par exemple</li>
               <li>identifier.system (autorité d’affectation) : : OID propre de la solution logicielle éditeur ou valorisation du champ avec une URL de la solution logicielle éditeur par exemple</li>
@@ -703,7 +703,7 @@ Seuls les créneaux avec prise de RDV <code class="language-plaintext highlighte
           IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Package ans.fhir.fr.sas#1.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-07-15 09:48:00 +0000">
+  <span title="2026-07-15 12:35:00 +0000">
     2026-07-15
   </span>
 

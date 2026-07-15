@@ -1,6 +1,6 @@
-# ExampleAppointmentSOS - Service d'Accès aux Soins v1.2.0
+# ExampleAppointmentSOS1 - Service d'Accès aux Soins v1.2.0
 
-## Example Appointment: ExampleAppointmentSOS
+## Example Appointment: ExampleAppointmentSOS1
 
 -------
 
@@ -19,8 +19,6 @@ Profile: [FrAppointmentSASSOS](StructureDefinition-sas-sos-appointment.md)
 **start**: 2022-09-04 14:00:00+0100
 
 **end**: 2022-09-04 14:15:00+0100
-
-**created**: 2022-09-04 10:00:00+0100
 
 ### Participants
 
@@ -62,7 +60,6 @@ Profile: [FrAppointmentSASSOS](StructureDefinition-sas-sos-appointment.md)
   "status" : "pending",
   "start" : "2022-09-04T14:00:00+01:00",
   "end" : "2022-09-04T14:15:00+01:00",
-  "created" : "2022-09-04T10:00:00+01:00",
   "participant" : [{
     "type" : [{
       "coding" : [{

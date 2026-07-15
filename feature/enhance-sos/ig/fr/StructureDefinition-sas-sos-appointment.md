@@ -7,7 +7,7 @@ Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux
 
 **Utilisations:**
 
-* Exemples pour ce/t/te Profil: [Appointment/12345678](Appointment-12345678.md)
+* Exemples pour ce/t/te Profil: [Appointment/12345678](Appointment-12345678.md) and [Appointment/123456789](Appointment-123456789.md)
 * CapabilityStatements utilisant ce Profil: [Profil SAS gestionnaire d'agenda RDV SOS](CapabilityStatement-SAS-GestionnaireAgenda-RDVSOS.md)
 
 Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.sas|current/StructureDefinition/sas-sos-appointment)
@@ -100,7 +100,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-sas-sos-appoint
   "version" : "1.2.0",
   "name" : "FrAppointmentSASSOS",
   "status" : "active",
-  "date" : "2026-07-15T09:48:09+00:00",
+  "date" : "2026-07-15T12:35:13+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
