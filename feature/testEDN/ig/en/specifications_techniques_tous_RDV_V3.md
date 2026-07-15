@@ -60,7 +60,13 @@ Plus de précision sur la spécification FHIR : [https://www.hl7.org/fhir/http.h
 
 #### Exemples de requêtes
 
- TEST SIMPLE 
+TEST SIMPLE
+
+```
+
+            TEST JSON
+        
+```
 
 **Requête :**
 
