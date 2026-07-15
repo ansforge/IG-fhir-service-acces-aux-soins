@@ -205,14 +205,6 @@ TRAIT --> REP
 REP -->|OK| MAJ
 REP -->|KO| RIEN
  
-
-subgraph LEG["Légende"]
-    direction TB
-    L1["Action SAS"]
-    L2["Action éditeur"]
-end
- 
-MAJ ~~~ L1
  
 %% Styles
 classDef sas fill:#ffffff,stroke:#000000,stroke-width:2px,color:#000;
