@@ -135,7 +135,7 @@ la PTF numérique SAS"] REP{"Traitement de
 
 la réponse"} RIEN["Pas d'action"] MAJ["Mise à jour de
 
-l'état du compte"] GEST --> SUP REG --> CON CON --> CTRL CTRL -->|Oui| REQ CTRL -->|Non| RIEN SUP --> REQ REQ --> TRAIT TRAIT --> REP REP -->|OK| MAJ REP -->|KO| RIEN subgraph LEG["Légende"] direction TB L1["Action SAS"] L2["Action éditeur"] end MAJ ~~~ L1 %% Styles classDef sas fill:#ffffff,stroke:#000000,stroke-width:2px,color:#000; classDef editeur fill:#FFE4B5,stroke:#F4A62A,stroke-width:2px,color:#000; class CON,SUP,REQ,CTRL,REP,RIEN,MAJ,L1 sas; class TRAIT,L2 editeur;
+l'état du compte"] GEST --> SUP REG --> CON CON --> CTRL CTRL -->|Oui| REQ CTRL -->|Non| RIEN SUP --> REQ REQ --> TRAIT TRAIT --> REP REP -->|OK| MAJ REP -->|KO| RIEN %% Styles classDef sas fill:#ffffff,stroke:#000000,stroke-width:2px,color:#000; classDef editeur fill:#FFE4B5,stroke:#F4A62A,stroke-width:2px,color:#000; class CON,SUP,REQ,CTRL,REP,RIEN,MAJ,L1 sas; class TRAIT,L2 editeur;
 
 **Autres règles de gestion fonctionnelles à prendre en compte par les éditeurs :**
 
