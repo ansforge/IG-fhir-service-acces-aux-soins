@@ -1,6 +1,6 @@
-# Remontée des informations des Rendez-Vous pris - Service d'Accès aux Soins v1.2.0
+# Récupération des données du RDV pris - Service d'Accès aux Soins v1.2.0
 
-## Remontée des informations des Rendez-Vous pris
+## Récupération des données du RDV pris
 
  
 There is no translation page available for the current page, so it has been rendered in the default language 
@@ -59,6 +59,8 @@ Si la recherche échoue, le serveur doit répondre :
 Plus de précision sur la spécification FHIR : [https://www.hl7.org/fhir/http.html](https://www.hl7.org/fhir/http.html)
 
 #### Exemples de requêtes
+
+Ci-dessous des exemples de requêtes pour la création de rendez-vous par cas d'usage :
 
 **Requête :**
 
@@ -123,4 +125,164 @@ Si la recherche échoue, le serveur doit répondre :
 * 422 (Unprocessable Entity) – L'action demandée ne peut pas être réalisée à cause d’une règle interne à l’application.
 
 Plus de précision sur la spécification FHIR : [https://www.hl7.org/fhir/http.html](https://www.hl7.org/fhir/http.html)
+
+Ci-dessous des exemples de requêtes pour la modification de rendez-vous par cas d'usage :
+
+**Requête :**
+
+ `PUT [BASE]/Appointment` 
+
+**Corps de la requête :**
+
+ La requête ci-dessous correspond à la transmission d’un RDV pris par le régulateur avec un identifiant national 3456780581/11242343 avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h, dont le statut est annulé. 
+
+**Requête :**
+
+ `PUT [BASE]/Appointment` 
+
+**Corps de la requête :**
+
+ La requête ci-dessous correspond à la transmission d’un RDV pris par le régulateur avec un identifiant national 3456780581/11242343 avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h, dont le statut est annulé. 
+
+**Requête :**
+
+ `PUT [BASE]/Appointment` 
+
+**Corps de la requête :**
+
+ La requête ci-dessous correspond à la transmission d’un RDV pris par le régulateur avec un identifiant national 3456780581/11242343 avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h, dont le statut est annulé. 
+
+### Nomenclatures
+
+Cette section détaille les nomenclatures à utiliser afin de renseigner les différents éléments codifiés de la requête.
+
+* **Identifiant technique du RDV :** 
+* Un identifiant technique unique par RDV est attendu. Cet ID est défini par la solution logicielle éditeur et peut prendre la forme d'un UUID par exemple. Les échanges s'appuieront sur cet ID pour les requêtes de mises à jour (interaction conditional update).
+ 
+* **Autorité d'affectation de la solution logicielle éditeur :** 
+* Ce champ est une valeur fixe, valorisé soit par une URL soit par un OID. Si l'éditeur possède un OID propre à sa solution logicielle il est attendu que celui-ci soit transmis, sinon il est demandé de définir une URL propre à la solution éditeur.
+ 
+* **URL de l'extension AppointmentOperator pour la référence au régulateur :** 
+* Ce champ est une valeur fixe, valorisé à `http://interopsante.org/fhir/StructureDefinition/FrAppointmentOperator`.
+ 
+* **Identification du régulateur ayant pris le RDV pour le patient :** 
+* Il s'agit de l'identifiant communiqué par la plateforme numérique SAS dans l'interface INT_R02 "Gestion des comptes régulateurs". Deux combinaisons sont possibles pour ces trois champs selon que le régulateur possède ou non un identifiant national. 
+* Lorsque le régulateur a un identifiant national, les différents champs seront valorisés comme suit (1) : 
+* Valeur de l'identifiant (ID 4) : Identifiant national avec préfixe ;
+* Autorité d'affectation (ID 5) : urn:oid:1.2.250.1.71.4.2.1 ;
+* Type d'identifiant (ID 6) : le champ `type.coding.code` est valorisé à `IDNPS` et `type.coding.system` à `http://interopsante.org/fhir/CodeSystem/fr-v2-0203`.
+ 
+* Lorsque le régulateur n'a pas d’identifiant national, nous utiliserons un ID technique SAS, les différents champs seront valorisés comme suit : 
+* Valeur de l'identifiant (ID 4) : Identifiant technique SAS avec un format de type UUID ;
+* Autorité d'affectation (ID 5) : urn:oid:1.2.250.1.213.3.6 ;
+* Type d'identifiant (ID 6) : le champ type.coding.code est valorisé à `INTRN` et `type.coding.system` à `http://interopsante.org/fhir/CodeSystem/fr-v2-0203`.
+ 
+ 
+* **Statut du RDV :** 
+* L'utilisation de la nomenclature standard AppointmentStatus ([http://hl7.org/fhir/appointmentstatus](http://hl7.org/fhir/appointmentstatus)) est attendue. La plateforme numérique SAS exploite à date les valeurs suivantes : 
+* PENDING : RDV en attente de confirmation
+* BOOKED : RDV pris et confirmé
+* FULFILLED : RDV honoré
+* NOSHOW : RDV non honoré
+* CANCELLED : RDV annulé
+ 
+ 
+* **Identification du PS effecteur de soins :** 
+* Les champs attendus doivent être valorisés comme suit (1) : 
+* Valeur de l'identifiant (ID 10) : RPPS avec préfixe "8" ou ADELI avec préfixe "0"
+* Autorité d'affectation (ID 11) : urn:oid:1.2.250.1.71.4.2.1
+* Type d'identifiant (ID 12) : le champ `type.coding.code` est valorisé à `IDNPS` et `type.coding.system` à `http://interopsante.org/fhir/CodeSystem/fr-v2-0203`
+ 
+ 
+* **Statut d’acceptation du RDV par le PS effecteur de soins :** 
+* L'utilisation de la nomenclature standard Appointmentparticipantstatus ([http://hl7.org/fhir/ValueSet/participationstatus](http://hl7.org/fhir/ValueSet/participationstatus)) est attendue. La plateforme numérique SAS ne récupérant que les RDV avec acceptation automatique et tacite du médecin effecteur de soins, ce champ aura systématiquement la valeur « accepted ».
+ 
+
+* **Identifiant technique du RDV :** 
+* Un identifiant technique unique par RDV est attendu. Cet ID est défini par la solution logicielle éditeur et peut prendre la forme d'un UUID par exemple. Les échanges s'appuieront sur cet ID pour les requêtes de mises à jour (interaction conditional update).
+ 
+* **Autorité d'affectation de la solution logicielle éditeur :** 
+* Ce champ est une valeur fixe, valorisé soit par une URL soit par un OID. Si l'éditeur possède un OID propre à sa solution logicielle il est attendu que celui-ci soit transmis, sinon il est demandé de définir une URL propre à la solution éditeur.
+ 
+* **URL de l'extension AppointmentOperator pour la référence au régulateur :** 
+* Ce champ est une valeur fixe, valorisé à `http://interopsante.org/fhir/StructureDefinition/FrAppointmentOperator`.
+ 
+* **Identification du régulateur ayant pris le RDV pour le patient :** 
+* Il s'agit de l'identifiant communiqué par la plateforme numérique SAS dans l'interface INT_R02 "Gestion des comptes régulateurs". Deux combinaisons sont possibles pour ces trois champs selon que le régulateur possède ou non un identifiant national. 
+* Lorsque le régulateur a un identifiant national, les différents champs seront valorisés comme suit (1) : 
+* Valeur de l'identifiant (ID 4) : Identifiant national avec préfixe ;
+* Autorité d'affectation (ID 5) : urn:oid:1.2.250.1.71.4.2.1 ;
+* Type d'identifiant (ID 6) : le champ `type.coding.code` est valorisé à `IDNPS` et `type.coding.system` à `http://interopsante.org/fhir/CodeSystem/fr-v2-0203`.
+ 
+* Lorsque le régulateur n'a pas d’identifiant national, nous utiliserons un ID technique SAS, les différents champs seront valorisés comme suit : 
+* Valeur de l'identifiant (ID 4) : Identifiant technique SAS avec un format de type UUID ;
+* Autorité d'affectation (ID 5) : urn:oid:1.2.250.1.213.3.6 ;
+* Type d'identifiant (ID 6) : le champ type.coding.code est valorisé à `INTRN` et `type.coding.system` à `http://interopsante.org/fhir/CodeSystem/fr-v2-0203`.
+ 
+ 
+* **Statut du RDV :** 
+* L'utilisation de la nomenclature standard AppointmentStatus ([http://hl7.org/fhir/appointmentstatus](http://hl7.org/fhir/appointmentstatus)) est attendue. La plateforme numérique SAS exploite à date les valeurs suivantes : 
+* PENDING : RDV en attente de confirmation
+* BOOKED : RDV pris et confirmé
+* FULFILLED : RDV honoré
+* NOSHOW : RDV non honoré
+* CANCELLED : RDV annulé
+ 
+ 
+* **Identification du PS effecteur de soins :** 
+* Les champs attendus doivent être valorisés comme suit (1) : 
+* Valeur de l'identifiant (ID 10) : RPPS avec préfixe "8" ou ADELI avec préfixe "0"
+* Autorité d'affectation (ID 11) : urn:oid:1.2.250.1.71.4.2.1
+* Type d'identifiant (ID 12) : le champ `type.coding.code` est valorisé à `IDNPS` et `type.coding.system` à `http://interopsante.org/fhir/CodeSystem/fr-v2-0203`
+ 
+ 
+* **Statut d’acceptation du RDV par le PS effecteur de soins :** 
+* L'utilisation de la nomenclature standard Appointmentparticipantstatus ([http://hl7.org/fhir/ValueSet/participationstatus](http://hl7.org/fhir/ValueSet/participationstatus)) est attendue. La plateforme numérique SAS ne récupérant que les RDV avec acceptation automatique et tacite du médecin effecteur de soins, ce champ aura systématiquement la valeur « accepted ».
+ 
+
+* **Identifiant technique du RDV :** 
+* Un identifiant technique unique par RDV est attendu. Cet ID est défini par la solution logicielle éditeur et peut prendre la forme d'un UUID par exemple. Les échanges s'appuieront sur cet ID pour les requêtes de mises à jour (interaction conditional update).
+ 
+* **Autorité d'affectation de la solution logicielle éditeur :** 
+* Ce champ est une valeur fixe, valorisé soit par une URL soit par un OID. Si l'éditeur possède un OID propre à sa solution logicielle il est attendu que celui-ci soit transmis, sinon il est demandé de définir une URL propre à la solution éditeur.
+ 
+* **URL de l'extension AppointmentOperator pour la référence au régulateur :** 
+* Ce champ est une valeur fixe, valorisé à `http://interopsante.org/fhir/StructureDefinition/FrAppointmentOperator`.
+ 
+* **Identification du régulateur ayant pris le RDV pour le patient :** 
+* Il s'agit de l'identifiant communiqué par la plateforme numérique SAS dans l'interface INT_R02 "Gestion des comptes régulateurs". Deux combinaisons sont possibles pour ces trois champs selon que le régulateur possède ou non un identifiant national. 
+* Lorsque le régulateur a un identifiant national, les différents champs seront valorisés comme suit (1) : 
+* Valeur de l'identifiant (ID 4) : Identifiant national avec préfixe ;
+* Autorité d'affectation (ID 5) : urn:oid:1.2.250.1.71.4.2.1 ;
+* Type d'identifiant (ID 6) : le champ `type.coding.code` est valorisé à `IDNPS` et `type.coding.system` à `http://interopsante.org/fhir/CodeSystem/fr-v2-0203`.
+ 
+* Lorsque le régulateur n'a pas d’identifiant national, nous utiliserons un ID technique SAS, les différents champs seront valorisés comme suit : 
+* Valeur de l'identifiant (ID 4) : Identifiant technique SAS avec un format de type UUID ;
+* Autorité d'affectation (ID 5) : urn:oid:1.2.250.1.213.3.6 ;
+* Type d'identifiant (ID 6) : le champ type.coding.code est valorisé à `INTRN` et `type.coding.system` à `http://interopsante.org/fhir/CodeSystem/fr-v2-0203`.
+ 
+ 
+* **Statut du RDV :** 
+* L'utilisation de la nomenclature standard AppointmentStatus ([http://hl7.org/fhir/appointmentstatus](http://hl7.org/fhir/appointmentstatus)) est attendue. La plateforme numérique SAS exploite à date les valeurs suivantes : 
+* PENDING : RDV en attente de confirmation
+* BOOKED : RDV pris et confirmé
+* FULFILLED : RDV honoré
+* NOSHOW : RDV non honoré
+* CANCELLED : RDV annulé
+ 
+ 
+* **Identification du PS effecteur de soins :** 
+* Les champs attendus doivent être valorisés comme suit (1) : 
+* Valeur de l'identifiant (ID 10) : RPPS avec préfixe "8" ou ADELI avec préfixe "0"
+* Autorité d'affectation (ID 11) : urn:oid:1.2.250.1.71.4.2.1
+* Type d'identifiant (ID 12) : le champ `type.coding.code` est valorisé à `IDNPS` et `type.coding.system` à `http://interopsante.org/fhir/CodeSystem/fr-v2-0203`
+ 
+ 
+* **Statut d’acceptation du RDV par le PS effecteur de soins :** 
+* L'utilisation de la nomenclature standard Appointmentparticipantstatus ([http://hl7.org/fhir/ValueSet/participationstatus](http://hl7.org/fhir/ValueSet/participationstatus)) est attendue. La plateforme numérique SAS ne récupérant que les RDV avec acceptation automatique et tacite du médecin effecteur de soins, ce champ aura systématiquement la valeur « accepted ».
+ 
+
+### Validateur ressources
+
+[Cf. page dédiée](./validateurs.md)
 
