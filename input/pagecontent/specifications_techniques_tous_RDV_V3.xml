@@ -94,35 +94,99 @@ détails sur la raison de l'échec</p>
 
 <h4>Exemples de requêtes</h4>
 
-<nav>
-    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-        <a class="nav-link" data-toggle="tab" data-target="#nav-ps-indiv-cpts" type="button" role="tab" aria-controls="nav-ps-indiv-cpts" aria-selected="true">PS indiv/CPTS</a>
-        <a class="nav-link" data-toggle="tab" data-target="#nav-sos" type="button" role="tab" aria-controls="nav-sos" aria-selected="false">SOS Médecins</a>
-        <a class="nav-link" data-toggle="tab" data-target="#nav-pdm" type="button" role="tab" aria-controls="nav-pdm" aria-selected="false">Place de Marché</a>
+<!--<div class="nav nav-tabs" id="nav-tab" role="tablist">
+
+    <a class="nav-link active"
+       id="nav-ps-indiv-cpts-tab"
+       data-toggle="tab"
+       href="#nav-ps-indiv-cpts"
+       role="tab"
+       aria-controls="nav-ps-indiv-cpts"
+       aria-selected="true">
+       PS indiv/CPTS
+    </a>
+
+    <a class="nav-link"
+       id="nav-sos-tab"
+       data-toggle="tab"
+       href="#nav-sos"
+       role="tab"
+       aria-controls="nav-sos"
+       aria-selected="false">
+       SOS Médecins
+    </a>
+
+    <a class="nav-link"
+       id="nav-pdm-tab"
+       data-toggle="tab"
+       href="#nav-pdm"
+       role="tab"
+       aria-controls="nav-pdm"
+       aria-selected="false">
+       Place de Marché
+    </a>
+
+</div>
+
+<div class="tab-content mt-3" id="nav-tabContent">
+
+    <div class="tab-pane fade show active" id="nav-ps-indiv-cpts"
+         role="tabpanel"
+         aria-labelledby="nav-ps-indiv-cpts-tab">
+        Test
+
     </div>
-</nav>
+
+    <div class="tab-pane fade"
+         id="nav-sos"
+         role="tabpanel"
+         aria-labelledby="nav-sos-tab">
+
+        <h5>Requête SOS Médecins</h5>
+
+        {%include Appointment-1-json-html.xhtml%}
+
+    </div>
+
+    <div class="tab-pane fade"
+         id="nav-pdm"
+         role="tabpanel"
+         aria-labelledby="nav-pdm-tab">
+
+        <h5>Requête Place de Marché</h5>
+
+        {%include Appointment-1-json-html.xhtml%}
+
+    </div>
+
+</div> /-->
+
+
+<div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <a class="nav-link active" id="nav-ps-indiv-cpts-tab" data-toggle="tab" href="#nav-ps-indiv-cpts" role="tab" aria-controls="nav-ps-indiv-cpts" aria-selected="true">PS indiv/CPTS</a>
+    <a class="nav-link" id="nav-sos-tab" data-toggle="tab" href="#nav-sos" role="tab" aria-controls="nav-sos" aria-selected="false">SOS Médecins</a>
+    <a class="nav-link" id="nav-pdm-tab" data-toggle="tab" href="#nav-pdm" role="tab" aria-controls="nav-pdm" aria-selected="false">Place de Marché</a>
+</div>
 
 <div class="tab-content" id="nav-tabContent">
     <div class="tab-pane fade show active" id="nav-ps-indiv-cpts" role="tabpanel" aria-labelledby="nav-ps-indiv-cpts-tab">
-        <h5>Requête :</h5>
-        <p><code>post[BASE]/Appointment</code></p>
-        <p><strong>Corps de la requête :</strong></p>
-        <p>La requête ci-dessous correspond à la transmission d'un RDV pris par le régulateur avec un identifiant national 3456780581/11242343 avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h.</p>
-        {%include Appointment-1-json-html.xhtml%}
+        <p style="background:red;color:white">
+        TEST SIMPLE
+        </p>
     </div>
     <div class="tab-pane fade" id="nav-sos" role="tabpanel" aria-labelledby="nav-sos-tab">
-        <h5>Requête :</h5>
+        <p><strong>Requête :</strong></p>
         <p><code>post[BASE]/Appointment</code></p>
         <p><strong>Corps de la requête :</strong></p>
         <p>La requête ci-dessous correspond à la transmission d'un RDV pris par le régulateur avec un identifiant national 3456780581/11242343 avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h.</p>
-        {%include Appointment-1-json-html.xhtml%}
+        {% include Appointment-1-json-html.xhtml %}
     </div>
     <div class="tab-pane fade" id="nav-pdm" role="tabpanel" aria-labelledby="nav-pdm-tab">
-        <h5>Requête :</h5>
+        <p><strong>Requête :</strong></p>
         <p><code>post[BASE]/Appointment</code></p>
         <p><strong>Corps de la requête :</strong></p>
         <p>La requête ci-dessous correspond à la transmission d'un RDV pris par le régulateur avec un identifiant national 3456780581/11242343 avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h.</p>
-        {%include Appointment-1-json-html.xhtml%}
+        {% include Appointment-1-json-html.xhtml %}
     </div>
 </div>
 
