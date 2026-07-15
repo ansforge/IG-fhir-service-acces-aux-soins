@@ -164,7 +164,7 @@ Le schéma ci-dessous illustre les éléments décrits ci-dessus :
     "fontSize": "12px"
   },
   "flowchart": {
-    "useMaxWidth": true
+    "useMaxWidth": false
   }
 }}%%
 
