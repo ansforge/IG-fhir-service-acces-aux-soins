@@ -81,7 +81,7 @@ La requête ci-dessous correspond à une recherche de créneaux disponibles entr
 **Requête :**
 
 `get[BASE]/Schedule?_revinclude=Slot:schedule&_include=Schedule:actor:Location&_include:iterate=Location:organization&_has:Slot:schedule:start=ge2023-08-18T10:00:00+02:00
-&_has:Slot:schedule:start=le2023-08-20T09:00:00+02:00&_has:Slot:schedule:status=free&actor:Location.organization.identifier=urn:oid:1.2.250.1.71.4.2.27C334173748400020
+&_has:Slot:schedule:start=le2023-08-20T09:00:00+02:00&_has:Slot:schedule:status=free&actor:Location.organization.identifier=urn:oid:1.2.250.1.71.4.2.2%7C334173748400020
 ,urn:oid:1.2.250.1.71.4.2.2%7C340426662900033`
 
 **Réponse simplifiée :**
@@ -91,38 +91,38 @@ La requête ci-dessous correspond à une recherche de créneaux disponibles entr
 La réponse ci-dessous correspond à :
 
 * 2 créneaux disponibles via l’association SOS Médecins de Rennes (SIRET : 334173748400020) : 
-* 1 créneau au PFG : Centre de consultation Rennes Nord : 
+* 1 créneau au LFC : Centre de consultation Rennes Nord : 
 * Adresse : 320 avenue Général George Patton (35700)
-* ID du PFG : 1111111111
+* ID du LFC : 1111111111
 * Statut du créneau : disponible
 * Date et horaires : 18 août 2023 de 9h à 9h30
 * URL du créneau : http://www.editeur.com/agenda-pfg/creneau1
-* Téléphone du PFG : 0193246789
-* Jours et horaires d’ouverture du PFG : du mardi au dimanche de 8h00 à 19h00
+* Téléphone du LFC : 0193246789
+* Jours et horaires d’ouverture du LFC : du mardi au dimanche de 8h00 à 19h00
 * Avec prise de RDV
 * Type de créneau : visible du grand public et réservé SAS
 * Type de consultation : au cabinet ou en téléconsultation
  
-* 1 créneau au PFG : Centre de consultation Rennes Cleunay : 
+* 1 créneau au LFC : Centre de consultation Rennes Cleunay : 
 * Adresse : 320 avenue Général George Patton (35700)
 * Adresse : 106 rue Eugène Pottier (35000)
-* ID du PFG : 2222222222
+* ID du LFC : 2222222222
 * Statut du créneau : free
 * Date et horaires : 19 août 2023 de 11h à 11h30
 * URL du créneau : http://www.editeur.com/agenda-pfg/creneau2
-* Téléphone du PFG : 0145249912
-* Jours et horaires d’ouverture du PFG : du lundi au jeudi de 9h00 à 21h00
+* Téléphone du LFC : 0145249912
+* Jours et horaires d’ouverture du LFC : du lundi au jeudi de 9h00 à 21h00
 * Avec prise de RDV
 * Type de créneau : visible du grand public
 * Type de consultation : au cabinet
  
  
 * 2 créneaux disponibles via l’association SOS Médecins Lorient et agglomération (SIRET : 392080466300010) : 
-* Les 2 créneaux sont rattachés au PFG : Centre de consultation Lorient : 
+* Les 2 créneaux sont rattachés au LFC : Centre de consultation Lorient : 
 * Adresse : 12 impasse Royer Dubail (56100)
-* ID du PFG : 3333333333
-* Téléphone du PFG : 0139555992
-* Jours et horaires d’ouverture du PFG : mardi, jeudi et samedi de 11h00 à 18h00
+* ID du LFC : 3333333333
+* Téléphone du LFC : 0139555992
+* Jours et horaires d’ouverture du LFC : mardi, jeudi et samedi de 11h00 à 18h00
 * Caractéristiques du créneau 1 : 
 * Date et horaires : 18 août 2023 de 14h20 à 14h40
 * URL du créneau : http://www.editeur.com/agenda-pfg/creneau3
@@ -167,7 +167,7 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
 * **Créneau avec ou sans RDV :**
 * L'utilisation de la nomenclature standard AppointmentReasonCodes ([https://www.hl7.org/fhir/v2/0276/index.html](https://www.hl7.org/fhir/v2/0276/index.html)) est attendue. Cette nomenclature contient différentes notions, cependant, la plateforme numérique SAS gère les 2 valeurs ci-dessous : 
 * ROUTINE – Créneau avec prise de RDV possible.
-* WALKIN – Créneau sans prise de RDV possible</br> Seuls les créneaux avec prise de RDV `ROUTINE` sont attendus pour ce cas d'usage.
+* WALKIN – Créneau sans prise de RDV possible. Seuls les créneaux avec prise de RDV `ROUTINE` sont attendus pour ce cas d'usage.
  
  
 * **URL de redirection pour la prise de RDV :** 
@@ -181,12 +181,12 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
  
  
 * **ID du lieu fixe de consultation :** 
-* Identifiant unique permettant d’identifier individuellement chaque point lieu fixe de consultation. Deux combinaisons sont possibles selon que le PFG ait un identifiant national de structure (IDNST) connu ou non : 
-* Lorsque le **PFG a un identifiant national de structure** connu, les différents champs sont valorisés comme suit :
+* Identifiant unique permettant d’identifier individuellement chaque point lieu fixe de consultation. Deux combinaisons sont possibles selon que le LFC ait un identifiant national de structure (IDNST) connu ou non : 
+* Lorsque le **LFC a un identifiant national de structure** connu, les différents champs sont valorisés comme suit :
 * identifier.value (valeur de l’identifiant) : valeur de l’IDNST avec préfixe
 * identifier.system (autorité d’affectation) : urn:oid:1.2.250.1.71.4.2.2
 * identifier.type (type d’identifiant) : le champ type.coding.code est valorisé à `IDNST` et type.coding.system à `http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type`
-* Lorsque le **l’identifiant national de structure du PFG n’est pas connu**, les différents champs sont valorisés comme suit : 
+* Lorsque le **l’identifiant national de structure du LFC n’est pas connu**, les différents champs sont valorisés comme suit : 
 * identifier.value (valeur de l’identifiant) : Identifiant technique défini par la solution logicielle éditeur avec un format de type UUID par exemple
 * identifier.system (autorité d’affectation) : : OID propre de la solution logicielle éditeur ou valorisation du champ avec une URL de la solution logicielle éditeur par exemple
 * identifier.type (type d’identifiant) : le champ type.coding.code est valorisé à `INTRN` et type.coding.system à `http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type`

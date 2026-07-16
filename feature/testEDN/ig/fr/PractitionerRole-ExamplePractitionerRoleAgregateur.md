@@ -12,7 +12,7 @@ Profil: [FrPractitionerRoleExerciceAgregateur](StructureDefinition-FrPractitione
 
 **practitioner**: [Practitioner Pierre Foret ](Practitioner-ExamplePractitioner.md)
 
-**organization**: Identifier: 412345678912345
+**organization**: Identifier: Identification nationale de structure définie par l’ASIP-SANTE dans le CI_SIS/412345678912345
 
 **location**: [Location : identifier = Identifiant interne](#hcExamplePractitionerRoleAgregateur/ExampleLocation)
 
@@ -64,6 +64,13 @@ Profil: [FrLocationAgregateur](StructureDefinition-FrLocationAgregateur.md)
   },
   "organization" : {
     "identifier" : {
+      "type" : {
+        "coding" : [{
+          "system" : "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
+          "code" : "IDNST"
+        }]
+      },
+      "system" : "urn:oid:1.2.250.1.71.4.2.2",
       "value" : "412345678912345"
     }
   },

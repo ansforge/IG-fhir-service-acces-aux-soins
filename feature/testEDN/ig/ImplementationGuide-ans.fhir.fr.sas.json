@@ -11,7 +11,7 @@
   "name" : "SAS",
   "title" : "Service d'Accès aux Soins",
   "status" : "active",
-  "date" : "2026-07-15T17:15:57+00:00",
+  "date" : "2026-07-16T08:32:04+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -845,21 +845,21 @@
       "reference" : {
         "reference" : "Appointment/12345678"
       },
-      "name" : "ExampleAppointmentSOS",
+      "name" : "ExampleAppointmentSOS1",
       "description" : "Exemple RDV SOS pending PS non connu",
       "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-appointment"
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
+        "valueString" : "Appointment"
       }],
       "reference" : {
-        "reference" : "Bundle/ExampleBundleAgregateurSOS"
+        "reference" : "Appointment/123456789"
       },
-      "name" : "ExampleBundleAgregateurSOS",
-      "description" : "Exemple Bundle SOS",
-      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-bundle-aggregator"
+      "name" : "ExampleAppointmentSOS2",
+      "description" : "Exemple RDV SOS accepted PS connu",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-appointment"
     },
     {
       "extension" : [{
@@ -896,6 +896,18 @@
       "name" : "ExampleBundlePSIndiv",
       "description" : "Exemple Bundle PS indiv",
       "exampleCanonical" : "http://sas.fr/fhir/StructureDefinition/BundleAgregateur"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/ExampleBundleSOS"
+      },
+      "name" : "ExampleBundleSOS",
+      "description" : "Exemple Bundle SOS",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-bundle-aggregator"
     },
     {
       "extension" : [{
@@ -1867,10 +1879,10 @@
         {
           "extension" : [{
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "validateurs.html"
+            "valueUrl" : "tests.html"
           }],
-          "nameUrl" : "validateurs.html",
-          "title" : "Validateurs",
+          "nameUrl" : "tests.html",
+          "title" : "Tests",
           "generation" : "markdown"
         },
         {

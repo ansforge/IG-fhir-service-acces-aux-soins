@@ -55,7 +55,7 @@ Si la recherche échoue, le serveur doit répondre :
 
 Plus de précision sur la spécification FHIR : [https://www.hl7.org/fhir/http.html](https://www.hl7.org/fhir/http.html)
 
- **Exemples de requêtes** 
+#### Exemples de requêtes
 
 Ci-dessous des exemples de requêtes pour la création de rendez-vous par cas d'usage :
 
@@ -149,7 +149,7 @@ Ci-dessous des exemples de requêtes pour la modification de rendez-vous par cas
 
  La requête ci-dessous correspond à la transmission d’un RDV pris par le régulateur avec un identifiant national 3456780581/11242343 avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h, dont le statut est annulé. 
 
- **Nomenclatures** 
+### Nomenclatures
 
 Cette section détaille les nomenclatures à utiliser afin de renseigner les différents éléments codifiés de la requête.
 

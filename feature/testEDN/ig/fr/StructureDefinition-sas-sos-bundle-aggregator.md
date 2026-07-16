@@ -7,7 +7,7 @@ Profil de Bundle qui représente le flux de réponse contenant les créneaux dis
 
 **Utilisations:**
 
-* Exemples pour ce/t/te Profil: [Bundle/ExampleBundleAgregateurSOS](Bundle-ExampleBundleAgregateurSOS.md)
+* Exemples pour ce/t/te Profil: [Bundle/ExampleBundleSOS](Bundle-ExampleBundleSOS.md)
 
 Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.sas|current/StructureDefinition/sas-sos-bundle-aggregator)
 
@@ -105,7 +105,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-sas-sos-bundle-
   "version" : "1.2.0",
   "name" : "BundleAgregateurSOS",
   "status" : "active",
-  "date" : "2026-07-15T17:15:57+00:00",
+  "date" : "2026-07-16T08:32:04+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
