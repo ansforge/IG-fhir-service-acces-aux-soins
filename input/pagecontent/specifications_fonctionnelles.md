@@ -105,6 +105,7 @@ Le schéma ci-dessous présente une synthèse de la structure attendue :
     <p>{% include ressources-exploitees-fhir.svg %}</p>
 </div>
 
+
 ##### SOS Médecins
 La structure de réponse attendue inclut l’ensemble des créneaux de consultation disponibles correspondant à la requête réalisée par la plateforme numérique SAS.
 1 à n créneaux de consultation (Slot) peuvent être rattachés à 1 agenda (Schedule) qui représente 1 lieu fixe de consultation (Location), lui-même rattaché à 1 association SOS Médecins (Organization). Si des créneaux de consultation sont proposés pour plusieurs LFC, on aura autant d’agendas (Schedule) que de LFC (Location).
@@ -148,15 +149,86 @@ Afin de limiter le nombre d’appels émis vers les solutions logicielles édite
 Le schéma ci-dessous illustre les éléments décrits ci-dessus :
 
 
-<table align="center">
-    <tr>
-        <td align ="center">
-            <div class="figure">
-                <img src="mecanisme_transmission_regulateurs.png" width="80%" height="80%">
-            </div>
-        </td>    
-    </tr>
-</table>
+<style>
+.mermaid {
+    text-align: center;
+}
+</style>
+
+<div class="mermaid">
+
+%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "fontFamily": "verdana",
+    "fontSize": "12px"
+  }
+}}%%
+
+flowchart TB
+
+START[" "]
+
+GEST([👤<br/>Gestionnaire])
+REG([👤<br/>Régulateur])
+
+SUP["Suppression ou retrait<br/>d'habilitation d'un<br/>compte régulateur"]
+
+CON["Connexion à la PTF<br/>numérique SAS"]
+
+CTRL{"Contrôle si des<br/>actions sont à mener"}
+
+REQ["Envoi d'une requête POST<br/>ou PUT aux solutions<br/>logicielles concernées"]
+
+TRAIT["Traitement de la requête<br/>et envoi de la réponse à<br/>la PTF numérique SAS"]
+
+REP{"Traitement de<br/>la réponse"}
+
+RIEN["Pas d'action"]
+
+MAJ["Mise à jour de<br/>l'état du compte"]
+
+%% Racine unique invisible
+START --> REG
+START --> GEST
+
+REG --> CON
+GEST --> SUP
+
+CON --> CTRL
+
+CTRL -->|Oui| REQ
+CTRL -->|Non| RIEN
+
+SUP --> REQ
+
+REQ --> TRAIT
+
+TRAIT --> REP
+
+REP -->|OK| MAJ
+REP -->|KO| RIEN
+
+%% Légende
+subgraph LEG["Légende"]
+    direction TB
+    L1["Action SAS"]
+    L2["Action éditeur"]
+end
+
+MAJ ~~~ L1
+
+%% Styles
+classDef sas fill:#ffffff,stroke:#000000,stroke-width:2px,color:#000;
+classDef editeur fill:#FFE4B5,stroke:#F4A62A,stroke-width:2px,color:#000;
+
+class CON,SUP,REQ,CTRL,REP,RIEN,MAJ,L1 sas;
+class TRAIT,L2 editeur;
+
+%% Nœud invisible
+style START fill:none,stroke:none,color:none
+
+</div>
 
 **Autres règles de gestion fonctionnelles à prendre en compte par les éditeurs :**
 - A la création du compte, ne pas avoir d’étape « vérification du mail » ni de mail de confirmation de création de compte
