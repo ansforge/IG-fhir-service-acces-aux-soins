@@ -1,4 +1,4 @@
-Instance: ExampleAppointmentSOS
+Instance: ExampleAppointmentSOS1
 InstanceOf: FrAppointmentSASSOS
 Description: "Exemple RDV SOS pending PS non connu"
 Usage: #example
@@ -12,6 +12,5 @@ Usage: #example
 * status = #pending
 * start = "2022-09-04T14:00:00+01:00"
 * end = "2022-09-04T14:15:00+01:00"
-* created = "2022-09-04T10:00:00+01:00"
 * participant.type.coding = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#ADM
 * participant.status = #needs-action

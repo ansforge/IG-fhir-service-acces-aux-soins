@@ -1,5 +1,5 @@
 
-Instance: ExampleBundleAgregateurSOS
+Instance: ExampleBundleSOS
 InstanceOf: BundleAgregateurSOS
 Description: "Exemple Bundle SOS"
 Usage: #example
