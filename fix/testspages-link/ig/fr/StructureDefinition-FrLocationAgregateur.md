@@ -79,7 +79,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FrLocationAgreg
   "version" : "1.2.0",
   "name" : "FrLocationAgregateur",
   "status" : "active",
-  "date" : "2026-07-17T08:33:06+00:00",
+  "date" : "2026-07-17T08:35:39+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
