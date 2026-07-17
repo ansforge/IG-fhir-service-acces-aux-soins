@@ -284,4 +284,4 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
     - SUN - Dimanche
 
 ### Validateur ressources
-Cf. [page dédiée](./validateurs.html)
+Cf. [page dédiée](./tests.html)

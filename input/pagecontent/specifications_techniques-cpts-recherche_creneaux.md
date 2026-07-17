@@ -233,4 +233,4 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
     - identifier.type (type d’identifiant) : le champ type.coding.code est valorisé à `IDNST` et type.coding.system à «http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type »
 
 ### Validateur ressources
-Cf. [page dédiée](./validateurs.html)
+Cf. [page dédiée](./tests.html)
