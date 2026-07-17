@@ -18,7 +18,7 @@
   fhir:ImplementationGuide.name [ fhir:value "SAS"] ;
   fhir:ImplementationGuide.title [ fhir:value "Service d'Accès aux Soins"] ;
   fhir:ImplementationGuide.status [ fhir:value "active"] ;
-  fhir:ImplementationGuide.date [ fhir:value "2026-07-15T08:40:44+00:00"^^xsd:dateTime] ;
+  fhir:ImplementationGuide.date [ fhir:value "2026-07-17T08:17:39+00:00"^^xsd:dateTime] ;
   fhir:ImplementationGuide.publisher [ fhir:value "ANS"] ;
   fhir:ImplementationGuide.contact [
      fhir:index -1 ;
@@ -962,7 +962,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Appointment/12345678> ;
          fhir:Reference.reference [ fhir:value "Appointment/12345678" ]
        ] ;
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleAppointmentSOS" ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleAppointmentSOS1" ] ;
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Exemple RDV SOS pending PS non connu" ] ;
        fhir:ImplementationGuide.definition.resource.exampleCanonical [
          fhir:value "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-appointment" ;
@@ -973,17 +973,17 @@
        fhir:Element.extension [
          fhir:index -1 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
-         fhir:Extension.valueString [ fhir:value "Bundle" ]
+         fhir:Extension.valueString [ fhir:value "Appointment" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Bundle/ExampleBundleAgregateurSOS> ;
-         fhir:Reference.reference [ fhir:value "Bundle/ExampleBundleAgregateurSOS" ]
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Appointment/123456789> ;
+         fhir:Reference.reference [ fhir:value "Appointment/123456789" ]
        ] ;
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleBundleAgregateurSOS" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Exemple Bundle SOS" ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleAppointmentSOS2" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Exemple RDV SOS accepted PS connu" ] ;
        fhir:ImplementationGuide.definition.resource.exampleCanonical [
-         fhir:value "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-bundle-aggregator" ;
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-bundle-aggregator>
+         fhir:value "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-appointment" ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-appointment>
        ]
      ], [
        fhir:index -1 ;
@@ -1035,6 +1035,23 @@
        fhir:ImplementationGuide.definition.resource.exampleCanonical [
          fhir:value "http://sas.fr/fhir/StructureDefinition/BundleAgregateur" ;
          fhir:link <http://sas.fr/fhir/StructureDefinition/BundleAgregateur>
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Bundle" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Bundle/ExampleBundleSOS> ;
+         fhir:Reference.reference [ fhir:value "Bundle/ExampleBundleSOS" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleBundleSOS" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Exemple Bundle SOS" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-bundle-aggregator" ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-bundle-aggregator>
        ]
      ], [
        fhir:index -1 ;

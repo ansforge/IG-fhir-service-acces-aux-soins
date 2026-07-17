@@ -18,7 +18,7 @@
   fhir:ImplementationGuide.name [ fhir:value "SAS"] ;
   fhir:ImplementationGuide.title [ fhir:value "Service d'Accès aux Soins"] ;
   fhir:ImplementationGuide.status [ fhir:value "active"] ;
-  fhir:ImplementationGuide.date [ fhir:value "2026-07-15T08:40:44+00:00"^^xsd:dateTime] ;
+  fhir:ImplementationGuide.date [ fhir:value "2026-07-17T08:17:39+00:00"^^xsd:dateTime] ;
   fhir:ImplementationGuide.publisher [ fhir:value "ANS"] ;
   fhir:ImplementationGuide.contact [
      fhir:index 0 ;
@@ -962,7 +962,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Appointment/12345678> ;
          fhir:Reference.reference [ fhir:value "Appointment/12345678" ]
        ] ;
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleAppointmentSOS" ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleAppointmentSOS1" ] ;
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Exemple RDV SOS pending PS non connu" ] ;
        fhir:ImplementationGuide.definition.resource.exampleCanonical [
          fhir:value "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-appointment" ;
@@ -973,17 +973,17 @@
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
-         fhir:Extension.valueString [ fhir:value "Bundle" ]
+         fhir:Extension.valueString [ fhir:value "Appointment" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Bundle/ExampleBundleAgregateurSOS> ;
-         fhir:Reference.reference [ fhir:value "Bundle/ExampleBundleAgregateurSOS" ]
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Appointment/123456789> ;
+         fhir:Reference.reference [ fhir:value "Appointment/123456789" ]
        ] ;
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleBundleAgregateurSOS" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Exemple Bundle SOS" ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleAppointmentSOS2" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Exemple RDV SOS accepted PS connu" ] ;
        fhir:ImplementationGuide.definition.resource.exampleCanonical [
-         fhir:value "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-bundle-aggregator" ;
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-bundle-aggregator>
+         fhir:value "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-appointment" ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-appointment>
        ]
      ], [
        fhir:index 13 ;
@@ -1041,6 +1041,23 @@
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Bundle" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Bundle/ExampleBundleSOS> ;
+         fhir:Reference.reference [ fhir:value "Bundle/ExampleBundleSOS" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleBundleSOS" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Exemple Bundle SOS" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-bundle-aggregator" ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-bundle-aggregator>
+       ]
+     ], [
+       fhir:index 17 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
          fhir:Extension.valueString [ fhir:value "HealthcareService" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.reference [
@@ -1054,7 +1071,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-healthcareservice-aggregator>
        ]
      ], [
-       fhir:index 17 ;
+       fhir:index 18 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1071,7 +1088,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-healthcareservice-aggregator>
        ]
      ], [
-       fhir:index 18 ;
+       fhir:index 19 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1088,7 +1105,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator>
        ]
      ], [
-       fhir:index 19 ;
+       fhir:index 20 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1105,7 +1122,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator>
        ]
      ], [
-       fhir:index 20 ;
+       fhir:index 21 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1122,7 +1139,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator>
        ]
      ], [
-       fhir:index 21 ;
+       fhir:index 22 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1139,7 +1156,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-organization-aggregator>
        ]
      ], [
-       fhir:index 22 ;
+       fhir:index 23 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1156,7 +1173,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-organization-aggregator>
        ]
      ], [
-       fhir:index 23 ;
+       fhir:index 24 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1173,7 +1190,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator>
        ]
      ], [
-       fhir:index 24 ;
+       fhir:index 25 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1190,7 +1207,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator>
        ]
      ], [
-       fhir:index 25 ;
+       fhir:index 26 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1207,7 +1224,7 @@
          fhir:link <http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur>
        ]
      ], [
-       fhir:index 26 ;
+       fhir:index 27 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1224,7 +1241,7 @@
          fhir:link <http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur>
        ]
      ], [
-       fhir:index 27 ;
+       fhir:index 28 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1241,7 +1258,7 @@
          fhir:link <http://sas.fr/fhir/StructureDefinition/FrPractitionerAgregateur>
        ]
      ], [
-       fhir:index 28 ;
+       fhir:index 29 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1258,7 +1275,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul>
        ]
      ], [
-       fhir:index 29 ;
+       fhir:index 30 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1275,7 +1292,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul>
        ]
      ], [
-       fhir:index 30 ;
+       fhir:index 31 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1292,7 +1309,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul>
        ]
      ], [
-       fhir:index 31 ;
+       fhir:index 32 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1309,7 +1326,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul>
        ]
      ], [
-       fhir:index 32 ;
+       fhir:index 33 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1326,7 +1343,7 @@
          fhir:link <http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur>
        ]
      ], [
-       fhir:index 33 ;
+       fhir:index 34 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1343,7 +1360,7 @@
          fhir:link <http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur>
        ]
      ], [
-       fhir:index 34 ;
+       fhir:index 35 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1360,7 +1377,7 @@
          fhir:link <http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur>
        ]
      ], [
-       fhir:index 35 ;
+       fhir:index 36 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1377,7 +1394,7 @@
          fhir:link <http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur>
        ]
      ], [
-       fhir:index 36 ;
+       fhir:index 37 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1394,7 +1411,7 @@
          fhir:link <http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur>
        ]
      ], [
-       fhir:index 37 ;
+       fhir:index 38 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1411,7 +1428,7 @@
          fhir:link <http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur>
        ]
      ], [
-       fhir:index 38 ;
+       fhir:index 39 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1428,7 +1445,7 @@
          fhir:link <http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur>
        ]
      ], [
-       fhir:index 39 ;
+       fhir:index 40 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1445,7 +1462,7 @@
          fhir:link <http://sas.fr/fhir/StructureDefinition/FrScheduleAgregateur>
        ]
      ], [
-       fhir:index 40 ;
+       fhir:index 41 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1462,7 +1479,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator>
        ]
      ], [
-       fhir:index 41 ;
+       fhir:index 42 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1479,7 +1496,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator>
        ]
      ], [
-       fhir:index 42 ;
+       fhir:index 43 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1496,7 +1513,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-schedule-aggregator>
        ]
      ], [
-       fhir:index 43 ;
+       fhir:index 44 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1513,7 +1530,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator>
        ]
      ], [
-       fhir:index 44 ;
+       fhir:index 45 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1530,7 +1547,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-aggregator>
        ]
      ], [
-       fhir:index 45 ;
+       fhir:index 46 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1547,7 +1564,7 @@
          fhir:link <http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur>
        ]
      ], [
-       fhir:index 46 ;
+       fhir:index 47 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1564,7 +1581,7 @@
          fhir:link <http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur>
        ]
      ], [
-       fhir:index 47 ;
+       fhir:index 48 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1581,7 +1598,7 @@
          fhir:link <http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur>
        ]
      ], [
-       fhir:index 48 ;
+       fhir:index 49 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1598,7 +1615,7 @@
          fhir:link <http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur>
        ]
      ], [
-       fhir:index 49 ;
+       fhir:index 50 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1615,7 +1632,7 @@
          fhir:link <http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur>
        ]
      ], [
-       fhir:index 50 ;
+       fhir:index 51 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1632,7 +1649,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator>
        ]
      ], [
-       fhir:index 51 ;
+       fhir:index 52 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1649,7 +1666,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator>
        ]
      ], [
-       fhir:index 52 ;
+       fhir:index 53 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1666,7 +1683,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator>
        ]
      ], [
-       fhir:index 53 ;
+       fhir:index 54 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1683,7 +1700,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-slot-aggregator>
        ]
      ], [
-       fhir:index 54 ;
+       fhir:index 55 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1697,7 +1714,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Profil de Appointment, dérivé de FrAppointment, pour le cas d'usage prise de RDV de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 55 ;
+       fhir:index 56 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1711,7 +1728,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 56 ;
+       fhir:index 57 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1725,7 +1742,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Profil dérivé de FrHealthcareService pour le cas d'usage agrégateur de la plateforme SAS - cas d'usage CPTS" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 57 ;
+       fhir:index 58 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1739,7 +1756,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Profil de Location, dérivé de FrLocation, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 58 ;
+       fhir:index 59 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1753,7 +1770,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Profil de Location, dérivé de FrLocation, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 59 ;
+       fhir:index 60 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1767,7 +1784,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Profil dérivé de FrOrganization pour le cas d'usage agrégateur de la plateforme SAS - cas d'usage CPTS" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 60 ;
+       fhir:index 61 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1781,7 +1798,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Profil d'Organization, dérivé de FrOrganization, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 61 ;
+       fhir:index 62 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1795,7 +1812,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Profil de Practitioner, dérivé de FrPractitioner, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 62 ;
+       fhir:index 63 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1809,7 +1826,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Profil de Practitioner, dérivé de FrPractitioner, pour la gestion des comptes régulateurs de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 63 ;
+       fhir:index 64 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1823,7 +1840,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Profil de PractitionerRole, dérivé de FrPractitionerRoleExercice, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 64 ;
+       fhir:index 65 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1837,7 +1854,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Profil de Schedule, dérivé de FrSchedule, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 65 ;
+       fhir:index 66 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1851,7 +1868,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Profil de Schedule, dérivé de FrSchedule, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 66 ;
+       fhir:index 67 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1865,7 +1882,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Profil de Slot, dérivé de FrSlot, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 67 ;
+       fhir:index 68 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1879,7 +1896,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Profil de Slot, dérivé de FrSlot, pour le cas d'usage agrégateur de la plateforme SAS - cas d'usage CPTS" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 68 ;
+       fhir:index 69 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1893,7 +1910,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 69 ;
+       fhir:index 70 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1907,7 +1924,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Un consommateur consulte les créneaux ps indiv mis à disposition par un gestionnaire d’agenda. La platefome numérique SAS joue le rôle de consommateur et affiche les créneaux récupérés" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 70 ;
+       fhir:index 71 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1921,7 +1938,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Un consommateur consulte les créneaux CPTS mis à disposition par un gestionnaire d’agenda. La platefome numérique SAS joue le rôle de consommateur et affiche les créneaux récupérés" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 71 ;
+       fhir:index 72 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1935,7 +1952,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Un consommateur consulte les créneaux SOS mis à disposition par un gestionnaire d’agenda. La platefome numérique SAS joue le rôle de consommateur et affiche les créneaux récupérés" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 72 ;
+       fhir:index 73 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1949,7 +1966,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Un gestionnaire d'agenda met à disposition d'un consommateur des créneaux de disponibilité. Cas d'usage CPTS" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 73 ;
+       fhir:index 74 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1963,7 +1980,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Un gestionnaire d'agenda met à disposition d'un consommateur des créneaux de disponibilité. Cas d'usage PS à titre individuel" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 74 ;
+       fhir:index 75 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1977,7 +1994,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Un gestionnaire d'agenda reçoit des rendez-vous ps indiv envoyés par un déclarant de rendez-vous. La platefome numérique SAS joue le rôle de gestionnaire d'agenda et stocke les rendez-vous récupérés" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 75 ;
+       fhir:index 76 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -1991,7 +2008,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Un gestionnaire d'agenda reçoit des rendez-vous SOS envoyés par un déclarant de rendez-vous. La platefome numérique SAS joue le rôle de gestionnaire d'agenda et stocke les rendez-vous récupérés" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 76 ;
+       fhir:index 77 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2005,7 +2022,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Un gestionnaire d'agenda met à disposition d'un consommateur des créneaux de disponibilité. Cas d'usage SOS médecins" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 77 ;
+       fhir:index 78 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2019,7 +2036,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Un gestionnaire de structure gère les ressources transmises par les déclarants de ressource" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 78 ;
+       fhir:index 79 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2033,7 +2050,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Extension créée afin de permettre la reference à la ressource HealthcareService. Cette extension implemente l'élément serviceType de R5 https://hl7.org/fhir/slot-definitions.html#Slot.serviceType" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 79 ;
+       fhir:index 80 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2047,7 +2064,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Paramètre de recherche date de début d'un créneau (date de début supérieure ou égale à <date1> et inférieure ou égale à <date2>)" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 80 ;
+       fhir:index 81 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2061,7 +2078,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Statut du participant RDV SAS" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 81 ;
+       fhir:index 82 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2075,7 +2092,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Type de consultations SAS" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 82 ;
+       fhir:index 83 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2089,7 +2106,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Type de Créneaux SAS CPTS" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 83 ;
+       fhir:index 84 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2103,7 +2120,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Type de Créneaux SAS SOS" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 84 ;
+       fhir:index 85 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2117,7 +2134,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Type d'identifiant SAS" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 85 ;
+       fhir:index 86 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;

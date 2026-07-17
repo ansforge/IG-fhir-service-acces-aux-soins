@@ -14,7 +14,7 @@
   "name" : "SAS",
   "title" : "Service d'Accès aux Soins",
   "status" : "active",
-  "date" : "2026-07-15T08:40:44+00:00",
+  "date" : "2026-07-17T08:17:39+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -848,21 +848,21 @@
       "reference" : {
         "reference" : "Appointment/12345678"
       },
-      "name" : "ExampleAppointmentSOS",
+      "name" : "ExampleAppointmentSOS1",
       "description" : "Exemple RDV SOS pending PS non connu",
       "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-appointment"
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
+        "valueString" : "Appointment"
       }],
       "reference" : {
-        "reference" : "Bundle/ExampleBundleAgregateurSOS"
+        "reference" : "Appointment/123456789"
       },
-      "name" : "ExampleBundleAgregateurSOS",
-      "description" : "Exemple Bundle SOS",
-      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-bundle-aggregator"
+      "name" : "ExampleAppointmentSOS2",
+      "description" : "Exemple RDV SOS accepted PS connu",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-appointment"
     },
     {
       "extension" : [{
@@ -899,6 +899,18 @@
       "name" : "ExampleBundlePSIndiv",
       "description" : "Exemple Bundle PS indiv",
       "exampleCanonical" : "http://sas.fr/fhir/StructureDefinition/BundleAgregateur"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/ExampleBundleSOS"
+      },
+      "name" : "ExampleBundleSOS",
+      "description" : "Exemple Bundle SOS",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-bundle-aggregator"
     },
     {
       "extension" : [{
