@@ -94,7 +94,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FrScheduleAgreg
   "version" : "1.2.0",
   "name" : "FrScheduleAgregateur",
   "status" : "active",
-  "date" : "2026-07-16T08:32:04+00:00",
+  "date" : "2026-07-20T10:20:59+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
