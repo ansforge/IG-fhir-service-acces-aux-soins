@@ -204,4 +204,4 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
   - L'utilisation de la nomenclature standard Appointmentparticipantstatus (<http://hl7.org/fhir/ValueSet/participationstatus>) est attendue. La plateforme numérique SAS ne récupérant que les RDV avec acceptation automatique et tacite du médecin effecteur de soins, ce champ aura systématiquement la valeur « accepted ».
 
 ### Validateur ressources
-Cf. [page dédiée](./validateurs.html)
+Cf. [page dédiée](./tests.html)
