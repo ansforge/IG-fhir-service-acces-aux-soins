@@ -141,9 +141,9 @@ La réponse ci-dessous correspond à :
  
  
 
-Pour consulter l'exemple en plein écran, cliquer [ici](./Bundle-ExampleBundleAgregateurSOS.json.md).
+Pour consulter l'exemple en plein écran, cliquer [ici](./Bundle-ExampleBundleSOS.json.md).
 
-<iframe scrolling="yes" src="./Bundle-ExampleBundleAgregateurSOS.json" width="100%" style="border: 1px solid #cccccc; border-radius: 4px; background: #f5f2f0;" height="300"></iframe>
+<iframe scrolling="yes" src="./Bundle-ExampleBundleSOS.json" width="100%" style="border: 1px solid #cccccc; border-radius: 4px; background: #f5f2f0;" height="300"></iframe>
 
 
 ### Nomenclatures
@@ -207,5 +207,5 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
 
 ### Validateur ressources
 
-Cf. [page dédiée](./validateurs.md)
+Cf. [page dédiée](./tests.md)
 
