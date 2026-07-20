@@ -34,7 +34,7 @@ Appointment reason SAS
   "title" : "Appointment reason SAS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-07-20T10:20:59+00:00",
+  "date" : "2026-07-20T14:00:59+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
