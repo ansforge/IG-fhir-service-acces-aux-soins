@@ -116,6 +116,8 @@ Le schéma ci-dessous présente une synthèse de la structure attendue :
     <p>{% include ressources-exploitees-fhir-sos.svg %}</p>
 </div>
 
+### Parcours Place de Marché
+
 ### Gestion des comptes régulateurs
 L’objectif de cette interface, **flux INT_R02**, est de permettre la gestion automatisée des comptes régulateurs 
 SAS qui auront besoin d’accéder aux solutions logicielles de prise de RDV dans le cadre de leurs fonctions. 
