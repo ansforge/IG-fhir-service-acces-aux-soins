@@ -233,7 +233,7 @@ La réponse ci-dessous correspond à :
       - Type de créneau : visible du grand public
       - Type de consultation : au cabinet
 
-Pour consulter l'exemple en plein écran, cliquer [ici](./Bundle-ExampleBundleAgregateurSOS.json.html).
+Pour consulter l'exemple en plein écran, cliquer [ici](./Bundle-ExampleBundleSOS.json.html).
 
 <iframe src="./Bundle-ExampleBundleAgregateurSOS.json" width="100%" height="300" style="border: 1px solid #cccccc; border-radius: 4px; background: #f5f2f0;" scrolling="yes"></iframe>
 <br>
@@ -284,4 +284,4 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
     - SUN - Dimanche
 
 ### Validateur ressources
-Cf. [page dédiée](./validateurs.html)
+Cf. [page dédiée](./tests.html)
