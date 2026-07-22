@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/r5/fhir-single.xsd">
 
+    <style type="text/css">
+        .examples-tabs-wrapper .nav-tabs a[name]{
+            display:none !important;
+        }
+    </style>
+
     <h3>Caractéristiques de l'API</h3>
 
     <table>
@@ -93,7 +99,7 @@
     <a href="https://www.hl7.org/fhir/http.html">https://www.hl7.org/fhir/http.html</a></p>
 
   <h4>Exemples de requêtes</h4>
-    <p></p>
+    <!-- <hr/> -->
     <p>Ci-dessous des exemples de requêtes pour la création de rendez-vous par cas d'usage :</p>
     <div class="examples-tabs-wrapper">
         <div class="examples-tabs-container">
@@ -220,7 +226,7 @@
     <a href="https://www.hl7.org/fhir/http.html">https://www.hl7.org/fhir/http.html</a></p>
 
     <h4>Exemples de requêtes</h4>
-    <p></p>
+    <!-- <p></p> -->
     <p>Ci-dessous des exemples de requêtes pour la modification de rendez-vous par cas d'usage :</p>
     <div class="examples2-tabs-container">
         <ul class="nav nav-tabs" role="tablist">
@@ -291,8 +297,13 @@
     <h3>Nomenclatures</h3>
     <p></p>
     <p>Cette section détaille les nomenclatures à utiliser afin de renseigner les différents éléments codifiés de la requête.</p>
-    {%include specifications_techniques_nomenclatures.xhtml%}
-    <!-- <div class="nomenclatures-tabs-wrapper">
+    <!-- {%include ./specifications_techniques_nomenclatures.xhtml%}-->
+
+    <div>
+        <p></p>
+    </div>
+
+    <div class="nomenclatures-tabs-wrapper">
         <div class="nomenclatures-tabs-container">
             <ul class="nav nav-tabs" role="tablist">
                 <li class="active">
@@ -304,9 +315,9 @@
                 <li>
                     <a href="#nav-nom-pdm" data-toggle="tab">Place de Marché</a>
                 </li>
-            </ul>-->
+            </ul>
         <!-- Contenu section Nomenclatures PS individuel/CPTS -->
-        <!--    <div class="tab-content">
+            <div class="tab-content">
                 <div id="nav-nom-ps-indiv-cpts" class="tab-pane active" role="tabpanel">
                     <ul>
                         <li><strong>Identifiant technique du RDV :</strong>
@@ -385,9 +396,9 @@
                             </ul>
                         </li>
                     </ul>
-                </div>-->
+                </div>
         <!-- Contenu section Nomenclatures SOS Médecins -->
-        <!--        <div id="nav-nom-sos" class="tab-pane" role="tabpanel">
+                <div id="nav-nom-sos" class="tab-pane" role="tabpanel">
                     <ul>
                         <li><strong>Identifiant technique du RDV :</strong>
                             <ul>
@@ -465,9 +476,9 @@
                             </ul>
                         </li>
                     </ul>
-                </div>-->
+                </div>
         <!-- Contenu section Nomenclatures PDM -->
-        <!--        <div id="nav-nom-pdm" class="tab-pane" role="tabpanel">
+                <div id="nav-nom-pdm" class="tab-pane" role="tabpanel">
                     <ul>
                         <li><strong>Identifiant technique du RDV :</strong>
                             <ul>
@@ -548,7 +559,7 @@
                 </div>
             </div>
         </div>
-    </div>-->
+    </div>
     <h3>Validateur ressources</h3>
     <p><a href="./tests.html">Cf. page dédiée</a></p>
 </div>
