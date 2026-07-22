@@ -14,7 +14,7 @@
   "name" : "SAS",
   "title" : "Service d'Accès aux Soins",
   "status" : "active",
-  "date" : "2026-07-22T14:02:04+00:00",
+  "date" : "2026-07-22T14:55:39+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -1847,38 +1847,11 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "ressources_cas_dusage.html"
+          "valueUrl" : "ressources_casusage.html"
         }],
-        "nameUrl" : "ressources_cas_dusage.html",
+        "nameUrl" : "ressources_casusage.html",
         "title" : "Ressources par cas d'usage",
-        "generation" : "html",
-        "page" : [{
-          "extension" : [{
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "ressources_cas_dusage_ps.html"
-          }],
-          "nameUrl" : "ressources_cas_dusage_ps.html",
-          "title" : "PS à titre individuel",
-          "generation" : "html"
-        },
-        {
-          "extension" : [{
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "ressources_cas_dusage_cpts.html"
-          }],
-          "nameUrl" : "ressources_cas_dusage_cpts.html",
-          "title" : "CPTS",
-          "generation" : "html"
-        },
-        {
-          "extension" : [{
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "ressources_cas_dusage_sos.html"
-          }],
-          "nameUrl" : "ressources_cas_dusage_sos.html",
-          "title" : "SOS Médecins",
-          "generation" : "html"
-        }]
+        "generation" : "markdown"
       },
       {
         "extension" : [{

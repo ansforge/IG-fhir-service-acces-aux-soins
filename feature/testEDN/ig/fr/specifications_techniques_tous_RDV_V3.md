@@ -59,7 +59,13 @@ Plus de précision sur la spécification FHIR : [https://www.hl7.org/fhir/http.h
 
 Ci-dessous des exemples de requêtes pour la création de rendez-vous par cas d'usage :
 
--------
+**Requête :**
+
+ `POST [BASE]/Appointment` 
+
+**Corps de la requête :**
+
+ La requête ci-dessous correspond à la transmission d'un rendez-vous pris par le régulateur avec un identifiant national 3456780581/11242343 avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h. 
 
 **Requête :**
 
@@ -75,15 +81,7 @@ Ci-dessous des exemples de requêtes pour la création de rendez-vous par cas d'
 
 **Corps de la requête :**
 
- La requête ci-dessous correspond à la transmission d'un rendez-vous pris par le régulateur avec un identifiant national 3456780581/11242343 pour le 04/09 à 14h. 
-
-**Requête :**
-
- `POST [BASE]/Appointment` 
-
-**Corps de la requête :**
-
- La requête ci-dessous correspond à la transmission d'une demande de prise en charge réalisée par le régulateur avec un identifiant national 3456780581/11242343 le 04/09 à 14h. 
+ La requête ci-dessous correspond à la transmission d'un rendez-vous pris par le régulateur avec un identifiant national 3456780581/11242343 avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h. 
 
 ### Mise à jour de rendez-vous
 
@@ -125,11 +123,7 @@ Si la recherche échoue, le serveur doit répondre :
 
 Plus de précision sur la spécification FHIR : [https://www.hl7.org/fhir/http.html](https://www.hl7.org/fhir/http.html)
 
-#### Exemples de requêtes
-
 Ci-dessous des exemples de requêtes pour la modification de rendez-vous par cas d'usage :
-
--------
 
 **Requête :**
 
@@ -158,8 +152,6 @@ Ci-dessous des exemples de requêtes pour la modification de rendez-vous par cas
 ### Nomenclatures
 
 Cette section détaille les nomenclatures à utiliser afin de renseigner les différents éléments codifiés de la requête.
-
--------
 
 * **Identifiant technique du RDV :** 
 * Un identifiant technique unique par RDV est attendu. Cet ID est défini par la solution logicielle éditeur et peut prendre la forme d'un UUID par exemple. Les échanges s'appuieront sur cet ID pour les requêtes de mises à jour (interaction conditional update).
