@@ -2,7 +2,7 @@
 
 ## Ressources par cas d'usage
 
-Liste de l'ensemble des ressources utilisés par cas d'usage
+Liste de l'ensemble des ressources utilisées par cas d'usage
 
 | | | |
 | :--- | :--- | :--- |

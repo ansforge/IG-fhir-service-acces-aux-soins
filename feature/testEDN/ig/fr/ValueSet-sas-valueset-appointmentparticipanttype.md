@@ -33,7 +33,7 @@ Ce jeu de valeurs n'est pas utilisé ici ; il peut être utilisé autre part (pa
   "title" : "Appointment Participant Type SAS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-07-22T13:08:28+00:00",
+  "date" : "2026-07-22T13:46:01+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

@@ -5,7 +5,7 @@
  
 There is no translation page available for the current page, so it has been rendered in the default language 
 
-Liste de l'ensemble des ressources utilisés par cas d'usage
+Liste de l'ensemble des ressources utilisées par cas d'usage
 
 | | | |
 | :--- | :--- | :--- |

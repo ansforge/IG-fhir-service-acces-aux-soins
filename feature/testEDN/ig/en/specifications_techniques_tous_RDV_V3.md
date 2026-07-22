@@ -76,7 +76,7 @@ Ci-dessous des exemples de requêtes pour la création de rendez-vous par cas d'
 
 **Corps de la requête :**
 
- La requête ci-dessous correspond à la transmission d'un rendez-vous pris par le régulateur avec un identifiant national 3456780581/11242343 avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h. 
+ La requête ci-dessous correspond à la transmission d'un rendez-vous pris par le régulateur avec un identifiant national 3456780581/11242343 pour le 04/09 à 14h. 
 
 **Requête :**
 
@@ -84,7 +84,7 @@ Ci-dessous des exemples de requêtes pour la création de rendez-vous par cas d'
 
 **Corps de la requête :**
 
- La requête ci-dessous correspond à la transmission d'un rendez-vous pris par le régulateur avec un identifiant national 3456780581/11242343 avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h. 
+ La requête ci-dessous correspond à la transmission d'une demande de prise en charge réalisée par le régulateur avec un identifiant national 3456780581/11242343 le 04/09 à 14h. 
 
 ### Mise à jour de rendez-vous
 
