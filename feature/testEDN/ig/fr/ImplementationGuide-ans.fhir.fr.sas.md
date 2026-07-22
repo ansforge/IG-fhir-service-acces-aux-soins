@@ -14,7 +14,7 @@
   "name" : "SAS",
   "title" : "Service d'Accès aux Soins",
   "status" : "active",
-  "date" : "2026-07-22T08:48:12+00:00",
+  "date" : "2026-07-22T09:17:02+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -1851,7 +1851,25 @@
         }],
         "nameUrl" : "ressources_cas_dusage.html",
         "title" : "Ressources par cas d'usage",
-        "generation" : "html"
+        "generation" : "html",
+        "page" : [{
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "ressources_cas_dusage_cpts.html"
+          }],
+          "nameUrl" : "ressources_cas_dusage_cpts.html",
+          "title" : "CPTS",
+          "generation" : "html"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "ressources_cas_dusage_sos.html"
+          }],
+          "nameUrl" : "ressources_cas_dusage_sos.html",
+          "title" : "SOS Médecins",
+          "generation" : "html"
+        }]
       },
       {
         "extension" : [{

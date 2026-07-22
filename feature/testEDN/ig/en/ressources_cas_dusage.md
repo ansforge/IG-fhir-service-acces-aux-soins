@@ -7,6 +7,8 @@ There is no translation page available for the current page, so it has been rend
 
 Liste des ressources à utiliser par cas d'usage
 
+### PS à titre individuel
+
 Liste des ressources (profils, paramètres de recherche, terminologies, exemples) à utiliser dans le cadre du cas d'usage PS à titre individuel (y compris les ressources communes aux autres cas d'usage)
 
 | | | |
