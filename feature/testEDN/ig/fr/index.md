@@ -51,7 +51,7 @@ La fludification du parcours régulateurs inclut les éléments suivants :
 * [Gestion des comptes régulateurs](./specifications_techniques-tous-gestion_regulateur.md)
 * [Gestion de rendez-vous](./specifications_techniques_tous_RDV_V3.md)
 
-1. [Ressources de conformité](./ressources_casusage.md#ps-à-titre-individuel)
+1. [Ressources de conformité](./ressources_cas_dusage_ps.md)
 
 #### CPTS
 
@@ -61,7 +61,7 @@ La fludification du parcours régulateurs inclut les éléments suivants :
 * [Gestion des comptes régulateurs](./specifications_techniques-tous-gestion_regulateur.md)
 * [Gestion de rendez-vous](./specifications_techniques_tous_RDV_V3.md)
 
-1. [Ressources de conformité](./ressources_casusage.md#cpts)
+1. [Ressources de conformité](./ressources_cas_dusage_cpts.md)
 
 #### SOS Médecins
 
@@ -71,7 +71,7 @@ La fludification du parcours régulateurs inclut les éléments suivants :
 * [Gestion des comptes régulateurs](./specifications_techniques-tous-gestion_regulateur.md)
 * [Gestion de rendez-vous](./specifications_techniques_tous_RDV_V3.md)
 
-1. [Ressources de conformité](./ressources_casusage.md#sos-médecins)
+1. [Ressources de conformité](./ressources_cas_dusage_sos.md)
 
 #### Transmission des informations de RDV aux LRM
 
