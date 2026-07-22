@@ -14,7 +14,7 @@
   "name" : "SAS",
   "title" : "Service d'Accès aux Soins",
   "status" : "active",
-  "date" : "2026-07-22T09:38:06+00:00",
+  "date" : "2026-07-22T12:21:08+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -1853,6 +1853,15 @@
         "title" : "Ressources par cas d'usage",
         "generation" : "html",
         "page" : [{
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "ressources_cas_dusage_ps.html"
+          }],
+          "nameUrl" : "ressources_cas_dusage_ps.html",
+          "title" : "PS à titre individuel",
+          "generation" : "html"
+        },
+        {
           "extension" : [{
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
             "valueUrl" : "ressources_cas_dusage_cpts.html"

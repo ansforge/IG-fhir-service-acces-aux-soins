@@ -221,7 +221,7 @@
 
             <a href="#bottom">bottom</a>
 
-          | <a href="ressources_cas_dusage_cpts.html">next &gt;</a>
+          | <a href="ressources_cas_dusage_ps.html">next &gt;</a>
 
           </span>
 
@@ -258,18 +258,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   
   <div xmlns="http://www.w3.org/1999/xhtml">
 
-    <p>Liste des ressources à utiliser par cas d'usage</p>
+    <p>Liste de l'ensemble des ressources utilisés par cas d'usage</p>
 
-    <a name="1"/><h3>PS à titre individuel</h3>
-
-    <p>Liste des ressources (profils, paramètres de recherche, terminologies, exemples) à utiliser dans le 
-    cadre du cas d'usage PS à titre individuel (y compris les ressources communes aux autres cas d'usage)</p>
-    <div class="casdusage-tabs1-container">
-    <div class="casdusage-tabs2-container">
     <div class="casdusage-tabs-container">
         <ul class="nav nav-tabs">
             <li class="active">
-                <a href="#">PS à titre individuel</a>
+                <a href="#">Ensemble des cas d'usage</a>
+            </li>
+            <li>
+                <a href="ressources_cas_dusage_ps.html">PS à titre individuel</a>
             </li>
             <li>
                 <a href="ressources_cas_dusage_cpts.html">CPTS</a>
@@ -279,7 +276,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </li>
         </ul>
 
-        <table class="lines"><tr><td style="background-color: #eeeeee">Identifiant</td><td style="background-color: #eeeeee">Type</td><td style="background-color: #eeeeee">Description</td></tr><tr><td><a href="SearchParameter-slot-sp-start.html">slot-sp-start</a></td><td><div><p>SearchParameter</p>
+        <table class="lines"><tr><td style="background-color: #eeeeee">Identifiant</td><td style="background-color: #eeeeee">Type</td><td style="background-color: #eeeeee">Description</td></tr><tr><td><a href="SearchParameter-cptsslot-sp-servicetype.html">cptsslot-sp-servicetype</a></td><td><div><p>SearchParameter</p>
+</div></td><td><div><p>Paramètre de recherche sur le service type qui mime le paramètre R5. Permet de rechercher ou d'inclure la ressource reférencée HealthCare Service</p>
+</div></td></tr><tr><td><a href="SearchParameter-slot-sp-start.html">slot-sp-start</a></td><td><div><p>SearchParameter</p>
 </div></td><td><div><p>Paramètre de recherche date de début d'un créneau (date de début supérieure ou égale à &lt;date1&gt; et inférieure ou égale à &lt;date2&gt;)</p>
 </div></td></tr><tr><td><a href="StructureDefinition-BundleAgregateur.html">BundleAgregateur</a></td><td><div><p>StructureDefinition</p>
 </div></td><td><div><p>Profil de Bundle qui représente le flux de réponse contenant les créneaux disponibles dans le cadre du service d'agrégation de créneaux de la plateforme SAS - Cas d'usage PS Indiv</p>
@@ -299,8 +298,34 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td><td><div><p>Profil de Slot, dérivé de FrSlot, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS</p>
 </div></td></tr><tr><td><a href="StructureDefinition-sas-categorie-orientation.html">sas-categorie-orientation</a></td><td><div><p>StructureDefinition</p>
 </div></td><td><div><p>Extension créée afin d'ajouter la catégorie d'orientation dans un RDV</p>
+</div></td></tr><tr><td><a href="StructureDefinition-sas-cpts-bundle-aggregator.html">sas-cpts-bundle-aggregator</a></td><td><div><p>StructureDefinition</p>
+</div></td><td><div><p>Profil de Bundle qui représente le flux de réponse contenant les créneaux disponibles dans le cadre du service d'agrégation de créneaux de la plateforme SAS - Cas d'usage CPTS</p>
+</div></td></tr><tr><td><a href="StructureDefinition-sas-cpts-healthcareservice-aggregator.html">sas-cpts-healthcareservice-aggregator</a></td><td><div><p>StructureDefinition</p>
+</div></td><td><div><p>Profil dérivé de FrHealthcareService pour le cas d'usage agrégateur de la plateforme SAS - cas d'usage CPTS</p>
+</div></td></tr><tr><td><a href="StructureDefinition-sas-cpts-organization-aggregator.html">sas-cpts-organization-aggregator</a></td><td><div><p>StructureDefinition</p>
+</div></td><td><div><p>Profil dérivé de FrOrganization pour le cas d'usage agrégateur de la plateforme SAS - cas d'usage CPTS</p>
+</div></td></tr><tr><td><a href="StructureDefinition-sas-cpts-slot-aggregator.html">sas-cpts-slot-aggregator</a></td><td><div><p>StructureDefinition</p>
+</div></td><td><div><p>Profil de Slot, dérivé de FrSlot, pour le cas d'usage agrégateur de la plateforme SAS - cas d'usage CPTS</p>
+</div></td></tr><tr><td><a href="StructureDefinition-sas-cpts-slot-servicetype-aggregator.html">sas-cpts-slot-servicetype-aggregator</a></td><td><div><p>StructureDefinition</p>
+</div></td><td><div><p>Extension créée afin de permettre la reference à la ressource HealthcareService. Cette extension implemente l'élément serviceType de R5 https://hl7.org/fhir/slot-definitions.html#Slot.serviceType</p>
+</div></td></tr><tr><td><a href="StructureDefinition-sas-sos-appointment.html">sas-sos-appointment</a></td><td><div><p>StructureDefinition</p>
+</div></td><td><div><p>Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins</p>
+</div></td></tr><tr><td><a href="StructureDefinition-sas-sos-bundle-aggregator.html">sas-sos-bundle-aggregator</a></td><td><div><p>StructureDefinition</p>
+</div></td><td><div><p>Profil de Bundle qui représente le flux de réponse contenant les créneaux disponibles dans le cadre du service d'agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins</p>
+</div></td></tr><tr><td><a href="StructureDefinition-sas-sos-location-aggregator.html">sas-sos-location-aggregator</a></td><td><div><p>StructureDefinition</p>
+</div></td><td><div><p>Profil de Location, dérivé de FrLocation, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins</p>
+</div></td></tr><tr><td><a href="StructureDefinition-sas-sos-organization-aggregator.html">sas-sos-organization-aggregator</a></td><td><div><p>StructureDefinition</p>
+</div></td><td><div><p>Profil d'Organization, dérivé de FrOrganization, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins</p>
+</div></td></tr><tr><td><a href="StructureDefinition-sas-sos-schedule-aggregator.html">sas-sos-schedule-aggregator</a></td><td><div><p>StructureDefinition</p>
+</div></td><td><div><p>Profil de Schedule, dérivé de FrSchedule, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins</p>
+</div></td></tr><tr><td><a href="StructureDefinition-sas-sos-slot-aggregator.html">sas-sos-slot-aggregator</a></td><td><div><p>StructureDefinition</p>
+</div></td><td><div><p>Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins</p>
 </div></td></tr><tr><td><a href="ValueSet-categorie-orientation-sas-valueset.html">categorie-orientation-sas-valueset</a></td><td><div><p>ValueSet</p>
 </div></td><td><div><p>Valueset permettant de définir la catégorie d'orientation SAS. Il regroupe des codes de la TRE-R66 et du codesystem catégorie orientation SAS</p>
+</div></td></tr><tr><td><a href="ValueSet-sas-cpts-valueset-typecreneau.html">sas-cpts-valueset-typecreneau</a></td><td><div><p>ValueSet</p>
+</div></td><td><div><p>Type de Créneaux SAS CPTS</p>
+</div></td></tr><tr><td><a href="ValueSet-sas-sos-valueset-typecreneau.html">sas-sos-valueset-typecreneau</a></td><td><div><p>ValueSet</p>
+</div></td><td><div><p>Type de Créneaux SAS SOS</p>
 </div></td></tr><tr><td><a href="ValueSet-sas-valueset-appointment-status.html">sas-valueset-appointment-status</a></td><td><div><p>ValueSet</p>
 </div></td><td><div><p>Etat du RDV SAS</p>
 </div></td></tr><tr><td><a href="ValueSet-sas-valueset-appointmentparticipanttype.html">sas-valueset-appointmentparticipanttype</a></td><td><div><p>ValueSet</p>
@@ -317,8 +342,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td><td><div><p>Type d'identifiant SAS</p>
 </div></td></tr></table>
     </div>
-    </div>
-    </div>
+
 </div>
 </div>
         </div>  <!-- /inner-wrapper -->
@@ -350,7 +374,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
               </td>
               <td style="text-align:var(--ig-right);">&#xA0;
 
-                <a href="ressources_cas_dusage_cpts.html">next ></a>
+                <a href="ressources_cas_dusage_ps.html">next ></a>
 
               </td>
             </tr>
@@ -366,7 +390,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Package ans.fhir.fr.sas#1.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-07-22 09:38:00 +0000">
+  <span title="2026-07-22 12:21:00 +0000">
     2026-07-22
   </span>
 
