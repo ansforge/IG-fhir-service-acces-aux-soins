@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/r5/fhir-single.xsd">
+
+    <div class="examples-tabs-wrapper">
+        <div class="examples-tabs-container">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="active">
+                    <a href="#nav-create-ps-indiv-cpts" data-toggle="tab">PS indiv/CPTS</a>
+                </li>
+                <li>
+                    <a href="#nav-create-sos" data-toggle="tab">SOS Médecins</a>
+                </li>
+                <li>
+                    <a href="#nav-create-pdm" data-toggle="tab">Place de Marché</a>
+                </li>
+            </ul>
+        <!-- Exemple POST PS individuel/CPTS -->
+            <div class="tab-content">
+                <div id="nav-create-ps-indiv-cpts" class="tab-pane active" role="tabpanel">
+                    <p><strong>Requête :</strong></p>
+
+                    <p>
+                    <code>POST [BASE]/Appointment</code>
+                    </p>
+
+                    <p><strong>Corps de la requête :</strong></p>
+
+                    <p>
+                    La requête ci-dessous correspond à la transmission d'un rendez-vous
+                    pris par le régulateur avec un identifiant national 3456780581/11242343
+                    avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h.
+                    </p>
+
+                    {% include Appointment-1-json-html.xhtml %}
+                </div>
+        <!-- Exemple POST SOS -->
+                <div id="nav-create-sos" class="tab-pane" role="tabpanel">
+                    <p><strong>Requête :</strong></p>
+                    
+                    <p>
+                    <code>POST [BASE]/Appointment</code>
+                    </p>
+
+                    <p><strong>Corps de la requête :</strong></p>
+
+                    <p>
+                    La requête ci-dessous correspond à la transmission d'un rendez-vous
+                    pris par le régulateur avec un identifiant national 3456780581/11242343
+                    pour le 04/09 à 14h.
+                    </p>
+
+                    {% include Appointment-12345678-json-html.xhtml %}
+                </div>
+        <!-- Exemple POST PDM -->
+                <div id="nav-create-pdm" class="tab-pane" role="tabpanel">
+                    <p><strong>Requête :</strong></p>
+                    
+                    <p>
+                    <code>POST [BASE]/Appointment</code>
+                    </p>
+
+                    <p><strong>Corps de la requête :</strong></p>
+
+                    <p>
+                    La requête ci-dessous correspond à la transmission d'une demande de prise en charge réalisée 
+                    par le régulateur avec un identifiant national 3456780581/11242343 le 04/09 à 14h.
+                    </p>
+
+                    {% include Appointment-12345678-json-html.xhtml %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
