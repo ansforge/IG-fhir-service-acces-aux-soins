@@ -256,6 +256,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             display:none !important;
         }
     </style>
+    <style type="text/css">
+        .examples2-tabs-wrapper .nav-tabs a[name]{
+            display:none !important;
+        }
+    </style>
+    <style type="text/css">
+        .nomenclatures-tabs-wrapper .nav-tabs a[name]{
+            display:none !important;
+        }
+    </style>
 
     <a name="1"/><h3>Caractéristiques de l'API</h3>
 
@@ -533,63 +543,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                     par le régulateur avec un identifiant national 3456780581/11242343 le 04/09 à 14h.
                     </p>
 
-                    <!-- <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
-  "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment">resourceType</a>" : "Appointment",
-  "<a href="http://hl7.org/fhir/R4/resource.html#Appointment.id">id</a>" : "12345678",
-  "<a href="http://hl7.org/fhir/R4/resource.html#Appointment.meta">meta</a>" : {
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
-      <a href="StructureDefinition-sas-sos-appointment.html" style="color: Maroon">&#x1F517;</a> "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-appointment"
-    ]
-  },
-  "<a href="http://hl7.org/fhir/R4/domainresource.html#Appointment.text">text</a>" : {
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "extensions",
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;div xml:lang=\&quot;fr\&quot; lang=\&quot;fr\&quot;&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;French&lt;/b&gt;&lt;/p&gt;&lt;hr/&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : RendezVous 12345678&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;12345678\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc12345678\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-sas-sos-appointment.html\&quot;&gt;FrAppointmentSASSOS&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;FrAppointmentOperator&lt;/b&gt;: Identifier: Identifiant National de Professionnel de Santé/3456780581/11242343&lt;/p&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;urn:oid:1.1.111.1.11.1.1.1&lt;/code&gt;/b6e39355-8a61-4556-b340-36f7b95fec6a&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Pending&lt;/p&gt;&lt;p&gt;&lt;b&gt;start&lt;/b&gt;: 2022-09-04 14:00:00+0100&lt;/p&gt;&lt;p&gt;&lt;b&gt;end&lt;/b&gt;: 2022-09-04 14:15:00+0100&lt;/p&gt;&lt;h3&gt;Participants&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Status&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes :{http://terminology.hl7.org/CodeSystem/v3-ParticipationType ADM}\&quot;&gt;admitter&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Needs Action&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;div xml:lang=\&quot;en\&quot; lang=\&quot;en\&quot;&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;English&lt;/b&gt;&lt;/p&gt;&lt;hr/&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Appointment 12345678&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;en-12345678\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;en-hc12345678\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-sas-sos-appointment.html\&quot;&gt;FrAppointmentSASSOS&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;FrAppointmentOperator&lt;/b&gt;: Identifier: Identifiant National de Professionnel de Santé/3456780581/11242343&lt;/p&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;urn:oid:1.1.111.1.11.1.1.1&lt;/code&gt;/b6e39355-8a61-4556-b340-36f7b95fec6a&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Pending&lt;/p&gt;&lt;p&gt;&lt;b&gt;start&lt;/b&gt;: 2022-09-04 14:00:00+0100&lt;/p&gt;&lt;p&gt;&lt;b&gt;end&lt;/b&gt;: 2022-09-04 14:15:00+0100&lt;/p&gt;&lt;h3&gt;Participants&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Status&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes:{http://terminology.hl7.org/CodeSystem/v3-ParticipationType ADM}\&quot;&gt;admitter&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Needs Action&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;"
-  },
-  "<a href="http://hl7.org/fhir/R4/domainresource.html#Appointment.extension">extension</a>" : [
-    {
-      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://interopsante.org/fhir/StructureDefinition/FrAppointmentOperator",
-      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueReference</a>" : {
-        "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.identifier">identifier</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>" : {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
-              {
-                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
-                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "IDNPS"
-              }
-            ]
-          },
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:oid:1.2.250.1.71.4.2.1",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "3456780581/11242343"
-        }
-      }
-    }
-  ],
-  "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.identifier">identifier</a>" : [
-    {
-      "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:oid:1.1.111.1.11.1.1.1",
-      "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "b6e39355-8a61-4556-b340-36f7b95fec6a"
-    }
-  ],
-  "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.status">status</a>" : "pending",
-  "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.start">start</a>" : "2022-09-04T14:00:00+01:00",
-  "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.end">end</a>" : "2022-09-04T14:15:00+01:00",
-  "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.participant">participant</a>" : [
-    {
-      "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.participant.type">type</a>" : [
-        {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
-            {
-              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
-              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "ADM"
-            }
-          ]
-        }
-      ],
-      "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.participant.status">status</a>" : "needs-action"
-    }
-  ]
-}</code></pre>
- -->
                 </div>
             </div>
         </div>
@@ -651,36 +604,37 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <a name="3.3"/><h4>Exemples de requêtes</h4>
     <!-- <p></p> -->
     <p>Ci-dessous des exemples de requêtes pour la modification de rendez-vous par cas d'usage :</p>
-    <div class="examples2-tabs-container">
-        <ul class="nav nav-tabs" role="tablist">
-            <li class="active">
-                <a href="#nav-put-ps-indiv-cpts" data-toggle="tab">PS indiv/CPTS</a>
-            </li>
-            <li>
-                <a href="#nav-put-sos" data-toggle="tab">SOS Médecins</a>
-            </li>
-            <li>
-                <a href="#nav-put-pdm" data-toggle="tab">Place de Marché</a>
-            </li>
-        </ul>
-    <!-- Exemple PUT PS individuel/CPTS -->
-        <div class="tab-content">
-            <div id="nav-put-ps-indiv-cpts" class="tab-pane active" role="tabpanel">
-                <p><strong>Requête :</strong></p>
+    <div class="examples2-tabs-wrapper">
+        <div class="examples2-tabs-container">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="active">
+                    <a href="#nav-put-ps-indiv-cpts" data-toggle="tab">PS indiv/CPTS</a>
+                </li>
+                <li>
+                    <a href="#nav-put-sos" data-toggle="tab">SOS Médecins</a>
+                </li>
+                <li>
+                    <a href="#nav-put-pdm" data-toggle="tab">Place de Marché</a>
+                </li>
+            </ul>
+        <!-- Exemple PUT PS individuel/CPTS -->
+            <div class="tab-content">
+                <div id="nav-put-ps-indiv-cpts" class="tab-pane active" role="tabpanel">
+                    <p><strong>Requête :</strong></p>
 
-                <p>
-                <code>PUT [BASE]/Appointment</code>
-                </p>
+                    <p>
+                    <code>PUT [BASE]/Appointment</code>
+                    </p>
 
-                <p><strong>Corps de la requête :</strong></p>
+                    <p><strong>Corps de la requête :</strong></p>
 
-                <p>
-                La requête ci-dessous correspond à la transmission d’un RDV pris 
-                par le régulateur avec un identifiant national 3456780581/11242343 
-                avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h, dont le statut est annulé.
-                </p>
+                    <p>
+                    La requête ci-dessous correspond à la transmission d’un RDV pris 
+                    par le régulateur avec un identifiant national 3456780581/11242343 
+                    avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h, dont le statut est annulé.
+                    </p>
 
-                <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
+                    <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
   "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment">resourceType</a>" : "Appointment",
   "<a href="http://hl7.org/fhir/R4/resource.html#Appointment.id">id</a>" : "2",
   "<a href="http://hl7.org/fhir/R4/resource.html#Appointment.meta">meta</a>" : {
@@ -742,24 +696,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   ]
 }</code></pre>
 
-            </div>
-    <!-- Exemple PUT SOS -->
-            <div id="nav-put-sos" class="tab-pane" role="tabpanel">
-                <p><strong>Requête :</strong></p>
-                
-                <p>
-                <code>PUT [BASE]/Appointment</code>
-                </p>
+                </div>
+        <!-- Exemple PUT SOS -->
+                <div id="nav-put-sos" class="tab-pane" role="tabpanel">
+                    <p><strong>Requête :</strong></p>
+                    
+                    <p>
+                    <code>PUT [BASE]/Appointment</code>
+                    </p>
 
-                <p><strong>Corps de la requête :</strong></p>
+                    <p><strong>Corps de la requête :</strong></p>
 
-                <p>
-                La requête ci-dessous correspond à la transmission d’un RDV pris 
-                par le régulateur avec un identifiant national 3456780581/11242343 
-                avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h, dont le statut est annulé.
-                </p>
+                    <p>
+                    La requête ci-dessous correspond à la transmission d’un RDV pris 
+                    par le régulateur avec un identifiant national 3456780581/11242343 
+                    avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h, dont le statut est annulé.
+                    </p>
 
-                <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
+                    <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
   "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment">resourceType</a>" : "Appointment",
   "<a href="http://hl7.org/fhir/R4/resource.html#Appointment.id">id</a>" : "123456789",
   "<a href="http://hl7.org/fhir/R4/resource.html#Appointment.meta">meta</a>" : {
@@ -830,81 +784,20 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   ]
 }</code></pre>
 
-            </div>
-    <!-- Exemple PUT PDM -->
-            <div id="nav-put-pdm" class="tab-pane" role="tabpanel">
-                <p><strong>Requête :</strong></p>
-                <p>
-                <code>PUT [BASE]/Appointment</code>
-                </p>
-                <p><strong>Corps de la requête :</strong></p>
-                <p>
-                La requête ci-dessous correspond à la transmission d’un RDV pris 
-                par le régulateur avec un identifiant national 3456780581/11242343 
-                avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h, dont le statut est annulé.
-                </p>
-                <!-- <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
-  "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment">resourceType</a>" : "Appointment",
-  "<a href="http://hl7.org/fhir/R4/resource.html#Appointment.id">id</a>" : "2",
-  "<a href="http://hl7.org/fhir/R4/resource.html#Appointment.meta">meta</a>" : {
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
-      <a href="StructureDefinition-FrAppointmentSAS.html" style="color: Maroon">&#x1F517;</a> "http://sas.fr/fhir/StructureDefinition/FrAppointmentSAS"
-    ]
-  },
-  "<a href="http://hl7.org/fhir/R4/domainresource.html#Appointment.text">text</a>" : {
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "extensions",
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;div xml:lang=\&quot;fr\&quot; lang=\&quot;fr\&quot;&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;French&lt;/b&gt;&lt;/p&gt;&lt;hr/&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : RendezVous 2&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;2\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc2\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-FrAppointmentSAS.html\&quot;&gt;FrAppointmentSAS&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;FrAppointmentOperator&lt;/b&gt;: Identifier: Identifiant National de Professionnel de Santé/3456780581/11242343&lt;/p&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;urn:oid:1.1.111.1.11.1.1.1&lt;/code&gt;/b6e39355-8a61-4556-b340-36f7b95fec6a&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Cancelled&lt;/p&gt;&lt;p&gt;&lt;b&gt;start&lt;/b&gt;: 2022-09-04 14:00:00+0100&lt;/p&gt;&lt;p&gt;&lt;b&gt;end&lt;/b&gt;: 2022-09-04 14:15:00+0100&lt;/p&gt;&lt;p&gt;&lt;b&gt;created&lt;/b&gt;: 2022-09-04 10:00:00+0100&lt;/p&gt;&lt;h3&gt;Participants&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Actor&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Status&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;Identifier: Identifiant National de Professionnel de Santé/810100050075&lt;/td&gt;&lt;td&gt;Accepted&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;div xml:lang=\&quot;en\&quot; lang=\&quot;en\&quot;&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;English&lt;/b&gt;&lt;/p&gt;&lt;hr/&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Appointment 2&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;en-2\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;en-hc2\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-FrAppointmentSAS.html\&quot;&gt;FrAppointmentSAS&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;FrAppointmentOperator&lt;/b&gt;: Identifier: Identifiant National de Professionnel de Santé/3456780581/11242343&lt;/p&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;urn:oid:1.1.111.1.11.1.1.1&lt;/code&gt;/b6e39355-8a61-4556-b340-36f7b95fec6a&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Cancelled&lt;/p&gt;&lt;p&gt;&lt;b&gt;start&lt;/b&gt;: 2022-09-04 14:00:00+0100&lt;/p&gt;&lt;p&gt;&lt;b&gt;end&lt;/b&gt;: 2022-09-04 14:15:00+0100&lt;/p&gt;&lt;p&gt;&lt;b&gt;created&lt;/b&gt;: 2022-09-04 10:00:00+0100&lt;/p&gt;&lt;h3&gt;Participants&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Actor&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Status&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;Identifier: Identifiant National de Professionnel de Santé/810100050075&lt;/td&gt;&lt;td&gt;Accepted&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;"
-  },
-  "<a href="http://hl7.org/fhir/R4/domainresource.html#Appointment.extension">extension</a>" : [
-    {
-      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://interopsante.org/fhir/StructureDefinition/FrAppointmentOperator",
-      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueReference</a>" : {
-        "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.identifier">identifier</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>" : {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
-              {
-                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
-                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "IDNPS"
-              }
-            ]
-          },
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:oid:1.2.250.1.71.4.2.1",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "3456780581/11242343"
-        }
-      }
-    }
-  ],
-  "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.identifier">identifier</a>" : [
-    {
-      "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:oid:1.1.111.1.11.1.1.1",
-      "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "b6e39355-8a61-4556-b340-36f7b95fec6a"
-    }
-  ],
-  "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.status">status</a>" : "cancelled",
-  "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.start">start</a>" : "2022-09-04T14:00:00+01:00",
-  "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.end">end</a>" : "2022-09-04T14:15:00+01:00",
-  "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.created">created</a>" : "2022-09-04T10:00:00+01:00",
-  "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.participant">participant</a>" : [
-    {
-      "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.participant.actor">actor</a>" : {
-        "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.identifier">identifier</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>" : {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
-              {
-                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
-                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "IDNPS"
-              }
-            ]
-          },
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:oid:1.2.250.1.71.4.2.1",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "810100050075"
-        }
-      },
-      "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.participant.status">status</a>" : "accepted"
-    }
-  ]
-}</code></pre>
- -->
+                </div>
+        <!-- Exemple PUT PDM -->
+                <div id="nav-put-pdm" class="tab-pane" role="tabpanel">
+                    <p><strong>Requête :</strong></p>
+                    <p>
+                    <code>PUT [BASE]/Appointment</code>
+                    </p>
+                    <p><strong>Corps de la requête :</strong></p>
+                    <p>
+                    La requête ci-dessous correspond à la transmission d’un RDV pris 
+                    par le régulateur avec un identifiant national 3456780581/11242343 
+                    avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h, dont le statut est annulé.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
@@ -1223,7 +1116,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Le package ans.fhir.fr.sas#1.2.0 est basé sur <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Date de génération : 
-  <span title="2026-07-22 16:29:00 +0000">
+  <span title="2026-07-22 16:42:00 +0000">
     2026-07-22
   </span>
 
