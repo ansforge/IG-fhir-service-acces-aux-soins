@@ -89,7 +89,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-sas-sos-slot-ag
   "version" : "1.2.0",
   "name" : "FrSlotAgregateurSOS",
   "status" : "active",
-  "date" : "2026-07-20T14:00:59+00:00",
+  "date" : "2026-07-22T08:48:12+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
