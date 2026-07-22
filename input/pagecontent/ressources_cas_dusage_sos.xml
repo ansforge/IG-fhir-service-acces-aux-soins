@@ -3,28 +3,31 @@
     <p>Liste des ressources (profils, paramètres de recherche, terminologies, exemples) à utiliser dans le 
     cadre du cas d'usage SOS Médecins</p>
     <div class="casdusage-tabs2-container">
-    <div class="casdusage-tabs-container">
-        <ul class="nav nav-tabs">
-            <li>
-                <a href="ressources_cas_dusage.html">PS à titre individuel</a>
-            </li>
-            <li>
-                <a href="ressources_cas_dusage_cpts.html">CPTS</a>
-            </li>
-            <li class="active">
-                <a href="#">SOS Médecins</a>
-            </li>
-        </ul>
-                
-        {% sql {
-        "query" : "select Id, Type, Description, Web from Resources where Id like '%sos%' and Id not like 'Example%' ",
-        "class" : "lines",
-        "columns" : [
-            { "title" : "Identifiant", "type" : "link", "source" : "Id", "target" : "Web"},
-            { "title" : "Type", "type" : "markdown", "source" : "Type"},
-            { "title" : "Description", "type" : "markdown", "source" : "Description"}
-        ]
-        } %}
-    </div>
+        <div class="casdusage-tabs-container">
+            <ul class="nav nav-tabs">
+                <li>
+                    <a href="ressources_cas_dusage.html">Ensemble des cas d'usage</a>
+                </li>
+                <li>
+                    <a href="ressources_cas_dusage_ps.html">PS à titre individuel</a>
+                </li>
+                <li>
+                    <a href="ressources_cas_dusage_cpts.html">CPTS</a>
+                </li>
+                <li class="active">
+                    <a href="#">SOS Médecins</a>
+                </li>
+            </ul>
+                    
+            {% sql {
+            "query" : "select Id, Type, Description, Web from Resources where Id like '%sos%' and Id not like 'Example%' ",
+            "class" : "lines",
+            "columns" : [
+                { "title" : "Identifiant", "type" : "link", "source" : "Id", "target" : "Web"},
+                { "title" : "Type", "type" : "markdown", "source" : "Type"},
+                { "title" : "Description", "type" : "markdown", "source" : "Description"}
+            ]
+            } %}
+        </div>
     </div>
 </div>
