@@ -76,7 +76,7 @@ Ci-dessous des exemples de requêtes pour la création de rendez-vous par cas d'
 
 **Corps de la requête :**
 
- La requête ci-dessous correspond à la transmission d'un rendez-vous pris par le régulateur avec un identifiant national 3456780581/11242343 avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h. 
+ La requête ci-dessous correspond à la transmission d'un rendez-vous pris par le régulateur avec un identifiant national 3456780581/11242343 pour le 04/09 à 14h. 
 
 **Requête :**
 
@@ -84,7 +84,7 @@ Ci-dessous des exemples de requêtes pour la création de rendez-vous par cas d'
 
 **Corps de la requête :**
 
- La requête ci-dessous correspond à la transmission d'un rendez-vous pris par le régulateur avec un identifiant national 3456780581/11242343 avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h. 
+ La requête ci-dessous correspond à la transmission d'une demande de prise en charge initiée par le régulateur avec un identifiant national 3456780581/11242343 le 04/09 à 14h. 
 
 ### Mise à jour de rendez-vous
 
@@ -125,6 +125,8 @@ Si la recherche échoue, le serveur doit répondre :
 * 422 (Unprocessable Entity) – L'action demandée ne peut pas être réalisée à cause d’une règle interne à l’application.
 
 Plus de précision sur la spécification FHIR : [https://www.hl7.org/fhir/http.html](https://www.hl7.org/fhir/http.html)
+
+#### Exemples de requêtes
 
 Ci-dessous des exemples de requêtes pour la modification de rendez-vous par cas d'usage :
 
