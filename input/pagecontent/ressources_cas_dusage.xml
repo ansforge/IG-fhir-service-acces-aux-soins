@@ -1,0 +1,31 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/r5/fhir-single.xsd">
+
+    <p>Liste des ressources à utiliser par cas d'usage</p>
+
+    <p>Liste des ressources (profils, paramètres de recherche, terminologies, exemples) à utiliser dans le 
+    cadre du cas d'usage PS à titre individuel (y compris les ressources communes aux autres cas d'usage)</p>
+
+    <div class="casdusage-tabs-container">
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#">PS à titre individuel</a>
+            </li>
+            <li>
+                <a href="resources_cas_dusage_cpts.html">CPTS</a>
+            </li>
+            <li>
+                <a href="resources_cas_dusage_sos.html">SOS Médecins</a>
+            </li>
+        </ul>
+
+        {% sql {
+        "query" : "select Id, Type, Description, Web from Resources where Id not like '%sos%' and Id not like '%cpts%' and Id not like 'Example%' and Id not like '%lrm%' and Type in ('StructureDefinition', 'ValueSet', 'SearchParameter')",
+        "class" : "lines",
+        "columns" : [
+            { "title" : "Identifiant", "type" : "link", "source" : "Id", "target" : "Web"},
+            { "title" : "Type", "type" : "markdown", "source" : "Type"},
+            { "title" : "Description", "type" : "markdown", "source" : "Description"}
+        ]
+        } %}
+    </div>
+</div>
