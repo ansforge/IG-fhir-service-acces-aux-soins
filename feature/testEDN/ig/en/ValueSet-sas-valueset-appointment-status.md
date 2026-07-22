@@ -34,7 +34,7 @@ Etat du RDV SAS
   "title" : "Statut RDV SAS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-07-22T15:36:30+00:00",
+  "date" : "2026-07-22T16:29:14+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
