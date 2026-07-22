@@ -342,9 +342,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p>Plus de précision sur la spécification FHIR :
     <a href="https://www.hl7.org/fhir/http.html">https://www.hl7.org/fhir/http.html</a></p>
 
-  <a name="2.3"/><h4>Exemples de requêtes</h4>
+    <a name="2.3"/><h4>Exemples de requêtes</h4>
 
     <p>Ci-dessous des exemples de requêtes pour la création de rendez-vous par cas d'usage :</p>
+    <hr/>
     <div class="examples-tabs-wrapper1">
         <div class="examples-tabs-wrapper">
             <div class="examples-tabs-container">
@@ -643,37 +644,41 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p>Plus de précision sur la spécification FHIR :
     <a href="https://www.hl7.org/fhir/http.html">https://www.hl7.org/fhir/http.html</a></p>
 
+    <a name="3.3"/><h4>Exemples de requêtes</h4>
     <p>Ci-dessous des exemples de requêtes pour la modification de rendez-vous par cas d'usage :</p>
-    <div class="examples2-tabs-container">
-        <ul class="nav nav-tabs" role="tablist">
-            <li class="active">
-                <a href="#nav-put-ps-indiv-cpts" data-toggle="tab">PS indiv/CPTS</a>
-            </li>
-            <li>
-                <a href="#nav-put-sos" data-toggle="tab">SOS Médecins</a>
-            </li>
-            <li>
-                <a href="#nav-put-pdm" data-toggle="tab">Place de Marché</a>
-            </li>
-        </ul>
-    <!-- Exemple PUT PS individuel/CPTS -->
-        <div class="tab-content">
-            <div id="nav-put-ps-indiv-cpts" class="tab-pane active" role="tabpanel">
-                <p><strong>Requête :</strong></p>
+    <hr/>
+    <div class="examples2-tabs-wrapper1">
+        <div class="examples2-tabs-wrapper">
+            <div class="examples2-tabs-container">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="active">
+                        <a href="#nav-put-ps-indiv-cpts" data-toggle="tab">PS indiv/CPTS</a>
+                    </li>
+                    <li>
+                        <a href="#nav-put-sos" data-toggle="tab">SOS Médecins</a>
+                    </li>
+                    <li>
+                        <a href="#nav-put-pdm" data-toggle="tab">Place de Marché</a>
+                    </li>
+                </ul>
+            <!-- Exemple PUT PS individuel/CPTS -->
+                <div class="tab-content">
+                    <div id="nav-put-ps-indiv-cpts" class="tab-pane active" role="tabpanel">
+                        <p><strong>Requête :</strong></p>
 
-                <p>
-                <code>PUT [BASE]/Appointment</code>
-                </p>
+                        <p>
+                        <code>PUT [BASE]/Appointment</code>
+                        </p>
 
-                <p><strong>Corps de la requête :</strong></p>
+                        <p><strong>Corps de la requête :</strong></p>
 
-                <p>
-                La requête ci-dessous correspond à la transmission d’un RDV pris 
-                par le régulateur avec un identifiant national 3456780581/11242343 
-                avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h, dont le statut est annulé.
-                </p>
+                        <p>
+                        La requête ci-dessous correspond à la transmission d’un RDV pris 
+                        par le régulateur avec un identifiant national 3456780581/11242343 
+                        avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h, dont le statut est annulé.
+                        </p>
 
-                <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
+                        <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
   "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment">resourceType</a>" : "Appointment",
   "<a href="http://hl7.org/fhir/R4/resource.html#Appointment.id">id</a>" : "2",
   "<a href="http://hl7.org/fhir/R4/resource.html#Appointment.meta">meta</a>" : {
@@ -735,24 +740,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   ]
 }</code></pre>
 
-            </div>
-    <!-- Exemple PUT SOS -->
-            <div id="nav-put-sos" class="tab-pane" role="tabpanel">
-                <p><strong>Requête :</strong></p>
-                
-                <p>
-                <code>PUT [BASE]/Appointment</code>
-                </p>
+                    </div>
+            <!-- Exemple PUT SOS -->
+                    <div id="nav-put-sos" class="tab-pane" role="tabpanel">
+                        <p><strong>Requête :</strong></p>
+                        
+                        <p>
+                        <code>PUT [BASE]/Appointment</code>
+                        </p>
 
-                <p><strong>Corps de la requête :</strong></p>
+                        <p><strong>Corps de la requête :</strong></p>
 
-                <p>
-                La requête ci-dessous correspond à la transmission d’un RDV pris 
-                par le régulateur avec un identifiant national 3456780581/11242343 
-                avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h, dont le statut est annulé.
-                </p>
+                        <p>
+                        La requête ci-dessous correspond à la transmission d’un RDV pris 
+                        par le régulateur avec un identifiant national 3456780581/11242343 
+                        avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h, dont le statut est annulé.
+                        </p>
 
-                <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
+                        <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
   "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment">resourceType</a>" : "Appointment",
   "<a href="http://hl7.org/fhir/R4/resource.html#Appointment.id">id</a>" : "123456789",
   "<a href="http://hl7.org/fhir/R4/resource.html#Appointment.meta">meta</a>" : {
@@ -823,20 +828,20 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   ]
 }</code></pre>
 
-            </div>
-    <!-- Exemple PUT PDM -->
-            <div id="nav-put-pdm" class="tab-pane" role="tabpanel">
-                <p><strong>Requête :</strong></p>
-                <p>
-                <code>PUT [BASE]/Appointment</code>
-                </p>
-                <p><strong>Corps de la requête :</strong></p>
-                <p>
-                La requête ci-dessous correspond à la transmission d’un RDV pris 
-                par le régulateur avec un identifiant national 3456780581/11242343 
-                avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h, dont le statut est annulé.
-                </p>
-                <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
+                    </div>
+            <!-- Exemple PUT PDM -->
+                    <div id="nav-put-pdm" class="tab-pane" role="tabpanel">
+                        <p><strong>Requête :</strong></p>
+                        <p>
+                        <code>PUT [BASE]/Appointment</code>
+                        </p>
+                        <p><strong>Corps de la requête :</strong></p>
+                        <p>
+                        La requête ci-dessous correspond à la transmission d’un RDV pris 
+                        par le régulateur avec un identifiant national 3456780581/11242343 
+                        avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h, dont le statut est annulé.
+                        </p>
+                        <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
   "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment">resourceType</a>" : "Appointment",
   "<a href="http://hl7.org/fhir/R4/resource.html#Appointment.id">id</a>" : "2",
   "<a href="http://hl7.org/fhir/R4/resource.html#Appointment.meta">meta</a>" : {
@@ -898,6 +903,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   ]
 }</code></pre>
 
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -905,6 +912,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <a name="4"/><h3>Nomenclatures</h3>
 
     <p>Cette section détaille les nomenclatures à utiliser afin de renseigner les différents éléments codifiés de la requête.</p>
+    <hr/>
     <div class="nomenclatures-tabs-wrapper1">
         <div class="nomenclatures-tabs-wrapper">
             <div class="nomenclatures-tabs-container">
@@ -1213,7 +1221,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Le package ans.fhir.fr.sas#1.2.0 est basé sur <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Date de génération : 
-  <span title="2026-07-22 13:46:00 +0000">
+  <span title="2026-07-22 14:02:00 +0000">
     2026-07-22
   </span>
 

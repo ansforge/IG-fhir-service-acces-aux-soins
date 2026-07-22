@@ -32,7 +32,7 @@ Other representations of profile: [CSV](../StructureDefinition-FrAppointmentSAS.
   "version" : "1.2.0",
   "name" : "FrAppointmentSAS",
   "status" : "active",
-  "date" : "2026-07-22T13:46:01+00:00",
+  "date" : "2026-07-22T14:02:04+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

@@ -59,6 +59,8 @@ Plus de précision sur la spécification FHIR : [https://www.hl7.org/fhir/http.h
 
 Ci-dessous des exemples de requêtes pour la création de rendez-vous par cas d'usage :
 
+-------
+
 **Requête :**
 
  `POST [BASE]/Appointment` 
@@ -123,7 +125,11 @@ Si la recherche échoue, le serveur doit répondre :
 
 Plus de précision sur la spécification FHIR : [https://www.hl7.org/fhir/http.html](https://www.hl7.org/fhir/http.html)
 
+#### Exemples de requêtes
+
 Ci-dessous des exemples de requêtes pour la modification de rendez-vous par cas d'usage :
+
+-------
 
 **Requête :**
 
@@ -152,6 +158,8 @@ Ci-dessous des exemples de requêtes pour la modification de rendez-vous par cas
 ### Nomenclatures
 
 Cette section détaille les nomenclatures à utiliser afin de renseigner les différents éléments codifiés de la requête.
+
+-------
 
 * **Identifiant technique du RDV :** 
 * Un identifiant technique unique par RDV est attendu. Cet ID est défini par la solution logicielle éditeur et peut prendre la forme d'un UUID par exemple. Les échanges s'appuieront sur cet ID pour les requêtes de mises à jour (interaction conditional update).
