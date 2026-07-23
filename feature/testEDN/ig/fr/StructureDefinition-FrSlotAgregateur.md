@@ -107,7 +107,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FrSlotAgregateu
   "version" : "1.2.0",
   "name" : "FrSlotAgregateur",
   "status" : "active",
-  "date" : "2026-07-22T16:42:04+00:00",
+  "date" : "2026-07-23T08:48:51+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

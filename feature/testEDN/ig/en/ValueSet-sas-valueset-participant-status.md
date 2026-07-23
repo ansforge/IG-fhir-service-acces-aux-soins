@@ -34,7 +34,7 @@ Statut du participant RDV SAS
   "title" : "Statut participant RDV SAS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-07-22T16:42:04+00:00",
+  "date" : "2026-07-23T08:48:51+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

@@ -144,7 +144,7 @@
     </ul>
   </li>
   <li>
-    <a href="ressources_casusage.html">Ressources par cas d&apos;usage</a>
+    <a href="ressources_cas_dusage.html">Ressources par cas d&apos;usage</a>
   </li>
   <li>
     <a href="artifacts.html">Ressources de conformité</a>
@@ -249,7 +249,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   
   
   
-  <div xmlns="http://www.w3.org/1999/xhtml"><div class="markdown-toc" data-fhir="generated"><p>Contenu:</p><ul><li><a href="#1">Caractéristiques de l'API</a></li><li><a href="#2">Création de rendez-vous</a></li><li><a href="#3">Mise à jour de rendez-vous</a></li><li><a href="#4">Nomenclatures</a></li><li><a href="#5">Validateur ressources</a></li></ul></div>
+  <div xmlns="http://www.w3.org/1999/xhtml"><div class="markdown-toc" data-fhir="generated"><p>Contenu:</p><ul><li><a href="#Caracteristiques-API">Caractéristiques de l'API</a></li><li><a href="#Creation-RDV">Création de rendez-vous</a></li><li><a href="#3">Mise à jour de rendez-vous</a></li><li><a href="#4">Nomenclatures</a></li><li><a href="#5">Validateur ressources</a></li></ul></div>
 
     <style type="text/css">
         .examples-tabs-wrapper .nav-tabs a[name]{
@@ -266,8 +266,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             display:none !important;
         }
     </style>
-
-    <a name="1"/><h3>Caractéristiques de l'API</h3>
+    <a name="Caracteristiques-API">  </a>
+    <h3>Caractéristiques de l'API</h3>
 
     <table>
     <tbody>
@@ -298,9 +298,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </tbody>
     </table>
 
-    <a name="2"/><h3>Création de rendez-vous</h3>
+    <a name="Creation-RDV">  </a>
+    <h3>Création de rendez-vous</h3>
 
-    <a name="2.1"/><h4>Construction de la requête de base</h4>
+    <a name="Construction-requete-creation">  </a>
+    <h4>Construction de la requête de base</h4>
 
     <table>
     <tbody>
@@ -324,9 +326,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </table>
     <p><a href="#_ftnref1" name="_ftn1">[1] </a> <a href="https://www.hl7.org/fhir/http.html#create">https://www.hl7.org/fhir/http.html#create</a> et <a href="https://www.hl7.org/fhir/http.html#general">https://www.hl7.org/fhir/http.html#general</a></p>
 
-    <a name="2.2"/><h4>Construction de la réponse de base</h4>
+    <a name="Construction-reponse-creation">  </a>
+    <h4>Construction de la réponse de base</h4>
 
-    <a name="2.2.1"/><h5>Réponse de base -- Succès</h5>
+    <a name="Reponse-creation-succes">  </a>
+    <h5>Réponse de base -- Succès</h5>
 
     <p>Lien vers la spécification FHIR : <a href="https://www.hl7.org/fhir/bundle.html">https://www.hl7.org/fhir/bundle.html</a></p>
     <p>Si la création est un succès, le serveur répond :</p>
@@ -336,7 +340,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </ul>
     <p>Plus de précision sur la spécification FHIR :
     <a href="https://www.hl7.org/fhir/http.html">https://www.hl7.org/fhir/http.html</a></p>
-    <a name="2.2.2"/><h5>Réponse de base -- Echec</h5>
+    
+    <a name="Reponse-creation-echec">  </a>
+    <h5>Réponse de base -- Echec</h5>
     <p>Lien vers la spécification FHIR :
     <a href="https://www.hl7.org/fhir/operationoutcome.html">https://www.hl7.org/fhir/operationoutcome.html</a></p>
 
@@ -357,9 +363,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </ul>
     <p>Plus de précision sur la spécification FHIR :
     <a href="https://www.hl7.org/fhir/http.html">https://www.hl7.org/fhir/http.html</a></p>
-
-  <a name="2.3"/><h4>Exemples de requêtes</h4>
-    <!-- <hr/> -->
+    
+    <a name="Exemples-requetes-creation">  </a>
+    <h4>Exemples de requêtes</h4>
     <p>Ci-dessous des exemples de requêtes pour la création de rendez-vous par cas d'usage :</p>
     <div class="examples-tabs-wrapper">
         <div class="examples-tabs-container">
@@ -602,7 +608,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <a href="https://www.hl7.org/fhir/http.html">https://www.hl7.org/fhir/http.html</a></p>
 
     <a name="3.3"/><h4>Exemples de requêtes</h4>
-    <!-- <p></p> -->
     <p>Ci-dessous des exemples de requêtes pour la modification de rendez-vous par cas d'usage :</p>
     <div class="examples2-tabs-wrapper">
         <div class="examples2-tabs-container">
@@ -805,10 +810,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <a name="4"/><h3>Nomenclatures</h3>
     <p/>
     <p>Cette section détaille les nomenclatures à utiliser afin de renseigner les différents éléments codifiés de la requête.</p>
-
-    <div>
-        <p/>
-    </div>
 
     <div class="nomenclatures-tabs-wrapper">
         <div class="nomenclatures-tabs-container">
@@ -1116,8 +1117,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Le package ans.fhir.fr.sas#1.2.0 est basé sur <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Date de génération : 
-  <span title="2026-07-22 16:42:00 +0000">
-    2026-07-22
+  <span title="2026-07-23 08:48:00 +0000">
+    2026-07-23
   </span>
 
           <br/>

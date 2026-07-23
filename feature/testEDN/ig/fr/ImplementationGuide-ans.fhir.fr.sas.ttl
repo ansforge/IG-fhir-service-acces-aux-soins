@@ -18,7 +18,7 @@
   fhir:ImplementationGuide.name [ fhir:value "SAS"] ;
   fhir:ImplementationGuide.title [ fhir:value "Service d'Accès aux Soins"] ;
   fhir:ImplementationGuide.status [ fhir:value "active"] ;
-  fhir:ImplementationGuide.date [ fhir:value "2026-07-22T16:42:04+00:00"^^xsd:dateTime] ;
+  fhir:ImplementationGuide.date [ fhir:value "2026-07-23T08:48:51+00:00"^^xsd:dateTime] ;
   fhir:ImplementationGuide.publisher [ fhir:value "ANS"] ;
   fhir:ImplementationGuide.contact [
      fhir:index -1 ;
@@ -2256,11 +2256,42 @@
          fhir:Element.extension [
            fhir:index -1 ;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
-           fhir:Extension.valueUrl [ fhir:value "ressources_casusage.html" ]
+           fhir:Extension.valueUrl [ fhir:value "ressources_cas_dusage.html" ]
          ] ;
-         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "ressources_casusage.html" ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "ressources_cas_dusage.html" ] ;
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Ressources par cas d'usage" ] ;
-         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ] ;
+         fhir:ImplementationGuide.definition.page.page [
+           fhir:index -1 ;
+           fhir:Element.extension [
+             fhir:index -1 ;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+             fhir:Extension.valueUrl [ fhir:value "ressources_cas_dusage_ps.html" ]
+           ] ;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "ressources_cas_dusage_ps.html" ] ;
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "PS à titre individuel" ] ;
+           fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+         ], [
+           fhir:index -1 ;
+           fhir:Element.extension [
+             fhir:index -1 ;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+             fhir:Extension.valueUrl [ fhir:value "ressources_cas_dusage_cpts.html" ]
+           ] ;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "ressources_cas_dusage_cpts.html" ] ;
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "CPTS" ] ;
+           fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+         ], [
+           fhir:index -1 ;
+           fhir:Element.extension [
+             fhir:index -1 ;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+             fhir:Extension.valueUrl [ fhir:value "ressources_cas_dusage_sos.html" ]
+           ] ;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "ressources_cas_dusage_sos.html" ] ;
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "SOS Médecins" ] ;
+           fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+         ]
        ], [
          fhir:index -1 ;
          fhir:Element.extension [
