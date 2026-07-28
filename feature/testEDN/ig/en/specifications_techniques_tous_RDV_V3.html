@@ -480,7 +480,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                     <p>
                     La requête ci-dessous correspond à la transmission d'un rendez-vous
                     pris par le régulateur avec un identifiant national 3456780581/11242343
-                    pour le 04/09 à 14h.
+                    pour le 04/09 à 14h auprès d'une association SOS Médecins ou de visite à domicile, 
+                    le PS effecteur de soins n'est pas connu à la prise de rendez-vous.
                     </p>
 
                     <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
@@ -553,7 +554,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
                     <p>
                     La requête ci-dessous correspond à la transmission d'une demande de prise en charge initiée 
-                    par le régulateur avec un identifiant national 3456780581/11242343 le 04/09 à 14h.
+                    par le régulateur avec un identifiant national 3456780581/11242343 le 04/09 à 14h, 
+                    le PS effecteur de soins n'est pas connu à la prise de rendez-vous.
                     </p>
 
                     <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
@@ -699,7 +701,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                     <p><strong>Corps de la requête :</strong></p>
 
                     <p>
-                    La requête ci-dessous correspond à la transmission d’un RDV pris 
+                    La requête ci-dessous correspond à la mise à jour d’un RDV pris 
                     par le régulateur avec un identifiant national 3456780581/11242343 
                     avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h, dont le statut est annulé.
                     </p>
@@ -778,9 +780,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                     <p><strong>Corps de la requête :</strong></p>
 
                     <p>
-                    La requête ci-dessous correspond à la transmission d’un RDV pris 
-                    par le régulateur avec un identifiant national 3456780581/11242343 
-                    avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h, dont le statut est annulé.
+                    La requête ci-dessous correspond à la mise à jour d’un RDV pris 
+                    par le régulateur avec un identifiant national 3456780581/11242343, 
+                    pour le 04/09 à 14h auprès d'une association SOS Médecins ou de visite à domicile. 
+                    Au moment de la création du rendez-vous, le professionnel de santé effecteur n’était pas 
+                    renseigné. 
+                    Celui-ci est désormais connu et identifié par le RPPS 810100050075. 
+                    Le statut du rendez-vous est à annulé. 
+
                     </p>
 
                     <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
@@ -863,9 +870,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                     </p>
                     <p><strong>Corps de la requête :</strong></p>
                     <p>
-                    La requête ci-dessous correspond à la transmission d’un RDV pris 
-                    par le régulateur avec un identifiant national 3456780581/11242343 
-                    avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h, dont le statut est annulé.
+                    La requête ci-dessous correspond à la mise à jour d’une demande de prise en charge initiée 
+                    par le régulateur avec un identifiant national 3456780581/11242343, le 04/09 à 14h.
+                    Au moment de la demande de prise en charge, le professionnel de santé effecteur n’était pas 
+                    renseigné. 
+                    Celui-ci est désormais connu et identifié par le RPPS 810100050075. 
+                    Le statut du rendez-vous est à annulé. 
                     </p>
 
                     <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
@@ -1087,6 +1097,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                                         et <code>type.coding.system</code> à <code>http://interopsante.org/fhir/CodeSystem/fr-v2-0203</code>.</li>
                                     </ul>
                                 </li>
+                                <blockquote class="Identifiant Dispatcher">
+                                    Pour la transmission d'un rendez-vous pris par un Dispatcher SOS Médecins 
+                                    l'identifiant partagé est de type ID technique SAS.
+                                </blockquote>
                             </ul>
                         </li>
                         <li><strong>Statut du RDV :</strong>
@@ -1254,8 +1268,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Package ans.fhir.fr.sas#1.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-07-23 09:00:00 +0000">
-    2026-07-23
+  <span title="2026-07-28 14:01:00 +0000">
+    2026-07-28
   </span>
 
           <br/>
