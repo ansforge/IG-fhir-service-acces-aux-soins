@@ -141,7 +141,7 @@ Ci-dessous des exemples de requêtes pour la modification de rendez-vous par cas
 
 **Corps de la requête :**
 
- La requête ci-dessous correspond à la mise à jour d’un RDV pris par le régulateur avec un identifiant national 3456780581/11242343, pour le 04/09 à 14h auprès d'une association SOS Médecins ou de visite à domicile. Au moment de la création du rendez-vous, le professionnel de santé effecteur n’était pas renseigné. Celui-ci est désormais connu et identifié par le RPPS 810100050075. Le statut du rendez-vous est à annulé. 
+ La requête ci-dessous correspond à la mise à jour d’un RDV pris par le régulateur avec un identifiant national 3456780581/11242343, pour le 04/09 à 14h auprès d'une association SOS Médecins ou de visite à domicile. Au moment de la création du rendez-vous, le professionnel de santé effecteur n’était pas renseigné, celui-ci est désormais connu et identifié par le RPPS 810100050075. Le statut du rendez-vous est à annulé. 
 
 **Requête :**
 
@@ -149,7 +149,7 @@ Ci-dessous des exemples de requêtes pour la modification de rendez-vous par cas
 
 **Corps de la requête :**
 
- La requête ci-dessous correspond à la mise à jour d’une demande de prise en charge initiée par le régulateur avec un identifiant national 3456780581/11242343, le 04/09 à 14h. Au moment de la demande de prise en charge, le professionnel de santé effecteur n’était pas renseigné. Celui-ci est désormais connu et identifié par le RPPS 810100050075. Le statut du rendez-vous est à annulé. 
+ La requête ci-dessous correspond à la mise à jour d’une demande de prise en charge initiée par le régulateur avec un identifiant national 3456780581/11242343, le 04/09 à 14h. Au moment de la demande de prise en charge, le professionnel de santé effecteur n’était pas renseigné, celui-ci est désormais connu et identifié par le RPPS 810100050075. Le statut du rendez-vous est à annulé. 
 
 ### Nomenclatures
 
