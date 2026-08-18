@@ -991,20 +991,20 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                                 "Gestion des comptes régulateurs". 
                                 Deux combinaisons sont possibles pour ces trois champs selon que le régulateur possède ou non un identifiant national.
                                 </li>
-                                <li>Lorsque le régulateur a un identifiant national, les différents champs seront valorisés comme suit (1) :
+                                <li>Lorsque le régulateur a un identifiant national, les différents champs seront valorisés comme suit :
                                     <ul>
-                                        <li>Valeur de l'identifiant (ID 4) : Identifiant national avec préfixe ;</li>
-                                        <li>Autorité d'affectation (ID 5) : urn:oid:1.2.250.1.71.4.2.1 ;</li>
-                                        <li>Type d'identifiant (ID 6) : le champ <code>type.coding.code</code> est valorisé à <code>IDNPS</code> 
+                                        <li>Valeur de l'identifiant : Identifiant national avec préfixe ;</li>
+                                        <li>Autorité d'affectation : urn:oid:1.2.250.1.71.4.2.1 ;</li>
+                                        <li>Type d'identifiant : le champ <code>type.coding.code</code> est valorisé à <code>IDNPS</code> 
                                         et <code>type.coding.system</code> à <code>http://interopsante.org/fhir/CodeSystem/fr-v2-0203</code>.</li>
                                     </ul>
                                 </li>
                                 <li>Lorsque le régulateur n'a pas d’identifiant national, nous utiliserons un ID technique SAS, 
                                 les différents champs seront valorisés comme suit :
                                     <ul>
-                                        <li>Valeur de l'identifiant (ID 4) : Identifiant technique SAS avec un format de type UUID ;</li>
-                                        <li>Autorité d'affectation (ID 5) : urn:oid:1.2.250.1.213.3.6 ;</li>
-                                        <li>Type d'identifiant (ID 6) : le champ type.coding.code est valorisé à <code>INTRN</code> 
+                                        <li>Valeur de l'identifiant : Identifiant technique SAS avec un format de type UUID ;</li>
+                                        <li>Autorité d'affectation : urn:oid:1.2.250.1.213.3.6 ;</li>
+                                        <li>Type d'identifiant : le champ type.coding.code est valorisé à <code>INTRN</code> 
                                         et <code>type.coding.system</code> à <code>http://interopsante.org/fhir/CodeSystem/fr-v2-0203</code>.</li>
                                     </ul>
                                 </li>
@@ -1027,11 +1027,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                         </li>
                         <li><strong>Identification du PS effecteur de soins :</strong>
                             <ul>
-                                <li>Les champs attendus doivent être valorisés comme suit (1) :
+                                <li>Les champs attendus doivent être valorisés comme suit :
                                     <ul>
-                                        <li>Valeur de l'identifiant (ID 10) : RPPS avec préfixe "8" ou ADELI avec préfixe "0"</li>
-                                        <li>Autorité d'affectation (ID 11) : urn:oid:1.2.250.1.71.4.2.1</li>
-                                        <li>Type d'identifiant (ID 12) : le champ <code>type.coding.code</code> est valorisé à <code>IDNPS</code> et <code>type.coding.system</code> à <code>http://interopsante.org/fhir/CodeSystem/fr-v2-0203</code></li>
+                                        <li>Valeur de l'identifiant : RPPS avec préfixe "8" ou ADELI avec préfixe "0"</li>
+                                        <li>Autorité d'affectation : urn:oid:1.2.250.1.71.4.2.1</li>
+                                        <li>Type d'identifiant : le champ <code>type.coding.code</code> est valorisé à <code>IDNPS</code> et <code>type.coding.system</code> à <code>http://interopsante.org/fhir/CodeSystem/fr-v2-0203</code></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1071,20 +1071,20 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                                 "Gestion des comptes régulateurs". 
                                 Deux combinaisons sont possibles pour ces trois champs selon que le régulateur possède ou non un identifiant national.
                                 </li>
-                                <li>Lorsque le régulateur a un identifiant national, les différents champs seront valorisés comme suit (1) :
+                                <li>Lorsque le régulateur a un identifiant national, les différents champs seront valorisés comme suit :
                                     <ul>
-                                        <li>Valeur de l'identifiant (ID 4) : Identifiant national avec préfixe ;</li>
-                                        <li>Autorité d'affectation (ID 5) : urn:oid:1.2.250.1.71.4.2.1 ;</li>
-                                        <li>Type d'identifiant (ID 6) : le champ <code>type.coding.code</code> est valorisé à <code>IDNPS</code> 
+                                        <li>Valeur de l'identifiant : Identifiant national avec préfixe ;</li>
+                                        <li>Autorité d'affectation : urn:oid:1.2.250.1.71.4.2.1 ;</li>
+                                        <li>Type d'identifiant : le champ <code>type.coding.code</code> est valorisé à <code>IDNPS</code> 
                                         et <code>type.coding.system</code> à <code>http://interopsante.org/fhir/CodeSystem/fr-v2-0203</code>.</li>
                                     </ul>
                                 </li>
                                 <li>Lorsque le régulateur n'a pas d’identifiant national, nous utiliserons un ID technique SAS, 
                                 les différents champs seront valorisés comme suit :
                                     <ul>
-                                        <li>Valeur de l'identifiant (ID 4) : Identifiant technique SAS avec un format de type UUID ;</li>
-                                        <li>Autorité d'affectation (ID 5) : urn:oid:1.2.250.1.213.3.6 ;</li>
-                                        <li>Type d'identifiant (ID 6) : le champ type.coding.code est valorisé à <code>INTRN</code> 
+                                        <li>Valeur de l'identifiant : Identifiant technique SAS avec un format de type UUID ;</li>
+                                        <li>Autorité d'affectation : urn:oid:1.2.250.1.213.3.6 ;</li>
+                                        <li>Type d'identifiant : le champ type.coding.code est valorisé à <code>INTRN</code> 
                                         et <code>type.coding.system</code> à <code>http://interopsante.org/fhir/CodeSystem/fr-v2-0203</code>.</li>
                                     </ul>
                                 </li>
@@ -1111,11 +1111,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                         </li>
                         <li><strong>Identification du PS effecteur de soins :</strong>
                             <ul>
-                                <li>Les champs attendus doivent être valorisés comme suit (1) :
+                                <li>Les champs attendus doivent être valorisés comme suit :
                                     <ul>
-                                        <li>Valeur de l'identifiant (ID 10) : RPPS avec préfixe "8" ou ADELI avec préfixe "0"</li>
-                                        <li>Autorité d'affectation (ID 11) : urn:oid:1.2.250.1.71.4.2.1</li>
-                                        <li>Type d'identifiant (ID 12) : le champ <code>type.coding.code</code> est valorisé à <code>IDNPS</code> et <code>type.coding.system</code> à <code>http://interopsante.org/fhir/CodeSystem/fr-v2-0203</code></li>
+                                        <li>Valeur de l'identifiant : RPPS avec préfixe "8" ou ADELI avec préfixe "0"</li>
+                                        <li>Autorité d'affectation : urn:oid:1.2.250.1.71.4.2.1</li>
+                                        <li>Type d'identifiant : le champ <code>type.coding.code</code> est valorisé à <code>IDNPS</code> et <code>type.coding.system</code> à <code>http://interopsante.org/fhir/CodeSystem/fr-v2-0203</code></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1155,20 +1155,20 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                                 "Gestion des comptes régulateurs". 
                                 Deux combinaisons sont possibles pour ces trois champs selon que le régulateur possède ou non un identifiant national.
                                 </li>
-                                <li>Lorsque le régulateur a un identifiant national, les différents champs seront valorisés comme suit (1) :
+                                <li>Lorsque le régulateur a un identifiant national, les différents champs seront valorisés comme suit :
                                     <ul>
-                                        <li>Valeur de l'identifiant (ID 4) : Identifiant national avec préfixe ;</li>
-                                        <li>Autorité d'affectation (ID 5) : urn:oid:1.2.250.1.71.4.2.1 ;</li>
-                                        <li>Type d'identifiant (ID 6) : le champ <code>type.coding.code</code> est valorisé à <code>IDNPS</code> 
+                                        <li>Valeur de l'identifiant : Identifiant national avec préfixe ;</li>
+                                        <li>Autorité d'affectation : urn:oid:1.2.250.1.71.4.2.1 ;</li>
+                                        <li>Type d'identifiant : le champ <code>type.coding.code</code> est valorisé à <code>IDNPS</code> 
                                         et <code>type.coding.system</code> à <code>http://interopsante.org/fhir/CodeSystem/fr-v2-0203</code>.</li>
                                     </ul>
                                 </li>
                                 <li>Lorsque le régulateur n'a pas d’identifiant national, nous utiliserons un ID technique SAS, 
                                 les différents champs seront valorisés comme suit :
                                     <ul>
-                                        <li>Valeur de l'identifiant (ID 4) : Identifiant technique SAS avec un format de type UUID ;</li>
-                                        <li>Autorité d'affectation (ID 5) : urn:oid:1.2.250.1.213.3.6 ;</li>
-                                        <li>Type d'identifiant (ID 6) : le champ type.coding.code est valorisé à <code>INTRN</code> 
+                                        <li>Valeur de l'identifiant : Identifiant technique SAS avec un format de type UUID ;</li>
+                                        <li>Autorité d'affectation : urn:oid:1.2.250.1.213.3.6 ;</li>
+                                        <li>Type d'identifiant : le champ type.coding.code est valorisé à <code>INTRN</code> 
                                         et <code>type.coding.system</code> à <code>http://interopsante.org/fhir/CodeSystem/fr-v2-0203</code>.</li>
                                     </ul>
                                 </li>
@@ -1191,11 +1191,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                         </li>
                         <li><strong>Identification du PS effecteur de soins :</strong>
                             <ul>
-                                <li>Les champs attendus doivent être valorisés comme suit (1) :
+                                <li>Les champs attendus doivent être valorisés comme suit :
                                     <ul>
-                                        <li>Valeur de l'identifiant (ID 10) : RPPS avec préfixe "8" ou ADELI avec préfixe "0"</li>
-                                        <li>Autorité d'affectation (ID 11) : urn:oid:1.2.250.1.71.4.2.1</li>
-                                        <li>Type d'identifiant (ID 12) : le champ <code>type.coding.code</code> est valorisé à <code>IDNPS</code> et <code>type.coding.system</code> à <code>http://interopsante.org/fhir/CodeSystem/fr-v2-0203</code></li>
+                                        <li>Valeur de l'identifiant : RPPS avec préfixe "8" ou ADELI avec préfixe "0"</li>
+                                        <li>Autorité d'affectation : urn:oid:1.2.250.1.71.4.2.1</li>
+                                        <li>Type d'identifiant : le champ <code>type.coding.code</code> est valorisé à <code>IDNPS</code> et <code>type.coding.system</code> à <code>http://interopsante.org/fhir/CodeSystem/fr-v2-0203</code></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1259,7 +1259,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Le package ans.fhir.fr.sas#1.2.0 est basé sur <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Date de génération : 
-  <span title="2026-08-18 15:48:00 +0000">
+  <span title="2026-08-18 16:06:00 +0000">
     2026-08-18
   </span>
 

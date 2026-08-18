@@ -33,7 +33,7 @@ Other representations of profile: [CSV](../StructureDefinition-sas-cpts-healthca
   "version" : "1.2.0",
   "name" : "FrHealthcareServiceAgregateurCPTS",
   "status" : "active",
-  "date" : "2026-08-18T15:48:30+00:00",
+  "date" : "2026-08-18T16:06:46+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
