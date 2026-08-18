@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/r5/fhir-single.xsd">
+
+    <style type="text/css">
+        .examples-tabs-wrapper .nav-tabs a[name]{
+            display:none !important;
+        }
+    </style>
+    <style type="text/css">
+        .examples2-tabs-wrapper .nav-tabs a[name]{
+            display:none !important;
+        }
+    </style>
+    <style type="text/css">
+        .nomenclatures-tabs-wrapper .nav-tabs a[name]{
+            display:none !important;
+        }
+    </style>
+    <a name="Caracteristiques-API"> </a>
+    <h3>Caractéristiques de l'API</h3>
+
+    <table>
+    <tbody>
+    <tr>
+    <td width="25%"><p><strong>Endpoint</strong></p></td>
+    <td><p>&#160;</p></td>
+    </tr>
+    <tr>
+    <td width="25%"><p><strong>Header</strong></p></td>
+    <td><p>Accept: application/json+fhir</p></td>
+    </tr>
+    <tr>
+    <td width="25%"><p><strong>Encodage</strong></p></td>
+    <td><p>UTF-8</p></td>
+    </tr>
+    <tr>
+    <td width="25%"><p><strong>Version FHIR</strong></p></td>
+    <td><p>4.0.1</p></td>
+    </tr>
+    <tr>
+    <td width="25%"><p><strong>Version package</strong></p></td>
+    <td><p>&#160;</p></td>
+    </tr>
+    <tr>
+    <td width="25%"><p><strong>Publication</strong></p></td>
+    <td><p>&#160;</p></td>
+    </tr>
+    </tbody>
+    </table>
+
+    <a name="Creation-RDV"> </a>
+    <h3>Création de rendez-vous</h3>
+
+    <a name="Construction-requete-creation"> </a>
+    <h4>Construction de la requête de base</h4>
+
+    <table>
+    <tbody>
+    <tr>
+    <td width="25%"><p><strong>Interaction FHIR</strong></p></td>
+    <td><p>Create<a href="#_ftn1" name="_ftnref1">[1]</a></p></td>
+    </tr>
+    <tr>
+    <td width="25%"><p><strong>Méthode http associée</strong></p></td>
+    <td><p>POST</p></td>
+    </tr>
+    <tr>
+    <td width="25%"><p><strong>Ressource créée</strong></p></td>
+    <td><p>Appointment</p></td>
+    </tr>
+    <tr>
+    <td width="25%"><p><strong>Construction requête de base</strong></p></td>
+    <td><p><code>POST[base]/Appointment{?_format=[mime-type]}</code></p></td>
+    </tr>
+    </tbody>
+    </table>
+    <p><a href="#_ftnref1" name="_ftn1">[1]</a> <a href="https://www.hl7.org/fhir/http.html#create">https://www.hl7.org/fhir/http.html#create</a> et <a href="https://www.hl7.org/fhir/http.html#general">https://www.hl7.org/fhir/http.html#general</a></p>
+
+    <a name="Construction-reponse-creation"> </a>
+    <h4>Construction de la réponse de base</h4>
+
+    <a name="Reponse-creation-succes"> </a>
+    <h5>Réponse de base -- Succès</h5>
+
+    <p>Lien vers la spécification FHIR : <a href="https://www.hl7.org/fhir/bundle.html">https://www.hl7.org/fhir/bundle.html</a></p>
+    <p>Si la création est un succès, le serveur répond :</p>
+    <ul>
+    <li>Un header avec un code 201 Created HTTP</li>
+    <li>Un header Location incluant l'ID de la ressource créée par le serveur <code>Location: [base]/Appointment/12345</code></li>
+    </ul>
+    <p>Plus de précision sur la spécification FHIR :
+    <a href="https://www.hl7.org/fhir/http.html">https://www.hl7.org/fhir/http.html</a></p>
+    
+    <a name="Reponse-creation-echec"> </a>
+    <h5>Réponse de base -- Echec</h5>
+    <p>Lien vers la spécification FHIR :
+    <a href="https://www.hl7.org/fhir/operationoutcome.html">https://www.hl7.org/fhir/operationoutcome.html</a></p>
+
+    <p>Si la recherche échoue, le serveur doit répondre :</p>
+    <ul>
+    <li>
+    <p>Un header avec un un code erreur HTTP 4XX ou 5XX</p>
+    </li>
+    <li>
+    <p>Un body contenant une ressource OperationOutcome[^3] qui donne les
+    détails sur la raison de l'échec</p>
+    </li>
+    </ul>
+    <p>À titre d'information, les codes erreurs classiques sont les suivants :</p>
+    <ul>
+    <li>400 (Bad request) – Le format de la requête FHIR transmise est incorrect</li>
+    <li>422 (Unprocessable Entity) – L'action demandée ne peut pas être réalisée à cause d’une règle interne à l’application.</li>
+    </ul>
+    <p>Plus de précision sur la spécification FHIR :
+    <a href="https://www.hl7.org/fhir/http.html">https://www.hl7.org/fhir/http.html</a></p>
+    
+    <a name="Exemples-requetes-creation"> </a>
+    <h4>Exemples de requêtes</h4>
+    <p>Ci-dessous des exemples de requêtes pour la création de rendez-vous par cas d'usage :</p>
+    <div class="examples-tabs-wrapper">
+        <div class="examples-tabs-container">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="active">
+                    <a href="#nav-create-ps-indiv-cpts" data-toggle="tab">PS indiv/CPTS</a>
+                </li>
+                <li>
+                    <a href="#nav-create-sos" data-toggle="tab">SOS Médecins</a>
+                </li>
+                <li>
+                    <a href="#nav-create-pdm" data-toggle="tab">Place de Marché</a>
+                </li>
+            </ul>
+        <!-- Exemple POST PS individuel/CPTS -->
+            <div class="tab-content">
+                <div id="nav-create-ps-indiv-cpts" class="tab-pane active" role="tabpanel">
+                    <p><strong>Requête :</strong></p>
+
+                    <p>
+                    <code>POST [BASE]/Appointment</code>
+                    </p>
+
+                    <p><strong>Corps de la requête :</strong></p>
+
+                    <p>
+                    La requête ci-dessous correspond à la transmission d'un rendez-vous
+                    pris par le régulateur avec un identifiant national 3456780581/11242343
+                    avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h.
+                    </p>
+
+                    {% include Appointment-1-json-html.xhtml %}
+                </div>
+        <!-- Exemple POST SOS -->
+                <div id="nav-create-sos" class="tab-pane" role="tabpanel">
+                    <p><strong>Requête :</strong></p>
+                    
+                    <p>
+                    <code>POST [BASE]/Appointment</code>
+                    </p>
+
+                    <p><strong>Corps de la requête :</strong></p>
+
+                    <p>
+                    La requête ci-dessous correspond à la transmission d'un rendez-vous
+                    pris par le régulateur avec un identifiant national 3456780581/11242343
+                    pour le 04/09 à 14h auprès d'une association SOS Médecins ou de visite à domicile, 
+                    le PS effecteur de soins n'est pas connu à la prise de rendez-vous.
+                    </p>
+
+                    {% include Appointment-12345678-json-html.xhtml %}
+                </div>
+        <!-- Exemple POST PDM -->
+                <div id="nav-create-pdm" class="tab-pane" role="tabpanel">
+                    <p><strong>Requête :</strong></p>
+                    
+                    <p>
+                    <code>POST [BASE]/Appointment</code>
+                    </p>
+
+                    <p><strong>Corps de la requête :</strong></p>
+
+                    <p>
+                    La requête ci-dessous correspond à la transmission d'une demande de prise en charge initiée 
+                    par le régulateur avec un identifiant national 3456780581/11242343 le 04/09 à 14h, 
+                    le PS effecteur de soins n'est pas connu à la prise de rendez-vous.
+                    </p>
+
+                    {% include Appointment-12345678-json-html.xhtml %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3>Mise à jour de rendez-vous</h3>
+    <h4>Construction de la requête de base</h4>
+    <table>
+    <tbody>
+    <tr>
+    <td width="25%"><p><strong>Interaction FHIR</strong></p></td>
+    <td><p>Conditional update<a href="#_ftn1" name="_ftnref1">[1]</a></p></td>
+    </tr>
+    <tr>
+    <td width="25%"><p><strong>Méthode http associée</strong></p></td>
+    <td><p>PUT</p></td>
+    </tr>
+    <tr>
+    <td width="25%"><p><strong>Ressource créée</strong></p></td>
+    <td><p>Appointment</p></td>
+    </tr>
+    <tr>
+    <td width="25%"><p><strong>Construction requête de base</strong></p></td>
+    <td><p><code>PUT[base]/Appointment?Identifier=[ID]{&amp;_format=[mime-type]}</code></p></td>
+    </tr>
+    </tbody>
+    </table>
+    <p><a href="#_ftnref1" name="_ftn1">[1]</a> <a href="https://www.hl7.org/fhir/http.html#cond-update">https://www.hl7.org/fhir/http.html#cond-update</a> et <a href="https://www.hl7.org/fhir/http.html#general">https://www.hl7.org/fhir/http.html#general</a></p>
+    
+    <h4>Construction de la réponse de base</h4>
+    <h5>Réponse de base -- Succès</h5>
+    <p>Lien vers la spécification FHIR : <a href="https://www.hl7.org/fhir/bundle.html">https://www.hl7.org/fhir/bundle.html</a></p>
+    <p>Si la création est un succès, le serveur répond :</p>
+    <ul>
+    <li>Un header avec un code 200 OK HTTP</li>
+    <li>Un header Location incluant l'ID de la ressource mise à jour par le serveur <code>Location: [base]/Appointment/12345</code></li>
+    </ul>
+    <p>Plus de précision sur la spécification FHIR :
+    <a href="https://www.hl7.org/fhir/http.html">https://www.hl7.org/fhir/http.html</a></p>
+    <h5>Réponse de base -- Echec</h5>
+    <p>Si la recherche échoue, le serveur doit répondre :</p>
+    <ul>
+    <li>
+    <p>Un header avec un un code erreur HTTP 4XX ou 5XX</p>
+    </li>
+    <li>
+    <p>Un body contenant une ressource <a href="https://www.hl7.org/fhir/operationoutcome.html">OperationOutcome</a> qui donne les
+    détails sur la raison de l'échec</p>
+    </li>
+    </ul>
+    <p>À titre d'information, les codes erreurs classiques sont les suivants :</p>
+    <ul>
+    <li>400 (Bad request) – Le format de la requête FHIR transmise est incorrect</li>
+    <li>422 (Unprocessable Entity) – L'action demandée ne peut pas être réalisée à cause d’une règle interne à l’application.</li>
+    </ul>
+    <p>Plus de précision sur la spécification FHIR :
+    <a href="https://www.hl7.org/fhir/http.html">https://www.hl7.org/fhir/http.html</a></p>
+
+    <h4>Exemples de requêtes</h4>
+    <p>Ci-dessous des exemples de requêtes pour la modification de rendez-vous par cas d'usage :</p>
+    <div class="examples2-tabs-wrapper">
+        <div class="examples2-tabs-container">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="active">
+                    <a href="#nav-put-ps-indiv-cpts" data-toggle="tab">PS indiv/CPTS</a>
+                </li>
+                <li>
+                    <a href="#nav-put-sos" data-toggle="tab">SOS Médecins</a>
+                </li>
+                <li>
+                    <a href="#nav-put-pdm" data-toggle="tab">Place de Marché</a>
+                </li>
+            </ul>
+        <!-- Exemple PUT PS individuel/CPTS -->
+            <div class="tab-content">
+                <div id="nav-put-ps-indiv-cpts" class="tab-pane active" role="tabpanel">
+                    <p><strong>Requête :</strong></p>
+
+                    <p>
+                    <code>PUT [BASE]/Appointment</code>
+                    </p>
+
+                    <p><strong>Corps de la requête :</strong></p>
+
+                    <p>
+                    La requête ci-dessous correspond à la mise à jour d’un RDV pris 
+                    par le régulateur avec un identifiant national 3456780581/11242343 
+                    avec le PS dont le RPPS est 810100050075 pour le 04/09 à 14h, dont le statut est annulé.
+                    </p>
+
+                    {%include Appointment-2-json-html.xhtml%}
+                </div>
+        <!-- Exemple PUT SOS -->
+                <div id="nav-put-sos" class="tab-pane" role="tabpanel">
+                    <p><strong>Requête :</strong></p>
+                    
+                    <p>
+                    <code>PUT [BASE]/Appointment</code>
+                    </p>
+
+                    <p><strong>Corps de la requête :</strong></p>
+
+                    <p>
+                    La requête ci-dessous correspond à la mise à jour d’un RDV pris 
+                    par le régulateur avec un identifiant national 3456780581/11242343, 
+                    pour le 04/09 à 14h auprès d'une association SOS Médecins ou de visite à domicile. 
+                    Au moment de la création du rendez-vous, le professionnel de santé effecteur n’était pas 
+                    renseigné, celui-ci est désormais connu et identifié par le RPPS 810100050075. 
+                    Le statut du rendez-vous est à annulé. 
+
+                    </p>
+
+                    {%include Appointment-123456789-json-html.xhtml%}
+                </div>
+        <!-- Exemple PUT PDM -->
+                <div id="nav-put-pdm" class="tab-pane" role="tabpanel">
+                    <p><strong>Requête :</strong></p>
+                    <p>
+                    <code>PUT [BASE]/Appointment</code>
+                    </p>
+                    <p><strong>Corps de la requête :</strong></p>
+                    <p>
+                    La requête ci-dessous correspond à la mise à jour d’une demande de prise en charge initiée 
+                    par le régulateur avec un identifiant national 3456780581/11242343, le 04/09 à 14h.
+                    Au moment de la demande de prise en charge, le professionnel de santé effecteur n’était pas 
+                    renseigné, celui-ci est désormais connu et identifié par le RPPS 810100050075. 
+                    Le statut du rendez-vous est à annulé. 
+                    </p>
+
+                    {%include Appointment-123456789-json-html.xhtml%}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3>Nomenclatures</h3>
+    <p></p>
+    <p>Cette section détaille les nomenclatures à utiliser afin de renseigner les différents éléments codifiés de la requête.</p>
+
+    <div class="nomenclatures-tabs-wrapper">
+        <div class="nomenclatures-tabs-container">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="active">
+                    <a href="#nav-nom-ps-indiv-cpts" data-toggle="tab">PS indiv/CPTS</a>
+                </li>
+                <li>
+                    <a href="#nav-nom-sos" data-toggle="tab">SOS Médecins</a>
+                </li>
+                <li>
+                    <a href="#nav-nom-pdm" data-toggle="tab">Place de Marché</a>
+                </li>
+            </ul>
+        <!-- Contenu section Nomenclatures PS individuel/CPTS -->
+            <div class="tab-content">
+                <div id="nav-nom-ps-indiv-cpts" class="tab-pane active" role="tabpanel">
+                    <ul>
+                        <li><strong>Identifiant technique du RDV :</strong>
+                            <ul>
+                                <li>Un identifiant technique unique par RDV est attendu. 
+                                Cet ID est défini par la solution logicielle éditeur et peut prendre la forme d'un UUID par exemple. 
+                                Les échanges s'appuieront sur cet ID pour les requêtes de mises à jour (interaction conditional update).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Autorité d'affectation de la solution logicielle éditeur :</strong>
+                            <ul>
+                                <li>Ce champ est une valeur fixe, valorisé soit par une URL soit par un OID. 
+                                Si l'éditeur possède un OID propre à sa solution logicielle il est attendu que celui-ci soit transmis, 
+                                sinon il est demandé de définir une URL propre à la solution éditeur.</li>
+                            </ul>
+                        </li>
+                        <li><strong>URL de l'extension AppointmentOperator pour la référence au régulateur :</strong>
+                            <ul>
+                                <li>Ce champ est une valeur fixe, valorisé à <code>http://interopsante.org/fhir/StructureDefinition/FrAppointmentOperator</code>.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Identification du régulateur ayant pris le RDV pour le patient :</strong>
+                            <ul>
+                                <li>Il s'agit de l'identifiant communiqué par la plateforme numérique SAS dans l'interface INT_R02 
+                                &quot;Gestion des comptes régulateurs&quot;. 
+                                Deux combinaisons sont possibles pour ces trois champs selon que le régulateur possède ou non un identifiant national.
+                                </li>
+                                <li>Lorsque le régulateur a un identifiant national, les différents champs seront valorisés comme suit (1) :
+                                    <ul>
+                                        <li>Valeur de l'identifiant (ID 4) : Identifiant national avec préfixe ;</li>
+                                        <li>Autorité d'affectation (ID 5) : urn:oid:1.2.250.1.71.4.2.1 ;</li>
+                                        <li>Type d'identifiant (ID 6) : le champ <code>type.coding.code</code> est valorisé à <code>IDNPS</code> 
+                                        et <code>type.coding.system</code> à <code>http://interopsante.org/fhir/CodeSystem/fr-v2-0203</code>.</li>
+                                    </ul>
+                                </li>
+                                <li>Lorsque le régulateur n'a pas d’identifiant national, nous utiliserons un ID technique SAS, 
+                                les différents champs seront valorisés comme suit :
+                                    <ul>
+                                        <li>Valeur de l'identifiant (ID 4) : Identifiant technique SAS avec un format de type UUID ;</li>
+                                        <li>Autorité d'affectation (ID 5) : urn:oid:1.2.250.1.213.3.6 ;</li>
+                                        <li>Type d'identifiant (ID 6) : le champ type.coding.code est valorisé à <code>INTRN</code> 
+                                        et <code>type.coding.system</code> à <code>http://interopsante.org/fhir/CodeSystem/fr-v2-0203</code>.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><strong>Statut du RDV :</strong>
+                            <ul>
+                                <li>L'utilisation de la nomenclature standard AppointmentStatus 
+                                (<a href="http://hl7.org/fhir/appointmentstatus">http://hl7.org/fhir/appointmentstatus</a>) est attendue. 
+                                La plateforme numérique SAS exploite à date les valeurs suivantes :
+                                    <ul>
+                                        <li>PENDING : RDV en attente de confirmation</li>
+                                        <li>BOOKED : RDV pris et confirmé</li>
+                                        <li>FULFILLED : RDV honoré</li>
+                                        <li>NOSHOW : RDV non honoré</li>
+                                        <li>CANCELLED : RDV annulé</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><strong>Identification du PS effecteur de soins :</strong>
+                            <ul>
+                                <li>Les champs attendus doivent être valorisés comme suit (1) :
+                                    <ul>
+                                        <li>Valeur de l'identifiant (ID 10) : RPPS avec préfixe &quot;8&quot; ou ADELI avec préfixe &quot;0&quot;</li>
+                                        <li>Autorité d'affectation (ID 11) : urn:oid:1.2.250.1.71.4.2.1</li>
+                                        <li>Type d'identifiant (ID 12) : le champ <code>type.coding.code</code> est valorisé à <code>IDNPS</code> et <code>type.coding.system</code> à <code>http://interopsante.org/fhir/CodeSystem/fr-v2-0203</code></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><strong>Statut d’acceptation du RDV par le PS effecteur de soins :</strong>
+                            <ul>
+                                <li>L'utilisation de la nomenclature standard Appointmentparticipantstatus (<a href="http://hl7.org/fhir/ValueSet/participationstatus">http://hl7.org/fhir/ValueSet/participationstatus</a>) est attendue. La plateforme numérique SAS ne récupérant que les RDV avec acceptation automatique et tacite du médecin effecteur de soins, ce champ aura systématiquement la valeur « accepted ».</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+        <!-- Contenu section Nomenclatures SOS Médecins -->
+                <div id="nav-nom-sos" class="tab-pane" role="tabpanel">
+                    <ul>
+                        <li><strong>Identifiant technique du RDV :</strong>
+                            <ul>
+                                <li>Un identifiant technique unique par RDV est attendu. 
+                                Cet ID est défini par la solution logicielle éditeur et peut prendre la forme d'un UUID par exemple. 
+                                Les échanges s'appuieront sur cet ID pour les requêtes de mises à jour (interaction conditional update).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Autorité d'affectation de la solution logicielle éditeur :</strong>
+                            <ul>
+                                <li>Ce champ est une valeur fixe, valorisé soit par une URL soit par un OID. 
+                                Si l'éditeur possède un OID propre à sa solution logicielle il est attendu que celui-ci soit transmis, 
+                                sinon il est demandé de définir une URL propre à la solution éditeur.</li>
+                            </ul>
+                        </li>
+                        <li><strong>URL de l'extension AppointmentOperator pour la référence au régulateur :</strong>
+                            <ul>
+                                <li>Ce champ est une valeur fixe, valorisé à <code>http://interopsante.org/fhir/StructureDefinition/FrAppointmentOperator</code>.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Identification du régulateur ayant pris le RDV pour le patient :</strong>
+                            <ul>
+                                <li>Il s'agit de l'identifiant communiqué par la plateforme numérique SAS dans l'interface INT_R02 
+                                &quot;Gestion des comptes régulateurs&quot;. 
+                                Deux combinaisons sont possibles pour ces trois champs selon que le régulateur possède ou non un identifiant national.
+                                </li>
+                                <li>Lorsque le régulateur a un identifiant national, les différents champs seront valorisés comme suit (1) :
+                                    <ul>
+                                        <li>Valeur de l'identifiant (ID 4) : Identifiant national avec préfixe ;</li>
+                                        <li>Autorité d'affectation (ID 5) : urn:oid:1.2.250.1.71.4.2.1 ;</li>
+                                        <li>Type d'identifiant (ID 6) : le champ <code>type.coding.code</code> est valorisé à <code>IDNPS</code> 
+                                        et <code>type.coding.system</code> à <code>http://interopsante.org/fhir/CodeSystem/fr-v2-0203</code>.</li>
+                                    </ul>
+                                </li>
+                                <li>Lorsque le régulateur n'a pas d’identifiant national, nous utiliserons un ID technique SAS, 
+                                les différents champs seront valorisés comme suit :
+                                    <ul>
+                                        <li>Valeur de l'identifiant (ID 4) : Identifiant technique SAS avec un format de type UUID ;</li>
+                                        <li>Autorité d'affectation (ID 5) : urn:oid:1.2.250.1.213.3.6 ;</li>
+                                        <li>Type d'identifiant (ID 6) : le champ type.coding.code est valorisé à <code>INTRN</code> 
+                                        et <code>type.coding.system</code> à <code>http://interopsante.org/fhir/CodeSystem/fr-v2-0203</code>.</li>
+                                    </ul>
+                                </li>
+                                <blockquote class="stu-note">
+                                    Pour la transmission d'un rendez-vous pris par un Dispatcher SOS Médecins 
+                                    l'identifiant partagé est de type ID technique SAS.
+                                </blockquote>
+                            </ul>
+                        </li>
+                        <li><strong>Statut du RDV :</strong>
+                            <ul>
+                                <li>L'utilisation de la nomenclature standard AppointmentStatus 
+                                (<a href="http://hl7.org/fhir/appointmentstatus">http://hl7.org/fhir/appointmentstatus</a>) est attendue. 
+                                La plateforme numérique SAS exploite à date les valeurs suivantes :
+                                    <ul>
+                                        <li>PENDING : RDV en attente de confirmation</li>
+                                        <li>BOOKED : RDV pris et confirmé</li>
+                                        <li>FULFILLED : RDV honoré</li>
+                                        <li>NOSHOW : RDV non honoré</li>
+                                        <li>CANCELLED : RDV annulé</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><strong>Identification du PS effecteur de soins :</strong>
+                            <ul>
+                                <li>Les champs attendus doivent être valorisés comme suit (1) :
+                                    <ul>
+                                        <li>Valeur de l'identifiant (ID 10) : RPPS avec préfixe &quot;8&quot; ou ADELI avec préfixe &quot;0&quot;</li>
+                                        <li>Autorité d'affectation (ID 11) : urn:oid:1.2.250.1.71.4.2.1</li>
+                                        <li>Type d'identifiant (ID 12) : le champ <code>type.coding.code</code> est valorisé à <code>IDNPS</code> et <code>type.coding.system</code> à <code>http://interopsante.org/fhir/CodeSystem/fr-v2-0203</code></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><strong>Statut d’acceptation du RDV par le PS effecteur de soins :</strong>
+                            <ul>
+                                <li>L'utilisation de la nomenclature standard Appointmentparticipantstatus (<a href="http://hl7.org/fhir/ValueSet/participationstatus">http://hl7.org/fhir/ValueSet/participationstatus</a>) est attendue. La plateforme numérique SAS ne récupérant que les RDV avec acceptation automatique et tacite du médecin effecteur de soins, ce champ aura systématiquement la valeur « accepted ».</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+        <!-- Contenu section Nomenclatures PDM -->
+                <div id="nav-nom-pdm" class="tab-pane" role="tabpanel">
+                    <ul>
+                        <li><strong>Identifiant technique du RDV :</strong>
+                            <ul>
+                                <li>Un identifiant technique unique par RDV est attendu. 
+                                Cet ID est défini par la solution logicielle éditeur et peut prendre la forme d'un UUID par exemple. 
+                                Les échanges s'appuieront sur cet ID pour les requêtes de mises à jour (interaction conditional update).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Autorité d'affectation de la solution logicielle éditeur :</strong>
+                            <ul>
+                                <li>Ce champ est une valeur fixe, valorisé soit par une URL soit par un OID. 
+                                Si l'éditeur possède un OID propre à sa solution logicielle il est attendu que celui-ci soit transmis, 
+                                sinon il est demandé de définir une URL propre à la solution éditeur.</li>
+                            </ul>
+                        </li>
+                        <li><strong>URL de l'extension AppointmentOperator pour la référence au régulateur :</strong>
+                            <ul>
+                                <li>Ce champ est une valeur fixe, valorisé à <code>http://interopsante.org/fhir/StructureDefinition/FrAppointmentOperator</code>.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Identification du régulateur ayant pris le RDV pour le patient :</strong>
+                            <ul>
+                                <li>Il s'agit de l'identifiant communiqué par la plateforme numérique SAS dans l'interface INT_R02 
+                                &quot;Gestion des comptes régulateurs&quot;. 
+                                Deux combinaisons sont possibles pour ces trois champs selon que le régulateur possède ou non un identifiant national.
+                                </li>
+                                <li>Lorsque le régulateur a un identifiant national, les différents champs seront valorisés comme suit (1) :
+                                    <ul>
+                                        <li>Valeur de l'identifiant (ID 4) : Identifiant national avec préfixe ;</li>
+                                        <li>Autorité d'affectation (ID 5) : urn:oid:1.2.250.1.71.4.2.1 ;</li>
+                                        <li>Type d'identifiant (ID 6) : le champ <code>type.coding.code</code> est valorisé à <code>IDNPS</code> 
+                                        et <code>type.coding.system</code> à <code>http://interopsante.org/fhir/CodeSystem/fr-v2-0203</code>.</li>
+                                    </ul>
+                                </li>
+                                <li>Lorsque le régulateur n'a pas d’identifiant national, nous utiliserons un ID technique SAS, 
+                                les différents champs seront valorisés comme suit :
+                                    <ul>
+                                        <li>Valeur de l'identifiant (ID 4) : Identifiant technique SAS avec un format de type UUID ;</li>
+                                        <li>Autorité d'affectation (ID 5) : urn:oid:1.2.250.1.213.3.6 ;</li>
+                                        <li>Type d'identifiant (ID 6) : le champ type.coding.code est valorisé à <code>INTRN</code> 
+                                        et <code>type.coding.system</code> à <code>http://interopsante.org/fhir/CodeSystem/fr-v2-0203</code>.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><strong>Statut du RDV :</strong>
+                            <ul>
+                                <li>L'utilisation de la nomenclature standard AppointmentStatus 
+                                (<a href="http://hl7.org/fhir/appointmentstatus">http://hl7.org/fhir/appointmentstatus</a>) est attendue. 
+                                La plateforme numérique SAS exploite à date les valeurs suivantes :
+                                    <ul>
+                                        <li>PENDING : RDV en attente de confirmation</li>
+                                        <li>BOOKED : RDV pris et confirmé</li>
+                                        <li>FULFILLED : RDV honoré</li>
+                                        <li>NOSHOW : RDV non honoré</li>
+                                        <li>CANCELLED : RDV annulé</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><strong>Identification du PS effecteur de soins :</strong>
+                            <ul>
+                                <li>Les champs attendus doivent être valorisés comme suit (1) :
+                                    <ul>
+                                        <li>Valeur de l'identifiant (ID 10) : RPPS avec préfixe &quot;8&quot; ou ADELI avec préfixe &quot;0&quot;</li>
+                                        <li>Autorité d'affectation (ID 11) : urn:oid:1.2.250.1.71.4.2.1</li>
+                                        <li>Type d'identifiant (ID 12) : le champ <code>type.coding.code</code> est valorisé à <code>IDNPS</code> et <code>type.coding.system</code> à <code>http://interopsante.org/fhir/CodeSystem/fr-v2-0203</code></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><strong>Statut d’acceptation du RDV par le PS effecteur de soins :</strong>
+                            <ul>
+                                <li>L'utilisation de la nomenclature standard Appointmentparticipantstatus (<a href="http://hl7.org/fhir/ValueSet/participationstatus">http://hl7.org/fhir/ValueSet/participationstatus</a>) est attendue. La plateforme numérique SAS ne récupérant que les RDV avec acceptation automatique et tacite du médecin effecteur de soins, ce champ aura systématiquement la valeur « accepted ».</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h3>Validateur ressources</h3>
+    <p><a href="./tests.html">Cf. page dédiée</a></p>
+</div>
