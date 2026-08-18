@@ -51,30 +51,30 @@ La fludification du parcours régulateurs inclut les éléments suivants :
 1. [Spécifications fonctionnelles](./specifications_fonctionnelles.md)
 1. Spécifications techniques :
 * [Recherche de créneaux](./specifications_techniques-ps-recherche_creneaux.md)
-* [Gestion des comptes régulateurs](./specifications_techniques-ps-gestion_regulateur.md)
-* [Gestion de rendez-vous](./specifications_techniques-ps-gestion_rdv.md)
+* [Gestion des comptes régulateurs](./specifications_techniques-tous-gestion_regulateur.md)
+* [Gestion de rendez-vous](./specifications_techniques_tous_RDV_V3.md)
 
-1. [Ressources de conformité](./ressources_casusage.md#ps-à-titre-individuel)
+1. [Ressources de conformité](./ressources_cas_dusage_ps.md)
 
 #### CPTS
 
 1. [Spécifications fonctionnelles](./specifications_fonctionnelles.md)
 1. Spécifications techniques :
 * [Recherche de créneaux](./specifications_techniques-cpts-recherche_creneaux.md)
-* [Gestion des comptes régulateurs](./specifications_techniques-cpts-gestion_regulateur.md)
-* [Gestion de rendez-vous](./specifications_techniques-cpts-gestion_rdv.md)
+* [Gestion des comptes régulateurs](./specifications_techniques-tous-gestion_regulateur.md)
+* [Gestion de rendez-vous](./specifications_techniques_tous_RDV_V3.md)
 
-1. [Ressources de conformité](./ressources_casusage.md#cpts)
+1. [Ressources de conformité](./ressources_cas_dusage_cpts.md)
 
 #### SOS Médecins
 
 1. [Spécifications fonctionnelles](./specifications_fonctionnelles.md#sos-médecins)
 1. Spécifications techniques :
 * [Recherche de créneaux](./specifications_techniques-sos-recherche_creneaux.md)
-* [Gestion des comptes régulateurs](./specifications_techniques-sos-gestion_regulateur.md)
-* [Gestion de rendez-vous](./specifications_techniques-sos-gestion_rdv.md)
+* [Gestion des comptes régulateurs](./specifications_techniques-tous-gestion_regulateur.md)
+* [Gestion de rendez-vous](./specifications_techniques_tous_RDV_V3.md)
 
-1. [Ressources de conformité](./ressources_casusage.md#sos-médecins)
+1. [Ressources de conformité](./ressources_cas_dusage_sos.md)
 
 #### Transmission des informations de RDV aux LRM
 

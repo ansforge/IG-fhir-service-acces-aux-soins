@@ -7,7 +7,7 @@ Code système permettant de définir la catégorie d'orientation SAS spécifique
 
 Ce système de codes est référencé dans la définition des ensembles de valeurs suivants :
 
-* [CategorieOrientationSASValueSet](ValueSet-categorie-orientation-sas-valueset.md)
+* [Value set catégorie orientation SAS](ValueSet-categorie-orientation-sas-valueset.md)
 
 -------
 
@@ -27,7 +27,7 @@ Ce système de codes est référencé dans la définition des ensembles de valeu
   "title" : "Code système catégorie orientation SAS",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-07-20T10:02:38+00:00",
+  "date" : "2026-08-18T14:54:32+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

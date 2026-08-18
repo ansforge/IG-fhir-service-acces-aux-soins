@@ -18,7 +18,7 @@
   fhir:ImplementationGuide.name [ fhir:value "SAS"] ;
   fhir:ImplementationGuide.title [ fhir:value "Service d'Accès aux Soins"] ;
   fhir:ImplementationGuide.status [ fhir:value "active"] ;
-  fhir:ImplementationGuide.date [ fhir:value "2026-07-20T10:02:38+00:00"^^xsd:dateTime] ;
+  fhir:ImplementationGuide.date [ fhir:value "2026-08-18T14:54:32+00:00"^^xsd:dateTime] ;
   fhir:ImplementationGuide.publisher [ fhir:value "ANS"] ;
   fhir:ImplementationGuide.contact [
      fhir:index 0 ;
@@ -57,7 +57,7 @@
        fhir:link <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
      ] ;
      fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "hl7.terminology.r4" ] ;
-     fhir:ImplementationGuide.dependsOn.version [ fhir:value "7.2.0" ]
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "7.3.0" ]
   ], [
      fhir:index 1 ;
      fhir:Element.id [ fhir:value "hl7ext" ] ;
@@ -184,7 +184,7 @@
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "code" ] ;
-         fhir:Extension.valueString [ fhir:value "path-liquid" ]
+         fhir:Extension.valueString [ fhir:value "path-liquid-template" ]
        ], [
          fhir:index 1 ;
          fhir:Extension.url [ fhir:value "value" ] ;
@@ -196,7 +196,7 @@
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "code" ] ;
-         fhir:Extension.valueString [ fhir:value "path-liquid" ]
+         fhir:Extension.valueString [ fhir:value "path-liquid-template" ]
        ], [
          fhir:index 1 ;
          fhir:Extension.url [ fhir:value "value" ] ;
@@ -543,7 +543,7 @@
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "code" ] ;
-         fhir:Extension.valueCode [ fhir:value "path-liquid" ]
+         fhir:Extension.valueCode [ fhir:value "path-liquid-template" ]
        ], [
          fhir:index 1 ;
          fhir:Extension.url [ fhir:value "value" ] ;
@@ -555,7 +555,7 @@
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "code" ] ;
-         fhir:Extension.valueCode [ fhir:value "path-liquid" ]
+         fhir:Extension.valueCode [ fhir:value "path-liquid-template" ]
        ], [
          fhir:index 1 ;
          fhir:Extension.url [ fhir:value "value" ] ;
@@ -2085,6 +2085,20 @@
          fhir:Extension.valueString [ fhir:value "ValueSet" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-appointment-status> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/sas-valueset-appointment-status" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Statut RDV SAS" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Etat du RDV SAS" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 83 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-typeconsultation> ;
          fhir:Reference.reference [ fhir:value "ValueSet/sas-valueset-typeconsultation" ]
        ] ;
@@ -2092,7 +2106,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Type de consultations SAS" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 83 ;
+       fhir:index 84 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2106,7 +2120,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Type de Créneaux SAS CPTS" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 84 ;
+       fhir:index 85 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2120,7 +2134,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Type de Créneaux SAS SOS" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 85 ;
+       fhir:index 86 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2134,7 +2148,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Type d'identifiant SAS" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 86 ;
+       fhir:index 87 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2192,53 +2206,33 @@
          fhir:Element.extension [
            fhir:index 0 ;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
-           fhir:Extension.valueUrl [ fhir:value "specifications_techniques-ps-gestion_regulateur.html" ]
-         ] ;
-         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "specifications_techniques-ps-gestion_regulateur.html" ] ;
-         fhir:ImplementationGuide.definition.page.title [ fhir:value "PS indiv. - Gestion des comptes régulateurs" ] ;
-         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
-       ], [
-         fhir:index 4 ;
-         fhir:Element.extension [
-           fhir:index 0 ;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
-           fhir:Extension.valueUrl [ fhir:value "specifications_techniques-ps-gestion_rdv.html" ]
-         ] ;
-         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "specifications_techniques-ps-gestion_rdv.html" ] ;
-         fhir:ImplementationGuide.definition.page.title [ fhir:value "PS indiv. - Gestion de rendez-vous" ] ;
-         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
-       ], [
-         fhir:index 5 ;
-         fhir:Element.extension [
-           fhir:index 0 ;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
            fhir:Extension.valueUrl [ fhir:value "specifications_techniques-cpts-recherche_creneaux.html" ]
          ] ;
          fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "specifications_techniques-cpts-recherche_creneaux.html" ] ;
          fhir:ImplementationGuide.definition.page.title [ fhir:value "CPTS - Recherche des créneaux" ] ;
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
        ], [
+         fhir:index 4 ;
+         fhir:Element.extension [
+           fhir:index 0 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+           fhir:Extension.valueUrl [ fhir:value "specifications_techniques-tous-gestion_regulateur.html" ]
+         ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "specifications_techniques-tous-gestion_regulateur.html" ] ;
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Gestion des comptes régulateurs" ] ;
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 5 ;
+         fhir:Element.extension [
+           fhir:index 0 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+           fhir:Extension.valueUrl [ fhir:value "specifications_techniques_tous_RDV_V3.html" ]
+         ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "specifications_techniques_tous_RDV_V3.html" ] ;
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Récupération des données du RDV pris" ] ;
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+       ], [
          fhir:index 6 ;
-         fhir:Element.extension [
-           fhir:index 0 ;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
-           fhir:Extension.valueUrl [ fhir:value "specifications_techniques-cpts-gestion_regulateur.html" ]
-         ] ;
-         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "specifications_techniques-cpts-gestion_regulateur.html" ] ;
-         fhir:ImplementationGuide.definition.page.title [ fhir:value "CPTS - Gestion des comptes régulateurs" ] ;
-         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
-       ], [
-         fhir:index 7 ;
-         fhir:Element.extension [
-           fhir:index 0 ;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
-           fhir:Extension.valueUrl [ fhir:value "specifications_techniques-cpts-gestion_rdv.html" ]
-         ] ;
-         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "specifications_techniques-cpts-gestion_rdv.html" ] ;
-         fhir:ImplementationGuide.definition.page.title [ fhir:value "CPTS - Gestion de rendez-vous" ] ;
-         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
-       ], [
-         fhir:index 8 ;
          fhir:Element.extension [
            fhir:index 0 ;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
@@ -2248,27 +2242,7 @@
          fhir:ImplementationGuide.definition.page.title [ fhir:value "SOS Médecins - Recherche des créneaux" ] ;
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
        ], [
-         fhir:index 9 ;
-         fhir:Element.extension [
-           fhir:index 0 ;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
-           fhir:Extension.valueUrl [ fhir:value "specifications_techniques-sos-gestion_regulateur.html" ]
-         ] ;
-         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "specifications_techniques-sos-gestion_regulateur.html" ] ;
-         fhir:ImplementationGuide.definition.page.title [ fhir:value "SOS Médecins - Gestion des comptes régulateurs" ] ;
-         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
-       ], [
-         fhir:index 10 ;
-         fhir:Element.extension [
-           fhir:index 0 ;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
-           fhir:Extension.valueUrl [ fhir:value "specifications_techniques-sos-gestion_rdv.html" ]
-         ] ;
-         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "specifications_techniques-sos-gestion_rdv.html" ] ;
-         fhir:ImplementationGuide.definition.page.title [ fhir:value "SOS Médecins - Gestion de rendez-vous" ] ;
-         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
-       ], [
-         fhir:index 11 ;
+         fhir:index 7 ;
          fhir:Element.extension [
            fhir:index 0 ;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
@@ -2278,17 +2252,48 @@
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Transmission des informations de rendez-vous aux LRM" ] ;
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
        ], [
-         fhir:index 12 ;
+         fhir:index 8 ;
          fhir:Element.extension [
            fhir:index 0 ;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
-           fhir:Extension.valueUrl [ fhir:value "ressources_casusage.html" ]
+           fhir:Extension.valueUrl [ fhir:value "ressources_cas_dusage.html" ]
          ] ;
-         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "ressources_casusage.html" ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "ressources_cas_dusage.html" ] ;
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Ressources par cas d'usage" ] ;
-         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ] ;
+         fhir:ImplementationGuide.definition.page.page [
+           fhir:index 0 ;
+           fhir:Element.extension [
+             fhir:index 0 ;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+             fhir:Extension.valueUrl [ fhir:value "ressources_cas_dusage_ps.html" ]
+           ] ;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "ressources_cas_dusage_ps.html" ] ;
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "PS à titre individuel" ] ;
+           fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+         ], [
+           fhir:index 1 ;
+           fhir:Element.extension [
+             fhir:index 0 ;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+             fhir:Extension.valueUrl [ fhir:value "ressources_cas_dusage_cpts.html" ]
+           ] ;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "ressources_cas_dusage_cpts.html" ] ;
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "CPTS" ] ;
+           fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+         ], [
+           fhir:index 2 ;
+           fhir:Element.extension [
+             fhir:index 0 ;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+             fhir:Extension.valueUrl [ fhir:value "ressources_cas_dusage_sos.html" ]
+           ] ;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "ressources_cas_dusage_sos.html" ] ;
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "SOS Médecins" ] ;
+           fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+         ]
        ], [
-         fhir:index 13 ;
+         fhir:index 9 ;
          fhir:Element.extension [
            fhir:index 0 ;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;

@@ -11,7 +11,7 @@
   "name" : "SAS",
   "title" : "Service d'Accès aux Soins",
   "status" : "active",
-  "date" : "2026-07-20T10:02:38+00:00",
+  "date" : "2026-08-18T14:54:32+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -38,7 +38,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "7.2.0"
+    "version" : "7.3.0"
   },
   {
     "id" : "hl7ext",
@@ -148,7 +148,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "path-liquid"
+        "valueString" : "path-liquid-template"
       },
       {
         "url" : "value",
@@ -159,7 +159,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "path-liquid"
+        "valueString" : "path-liquid-template"
       },
       {
         "url" : "value",
@@ -477,7 +477,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueCode" : "path-liquid"
+        "valueCode" : "path-liquid-template"
       },
       {
         "url" : "value",
@@ -488,7 +488,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueCode" : "path-liquid"
+        "valueCode" : "path-liquid-template"
       },
       {
         "url" : "value",
@@ -1695,6 +1695,18 @@
         "valueString" : "ValueSet"
       }],
       "reference" : {
+        "reference" : "ValueSet/sas-valueset-appointment-status"
+      },
+      "name" : "Statut RDV SAS",
+      "description" : "Etat du RDV SAS",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
         "reference" : "ValueSet/sas-valueset-typeconsultation"
       },
       "name" : "Type consultation SAS",
@@ -1787,24 +1799,6 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "specifications_techniques-ps-gestion_regulateur.html"
-        }],
-        "nameUrl" : "specifications_techniques-ps-gestion_regulateur.html",
-        "title" : "PS indiv. - Gestion des comptes régulateurs",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "specifications_techniques-ps-gestion_rdv.html"
-        }],
-        "nameUrl" : "specifications_techniques-ps-gestion_rdv.html",
-        "title" : "PS indiv. - Gestion de rendez-vous",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
           "valueUrl" : "specifications_techniques-cpts-recherche_creneaux.html"
         }],
         "nameUrl" : "specifications_techniques-cpts-recherche_creneaux.html",
@@ -1814,20 +1808,20 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "specifications_techniques-cpts-gestion_regulateur.html"
+          "valueUrl" : "specifications_techniques-tous-gestion_regulateur.html"
         }],
-        "nameUrl" : "specifications_techniques-cpts-gestion_regulateur.html",
-        "title" : "CPTS - Gestion des comptes régulateurs",
+        "nameUrl" : "specifications_techniques-tous-gestion_regulateur.html",
+        "title" : "Gestion des comptes régulateurs",
         "generation" : "markdown"
       },
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "specifications_techniques-cpts-gestion_rdv.html"
+          "valueUrl" : "specifications_techniques_tous_RDV_V3.html"
         }],
-        "nameUrl" : "specifications_techniques-cpts-gestion_rdv.html",
-        "title" : "CPTS - Gestion de rendez-vous",
-        "generation" : "markdown"
+        "nameUrl" : "specifications_techniques_tous_RDV_V3.html",
+        "title" : "Récupération des données du RDV pris",
+        "generation" : "html"
       },
       {
         "extension" : [{
@@ -1836,24 +1830,6 @@
         }],
         "nameUrl" : "specifications_techniques-sos-recherche_creneaux.html",
         "title" : "SOS Médecins - Recherche des créneaux",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "specifications_techniques-sos-gestion_regulateur.html"
-        }],
-        "nameUrl" : "specifications_techniques-sos-gestion_regulateur.html",
-        "title" : "SOS Médecins - Gestion des comptes régulateurs",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "specifications_techniques-sos-gestion_rdv.html"
-        }],
-        "nameUrl" : "specifications_techniques-sos-gestion_rdv.html",
-        "title" : "SOS Médecins - Gestion de rendez-vous",
         "generation" : "markdown"
       },
       {
@@ -1868,11 +1844,38 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "ressources_casusage.html"
+          "valueUrl" : "ressources_cas_dusage.html"
         }],
-        "nameUrl" : "ressources_casusage.html",
+        "nameUrl" : "ressources_cas_dusage.html",
         "title" : "Ressources par cas d'usage",
-        "generation" : "markdown"
+        "generation" : "html",
+        "page" : [{
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "ressources_cas_dusage_ps.html"
+          }],
+          "nameUrl" : "ressources_cas_dusage_ps.html",
+          "title" : "PS à titre individuel",
+          "generation" : "html"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "ressources_cas_dusage_cpts.html"
+          }],
+          "nameUrl" : "ressources_cas_dusage_cpts.html",
+          "title" : "CPTS",
+          "generation" : "html"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "ressources_cas_dusage_sos.html"
+          }],
+          "nameUrl" : "ressources_cas_dusage_sos.html",
+          "title" : "SOS Médecins",
+          "generation" : "html"
+        }]
       },
       {
         "extension" : [{

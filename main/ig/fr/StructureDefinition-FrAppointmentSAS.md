@@ -100,7 +100,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FrAppointmentSA
   "version" : "1.2.0",
   "name" : "FrAppointmentSAS",
   "status" : "active",
-  "date" : "2026-07-20T10:02:38+00:00",
+  "date" : "2026-08-18T14:54:32+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -216,6 +216,14 @@ Autres représentations du profil : [CSV](../StructureDefinition-FrAppointmentSA
       "id" : "Appointment.identifier.value",
       "path" : "Appointment.identifier.value",
       "min" : 1
+    },
+    {
+      "id" : "Appointment.status",
+      "path" : "Appointment.status",
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-appointment-status"
+      }
     },
     {
       "id" : "Appointment.start",

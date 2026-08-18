@@ -14,7 +14,7 @@
   "name" : "SAS",
   "title" : "Service d'Accès aux Soins",
   "status" : "active",
-  "date" : "2026-07-20T10:02:38+00:00",
+  "date" : "2026-08-18T14:54:32+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -41,7 +41,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "7.2.0"
+    "version" : "7.3.0"
   },
   {
     "id" : "hl7ext",
@@ -151,7 +151,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "path-liquid"
+        "valueString" : "path-liquid-template"
       },
       {
         "url" : "value",
@@ -162,7 +162,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "path-liquid"
+        "valueString" : "path-liquid-template"
       },
       {
         "url" : "value",
@@ -480,7 +480,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueCode" : "path-liquid"
+        "valueCode" : "path-liquid-template"
       },
       {
         "url" : "value",
@@ -491,7 +491,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueCode" : "path-liquid"
+        "valueCode" : "path-liquid-template"
       },
       {
         "url" : "value",
@@ -712,6 +712,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-sas-valueset-appointmentparticipanttype.html"
       }],
       "reference" : {
         "reference" : "ValueSet/sas-valueset-appointmentparticipanttype"
@@ -724,6 +728,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-sas-valueset-appointmentreason.html"
       }],
       "reference" : {
         "reference" : "ValueSet/sas-valueset-appointmentreason"
@@ -736,6 +744,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-BundleAgregateur.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/BundleAgregateur"
@@ -748,6 +760,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-sas-cpts-bundle-aggregator.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/sas-cpts-bundle-aggregator"
@@ -760,6 +776,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-sas-sos-bundle-aggregator.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/sas-sos-bundle-aggregator"
@@ -772,6 +792,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-sas-categorie-orientation.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/sas-categorie-orientation"
@@ -784,6 +808,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-sas-valueset-categorieetablissement.html"
       }],
       "reference" : {
         "reference" : "ValueSet/sas-valueset-categorieetablissement"
@@ -796,6 +824,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-categorie-orientation-sas-codesystem.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/categorie-orientation-sas-codesystem"
@@ -808,6 +840,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-cptsslot-sp-servicetype.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/cptsslot-sp-servicetype"
@@ -820,6 +856,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Appointment"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Appointment-1.html"
       }],
       "reference" : {
         "reference" : "Appointment/1"
@@ -832,6 +872,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Appointment"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Appointment-2.html"
       }],
       "reference" : {
         "reference" : "Appointment/2"
@@ -844,6 +888,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Appointment"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Appointment-12345678.html"
       }],
       "reference" : {
         "reference" : "Appointment/12345678"
@@ -856,6 +904,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Appointment"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Appointment-123456789.html"
       }],
       "reference" : {
         "reference" : "Appointment/123456789"
@@ -868,6 +920,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Bundle"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Bundle-ExampleBundleCPTS1.html"
       }],
       "reference" : {
         "reference" : "Bundle/ExampleBundleCPTS1"
@@ -880,6 +936,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Bundle"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Bundle-ExampleBundleCPTS2.html"
       }],
       "reference" : {
         "reference" : "Bundle/ExampleBundleCPTS2"
@@ -892,6 +952,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Bundle"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Bundle-ExampleBundlePSIndiv.html"
       }],
       "reference" : {
         "reference" : "Bundle/ExampleBundlePSIndiv"
@@ -904,6 +968,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Bundle"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Bundle-ExampleBundleSOS.html"
       }],
       "reference" : {
         "reference" : "Bundle/ExampleBundleSOS"
@@ -916,6 +984,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "HealthcareService"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "HealthcareService-ExampleHealthcareServiceCPTS1.html"
       }],
       "reference" : {
         "reference" : "HealthcareService/ExampleHealthcareServiceCPTS1"
@@ -928,6 +1000,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "HealthcareService"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "HealthcareService-ExampleHealthcareServiceCPTS2.html"
       }],
       "reference" : {
         "reference" : "HealthcareService/ExampleHealthcareServiceCPTS2"
@@ -940,6 +1016,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Location"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Location-1111111111.html"
       }],
       "reference" : {
         "reference" : "Location/1111111111"
@@ -952,6 +1032,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Location"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Location-2222222222.html"
       }],
       "reference" : {
         "reference" : "Location/2222222222"
@@ -964,6 +1048,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Location"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Location-3333333333.html"
       }],
       "reference" : {
         "reference" : "Location/3333333333"
@@ -976,6 +1064,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Organization"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Organization-ExampleOrgaCPTS1.html"
       }],
       "reference" : {
         "reference" : "Organization/ExampleOrgaCPTS1"
@@ -988,6 +1080,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Organization"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Organization-ExampleOrgaCPTS2.html"
       }],
       "reference" : {
         "reference" : "Organization/ExampleOrgaCPTS2"
@@ -1000,6 +1096,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Organization"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Organization-ExampleOrgaSOS1.html"
       }],
       "reference" : {
         "reference" : "Organization/ExampleOrgaSOS1"
@@ -1012,6 +1112,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Organization"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Organization-ExampleOrgaSOS2.html"
       }],
       "reference" : {
         "reference" : "Organization/ExampleOrgaSOS2"
@@ -1024,6 +1128,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Practitioner"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Practitioner-ExamplePractitioner.html"
       }],
       "reference" : {
         "reference" : "Practitioner/ExamplePractitioner"
@@ -1036,6 +1144,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Practitioner"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Practitioner-ExamplePractitioner2.html"
       }],
       "reference" : {
         "reference" : "Practitioner/ExamplePractitioner2"
@@ -1048,6 +1160,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Practitioner"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Practitioner-ExamplePractitioner3.html"
       }],
       "reference" : {
         "reference" : "Practitioner/ExamplePractitioner3"
@@ -1060,6 +1176,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Practitioner"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Practitioner-ExamplePractitionerRegul1.html"
       }],
       "reference" : {
         "reference" : "Practitioner/ExamplePractitionerRegul1"
@@ -1072,6 +1192,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Practitioner"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Practitioner-ExamplePractitionerRegul2.html"
       }],
       "reference" : {
         "reference" : "Practitioner/ExamplePractitionerRegul2"
@@ -1084,6 +1208,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Practitioner"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Practitioner-ExamplePractitionerRegul3.html"
       }],
       "reference" : {
         "reference" : "Practitioner/ExamplePractitionerRegul3"
@@ -1096,6 +1224,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Practitioner"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Practitioner-ExamplePractitionerRegul4.html"
       }],
       "reference" : {
         "reference" : "Practitioner/ExamplePractitionerRegul4"
@@ -1108,6 +1240,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "PractitionerRole"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "PractitionerRole-ExamplePractitionerRoleAgregateur.html"
       }],
       "reference" : {
         "reference" : "PractitionerRole/ExamplePractitionerRoleAgregateur"
@@ -1120,6 +1256,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "PractitionerRole"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "PractitionerRole-ExamplePractitionerRoleAgregateur2.html"
       }],
       "reference" : {
         "reference" : "PractitionerRole/ExamplePractitionerRoleAgregateur2"
@@ -1132,6 +1272,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "PractitionerRole"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "PractitionerRole-ExamplePractitionerRoleAgregateur3.html"
       }],
       "reference" : {
         "reference" : "PractitionerRole/ExamplePractitionerRoleAgregateur3"
@@ -1144,6 +1288,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "PractitionerRole"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "PractitionerRole-ExamplePractitionerRoleAgregateur4.html"
       }],
       "reference" : {
         "reference" : "PractitionerRole/ExamplePractitionerRoleAgregateur4"
@@ -1156,6 +1304,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Schedule"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Schedule-ExampleSchedule.html"
       }],
       "reference" : {
         "reference" : "Schedule/ExampleSchedule"
@@ -1168,6 +1320,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Schedule"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Schedule-ExampleSchedule1.html"
       }],
       "reference" : {
         "reference" : "Schedule/ExampleSchedule1"
@@ -1180,6 +1336,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Schedule"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Schedule-ExampleSchedule2.html"
       }],
       "reference" : {
         "reference" : "Schedule/ExampleSchedule2"
@@ -1192,6 +1352,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Schedule"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Schedule-ExampleSchedule3.html"
       }],
       "reference" : {
         "reference" : "Schedule/ExampleSchedule3"
@@ -1204,6 +1368,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Schedule"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Schedule-ExampleScheduleSOS1.html"
       }],
       "reference" : {
         "reference" : "Schedule/ExampleScheduleSOS1"
@@ -1216,6 +1384,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Schedule"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Schedule-ExampleScheduleSOS2.html"
       }],
       "reference" : {
         "reference" : "Schedule/ExampleScheduleSOS2"
@@ -1228,6 +1400,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Schedule"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Schedule-ExampleScheduleSOS3.html"
       }],
       "reference" : {
         "reference" : "Schedule/ExampleScheduleSOS3"
@@ -1240,6 +1416,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Slot"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Slot-ExampleSlotCPTS1.html"
       }],
       "reference" : {
         "reference" : "Slot/ExampleSlotCPTS1"
@@ -1252,6 +1432,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Slot"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Slot-ExampleSlotCPTS2.html"
       }],
       "reference" : {
         "reference" : "Slot/ExampleSlotCPTS2"
@@ -1264,6 +1448,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Slot"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Slot-ExampleSlotPSIndiv1.html"
       }],
       "reference" : {
         "reference" : "Slot/ExampleSlotPSIndiv1"
@@ -1276,6 +1464,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Slot"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Slot-ExampleSlotPSIndiv2.html"
       }],
       "reference" : {
         "reference" : "Slot/ExampleSlotPSIndiv2"
@@ -1288,6 +1480,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Slot"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Slot-ExampleSlotPSIndiv3.html"
       }],
       "reference" : {
         "reference" : "Slot/ExampleSlotPSIndiv3"
@@ -1300,6 +1496,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Slot"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Slot-ExampleSlotPSIndiv4.html"
       }],
       "reference" : {
         "reference" : "Slot/ExampleSlotPSIndiv4"
@@ -1312,6 +1512,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Slot"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Slot-ExampleSlotPSIndiv5.html"
       }],
       "reference" : {
         "reference" : "Slot/ExampleSlotPSIndiv5"
@@ -1324,6 +1528,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Slot"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Slot-ExampleSlotSOS1.html"
       }],
       "reference" : {
         "reference" : "Slot/ExampleSlotSOS1"
@@ -1336,6 +1544,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Slot"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Slot-ExampleSlotSOS2.html"
       }],
       "reference" : {
         "reference" : "Slot/ExampleSlotSOS2"
@@ -1348,6 +1560,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Slot"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Slot-ExampleSlotSOS3.html"
       }],
       "reference" : {
         "reference" : "Slot/ExampleSlotSOS3"
@@ -1360,6 +1576,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Slot"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Slot-ExampleSlotSOS4.html"
       }],
       "reference" : {
         "reference" : "Slot/ExampleSlotSOS4"
@@ -1372,6 +1592,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-FrAppointmentSAS.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/FrAppointmentSAS"
@@ -1384,6 +1608,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-sas-sos-appointment.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/sas-sos-appointment"
@@ -1396,6 +1624,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-sas-cpts-healthcareservice-aggregator.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/sas-cpts-healthcareservice-aggregator"
@@ -1408,6 +1640,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-FrLocationAgregateur.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/FrLocationAgregateur"
@@ -1420,6 +1656,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-sas-sos-location-aggregator.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/sas-sos-location-aggregator"
@@ -1432,6 +1672,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-sas-cpts-organization-aggregator.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/sas-cpts-organization-aggregator"
@@ -1444,6 +1688,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-sas-sos-organization-aggregator.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/sas-sos-organization-aggregator"
@@ -1456,6 +1704,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-FrPractitionerAgregateur.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/FrPractitionerAgregateur"
@@ -1468,6 +1720,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-FrPractitionerRegul.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/FrPractitionerRegul"
@@ -1480,6 +1736,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-FrPractitionerRoleExerciceAgregateur.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/FrPractitionerRoleExerciceAgregateur"
@@ -1492,6 +1752,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-FrScheduleAgregateur.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/FrScheduleAgregateur"
@@ -1504,6 +1768,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-sas-sos-schedule-aggregator.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/sas-sos-schedule-aggregator"
@@ -1516,6 +1784,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-FrSlotAgregateur.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/FrSlotAgregateur"
@@ -1528,6 +1800,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-sas-cpts-slot-aggregator.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/sas-cpts-slot-aggregator"
@@ -1540,6 +1816,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-sas-sos-slot-aggregator.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/sas-sos-slot-aggregator"
@@ -1552,6 +1832,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CapabilityStatement"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CapabilityStatement-SAS-Consommateur-psindiv.html"
       }],
       "reference" : {
         "reference" : "CapabilityStatement/SAS-Consommateur-psindiv"
@@ -1564,6 +1848,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CapabilityStatement"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CapabilityStatement-SAS-Consommateur-CPTS.html"
       }],
       "reference" : {
         "reference" : "CapabilityStatement/SAS-Consommateur-CPTS"
@@ -1576,6 +1864,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CapabilityStatement"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CapabilityStatement-SAS-Consommateur-SOS.html"
       }],
       "reference" : {
         "reference" : "CapabilityStatement/SAS-Consommateur-SOS"
@@ -1588,6 +1880,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CapabilityStatement"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CapabilityStatement-SAS-GestionnaireAgenda-CPTS.html"
       }],
       "reference" : {
         "reference" : "CapabilityStatement/SAS-GestionnaireAgenda-CPTS"
@@ -1600,6 +1896,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CapabilityStatement"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CapabilityStatement-SAS-GestionnaireAgenda-PsIndiv.html"
       }],
       "reference" : {
         "reference" : "CapabilityStatement/SAS-GestionnaireAgenda-PsIndiv"
@@ -1612,6 +1912,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CapabilityStatement"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CapabilityStatement-SAS-GestionnaireAgenda-RDVpsindiv.html"
       }],
       "reference" : {
         "reference" : "CapabilityStatement/SAS-GestionnaireAgenda-RDVpsindiv"
@@ -1624,6 +1928,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CapabilityStatement"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CapabilityStatement-SAS-GestionnaireAgenda-RDVSOS.html"
       }],
       "reference" : {
         "reference" : "CapabilityStatement/SAS-GestionnaireAgenda-RDVSOS"
@@ -1636,6 +1944,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CapabilityStatement"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CapabilityStatement-SAS-GestionnaireAgenda-SOS.html"
       }],
       "reference" : {
         "reference" : "CapabilityStatement/SAS-GestionnaireAgenda-SOS"
@@ -1648,6 +1960,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CapabilityStatement"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CapabilityStatement-SAS-GestionnaireStructure.html"
       }],
       "reference" : {
         "reference" : "CapabilityStatement/SAS-GestionnaireStructure"
@@ -1660,6 +1976,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-sas-cpts-slot-servicetype-aggregator.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/sas-cpts-slot-servicetype-aggregator"
@@ -1672,6 +1992,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-slot-sp-start.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/slot-sp-start"
@@ -1684,6 +2008,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-sas-valueset-participant-status.html"
       }],
       "reference" : {
         "reference" : "ValueSet/sas-valueset-participant-status"
@@ -1696,6 +2024,26 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-sas-valueset-appointment-status.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/sas-valueset-appointment-status"
+      },
+      "name" : "Statut RDV SAS",
+      "description" : "Etat du RDV SAS",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-sas-valueset-typeconsultation.html"
       }],
       "reference" : {
         "reference" : "ValueSet/sas-valueset-typeconsultation"
@@ -1708,6 +2056,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-sas-cpts-valueset-typecreneau.html"
       }],
       "reference" : {
         "reference" : "ValueSet/sas-cpts-valueset-typecreneau"
@@ -1720,6 +2072,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-sas-sos-valueset-typecreneau.html"
       }],
       "reference" : {
         "reference" : "ValueSet/sas-sos-valueset-typecreneau"
@@ -1732,6 +2088,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-sas-valueset-typeidentifiant.html"
       }],
       "reference" : {
         "reference" : "ValueSet/sas-valueset-typeidentifiant"
@@ -1744,6 +2104,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-categorie-orientation-sas-valueset.html"
       }],
       "reference" : {
         "reference" : "ValueSet/categorie-orientation-sas-valueset"
@@ -1790,24 +2154,6 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "specifications_techniques-ps-gestion_regulateur.html"
-        }],
-        "nameUrl" : "specifications_techniques-ps-gestion_regulateur.html",
-        "title" : "PS indiv. - Gestion des comptes régulateurs",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "specifications_techniques-ps-gestion_rdv.html"
-        }],
-        "nameUrl" : "specifications_techniques-ps-gestion_rdv.html",
-        "title" : "PS indiv. - Gestion de rendez-vous",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
           "valueUrl" : "specifications_techniques-cpts-recherche_creneaux.html"
         }],
         "nameUrl" : "specifications_techniques-cpts-recherche_creneaux.html",
@@ -1817,20 +2163,20 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "specifications_techniques-cpts-gestion_regulateur.html"
+          "valueUrl" : "specifications_techniques-tous-gestion_regulateur.html"
         }],
-        "nameUrl" : "specifications_techniques-cpts-gestion_regulateur.html",
-        "title" : "CPTS - Gestion des comptes régulateurs",
+        "nameUrl" : "specifications_techniques-tous-gestion_regulateur.html",
+        "title" : "Gestion des comptes régulateurs",
         "generation" : "markdown"
       },
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "specifications_techniques-cpts-gestion_rdv.html"
+          "valueUrl" : "specifications_techniques_tous_RDV_V3.html"
         }],
-        "nameUrl" : "specifications_techniques-cpts-gestion_rdv.html",
-        "title" : "CPTS - Gestion de rendez-vous",
-        "generation" : "markdown"
+        "nameUrl" : "specifications_techniques_tous_RDV_V3.html",
+        "title" : "Récupération des données du RDV pris",
+        "generation" : "html"
       },
       {
         "extension" : [{
@@ -1839,24 +2185,6 @@
         }],
         "nameUrl" : "specifications_techniques-sos-recherche_creneaux.html",
         "title" : "SOS Médecins - Recherche des créneaux",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "specifications_techniques-sos-gestion_regulateur.html"
-        }],
-        "nameUrl" : "specifications_techniques-sos-gestion_regulateur.html",
-        "title" : "SOS Médecins - Gestion des comptes régulateurs",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "specifications_techniques-sos-gestion_rdv.html"
-        }],
-        "nameUrl" : "specifications_techniques-sos-gestion_rdv.html",
-        "title" : "SOS Médecins - Gestion de rendez-vous",
         "generation" : "markdown"
       },
       {
@@ -1871,11 +2199,38 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "ressources_casusage.html"
+          "valueUrl" : "ressources_cas_dusage.html"
         }],
-        "nameUrl" : "ressources_casusage.html",
+        "nameUrl" : "ressources_cas_dusage.html",
         "title" : "Ressources par cas d'usage",
-        "generation" : "markdown"
+        "generation" : "html",
+        "page" : [{
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "ressources_cas_dusage_ps.html"
+          }],
+          "nameUrl" : "ressources_cas_dusage_ps.html",
+          "title" : "PS à titre individuel",
+          "generation" : "html"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "ressources_cas_dusage_cpts.html"
+          }],
+          "nameUrl" : "ressources_cas_dusage_cpts.html",
+          "title" : "CPTS",
+          "generation" : "html"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "ressources_cas_dusage_sos.html"
+          }],
+          "nameUrl" : "ressources_cas_dusage_sos.html",
+          "title" : "SOS Médecins",
+          "generation" : "html"
+        }]
       },
       {
         "extension" : [{
