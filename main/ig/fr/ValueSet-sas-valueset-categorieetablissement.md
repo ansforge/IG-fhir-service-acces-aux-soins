@@ -33,7 +33,7 @@ Catégorie d'établissement utilisée dans contexte SAS - CPTS dans un premier t
   "title" : "Catégorie établissement SAS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-18T14:54:32+00:00",
+  "date" : "2026-08-19T07:30:40+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

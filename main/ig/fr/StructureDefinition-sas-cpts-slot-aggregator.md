@@ -121,7 +121,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-sas-cpts-slot-a
   "version" : "1.2.0",
   "name" : "FrSlotAgregateurCPTS",
   "status" : "active",
-  "date" : "2026-08-18T14:54:32+00:00",
+  "date" : "2026-08-19T07:30:40+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
