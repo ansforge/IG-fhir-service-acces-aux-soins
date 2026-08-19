@@ -33,7 +33,7 @@ Type de Créneaux SAS CPTS
   "title" : "Type créneaux SAS CPTS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-18T16:06:46+00:00",
+  "date" : "2026-08-19T07:15:03+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

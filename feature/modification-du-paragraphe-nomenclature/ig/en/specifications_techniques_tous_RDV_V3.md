@@ -191,7 +191,7 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
  
 * **Identification du PS effecteur de soins :** 
 * Les champs attendus doivent être valorisés comme suit : 
-* Valeur de l'identifiant : RPPS avec préfixe "8" ou ADELI avec préfixe "0"
+* Valeur de l'identifiant : RPPS avec préfixe "8"
 * Autorité d'affectation : urn:oid:1.2.250.1.71.4.2.1
 * Type d'identifiant : le champ `type.coding.code` est valorisé à `IDNPS` et `type.coding.system` à `http://interopsante.org/fhir/CodeSystem/fr-v2-0203`
  
@@ -233,7 +233,7 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
  
 * **Identification du PS effecteur de soins :** 
 * Les champs attendus doivent être valorisés comme suit : 
-* Valeur de l'identifiant : RPPS avec préfixe "8" ou ADELI avec préfixe "0"
+* Valeur de l'identifiant : RPPS avec préfixe "8"
 * Autorité d'affectation : urn:oid:1.2.250.1.71.4.2.1
 * Type d'identifiant : le champ `type.coding.code` est valorisé à `IDNPS` et `type.coding.system` à `http://interopsante.org/fhir/CodeSystem/fr-v2-0203`
  
@@ -275,7 +275,7 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
  
 * **Identification du PS effecteur de soins :** 
 * Les champs attendus doivent être valorisés comme suit : 
-* Valeur de l'identifiant : RPPS avec préfixe "8" ou ADELI avec préfixe "0"
+* Valeur de l'identifiant : RPPS avec préfixe "8"
 * Autorité d'affectation : urn:oid:1.2.250.1.71.4.2.1
 * Type d'identifiant : le champ `type.coding.code` est valorisé à `IDNPS` et `type.coding.system` à `http://interopsante.org/fhir/CodeSystem/fr-v2-0203`
  
