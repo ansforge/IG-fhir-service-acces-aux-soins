@@ -89,8 +89,8 @@ La fludification du parcours régulateurs inclut les éléments suivants :
 
 1. [Spécifications fonctionnelles](./specifications_fonctionnelles.html#parcours-place-de-marché)
 2. Spécifications techniques :
-   - [Gestion des comptes régulateurs](./specifications_techniques-ps-gestion_regulateur.html)
-   - [Gestion de rendez-vous](./specifications_techniques-sos-gestion_rdv.html)
+   - [Gestion des comptes régulateurs](./specifications_techniques-tous-gestion_regulateur.html)
+   - [Gestion de rendez-vous](./specifications_techniques_tous_RDV_V3.html)
 
 #### Transmission des informations de RDV aux LRM
 
