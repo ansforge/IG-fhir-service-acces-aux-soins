@@ -1,0 +1,72 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-appointment-status> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "sas-valueset-appointment-status"] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet sas-valueset-appointment-status</b></p><a name=\"en-sas-valueset-appointment-status\"> </a><a name=\"en-hcsas-valueset-appointment-status\"> </a><ul><li>Include these codes as defined in <a href=\"http://hl7.org/fhir/R4/codesystem-appointmentstatus.html\"><code>http://hl7.org/fhir/appointmentstatus</code></a><span title=\"Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references\"> version ?4.0.1</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-booked\">booked</a></td><td style=\"color: #cccccc\">Booked</td><td>All participant(s) have been considered and the appointment is confirmed to go ahead at the date/times specified.</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-cancelled\">cancelled</a></td><td style=\"color: #cccccc\">Cancelled</td><td>The appointment has been cancelled.</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-noshow\">noshow</a></td><td style=\"color: #cccccc\">No Show</td><td>Some or all of the participant(s) have not/did not appear for the appointment (usually the patient).</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-fulfilled\">fulfilled</a></td><td style=\"color: #cccccc\">Fulfilled</td><td>The planning stages of the appointment are now complete, the encounter resource will exist and will track further status changes. Note that an encounter may exist before the appointment status is fulfilled for many reasons.</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-pending\">pending</a></td><td style=\"color: #cccccc\">Pending</td><td>Some or all of the participant(s) have not finalized their acceptance of the appointment request.</td></tr></table></li></ul></div>"
+  ] ;
+  fhir:ValueSet.url [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-appointment-status"] ;
+  fhir:ValueSet.version [ fhir:value "1.2.0"] ;
+  fhir:ValueSet.name [ fhir:value "AppointmentStatusSAS"] ;
+  fhir:ValueSet.title [ fhir:value "Statut RDV SAS"] ;
+  fhir:ValueSet.status [ fhir:value "active"] ;
+  fhir:ValueSet.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:ValueSet.date [ fhir:value "2026-08-19T13:17:49+00:00"^^xsd:dateTime] ;
+  fhir:ValueSet.publisher [ fhir:value "ANS"] ;
+  fhir:ValueSet.contact [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "ANS" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://esante.gouv.fr" ]
+     ]
+  ] ;
+  fhir:ValueSet.description [ fhir:value "Etat du RDV SAS"] ;
+  fhir:ValueSet.jurisdiction [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "FR" ] ;
+       fhir:Coding.display [ fhir:value "France (la)" ]
+     ]
+  ] ;
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index -1 ;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://hl7.org/fhir/appointmentstatus" ] ;
+       fhir:ValueSet.compose.include.concept [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "booked" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "cancelled" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "noshow" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "fulfilled" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "pending" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-appointment-status.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
