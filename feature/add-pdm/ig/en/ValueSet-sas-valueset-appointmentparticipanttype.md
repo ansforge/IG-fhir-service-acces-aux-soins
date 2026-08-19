@@ -33,7 +33,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "title" : "Appointment Participant Type SAS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-19T09:08:02+00:00",
+  "date" : "2026-08-19T10:06:03+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

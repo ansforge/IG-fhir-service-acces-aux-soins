@@ -105,7 +105,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-sas-sos-bundle-
   "version" : "1.2.0",
   "name" : "BundleAgregateurSOS",
   "status" : "active",
-  "date" : "2026-08-19T09:08:02+00:00",
+  "date" : "2026-08-19T10:06:03+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
