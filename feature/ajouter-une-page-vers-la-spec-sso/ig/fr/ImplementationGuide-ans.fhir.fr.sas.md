@@ -14,7 +14,7 @@
   "name" : "SAS",
   "title" : "Service d'Accès aux Soins",
   "status" : "active",
-  "date" : "2026-08-19T15:22:16+00:00",
+  "date" : "2026-08-19T15:34:42+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -2175,7 +2175,7 @@
           "valueUrl" : "specifications_techniques_tous_sso.html"
         }],
         "nameUrl" : "specifications_techniques_tous_sso.html",
-        "title" : "Délégation d'authentification",
+        "title" : "Délégation d'authentification-sso",
         "generation" : "markdown"
       },
       {
