@@ -198,11 +198,12 @@ Le schéma ci-dessous illustre les éléments décrits ci-dessus :
 .mermaid {
     text-align: center;
 }
-</style>
 .mermaid svg {
     display: block;
     margin: 0 auto;
 }
+</style>
+
 <div class="mermaid">
 
 %%{init: {
