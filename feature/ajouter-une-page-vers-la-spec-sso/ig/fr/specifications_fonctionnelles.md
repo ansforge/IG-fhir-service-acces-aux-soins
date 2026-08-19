@@ -144,6 +144,8 @@ Afin de limiter le nombre d’appels émis vers les solutions logicielles édite
 * Pour la création ou modification de compte, le déclenchement de la requête est lié à la connexion de l’utilisateur à la plateforme numérique SAS. Lors de la connexion du régulateur, un contrôle est effectué afin d’identifier si des actions sont à mener dans les solutions logicielles éditeurs. Dans le cas où des solutions sont identifiées, les requêtes correspondantes sont émises et l’état du compte est mis à jour dans la plateforme numérique SAS.
 * Pour la suppression ou retrait d’habilitation uniquement, le déclenchement de la requête est émis instantanément. Le schéma ci-dessous illustre les éléments décrits ci-dessus :
 
+.mermaid svg { display: block; margin: 0 auto; }
+
 %%{init: { "theme": "base", "themeVariables": { "fontFamily": "verdana", "fontSize": "12px" } }}%% flowchart TB START[" "] GEST([👤
 
 Gestionnaire]) REG([👤
