@@ -34,6 +34,7 @@ L'offre de soins à mettre à disposition inclut les volets :
 * PS à titre individuel
 * Organisations CPTS
 * SOS Médecins
+* Offre de soins complémentaire
 
 La fludification du parcours régulateurs inclut les éléments suivants :
 
@@ -72,6 +73,13 @@ La fludification du parcours régulateurs inclut les éléments suivants :
 * [Gestion de rendez-vous](./specifications_techniques-sos-gestion_rdv.md)
 
 1. [Ressources de conformité](./ressources_casusage.md#sos-médecins)
+
+#### Place de marché
+
+1. [Spécifications fonctionnelles](./specifications_fonctionnelles.md#sos-médecins)
+1. Spécifications techniques :
+* [Gestion des comptes régulateurs](./specifications_techniques-tous-gestion_regulateur.md)
+* [Gestion de rendez-vous](./specifications_techniques-sos-gestion_rdv.md)
 
 #### Transmission des informations de RDV aux LRM
 

@@ -429,6 +429,52 @@ Au niveau de la structure de réponse, 1 à n créneaux de consultation CPTS (Sl
 
 <h3 id="parcours-place-de-marché">Parcours Place de Marché</h3>
 
+<h5 id="lien-de-redirection-vers-la-solution-logicielle-éditeur">Lien de redirection vers la solution logicielle éditeur</h5>
+
+<p>Lors d’une recherche dans la plateforme numérique SAS, dans le cas où le régulateur ne trouve pas d’offre de soins adaptée pour le patient, il a la possibilité d’effectuer une recherche d’offre de soins complémentaire, dite en surnuméraire incluant :</p>
+<ul>
+  <li>Les dispositifs acceptant de prendre en charge des patients en sus des disponibilités</li>
+  <li>Des liens de redirection vers les solutions éditeurs offrant un <strong>service type « Place de marché »</strong></li>
+</ul>
+
+<p>Le régulateur peut notamment visualiser les offreurs de soins (type « Place de Marché ») directement dans la plateforme numérique SAS.</p>
+
+<table align="center">
+    <tr>
+        <td align="center">
+            <div class="figure">
+                <img src="PlaceDeMarche.png" alt="Demande de prise en charge" title="Demande de prise en charge" />
+            </div>
+        </td>    
+    </tr>
+    <tr>
+        <td align="center">
+            <b>Demande de prise en charge</b>
+        </td>
+    </tr>
+</table>
+
+<p>Au <strong>clic sur le bouton de redirection</strong>, le régulateur est redirigé dans la solution logicielle éditeur correspondante pour pouvoir réaliser une demande de prise en charge pour le compte du patient.</p>
+
+<p><strong>L’éditeur transmet l’URL de redirection</strong> vers sa solution logicielle en amont à la plateforme numérique SAS. Il est attendu que cette URL permette de rediriger le régulateur vers la page d’authentification. Après renseignement de ses identifiants de connexion, le régulateur est ensuite redirigé sur la page permettant de réaliser une demande de prise en charge.</p>
+
+<h5 id="parcours-du-régulateur-dans-la-solution-éditeur">Parcours du régulateur dans la solution éditeur</h5>
+
+<h6 id="prérequis-relatifs-au-parcours-de-prise-de-rdv">Prérequis relatifs au parcours de prise de RDV</h6>
+
+<p><strong>L’ANS et l’éditeur conviendront, lors de l’atelier de cadrage, du caractère des données (requis, optionnel) à renseigner dans la solution éditeur pour que le régulateur puisse réaliser une demande de prise en charge pour le compte du patient</strong>. Les spécificités éditeurs identifiées seront adressées et gérées lors de cet atelier. L’objectif est ainsi de permettre la validation du processus de bout en bout et d’uniformiser le parcours pour le régulateur au sein des différentes solutions logicielles éditeur.</p>
+
+<p>A la suite de la demande de prise en charge, lorsque l’un des PS de la communauté notifiée accepte la demande, il est attendu qu’un <strong>SMS de confirmation soit envoyé au patient</strong> avec les informations du rendez-vous associé.</p>
+
+<h6 id="flux-de-prise-de-rendez-vous">Flux de prise de rendez-vous</h6>
+
+<p>Ce cas d'usage nécessite la mise en oeuvre des troix flux de prise de rendez-vous décrits ci-dessous dans la page :</p>
+<ul>
+  <li>Gestion des comptes régulateurs</li>
+  <li>Délégation d'authentification</li>
+  <li>Gestion des informations de rendez-vous</li>
+</ul>
+
 <h3 id="gestion-des-comptes-régulateurs">Gestion des comptes régulateurs</h3>
 <p>L’objectif de cette interface, <strong>flux INT_R02</strong>, est de permettre la gestion automatisée des comptes régulateurs 
 SAS qui auront besoin d’accéder aux solutions logicielles de prise de RDV dans le cadre de leurs fonctions. 
@@ -773,8 +819,8 @@ Le schéma ci-dessous illustre l'échange à mettre en oeuvre :</p>
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Package ans.fhir.fr.sas#1.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-07-20 09:55:00 +0000">
-    2026-07-20
+  <span title="2026-08-19 09:08:00 +0000">
+    2026-08-19
   </span>
 
           <br/>
