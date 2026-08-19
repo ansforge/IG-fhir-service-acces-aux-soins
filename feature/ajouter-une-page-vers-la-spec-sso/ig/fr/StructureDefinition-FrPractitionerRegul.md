@@ -88,7 +88,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FrPractitionerR
   "version" : "1.2.0",
   "name" : "FrPractitionerRegul",
   "status" : "active",
-  "date" : "2026-08-19T14:02:22+00:00",
+  "date" : "2026-08-19T15:22:16+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
