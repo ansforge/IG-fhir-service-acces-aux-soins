@@ -14,7 +14,7 @@
   "name" : "SAS",
   "title" : "Service d'Accès aux Soins",
   "status" : "active",
-  "date" : "2026-08-19T13:39:57+00:00",
+  "date" : "2026-08-19T14:02:22+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -2167,6 +2167,15 @@
         }],
         "nameUrl" : "specifications_techniques-tous-gestion_regulateur.html",
         "title" : "Gestion des comptes régulateurs",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "specifications_techniques_tous_sso.html"
+        }],
+        "nameUrl" : "specifications_techniques_tous_sso.html",
+        "title" : "Délégation d'authentification",
         "generation" : "markdown"
       },
       {
