@@ -90,6 +90,39 @@ La structure de réponse attendue inclut l’ensemble des créneaux de consultat
 Le schéma ci-dessous présente une synthèse de la structure attendue :
 
 
+### Parcours Place de Marché
+
+##### Lien de redirection vers la solution logicielle éditeur
+
+Lors d’une recherche dans la plateforme numérique SAS, dans le cas où le régulateur ne trouve pas d’offre de soins adaptée pour le patient, il a la possibilité d’effectuer une recherche d’offre de soins complémentaire, dite en surnuméraire incluant :
+
+* Les dispositifs acceptant de prendre en charge des patients en sus des disponibilités
+* Des liens de redirection vers les solutions éditeurs offrant un **service type « Place de marché »**
+
+Le régulateur peut notamment visualiser les offreurs de soins (type « Place de Marché ») directement dans la plateforme numérique SAS.
+
+* **Demande de prise en charge**: ![](PlaceDeMarche.png)
+
+Au **clic sur le bouton de redirection**, le régulateur est redirigé dans la solution logicielle éditeur correspondante pour pouvoir réaliser une demande de prise en charge pour le compte du patient.
+
+**L’éditeur transmet l’URL de redirection** vers sa solution logicielle en amont à la plateforme numérique SAS. Il est attendu que cette URL permette de rediriger le régulateur vers la page d’authentification. Après renseignement de ses identifiants de connexion, le régulateur est ensuite redirigé sur la page permettant de réaliser une demande de prise en charge.
+
+##### Parcours du régulateur dans la solution éditeur
+
+###### Prérequis relatifs au parcours de prise de RDV
+
+**L’ANS et l’éditeur conviendront, lors de l’atelier de cadrage, du caractère des données (requis, optionnel) à renseigner dans la solution éditeur pour que le régulateur puisse réaliser une demande de prise en charge pour le compte du patient**. Les spécificités éditeurs identifiées seront adressées et gérées lors de cet atelier. L’objectif est ainsi de permettre la validation du processus de bout en bout et d’uniformiser le parcours pour le régulateur au sein des différentes solutions logicielles éditeur.
+
+A la suite de la demande de prise en charge, lorsque l’un des PS de la communauté notifiée accepte la demande, il est attendu qu’un **SMS de confirmation soit envoyé au patient** avec les informations du rendez-vous associé.
+
+###### Flux de prise de rendez-vous
+
+Ce cas d'usage nécessite la mise en oeuvre des troix flux de prise de rendez-vous décrits ci-dessous dans la page :
+
+* Gestion des comptes régulateurs
+* Délégation d'authentification
+* Gestion des informations de rendez-vous
+
 ### Gestion des comptes régulateurs
 
 L’objectif de cette interface, **flux INT_R02**, est de permettre la gestion automatisée des comptes régulateurs SAS qui auront besoin d’accéder aux solutions logicielles de prise de RDV dans le cadre de leurs fonctions. Cela prend en compte la création, la modification ou la suppression des comptes identifiés.
