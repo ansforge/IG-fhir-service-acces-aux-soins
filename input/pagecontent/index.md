@@ -64,7 +64,7 @@ La fludification du parcours régulateurs inclut les éléments suivants :
 2. Spécifications techniques :
    - [Recherche de créneaux](./specifications_techniques-ps-recherche_creneaux.html)
    - [Gestion des comptes régulateurs](./specifications_techniques-tous-gestion_regulateur.html)
-   - [Délégation d'authentification](./specifications_techniques_tous_sso.html)
+   - [Délégation d'authentification-SSO](./specifications_techniques_tous_sso.html)
    - [Gestion de rendez-vous](./specifications_techniques_tous_RDV_V3.html)
 3. [Ressources de conformité](./ressources_cas_dusage_ps.html)
 
@@ -74,7 +74,7 @@ La fludification du parcours régulateurs inclut les éléments suivants :
 2. Spécifications techniques :
    - [Recherche de créneaux](./specifications_techniques-cpts-recherche_creneaux.html)
    - [Gestion des comptes régulateurs](./specifications_techniques-tous-gestion_regulateur.html)
-   - [Délégation d'authentification](./specifications_techniques_tous_sso.html)
+   - [Délégation d'authentification-SSO](./specifications_techniques_tous_sso.html)
    - [Gestion de rendez-vous](./specifications_techniques_tous_RDV_V3.html)
 3. [Ressources de conformité](./ressources_cas_dusage_cpts.html)
 
@@ -84,7 +84,7 @@ La fludification du parcours régulateurs inclut les éléments suivants :
 2. Spécifications techniques :
    - [Recherche de créneaux](./specifications_techniques-sos-recherche_creneaux.html)
    - [Gestion des comptes régulateurs](./specifications_techniques-tous-gestion_regulateur.html)
-   - [Délégation d'authentification](./specifications_techniques_tous_sso.html)
+   - [Délégation d'authentification-SSO](./specifications_techniques_tous_sso.html)
    - [Gestion de rendez-vous](./specifications_techniques_tous_RDV_V3.html)
 3. [Ressources de conformité](./ressources_cas_dusage_sos.html)
 
@@ -93,7 +93,7 @@ La fludification du parcours régulateurs inclut les éléments suivants :
 1. [Spécifications fonctionnelles](./specifications_fonctionnelles.html#parcours-place-de-marché)
 2. Spécifications techniques :
    - [Gestion des comptes régulateurs](./specifications_techniques-tous-gestion_regulateur.html)
-   - [Délégation d'authentification](./specifications_techniques_tous_sso.html)
+   - [Délégation d'authentification-SSO](./specifications_techniques_tous_sso.html)
    - [Gestion de rendez-vous](./specifications_techniques_tous_RDV_V3.html)
 
 #### Transmission des informations de RDV aux LRM
