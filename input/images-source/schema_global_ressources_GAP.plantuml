@@ -10,51 +10,93 @@ package "Objets d'agenda" as OA #text:red {
    actor [1..*]
  }
 
+ note left of Schedule
+   Agenda
+ end note
+
  class Slot #line:red {
    schedule [1..1]
  }
+
+ note left of Slot
+   Créneau
+ end note
 
  class Appointment #line:red {
    slot [0..*]
    participant.actor [1..*]
  }
 
+ note left of Appointment
+   Rendez-vous
+ end note
+
  class AppointmentResponse #line:black {
    appointment [1..1]
  }
 
+ note bottom of AppointmentResponse
+   Réponse demande de rendez-vous
+ end note
+
 }
-     
-package "Ressources d'agenda" as RA #text:blue{
+
+package "Ressources d'agenda" as RA #text:blue {
 
  class Patient #line:black
 
+
  class RelatedPerson #line:black
+
+ note bottom of RelatedPerson
+   Personne tierce
+ end note
 
  class Practitioner #line:blue
 
- class PractitionerRole #line:blue{
-    practitioner [0..1]
+ note left of Practitioner
+   Professionnel de santé
+ end note
+
+ class PractitionerRole #line:blue {
+   practitioner [0..1]
  }
-    
+
+ note bottom of PractitionerRole
+   Role d'exercice du PS
+ end note
 
  class Organization #line:blue
 
+ note left of Organization
+   Établissement / organisation
+ end note
+
  class HealthcareService #line:blue {
-  providedBy [0..1]
+   providedBy [0..1]
  }
 
+ note bottom of HealthcareService
+   Service de santé
+ end note
+
  class Device #line:black
-   
+
+ note bottom of Device
+   Équipement / dispositif
+ end note
+
  class Location #line:blue
 
+ note bottom of Location
+   Lieu
+ end note
+
  PractitionerRole -[#blue]--> Practitioner
-   HealthcareService -[#blue]--> Organization
+ HealthcareService -[#blue]--> Organization
 }
 
-
-
-Schedule  <---[#red] Slot
+Schedule <---[#red] Slot
 Slot <---[#red] Appointment
 Appointment <--[#black] AppointmentResponse
 
