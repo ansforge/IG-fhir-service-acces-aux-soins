@@ -53,6 +53,7 @@ La fludification du parcours régulateurs inclut les éléments suivants :
 1. Spécifications techniques :
 * [Recherche de créneaux](./specifications_techniques-ps-recherche_creneaux.md)
 * [Gestion des comptes régulateurs](./specifications_techniques-tous-gestion_regulateur.md)
+* [Délégation d'authentification-SSO](./specifications_techniques_tous_sso.md)
 * [Gestion de rendez-vous](./specifications_techniques_tous_RDV_V3.md)
 
 1. [Ressources de conformité](./ressources_cas_dusage_ps.md)
@@ -63,6 +64,7 @@ La fludification du parcours régulateurs inclut les éléments suivants :
 1. Spécifications techniques :
 * [Recherche de créneaux](./specifications_techniques-cpts-recherche_creneaux.md)
 * [Gestion des comptes régulateurs](./specifications_techniques-tous-gestion_regulateur.md)
+* [Délégation d'authentification-SSO](./specifications_techniques_tous_sso.md)
 * [Gestion de rendez-vous](./specifications_techniques_tous_RDV_V3.md)
 
 1. [Ressources de conformité](./ressources_cas_dusage_cpts.md)
@@ -73,6 +75,7 @@ La fludification du parcours régulateurs inclut les éléments suivants :
 1. Spécifications techniques :
 * [Recherche de créneaux](./specifications_techniques-sos-recherche_creneaux.md)
 * [Gestion des comptes régulateurs](./specifications_techniques-tous-gestion_regulateur.md)
+* [Délégation d'authentification-SSO](./specifications_techniques_tous_sso.md)
 * [Gestion de rendez-vous](./specifications_techniques_tous_RDV_V3.md)
 
 1. [Ressources de conformité](./ressources_cas_dusage_sos.md)
@@ -82,6 +85,7 @@ La fludification du parcours régulateurs inclut les éléments suivants :
 1. [Spécifications fonctionnelles](./specifications_fonctionnelles.md#parcours-place-de-marché)
 1. Spécifications techniques :
 * [Gestion des comptes régulateurs](./specifications_techniques-tous-gestion_regulateur.md)
+* [Délégation d'authentification-SSO](./specifications_techniques_tous_sso.md)
 * [Gestion de rendez-vous](./specifications_techniques_tous_RDV_V3.md)
 
 #### Transmission des informations de RDV aux LRM
