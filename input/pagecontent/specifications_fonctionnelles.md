@@ -141,6 +141,7 @@ Le régulateur peut notamment visualiser les offreurs de soins (type « Place de
     </tr>
 </table>
 
+
 Au **clic sur le bouton de redirection**, le régulateur est redirigé dans la solution logicielle éditeur correspondante pour pouvoir réaliser une demande de prise en charge pour le compte du patient.
 
 **L’éditeur transmet l’URL de redirection** vers sa solution logicielle en amont à la plateforme numérique SAS. Il est attendu que cette URL permette de rediriger le régulateur vers la page d’authentification. Après renseignement de ses identifiants de connexion, le régulateur est ensuite redirigé sur la page permettant de réaliser une demande de prise en charge.
@@ -196,6 +197,10 @@ Le schéma ci-dessous illustre les éléments décrits ci-dessus :
 <style>
 .mermaid {
     text-align: center;
+}
+.mermaid svg {
+    display: block;
+    margin: 0 auto;
 }
 </style>
 

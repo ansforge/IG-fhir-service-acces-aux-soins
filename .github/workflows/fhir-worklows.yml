@@ -14,15 +14,6 @@ jobs:
         with:      
           path: igSource
 
-      - name: Copy "all" to "use cases" specs
-        shell: bash
-        run: |
-             path_spec="./igSource/input/pagecontent"
-             for lines in $(cat "${path_spec}/specifications_techniques.txt"); do
-               files=(${lines//;/ })
-               cp "${path_spec}/${files[0]}" "${path_spec}/${files[1]}"
-             done
-
       - uses: ansforge/IG-workflows@main
         with:      
           bake: "true"
