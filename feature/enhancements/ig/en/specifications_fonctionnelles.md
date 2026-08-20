@@ -5,13 +5,13 @@
  
 There is no translation page available for the current page, so it has been rendered in the default language 
 
-Le Service d'accès aux soins a pour objectif de faciliter l’orientation des patients vers des médecins effecteurs en ville lorsque leur situation ne relève pas d’une urgence médicale. La plateforme numérique SAS, qui s’inscrit dans le cadre du programme SAS, s’appuie sur un agrégateur de disponibilités des professionnels de santé issues de leurs outils sans s’y substituer et a pour enjeu de fluidifier le parcours de prise de RDV pour les régulateurs.
+Le Service d'accès aux soins a pour objectif de faciliter l’orientation des patients vers des médecins effecteurs en ville lorsque leur situation ne relève pas d’une urgence médicale vitale. La plateforme numérique SAS, qui s’inscrit dans le cadre du programme SAS, s’appuie sur un agrégateur de disponibilités des professionnels de santé issues de leurs outils sans s’y substituer et a pour enjeu de fluidifier le parcours de prise de RDV pour les régulateurs.
 
 Une première interface, nommée « appel contextuel », permet le lancement d’une recherche d’offre de soins depuis le logiciel de régulation médicale (LRM) dans la plateforme numérique SAS. Cette fonctionnalité, mise en place avec le flux **INT_L01**, cf. [spécifications détaillées](https://industriels.esante.gouv.fr/sites/default/files/media/document/SAS_SPEC_INT_L01_Recherche-contextualisee_20230504_V1.3.pdf), recouvre la syntaxe de l’appel contextuel et la définition des données à transmettre du LRM à la plateforme numérique SAS.
 
 Après avoir effectué une recherche d’offre de soins dans la plateforme numérique SAS, le régulateur sélectionne un créneau de disponibilité et est redirigé vers la plateforme de prise de RDV éditeur sans avoir à se réauthentifier, si ce créneau remonte d’une solution éditeur. Dans la solution éditeur, le régulateur va pouvoir finaliser la prise de RDV pour le compte du patient.
 
-Le régulateur peut également prendre un RDV sur les disponibilités renseignées manuellement dans la plateforme numérique SAS par les effecteurs de soins au sein de l’agenda SAS ou effectuer une recherche d’offre de soins complémentaires incluant la possibilité de contacter les professionnels de santé acceptant de prendre en charge des patients « en sus de leurs disponibilités » et la possibilité de solliciter une communauté de professionnels de santé pour la prise en charge du patient via une solution éditeur interfacée offrant un service de type « Place de marché ».
+Le régulateur peut également prendre un RDV sur les disponibilités renseignées manuellement dans la plateforme numérique SAS par les effecteurs de soins au sein de l’agenda SAS ou effectuer une recherche d’offre de soins complémentaires incluant la possibilité de contacter les professionnels de santé acceptant de prendre en charge des patients « en sus de leurs disponibilités » et la possibilité de solliciter une communauté de professionnels de santé pour la prise en charge du patient via une solution éditeur interfacée offrant un service de type [« Place de marché »](./specifications_fonctionnelles.md#parcours-place-de-marché).
 
 Une fois la prise de RDV réalisée par le régulateur, les données associées au RDV pris pour le compte du patient sont remontées et enregistrées dans la plateforme numérique SAS.
 
@@ -83,14 +83,14 @@ La structure de réponse attendue inclut l’ensemble des créneaux de disponibi
 
 Dans le cas où un créneau CPTS est transmis, la transmission de l’information sur le type de créneau « CPTS » est attendu ainsi que les données de la structure CPTS associée. Au niveau de la structure de réponse, 1 à n créneaux de consultation CPTS (Slot) peuvent être rattachés à 1 ou n prestations de soins (FrHealthcareService) qui sont chacun rattachées à 1 structure CPTS (FrOrganization). Pour le reste de la structure de réponse, celle -ci reste identique à ce qui a été présenté précédemment.
 
-Le schéma ci-dessous présente une synthèse de la structure attendue :
+Le schéma ci-dessous présente une synthèse de la structure attendue, avec les liens vers les ressources de conformité correspondantes :
 
 
 ##### SOS Médecins
 
 La structure de réponse attendue inclut l’ensemble des créneaux de consultation disponibles correspondant à la requête réalisée par la plateforme numérique SAS. 1 à n créneaux de consultation (Slot) peuvent être rattachés à 1 agenda (Schedule) qui représente 1 lieu fixe de consultation (Location), lui-même rattaché à 1 association SOS Médecins (Organization). Si des créneaux de consultation sont proposés pour plusieurs LFC, on aura autant d’agendas (Schedule) que de LFC (Location).
 
-Le schéma ci-dessous présente une synthèse de la structure attendue :
+Le schéma ci-dessous présente une synthèse de la structure attendue, avec les liens vers les ressources de conformité correspondantes :
 
 
 ### Parcours Place de Marché
@@ -108,7 +108,7 @@ Le régulateur peut notamment visualiser les offreurs de soins (type « Place de
 
 Au **clic sur le bouton de redirection**, le régulateur est redirigé dans la solution logicielle éditeur correspondante pour pouvoir réaliser une demande de prise en charge pour le compte du patient.
 
-**L’éditeur transmet l’URL de redirection** vers sa solution logicielle en amont à la plateforme numérique SAS. Il est attendu que cette URL permette de rediriger le régulateur vers la page d’authentification. Après renseignement de ses identifiants de connexion, le régulateur est ensuite redirigé sur la page permettant de réaliser une demande de prise en charge.
+**L’éditeur transmet l’URL de redirection** vers sa solution logicielle en amont à la plateforme numérique SAS. Il est attendu que cette URL permette de rediriger le régulateur vers la page d’authentification. Après connexion (via sso depuis la plateforme SAS), le régulateur est ensuite redirigé sur la page permettant de réaliser une demande de prise en charge.
 
 ##### Parcours du régulateur dans la solution éditeur
 
@@ -120,10 +120,10 @@ A la suite de la demande de prise en charge, lorsque l’un des PS de la communa
 
 ###### Flux de prise de rendez-vous
 
-Ce cas d'usage nécessite la mise en oeuvre des troix flux de prise de rendez-vous décrits ci-dessous dans la page :
+Ce cas d'usage nécessite la mise en oeuvre des troix flux de prise de rendez-vous décrits ci-après dans la page :
 
 * Gestion des comptes régulateurs
-* Délégation d'authentification
+* Délégation d'authentification (sso)
 * Gestion des informations de rendez-vous
 
 ### Gestion des comptes régulateurs

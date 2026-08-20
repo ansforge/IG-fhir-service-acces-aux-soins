@@ -3,7 +3,7 @@
 ## SearchParameter: slot-sp-start 
 
  
-Paramètre de recherche date de début d'un créneau (date de début supérieure ou égale à  et inférieure ou égale à ) 
+Paramètre de recherche date de début d'un créneau (date de début supérieure ou égale à date1 et inférieure ou égale à date2) 
 
 
 
@@ -17,7 +17,7 @@ Paramètre de recherche date de début d'un créneau (date de début supérieure
   "version" : "1.2.0",
   "name" : "SPDateDebutSlot",
   "status" : "active",
-  "date" : "2026-08-20T07:34:30+00:00",
+  "date" : "2026-08-20T12:29:44+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -26,7 +26,7 @@ Paramètre de recherche date de début d'un créneau (date de début supérieure
       "value" : "https://esante.gouv.fr"
     }]
   }],
-  "description" : "Paramètre de recherche date de début d'un créneau (date de début supérieure ou égale à <date1> et inférieure ou égale à <date2>)",
+  "description" : "Paramètre de recherche date de début d'un créneau (date de début supérieure ou égale à date1 et inférieure ou égale à date2)",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

@@ -14,7 +14,7 @@
   "name" : "SAS",
   "title" : "Service d'Accès aux Soins",
   "status" : "active",
-  "date" : "2026-08-20T07:34:30+00:00",
+  "date" : "2026-08-20T12:29:44+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -2001,7 +2001,7 @@
         "reference" : "SearchParameter/slot-sp-start"
       },
       "name" : "slot-sp-start",
-      "description" : "Paramètre de recherche date de début d'un créneau (date de début supérieure ou égale à <date1> et inférieure ou égale à <date2>)",
+      "description" : "Paramètre de recherche date de début d'un créneau (date de début supérieure ou égale à date1 et inférieure ou égale à date2)",
       "exampleBoolean" : false
     },
     {
