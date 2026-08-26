@@ -598,10 +598,10 @@ Cette section regroupe les réponses aux questions les plus fréquemment posées
 
 L’exemple ci-dessous concerne la modification de l’identifiant du compte du régulateur Jules MARIUS, initialement associé à l’ID technique SAS `b6e39355-8a61-4556-b340-36f7b95fec6a`. La valorisation de l’élément `identifier.value` à `810002673899` indique le nouvel identifiant à prendre en compte.
 
-<ins>Requête</ins>
+<span style="text-decoration: underline;">Requête</span>
 curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.213.3.6|b6e39355-8a61-4556-b340-36f7b95fec6a -H 'Accept: application/json+fhir' -d
 
-<ins>Résultat</ins>
+<span style="text-decoration: underline;">Résultat</span>
 
 {%include Practitioner-ExamplePractitionerRegul2-json-html.xhtml%}
 
@@ -609,10 +609,10 @@ curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.213.3.6|b6e3935
 
 L’exemple ci-dessous concerne la désactivation du compte du régulateur Jules MARIUS. La valorisation de l’élément `active` à `false` indique que le compte doit être désactivé.
 
-<ins>Requête</ins>
+<span style="text-decoration: underline;">Requête</span>
 curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.71.4.2.1|810002673899 -H 'Accept: application/json+fhir' -d
 
-<ins>Résultat</ins>
+<span style="text-decoration: underline;">Résultat</span>
 
 {%include Practitioner-ExamplePractitionerRegul3-json-html.xhtml%}
 
