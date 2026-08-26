@@ -871,10 +871,10 @@ Dans la structure du fichier de réponse, si un créneau est associé à plusieu
 
 <p>L’exemple ci-dessous concerne la modification de l’identifiant du compte du régulateur Jules MARIUS, initialement associé à l’ID technique SAS <code class="language-plaintext highlighter-rouge">b6e39355-8a61-4556-b340-36f7b95fec6a</code>. La valorisation de l’élément <code class="language-plaintext highlighter-rouge">identifier.value</code> à <code class="language-plaintext highlighter-rouge">810002673899</code> indique le nouvel identifiant à prendre en compte.</p>
 
-<p><ins>Requête</ins>
+<p><span style="text-decoration: underline;">Requête</span>
 curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.213.3.6|b6e39355-8a61-4556-b340-36f7b95fec6a -H 'Accept: application/json+fhir' -d</p>
 
-<p><ins>Résultat</ins></p>
+<p><span style="text-decoration: underline;">Résultat</span></p>
 
 <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
   "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner">resourceType</a>" : "Practitioner",
@@ -924,10 +924,10 @@ curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.213.3.6|b6e3935
 
 <p>L’exemple ci-dessous concerne la désactivation du compte du régulateur Jules MARIUS. La valorisation de l’élément <code class="language-plaintext highlighter-rouge">active</code> à <code class="language-plaintext highlighter-rouge">false</code> indique que le compte doit être désactivé.</p>
 
-<p><ins>Requête</ins>
+<p><span style="text-decoration: underline;">Requête</span>
 curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.71.4.2.1|810002673899 -H 'Accept: application/json+fhir' -d</p>
 
-<p><ins>Résultat</ins></p>
+<p><span style="text-decoration: underline;">Résultat</span></p>
 
 <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
   "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner">resourceType</a>" : "Practitioner",
@@ -1038,8 +1038,8 @@ Cf. <a href="./specifications_techniques-tous-gestion_regulateur.html#r%C3%A8gle
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Le package ans.fhir.fr.sas#1.2.0 est basé sur <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Date de génération : 
-  <span title="2026-08-20 12:29:00 +0000">
-    2026-08-20
+  <span title="2026-08-26 09:51:00 +0000">
+    2026-08-26
   </span>
 
           <br/>

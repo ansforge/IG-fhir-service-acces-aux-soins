@@ -100,7 +100,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FrAppointmentSA
   "version" : "1.2.0",
   "name" : "FrAppointmentSAS",
   "status" : "active",
-  "date" : "2026-08-20T12:29:44+00:00",
+  "date" : "2026-08-26T09:51:04+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
