@@ -39,7 +39,7 @@
 <tbody>
 <tr>
   <td width="25%"><p><strong>Interaction FHIR</strong></p></td>
-  <td><p>Create<a href="#_ftn1" name="_ftnref1">[1]</a></p></td>
+  <td><p>Create<a href="https://www.hl7.org/fhir/http.html#create"></a></p></td>
 </tr>
 <tr>
   <td width="25%"><p><strong>Méthode http associée</strong></p></td>
@@ -55,7 +55,6 @@
 </tr>
 </tbody>
 </table>
-<p><a href="#_ftnref1" name="_ftn1">[1]</a> <a href="https://www.hl7.org/fhir/http.html#create">https://www.hl7.org/fhir/http.html#create</a> et <a href="https://www.hl7.org/fhir/http.html#general">https://www.hl7.org/fhir/http.html#general</a></p>
 
 #### Construction de la réponse de base
 
@@ -110,7 +109,7 @@ La requête ci-dessous correspond à la transmission d'un RDV pris par le régul
 <tbody>
 <tr>
   <td width="25%"><p><strong>Interaction FHIR</strong></p></td>
-  <td><p>Conditional update<a href="#_ftn1" name="_ftnref1">[1]</a></p></td>
+  <td><p>Conditional update<a href="https://www.hl7.org/fhir/http.html#cond-update"></a></p></td>
 </tr>
 <tr>
   <td width="25%"><p><strong>Méthode http associée</strong></p></td>
@@ -126,7 +125,6 @@ La requête ci-dessous correspond à la transmission d'un RDV pris par le régul
 </tr>
 </tbody>
 </table>
-<p><a href="#_ftnref1" name="_ftn1">[1]</a> <a href="https://www.hl7.org/fhir/http.html#cond-update">https://www.hl7.org/fhir/http.html#cond-update</a> et <a href="https://www.hl7.org/fhir/http.html#general">https://www.hl7.org/fhir/http.html#general</a></p>
 
 #### Construction de la réponse de base
 
