@@ -37,7 +37,7 @@ Cette requête s'appuie sur le flux 3A du volet d'agenda partagé du [CI-SIS vol
 <tbody>
 <tr>
   <td width="25%"><p><strong>Interaction FHIR</strong></p></td>
-  <td><p>Search<a href="#_ftn1" name="_ftnref1">[1]</a></p></td>
+  <td><p>Search<a href="https://www.hl7.org/fhir/http.html#search"></a></p></td>
 </tr>
 <tr>
   <td width="25%"><p><strong>Méthode http associée</strong></p></td>
@@ -53,7 +53,6 @@ Cette requête s'appuie sur le flux 3A du volet d'agenda partagé du [CI-SIS vol
 </tr>
 </tbody>
 </table>
-<p><a href="#_ftnref1" name="_ftn1">[1]</a> <a href="https://www.hl7.org/fhir/http.html#search">https://www.hl7.org/fhir/http.html#search</a> et <a href="https://www.hl7.org/fhir/http.html#general">https://www.hl7.org/fhir/http.html#general</a></p>
 
 ### Construction de la réponse de base
 Cette réponse s'appuie sur le flux 4A du volet d'agenda partagé du CI-SIS.
@@ -89,7 +88,7 @@ Si la recherche échoue, le serveur doit répondre :
 
 -   Un header avec un un code erreur HTTP 4XX ou 5XX
 
--   Un body contenant une ressource OperationOutcome[^3] qui donne les
+-   Un body contenant une ressource OperationOutcome qui donne les
     détails sur la raison de l'échec
 
 Remarque : l'échec d'une recherche est la non-possibilité d'exécuter la
