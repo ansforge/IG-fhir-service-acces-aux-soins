@@ -136,7 +136,7 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
 * **URL de l’extension et référence à la ressource HealthcareService :** 
 * Lorsque le créneau transmis est de type CPTS, les champs attendus pour faire référence au HealthcareService doivent être valorisés comme suit : 
 * serviceType.extension.url : http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType
-* serviceType.valueReference.reference : HealthcareService/
+* serviceType.valueReference.reference : `HealthcareService/<référence à la ressource HealthcareService associée>`
  
  
 * **URL de redirection pour la prise de RDV :** 

@@ -22,12 +22,10 @@ There is no translation page available for the current page, so it has been rend
 
 | | |
 | :--- | :--- |
-| **Interaction FHIR** | Create[[1] ](#_ftn1) |
+| **Interaction FHIR** | Create[FHIR Create](https://www.hl7.org/fhir/http.html#create) |
 | **Méthode http associée** | POST |
 | **Ressource créée** | Appointment |
 | **Construction requête de base** | `POST[base]/Appointment{?_format=[mime-type]}` |
-
-[[1] ](#_ftnref1) [https://www.hl7.org/fhir/http.html#create](https://www.hl7.org/fhir/http.html#create) et [https://www.hl7.org/fhir/http.html#general](https://www.hl7.org/fhir/http.html#general)
 
 #### Construction de la réponse de base
 
