@@ -19,7 +19,7 @@
 
 | | |
 | :--- | :--- |
-| **Interaction FHIR** | Create[FHIR Create](https://www.hl7.org/fhir/http.html#create) |
+| **Interaction FHIR** | Create |
 | **Méthode http associée** | POST |
 | **Ressource créée** | Appointment |
 | **Construction requête de base** | `POST[base]/Appointment{?_format=[mime-type]}` |
@@ -87,12 +87,10 @@ Ci-dessous des exemples de requêtes pour la création de rendez-vous par cas d'
 
 | | |
 | :--- | :--- |
-| **Interaction FHIR** | Conditional update[[1] ](#_ftn1) |
+| **Interaction FHIR** | Conditional update |
 | **Méthode http associée** | PUT |
 | **Ressource créée** | Appointment |
 | **Construction requête de base** | `PUT[base]/Appointment?Identifier=[ID]{&_format=[mime-type]}` |
-
-[[1] ](#_ftnref1) [https://www.hl7.org/fhir/http.html#cond-update](https://www.hl7.org/fhir/http.html#cond-update) et [https://www.hl7.org/fhir/http.html#general](https://www.hl7.org/fhir/http.html#general)
 
 #### Construction de la réponse de base
 

@@ -2,8 +2,8 @@ SAS : Validation Results
 =========================================
 
 err = 21, warn = 115, info = 221
-IG Publisher Version: 2.3.3 Out of date - current version is 2.3.4
-Generated Mon Sep 07 09:59:09 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.sas#1.2.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/sas)
+IG Publisher Version: 2.3.4
+Generated Mon Sep 07 11:50:47 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.sas#1.2.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/sas)
  Build Errors : 0 / 6 / 2
  /__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Appointment-1 : 0 / 3 / 5
  /__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Appointment-12345678 : 0 / 2 / 5
@@ -148,7 +148,7 @@ INFORMATION: Bundle/ExampleBundleCPTS1: Bundle.entry[3].resource/*PractitionerRo
 WARNING: Bundle/ExampleBundleCPTS1: Bundle.entry[3].resource/*PractitionerRole/ExamplePractitionerRoleAgregateur*/.contained[0]/*Location/ExampleLocation*/.identifier[0].system: No definition could be found for URL value 'https://editeur.com'
 INFORMATION: Bundle/ExampleBundleCPTS1: Bundle.entry[3].resource/*PractitionerRole/ExamplePractitionerRoleAgregateur*/.organization.identifier.type: Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-v2-0203|1.0.1
 WARNING: Bundle/ExampleBundleCPTS1: Bundle.entry[3].resource/*PractitionerRole/ExamplePractitionerRoleAgregateur*/.organization.identifier.system: No definition could be found for URL value 'urn:oid:1.2.250.1.71.4.2.2'
-WARNING: Bundle/ExampleBundleCPTS1: Bundle.entry[5].resource/*Organization/ExampleOrgaCPTS1*/.identifier[0].type.coding[0]: A definition for CodeSystem 'https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203' could not be found, so the code cannot be validated
+WARNING: Bundle/ExampleBundleCPTS1: Bundle.entry[5].resource/*Organization/ExampleOrgaCPTS1*/.identifier[0].type.coding[0].system: A definition for CodeSystem 'https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203' could not be found, so the code cannot be validated
 WARNING: Bundle/ExampleBundleCPTS1: Bundle.entry[5].resource/*Organization/ExampleOrgaCPTS1*/.identifier[0].system: No definition could be found for URL value 'urn:oid:1.2.250.1.71.4.2.2'
 == fsh-generated/resources/Bundle-ExampleBundleCPTS2.json ==
 WARNING: Bundle/ExampleBundleCPTS2: Bundle.link[0].url: No definition could be found for URL value 'http://hapi.fhir.org/baseR4/Slot?_include=Slot:schedule&_include:iterate=Schedule:actor&start=ge2024-06-12T16:20:00.000+02:00&start=le2024-06-12T17:20:00.000+02:00&schedule.actor:Practitioner.identifier=urn:oid:1.2.250.1.71.4.2.1|810002909371&status=free&_include=Slot:service-type-reference'
@@ -161,9 +161,9 @@ INFORMATION: Bundle/ExampleBundleCPTS2: Bundle.entry[3].resource/*PractitionerRo
 WARNING: Bundle/ExampleBundleCPTS2: Bundle.entry[3].resource/*PractitionerRole/ExamplePractitionerRoleAgregateur*/.contained[0]/*Location/ExampleLocation*/.identifier[0].system: No definition could be found for URL value 'https://editeur.com'
 INFORMATION: Bundle/ExampleBundleCPTS2: Bundle.entry[3].resource/*PractitionerRole/ExamplePractitionerRoleAgregateur*/.organization.identifier.type: Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-v2-0203|1.0.1
 WARNING: Bundle/ExampleBundleCPTS2: Bundle.entry[3].resource/*PractitionerRole/ExamplePractitionerRoleAgregateur*/.organization.identifier.system: No definition could be found for URL value 'urn:oid:1.2.250.1.71.4.2.2'
-WARNING: Bundle/ExampleBundleCPTS2: Bundle.entry[5].resource/*Organization/ExampleOrgaCPTS1*/.identifier[0].type.coding[0]: A definition for CodeSystem 'https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203' could not be found, so the code cannot be validated
+WARNING: Bundle/ExampleBundleCPTS2: Bundle.entry[5].resource/*Organization/ExampleOrgaCPTS1*/.identifier[0].type.coding[0].system: A definition for CodeSystem 'https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203' could not be found, so the code cannot be validated
 WARNING: Bundle/ExampleBundleCPTS2: Bundle.entry[5].resource/*Organization/ExampleOrgaCPTS1*/.identifier[0].system: No definition could be found for URL value 'urn:oid:1.2.250.1.71.4.2.2'
-WARNING: Bundle/ExampleBundleCPTS2: Bundle.entry[7].resource/*Organization/ExampleOrgaCPTS2*/.identifier[0].type.coding[0]: A definition for CodeSystem 'https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203' could not be found, so the code cannot be validated
+WARNING: Bundle/ExampleBundleCPTS2: Bundle.entry[7].resource/*Organization/ExampleOrgaCPTS2*/.identifier[0].type.coding[0].system: A definition for CodeSystem 'https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203' could not be found, so the code cannot be validated
 WARNING: Bundle/ExampleBundleCPTS2: Bundle.entry[7].resource/*Organization/ExampleOrgaCPTS2*/.identifier[0].system: No definition could be found for URL value 'urn:oid:1.2.250.1.71.4.2.2'
 == fsh-generated/resources/Bundle-ExampleBundlePSIndiv.json ==
 WARNING: Bundle/ExampleBundlePSIndiv: Bundle.link[0].url: No definition could be found for URL value 'https://exemple.com/ans-sas/Slot/?_include=Slot:schedule&_include:iterate=Schedule:actor&status=free&start=ge2021-11-04T14:19:35.760+00:00&start=le2021-11-06T23:59:59.999+00:00&schedule.actor:Practitioner.identifier=urn:oid:1.2.250.1.71.4.2.1%7C810002673899,urn:oid:1.2.250.1.71.4.2.1%7C810100050075&_count=1000'
@@ -266,10 +266,10 @@ WARNING: Location/2222222222: Location.identifier[0].system: No definition could
 INFORMATION: Location/3333333333: Location.identifier[0].type: Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type|1.0.1
 WARNING: Location/3333333333: Location.identifier[0].system: No definition could be found for URL value 'https://editeur.com'
 == fsh-generated/resources/Organization-ExampleOrgaCPTS1.json ==
-WARNING: Organization/ExampleOrgaCPTS1: Organization.identifier[0].type.coding[0]: A definition for CodeSystem 'https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203' could not be found, so the code cannot be validated
+WARNING: Organization/ExampleOrgaCPTS1: Organization.identifier[0].type.coding[0].system: A definition for CodeSystem 'https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203' could not be found, so the code cannot be validated
 WARNING: Organization/ExampleOrgaCPTS1: Organization.identifier[0].system: No definition could be found for URL value 'urn:oid:1.2.250.1.71.4.2.2'
 == fsh-generated/resources/Organization-ExampleOrgaCPTS2.json ==
-WARNING: Organization/ExampleOrgaCPTS2: Organization.identifier[0].type.coding[0]: A definition for CodeSystem 'https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203' could not be found, so the code cannot be validated
+WARNING: Organization/ExampleOrgaCPTS2: Organization.identifier[0].type.coding[0].system: A definition for CodeSystem 'https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203' could not be found, so the code cannot be validated
 WARNING: Organization/ExampleOrgaCPTS2: Organization.identifier[0].system: No definition could be found for URL value 'urn:oid:1.2.250.1.71.4.2.2'
 == fsh-generated/resources/Organization-ExampleOrgaSOS1.json ==
 INFORMATION: Organization/ExampleOrgaSOS1: Organization.identifier[0].type: Reference to draft CodeSystem http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type|1.0.1
