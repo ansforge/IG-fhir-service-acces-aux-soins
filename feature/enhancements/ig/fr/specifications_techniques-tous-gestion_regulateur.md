@@ -19,12 +19,10 @@
 
 | | |
 | :--- | :--- |
-| **Interaction FHIR** | Create[[1]](#_ftn1) |
+| **Interaction FHIR** | Create |
 | **Méthode http associée** | POST |
 | **Ressource créée** | Practitioner |
 | **Construction requête de base** | `POST[base]/Practitioner{?_format=[mime-type]}` |
-
-[[1]](#_ftnref1) [https://www.hl7.org/fhir/http.html#create](https://www.hl7.org/fhir/http.html#create) et [https://www.hl7.org/fhir/http.html#general](https://www.hl7.org/fhir/http.html#general)
 
 #### Construction de la réponse de base
 
@@ -71,12 +69,10 @@ La requête ci-dessous correspond à la création ou mise à jour du compte de S
 
 | | |
 | :--- | :--- |
-| **Interaction FHIR** | Conditional update[[2]](#_ftn2) |
+| **Interaction FHIR** | Conditional update |
 | **Méthode http associée** | PUT |
 | **Ressource créée** | Practitioner |
 | **Construction requête de base** | `PUT[base]/Practitioner?identifier=[ID]{&_format=[mime-type]}` |
-
-[[2]](#_ftnref2) [https://www.hl7.org/fhir/http.html#cond-update](https://www.hl7.org/fhir/http.html#cond-update) et [https://www.hl7.org/fhir/http.html#general](https://www.hl7.org/fhir/http.html#general)
 
 Cette requête de modification est donc de type `interaction conditional update`. Elle permet de mettre à jour une ressource sur la base d’un critère autre que l'`id` de la ressource
 

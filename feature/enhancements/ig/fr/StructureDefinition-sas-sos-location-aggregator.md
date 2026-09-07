@@ -89,7 +89,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-sas-sos-locatio
   "version" : "1.2.0",
   "name" : "FrLocationAgregateurSOS",
   "status" : "active",
-  "date" : "2026-09-07T08:13:14+00:00",
+  "date" : "2026-09-07T09:57:01+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
