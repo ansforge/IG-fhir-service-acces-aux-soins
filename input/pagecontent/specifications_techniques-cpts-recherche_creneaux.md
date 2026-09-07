@@ -219,7 +219,7 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
 - **URL de l’extension et référence à la ressource HealthcareService :**
   - Lorsque le créneau transmis est de type CPTS, les champs attendus pour faire référence au HealthcareService doivent être valorisés comme suit :
     - serviceType.extension.url : http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType
-    - serviceType.valueReference.reference : HealthcareService/<référence à la ressource HealthcareService associée>
+    - serviceType.valueReference.reference : `HealthcareService/<référence à la ressource HealthcareService associée>`
 - **URL de redirection pour la prise de RDV :**
   - Il est attendu l'URL de redirection vers l'agenda du PS concerné. Si l'utilisateur vient du SAS et n'est pas authentifié, il est demandé de le rediriger vers la page d'authentification de la solution éditeur avant d'accéder à l'agenda du PS. Afin de faciliter l'implémentation de la règle métier, la PTF numérique SAS ajoute un paramètre `origin` à l'URL transmise par l'éditeur au moment de la redirection pour identifier la provenance.
 - **Créneau avec ou sans RDV :**
