@@ -31,7 +31,7 @@ Other representations of profile: [CSV](../StructureDefinition-FrLocationAgregat
   "version" : "1.2.0",
   "name" : "FrLocationAgregateur",
   "status" : "active",
-  "date" : "2026-09-07T13:20:56+00:00",
+  "date" : "2026-09-08T07:12:03+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
