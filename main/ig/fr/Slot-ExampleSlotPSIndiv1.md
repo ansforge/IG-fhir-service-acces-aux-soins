@@ -14,7 +14,7 @@ Label de sécurité: [Créneau accessible par le grand public (Détails : code T
 
 **serviceType**: ambulatory, virtual, Visite de contrôle
 
-**specialty**: Médecine générale (SM), Chirurgie générale (SM)
+**specialty**: Médecine générale (SM), SM05
 
 **appointmentType**: Routine appointment - default if not valued
 

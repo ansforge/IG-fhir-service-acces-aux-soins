@@ -48,8 +48,8 @@
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"11.2"}
-    h3,h4,h5,h6{--heading-prefix:"11.2"}</style>
+    <style type="text/css">h2{--heading-prefix:"12.2"}
+    h3,h4,h5,h6{--heading-prefix:"12.2"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -140,6 +140,9 @@
       </li>
       <li>
         ________ Fluidification parcours régulateur ________
+      </li>
+      <li>
+        <a href="specifications_techniques_recherche_contextuelle.html">Recherche contextuelle depuis le LRM</a>
       </li>
       <li>
         <a href="specifications_techniques-transmission-info-RDV-LRM.html">Transmission des informations de rendez-vous aux LRM</a>
@@ -286,7 +289,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h4 id="quel-est-le-format-à-utiliser-afin-de-transmettre-un-oid-dans-un-élément-system-">Quel est le format à utiliser afin de transmettre un OID dans un élément <code class="language-plaintext highlighter-rouge">System</code> ?</h4>
 
-<p>L'OID doit être précédé du préfixe `urn:oid:`, comme dans l'exemple suivant : "system": "urn:oid:1.2.250.1.71.4.2.2".</p>
+<p>L'OID doit être précédé du préfixe "urn:oid:", comme dans l'exemple suivant : "system": "urn:oid:1.2.250.1.71.4.2.2".</p>
 <p>urn:oid:1.2.250.1.71.4.2.1 = IDNPS<br />
 urn:oid:1.2.250.1.71.4.2.2 = IDNST</p>
 
@@ -878,10 +881,10 @@ Dans la structure du fichier de réponse, si un créneau est associé à plusieu
 
 <p>L’exemple ci-dessous concerne la modification de l’identifiant du compte du régulateur Jules MARIUS, initialement associé à l’ID technique SAS <code class="language-plaintext highlighter-rouge">b6e39355-8a61-4556-b340-36f7b95fec6a</code>. La valorisation de l’élément <code class="language-plaintext highlighter-rouge">identifier.value</code> à <code class="language-plaintext highlighter-rouge">810002673899</code> indique le nouvel identifiant à prendre en compte.</p>
 
-<p><ins>Requête</ins>
+<p><span style="text-decoration: underline;">Requête</span>
 curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.213.3.6|b6e39355-8a61-4556-b340-36f7b95fec6a -H 'Accept: application/json+fhir' -d</p>
 
-<p><ins>Résultat</ins></p>
+<p><span style="text-decoration: underline;">Résultat</span></p>
 
 <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
   "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner">resourceType</a>" : "Practitioner",
@@ -931,10 +934,10 @@ curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.213.3.6|b6e3935
 
 <p>L’exemple ci-dessous concerne la désactivation du compte du régulateur Jules MARIUS. La valorisation de l’élément <code class="language-plaintext highlighter-rouge">active</code> à <code class="language-plaintext highlighter-rouge">false</code> indique que le compte doit être désactivé.</p>
 
-<p><ins>Requête</ins>
+<p><span style="text-decoration: underline;">Requête</span>
 curl -X PUT EDITEUR.fr/Practitioner?identifier=urn:oid:1.2.250.1.71.4.2.1|810002673899 -H 'Accept: application/json+fhir' -d</p>
 
-<p><ins>Résultat</ins></p>
+<p><span style="text-decoration: underline;">Résultat</span></p>
 
 <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
   "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner">resourceType</a>" : "Practitioner",
@@ -1045,8 +1048,8 @@ Cf. <a href="./specifications_techniques-tous-gestion_regulateur.html#r%C3%A8gle
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Package ans.fhir.fr.sas#1.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-08-20 07:20:00 +0000">
-    2026-08-20
+  <span title="2026-09-08 08:23:00 +0000">
+    2026-09-08
   </span>
 
           <br/>

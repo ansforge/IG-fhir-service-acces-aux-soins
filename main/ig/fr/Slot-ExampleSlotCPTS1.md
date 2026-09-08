@@ -12,7 +12,7 @@ Profil: [FrSlotAgregateurCPTS](StructureDefinition-sas-cpts-slot-aggregator.md)
 
 Label de sécurités: [Créneau accessible par le grand public (Détails : code TRE_R314_TypeCreneau PUBLIC = 'Créneau accessible par le grand public')](https://smt.esante.gouv.fr/fhir/ValueSet/TRE-R314-TypeCreneau), [Créneau accessible par les communautés professionnelles territoriales de santé (Détails : code TRE_R314_TypeCreneau CPTS = 'Créneau accessible par les communautés professionnelles territoriales de santé')](https://smt.esante.gouv.fr/fhir/ValueSet/TRE-R314-TypeCreneau)
 
-**serviceType**: ambulatory, Communauté Professionnelle Territoriale de Santé (CPTS), Visite de contrôle
+**serviceType**: ambulatory, 604, Visite de contrôle
 
 **specialty**: Médecine générale (SM)
 

@@ -11,7 +11,7 @@ Cette section regroupe les réponses aux questions les plus fréquemment posées
 
 #### Quel est le format à utiliser afin de transmettre un OID dans un élément System ?
 
-L'OID doit être précédé du préfixe `urn:oid:`, comme dans l'exemple suivant : "system": "urn:oid:1.2.250.1.71.4.2.2".
+L'OID doit être précédé du préfixe "urn:oid:", comme dans l'exemple suivant : "system": "urn:oid:1.2.250.1.71.4.2.2".
 
 urn:oid:1.2.250.1.71.4.2.1 = IDNPS
  urn:oid:1.2.250.1.71.4.2.2 = IDNST

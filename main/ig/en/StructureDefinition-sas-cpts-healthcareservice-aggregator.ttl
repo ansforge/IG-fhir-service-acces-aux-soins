@@ -17,7 +17,7 @@
   fhir:StructureDefinition.version [ fhir:value "1.2.0"] ;
   fhir:StructureDefinition.name [ fhir:value "FrHealthcareServiceAgregateurCPTS"] ;
   fhir:StructureDefinition.status [ fhir:value "active"] ;
-  fhir:StructureDefinition.date [ fhir:value "2026-08-20T07:20:42+00:00"^^xsd:dateTime] ;
+  fhir:StructureDefinition.date [ fhir:value "2026-09-08T08:23:10+00:00"^^xsd:dateTime] ;
   fhir:StructureDefinition.publisher [ fhir:value "ANS"] ;
   fhir:StructureDefinition.contact [
      fhir:index -1 ;
@@ -1106,8 +1106,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "start.hasValue().not() or end.hasValue().not() or (start <= end)" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Identifier" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Identifier>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Address" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Address>
          ]
        ] ;
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
@@ -1182,8 +1182,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Slot" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Slot>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/MedicationAdministration" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/MedicationAdministration>
          ]
        ] ;
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
@@ -1305,8 +1305,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Slot" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Slot>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/MedicationAdministration" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/MedicationAdministration>
          ]
        ] ;
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ] ;
@@ -1589,8 +1589,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Slot" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Slot>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/MedicationAdministration" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/MedicationAdministration>
          ]
        ] ;
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
@@ -1783,8 +1783,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "data.empty() or contentType.exists()" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "not(exists(f:data)) or exists(f:contentType)" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Patient" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Patient>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Practitioner" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Practitioner>
          ]
        ] ;
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
@@ -1851,8 +1851,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "value.empty() or system.exists()" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "not(exists(f:value)) or exists(f:system)" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Organization" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Organization>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Practitioner" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Practitioner>
          ]
        ] ;
        fhir:ElementDefinition.mapping [
@@ -1922,8 +1922,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Slot" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Slot>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/MedicationAdministration" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/MedicationAdministration>
          ]
        ] ;
        fhir:ElementDefinition.mapping [
@@ -3348,8 +3348,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "start.hasValue().not() or end.hasValue().not() or (start <= end)" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Identifier" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Identifier>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Address" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Address>
          ]
        ] ;
        fhir:ElementDefinition.mapping [
@@ -3458,8 +3458,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Slot" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Slot>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/MedicationAdministration" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/MedicationAdministration>
          ]
        ] ;
        fhir:ElementDefinition.mapping [

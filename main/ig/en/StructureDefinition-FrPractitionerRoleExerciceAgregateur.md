@@ -32,7 +32,7 @@ Other representations of profile: [CSV](../StructureDefinition-FrPractitionerRol
   "version" : "1.2.0",
   "name" : "FrPractitionerRoleExerciceAgregateur",
   "status" : "active",
-  "date" : "2026-08-20T07:20:42+00:00",
+  "date" : "2026-09-08T08:23:10+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

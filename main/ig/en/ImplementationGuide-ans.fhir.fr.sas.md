@@ -14,7 +14,7 @@
   "name" : "SAS",
   "title" : "Service d'Accès aux Soins",
   "status" : "active",
-  "date" : "2026-08-20T07:20:42+00:00",
+  "date" : "2026-09-08T08:23:10+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -2001,7 +2001,7 @@
         "reference" : "SearchParameter/slot-sp-start"
       },
       "name" : "slot-sp-start",
-      "description" : "Paramètre de recherche date de début d'un créneau (date de début supérieure ou égale à <date1> et inférieure ou égale à <date2>)",
+      "description" : "Paramètre de recherche date de début d'un créneau (date de début supérieure ou égale à date1 et inférieure ou égale à date2)",
       "exampleBoolean" : false
     },
     {
@@ -2194,6 +2194,15 @@
         }],
         "nameUrl" : "specifications_techniques-sos-recherche_creneaux.html",
         "title" : "SOS Médecins - Recherche des créneaux",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "specifications_techniques_recherche_contextuelle.html"
+        }],
+        "nameUrl" : "specifications_techniques_recherche_contextuelle.html",
+        "title" : "Recherche contextuelle depuis le LRM",
         "generation" : "markdown"
       },
       {

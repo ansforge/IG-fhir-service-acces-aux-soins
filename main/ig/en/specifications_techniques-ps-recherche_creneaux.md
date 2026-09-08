@@ -22,12 +22,10 @@ Cette requête s'appuie sur le flux 3A du volet d'agenda partagé du [CI-SIS vol
 
 | | |
 | :--- | :--- |
-| **Interaction FHIR** | Search[[1]](#_ftn1) |
+| **Interaction FHIR** | Search |
 | **Méthode http associée** | GET |
 | **Ressource recherchée** | Slot |
 | **Construction requête de base** | `GET[base]/Slot{?[parameters]{&_format=[mime-type]}}` |
-
-[[1]](#_ftnref1) [https://www.hl7.org/fhir/http.html#search](https://www.hl7.org/fhir/http.html#search) et [https://www.hl7.org/fhir/http.html#general](https://www.hl7.org/fhir/http.html#general)
 
 ### Construction de la réponse de base
 
