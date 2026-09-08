@@ -37,7 +37,7 @@ Cette requête s'appuie sur le flux 3A du volet d'agenda partagé du [CI-SIS vol
 <tbody>
 <tr>
   <td width="25%"><p><strong>Interaction FHIR</strong></p></td>
-  <td><p>Search<a href="#_ftn1" name="_ftnref1">[1]</a></p></td>
+  <td><p>Search<a href="https://www.hl7.org/fhir/http.html#search"></a></p></td>
 </tr>
 <tr>
   <td width="25%"><p><strong>Méthode http associée</strong></p></td>
@@ -53,7 +53,6 @@ Cette requête s'appuie sur le flux 3A du volet d'agenda partagé du [CI-SIS vol
 </tr>
 </tbody>
 </table>
-<p><a href="#_ftnref1" name="_ftn1">[1]</a> <a href="https://www.hl7.org/fhir/http.html#search">https://www.hl7.org/fhir/http.html#search</a> et <a href="https://www.hl7.org/fhir/http.html#general">https://www.hl7.org/fhir/http.html#general</a></p>
 
 ### Construction de la réponse de base
 Cette réponse s'appuie sur le flux 4A du volet d'agenda partagé du CI-SIS.
@@ -89,7 +88,7 @@ Si la recherche échoue, le serveur doit répondre :
 
 -   Un header avec un un code erreur HTTP 4XX ou 5XX
 
--   Un body contenant une ressource OperationOutcome[^3] qui donne les
+-   Un body contenant une ressource OperationOutcome qui donne les
     détails sur la raison de l'échec
 
 Remarque : l'échec d'une recherche est la non-possibilité d'exécuter la
@@ -219,7 +218,7 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
 - **URL de l’extension et référence à la ressource HealthcareService :**
   - Lorsque le créneau transmis est de type CPTS, les champs attendus pour faire référence au HealthcareService doivent être valorisés comme suit :
     - serviceType.extension.url : http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType
-    - serviceType.valueReference.reference : HealthcareService/<référence à la ressource HealthcareService associée>
+    - serviceType.valueReference.reference : `HealthcareService/<référence à la ressource HealthcareService associée>`
 - **URL de redirection pour la prise de RDV :**
   - Il est attendu l'URL de redirection vers l'agenda du PS concerné. Si l'utilisateur vient du SAS et n'est pas authentifié, il est demandé de le rediriger vers la page d'authentification de la solution éditeur avant d'accéder à l'agenda du PS. Afin de faciliter l'implémentation de la règle métier, la PTF numérique SAS ajoute un paramètre `origin` à l'URL transmise par l'éditeur au moment de la redirection pour identifier la provenance.
 - **Créneau avec ou sans RDV :**

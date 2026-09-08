@@ -21,7 +21,7 @@ Plus d'informations sur la page dédiée de l'ANS : <https://esante.gouv.fr/doma
 
 ### Contexte technique
 L'objectif est de définir les profils qui doivent être implémentés par les éditeurs de solution de prise de rendez-vous en ligne pour exposer les créneaux disponibles et informer la plateforme des rendez-vous pris.
-Les opérations de la plateforme SAS sont réalisées au moyen d'API FHIR.
+Les échanges avec la plateforme SAS sont principalement réalisés au moyen d'APIs FHIR.
 
 Les flux s'appuie sur le volet Gestion d'agendas Partagés du CI-SIS (GAP). <https://esante.gouv.fr/volet-gestion-dagendas-partages>
 
@@ -96,10 +96,11 @@ La fludification du parcours régulateurs inclut les éléments suivants :
    - [Délégation d'authentification-SSO](./specifications_techniques_tous_sso.html)
    - [Gestion de rendez-vous](./specifications_techniques_tous_RDV_V3.html)
 
-#### Transmission des informations de RDV aux LRM
-
-1. [Spécifications fonctionnelles](./specifications_fonctionnelles.html#transmission-des-informations-de-rdv-aux-lrm)
-2. [Spécifications techniques](./specifications_techniques-transmission-info-RDV-LRM.html)
+#### Fluidification du parcours du régulateur - échanges avec les LRM
+1. [Spécifications recherche contextualisée depuis le LRM](https://industriels.esante.gouv.fr/sites/default/files/media/document/SAS_SPEC_INT_L01_Recherche-contextualisee_20230504_V1.3.pdf)
+2. Transmission des informations de RDV aux LRM
+   - [Spécifications fonctionnelles](./specifications_fonctionnelles.html#transmission-des-informations-de-rdv-aux-lrm)
+   - [Spécifications techniques](./specifications_techniques-transmission-info-RDV-LRM.html)
 
 ### Dépendances
  
