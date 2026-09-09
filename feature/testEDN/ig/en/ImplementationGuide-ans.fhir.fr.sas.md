@@ -14,7 +14,7 @@
   "name" : "SAS",
   "title" : "Service d'Accès aux Soins",
   "status" : "active",
-  "date" : "2026-09-09T14:33:52+00:00",
+  "date" : "2026-09-09T14:45:19+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
