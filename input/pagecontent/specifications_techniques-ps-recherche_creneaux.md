@@ -225,7 +225,7 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
     - PRO – Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible à l'ensemble des PS
     - SNP – Créneau de soins défini par un professionnel de santé ou son délégataire dans son logiciel de prise de RDV accessible par les Régulateurs et OSNP
 - **Type de consultation :**
-  - L'utilisation de la nomenclature standard ActEncounterCode (<https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html>) est attendue. Cette nomenclature contient différentes notions, cependant, la plateforme numérique SAS gère les 3 types de créneaux ci-dessous. A noter qu'un créneau peut porter une combinaison de ces valeurs :
+  - L'utilisation de la nomenclature standard ActEncounterCode (<https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html>) est attendue. Cette nomenclature contient différentes notions, cependant, la plateforme numérique SAS gère les 3 types de créneaux ci-dessous. A noter qu'un créneau peut porter une combinaison de valeurs : 
     - AMB – Consultation au cabinet
     - HH – Consultation à domicile
     - VR – Téléconsultation
@@ -253,8 +253,8 @@ une heure par la plateforme numérique SAS :
   </tr>
   <tr>
     <td>Appels max / heure</td>
-    <td><center>500</td>
-    <td><center>3000</td>
+    <td><center>500</center></td>
+    <td><center>3000</center></td>
  </table>
 
 *Il s’agit d’estimations et ce nombre pourrait être dépassé en cas de pic de charge.*
