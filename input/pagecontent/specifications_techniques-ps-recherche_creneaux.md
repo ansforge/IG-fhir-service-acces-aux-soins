@@ -20,6 +20,9 @@ Cette requête s'appuie sur le flux 3A du volet d'agenda partagé du [CI-SIS vol
   <td width="25%"><p><strong>Version FHIR</strong></p></td>
   <td><p>4.0.1</p></td>
 </tr>
+</tbody>
+</table>
+
 
 ###  Construction de la requête de base
 
