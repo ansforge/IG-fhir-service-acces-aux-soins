@@ -14,7 +14,7 @@
   "name" : "SAS",
   "title" : "Service d'Accès aux Soins",
   "status" : "active",
-  "date" : "2026-09-09T13:38:12+00:00",
+  "date" : "2026-09-09T14:33:52+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -2163,6 +2163,15 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "specifications_techniques-sos-recherche_creneaux.html"
+        }],
+        "nameUrl" : "specifications_techniques-sos-recherche_creneaux.html",
+        "title" : "SOS Médecins - Recherche des créneaux",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
           "valueUrl" : "specifications_techniques-tous-gestion_regulateur.html"
         }],
         "nameUrl" : "specifications_techniques-tous-gestion_regulateur.html",
@@ -2186,15 +2195,6 @@
         "nameUrl" : "specifications_techniques_tous_RDV_V3.html",
         "title" : "Récupération des données du RDV pris",
         "generation" : "html"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "specifications_techniques-sos-recherche_creneaux.html"
-        }],
-        "nameUrl" : "specifications_techniques-sos-recherche_creneaux.html",
-        "title" : "SOS Médecins - Recherche des créneaux",
-        "generation" : "markdown"
       },
       {
         "extension" : [{

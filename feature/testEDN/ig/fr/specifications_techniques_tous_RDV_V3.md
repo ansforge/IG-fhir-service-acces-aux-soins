@@ -11,7 +11,6 @@
 | **Encodage** | UTF-8 |
 | **Version FHIR** | 4.0.1 |
 | **Version package** |   |
-| **Publication** |   |
 
 ### Création de rendez-vous
 
