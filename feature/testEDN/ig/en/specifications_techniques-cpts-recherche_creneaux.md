@@ -22,12 +22,10 @@ Cette requête s'appuie sur le flux 3A du volet d'agenda partagé du [CI-SIS vol
 
 | | |
 | :--- | :--- |
-| **Interaction FHIR** | Search[[1]](#_ftn1) |
+| **Interaction FHIR** | Search |
 | **Méthode http associée** | GET |
 | **Ressource recherchée** | Slot |
 | **Construction requête de base** | `GET[base]/Slot{?[parameters]{&_format=[mime-type]}}` |
-
-[[1]](#_ftnref1) [https://www.hl7.org/fhir/http.html#search](https://www.hl7.org/fhir/http.html#search) et [https://www.hl7.org/fhir/http.html#general](https://www.hl7.org/fhir/http.html#general)
 
 ### Construction de la réponse de base
 
@@ -53,7 +51,7 @@ Lien vers la spécification FHIR : [https://www.hl7.org/fhir/operationoutcome.h
 Si la recherche échoue, le serveur doit répondre :
 
 * Un header avec un un code erreur HTTP 4XX ou 5XX
-* Un body contenant une ressource OperationOutcome[^3] qui donne les détails sur la raison de l'échec
+* Un body contenant une ressource OperationOutcome qui donne les détails sur la raison de l'échec
 
 Remarque : l'échec d'une recherche est la non-possibilité d'exécuter la requête, ce qui est différent d'aucune correspondance à la recherche. Plus de précision sur la spécification FHIR : [https://www.hl7.org/fhir/http.html](https://www.hl7.org/fhir/http.html)
 
@@ -136,7 +134,7 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
 * **URL de l’extension et référence à la ressource HealthcareService :** 
 * Lorsque le créneau transmis est de type CPTS, les champs attendus pour faire référence au HealthcareService doivent être valorisés comme suit : 
 * serviceType.extension.url : http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType
-* serviceType.valueReference.reference : HealthcareService/
+* serviceType.valueReference.reference : `HealthcareService/<référence à la ressource HealthcareService associée>`
  
  
 * **URL de redirection pour la prise de RDV :** 

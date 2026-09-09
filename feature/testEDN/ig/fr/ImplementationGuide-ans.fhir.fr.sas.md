@@ -14,7 +14,7 @@
   "name" : "SAS",
   "title" : "Service d'Accès aux Soins",
   "status" : "active",
-  "date" : "2026-07-28T14:17:02+00:00",
+  "date" : "2026-09-09T13:38:12+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -151,7 +151,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "path-liquid"
+        "valueString" : "path-liquid-template"
       },
       {
         "url" : "value",
@@ -162,7 +162,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "path-liquid"
+        "valueString" : "path-liquid-template"
       },
       {
         "url" : "value",
@@ -480,7 +480,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueCode" : "path-liquid"
+        "valueCode" : "path-liquid-template"
       },
       {
         "url" : "value",
@@ -491,7 +491,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueCode" : "path-liquid"
+        "valueCode" : "path-liquid-template"
       },
       {
         "url" : "value",
@@ -2001,7 +2001,7 @@
         "reference" : "SearchParameter/slot-sp-start"
       },
       "name" : "slot-sp-start",
-      "description" : "Paramètre de recherche date de début d'un créneau (date de début supérieure ou égale à <date1> et inférieure ou égale à <date2>)",
+      "description" : "Paramètre de recherche date de début d'un créneau (date de début supérieure ou égale à date1 et inférieure ou égale à date2)",
       "exampleBoolean" : false
     },
     {
@@ -2172,6 +2172,15 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "specifications_techniques_tous_sso.html"
+        }],
+        "nameUrl" : "specifications_techniques_tous_sso.html",
+        "title" : "Délégation d'authentification-sso",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
           "valueUrl" : "specifications_techniques_tous_RDV_V3.html"
         }],
         "nameUrl" : "specifications_techniques_tous_RDV_V3.html",
@@ -2185,6 +2194,15 @@
         }],
         "nameUrl" : "specifications_techniques-sos-recherche_creneaux.html",
         "title" : "SOS Médecins - Recherche des créneaux",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "specifications_techniques_recherche_contextuelle.html"
+        }],
+        "nameUrl" : "specifications_techniques_recherche_contextuelle.html",
+        "title" : "Recherche contextuelle depuis le LRM",
         "generation" : "markdown"
       },
       {

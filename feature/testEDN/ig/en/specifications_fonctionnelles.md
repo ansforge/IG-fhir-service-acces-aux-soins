@@ -5,13 +5,13 @@
  
 There is no translation page available for the current page, so it has been rendered in the default language 
 
-Le Service d'accès aux soins a pour objectif de faciliter l’orientation des patients vers des médecins effecteurs en ville lorsque leur situation ne relève pas d’une urgence médicale. La plateforme numérique SAS, qui s’inscrit dans le cadre du programme SAS, s’appuie sur un agrégateur de disponibilités des professionnels de santé issues de leurs outils sans s’y substituer et a pour enjeu de fluidifier le parcours de prise de RDV pour les régulateurs.
+Le Service d'accès aux soins a pour objectif de faciliter l’orientation des patients vers des médecins effecteurs en ville lorsque leur situation ne relève pas d’une urgence médicale vitale. La plateforme numérique SAS, qui s’inscrit dans le cadre du programme SAS, s’appuie sur un agrégateur de disponibilités des professionnels de santé issues de leurs outils sans s’y substituer et a pour enjeu de fluidifier le parcours de prise de RDV pour les régulateurs.
 
 Une première interface, nommée « appel contextuel », permet le lancement d’une recherche d’offre de soins depuis le logiciel de régulation médicale (LRM) dans la plateforme numérique SAS. Cette fonctionnalité, mise en place avec le flux **INT_L01**, cf. [spécifications détaillées](https://industriels.esante.gouv.fr/sites/default/files/media/document/SAS_SPEC_INT_L01_Recherche-contextualisee_20230504_V1.3.pdf), recouvre la syntaxe de l’appel contextuel et la définition des données à transmettre du LRM à la plateforme numérique SAS.
 
 Après avoir effectué une recherche d’offre de soins dans la plateforme numérique SAS, le régulateur sélectionne un créneau de disponibilité et est redirigé vers la plateforme de prise de RDV éditeur sans avoir à se réauthentifier, si ce créneau remonte d’une solution éditeur. Dans la solution éditeur, le régulateur va pouvoir finaliser la prise de RDV pour le compte du patient.
 
-Le régulateur peut également prendre un RDV sur les disponibilités renseignées manuellement dans la plateforme numérique SAS par les effecteurs de soins au sein de l’agenda SAS ou effectuer une recherche d’offre de soins complémentaires incluant la possibilité de contacter les professionnels de santé acceptant de prendre en charge des patients « en sus de leurs disponibilités » et la possibilité de solliciter une communauté de professionnels de santé pour la prise en charge du patient via une solution éditeur interfacée offrant un service de type « Place de marché ».
+Le régulateur peut également prendre un RDV sur les disponibilités renseignées manuellement dans la plateforme numérique SAS par les effecteurs de soins au sein de l’agenda SAS ou effectuer une recherche d’offre de soins complémentaires incluant la possibilité de contacter les professionnels de santé acceptant de prendre en charge des patients « en sus de leurs disponibilités » et la possibilité de solliciter une communauté de professionnels de santé pour la prise en charge du patient via une solution éditeur interfacée offrant un service de type [« Place de marché »](./specifications_fonctionnelles.md#parcours-place-de-marché).
 
 Une fois la prise de RDV réalisée par le régulateur, les données associées au RDV pris pour le compte du patient sont remontées et enregistrées dans la plateforme numérique SAS.
 
@@ -48,7 +48,7 @@ Le schéma de présentation générale ci-dessous illustre ce cas d'usage :
 
 * **Présentation recherche de créneaux PS indiv. - CPTS **: ![](recherche_creneaux_1.png)
 
-Les créneaux de disponibilités sont renseignés par les professionnels effecteurs de soins ou délégataires dans leur solution logicielle d'agenda. Le flux décrit ci-dessous permet de récupérer et d'afficher dans la plateforme numérique SAS les créneaux selon les modalités définies lors des Groupes de Travail en bilatérales avec l'ANS. Lors d'une recherche d'offre de soins sur la plateforme numérique SAS, le moteur de recherche va s'appuyer sur les référentiels nationaux pour identifier l'offre correspondant aux critères de recherche. Une **liste de 1 à 25 RPPS/ADELI** est envoyée aux solutions logicielles éditeurs pour identifier les créneaux de disponibilités des professionnels de santé (PS) correspondants. Les types de créneaux remontés dans la plateforme sont :
+Les créneaux de disponibilités sont renseignés par les professionnels effecteurs de soins ou délégataires dans leur solution logicielle d'agenda. Le flux décrit ci-dessous permet de récupérer et d'afficher dans la plateforme numérique SAS les créneaux selon les modalités définies lors des Groupes de Travail en bilatérales avec l'ANS. Lors d'une recherche d'offre de soins sur la plateforme numérique SAS, le moteur de recherche va s'appuyer sur les référentiels nationaux pour identifier l'offre correspondant aux critères de recherche. Une **liste de 1 à 25 RPPS** est envoyée aux solutions logicielles éditeurs pour identifier les créneaux de disponibilités des professionnels de santé (PS) correspondants. Les types de créneaux remontés dans la plateforme sont :
 
 * Les créneaux visibles du grand public hors ceux réservés pour la patientèle
 * Les créneaux visibles des professionnels de santé hors ceux de structures
@@ -83,15 +83,48 @@ La structure de réponse attendue inclut l’ensemble des créneaux de disponibi
 
 Dans le cas où un créneau CPTS est transmis, la transmission de l’information sur le type de créneau « CPTS » est attendu ainsi que les données de la structure CPTS associée. Au niveau de la structure de réponse, 1 à n créneaux de consultation CPTS (Slot) peuvent être rattachés à 1 ou n prestations de soins (FrHealthcareService) qui sont chacun rattachées à 1 structure CPTS (FrOrganization). Pour le reste de la structure de réponse, celle -ci reste identique à ce qui a été présenté précédemment.
 
-Le schéma ci-dessous présente une synthèse de la structure attendue :
+Le schéma ci-dessous présente une synthèse de la structure attendue, avec les liens vers les ressources de conformité correspondantes :
 
 
 ##### SOS Médecins
 
 La structure de réponse attendue inclut l’ensemble des créneaux de consultation disponibles correspondant à la requête réalisée par la plateforme numérique SAS. 1 à n créneaux de consultation (Slot) peuvent être rattachés à 1 agenda (Schedule) qui représente 1 lieu fixe de consultation (Location), lui-même rattaché à 1 association SOS Médecins (Organization). Si des créneaux de consultation sont proposés pour plusieurs LFC, on aura autant d’agendas (Schedule) que de LFC (Location).
 
-Le schéma ci-dessous présente une synthèse de la structure attendue :
+Le schéma ci-dessous présente une synthèse de la structure attendue, avec les liens vers les ressources de conformité correspondantes :
 
+
+### Parcours Place de Marché
+
+##### Lien de redirection vers la solution logicielle éditeur
+
+Lors d’une recherche dans la plateforme numérique SAS, dans le cas où le régulateur ne trouve pas d’offre de soins adaptée pour le patient, il a la possibilité d’effectuer une recherche d’offre de soins complémentaire, dite en surnuméraire incluant :
+
+* Les dispositifs acceptant de prendre en charge des patients en sus des disponibilités
+* Des liens de redirection vers les solutions éditeurs offrant un **service type « Place de marché »**
+
+Le régulateur peut notamment visualiser les offreurs de soins (type « Place de Marché ») directement dans la plateforme numérique SAS.
+
+* **Demande de prise en charge**: ![](PlaceDeMarche.png)
+
+Au **clic sur le bouton de redirection**, le régulateur est redirigé dans la solution logicielle éditeur correspondante pour pouvoir réaliser une demande de prise en charge pour le compte du patient.
+
+**L’éditeur transmet l’URL de redirection** vers sa solution logicielle en amont à la plateforme numérique SAS. Il est attendu que cette URL permette de rediriger le régulateur vers la page d’authentification. Après connexion (via sso depuis la plateforme SAS), le régulateur est ensuite redirigé sur la page permettant de réaliser une demande de prise en charge.
+
+##### Parcours du régulateur dans la solution éditeur
+
+###### Prérequis relatifs au parcours de prise de RDV
+
+**L’ANS et l’éditeur conviendront, lors de l’atelier de cadrage, du caractère des données (requis, optionnel) à renseigner dans la solution éditeur pour que le régulateur puisse réaliser une demande de prise en charge pour le compte du patient**. Les spécificités éditeurs identifiées seront adressées et gérées lors de cet atelier. L’objectif est ainsi de permettre la validation du processus de bout en bout et d’uniformiser le parcours pour le régulateur au sein des différentes solutions logicielles éditeur.
+
+A la suite de la demande de prise en charge, lorsque l’un des PS de la communauté notifiée accepte la demande, il est attendu qu’un **SMS de confirmation soit envoyé au patient** avec les informations du rendez-vous associé.
+
+###### Flux de prise de rendez-vous
+
+Ce cas d'usage nécessite la mise en oeuvre des troix flux de prise de rendez-vous décrits ci-après dans la page :
+
+* Gestion des comptes régulateurs
+* Délégation d'authentification (sso)
+* Gestion des informations de rendez-vous
 
 ### Gestion des comptes régulateurs
 

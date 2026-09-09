@@ -48,8 +48,8 @@
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"7"}
-    h3,h4,h5,h6{--heading-prefix:"7"}</style>
+    <style type="text/css">h2{--heading-prefix:"8"}
+    h3,h4,h5,h6{--heading-prefix:"8"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -133,10 +133,16 @@
         <a href="specifications_techniques-tous-gestion_regulateur.html">Gestion des comptes régulateurs</a>
       </li>
       <li>
+        <a href="specifications_techniques_tous_sso.html">Délégation d&apos;authentification-sso</a>
+      </li>
+      <li>
         <a href="specifications_techniques_tous_RDV_V3.html">Récupération des données du RDV pris</a>
       </li>
       <li>
         ________ Fluidification parcours régulateur ________
+      </li>
+      <li>
+        <a href="specifications_techniques_recherche_contextuelle.html">Recherche contextuelle depuis le LRM</a>
       </li>
       <li>
         <a href="specifications_techniques-transmission-info-RDV-LRM.html">Transmission des informations de rendez-vous aux LRM</a>
@@ -221,7 +227,7 @@
 
             <a href="#bottom">bottom</a>
 
-          | <a href="specifications_techniques-transmission-info-RDV-LRM.html">next &gt;</a>
+          | <a href="specifications_techniques_recherche_contextuelle.html">next &gt;</a>
 
           </span>
 
@@ -318,7 +324,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <tbody>
 <tr>
   <td width="25%"><p><strong>Interaction FHIR</strong></p></td>
-  <td><p>Search<a href="#_ftn1" name="_ftnref1">[1]</a></p></td>
+  <td><p>Search<a href="https://www.hl7.org/fhir/http.html#search"></a></p></td>
 </tr>
 <tr>
   <td width="25%"><p><strong>Méthode http associée</strong></p></td>
@@ -334,7 +340,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </tr>
 </tbody>
 </table>
-<p><a href="#_ftnref1" name="_ftn1">[1]</a> <a href="https://www.hl7.org/fhir/http.html#search">https://www.hl7.org/fhir/http.html#search</a> et <a href="https://www.hl7.org/fhir/http.html#general">https://www.hl7.org/fhir/http.html#general</a></p>
 
 <h3 id="construction-de-la-réponse-de-base">Construction de la réponse de base</h3>
 <p>Cette réponse s'appuie sur le flux 4A du volet d'agenda partagé du CI-SIS.</p>
@@ -674,7 +679,7 @@ Seuls les créneaux avec prise de RDV <code class="language-plaintext highlighte
               </td>
               <td style="text-align:var(--ig-right);">&#xA0;
 
-                <a href="specifications_techniques-transmission-info-RDV-LRM.html">next ></a>
+                <a href="specifications_techniques_recherche_contextuelle.html">next ></a>
 
               </td>
             </tr>
@@ -690,8 +695,8 @@ Seuls les créneaux avec prise de RDV <code class="language-plaintext highlighte
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Package ans.fhir.fr.sas#1.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-07-28 14:17:00 +0000">
-    2026-07-28
+  <span title="2026-09-09 13:38:00 +0000">
+    2026-09-09
   </span>
 
           <br/>

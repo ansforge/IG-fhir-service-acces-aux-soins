@@ -22,12 +22,10 @@ There is no translation page available for the current page, so it has been rend
 
 | | |
 | :--- | :--- |
-| **Interaction FHIR** | Create[[1] ](#_ftn1) |
+| **Interaction FHIR** | Create |
 | **Méthode http associée** | POST |
 | **Ressource créée** | Appointment |
 | **Construction requête de base** | `POST[base]/Appointment{?_format=[mime-type]}` |
-
-[[1] ](#_ftnref1) [https://www.hl7.org/fhir/http.html#create](https://www.hl7.org/fhir/http.html#create) et [https://www.hl7.org/fhir/http.html#general](https://www.hl7.org/fhir/http.html#general)
 
 #### Construction de la réponse de base
 
@@ -49,7 +47,7 @@ Lien vers la spécification FHIR : [https://www.hl7.org/fhir/operationoutcome.ht
 Si la recherche échoue, le serveur doit répondre :
 
 * Un header avec un un code erreur HTTP 4XX ou 5XX
-* Un body contenant une ressource OperationOutcome[^3] qui donne les détails sur la raison de l'échec
+* Un body contenant une ressource OperationOutcome qui donne les détails sur la raison de l'échec
 
 À titre d'information, les codes erreurs classiques sont les suivants :
 
@@ -92,12 +90,10 @@ Ci-dessous des exemples de requêtes pour la création de rendez-vous par cas d'
 
 | | |
 | :--- | :--- |
-| **Interaction FHIR** | Conditional update[[1] ](#_ftn1) |
+| **Interaction FHIR** | Conditional update |
 | **Méthode http associée** | PUT |
 | **Ressource créée** | Appointment |
 | **Construction requête de base** | `PUT[base]/Appointment?Identifier=[ID]{&_format=[mime-type]}` |
-
-[[1] ](#_ftnref1) [https://www.hl7.org/fhir/http.html#cond-update](https://www.hl7.org/fhir/http.html#cond-update) et [https://www.hl7.org/fhir/http.html#general](https://www.hl7.org/fhir/http.html#general)
 
 #### Construction de la réponse de base
 
@@ -169,15 +165,15 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
  
 * **Identification du régulateur ayant pris le RDV pour le patient :** 
 * Il s'agit de l'identifiant communiqué par la plateforme numérique SAS dans l'interface INT_R02 "Gestion des comptes régulateurs". Deux combinaisons sont possibles pour ces trois champs selon que le régulateur possède ou non un identifiant national. 
-* Lorsque le régulateur a un identifiant national, les différents champs seront valorisés comme suit (1) : 
-* Valeur de l'identifiant (ID 4) : Identifiant national avec préfixe ;
-* Autorité d'affectation (ID 5) : urn:oid:1.2.250.1.71.4.2.1 ;
-* Type d'identifiant (ID 6) : le champ `type.coding.code` est valorisé à `IDNPS` et `type.coding.system` à `http://interopsante.org/fhir/CodeSystem/fr-v2-0203`.
+* Lorsque le régulateur a un identifiant national, les différents champs seront valorisés comme suit : 
+* Valeur de l'identifiant : Identifiant national avec préfixe ;
+* Autorité d'affectation : urn:oid:1.2.250.1.71.4.2.1 ;
+* Type d'identifiant : le champ `type.coding.code` est valorisé à `IDNPS` et `type.coding.system` à `http://interopsante.org/fhir/CodeSystem/fr-v2-0203`.
  
 * Lorsque le régulateur n'a pas d’identifiant national, nous utiliserons un ID technique SAS, les différents champs seront valorisés comme suit : 
-* Valeur de l'identifiant (ID 4) : Identifiant technique SAS avec un format de type UUID ;
-* Autorité d'affectation (ID 5) : urn:oid:1.2.250.1.213.3.6 ;
-* Type d'identifiant (ID 6) : le champ type.coding.code est valorisé à `INTRN` et `type.coding.system` à `http://interopsante.org/fhir/CodeSystem/fr-v2-0203`.
+* Valeur de l'identifiant : Identifiant technique SAS avec un format de type UUID ;
+* Autorité d'affectation : urn:oid:1.2.250.1.213.3.6 ;
+* Type d'identifiant : le champ type.coding.code est valorisé à `INTRN` et `type.coding.system` à `http://interopsante.org/fhir/CodeSystem/fr-v2-0203`.
  
  
 * **Statut du RDV :** 
@@ -190,10 +186,10 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
  
  
 * **Identification du PS effecteur de soins :** 
-* Les champs attendus doivent être valorisés comme suit (1) : 
-* Valeur de l'identifiant (ID 10) : RPPS avec préfixe "8" ou ADELI avec préfixe "0"
-* Autorité d'affectation (ID 11) : urn:oid:1.2.250.1.71.4.2.1
-* Type d'identifiant (ID 12) : le champ `type.coding.code` est valorisé à `IDNPS` et `type.coding.system` à `http://interopsante.org/fhir/CodeSystem/fr-v2-0203`
+* Les champs attendus doivent être valorisés comme suit : 
+* Valeur de l'identifiant : RPPS avec préfixe "8"
+* Autorité d'affectation : urn:oid:1.2.250.1.71.4.2.1
+* Type d'identifiant : le champ `type.coding.code` est valorisé à `IDNPS` et `type.coding.system` à `http://interopsante.org/fhir/CodeSystem/fr-v2-0203`
  
  
 * **Statut d’acceptation du RDV par le PS effecteur de soins :** 
@@ -211,15 +207,15 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
  
 * **Identification du régulateur ayant pris le RDV pour le patient :** 
 * Il s'agit de l'identifiant communiqué par la plateforme numérique SAS dans l'interface INT_R02 "Gestion des comptes régulateurs". Deux combinaisons sont possibles pour ces trois champs selon que le régulateur possède ou non un identifiant national. 
-* Lorsque le régulateur a un identifiant national, les différents champs seront valorisés comme suit (1) : 
-* Valeur de l'identifiant (ID 4) : Identifiant national avec préfixe ;
-* Autorité d'affectation (ID 5) : urn:oid:1.2.250.1.71.4.2.1 ;
-* Type d'identifiant (ID 6) : le champ `type.coding.code` est valorisé à `IDNPS` et `type.coding.system` à `http://interopsante.org/fhir/CodeSystem/fr-v2-0203`.
+* Lorsque le régulateur a un identifiant national, les différents champs seront valorisés comme suit : 
+* Valeur de l'identifiant : Identifiant national avec préfixe ;
+* Autorité d'affectation : urn:oid:1.2.250.1.71.4.2.1 ;
+* Type d'identifiant : le champ `type.coding.code` est valorisé à `IDNPS` et `type.coding.system` à `http://interopsante.org/fhir/CodeSystem/fr-v2-0203`.
  
 * Lorsque le régulateur n'a pas d’identifiant national, nous utiliserons un ID technique SAS, les différents champs seront valorisés comme suit : 
-* Valeur de l'identifiant (ID 4) : Identifiant technique SAS avec un format de type UUID ;
-* Autorité d'affectation (ID 5) : urn:oid:1.2.250.1.213.3.6 ;
-* Type d'identifiant (ID 6) : le champ type.coding.code est valorisé à `INTRN` et `type.coding.system` à `http://interopsante.org/fhir/CodeSystem/fr-v2-0203`.
+* Valeur de l'identifiant : Identifiant technique SAS avec un format de type UUID ;
+* Autorité d'affectation : urn:oid:1.2.250.1.213.3.6 ;
+* Type d'identifiant : le champ type.coding.code est valorisé à `INTRN` et `type.coding.system` à `http://interopsante.org/fhir/CodeSystem/fr-v2-0203`.
  
  
 * **Statut du RDV :** 
@@ -232,10 +228,10 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
  
  
 * **Identification du PS effecteur de soins :** 
-* Les champs attendus doivent être valorisés comme suit (1) : 
-* Valeur de l'identifiant (ID 10) : RPPS avec préfixe "8" ou ADELI avec préfixe "0"
-* Autorité d'affectation (ID 11) : urn:oid:1.2.250.1.71.4.2.1
-* Type d'identifiant (ID 12) : le champ `type.coding.code` est valorisé à `IDNPS` et `type.coding.system` à `http://interopsante.org/fhir/CodeSystem/fr-v2-0203`
+* Les champs attendus doivent être valorisés comme suit : 
+* Valeur de l'identifiant : RPPS avec préfixe "8"
+* Autorité d'affectation : urn:oid:1.2.250.1.71.4.2.1
+* Type d'identifiant : le champ `type.coding.code` est valorisé à `IDNPS` et `type.coding.system` à `http://interopsante.org/fhir/CodeSystem/fr-v2-0203`
  
  
 * **Statut d’acceptation du RDV par le PS effecteur de soins :** 
@@ -253,15 +249,15 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
  
 * **Identification du régulateur ayant pris le RDV pour le patient :** 
 * Il s'agit de l'identifiant communiqué par la plateforme numérique SAS dans l'interface INT_R02 "Gestion des comptes régulateurs". Deux combinaisons sont possibles pour ces trois champs selon que le régulateur possède ou non un identifiant national. 
-* Lorsque le régulateur a un identifiant national, les différents champs seront valorisés comme suit (1) : 
-* Valeur de l'identifiant (ID 4) : Identifiant national avec préfixe ;
-* Autorité d'affectation (ID 5) : urn:oid:1.2.250.1.71.4.2.1 ;
-* Type d'identifiant (ID 6) : le champ `type.coding.code` est valorisé à `IDNPS` et `type.coding.system` à `http://interopsante.org/fhir/CodeSystem/fr-v2-0203`.
+* Lorsque le régulateur a un identifiant national, les différents champs seront valorisés comme suit : 
+* Valeur de l'identifiant : Identifiant national avec préfixe ;
+* Autorité d'affectation : urn:oid:1.2.250.1.71.4.2.1 ;
+* Type d'identifiant : le champ `type.coding.code` est valorisé à `IDNPS` et `type.coding.system` à `http://interopsante.org/fhir/CodeSystem/fr-v2-0203`.
  
 * Lorsque le régulateur n'a pas d’identifiant national, nous utiliserons un ID technique SAS, les différents champs seront valorisés comme suit : 
-* Valeur de l'identifiant (ID 4) : Identifiant technique SAS avec un format de type UUID ;
-* Autorité d'affectation (ID 5) : urn:oid:1.2.250.1.213.3.6 ;
-* Type d'identifiant (ID 6) : le champ type.coding.code est valorisé à `INTRN` et `type.coding.system` à `http://interopsante.org/fhir/CodeSystem/fr-v2-0203`.
+* Valeur de l'identifiant : Identifiant technique SAS avec un format de type UUID ;
+* Autorité d'affectation : urn:oid:1.2.250.1.213.3.6 ;
+* Type d'identifiant : le champ type.coding.code est valorisé à `INTRN` et `type.coding.system` à `http://interopsante.org/fhir/CodeSystem/fr-v2-0203`.
  
  
 * **Statut du RDV :** 
@@ -274,10 +270,10 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
  
  
 * **Identification du PS effecteur de soins :** 
-* Les champs attendus doivent être valorisés comme suit (1) : 
-* Valeur de l'identifiant (ID 10) : RPPS avec préfixe "8" ou ADELI avec préfixe "0"
-* Autorité d'affectation (ID 11) : urn:oid:1.2.250.1.71.4.2.1
-* Type d'identifiant (ID 12) : le champ `type.coding.code` est valorisé à `IDNPS` et `type.coding.system` à `http://interopsante.org/fhir/CodeSystem/fr-v2-0203`
+* Les champs attendus doivent être valorisés comme suit : 
+* Valeur de l'identifiant : RPPS avec préfixe "8"
+* Autorité d'affectation : urn:oid:1.2.250.1.71.4.2.1
+* Type d'identifiant : le champ `type.coding.code` est valorisé à `IDNPS` et `type.coding.system` à `http://interopsante.org/fhir/CodeSystem/fr-v2-0203`
  
  
 * **Statut d’acceptation du RDV par le PS effecteur de soins :** 

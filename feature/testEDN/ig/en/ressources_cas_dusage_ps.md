@@ -10,7 +10,7 @@ Liste des ressources (profils, paramètres de recherche, terminologies, exemples
 | | | |
 | :--- | :--- | :--- |
 | Identifiant | Type | Description |
-| [slot-sp-start](SearchParameter-slot-sp-start.md) | SearchParameter | Paramètre de recherche date de début d'un créneau (date de début supérieure ou égale à <date1> et inférieure ou égale à <date2>) |
+| [slot-sp-start](SearchParameter-slot-sp-start.md) | SearchParameter | Paramètre de recherche date de début d'un créneau (date de début supérieure ou égale à date1 et inférieure ou égale à date2) |
 | [BundleAgregateur](StructureDefinition-BundleAgregateur.md) | StructureDefinition | Profil de Bundle qui représente le flux de réponse contenant les créneaux disponibles dans le cadre du service d'agrégation de créneaux de la plateforme SAS - Cas d'usage PS Indiv |
 | [FrAppointmentSAS](StructureDefinition-FrAppointmentSAS.md) | StructureDefinition | Profil de Appointment, dérivé de FrAppointment, pour le cas d'usage prise de RDV de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS |
 | [FrLocationAgregateur](StructureDefinition-FrLocationAgregateur.md) | StructureDefinition | Profil de Location, dérivé de FrLocation, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS |

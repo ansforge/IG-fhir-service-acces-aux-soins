@@ -50,8 +50,8 @@
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"11.23"}
-    h3,h4,h5,h6{--heading-prefix:"11.23"}</style>
+    <style type="text/css">h2{--heading-prefix:"13.23"}
+    h3,h4,h5,h6{--heading-prefix:"13.23"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -135,10 +135,16 @@
         <a href="specifications_techniques-tous-gestion_regulateur.html">Gestion des comptes régulateurs</a>
       </li>
       <li>
+        <a href="specifications_techniques_tous_sso.html">Délégation d&apos;authentification-sso</a>
+      </li>
+      <li>
         <a href="specifications_techniques_tous_RDV_V3.html">Récupération des données du RDV pris</a>
       </li>
       <li>
         ________ Fluidification parcours régulateur ________
+      </li>
+      <li>
+        <a href="specifications_techniques_recherche_contextuelle.html">Recherche contextuelle depuis le LRM</a>
       </li>
       <li>
         <a href="specifications_techniques-transmission-info-RDV-LRM.html">Transmission des informations de rendez-vous aux LRM</a>
@@ -356,7 +362,7 @@ FrPractitionerRegul
           
 
             as of 
-2026-07-28
+2026-09-09
 
           
         
@@ -662,7 +668,7 @@ Pour un employé identifié au sein de sa structure, OID de l'établissement, br
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Whether this practitioner's record is in active use</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 1cb7e3d7-1436-4508-9be4-36ed862abcfa
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 974e0825-6c59-4d7f-80c6-2025e1c80f21
 document.getElementById('cbFrPractitionerRegulK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('FrPractitionerRegulK'), 'binding', document.getElementById('cbFrPractitionerRegulK-binding').checked, document.getElementById('ppFrPractitionerRegulK'));
 document.getElementById('cbFrPractitionerRegulK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -996,7 +1002,7 @@ filterDesc(document.getElementById('FrPractitionerRegulK'), 'obligation', docume
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">1</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">phone | fax | email | pager | url | sms | other</span><br/><span style="font-weight:bold">Required Pattern: </span><span style="color: darkgreen">email</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 1cb7e3d7-1436-4508-9be4-36ed862abcfa
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 974e0825-6c59-4d7f-80c6-2025e1c80f21
 document.getElementById('cbFrPractitionerRegulD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('FrPractitionerRegulD'), 'binding', document.getElementById('cbFrPractitionerRegulD-binding').checked, document.getElementById('ppFrPractitionerRegulD'));
 document.getElementById('cbFrPractitionerRegulD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2181,7 +2187,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <table class="binding grid"><tr><td style="font-size: 11px"><b>Additional Bindings</b></td><td style="font-size: 11px">Purpose</td></tr>
 <tr><td style="font-size: 11px"><a href="http://hl7.org/fhir/R4/valueset-all-languages.html" title="http://hl7.org/fhir/ValueSet/all-languages">AllLanguages</a></td>
 <td style="font-size: 11px"><a href="http://hl7.org/fhir/R4/extension-elementdefinition-maxvalueset.html" title="A required binding, for use when the binding strength is 'extensible' or 'preferred'">Max Binding</a></td></tr></table><br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 1cb7e3d7-1436-4508-9be4-36ed862abcfa
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 974e0825-6c59-4d7f-80c6-2025e1c80f21
 document.getElementById('cbFrPractitionerRegulS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('FrPractitionerRegulS'), 'binding', document.getElementById('cbFrPractitionerRegulS-binding').checked, document.getElementById('ppFrPractitionerRegulS'));
 document.getElementById('cbFrPractitionerRegulS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2462,7 +2468,7 @@ filterDesc(document.getElementById('FrPractitionerRegulS'), 'obligation', docume
       <button data-clipboard-text="https://mos.esante.gouv.fr/NOS/JDV_J105-EnsembleDiplome-RASS/FHIR/JDV-J105-EnsembleDiplome-RASS" title="Click to copy URL" class="btn-copy"></button>
       <img src="external.png" alt="."/>
     </td>
-    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260223120000 has been used">⏿20260223120000</td>
+    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260730120000 has been used">⏿20260730120000</td>
     <td>
       <a href="https://smt.esante.gouv.fr/fhir">smt.esante.gouv.fr</a>
     </td>
@@ -2478,7 +2484,7 @@ filterDesc(document.getElementById('FrPractitionerRegulS'), 'obligation', docume
       <button data-clipboard-text="https://mos.esante.gouv.fr/NOS/JDV_J105-EnsembleDiplome-RASS/FHIR/JDV-J105-EnsembleDiplome-RASS" title="Click to copy URL" class="btn-copy"></button>
       <img src="external.png" alt="."/>
     </td>
-    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260223120000 has been used">⏿20260223120000</td>
+    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260730120000 has been used">⏿20260730120000</td>
     <td>
       <a href="https://smt.esante.gouv.fr/fhir">smt.esante.gouv.fr</a>
     </td>
@@ -2494,7 +2500,7 @@ filterDesc(document.getElementById('FrPractitionerRegulS'), 'obligation', docume
       <button data-clipboard-text="https://mos.esante.gouv.fr/NOS/JDV_J105-EnsembleDiplome-RASS/FHIR/JDV-J105-EnsembleDiplome-RASS" title="Click to copy URL" class="btn-copy"></button>
       <img src="external.png" alt="."/>
     </td>
-    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260223120000 has been used">⏿20260223120000</td>
+    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260730120000 has been used">⏿20260730120000</td>
     <td>
       <a href="https://smt.esante.gouv.fr/fhir">smt.esante.gouv.fr</a>
     </td>
@@ -2510,7 +2516,7 @@ filterDesc(document.getElementById('FrPractitionerRegulS'), 'obligation', docume
       <button data-clipboard-text="https://mos.esante.gouv.fr/NOS/JDV_J105-EnsembleDiplome-RASS/FHIR/JDV-J105-EnsembleDiplome-RASS" title="Click to copy URL" class="btn-copy"></button>
       <img src="external.png" alt="."/>
     </td>
-    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260223120000 has been used">⏿20260223120000</td>
+    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260730120000 has been used">⏿20260730120000</td>
     <td>
       <a href="https://smt.esante.gouv.fr/fhir">smt.esante.gouv.fr</a>
     </td>
@@ -2526,7 +2532,7 @@ filterDesc(document.getElementById('FrPractitionerRegulS'), 'obligation', docume
       <button data-clipboard-text="https://mos.esante.gouv.fr/NOS/JDV_J105-EnsembleDiplome-RASS/FHIR/JDV-J105-EnsembleDiplome-RASS" title="Click to copy URL" class="btn-copy"></button>
       <img src="external.png" alt="."/>
     </td>
-    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260223120000 has been used">⏿20260223120000</td>
+    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260730120000 has been used">⏿20260730120000</td>
     <td>
       <a href="https://smt.esante.gouv.fr/fhir">smt.esante.gouv.fr</a>
     </td>
@@ -2542,7 +2548,7 @@ filterDesc(document.getElementById('FrPractitionerRegulS'), 'obligation', docume
       <button data-clipboard-text="https://mos.esante.gouv.fr/NOS/JDV_J105-EnsembleDiplome-RASS/FHIR/JDV-J105-EnsembleDiplome-RASS" title="Click to copy URL" class="btn-copy"></button>
       <img src="external.png" alt="."/>
     </td>
-    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260223120000 has been used">⏿20260223120000</td>
+    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260730120000 has been used">⏿20260730120000</td>
     <td>
       <a href="https://smt.esante.gouv.fr/fhir">smt.esante.gouv.fr</a>
     </td>
@@ -2558,7 +2564,7 @@ filterDesc(document.getElementById('FrPractitionerRegulS'), 'obligation', docume
       <button data-clipboard-text="https://mos.esante.gouv.fr/NOS/JDV_J105-EnsembleDiplome-RASS/FHIR/JDV-J105-EnsembleDiplome-RASS" title="Click to copy URL" class="btn-copy"></button>
       <img src="external.png" alt="."/>
     </td>
-    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260223120000 has been used">⏿20260223120000</td>
+    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260730120000 has been used">⏿20260730120000</td>
     <td>
       <a href="https://smt.esante.gouv.fr/fhir">smt.esante.gouv.fr</a>
     </td>
@@ -2574,7 +2580,7 @@ filterDesc(document.getElementById('FrPractitionerRegulS'), 'obligation', docume
       <button data-clipboard-text="https://mos.esante.gouv.fr/NOS/JDV_J105-EnsembleDiplome-RASS/FHIR/JDV-J105-EnsembleDiplome-RASS" title="Click to copy URL" class="btn-copy"></button>
       <img src="external.png" alt="."/>
     </td>
-    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260223120000 has been used">⏿20260223120000</td>
+    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260730120000 has been used">⏿20260730120000</td>
     <td>
       <a href="https://smt.esante.gouv.fr/fhir">smt.esante.gouv.fr</a>
     </td>
@@ -2590,7 +2596,7 @@ filterDesc(document.getElementById('FrPractitionerRegulS'), 'obligation', docume
       <button data-clipboard-text="https://mos.esante.gouv.fr/NOS/JDV_J105-EnsembleDiplome-RASS/FHIR/JDV-J105-EnsembleDiplome-RASS" title="Click to copy URL" class="btn-copy"></button>
       <img src="external.png" alt="."/>
     </td>
-    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260223120000 has been used">⏿20260223120000</td>
+    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260730120000 has been used">⏿20260730120000</td>
     <td>
       <a href="https://smt.esante.gouv.fr/fhir">smt.esante.gouv.fr</a>
     </td>
@@ -2606,7 +2612,7 @@ filterDesc(document.getElementById('FrPractitionerRegulS'), 'obligation', docume
       <button data-clipboard-text="https://mos.esante.gouv.fr/NOS/JDV_J105-EnsembleDiplome-RASS/FHIR/JDV-J105-EnsembleDiplome-RASS" title="Click to copy URL" class="btn-copy"></button>
       <img src="external.png" alt="."/>
     </td>
-    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260223120000 has been used">⏿20260223120000</td>
+    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260730120000 has been used">⏿20260730120000</td>
     <td>
       <a href="https://smt.esante.gouv.fr/fhir">smt.esante.gouv.fr</a>
     </td>
@@ -2622,7 +2628,7 @@ filterDesc(document.getElementById('FrPractitionerRegulS'), 'obligation', docume
       <button data-clipboard-text="https://mos.esante.gouv.fr/NOS/JDV_J105-EnsembleDiplome-RASS/FHIR/JDV-J105-EnsembleDiplome-RASS" title="Click to copy URL" class="btn-copy"></button>
       <img src="external.png" alt="."/>
     </td>
-    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260223120000 has been used">⏿20260223120000</td>
+    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260730120000 has been used">⏿20260730120000</td>
     <td>
       <a href="https://smt.esante.gouv.fr/fhir">smt.esante.gouv.fr</a>
     </td>
@@ -2638,7 +2644,7 @@ filterDesc(document.getElementById('FrPractitionerRegulS'), 'obligation', docume
       <button data-clipboard-text="https://mos.esante.gouv.fr/NOS/JDV_J105-EnsembleDiplome-RASS/FHIR/JDV-J105-EnsembleDiplome-RASS" title="Click to copy URL" class="btn-copy"></button>
       <img src="external.png" alt="."/>
     </td>
-    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260223120000 has been used">⏿20260223120000</td>
+    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260730120000 has been used">⏿20260730120000</td>
     <td>
       <a href="https://smt.esante.gouv.fr/fhir">smt.esante.gouv.fr</a>
     </td>
@@ -2654,7 +2660,7 @@ filterDesc(document.getElementById('FrPractitionerRegulS'), 'obligation', docume
       <button data-clipboard-text="https://mos.esante.gouv.fr/NOS/JDV_J105-EnsembleDiplome-RASS/FHIR/JDV-J105-EnsembleDiplome-RASS" title="Click to copy URL" class="btn-copy"></button>
       <img src="external.png" alt="."/>
     </td>
-    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260223120000 has been used">⏿20260223120000</td>
+    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260730120000 has been used">⏿20260730120000</td>
     <td>
       <a href="https://smt.esante.gouv.fr/fhir">smt.esante.gouv.fr</a>
     </td>
@@ -2670,7 +2676,7 @@ filterDesc(document.getElementById('FrPractitionerRegulS'), 'obligation', docume
       <button data-clipboard-text="https://mos.esante.gouv.fr/NOS/JDV_J105-EnsembleDiplome-RASS/FHIR/JDV-J105-EnsembleDiplome-RASS" title="Click to copy URL" class="btn-copy"></button>
       <img src="external.png" alt="."/>
     </td>
-    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260223120000 has been used">⏿20260223120000</td>
+    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260730120000 has been used">⏿20260730120000</td>
     <td>
       <a href="https://smt.esante.gouv.fr/fhir">smt.esante.gouv.fr</a>
     </td>
@@ -3361,7 +3367,7 @@ Pour un employé identifié au sein de sa structure, OID de l'établissement, br
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Whether this practitioner's record is in active use</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 1cb7e3d7-1436-4508-9be4-36ed862abcfa
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 974e0825-6c59-4d7f-80c6-2025e1c80f21
 document.getElementById('cbFrPractitionerRegulKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('FrPractitionerRegulKA'), 'binding', document.getElementById('cbFrPractitionerRegulKA-binding').checked, document.getElementById('ppFrPractitionerRegulKA'));
 document.getElementById('cbFrPractitionerRegulKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -3694,7 +3700,7 @@ filterDesc(document.getElementById('FrPractitionerRegulKA'), 'obligation', docum
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">1</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">phone | fax | email | pager | url | sms | other</span><br/><span style="font-weight:bold">Required Pattern: </span><span style="color: darkgreen">email</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 1cb7e3d7-1436-4508-9be4-36ed862abcfa
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 974e0825-6c59-4d7f-80c6-2025e1c80f21
 document.getElementById('cbFrPractitionerRegulDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('FrPractitionerRegulDA'), 'binding', document.getElementById('cbFrPractitionerRegulDA-binding').checked, document.getElementById('ppFrPractitionerRegulDA'));
 document.getElementById('cbFrPractitionerRegulDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -4876,7 +4882,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <table class="binding grid"><tr><td style="font-size: 11px"><b>Additional Bindings</b></td><td style="font-size: 11px">Purpose</td></tr>
 <tr><td style="font-size: 11px"><a href="http://hl7.org/fhir/R4/valueset-all-languages.html" title="http://hl7.org/fhir/ValueSet/all-languages">AllLanguages</a></td>
 <td style="font-size: 11px"><a href="http://hl7.org/fhir/R4/extension-elementdefinition-maxvalueset.html" title="A required binding, for use when the binding strength is 'extensible' or 'preferred'">Max Binding</a></td></tr></table><br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 1cb7e3d7-1436-4508-9be4-36ed862abcfa
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 974e0825-6c59-4d7f-80c6-2025e1c80f21
 document.getElementById('cbFrPractitionerRegulSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('FrPractitionerRegulSA'), 'binding', document.getElementById('cbFrPractitionerRegulSA-binding').checked, document.getElementById('ppFrPractitionerRegulSA'));
 document.getElementById('cbFrPractitionerRegulSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -5155,7 +5161,7 @@ filterDesc(document.getElementById('FrPractitionerRegulSA'), 'obligation', docum
       <button data-clipboard-text="https://mos.esante.gouv.fr/NOS/JDV_J105-EnsembleDiplome-RASS/FHIR/JDV-J105-EnsembleDiplome-RASS" title="Click to copy URL" class="btn-copy"></button>
       <img src="external.png" alt="."/>
     </td>
-    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260223120000 has been used">⏿20260223120000</td>
+    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260730120000 has been used">⏿20260730120000</td>
     <td>
       <a href="https://smt.esante.gouv.fr/fhir">smt.esante.gouv.fr</a>
     </td>
@@ -5171,7 +5177,7 @@ filterDesc(document.getElementById('FrPractitionerRegulSA'), 'obligation', docum
       <button data-clipboard-text="https://mos.esante.gouv.fr/NOS/JDV_J105-EnsembleDiplome-RASS/FHIR/JDV-J105-EnsembleDiplome-RASS" title="Click to copy URL" class="btn-copy"></button>
       <img src="external.png" alt="."/>
     </td>
-    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260223120000 has been used">⏿20260223120000</td>
+    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260730120000 has been used">⏿20260730120000</td>
     <td>
       <a href="https://smt.esante.gouv.fr/fhir">smt.esante.gouv.fr</a>
     </td>
@@ -5187,7 +5193,7 @@ filterDesc(document.getElementById('FrPractitionerRegulSA'), 'obligation', docum
       <button data-clipboard-text="https://mos.esante.gouv.fr/NOS/JDV_J105-EnsembleDiplome-RASS/FHIR/JDV-J105-EnsembleDiplome-RASS" title="Click to copy URL" class="btn-copy"></button>
       <img src="external.png" alt="."/>
     </td>
-    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260223120000 has been used">⏿20260223120000</td>
+    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260730120000 has been used">⏿20260730120000</td>
     <td>
       <a href="https://smt.esante.gouv.fr/fhir">smt.esante.gouv.fr</a>
     </td>
@@ -5203,7 +5209,7 @@ filterDesc(document.getElementById('FrPractitionerRegulSA'), 'obligation', docum
       <button data-clipboard-text="https://mos.esante.gouv.fr/NOS/JDV_J105-EnsembleDiplome-RASS/FHIR/JDV-J105-EnsembleDiplome-RASS" title="Click to copy URL" class="btn-copy"></button>
       <img src="external.png" alt="."/>
     </td>
-    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260223120000 has been used">⏿20260223120000</td>
+    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260730120000 has been used">⏿20260730120000</td>
     <td>
       <a href="https://smt.esante.gouv.fr/fhir">smt.esante.gouv.fr</a>
     </td>
@@ -5219,7 +5225,7 @@ filterDesc(document.getElementById('FrPractitionerRegulSA'), 'obligation', docum
       <button data-clipboard-text="https://mos.esante.gouv.fr/NOS/JDV_J105-EnsembleDiplome-RASS/FHIR/JDV-J105-EnsembleDiplome-RASS" title="Click to copy URL" class="btn-copy"></button>
       <img src="external.png" alt="."/>
     </td>
-    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260223120000 has been used">⏿20260223120000</td>
+    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260730120000 has been used">⏿20260730120000</td>
     <td>
       <a href="https://smt.esante.gouv.fr/fhir">smt.esante.gouv.fr</a>
     </td>
@@ -5235,7 +5241,7 @@ filterDesc(document.getElementById('FrPractitionerRegulSA'), 'obligation', docum
       <button data-clipboard-text="https://mos.esante.gouv.fr/NOS/JDV_J105-EnsembleDiplome-RASS/FHIR/JDV-J105-EnsembleDiplome-RASS" title="Click to copy URL" class="btn-copy"></button>
       <img src="external.png" alt="."/>
     </td>
-    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260223120000 has been used">⏿20260223120000</td>
+    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260730120000 has been used">⏿20260730120000</td>
     <td>
       <a href="https://smt.esante.gouv.fr/fhir">smt.esante.gouv.fr</a>
     </td>
@@ -5251,7 +5257,7 @@ filterDesc(document.getElementById('FrPractitionerRegulSA'), 'obligation', docum
       <button data-clipboard-text="https://mos.esante.gouv.fr/NOS/JDV_J105-EnsembleDiplome-RASS/FHIR/JDV-J105-EnsembleDiplome-RASS" title="Click to copy URL" class="btn-copy"></button>
       <img src="external.png" alt="."/>
     </td>
-    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260223120000 has been used">⏿20260223120000</td>
+    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260730120000 has been used">⏿20260730120000</td>
     <td>
       <a href="https://smt.esante.gouv.fr/fhir">smt.esante.gouv.fr</a>
     </td>
@@ -5267,7 +5273,7 @@ filterDesc(document.getElementById('FrPractitionerRegulSA'), 'obligation', docum
       <button data-clipboard-text="https://mos.esante.gouv.fr/NOS/JDV_J105-EnsembleDiplome-RASS/FHIR/JDV-J105-EnsembleDiplome-RASS" title="Click to copy URL" class="btn-copy"></button>
       <img src="external.png" alt="."/>
     </td>
-    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260223120000 has been used">⏿20260223120000</td>
+    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260730120000 has been used">⏿20260730120000</td>
     <td>
       <a href="https://smt.esante.gouv.fr/fhir">smt.esante.gouv.fr</a>
     </td>
@@ -5283,7 +5289,7 @@ filterDesc(document.getElementById('FrPractitionerRegulSA'), 'obligation', docum
       <button data-clipboard-text="https://mos.esante.gouv.fr/NOS/JDV_J105-EnsembleDiplome-RASS/FHIR/JDV-J105-EnsembleDiplome-RASS" title="Click to copy URL" class="btn-copy"></button>
       <img src="external.png" alt="."/>
     </td>
-    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260223120000 has been used">⏿20260223120000</td>
+    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260730120000 has been used">⏿20260730120000</td>
     <td>
       <a href="https://smt.esante.gouv.fr/fhir">smt.esante.gouv.fr</a>
     </td>
@@ -5299,7 +5305,7 @@ filterDesc(document.getElementById('FrPractitionerRegulSA'), 'obligation', docum
       <button data-clipboard-text="https://mos.esante.gouv.fr/NOS/JDV_J105-EnsembleDiplome-RASS/FHIR/JDV-J105-EnsembleDiplome-RASS" title="Click to copy URL" class="btn-copy"></button>
       <img src="external.png" alt="."/>
     </td>
-    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260223120000 has been used">⏿20260223120000</td>
+    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260730120000 has been used">⏿20260730120000</td>
     <td>
       <a href="https://smt.esante.gouv.fr/fhir">smt.esante.gouv.fr</a>
     </td>
@@ -5315,7 +5321,7 @@ filterDesc(document.getElementById('FrPractitionerRegulSA'), 'obligation', docum
       <button data-clipboard-text="https://mos.esante.gouv.fr/NOS/JDV_J105-EnsembleDiplome-RASS/FHIR/JDV-J105-EnsembleDiplome-RASS" title="Click to copy URL" class="btn-copy"></button>
       <img src="external.png" alt="."/>
     </td>
-    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260223120000 has been used">⏿20260223120000</td>
+    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260730120000 has been used">⏿20260730120000</td>
     <td>
       <a href="https://smt.esante.gouv.fr/fhir">smt.esante.gouv.fr</a>
     </td>
@@ -5331,7 +5337,7 @@ filterDesc(document.getElementById('FrPractitionerRegulSA'), 'obligation', docum
       <button data-clipboard-text="https://mos.esante.gouv.fr/NOS/JDV_J105-EnsembleDiplome-RASS/FHIR/JDV-J105-EnsembleDiplome-RASS" title="Click to copy URL" class="btn-copy"></button>
       <img src="external.png" alt="."/>
     </td>
-    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260223120000 has been used">⏿20260223120000</td>
+    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260730120000 has been used">⏿20260730120000</td>
     <td>
       <a href="https://smt.esante.gouv.fr/fhir">smt.esante.gouv.fr</a>
     </td>
@@ -5347,7 +5353,7 @@ filterDesc(document.getElementById('FrPractitionerRegulSA'), 'obligation', docum
       <button data-clipboard-text="https://mos.esante.gouv.fr/NOS/JDV_J105-EnsembleDiplome-RASS/FHIR/JDV-J105-EnsembleDiplome-RASS" title="Click to copy URL" class="btn-copy"></button>
       <img src="external.png" alt="."/>
     </td>
-    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260223120000 has been used">⏿20260223120000</td>
+    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260730120000 has been used">⏿20260730120000</td>
     <td>
       <a href="https://smt.esante.gouv.fr/fhir">smt.esante.gouv.fr</a>
     </td>
@@ -5363,7 +5369,7 @@ filterDesc(document.getElementById('FrPractitionerRegulSA'), 'obligation', docum
       <button data-clipboard-text="https://mos.esante.gouv.fr/NOS/JDV_J105-EnsembleDiplome-RASS/FHIR/JDV-J105-EnsembleDiplome-RASS" title="Click to copy URL" class="btn-copy"></button>
       <img src="external.png" alt="."/>
     </td>
-    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260223120000 has been used">⏿20260223120000</td>
+    <td style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20260730120000 has been used">⏿20260730120000</td>
     <td>
       <a href="https://smt.esante.gouv.fr/fhir">smt.esante.gouv.fr</a>
     </td>
@@ -5883,8 +5889,8 @@ Summary
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Package ans.fhir.fr.sas#1.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-07-28 14:17:00 +0000">
-    2026-07-28
+  <span title="2026-09-09 13:38:00 +0000">
+    2026-09-09
   </span>
 
           <br/>

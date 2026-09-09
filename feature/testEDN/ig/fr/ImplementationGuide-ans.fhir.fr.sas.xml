@@ -11,7 +11,7 @@
   <name value="SAS"/>
   <title value="Service d'Accès aux Soins"/>
   <status value="active"/>
-  <date value="2026-07-28T14:17:02+00:00"/>
+  <date value="2026-09-09T13:38:12+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -118,7 +118,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="path-liquid"/>
+        <valueString value="path-liquid-template"/>
       </extension>
       <extension url="value">
         <valueString value="template/liquid"/>
@@ -126,7 +126,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="path-liquid"/>
+        <valueString value="path-liquid-template"/>
       </extension>
       <extension url="value">
         <valueString value="input/liquid"/>
@@ -358,7 +358,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueCode value="path-liquid"/>
+        <valueCode value="path-liquid-template"/>
       </extension>
       <extension url="value">
         <valueString value="template/liquid"/>
@@ -366,7 +366,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueCode value="path-liquid"/>
+        <valueCode value="path-liquid-template"/>
       </extension>
       <extension url="value">
         <valueString value="input/liquid"/>
@@ -1412,7 +1412,7 @@
         <reference value="SearchParameter/slot-sp-start"/>
       </reference>
       <name value="slot-sp-start"/>
-      <description value="Paramètre de recherche date de début d'un créneau (date de début supérieure ou égale à &lt;date1&gt; et inférieure ou égale à &lt;date2&gt;)"/>
+      <description value="Paramètre de recherche date de début d'un créneau (date de début supérieure ou égale à date1 et inférieure ou égale à date2)"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1541,6 +1541,14 @@
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="specifications_techniques_tous_sso.html"/>
+        </extension>
+        <nameUrl value="specifications_techniques_tous_sso.html"/>
+        <title value="Délégation d'authentification-sso"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
           <valueUrl value="specifications_techniques_tous_RDV_V3.html"/>
         </extension>
         <nameUrl value="specifications_techniques_tous_RDV_V3.html"/>
@@ -1553,6 +1561,14 @@
         </extension>
         <nameUrl value="specifications_techniques-sos-recherche_creneaux.html"/>
         <title value="SOS Médecins - Recherche des créneaux"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="specifications_techniques_recherche_contextuelle.html"/>
+        </extension>
+        <nameUrl value="specifications_techniques_recherche_contextuelle.html"/>
+        <title value="Recherche contextuelle depuis le LRM"/>
         <generation value="markdown"/>
       </page>
       <page>
