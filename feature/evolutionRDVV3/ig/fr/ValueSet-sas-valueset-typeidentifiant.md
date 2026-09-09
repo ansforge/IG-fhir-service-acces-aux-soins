@@ -7,6 +7,7 @@ Type d'identifiant SAS
 
  **References** 
 
+* [FrAppointmentSASPDM](StructureDefinition-sas-pdm-appointment.md)
 * [FrAppointmentSASSOS](StructureDefinition-sas-sos-appointment.md)
 
 ### Définition logique (CLD)
@@ -33,7 +34,7 @@ Type d'identifiant SAS
   "title" : "Type identifiant SAS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T15:22:08+00:00",
+  "date" : "2026-09-09T15:39:29+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

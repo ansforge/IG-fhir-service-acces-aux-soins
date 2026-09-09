@@ -8,6 +8,7 @@ Etat du RDV SAS
  **References** 
 
 * [FrAppointmentSAS](StructureDefinition-FrAppointmentSAS.md)
+* [FrAppointmentSASPDM](StructureDefinition-sas-pdm-appointment.md)
 * [FrAppointmentSASSOS](StructureDefinition-sas-sos-appointment.md)
 
 ### Logical Definition (CLD)
@@ -34,7 +35,7 @@ Etat du RDV SAS
   "title" : "Statut RDV SAS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T15:22:08+00:00",
+  "date" : "2026-09-09T15:39:29+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

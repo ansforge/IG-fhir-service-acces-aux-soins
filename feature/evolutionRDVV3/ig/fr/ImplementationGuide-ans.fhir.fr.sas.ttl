@@ -18,7 +18,7 @@
   fhir:ImplementationGuide.name [ fhir:value "SAS"] ;
   fhir:ImplementationGuide.title [ fhir:value "Service d'Accès aux Soins"] ;
   fhir:ImplementationGuide.status [ fhir:value "active"] ;
-  fhir:ImplementationGuide.date [ fhir:value "2026-09-09T15:22:08+00:00"^^xsd:dateTime] ;
+  fhir:ImplementationGuide.date [ fhir:value "2026-09-09T15:39:29+00:00"^^xsd:dateTime] ;
   fhir:ImplementationGuide.publisher [ fhir:value "ANS"] ;
   fhir:ImplementationGuide.contact [
      fhir:index -1 ;
@@ -1721,6 +1721,20 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-pdm-appointment> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sas-pdm-appointment" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "FrAppointmentSASPDM" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage Place de Marché" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-appointment> ;
          fhir:Reference.reference [ fhir:value "StructureDefinition/sas-sos-appointment" ]
        ] ;
@@ -2310,6 +2324,16 @@
            ] ;
            fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "ressources_cas_dusage_sos.html" ] ;
            fhir:ImplementationGuide.definition.page.title [ fhir:value "SOS Médecins" ] ;
+           fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+         ], [
+           fhir:index -1 ;
+           fhir:Element.extension [
+             fhir:index -1 ;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+             fhir:Extension.valueUrl [ fhir:value "ressources_cas_dusage_pdm.html" ]
+           ] ;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "ressources_cas_dusage_pdm.html" ] ;
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "Place de Marché" ] ;
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
          ]
        ], [

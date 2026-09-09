@@ -11,7 +11,7 @@
   <name value="SAS"/>
   <title value="Service d'Accès aux Soins"/>
   <status value="active"/>
-  <date value="2026-09-09T15:22:08+00:00"/>
+  <date value="2026-09-09T15:39:29+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -1145,6 +1145,17 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
+        <reference value="StructureDefinition/sas-pdm-appointment"/>
+      </reference>
+      <name value="FrAppointmentSASPDM"/>
+      <description value="Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage Place de Marché"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
         <reference value="StructureDefinition/sas-sos-appointment"/>
       </reference>
       <name value="FrAppointmentSASSOS"/>
@@ -1608,6 +1619,14 @@
           </extension>
           <nameUrl value="ressources_cas_dusage_sos.html"/>
           <title value="SOS Médecins"/>
+          <generation value="html"/>
+        </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="ressources_cas_dusage_pdm.html"/>
+          </extension>
+          <nameUrl value="ressources_cas_dusage_pdm.html"/>
+          <title value="Place de Marché"/>
           <generation value="html"/>
         </page>
       </page>

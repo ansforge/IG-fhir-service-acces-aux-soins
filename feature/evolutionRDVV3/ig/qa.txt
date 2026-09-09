@@ -1,9 +1,9 @@
 SAS : Validation Results
 =========================================
 
-err = 21, warn = 115, info = 221
+err = 21, warn = 116, info = 226
 IG Publisher Version: 2.3.4
-Generated Wed Sep 09 15:24:11 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.sas#1.2.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/sas)
+Generated Wed Sep 09 15:41:57 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.sas#1.2.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/sas)
  Build Errors : 0 / 6 / 2
  /__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Appointment-1 : 0 / 3 / 5
  /__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Appointment-12345678 : 0 / 2 / 5
@@ -78,6 +78,7 @@ Generated Wed Sep 09 15:24:11 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.sas#1
  /__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/StructureDefinition-sas-cpts-organization-aggregator : 0 / 5 / 3
  /__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/StructureDefinition-sas-cpts-slot-aggregator : 0 / 0 / 5
  /__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/StructureDefinition-sas-cpts-slot-servicetype-aggregator : 3 / 0 / 2
+ /__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/StructureDefinition-sas-pdm-appointment : 0 / 1 / 6
  /__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/StructureDefinition-sas-sos-appointment : 0 / 0 / 6
  /__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/StructureDefinition-sas-sos-bundle-aggregator : 0 / 0 / 2
  /__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/StructureDefinition-sas-sos-location-aggregator : 0 / 0 / 6
@@ -477,6 +478,13 @@ ERROR: StructureDefinition.where(url = 'http://hl7.org/fhir/5.0/StructureDefinit
 ERROR: StructureDefinition/sas-cpts-slot-servicetype-aggregator: StructureDefinition: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
 INFORMATION: Resource: The resource StructureDefinition/sas-cpts-slot-servicetype-aggregator could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 ERROR: /__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/StructureDefinition-sas-cpts-slot-servicetype-aggregator: URL Mismatch https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-cpts-slot-servicetype-aggregator vs http://hl7.org/fhir/5.0/StructureDefinition/extension-Slot.serviceType
+== fsh-generated/resources/StructureDefinition-sas-pdm-appointment.json ==
+INFORMATION: StructureDefinition/sas-pdm-appointment: StructureDefinition.snapshot.element[36].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+INFORMATION: StructureDefinition/sas-pdm-appointment: StructureDefinition.snapshot.element[47].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+INFORMATION: StructureDefinition/sas-pdm-appointment: StructureDefinition.snapshot.element[76].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+INFORMATION: StructureDefinition/sas-pdm-appointment: StructureDefinition.snapshot.element[77].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+INFORMATION: Resource: The resource StructureDefinition/sas-pdm-appointment could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+WARNING: StructureDefinition.where(url = 'https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-pdm-appointment'): The Implementation Guide contains no examples for this profile
 == fsh-generated/resources/StructureDefinition-sas-sos-appointment.json ==
 INFORMATION: StructureDefinition/sas-sos-appointment: StructureDefinition.snapshot.element[36].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 INFORMATION: StructureDefinition/sas-sos-appointment: StructureDefinition.snapshot.element[47].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk

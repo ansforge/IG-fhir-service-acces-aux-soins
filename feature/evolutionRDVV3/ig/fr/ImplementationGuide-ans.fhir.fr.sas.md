@@ -14,7 +14,7 @@
   "name" : "SAS",
   "title" : "Service d'Accès aux Soins",
   "status" : "active",
-  "date" : "2026-09-09T15:22:08+00:00",
+  "date" : "2026-09-09T15:39:29+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -1611,6 +1611,22 @@
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-sas-pdm-appointment.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/sas-pdm-appointment"
+      },
+      "name" : "FrAppointmentSASPDM",
+      "description" : "Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage Place de Marché",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
         "valueUri" : "StructureDefinition-sas-sos-appointment.html"
       }],
       "reference" : {
@@ -2247,6 +2263,15 @@
           }],
           "nameUrl" : "ressources_cas_dusage_sos.html",
           "title" : "SOS Médecins",
+          "generation" : "html"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "ressources_cas_dusage_pdm.html"
+          }],
+          "nameUrl" : "ressources_cas_dusage_pdm.html",
+          "title" : "Place de Marché",
           "generation" : "html"
         }]
       },
