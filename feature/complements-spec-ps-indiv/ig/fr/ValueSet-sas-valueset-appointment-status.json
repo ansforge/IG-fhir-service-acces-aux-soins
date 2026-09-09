@@ -1,0 +1,52 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "sas-valueset-appointment-status",
+  "language" : "fr",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : EnsembleValeurs sas-valueset-appointment-status</b></p><a name=\"sas-valueset-appointment-status\"> </a><a name=\"hcsas-valueset-appointment-status\"> </a><ul><li>Include ce(s) code(s) tel qu'il(s) est (sont) défini(s) dans <a href=\"http://hl7.org/fhir/R4/codesystem-appointmentstatus.html\"><code>http://hl7.org/fhir/appointmentstatus</code></a><span title=\"La version n'est pas explicitement indiquée, ce qui signifie quelle est fixée à {0}, la version trouvée via les références de package\"> version &#x1F4E6;4.0.1</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Affichage</b></td><td><b>Définition</b></td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-booked\">booked</a></td><td style=\"color: #cccccc\">Booked</td><td>All participant(s) have been considered and the appointment is confirmed to go ahead at the date/times specified.</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-cancelled\">cancelled</a></td><td style=\"color: #cccccc\">Cancelled</td><td>The appointment has been cancelled.</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-noshow\">noshow</a></td><td style=\"color: #cccccc\">No Show</td><td>Some or all of the participant(s) have not/did not appear for the appointment (usually the patient).</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-fulfilled\">fulfilled</a></td><td style=\"color: #cccccc\">Fulfilled</td><td>The planning stages of the appointment are now complete, the encounter resource will exist and will track further status changes. Note that an encounter may exist before the appointment status is fulfilled for many reasons.</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-appointmentstatus.html#appointmentstatus-pending\">pending</a></td><td style=\"color: #cccccc\">Pending</td><td>Some or all of the participant(s) have not finalized their acceptance of the appointment request.</td></tr></table></li></ul></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-appointment-status",
+  "version" : "1.2.0",
+  "name" : "AppointmentStatusSAS",
+  "title" : "Statut RDV SAS",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-09-09T07:42:05+00:00",
+  "publisher" : "ANS",
+  "contact" : [{
+    "name" : "ANS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Etat du RDV SAS",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/appointmentstatus",
+      "concept" : [{
+        "code" : "booked"
+      },
+      {
+        "code" : "cancelled"
+      },
+      {
+        "code" : "noshow"
+      },
+      {
+        "code" : "fulfilled"
+      },
+      {
+        "code" : "pending"
+      }]
+    }]
+  }
+}
