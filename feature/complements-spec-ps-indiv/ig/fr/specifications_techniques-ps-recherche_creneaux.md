@@ -130,7 +130,7 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
  
  
 * **Type de consultation :** 
-* L'utilisation de la nomenclature standard ActEncounterCode ([https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html](https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html)) est attendue. Cette nomenclature contient différentes notions, cependant, la plateforme numérique SAS gère les 3 types de créneaux ci-dessous. A noter qu'un créneau peut porter une combinaison de ces valeurs : 
+* L'utilisation de la nomenclature standard ActEncounterCode ([https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html](https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html)) est attendue. Cette nomenclature contient différentes notions, cependant, la plateforme numérique SAS gère les 3 types de créneaux ci-dessous. A noter qu'un créneau peut porter une combinaison de valeurs : 
 * AMB – Consultation au cabinet
 * HH – Consultation à domicile
 * VR – Téléconsultation
@@ -157,5 +157,6 @@ L’agrégateur de disponibilités SAS appelle de manière **synchrone** l’ens
 A titre d’information, le tableau ci-dessus contient une estimation de la volumétrie de requêtes émises en une heure par la plateforme numérique SAS :
 
 * : Appels max / heure
-  * Pilote: 500</td> 3000</td> </table> *Il s’agit d’estimations et ce nombre pourrait être dépassé en cas de pic de charge.* *Hypothèses : Nbr appels aux SAMU par jour : 125 000, Nbr appels réorientés aux OSNP par jour : 16 000, contingence 15%, Nbr de recherches dans la PTF numérique SAS par appel : 4.* ### FAQ Cf. (./faq.html#agrégateur-ps-à-titre-individuel---cpts) 
+  * Pilote: 500
+  * Cible (moyenne): 3000
 
