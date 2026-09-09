@@ -1,0 +1,22 @@
+Profile: FrAppointmentSASPDM
+Parent: FrAppointment
+Id: sas-pdm-appointment
+Description: "Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage Place de Marché"
+
+* extension ..1
+* extension[appointmentOperator] 1..
+* extension[appointmentOperator].value[x] only Reference
+* extension[appointmentOperator].valueReference.identifier.type 1..
+* extension[appointmentOperator].valueReference.identifier.type.coding 1..1
+* extension[appointmentOperator].valueReference.identifier.type.coding from sas-valueset-typeidentifiant  (required)
+* extension[appointmentOperator].valueReference.identifier.type.coding.code 1..
+* extension[appointmentOperator].valueReference.identifier.system 1..
+* extension[appointmentOperator].valueReference.identifier.value 1..
+* identifier 1..1
+* identifier.system 1..
+* identifier.value 1..
+* status from sas-valueset-appointment-status
+* start 1..
+* end 1..
+* created MS
+* participant.status from sas-valueset-participant-status (required)

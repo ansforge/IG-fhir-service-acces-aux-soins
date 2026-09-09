@@ -95,6 +95,7 @@ La fludification du parcours régulateurs inclut les éléments suivants :
    - [Gestion des comptes régulateurs](./specifications_techniques-tous-gestion_regulateur.html)
    - [Délégation d'authentification-SSO](./specifications_techniques_tous_sso.html)
    - [Gestion de rendez-vous](./specifications_techniques_tous_RDV_V3.html)
+3. [Ressources de conformité](./ressources_cas_dusage_pdm.html)
 
 #### Fluidification du parcours du régulateur - échanges avec les LRM
 1. [Spécifications recherche contextualisée depuis le LRM](https://industriels.esante.gouv.fr/sites/default/files/media/document/SAS_SPEC_INT_L01_Recherche-contextualisee_20230504_V1.3.pdf)
