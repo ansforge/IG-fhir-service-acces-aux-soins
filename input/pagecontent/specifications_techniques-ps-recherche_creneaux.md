@@ -261,4 +261,4 @@ A titre d’information, le tableau ci-dessus contient une estimation de la volu
 *<span style="text-decoration:underline">Hypothèses</span> : Nbr appels aux SAMU par jour : 125 000, Nbr appels réorientés aux OSNP par jour : 16 000, contingence 15%, Nbr de recherches dans la PTF numérique SAS par appel : 4.*
 
 ### FAQ
-Cf. (./faq.html#agrégateur-ps-à-titre-individuel---cpts)
+Cf. [Page dédiée](./faq.html#agrégateur-ps-à-titre-individuel---cpts)
