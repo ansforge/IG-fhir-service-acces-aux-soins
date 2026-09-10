@@ -282,6 +282,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#exemple-de-requête" id="markdown-toc-exemple-de-requête">Exemple de requête</a></li>
   <li><a href="#nomenclatures" id="markdown-toc-nomenclatures">Nomenclatures</a></li>
   <li><a href="#validateur-ressources" id="markdown-toc-validateur-ressources">Validateur ressources</a></li>
+  <li><a href="#performance-et-volumétrie" id="markdown-toc-performance-et-volumétrie">Performance et volumétrie</a></li>
+  <li><a href="#faq" id="markdown-toc-faq">FAQ</a></li>
 </ul>
 
 </div>
@@ -293,7 +295,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <tbody>
 <tr>
   <td width="25%"><p><strong>Endpoint</strong></p></td>
-  <td><p>&nbsp;</p></td>
+  <td><p>Endpoint éditeur</p></td>
 </tr>
 <tr>
   <td width="25%"><p><strong>Header</strong></p></td>
@@ -306,14 +308,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <tr>
   <td width="25%"><p><strong>Version FHIR</strong></p></td>
   <td><p>4.0.1</p></td>
-</tr>
-<tr>
-  <td width="25%"><p><strong>Version package</strong></p></td>
-  <td><p>&nbsp;</p></td>
-</tr>
-<tr>
-  <td width="25%"><p><strong>Publication</strong></p></td>
-  <td><p>&nbsp;</p></td>
 </tr>
 </tbody>
 </table>
@@ -383,7 +377,7 @@ peut être exécutée. Il peut il y avoir 0 à n correspondances.</p>
     <p>Un header avec un un code erreur HTTP 4XX ou 5XX</p>
   </li>
   <li>
-    <p>Un body contenant une ressource OperationOutcome[^3] qui donne les
+    <p>Un body contenant une ressource OperationOutcome qui donne les
 détails sur la raison de l'échec</p>
   </li>
 </ul>
@@ -557,7 +551,7 @@ HTTP 200 OK
   </li>
   <li><strong>Type de consultation :</strong>
     <ul>
-      <li>L'utilisation de la nomenclature standard ActEncounterCode (<a href="https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html">https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html</a>) est attendue. Cette nomenclature contient différentes notions, cependant, la plateforme numérique SAS gère les 3 types de créneaux ci-dessous. A noter qu'un créneau peut porter une combinaison de ces valeurs :
+      <li>L'utilisation de la nomenclature standard ActEncounterCode (<a href="https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html">https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html</a>) est attendue. Cette nomenclature contient différentes notions, cependant, la plateforme numérique SAS gère les 3 types de créneaux ci-dessous. A noter qu'un créneau peut porter une combinaison de valeurs :
         <ul>
           <li>AMB – Consultation au cabinet</li>
           <li>HH – Consultation à domicile</li>
@@ -585,6 +579,31 @@ HTTP 200 OK
 
 <h3 id="validateur-ressources">Validateur ressources</h3>
 <p>Cf. <a href="./tests.html">page dédiée</a></p>
+
+<h3 id="performance-et-volumétrie">Performance et volumétrie</h3>
+<p>L’agrégateur de disponibilités SAS appelle de manière <strong>synchrone</strong> l’ensemble des solutions éditeurs interfacées pour une <strong>liste de 1 à 25 PS</strong>. Pour des raisons de qualité de service et d’expérience utilisateurs, il est attendu de la part des solutions logicielles éditeurs de garantir un <strong>temps de réponse inférieure à 7 secondes</strong> qui pourra évoluer à l’usage. Passé ce délai, la plateforme numérique SAS déclenchera un « time-out » et toute réponse réceptionnée par la suite ne sera pas prise en compte.</p>
+
+<p>A titre d’information, le tableau ci-dessus contient une estimation de la volumétrie de requêtes émises en une heure par la plateforme numérique SAS :</p>
+
+<table>
+  <tr>
+    <th></th>
+    <th>Pilote</th>
+    <th>Cible (moyenne)</th>
+  </tr>
+  <tr>
+    <td>Appels max / heure</td>
+    <td style="text-align: center;">500</td>
+    <td style="text-align: center;">3000</td>
+  </tr>
+</table>
+
+<p><em>Il s’agit d’estimations et ce nombre pourrait être dépassé en cas de pic de charge.</em>
+<em><span style="text-decoration:underline">Hypothèses</span> : Nbr appels aux SAMU par jour : 125 000, Nbr appels réorientés aux OSNP par jour : 16 000, contingence 15%, Nbr de recherches dans la PTF numérique SAS par appel : 4.</em></p>
+
+<h3 id="faq">FAQ</h3>
+<p>Cf. <a href="./faq.html#agrégateur-ps-à-titre-individuel---cpts">Page dédiée</a></p>
+
 
 
 
@@ -634,8 +653,8 @@ HTTP 200 OK
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Package ans.fhir.fr.sas#1.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-08 08:23:00 +0000">
-    2026-09-08
+  <span title="2026-09-10 10:05:00 +0000">
+    2026-09-10
   </span>
 
           <br/>

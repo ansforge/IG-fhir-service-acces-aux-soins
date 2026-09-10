@@ -14,7 +14,7 @@ Security Labels: [Créneau accessible par le grand public (Details: TRE_R314_Typ
 
 **serviceType**: virtual, Visite de contrôle, Consultation de suivi pneumologie
 
-**specialty**: SM41, Pneumologie
+**specialty**: Pneumologie (SM), Pneumologie
 
 **appointmentType**: Routine appointment - default if not valued
 

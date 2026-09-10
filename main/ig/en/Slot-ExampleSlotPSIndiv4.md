@@ -14,7 +14,7 @@ Security Labels: [Créneau accessible par le grand public (Details: TRE_R314_Typ
 
 **serviceType**: home health, Visite de contrôle, Consultation de suivi pneumologique
 
-**specialty**: SM41, Médecine générale (SM)
+**specialty**: Pneumologie (SM), Médecine générale (SM)
 
 **appointmentType**: Routine appointment - default if not valued
 

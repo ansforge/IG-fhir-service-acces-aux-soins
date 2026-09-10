@@ -11,12 +11,10 @@ Cette requête s'appuie sur le flux 3A du volet d'agenda partagé du [CI-SIS vol
 
 | | |
 | :--- | :--- |
-| **Endpoint** |   |
+| **Endpoint** | Endpoint éditeur |
 | **Header** | Accept: application/json+fhir |
 | **Encodage** | UTF-8 |
 | **Version FHIR** | 4.0.1 |
-| **Version package** |   |
-| **Publication** |   |
 
 ### Construction de la requête de base
 
@@ -51,7 +49,7 @@ Lien vers la spécification FHIR : [https://www.hl7.org/fhir/operationoutcome.h
 Si la recherche échoue, le serveur doit répondre :
 
 * Un header avec un un code erreur HTTP 4XX ou 5XX
-* Un body contenant une ressource OperationOutcome[^3] qui donne les détails sur la raison de l'échec
+* Un body contenant une ressource OperationOutcome qui donne les détails sur la raison de l'échec
 
 Remarque : l'échec d'une recherche est la non-possibilité d'exécuter la requête, ce qui est différent d'aucune correspondance à la recherche. Plus de précision sur la spécification FHIR : [https://www.hl7.org/fhir/http.html](https://www.hl7.org/fhir/http.html)
 
@@ -135,7 +133,7 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
  
  
 * **Type de consultation :** 
-* L'utilisation de la nomenclature standard ActEncounterCode ([https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html](https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html)) est attendue. Cette nomenclature contient différentes notions, cependant, la plateforme numérique SAS gère les 3 types de créneaux ci-dessous. A noter qu'un créneau peut porter une combinaison de ces valeurs : 
+* L'utilisation de la nomenclature standard ActEncounterCode ([https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html](https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html)) est attendue. Cette nomenclature contient différentes notions, cependant, la plateforme numérique SAS gère les 3 types de créneaux ci-dessous. A noter qu'un créneau peut porter une combinaison de valeurs : 
 * AMB – Consultation au cabinet
 * HH – Consultation à domicile
 * VR – Téléconsultation
@@ -154,4 +152,20 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
 ### Validateur ressources
 
 Cf. [page dédiée](./tests.md)
+
+### Performance et volumétrie
+
+L’agrégateur de disponibilités SAS appelle de manière **synchrone** l’ensemble des solutions éditeurs interfacées pour une **liste de 1 à 25 PS**. Pour des raisons de qualité de service et d’expérience utilisateurs, il est attendu de la part des solutions logicielles éditeurs de garantir un **temps de réponse inférieure à 7 secondes** qui pourra évoluer à l’usage. Passé ce délai, la plateforme numérique SAS déclenchera un « time-out » et toute réponse réceptionnée par la suite ne sera pas prise en compte.
+
+A titre d’information, le tableau ci-dessus contient une estimation de la volumétrie de requêtes émises en une heure par la plateforme numérique SAS :
+
+* : Appels max / heure
+  * Pilote: 500
+  * Cible (moyenne): 3000
+
+**Il s’agit d’estimations et ce nombre pourrait être dépassé en cas de pic de charge.** **Hypothèses : Nbr appels aux SAMU par jour : 125 000, Nbr appels réorientés aux OSNP par jour : 16 000, contingence 15%, Nbr de recherches dans la PTF numérique SAS par appel : 4.**
+
+### FAQ
+
+Cf. [Page dédiée](./faq.md#agrégateur-ps-à-titre-individuel---cpts)
 
