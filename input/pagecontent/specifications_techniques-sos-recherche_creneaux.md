@@ -278,8 +278,7 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
 Cf. [page dédiée](./tests.html)
 
 ### Performance et volumétrie
-L’agrégateur de disponibilités de la plateforme numérique SAS appelle de manière **synchrone** l’ensemble des solutions éditeurs interfacées pour une **liste de 1 à 10 SIRET**. Pour des raisons de qualité de service et d’expérience utilisateurs, il est attendu de la part des solutions logicielles éditeurs de garantir un **temps de réponse inférieure à 7 secondes** qui pourra évoluer à l’usage. Passé ce délai, la plateforme numérique SAS déclenchera un « time-out » 
-et toute réponse réceptionnée par la suite ne sera pas prise en compte
+L’agrégateur de disponibilités de la plateforme numérique SAS appelle de manière **synchrone** l’ensemble des solutions éditeurs interfacées pour une **liste de 1 à 10 SIRET**. Pour des raisons de qualité de service et d’expérience utilisateurs, il est attendu de la part des solutions logicielles éditeurs de garantir un **temps de réponse inférieure à 7 secondes** qui pourra évoluer à l’usage. Passé ce délai, la plateforme numérique SAS déclenchera un « time-out » et toute réponse réceptionnée par la suite ne sera pas prise en compte
 
 A titre d’information, le tableau ci-dessous contient une estimation de la volumétrie de requêtes émises en une heure par la plateforme numérique SAS :
 
