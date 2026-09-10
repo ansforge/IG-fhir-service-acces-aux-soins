@@ -3,7 +3,7 @@
 ## Resource Profile: FrAppointmentSASSOS 
 
  
-Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins 
+Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins et Place de Marché 
 
 **Usages:**
 
@@ -32,7 +32,7 @@ Other representations of profile: [CSV](../StructureDefinition-sas-sos-appointme
   "version" : "1.2.0",
   "name" : "FrAppointmentSASSOS",
   "status" : "active",
-  "date" : "2026-09-09T15:39:29+00:00",
+  "date" : "2026-09-10T09:13:18+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](../StructureDefinition-sas-sos-appointme
       "value" : "https://esante.gouv.fr"
     }]
   }],
-  "description" : "Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins",
+  "description" : "Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins et Place de Marché",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

@@ -7,5 +7,5 @@ Liste des ressources (profils, paramètres de recherche, terminologies, exemples
 | | | |
 | :--- | :--- | :--- |
 | Identifiant | Type | Description |
-| [sas-pdm-appointment](StructureDefinition-sas-pdm-appointment.md) | StructureDefinition | Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage Place de Marché |
+| [sas-sos-appointment](StructureDefinition-sas-sos-appointment.md) | StructureDefinition | Profil de Slot, dérivé de FrSlot, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins et Place de Marché |
 
