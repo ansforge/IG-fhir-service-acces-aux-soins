@@ -160,3 +160,9 @@ A titre d’information, le tableau ci-dessus contient une estimation de la volu
   * Pilote: 500
   * Cible (moyenne): 3000
 
+**Il s’agit d’estimations et ce nombre pourrait être dépassé en cas de pic de charge.** **Hypothèses : Nbr appels aux SAMU par jour : 125 000, Nbr appels réorientés aux OSNP par jour : 16 000, contingence 15%, Nbr de recherches dans la PTF numérique SAS par appel : 4.**
+
+### FAQ
+
+Cf. (./faq.html#agrégateur-ps-à-titre-individuel—cpts)
+
