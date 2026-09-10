@@ -626,8 +626,21 @@ Non, le endpoint attendu pour l’envoi des requêtes POST et PUT relatif à la 
 
 Un ID national possède une structure bien définie dont les spécificités sont explicitées ici. Un identifiant technique SAS prendra la forme d'un UUID (ex. b6e39355-8a61-4556-b340-36f7b95fec6a) où une REGEX peut-être implémentée côté éditeur.
 Cf. [règles de gestion comptes régulateurs](./specifications_techniques-tous-gestion_regulateur.html#r%C3%A8gles-de-gestion), au sein de la requête, les champs `identifier.system` (autorité d'affectation) et `identifier.type` (type d'identifiant) permettent d'indiquer s'il s'agit d'un identifiant technique SAS ou d'un identifiant national.
-<br><br>
 
+#### A quelle étape du cycle de vie du rendez-vous est-il attendu de transmettre les données du PS effecteur de soins ?
+Lorsque le PS effecteur de soins est connu à la mise à disposition du créneau (ex. agendas individuels), les données correspondantes (Identification du PS effecteur de soins) doivent être communiquées à la plateforme numérique SAS dès la prise de rendez-vous par le régulateur dans la requête de création type POST. 
+Lorsque le PS effecteur de soins n’est pas connu au préalable (ex. agendas de structure ou solutions type place de marché), la donnée ID 10 devra être transmise et ce tout au long du cycle de vie du rendez-vous. En complément, les données liées à l'identification du PS effecteur de soins devront être communiquées à la plateforme numérique SAS au plus tard lorsque le rendez-vous aura été effectué dans la requête de mise à jour type PUT. 
+
+#### Quel est le format JSON de la requête de mise à jour (PUT) à transmettre lorsqu'un PS effecteur de soins méconnu lors de la requête de création est désormais connu (ex. SOS Médecins) ?
+Les champs de la requête de création JSON initiale évoluent et sont valorisés à : 
+<ul>
+  <li>`status` (correspondant au statut du rendez-vous) : booked </li>
+  <li>`participant.status` (correspondant au statut d’acceptation du rendez-vous par le PS effecteur de soins) : accepted </li>
+  <li>`participant.actor.identifier.type`, `participant.actor.identifier.system` et `participant.actor.identifier.value` (correspondant aux données du PS effecteur de soins) sont communiquées Cf. [Nomenclatures](./specifications_techniques_tous_RDV_V3.html#nomenclatures).</li>
+</ul> 
+{%include Appointment-123456789-json-html.xhtml%}
+
+<br><br>
 
 ### Transmission des informations de RDV aux LRM
 
