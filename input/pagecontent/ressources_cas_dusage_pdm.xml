@@ -23,7 +23,7 @@
             </ul>
                     
             {% sql {
-            "query" : "select Id, Type, Description, Web from Resources where Id like '%pdm%' and Id not like 'Example%' and Type in ('StructureDefinition', 'ValueSet', 'SearchParameter')",
+            "query" : "select Id, Type, Description, Web from Resources where Id like 'sas-sos-appointment' and Type in ('StructureDefinition', 'ValueSet', 'SearchParameter')",
             "class" : "lines",
             "columns" : [
                 { "title" : "Identifiant", "type" : "link", "source" : "Id", "target" : "Web"},
