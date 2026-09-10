@@ -242,8 +242,7 @@ Cf. [page dédiée](./tests.html)
 ### Performance et volumétrie
 L’agrégateur de disponibilités SAS appelle de manière **synchrone** l’ensemble des solutions éditeurs interfacées pour une **liste de 1 à 25 PS**. Pour des raisons de qualité de service et d’expérience utilisateurs, il est attendu de la part des solutions logicielles éditeurs de garantir un **temps de réponse inférieure à 7 secondes** qui pourra évoluer à l’usage. Passé ce délai, la plateforme numérique SAS déclenchera un « time-out » et toute réponse réceptionnée par la suite ne sera pas prise en compte.
 
-A titre d’information, le tableau ci-dessus contient une estimation de la volumétrie de requêtes émises en 
-une heure par la plateforme numérique SAS :
+A titre d’information, le tableau ci-dessus contient une estimation de la volumétrie de requêtes émises en une heure par la plateforme numérique SAS :
 
 <table>
   <tr>
@@ -255,6 +254,7 @@ une heure par la plateforme numérique SAS :
     <td>Appels max / heure</td>
     <td><center>500</center></td>
     <td><center>3000</center></td>
+  </tr>  
  </table>
 
 *Il s’agit d’estimations et ce nombre pourrait être dépassé en cas de pic de charge.*
