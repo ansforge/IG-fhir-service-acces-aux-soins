@@ -5,7 +5,7 @@ Cette requête s'appuie sur le flux 3A du volet d'agenda partagé du [CI-SIS vol
 <table>
 <tbody>
 <tr>
-  <td width="25%"><p><strong>Endpoint</strong></p></td>
+  <td width="25%"><p><strong>Endpoint éditeur</strong></p></td>
   <td><p>&nbsp;</p></td>
 </tr>
 <tr>
@@ -19,14 +19,6 @@ Cette requête s'appuie sur le flux 3A du volet d'agenda partagé du [CI-SIS vol
 <tr>
   <td width="25%"><p><strong>Version FHIR</strong></p></td>
   <td><p>4.0.1</p></td>
-</tr>
-<tr>
-  <td width="25%"><p><strong>Version package</strong></p></td>
-  <td><p>&nbsp;</p></td>
-</tr>
-<tr>
-  <td width="25%"><p><strong>Publication</strong></p></td>
-  <td><p>&nbsp;</p></td>
 </tr>
 </tbody>
 </table>
@@ -284,3 +276,28 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
 
 ### Validateur ressources
 Cf. [page dédiée](./tests.html)
+
+### Performance et volumétrie
+L’agrégateur de disponibilités de la plateforme numérique SAS appelle de manière **synchrone** l’ensemble des solutions éditeurs interfacées pour une **liste de 1 à 10 SIRET**. Pour des raisons de qualité de service et d’expérience utilisateurs, il est attendu de la part des solutions logicielles éditeurs de garantir un **temps de réponse inférieure à 7 secondes** qui pourra évoluer à l’usage. Passé ce délai, la plateforme numérique SAS déclenchera un « time-out » 
+et toute réponse réceptionnée par la suite ne sera pas prise en compte
+
+A titre d’information, le tableau ci-dessous contient une estimation de la volumétrie de requêtes émises en une heure par la plateforme numérique SAS :
+
+<table>
+  <tr>
+    <th></th>
+    <th>Cible (moyenne)</th>
+  </tr>
+  <tr>
+    <td>Appels max / heure</td>
+    <td style="text-align: center;">750</td>
+  </tr>
+</table>
+
+*Il s’agit d’estimations et ce nombre pourrait être dépassé en cas de pic de charge.*
+*<span style="text-decoration:underline">Hypothèses</span> : Nbr appels aux SAMU par jour : 125 000, Nbr appels réorientés aux OSNP par jour : 16 000, contingence 15%, Nbr de recherches dans la PTF numérique SAS par appel : 4. Nbr de requêtes à destination de SOS Médecins (parmi les 4) : 1.*
+
+### FAQ
+Cf. [Page dédiée](./faq.html#agrégateur-sos-médecins)
+
+
