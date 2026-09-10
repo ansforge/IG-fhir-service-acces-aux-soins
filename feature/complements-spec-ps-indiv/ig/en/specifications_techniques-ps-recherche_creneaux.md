@@ -167,5 +167,5 @@ A titre d’information, le tableau ci-dessus contient une estimation de la volu
 
 ### FAQ
 
-Cf. (./faq.html#agrégateur-ps-à-titre-individuel—cpts)
+Cf. [Page dédiée](./faq.md#agrégateur-ps-à-titre-individuel---cpts)
 
