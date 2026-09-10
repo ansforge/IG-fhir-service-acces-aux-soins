@@ -252,10 +252,10 @@ A titre d’information, le tableau ci-dessus contient une estimation de la volu
   </tr>
   <tr>
     <td>Appels max / heure</td>
-    <td><center>500</center></td>
-    <td><center>3000</center></td>
-  </tr>  
- </table>
+    <td style="text-align: center;">500</td>
+    <td style="text-align: center;">3000</td>
+  </tr>
+</table>
 
 *Il s’agit d’estimations et ce nombre pourrait être dépassé en cas de pic de charge.*
 *<span style="text-decoration:underline">Hypothèses</span> : Nbr appels aux SAMU par jour : 125 000, Nbr appels réorientés aux OSNP par jour : 16 000, contingence 15%, Nbr de recherches dans la PTF numérique SAS par appel : 4.*
