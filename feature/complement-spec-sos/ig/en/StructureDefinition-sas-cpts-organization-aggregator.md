@@ -33,7 +33,7 @@ Other representations of profile: [CSV](../StructureDefinition-sas-cpts-organiza
   "version" : "1.2.0",
   "name" : "FrOrganizationAgregateurCPTS",
   "status" : "active",
-  "date" : "2026-09-10T12:31:30+00:00",
+  "date" : "2026-09-10T12:57:05+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
