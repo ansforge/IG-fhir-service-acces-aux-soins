@@ -11,7 +11,7 @@ Cette requête s'appuie sur le flux 3A du volet d'agenda partagé du [CI-SIS vol
 
 | | |
 | :--- | :--- |
-| **Endpoint éditeur** |   |
+| **Endpoint** | Endpoint éditeur |
 | **Header** | Accept: application/json+fhir |
 | **Encodage** | UTF-8 |
 | **Version FHIR** | 4.0.1 |
