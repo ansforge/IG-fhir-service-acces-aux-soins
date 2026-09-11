@@ -1221,31 +1221,29 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         //
         (function() {
 
-        // Récupère la valeur du paramètre ?usecase=...
         function getParam(name) {
-            var params = new URLSearchParams(window.location.search);
-            return params.get(name);
+            return new URLSearchParams(window.location.search).get(name);
         }
 
-        function activateAllTabs() {
+        function run() {
             var usecase = getParam('usecase');
             if (!usecase) return;
 
-            // Les préfixes de tes 3 blocs d'onglets
-            var prefixes = ['nav-create-', 'nav-put-', 'nav-nom-'];
-
-            prefixes.forEach(function(prefix) {
-            var targetId = '#' + prefix + usecase;
+            ['nav-create-', 'nav-put-', 'nav-nom-'].forEach(function(prefix) {
             var link = document.querySelector(
-                '.nav-tabs a[href="' + targetId + '"]'
+                '.nav-tabs a[href="#' + prefix + usecase + '"]'
             );
             if (link) {
-                jQuery(link).tab('show');
+                link.click();
             }
             });
         }
 
-        jQuery(document).ready(activateAllTabs);
+        if (document.readyState === 'complete') {
+            run();
+        } else {
+            window.addEventListener('load', run);
+        }
 
         })();
         //
@@ -1298,7 +1296,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Le package ans.fhir.fr.sas#1.2.0 est basé sur <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Date de génération : 
-  <span title="2026-09-11 09:05:00 +0000">
+  <span title="2026-09-11 09:30:00 +0000">
     2026-09-11
   </span>
 
