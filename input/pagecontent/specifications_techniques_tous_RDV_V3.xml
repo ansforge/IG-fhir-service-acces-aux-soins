@@ -588,37 +588,37 @@
     <p><a href="./tests.html">Cf. page dédiée</a></p>
 
     <script type="text/javascript">
-//<![CDATA[
-(function() {
+        //<![CDATA[
+        (function() {
 
-  // Récupère la valeur du paramètre ?usecase=...
-  function getParam(name) {
-    var params = new URLSearchParams(window.location.search);
-    return params.get(name);
-  }
+        // Récupère la valeur du paramètre ?usecase=...
+        function getParam(name) {
+            var params = new URLSearchParams(window.location.search);
+            return params.get(name);
+        }
 
-  function activateAllTabs() {
-    var usecase = getParam('usecase');
-    if (!usecase) return;
+        function activateAllTabs() {
+            var usecase = getParam('usecase');
+            if (!usecase) return;
 
-    // Les préfixes de tes 3 blocs d'onglets
-    var prefixes = ['nav-create-', 'nav-put-', 'nav-nom-'];
+            // Les préfixes de tes 3 blocs d'onglets
+            var prefixes = ['nav-create-', 'nav-put-', 'nav-nom-'];
 
-    prefixes.forEach(function(prefix) {
-      var targetId = '#' + prefix + usecase;
-      var link = document.querySelector(
-        '.nav-tabs a[href="' + targetId + '"]'
-      );
-      if (link) {
-        jQuery(link).tab('show');
-      }
-    });
-  }
+            prefixes.forEach(function(prefix) {
+            var targetId = '#' + prefix + usecase;
+            var link = document.querySelector(
+                '.nav-tabs a[href="' + targetId + '"]'
+            );
+            if (link) {
+                jQuery(link).tab('show');
+            }
+            });
+        }
 
-  jQuery(document).ready(activateAllTabs);
+        jQuery(document).ready(activateAllTabs);
 
-})();
-//]]>
-</script>
+        })();
+        //]]>
+    </script>
 
 </div>
