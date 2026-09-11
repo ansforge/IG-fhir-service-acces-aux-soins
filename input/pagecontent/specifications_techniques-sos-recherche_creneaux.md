@@ -5,8 +5,8 @@ Cette requête s'appuie sur le flux 3A du volet d'agenda partagé du [CI-SIS vol
 <table>
 <tbody>
 <tr>
-  <td width="25%"><p><strong>Endpoint éditeur</strong></p></td>
-  <td><p>&nbsp;</p></td>
+  <td width="25%"><p><strong>Endpoint</strong></p></td>
+  <td><p>Endpoint éditeur</p></td>
 </tr>
 <tr>
   <td width="25%"><p><strong>Header</strong></p></td>
@@ -285,7 +285,7 @@ A titre d’information, le tableau ci-dessous contient une estimation de la vol
 <table>
   <tr>
     <th></th>
-    <th>Cible (moyenne)</th>
+    <th style="text-align: center;">Cible (moyenne)</th>
   </tr>
   <tr>
     <td>Appels max / heure</td>
