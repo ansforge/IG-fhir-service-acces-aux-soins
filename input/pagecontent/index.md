@@ -85,7 +85,7 @@ La fludification du parcours régulateurs inclut les éléments suivants :
    - [Recherche de créneaux](./specifications_techniques-sos-recherche_creneaux.html)
    - [Gestion des comptes régulateurs](./specifications_techniques-tous-gestion_regulateur.html)
    - [Délégation d'authentification-SSO](./specifications_techniques_tous_sso.html)
-   - [Gestion de rendez-vous](./specifications_techniques_tous_RDV_V3.html)
+   - [Gestion de rendez-vous](./specifications_techniques_tous_RDV_V3.html?usecase=sos)
 3. [Ressources de conformité](./ressources_cas_dusage_sos.html)
 
 #### Place de marché
@@ -94,7 +94,7 @@ La fludification du parcours régulateurs inclut les éléments suivants :
 2. Spécifications techniques :
    - [Gestion des comptes régulateurs](./specifications_techniques-tous-gestion_regulateur.html)
    - [Délégation d'authentification-SSO](./specifications_techniques_tous_sso.html)
-   - [Gestion de rendez-vous](./specifications_techniques_tous_RDV_V3.html)
+   - [Gestion de rendez-vous](./specifications_techniques_tous_RDV_V3.html?usecase=pdm)
 3. [Ressources de conformité](./ressources_cas_dusage_pdm.html)
 
 #### Fluidification du parcours du régulateur - échanges avec les LRM
