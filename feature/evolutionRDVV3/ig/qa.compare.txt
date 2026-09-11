@@ -1,10 +1,10 @@
 SAS : Validation Results
 =========================================
 
-err = 21, warn = 116, info = 226
+err = 21, warn = 117, info = 226
 $--
 Generated $--. FHIR version $-- for ans.fhir.fr.sas#$-- (canonical = https://interop.esante.gouv.fr/ig/fhir/sas)
- Build Errors : 0 / 6 / 2
+ Build Errors : 4 / 7 / 2
  /__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Appointment-1 : 0 / 3 / 5
  /__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Appointment-12345678 : 0 / 2 / 5
  /__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/fsh-generated/resources/Appointment-123456789 : 0 / 3 / 6
@@ -98,8 +98,13 @@ Generated $--. FHIR version $-- for ans.fhir.fr.sas#$-- (canonical = https://int
 </table>
 == n/a ==
 WARNING: en/index.html#/html/body/div/div/div/div/div/blockquote/p/a at Line 337, column 184: The link 'https://interop.esante.gouv.fr/ig/fhir/sas' for "https://interop.esante.gouv.fr/ig/fhir/sas" is a canonical link and is therefore unsafe with regard to versions
+ERROR: en/index.html#/html/body/div/div/div/div/div/ol/li/ul/li/a at Line 440, column 12: The link './specifications_techniques_tous_RDV_V3.html?usecase=sos' for "Gestion de rendez-vous" cannot be resolved
+ERROR: en/index.html#/html/body/div/div/div/div/div/ol/li/ul/li/a at Line 454, column 12: The link './specifications_techniques_tous_RDV_V3.html?usecase=pdm' for "Gestion de rendez-vous" cannot be resolved
 INFORMATION: en/specifications_techniques-transmission-info-RDV-LRM.html: No conformance term found in the text: 3.3.4). Le message est transmis avec un entête de type "EDXL-DE" (cf Enveloppe EDXL-DE) où distribution.kind est valorisé à Error, encapsulant le contenu du message json qui respecte le modèle suivant (cf. spécifications du Hub Santé 
+WARNING: /__w/IG-fhir-service-acces-aux-soins/IG-fhir-service-acces-aux-soins/igSource/output/en/specifications_techniques_tous_RDV_V3.html#/html/body/div/div/div/div/div/div/script at Line 1227, column 6: The <script> containing the javascript '//         (function'... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 1 other files)
 WARNING: fr/index.html#/html/body/div/div/div/div/div/blockquote/p/a at Line 330, column 184: The link 'https://interop.esante.gouv.fr/ig/fhir/sas' for "https://interop.esante.gouv.fr/ig/fhir/sas" is a canonical link and is therefore unsafe with regard to versions
+ERROR: fr/index.html#/html/body/div/div/div/div/div/ol/li/ul/li/a at Line 433, column 12: The link './specifications_techniques_tous_RDV_V3.html?usecase=sos' for "Gestion de rendez-vous" cannot be resolved
+ERROR: fr/index.html#/html/body/div/div/div/div/div/ol/li/ul/li/a at Line 447, column 12: The link './specifications_techniques_tous_RDV_V3.html?usecase=pdm' for "Gestion de rendez-vous" cannot be resolved
 INFORMATION: fr/specifications_techniques-transmission-info-RDV-LRM.html: No conformance term found in the text: 3.3.4). Le message est transmis avec un entête de type "EDXL-DE" (cf Enveloppe EDXL-DE) où distribution.kind est valorisé à Error, encapsulant le contenu du message json qui respecte le modèle suivant (cf. spécifications du Hub Santé 
 WARNING: 1: An HTML fragment from the set [ip-statements.xhtml, ip-statements.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml, cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide

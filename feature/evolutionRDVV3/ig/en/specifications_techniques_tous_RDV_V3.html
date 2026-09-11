@@ -1223,6 +1223,41 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </div>
     <a name="5"/><h3>Validateur ressources</h3>
     <p><a href="./tests.html">Cf. page dédiée</a></p>
+
+    <script type="text/javascript">
+        //
+        (function() {
+
+        // Récupère la valeur du paramètre ?usecase=...
+        function getParam(name) {
+            var params = new URLSearchParams(window.location.search);
+            return params.get(name);
+        }
+
+        function activateAllTabs() {
+            var usecase = getParam('usecase');
+            if (!usecase) return;
+
+            // Les préfixes de tes 3 blocs d'onglets
+            var prefixes = ['nav-create-', 'nav-put-', 'nav-nom-'];
+
+            prefixes.forEach(function(prefix) {
+            var targetId = '#' + prefix + usecase;
+            var link = document.querySelector(
+                '.nav-tabs a[href="' + targetId + '"]'
+            );
+            if (link) {
+                jQuery(link).tab('show');
+            }
+            });
+        }
+
+        jQuery(document).ready(activateAllTabs);
+
+        })();
+        //
+    </script>
+
 </div>
 </div>
         </div>  <!-- /inner-wrapper -->
@@ -1270,8 +1305,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Package ans.fhir.fr.sas#1.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-10 09:13:00 +0000">
-    2026-09-10
+  <span title="2026-09-11 09:05:00 +0000">
+    2026-09-11
   </span>
 
           <br/>

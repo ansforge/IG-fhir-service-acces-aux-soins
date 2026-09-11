@@ -76,7 +76,7 @@ La fludification du parcours régulateurs inclut les éléments suivants :
 * [Recherche de créneaux](./specifications_techniques-sos-recherche_creneaux.md)
 * [Gestion des comptes régulateurs](./specifications_techniques-tous-gestion_regulateur.md)
 * [Délégation d'authentification-SSO](./specifications_techniques_tous_sso.md)
-* [Gestion de rendez-vous](./specifications_techniques_tous_RDV_V3.md)
+* [Gestion de rendez-vous](./specifications_techniques_tous_RDV_V3.md?usecase=sos)
 
 1. [Ressources de conformité](./ressources_cas_dusage_sos.md)
 
@@ -86,7 +86,7 @@ La fludification du parcours régulateurs inclut les éléments suivants :
 1. Spécifications techniques :
 * [Gestion des comptes régulateurs](./specifications_techniques-tous-gestion_regulateur.md)
 * [Délégation d'authentification-SSO](./specifications_techniques_tous_sso.md)
-* [Gestion de rendez-vous](./specifications_techniques_tous_RDV_V3.md)
+* [Gestion de rendez-vous](./specifications_techniques_tous_RDV_V3.md?usecase=pdm)
 
 1. [Ressources de conformité](./ressources_cas_dusage_pdm.md)
 
