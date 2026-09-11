@@ -591,31 +591,29 @@
         //<![CDATA[
         (function() {
 
-        // Récupère la valeur du paramètre ?usecase=...
         function getParam(name) {
-            var params = new URLSearchParams(window.location.search);
-            return params.get(name);
+            return new URLSearchParams(window.location.search).get(name);
         }
 
-        function activateAllTabs() {
+        function run() {
             var usecase = getParam('usecase');
             if (!usecase) return;
 
-            // Les préfixes de tes 3 blocs d'onglets
-            var prefixes = ['nav-create-', 'nav-put-', 'nav-nom-'];
-
-            prefixes.forEach(function(prefix) {
-            var targetId = '#' + prefix + usecase;
+            ['nav-create-', 'nav-put-', 'nav-nom-'].forEach(function(prefix) {
             var link = document.querySelector(
-                '.nav-tabs a[href="' + targetId + '"]'
+                '.nav-tabs a[href="#' + prefix + usecase + '"]'
             );
             if (link) {
-                jQuery(link).tab('show');
+                link.click();
             }
             });
         }
 
-        jQuery(document).ready(activateAllTabs);
+        if (document.readyState === 'complete') {
+            run();
+        } else {
+            window.addEventListener('load', run);
+        }
 
         })();
         //]]>
