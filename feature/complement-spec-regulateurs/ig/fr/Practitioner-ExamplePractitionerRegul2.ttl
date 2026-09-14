@@ -1,0 +1,57 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/ExamplePractitionerRegul2> a fhir:Practitioner ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "ExamplePractitionerRegul2"] ;
+  fhir:Resource.meta [
+     fhir:Meta.source [ fhir:value "urn:oid:1.2.250.1.213.3.6" ] ;
+     fhir:Meta.profile [
+       fhir:value "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul" ;
+       fhir:index -1 ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/FrPractitionerRegul>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "fr"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : Praticien ExamplePractitionerRegul2</b></p><a name=\"ExamplePractitionerRegul2\"> </a><a name=\"hcExamplePractitionerRegul2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Information Source: <a href=\"https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&amp;canonical=urn:oid:1.2.250.1.213.3.6\">urn:oid:1.2.250.1.213.3.6</a></p><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-FrPractitionerRegul.html\">FrPractitionerRegul</a></p></div><p><b>identifier</b>: Identifiant National de Professionnel de Santé/810002673899</p><p><b>active</b>: true</p><p><b>name</b>: Jules MARIUS </p><p><b>telecom</b>: <a href=\"mailto:jules.marius@test.com\">jules.marius@test.com</a></p></div>"
+  ] ;
+  fhir:Practitioner.identifier [
+     fhir:index -1 ;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "http://interopsante.org/fhir/CodeSystem/fr-v2-0203" ] ;
+         fhir:Coding.code [ fhir:value "IDNPS" ]
+       ]
+     ] ;
+     fhir:Identifier.system [ fhir:value "urn:oid:1.2.250.1.71.4.2.1" ] ;
+     fhir:Identifier.value [ fhir:value "810002673899" ]
+  ] ;
+  fhir:Practitioner.active [ fhir:value "true"^^xsd:boolean] ;
+  fhir:Practitioner.name [
+     fhir:index -1 ;
+     fhir:HumanName.family [ fhir:value "MARIUS" ] ;
+     fhir:HumanName.given [
+       fhir:value "Jules" ;
+       fhir:index -1
+     ]
+  ] ;
+  fhir:Practitioner.telecom [
+     fhir:index -1 ;
+     fhir:ContactPoint.system [ fhir:value "email" ] ;
+     fhir:ContactPoint.value [ fhir:value "jules.marius@test.com" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/sas/Practitioner/ExamplePractitionerRegul2.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
