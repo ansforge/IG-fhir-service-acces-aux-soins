@@ -67,6 +67,42 @@
         body:has(#uc-pdm:target) .nomenclatures-tabs-wrapper #nav-nom-pdm {
             display: block !important;
         }
+
+        /* ===== Surlignage de l'onglet actif ===== */
+
+        /* Onglet actif par défaut : PS indiv/CPTS */
+        .nav-tabs a[href="#uc-ps-indiv-cpts"] {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-bottom-color: transparent;
+            font-weight: bold;
+        }
+
+        /* Sélection SOS : on enlève le surlignage du défaut, on l'ajoute à SOS */
+        body:has(#uc-sos:target) .nav-tabs a[href="#uc-ps-indiv-cpts"] {
+            background-color: transparent;
+            border: 1px solid transparent;
+            font-weight: normal;
+        }
+        body:has(#uc-sos:target) .nav-tabs a[href="#uc-sos"] {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-bottom-color: transparent;
+            font-weight: bold;
+        }
+
+        /* Sélection PDM : on enlève le surlignage du défaut, on l'ajoute à PDM */
+        body:has(#uc-pdm:target) .nav-tabs a[href="#uc-ps-indiv-cpts"] {
+            background-color: transparent;
+            border: 1px solid transparent;
+            font-weight: normal;
+        }
+        body:has(#uc-pdm:target) .nav-tabs a[href="#uc-pdm"] {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-bottom-color: transparent;
+            font-weight: bold;
+        }
     </style>
 
     <a name="Caracteristiques-API"> </a>
