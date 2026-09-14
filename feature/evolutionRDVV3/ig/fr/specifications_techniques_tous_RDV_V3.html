@@ -323,6 +323,42 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         body:has(#uc-pdm:target) .nomenclatures-tabs-wrapper #nav-nom-pdm {
             display: block !important;
         }
+
+        /* ===== Surlignage de l'onglet actif ===== */
+
+        /* Onglet actif par défaut : PS indiv/CPTS */
+        .nav-tabs a[href="#uc-ps-indiv-cpts"] {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-bottom-color: transparent;
+            font-weight: bold;
+        }
+
+        /* Sélection SOS : on enlève le surlignage du défaut, on l'ajoute à SOS */
+        body:has(#uc-sos:target) .nav-tabs a[href="#uc-ps-indiv-cpts"] {
+            background-color: transparent;
+            border: 1px solid transparent;
+            font-weight: normal;
+        }
+        body:has(#uc-sos:target) .nav-tabs a[href="#uc-sos"] {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-bottom-color: transparent;
+            font-weight: bold;
+        }
+
+        /* Sélection PDM : on enlève le surlignage du défaut, on l'ajoute à PDM */
+        body:has(#uc-pdm:target) .nav-tabs a[href="#uc-ps-indiv-cpts"] {
+            background-color: transparent;
+            border: 1px solid transparent;
+            font-weight: normal;
+        }
+        body:has(#uc-pdm:target) .nav-tabs a[href="#uc-pdm"] {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-bottom-color: transparent;
+            font-weight: bold;
+        }
     </style>
 
     <a name="Caracteristiques-API">  </a>
@@ -1299,7 +1335,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Le package ans.fhir.fr.sas#1.2.0 est basé sur <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Date de génération : 
-  <span title="2026-09-14 12:40:00 +0000">
+  <span title="2026-09-14 13:01:00 +0000">
     2026-09-14
   </span>
 

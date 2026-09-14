@@ -33,7 +33,7 @@ Other representations of profile: [CSV](../StructureDefinition-sas-sos-location-
   "version" : "1.2.0",
   "name" : "FrLocationAgregateurSOS",
   "status" : "active",
-  "date" : "2026-09-14T12:40:07+00:00",
+  "date" : "2026-09-14T13:01:31+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
