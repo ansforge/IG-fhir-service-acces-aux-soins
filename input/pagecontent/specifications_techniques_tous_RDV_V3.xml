@@ -14,87 +14,58 @@
     <!-- Styles                                                        -->
     <!-- ============================================================= -->
     <style type="text/css">
-        <!-- Masquer les ancres injectées par l'IG Publisher dans les nav-tabs -->
+        /* Masquer les ancres injectées par l'IG Publisher dans les nav-tabs */
         .examples-tabs-wrapper .nav-tabs a[name],
         .examples2-tabs-wrapper .nav-tabs a[name],
         .nomenclatures-tabs-wrapper .nav-tabs a[name] {
             display: none !important;
         }
 
-        <!-- Système d'onglets CSS-only (:target) -->
+        /* ===== Système d'onglets CSS-only (:target via :has) ===== */
 
-       <!-- Par défaut, tous les panneaux sont masqués -->
+        /* On masque TOUS les panneaux en priorité */
         .examples-tabs-wrapper .tab-pane,
         .examples2-tabs-wrapper .tab-pane,
         .nomenclatures-tabs-wrapper .tab-pane {
-            display: none;
+            display: none !important;
         }
 
-        <!-- Panneau affiché par défaut : PS indiv/CPTS -->
+        /* Affichage par défaut (aucun cas d'usage ciblé) : PS indiv/CPTS */
         .examples-tabs-wrapper #nav-create-ps-indiv-cpts,
         .examples2-tabs-wrapper #nav-put-ps-indiv-cpts,
         .nomenclatures-tabs-wrapper #nav-nom-ps-indiv-cpts {
-            display: block;
+            display: block !important;
         }
 
-        <!-- Sélection SOS -->
-        #uc-sos:target ~ .examples-tabs-wrapper #nav-create-ps-indiv-cpts,
-        #uc-sos:target ~ .examples2-tabs-wrapper #nav-put-ps-indiv-cpts,
-        #uc-sos:target ~ .nomenclatures-tabs-wrapper #nav-nom-ps-indiv-cpts {
-            display: none;
-        }
-        #uc-sos:target ~ .examples-tabs-wrapper #nav-create-sos,
-        #uc-sos:target ~ .examples2-tabs-wrapper #nav-put-sos,
-        #uc-sos:target ~ .nomenclatures-tabs-wrapper #nav-nom-sos {
-            display: block;
+        /* PS indiv/CPTS explicitement ciblé */
+        body:has(#uc-ps-indiv-cpts:target) .examples-tabs-wrapper #nav-create-ps-indiv-cpts,
+        body:has(#uc-ps-indiv-cpts:target) .examples2-tabs-wrapper #nav-put-ps-indiv-cpts,
+        body:has(#uc-ps-indiv-cpts:target) .nomenclatures-tabs-wrapper #nav-nom-ps-indiv-cpts {
+            display: block !important;
         }
 
-        <!-- Sélection PDM -->
-        #uc-pdm:target ~ .examples-tabs-wrapper #nav-create-ps-indiv-cpts,
-        #uc-pdm:target ~ .examples2-tabs-wrapper #nav-put-ps-indiv-cpts,
-        #uc-pdm:target ~ .nomenclatures-tabs-wrapper #nav-nom-ps-indiv-cpts {
-            display: none;
+        /* ===== Sélection SOS ===== */
+        body:has(#uc-sos:target) .examples-tabs-wrapper #nav-create-ps-indiv-cpts,
+        body:has(#uc-sos:target) .examples2-tabs-wrapper #nav-put-ps-indiv-cpts,
+        body:has(#uc-sos:target) .nomenclatures-tabs-wrapper #nav-nom-ps-indiv-cpts {
+            display: none !important;
         }
-        #uc-pdm:target ~ .examples-tabs-wrapper #nav-create-pdm,
-        #uc-pdm:target ~ .examples2-tabs-wrapper #nav-put-pdm,
-        #uc-pdm:target ~ .nomenclatures-tabs-wrapper #nav-nom-pdm {
-            display: block;
-        }
-
-        <!-- Surlignage de l'onglet actif (nav-tabs) -->
-
-        <!-- Onglet actif par défaut : PS indiv/CPTS -->
-        .nav-tabs a[href="#uc-ps-indiv-cpts"] {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-bottom-color: transparent;
-            font-weight: bold;
+        body:has(#uc-sos:target) .examples-tabs-wrapper #nav-create-sos,
+        body:has(#uc-sos:target) .examples2-tabs-wrapper #nav-put-sos,
+        body:has(#uc-sos:target) .nomenclatures-tabs-wrapper #nav-nom-sos {
+            display: block !important;
         }
 
-        <!-- Quand SOS est ciblé -->
-        #uc-sos:target ~ * .nav-tabs a[href="#uc-ps-indiv-cpts"] {
-            background-color: transparent;
-            border: 1px solid transparent;
-            font-weight: normal;
+        /* ===== Sélection PDM ===== */
+        body:has(#uc-pdm:target) .examples-tabs-wrapper #nav-create-ps-indiv-cpts,
+        body:has(#uc-pdm:target) .examples2-tabs-wrapper #nav-put-ps-indiv-cpts,
+        body:has(#uc-pdm:target) .nomenclatures-tabs-wrapper #nav-nom-ps-indiv-cpts {
+            display: none !important;
         }
-        #uc-sos:target ~ * .nav-tabs a[href="#uc-sos"] {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-bottom-color: transparent;
-            font-weight: bold;
-        }
-
-        <!-- Quand PDM est ciblé -->
-        #uc-pdm:target ~ * .nav-tabs a[href="#uc-ps-indiv-cpts"] {
-            background-color: transparent;
-            border: 1px solid transparent;
-            font-weight: normal;
-        }
-        #uc-pdm:target ~ * .nav-tabs a[href="#uc-pdm"] {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-bottom-color: transparent;
-            font-weight: bold;
+        body:has(#uc-pdm:target) .examples-tabs-wrapper #nav-create-pdm,
+        body:has(#uc-pdm:target) .examples2-tabs-wrapper #nav-put-pdm,
+        body:has(#uc-pdm:target) .nomenclatures-tabs-wrapper #nav-nom-pdm {
+            display: block !important;
         }
     </style>
 
