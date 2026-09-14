@@ -11,8 +11,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.482"],
     "uses" : {
     },
-    "StructureDefinition-sas-cpts-slot-aggregator.html" : "FrSlotAgregateurCPTS",
     "StructureDefinition-FrSlotAgregateur.html" : "FrSlotAgregateur",
+    "StructureDefinition-sas-cpts-slot-aggregator.html" : "FrSlotAgregateurCPTS",
     "StructureDefinition-sas-sos-slot-aggregator.html" : "FrSlotAgregateurSOS"
   },
   {
@@ -25,16 +25,16 @@
     "systems" : ["https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"],
     "uses" : {
     },
-    "StructureDefinition-FrScheduleAgregateur.html" : "FrScheduleAgregateur",
+    "StructureDefinition-FrSlotAgregateur.html" : "FrSlotAgregateur",
     "StructureDefinition-sas-cpts-slot-aggregator.html" : "FrSlotAgregateurCPTS",
     "StructureDefinition-FrPractitionerRoleExerciceAgregateur.html" : "FrPractitionerRoleExerciceAgregateur",
-    "StructureDefinition-sas-cpts-healthcareservice-aggregator.html" : "FrHealthcareServiceAgregateurCPTS",
-    "StructureDefinition-FrSlotAgregateur.html" : "FrSlotAgregateur",
+    "StructureDefinition-sas-pdm-appointment.html" : "FrAppointmentSASPDM",
     "StructureDefinition-sas-sos-appointment.html" : "FrAppointmentSASSOS",
-    "StructureDefinition-FrAppointmentSAS.html" : "FrAppointmentSAS",
-    "StructureDefinition-sas-sos-slot-aggregator.html" : "FrSlotAgregateurSOS",
     "StructureDefinition-sas-sos-schedule-aggregator.html" : "FrScheduleAgregateurSOS",
-    "StructureDefinition-sas-pdm-appointment.html" : "FrAppointmentSASPDM"
+    "StructureDefinition-sas-sos-slot-aggregator.html" : "FrSlotAgregateurSOS",
+    "StructureDefinition-FrScheduleAgregateur.html" : "FrScheduleAgregateur",
+    "StructureDefinition-FrAppointmentSAS.html" : "FrAppointmentSAS",
+    "StructureDefinition-sas-cpts-healthcareservice-aggregator.html" : "FrHealthcareServiceAgregateurCPTS"
   },
   {
     "url" : "http://terminology.hl7.org/ValueSet/v2-0276",
@@ -48,12 +48,12 @@
     "sources" : ["2.16.840.1.113883.21.181"],
     "uses" : {
     },
-    "StructureDefinition-sas-cpts-slot-aggregator.html" : "FrSlotAgregateurCPTS",
     "StructureDefinition-FrSlotAgregateur.html" : "FrSlotAgregateur",
+    "StructureDefinition-sas-cpts-slot-aggregator.html" : "FrSlotAgregateurCPTS",
+    "StructureDefinition-sas-pdm-appointment.html" : "FrAppointmentSASPDM",
     "StructureDefinition-sas-sos-appointment.html" : "FrAppointmentSASSOS",
-    "StructureDefinition-FrAppointmentSAS.html" : "FrAppointmentSAS",
     "StructureDefinition-sas-sos-slot-aggregator.html" : "FrSlotAgregateurSOS",
-    "StructureDefinition-sas-pdm-appointment.html" : "FrAppointmentSASPDM"
+    "StructureDefinition-FrAppointmentSAS.html" : "FrAppointmentSAS"
   },
   {
     "url" : "http://terminology.hl7.org/ValueSet/v3-ActEncounterCode",
@@ -67,8 +67,8 @@
     "sources" : ["2.16.840.1.113883.1.11.13955"],
     "uses" : {
     },
-    "StructureDefinition-sas-cpts-slot-aggregator.html" : "FrSlotAgregateurCPTS",
-    "StructureDefinition-FrSlotAgregateur.html" : "FrSlotAgregateur"
+    "StructureDefinition-FrSlotAgregateur.html" : "FrSlotAgregateur",
+    "StructureDefinition-sas-cpts-slot-aggregator.html" : "FrSlotAgregateurCPTS"
   },
   {
     "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/categorie-orientation-sas-valueset",
@@ -117,9 +117,9 @@
     "systems" : ["http://hl7.org/fhir/appointmentstatus"],
     "uses" : {
     },
+    "StructureDefinition-sas-pdm-appointment.html" : "FrAppointmentSASPDM",
     "StructureDefinition-sas-sos-appointment.html" : "FrAppointmentSASSOS",
-    "StructureDefinition-FrAppointmentSAS.html" : "FrAppointmentSAS",
-    "StructureDefinition-sas-pdm-appointment.html" : "FrAppointmentSASPDM"
+    "StructureDefinition-FrAppointmentSAS.html" : "FrAppointmentSAS"
   },
   {
     "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-appointmentparticipanttype",
@@ -165,9 +165,9 @@
     "systems" : ["http://hl7.org/fhir/participationstatus"],
     "uses" : {
     },
+    "StructureDefinition-sas-pdm-appointment.html" : "FrAppointmentSASPDM",
     "StructureDefinition-sas-sos-appointment.html" : "FrAppointmentSASSOS",
-    "StructureDefinition-FrAppointmentSAS.html" : "FrAppointmentSAS",
-    "StructureDefinition-sas-pdm-appointment.html" : "FrAppointmentSASPDM"
+    "StructureDefinition-FrAppointmentSAS.html" : "FrAppointmentSAS"
   },
   {
     "url" : "https://interop.esante.gouv.fr/ig/fhir/sas/ValueSet/sas-valueset-typeconsultation",
@@ -191,8 +191,8 @@
     "systems" : ["http://interopsante.org/fhir/CodeSystem/fr-v2-0203"],
     "uses" : {
     },
-    "StructureDefinition-sas-sos-appointment.html" : "FrAppointmentSASSOS",
-    "StructureDefinition-sas-pdm-appointment.html" : "FrAppointmentSASPDM"
+    "StructureDefinition-sas-pdm-appointment.html" : "FrAppointmentSASPDM",
+    "StructureDefinition-sas-sos-appointment.html" : "FrAppointmentSASSOS"
   },
   {
     "url" : "https://mos.esante.gouv.fr/NOS/JDV_J165-TypeCreneau-SAS/FHIR/JDV-J165-TypeCreneau-SAS",
