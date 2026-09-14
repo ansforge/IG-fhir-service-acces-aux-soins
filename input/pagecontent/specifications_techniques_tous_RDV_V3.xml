@@ -1,21 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/r5/fhir-single.xsd">
 
+    <!-- ============================================================= -->
+    <!-- Ancres cibles pour la présélection CSS-only (:target)         -->
+    <!-- Un lien ...html#uc-sos activera "SOS Médecins" dans les 3     -->
+    <!-- sections. Valeurs : uc-ps-indiv-cpts / uc-sos / uc-pdm        -->
+    <!-- ============================================================= -->
+    <span id="uc-ps-indiv-cpts"> </span>
+    <span id="uc-sos"> </span>
+    <span id="uc-pdm"> </span>
+
+    <!-- ============================================================= -->
+    <!-- Styles                                                        -->
+    <!-- ============================================================= -->
     <style type="text/css">
-        .examples-tabs-wrapper .nav-tabs a[name]{
-            display:none !important;
+        <!-- Masquer les ancres injectées par l'IG Publisher dans les nav-tabs -->
+        .examples-tabs-wrapper .nav-tabs a[name],
+        .examples2-tabs-wrapper .nav-tabs a[name],
+        .nomenclatures-tabs-wrapper .nav-tabs a[name] {
+            display: none !important;
+        }
+
+        <!-- Système d'onglets CSS-only (:target) -->
+
+       <!-- Par défaut, tous les panneaux sont masqués -->
+        .examples-tabs-wrapper .tab-pane,
+        .examples2-tabs-wrapper .tab-pane,
+        .nomenclatures-tabs-wrapper .tab-pane {
+            display: none;
+        }
+
+        <!-- Panneau affiché par défaut : PS indiv/CPTS -->
+        .examples-tabs-wrapper #nav-create-ps-indiv-cpts,
+        .examples2-tabs-wrapper #nav-put-ps-indiv-cpts,
+        .nomenclatures-tabs-wrapper #nav-nom-ps-indiv-cpts {
+            display: block;
+        }
+
+        <!-- Sélection SOS -->
+        #uc-sos:target ~ .examples-tabs-wrapper #nav-create-ps-indiv-cpts,
+        #uc-sos:target ~ .examples2-tabs-wrapper #nav-put-ps-indiv-cpts,
+        #uc-sos:target ~ .nomenclatures-tabs-wrapper #nav-nom-ps-indiv-cpts {
+            display: none;
+        }
+        #uc-sos:target ~ .examples-tabs-wrapper #nav-create-sos,
+        #uc-sos:target ~ .examples2-tabs-wrapper #nav-put-sos,
+        #uc-sos:target ~ .nomenclatures-tabs-wrapper #nav-nom-sos {
+            display: block;
+        }
+
+        <!-- Sélection PDM -->
+        #uc-pdm:target ~ .examples-tabs-wrapper #nav-create-ps-indiv-cpts,
+        #uc-pdm:target ~ .examples2-tabs-wrapper #nav-put-ps-indiv-cpts,
+        #uc-pdm:target ~ .nomenclatures-tabs-wrapper #nav-nom-ps-indiv-cpts {
+            display: none;
+        }
+        #uc-pdm:target ~ .examples-tabs-wrapper #nav-create-pdm,
+        #uc-pdm:target ~ .examples2-tabs-wrapper #nav-put-pdm,
+        #uc-pdm:target ~ .nomenclatures-tabs-wrapper #nav-nom-pdm {
+            display: block;
+        }
+
+        <!-- Surlignage de l'onglet actif (nav-tabs) -->
+
+        <!-- Onglet actif par défaut : PS indiv/CPTS -->
+        .nav-tabs a[href="#uc-ps-indiv-cpts"] {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-bottom-color: transparent;
+            font-weight: bold;
+        }
+
+        <!-- Quand SOS est ciblé -->
+        #uc-sos:target ~ * .nav-tabs a[href="#uc-ps-indiv-cpts"] {
+            background-color: transparent;
+            border: 1px solid transparent;
+            font-weight: normal;
+        }
+        #uc-sos:target ~ * .nav-tabs a[href="#uc-sos"] {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-bottom-color: transparent;
+            font-weight: bold;
+        }
+
+        <!-- Quand PDM est ciblé -->
+        #uc-pdm:target ~ * .nav-tabs a[href="#uc-ps-indiv-cpts"] {
+            background-color: transparent;
+            border: 1px solid transparent;
+            font-weight: normal;
+        }
+        #uc-pdm:target ~ * .nav-tabs a[href="#uc-pdm"] {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-bottom-color: transparent;
+            font-weight: bold;
         }
     </style>
-    <style type="text/css">
-        .examples2-tabs-wrapper .nav-tabs a[name]{
-            display:none !important;
-        }
-    </style>
-    <style type="text/css">
-        .nomenclatures-tabs-wrapper .nav-tabs a[name]{
-            display:none !important;
-        }
-    </style>
+
     <a name="Caracteristiques-API"> </a>
     <h3>Caractéristiques de l'API</h3>
 
@@ -119,15 +201,9 @@
     <div class="examples-tabs-wrapper">
         <div class="examples-tabs-container">
             <ul class="nav nav-tabs" role="tablist">
-                <li class="active">
-                    <a href="#nav-create-ps-indiv-cpts" data-toggle="tab">PS indiv/CPTS</a>
-                </li>
-                <li>
-                    <a href="#nav-create-sos" data-toggle="tab">SOS Médecins</a>
-                </li>
-                <li>
-                    <a href="#nav-create-pdm" data-toggle="tab">Place de Marché</a>
-                </li>
+                <li><a href="#uc-ps-indiv-cpts">PS indiv/CPTS</a></li>
+                <li><a href="#uc-sos">SOS Médecins</a></li>
+                <li><a href="#uc-pdm">Place de Marché</a></li>
             </ul>
         <!-- Exemple POST PS individuel/CPTS -->
             <div class="tab-content">
@@ -247,15 +323,9 @@
     <div class="examples2-tabs-wrapper">
         <div class="examples2-tabs-container">
             <ul class="nav nav-tabs" role="tablist">
-                <li class="active">
-                    <a href="#nav-put-ps-indiv-cpts" data-toggle="tab">PS indiv/CPTS</a>
-                </li>
-                <li>
-                    <a href="#nav-put-sos" data-toggle="tab">SOS Médecins</a>
-                </li>
-                <li>
-                    <a href="#nav-put-pdm" data-toggle="tab">Place de Marché</a>
-                </li>
+                <li><a href="#uc-ps-indiv-cpts">PS indiv/CPTS</a></li>
+                <li><a href="#uc-sos">SOS Médecins</a></li>
+                <li><a href="#uc-pdm">Place de Marché</a></li>
             </ul>
         <!-- Exemple PUT PS individuel/CPTS -->
             <div class="tab-content">
@@ -326,15 +396,9 @@
     <div class="nomenclatures-tabs-wrapper">
         <div class="nomenclatures-tabs-container">
             <ul class="nav nav-tabs" role="tablist">
-                <li class="active">
-                    <a href="#nav-nom-ps-indiv-cpts" data-toggle="tab">PS indiv/CPTS</a>
-                </li>
-                <li>
-                    <a href="#nav-nom-sos" data-toggle="tab">SOS Médecins</a>
-                </li>
-                <li>
-                    <a href="#nav-nom-pdm" data-toggle="tab">Place de Marché</a>
-                </li>
+                <li><a href="#uc-ps-indiv-cpts">PS indiv/CPTS</a></li>
+                <li><a href="#uc-sos">SOS Médecins</a></li>
+                <li><a href="#uc-pdm">Place de Marché</a></li>
             </ul>
         <!-- Contenu section Nomenclatures PS individuel/CPTS -->
             <div class="tab-content">
@@ -586,37 +650,5 @@
     </div>
     <h3>Validateur ressources</h3>
     <p><a href="./tests.html">Cf. page dédiée</a></p>
-
-    <script type="text/javascript">
-        //<![CDATA[
-        (function() {
-
-        function getParam(name) {
-            return new URLSearchParams(window.location.search).get(name);
-        }
-
-        function run() {
-            var usecase = getParam('usecase');
-            if (!usecase) return;
-
-            ['nav-create-', 'nav-put-', 'nav-nom-'].forEach(function(prefix) {
-            var link = document.querySelector(
-                '.nav-tabs a[href="#' + prefix + usecase + '"]'
-            );
-            if (link) {
-                link.click();
-            }
-            });
-        }
-
-        if (document.readyState === 'complete') {
-            run();
-        } else {
-            window.addEventListener('load', run);
-        }
-
-        })();
-        //]]>
-    </script>
 
 </div>
