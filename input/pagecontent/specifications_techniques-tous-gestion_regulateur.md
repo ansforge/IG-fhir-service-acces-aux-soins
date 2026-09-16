@@ -6,7 +6,7 @@
 <tbody>
 <tr>
   <td width="25%"><p><strong>Endpoint</strong></p></td>
-  <td><p>&nbsp;</p></td>
+  <td><p>Endpoint éditeur</p></td>
 </tr>
 <tr>
   <td width="25%"><p><strong>Header</strong></p></td>
@@ -19,14 +19,6 @@
 <tr>
   <td width="25%"><p><strong>Version FHIR</strong></p></td>
   <td><p>4.0.1</p></td>
-</tr>
-<tr>
-  <td width="25%"><p><strong>Version package</strong></p></td>
-  <td><p>&nbsp;</p></td>
-</tr>
-<tr>
-  <td width="25%"><p><strong>Publication</strong></p></td>
-  <td><p>&nbsp;</p></td>
 </tr>
 </tbody>
 </table>
@@ -181,3 +173,35 @@ Cette section détaille les règles de gestion à utiliser au niveau des éléme
   - Si le champ est valorisé à `true` le compte doit être habilité et actif, si le champ est valorisé à `false` le compte doit être déshabilité ou désactivé.
 - **Source de la requête :**
   - La requête venant de la plateforme numérique SAS, le champ meta.source sera toujours valorisé à : `urn:oid:1.2.250.1.213.3.6`.
+
+### Volumétrie
+A titre d’information, le tableau ci-dessous contient une estimation de la volumétrie de comptes régulateurs à prévoir 
+et un ordre de grandeur sur le nombre d’appels :
+<table>
+  <tr>
+    <th></th>
+    <th>Pilote</th>
+    <th>Cible</th>
+  </tr>
+  <tr>
+    <td>Nombre total de comptes</td>
+    <td style="text-align: center;">1000</td>
+    <td style="text-align: center;">3500</td>
+  </tr>
+  <tr>
+    <td>Nombre de comptes à créer quotidiennement</td>
+    <td style="text-align: center;"><1</td>
+    <td style="text-align: center;"><2</td>
+  </tr>
+  <tr>
+    <td>Nombre de mises à jour quotidiennes</td>
+    <td style="text-align: center;"><3</td>
+    <td style="text-align: center;"><10</td>
+  </tr>
+</table>
+
+*Il s’agit d’estimations et ce nombre pourrait être dépassé en cas de pic de charge.*
+*<span style="text-decoration:underline">Hypothèses</span> : Turnover à 5 ans en moyenne et mise à jour des informations du compte une fois par an*
+
+### FAQ
+Cf. [Page dédiée](./faq.html#gestion-des-comptes-régulateurs)
