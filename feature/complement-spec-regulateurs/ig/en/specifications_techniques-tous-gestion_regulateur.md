@@ -9,12 +9,10 @@ There is no translation page available for the current page, so it has been rend
 
 | | |
 | :--- | :--- |
-| **Endpoint** |   |
+| **Endpoint** | Endpoint éditeur |
 | **Header** | Accept: application/json+fhir |
 | **Encodage** | UTF-8 |
 | **Version FHIR** | 4.0.1 |
-| **Version package** |   |
-| **Publication** |   |
 
 ### Création de compte régulateur
 
@@ -136,4 +134,24 @@ Cette section détaille les règles de gestion à utiliser au niveau des éléme
 * **Source de la requête :** 
 * La requête venant de la plateforme numérique SAS, le champ meta.source sera toujours valorisé à : `urn:oid:1.2.250.1.213.3.6`.
  
+
+### Volumétrie
+
+A titre d’information, le tableau ci-dessous contient une estimation de la volumétrie de comptes régulateurs à prévoir et un ordre de grandeur sur le nombre d’appels :
+
+* : Nombre total de comptes
+  * Pilote: 1000
+  * Cible: 3500
+* : Nombre de comptes à créer quotidiennement
+  * Pilote: <1
+  * Cible: <2
+* : Nombre de mises à jour quotidiennes
+  * Pilote: <3
+  * Cible: <10
+
+**Il s’agit d’estimations et ce nombre pourrait être dépassé en cas de pic de charge.** **Hypothèses : Turnover à 5 ans en moyenne et mise à jour des informations du compte une fois par an**
+
+### FAQ
+
+Cf. [Page dédiée](./faq.md#gestion-des-comptes-régulateurs)
 

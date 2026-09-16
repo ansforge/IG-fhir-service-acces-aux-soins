@@ -280,6 +280,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#mise-à-jour-dun-compte-régulateur" id="markdown-toc-mise-à-jour-dun-compte-régulateur">Mise à jour d'un compte régulateur</a></li>
   <li><a href="#suppression-dun-compte-régulateur" id="markdown-toc-suppression-dun-compte-régulateur">Suppression d'un compte régulateur</a></li>
   <li><a href="#règles-de-gestion" id="markdown-toc-règles-de-gestion">Règles de gestion</a></li>
+  <li><a href="#volumétrie" id="markdown-toc-volumétrie">Volumétrie</a></li>
+  <li><a href="#faq" id="markdown-toc-faq">FAQ</a></li>
 </ul>
 
 </div>
@@ -291,7 +293,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <tbody>
 <tr>
   <td width="25%"><p><strong>Endpoint</strong></p></td>
-  <td><p>&nbsp;</p></td>
+  <td><p>Endpoint éditeur</p></td>
 </tr>
 <tr>
   <td width="25%"><p><strong>Header</strong></p></td>
@@ -304,14 +306,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <tr>
   <td width="25%"><p><strong>Version FHIR</strong></p></td>
   <td><p>4.0.1</p></td>
-</tr>
-<tr>
-  <td width="25%"><p><strong>Version package</strong></p></td>
-  <td><p>&nbsp;</p></td>
-</tr>
-<tr>
-  <td width="25%"><p><strong>Publication</strong></p></td>
-  <td><p>&nbsp;</p></td>
 </tr>
 </tbody>
 </table>
@@ -539,6 +533,37 @@ détails sur la raison de l'échec</li>
   </li>
 </ul>
 
+<h3 id="volumétrie">Volumétrie</h3>
+<p>A titre d’information, le tableau ci-dessous contient une estimation de la volumétrie de comptes régulateurs à prévoir 
+et un ordre de grandeur sur le nombre d’appels :</p>
+<table>
+  <tr>
+    <th></th>
+    <th>Pilote</th>
+    <th>Cible</th>
+  </tr>
+  <tr>
+    <td>Nombre total de comptes</td>
+    <td style="text-align: center;">1000</td>
+    <td style="text-align: center;">3500</td>
+  </tr>
+  <tr>
+    <td>Nombre de comptes à créer quotidiennement</td>
+    <td style="text-align: center;">&lt;1</td>
+    <td style="text-align: center;">&lt;2</td>
+  </tr>
+  <tr>
+    <td>Nombre de mises à jour quotidiennes</td>
+    <td style="text-align: center;">&lt;3</td>
+    <td style="text-align: center;">&lt;10</td>
+  </tr>
+</table>
+
+<p><em>Il s’agit d’estimations et ce nombre pourrait être dépassé en cas de pic de charge.</em>
+<em><span style="text-decoration:underline">Hypothèses</span> : Turnover à 5 ans en moyenne et mise à jour des informations du compte une fois par an</em></p>
+
+<h3 id="faq">FAQ</h3>
+<p>Cf. <a href="./faq.html#gestion-des-comptes-régulateurs">Page dédiée</a></p>
 
 
 
@@ -588,8 +613,8 @@ détails sur la raison de l'échec</li>
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Package ans.fhir.fr.sas#1.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-14 07:55:00 +0000">
-    2026-09-14
+  <span title="2026-09-16 16:05:00 +0000">
+    2026-09-16
   </span>
 
           <br/>
