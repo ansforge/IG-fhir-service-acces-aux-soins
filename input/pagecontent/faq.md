@@ -633,11 +633,10 @@ Lorsque le PS effecteur de soins n’est pas connu au préalable (ex. agendas de
 
 #### Quel est le format JSON de la requête de mise à jour (PUT) à transmettre lorsqu'un PS effecteur de soins méconnu lors de la requête de création est désormais connu (ex. SOS Médecins) ?
 Les champs de la requête de création JSON initiale évoluent et sont valorisés à : 
-<ul>
-  <li>`status` (correspondant au statut du rendez-vous) : booked </li>
-  <li>`participant.status` (correspondant au statut d’acceptation du rendez-vous par le PS effecteur de soins) : accepted </li>
-  <li>`participant.actor.identifier.type`, `participant.actor.identifier.system` et `participant.actor.identifier.value` (correspondant aux données du PS effecteur de soins) sont communiquées Cf. [Nomenclatures](./specifications_techniques_tous_RDV_V3.html#nomenclatures).</li>
-</ul> 
+* `status` (correspondant au statut du rendez-vous) : booked </li>
+* `participant.status` (correspondant au statut d’acceptation du rendez-vous par le PS effecteur de soins) : accepted </li>
+* `participant.actor.identifier.type`, `participant.actor.identifier.system` et `participant.actor.identifier.value` (correspondant aux données du PS effecteur de soins) sont communiquées Cf. [Nomenclatures](./specifications_techniques_tous_RDV_V3.html#nomenclatures).</li>
+
 {%include Appointment-123456789-json-html.xhtml%}
 
 <br><br>
