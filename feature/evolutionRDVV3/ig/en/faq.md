@@ -176,9 +176,9 @@ Lorsque le PS effecteur de soins est connu à la mise à disposition du créneau
 
 Les champs de la requête de création JSON initiale évoluent et sont valorisés à :
 
-* `status` (correspondant au statut du rendez-vous) : booked 
-* `participant.status` (correspondant au statut d’acceptation du rendez-vous par le PS effecteur de soins) : accepted 
-* `participant.actor.identifier.type`, `participant.actor.identifier.system` et `participant.actor.identifier.value` (correspondant aux données du PS effecteur de soins) sont communiquées Cf. [Nomenclatures](./specifications_techniques_tous_RDV_V3.html#nomenclatures).
+* `status` (correspondant au statut du rendez-vous) : booked </li>
+* `participant.status` (correspondant au statut d’acceptation du rendez-vous par le PS effecteur de soins) : accepted </li>
+* `participant.actor.identifier.type`, `participant.actor.identifier.system` et `participant.actor.identifier.value` (correspondant aux données du PS effecteur de soins) sont communiquées Cf. [Nomenclatures](./specifications_techniques_tous_RDV_V3.md#nomenclatures).</li>
 
 ### Transmission des informations de RDV aux LRM
 

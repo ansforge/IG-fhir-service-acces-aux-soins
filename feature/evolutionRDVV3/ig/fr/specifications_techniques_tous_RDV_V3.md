@@ -6,12 +6,11 @@
 
 | | |
 | :--- | :--- |
-| **Endpoint** |   |
+| **Endpoint** | Endpoint PTF SAS |
 | **Header** | Accept: application/json+fhir |
 | **Encodage** | UTF-8 |
 | **Version FHIR** | 4.0.1 |
-| **Version package** |   |
-| **Publication** |   |
+| **Version spécifications** | 3.3 |
 
 ### Création de rendez-vous
 
@@ -280,4 +279,8 @@ Cette section détaille les nomenclatures à utiliser afin de renseigner les dif
 ### Validateur ressources
 
 [Cf. page dédiée](./tests.md)
+
+### FAQ
+
+[Cf. page dédiée](./faq.md#gestion-des-rdv)
 

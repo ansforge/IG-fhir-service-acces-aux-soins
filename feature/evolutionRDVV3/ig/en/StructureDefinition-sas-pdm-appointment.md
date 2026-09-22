@@ -31,7 +31,7 @@ Other representations of profile: [CSV](../StructureDefinition-sas-pdm-appointme
   "version" : "1.2.0",
   "name" : "FrAppointmentSASPDM",
   "status" : "active",
-  "date" : "2026-09-14T13:01:31+00:00",
+  "date" : "2026-09-22T14:05:54+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

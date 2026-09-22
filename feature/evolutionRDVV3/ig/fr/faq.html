@@ -994,10 +994,11 @@ Lorsque le PS effecteur de soins n’est pas connu au préalable (ex. agendas de
 <h4 id="quel-est-le-format-json-de-la-requête-de-mise-à-jour-put-à-transmettre-lorsquun-ps-effecteur-de-soins-méconnu-lors-de-la-requête-de-création-est-désormais-connu-ex-sos-médecins-">Quel est le format JSON de la requête de mise à jour (PUT) à transmettre lorsqu'un PS effecteur de soins méconnu lors de la requête de création est désormais connu (ex. SOS Médecins) ?</h4>
 <p>Les champs de la requête de création JSON initiale évoluent et sont valorisés à :</p>
 <ul>
-  <li>`status` (correspondant au statut du rendez-vous) : booked </li>
-  <li>`participant.status` (correspondant au statut d’acceptation du rendez-vous par le PS effecteur de soins) : accepted </li>
-  <li>`participant.actor.identifier.type`, `participant.actor.identifier.system` et `participant.actor.identifier.value` (correspondant aux données du PS effecteur de soins) sont communiquées Cf. [Nomenclatures](./specifications_techniques_tous_RDV_V3.html#nomenclatures).</li>
+  <li><code class="language-plaintext highlighter-rouge">status</code> (correspondant au statut du rendez-vous) : booked &lt;/li&gt;</li>
+  <li><code class="language-plaintext highlighter-rouge">participant.status</code> (correspondant au statut d’acceptation du rendez-vous par le PS effecteur de soins) : accepted &lt;/li&gt;</li>
+  <li><code class="language-plaintext highlighter-rouge">participant.actor.identifier.type</code>, <code class="language-plaintext highlighter-rouge">participant.actor.identifier.system</code> et <code class="language-plaintext highlighter-rouge">participant.actor.identifier.value</code> (correspondant aux données du PS effecteur de soins) sont communiquées Cf. <a href="./specifications_techniques_tous_RDV_V3.html#nomenclatures">Nomenclatures</a>.&lt;/li&gt;</li>
 </ul>
+
 <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
   "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment">resourceType</a>" : "Appointment",
   "<a href="http://hl7.org/fhir/R4/resource.html#Appointment.id">id</a>" : "123456789",
@@ -1124,8 +1125,8 @@ Lorsque le PS effecteur de soins n’est pas connu au préalable (ex. agendas de
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Le package ans.fhir.fr.sas#1.2.0 est basé sur <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Date de génération : 
-  <span title="2026-09-14 13:01:00 +0000">
-    2026-09-14
+  <span title="2026-09-22 14:05:00 +0000">
+    2026-09-22
   </span>
 
           <br/>
