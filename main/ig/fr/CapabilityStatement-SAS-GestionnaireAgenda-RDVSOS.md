@@ -2,9 +2,6 @@
 
 ## CapabilityStatement: Profil SAS gestionnaire d'agenda RDV SOS 
 
- 
-Un gestionnaire d'agenda reçoit des rendez-vous SOS envoyés par un déclarant de rendez-vous. La platefome numérique SAS joue le rôle de gestionnaire d'agenda et stocke les rendez-vous récupérés 
-
  [Fichier de définition d'OpenAPI-Swagger](../SAS-GestionnaireAgenda-RDVSOS.openapi.json) | [Télécharger](../SAS-GestionnaireAgenda-RDVSOS.openapi.json) 
 
 

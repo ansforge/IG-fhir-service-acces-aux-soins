@@ -199,13 +199,13 @@
 
 <div style="float: var(--ig-right);padding: 8px 0px;" id="language">
   <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
-    <div><img class="flag" alt="flag en" src="assets/images/lang-fr.png"/>Français</div>
+    <div><img class="flag" alt="drapeau English" src="assets/images/lang-fr.png"/>Français</div>
   </div>
   <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
  	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
-    <div><img class="flag" alt="flag fr" src="assets/images/lang-fr.png"/>Français</div>
+    <div><img class="flag" alt="drapeau fr" src="assets/images/lang-fr.png"/>Français</div>
 
-    <div><a href="../en/StructureDefinition-FrScheduleAgregateur-definitions.html"><img class="flag" src="assets/images/lang-en.png" alt="flag en"/>English</a></div>
+    <div><a href="../en/StructureDefinition-FrScheduleAgregateur-definitions.html"><img class="flag" src="assets/images/lang-en.png" alt="drapeau en"/>English</a></div>
 
   </div>
 </div>
@@ -331,8 +331,8 @@
           Active
           
 
-            à partir de 
-2026-09-11
+            à date du 
+2026-10-08
 
           
         
@@ -386,7 +386,7 @@
 <p style="color:DarkGray">Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).</p>
 </td></tr><tr><td style="white-space: nowrap">Court</td><td><span style="color:DarkGray">Extensions that cannot be ignored</span></td></tr><tr><td style="white-space: nowrap">Commentaires</td><td><p style="color:DarkGray">There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
 </td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/conformance-rules.html#conformance">Contrôle</a></td><td><span style="color:DarkGray">0</span>..<span style="color:DarkGray">*</span><br/>Cet élément est affecté par les invariants suivants : <span style="color:DarkGray">ele-1</span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><span style="color:DarkGray"><a href="http://hl7.org/fhir/R4/extensibility.html#Extension">Extension</a></span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/conformance-rules.html#ismodifier">Est modificateur</a></td><td><span style="color:DarkGray">true</span> parce que <span style="color:DarkGray">Modifier extensions are expected to modify the meaning or interpretation of the resource that contains them</span></td></tr><tr><td><a href="http://hl7.org/fhir/R4/versions.html#std-process">Statut du standard</a></td><td>Normative (from Trial Use)</td></tr><tr><td style="white-space: nowrap">Exigences</td><td><p style="color:DarkGray">Modifier extensions allow for extensions that <em>cannot</em> be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the <a href="http://hl7.org/fhir/R4/extensibility.html#modifierExtension">definition of modifier extensions</a>.</p>
-</td></tr><tr><td style="white-space: nowrap">Noms alternatifs</td><td><span style="color:DarkGray">extensions</span>, <span style="color:DarkGray">user content</span></td></tr><tr><td style="white-space: nowrap">Invariants</td><td><span style="color:DarkGray"><b title="Identifiant d'invariant formel">ele-1</b>: All FHIR elements must have a @value or children (hasValue() or (children().count() &gt; id.count()))</span><br/><span style="color:DarkGray"><b title="Identifiant d'invariant formel">ext-1</b>: Must have either extensions or value[x], not both (extension.exists() != value.exists())</span></td></tr>
+</td></tr><tr><td style="white-space: nowrap">Noms alternatifs</td><td><span style="color:DarkGray">extensions</span>, <span style="color:DarkGray">user content</span></td></tr><tr><td style="white-space: nowrap">Invariants</td><td><span style="color:DarkGray"><b title="Identifiant d'invariant formel">ele-1</b>: All FHIR elements must have a @value or children (hasValue() or (children().count() &gt; id.count()))</span><br/><b title="Identifiant d'invariant formel">ext-1</b>: Must have either extensions or value[x], not both (<code>extension.exists() != value.exists()</code>)<br/><span style="color:DarkGray;text-decoration:line-through"><b title="Identifiant d'invariant formel">ext-1</b>: Must have either extensions or value[x], not both (extension.exists() != value.exists())</span></td></tr>
 <tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/profiling.html#slicing">Slicing</a></td><td>Cet élément introduit un ensemble de slices sur <code>Schedule.modifierExtension</code>. Les slices sont<span style="color:DarkGray">Non ordonné</span> et <span style="color:DarkGray">Open</span>, et peut être différencié en utilisant les discriminateurs suivants :<ul></ul><li><span style="color:DarkGray">value @ url</span></li></td></tr>
 
 <tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_Schedule.active">  </a><span style="color: grey">10</span><b>. Schedule.active</b><a href="#key_Schedule.active" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Définition</td><td><p style="color:DarkGray">Whether this schedule record is in active use or should not be used (such as was entered in error).</p>
@@ -595,8 +595,8 @@
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Le package ans.fhir.fr.sas#1.2.0 est basé sur <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Date de génération : 
-  <span title="2026-09-11 14:02:00 +0000">
-    2026-09-11
+  <span title="2026-10-08 12:45:00 +0000">
+    2026-10-08
   </span>
 
           <br/>

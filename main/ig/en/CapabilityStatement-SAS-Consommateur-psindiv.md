@@ -2,9 +2,6 @@
 
 ## CapabilityStatement: Profil SAS consommateur de créneaux 
 
- 
-Un consommateur consulte les créneaux ps indiv mis à disposition par un gestionnaire d’agenda. La platefome numérique SAS joue le rôle de consommateur et affiche les créneaux récupérés 
-
  [Raw OpenAPI-Swagger Definition file](../SAS-Consommateur-psindiv.openapi.json) | [Download](../SAS-Consommateur-psindiv.openapi.json) 
 
 

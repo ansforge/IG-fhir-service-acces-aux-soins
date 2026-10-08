@@ -2,9 +2,6 @@
 
 ## CodeSystem: Code système catégorie orientation SAS (Expérimental) 
 
- 
-Code système permettant de définir la catégorie d'orientation SAS spécifique qui n'est pas considéré comme un établissement de soins et qui permet de catégoriser l'orientation de soins 
-
 Ce système de codes est référencé dans la définition des ensembles de valeurs suivants :
 
 * [Value set catégorie orientation SAS](ValueSet-categorie-orientation-sas-valueset.md)
@@ -27,7 +24,7 @@ Ce système de codes est référencé dans la définition des ensembles de valeu
   "title" : "Code système catégorie orientation SAS",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-09-11T14:02:19+00:00",
+  "date" : "2026-10-08T12:45:09+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

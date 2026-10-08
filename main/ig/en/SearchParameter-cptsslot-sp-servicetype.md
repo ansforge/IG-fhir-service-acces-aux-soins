@@ -2,9 +2,6 @@
 
 ## SearchParameter: cptsslot-sp-servicetype 
 
- 
-Paramètre de recherche sur le service type qui mime le paramètre R5. Permet de rechercher ou d'inclure la ressource reférencée HealthCare Service 
-
 
 
 ## Resource Content
@@ -17,7 +14,7 @@ Paramètre de recherche sur le service type qui mime le paramètre R5. Permet de
   "version" : "1.2.0",
   "name" : "SPServiceTypeCPTS",
   "status" : "active",
-  "date" : "2026-09-11T14:02:19+00:00",
+  "date" : "2026-10-08T12:45:09+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

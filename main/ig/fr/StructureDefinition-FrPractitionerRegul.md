@@ -2,9 +2,6 @@
 
 ## Profil de ressource: FrPractitionerRegul 
 
- 
-Profil de Practitioner, dérivé de FrPractitioner, pour la gestion des comptes régulateurs de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS 
-
 **Utilisations:**
 
 * Exemples pour ce/t/te Profil: [Practitioner/ExamplePractitionerRegul1](Practitioner-ExamplePractitionerRegul1.md), [Practitioner/ExamplePractitionerRegul2](Practitioner-ExamplePractitionerRegul2.md), [Practitioner/ExamplePractitionerRegul3](Practitioner-ExamplePractitionerRegul3.md) and [Practitioner/ExamplePractitionerRegul4](Practitioner-ExamplePractitionerRegul4.md)
@@ -88,7 +85,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FrPractitionerR
   "version" : "1.2.0",
   "name" : "FrPractitionerRegul",
   "status" : "active",
-  "date" : "2026-09-11T14:02:19+00:00",
+  "date" : "2026-10-08T12:45:09+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

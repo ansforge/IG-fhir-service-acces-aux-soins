@@ -2,9 +2,6 @@
 
 ## CapabilityStatement: Profil SAS consommateur de créneaux SOS 
 
- 
-Un consommateur consulte les créneaux SOS mis à disposition par un gestionnaire d’agenda. La platefome numérique SAS joue le rôle de consommateur et affiche les créneaux récupérés 
-
  [Fichier de définition d'OpenAPI-Swagger](../SAS-Consommateur-SOS.openapi.json) | [Télécharger](../SAS-Consommateur-SOS.openapi.json) 
 
 

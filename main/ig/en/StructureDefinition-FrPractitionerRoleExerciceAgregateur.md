@@ -2,9 +2,6 @@
 
 ## Resource Profile: FrPractitionerRoleExerciceAgregateur 
 
- 
-Profil de PractitionerRole, dérivé de FrPractitionerRoleExercice, pour le service d'agrégation de créneaux de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS 
-
 **Usages:**
 
 * Use this Profile: [BundleAgregateur](StructureDefinition-BundleAgregateur.md) and [BundleAgregateurCPTS](StructureDefinition-sas-cpts-bundle-aggregator.md)
@@ -32,7 +29,7 @@ Other representations of profile: [CSV](../StructureDefinition-FrPractitionerRol
   "version" : "1.2.0",
   "name" : "FrPractitionerRoleExerciceAgregateur",
   "status" : "active",
-  "date" : "2026-09-11T14:02:19+00:00",
+  "date" : "2026-10-08T12:45:09+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

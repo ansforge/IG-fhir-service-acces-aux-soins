@@ -2,9 +2,6 @@
 
 ## ValueSet: Value set catégorie orientation SAS 
 
- 
-Valueset permettant de définir la catégorie d'orientation SAS. Il regroupe des codes de la TRE-R66 et du codesystem catégorie orientation SAS 
-
  **References** 
 
 * [CategorieOrientation](StructureDefinition-sas-categorie-orientation.md)
@@ -33,7 +30,7 @@ Valueset permettant de définir la catégorie d'orientation SAS. Il regroupe des
   "title" : "Value set catégorie orientation SAS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-11T14:02:19+00:00",
+  "date" : "2026-10-08T12:45:09+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

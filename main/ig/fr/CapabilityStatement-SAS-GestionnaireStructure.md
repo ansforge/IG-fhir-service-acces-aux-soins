@@ -2,9 +2,6 @@
 
 ## CapabilityStatement: Profil SAS gestionnaire de structure 
 
- 
-Un gestionnaire de structure gère les ressources transmises par les déclarants de ressource 
-
  [Fichier de définition d'OpenAPI-Swagger](../SAS-GestionnaireStructure.openapi.json) | [Télécharger](../SAS-GestionnaireStructure.openapi.json) 
 
 

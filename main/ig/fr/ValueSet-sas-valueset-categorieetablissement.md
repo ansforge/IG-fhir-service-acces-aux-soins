@@ -2,9 +2,6 @@
 
 ## ValueSet: Catégorie établissement SAS 
 
- 
-Catégorie d'établissement utilisée dans contexte SAS - CPTS dans un premier temps 
-
  **References** 
 
 * [FrSlotAgregateurCPTS](StructureDefinition-sas-cpts-slot-aggregator.md)
@@ -33,7 +30,7 @@ Catégorie d'établissement utilisée dans contexte SAS - CPTS dans un premier t
   "title" : "Catégorie établissement SAS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-11T14:02:19+00:00",
+  "date" : "2026-10-08T12:45:09+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

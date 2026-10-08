@@ -2,9 +2,6 @@
 
 ## CapabilityStatement: Profil SAS gestionnaire d'agenda CPTS 
 
- 
-Un gestionnaire d'agenda met à disposition d'un consommateur des créneaux de disponibilité. Cas d'usage CPTS 
-
  [Fichier de définition d'OpenAPI-Swagger](../SAS-GestionnaireAgenda-CPTS.openapi.json) | [Télécharger](../SAS-GestionnaireAgenda-CPTS.openapi.json) 
 
 

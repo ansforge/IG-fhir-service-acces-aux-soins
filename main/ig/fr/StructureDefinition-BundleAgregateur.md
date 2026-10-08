@@ -2,9 +2,6 @@
 
 ## Profil de ressource: BundleAgregateur 
 
- 
-Profil de Bundle qui représente le flux de réponse contenant les créneaux disponibles dans le cadre du service d'agrégation de créneaux de la plateforme SAS - Cas d'usage PS Indiv 
-
 **Utilisations:**
 
 * Exemples pour ce/t/te Profil: [Bundle/ExampleBundlePSIndiv](Bundle-ExampleBundlePSIndiv.md)
@@ -101,7 +98,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-BundleAgregateu
   "version" : "1.2.0",
   "name" : "BundleAgregateur",
   "status" : "active",
-  "date" : "2026-09-11T14:02:19+00:00",
+  "date" : "2026-10-08T12:45:09+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

@@ -2,9 +2,6 @@
 
 ## Profil de ressource: FrOrganizationAgregateurSOS 
 
- 
-Profil d'Organization, dérivé de FrOrganization, pour le service d’agrégation de créneaux de la plateforme SAS - cas d’usage SOS Médecins 
-
 **Utilisations:**
 
 * Utilise ce/t/te Profil: [BundleAgregateurSOS](StructureDefinition-sas-sos-bundle-aggregator.md)
@@ -82,7 +79,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-sas-sos-organiz
   "version" : "1.2.0",
   "name" : "FrOrganizationAgregateurSOS",
   "status" : "active",
-  "date" : "2026-09-11T14:02:19+00:00",
+  "date" : "2026-10-08T12:45:09+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

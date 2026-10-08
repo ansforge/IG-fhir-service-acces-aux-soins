@@ -2,8 +2,6 @@
 
 ## Extension: 
 
-Extension créée afin de permettre la reference à la ressource HealthcareService. Cette extension implemente l'élément serviceType de R5 https://hl7.org/fhir/slot-definitions.html#Slot.serviceType
-
 **Context of Use**
 
 **Usage info**
@@ -35,7 +33,7 @@ Other representations of profile: [CSV](../StructureDefinition-sas-cpts-slot-ser
   "version" : "1.2.0",
   "name" : "SASServiceTypeR5",
   "status" : "active",
-  "date" : "2026-09-11T14:02:19+00:00",
+  "date" : "2026-10-08T12:45:09+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

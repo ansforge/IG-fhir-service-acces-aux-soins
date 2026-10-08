@@ -2,8 +2,6 @@
 
 ## Extension: 
 
-Extension créée afin d'ajouter la catégorie d'orientation dans un RDV
-
 **Context of Use**
 
 **Usage info**
@@ -37,7 +35,7 @@ Cette structure est dérivée de [Extension](http://hl7.org/fhir/R4/extensibilit
 
 Extension simple avec le type CodeableConcept : Extension créée afin d'ajouter la catégorie d'orientation dans un RDV
 
- **Vue différentielleDifferential View** 
+ **Vue différentielle** 
 
 Cette structure est dérivée de [Extension](http://hl7.org/fhir/R4/extensibility.html#Extension) 
 
@@ -71,7 +69,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-sas-categorie-o
   "version" : "1.2.0",
   "name" : "CategorieOrientation",
   "status" : "active",
-  "date" : "2026-09-11T14:02:19+00:00",
+  "date" : "2026-10-08T12:45:09+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

@@ -2,9 +2,6 @@
 
 ## Profil de ressource: FrHealthcareServiceAgregateurCPTS 
 
- 
-Profil dérivé de FrHealthcareService pour le cas d'usage agrégateur de la plateforme SAS - cas d'usage CPTS 
-
 **Utilisations:**
 
 * Utilise ce/t/te Profil: [BundleAgregateurCPTS](StructureDefinition-sas-cpts-bundle-aggregator.md)
@@ -91,7 +88,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-sas-cpts-health
   "version" : "1.2.0",
   "name" : "FrHealthcareServiceAgregateurCPTS",
   "status" : "active",
-  "date" : "2026-09-11T14:02:19+00:00",
+  "date" : "2026-10-08T12:45:09+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

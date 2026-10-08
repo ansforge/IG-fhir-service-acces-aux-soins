@@ -2,9 +2,6 @@
 
 ## ValueSet: Appointment Participant Type SAS 
 
- 
-Type de participant du RDV SAS 
-
  **References** 
 
 This value set is not used here; it may be used elsewhere (e.g. specifications and/or implementations that use this content)
@@ -33,7 +30,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "title" : "Appointment Participant Type SAS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-11T14:02:19+00:00",
+  "date" : "2026-10-08T12:45:09+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

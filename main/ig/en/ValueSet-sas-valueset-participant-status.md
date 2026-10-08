@@ -2,9 +2,6 @@
 
 ## ValueSet: Statut participant RDV SAS 
 
- 
-Statut du participant RDV SAS 
-
  **References** 
 
 * [FrAppointmentSAS](StructureDefinition-FrAppointmentSAS.md)
@@ -34,7 +31,7 @@ Statut du participant RDV SAS
   "title" : "Statut participant RDV SAS",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-11T14:02:19+00:00",
+  "date" : "2026-10-08T12:45:09+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

@@ -199,7 +199,7 @@
 
 <div style="float: var(--ig-right);padding: 8px 0px;" id="language">
   <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
-    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+    <div><img class="flag" alt="flag English" src="assets/images/lang-en.png"/>English</div>
   </div>
   <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
  	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
@@ -362,7 +362,7 @@ BundleAgregateurCPTS
           
 
             as of 
-2026-09-11
+2026-10-08
 
           
         
@@ -378,10 +378,10 @@ BundleAgregateurCPTS
 
   </table>
 
-<p>
+<div data-fhir="generated">
 <p>Profil de Bundle qui représente le flux de réponse contenant les créneaux disponibles dans le cadre du service d'agrégation de créneaux de la plateforme SAS - Cas d'usage CPTS</p>
 
-</p>
+</div>
 
 
 <!-- insert intro if present -->
@@ -1006,7 +1006,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Status response code (text optional)</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b4e293ec-8895-4162-bac6-7eb12b61c6d8
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 111f865e-362f-4c99-8646-3a1aa8bd5a14
 document.getElementById('cbsas-cpts-bundle-aggregatorK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('sas-cpts-bundle-aggregatorK'), 'binding', document.getElementById('cbsas-cpts-bundle-aggregatorK-binding').checked, document.getElementById('ppsas-cpts-bundle-aggregatorK'));
 document.getElementById('cbsas-cpts-bundle-aggregatorK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1317,7 +1317,9 @@ filterDesc(document.getElementById('sas-cpts-bundle-aggregatorK'), 'obligation',
     <a name="tabs-diff"> </a>
     <div id="tabs-diff">
       <div id="tbl-diff">
-        <p></p>
+        <p>This structure is derived from 
+  <a href="http://hl7.org/fhir/R4/bundle.html">Bundle</a>
+</p>
         <div id="tbl-diff-inner">
           <table border="0" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;" id="sas-cpts-bundle-aggregatorD" data-fhir="generated-heirarchy"><tr fhir="generated-heirarchy" style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top" data-fhir="generated-heirarchy"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="The logical name of the element" data-no-external="true">Name</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Information about the use of the element" data-no-external="true">Flags</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Minimum and Maximum # of times the element can appear in the instance" data-no-external="true">Card.</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Reference to the type of the element" data-no-external="true">Type</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Additional information about the element" data-no-external="true">Description &amp; Constraints</a>&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-weight: normal">Filter: <input size="10" name="filter" style="border: 1px #F0F0F0 solid; background-color: rgb(254, 254, 231);" onInput="filterTree(document.getElementById('sas-cpts-bundle-aggregatorD'), event.target.value)" type="text"/> <img onClick="showPanel(event.target, document.getElementById('sas-cpts-bundle-aggregatorD'), document.getElementById('ppsas-cpts-bundle-aggregatorD'))" src="tree-filter.png" alt="Filters"/><div style="display: none; position: fixed; opacity : 1.0; background-color: rgb(254, 254, 231); border: 1px solid #ccc; padding: 10px; boxShadow: 0 2px 5px rgba(0,0,0,0.2); zIndex: 1000; borderRadius: 4px" id="ppsas-cpts-bundle-aggregatorD">Bindings <input onClick="filterDesc(document.getElementById('sas-cpts-bundle-aggregatorD'), 'binding',event.target.checked, document.getElementById('ppsas-cpts-bundle-aggregatorD'))" size="1" name="binding" checked="true" id="cbsas-cpts-bundle-aggregatorD-binding" type="checkbox"/><br/>Constraints <input onClick="filterDesc(document.getElementById('sas-cpts-bundle-aggregatorD'), 'constraint',event.target.checked, document.getElementById('ppsas-cpts-bundle-aggregatorD'))" size="1" name="constraint" checked="true" id="cbsas-cpts-bundle-aggregatorD-constraint" type="checkbox"/><br/>Obligations <input onClick="filterDesc(document.getElementById('sas-cpts-bundle-aggregatorD'), 'obligation',event.target.checked, document.getElementById('ppsas-cpts-bundle-aggregatorD'))" size="1" name="obligation" checked="true" id="cbsas-cpts-bundle-aggregatorD-obligation" type="checkbox"/><br/></div></span><span style="float: right"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format" data-no-external="true"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" onLoad="fhirTableInit(this)" style="background-color: inherit"/></a></span></th></tr>
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a no-external="true" href="StructureDefinition-sas-cpts-bundle-aggregator-definitions.html#Bundle" data-no-external="true">Bundle</a><a name="Bundle"> </a></td>
@@ -1435,7 +1437,7 @@ filterDesc(document.getElementById('sas-cpts-bundle-aggregatorK'), 'obligation',
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-sas-cpts-organization-aggregator.html" title="Organization">FrOrganizationAgregateurCPTS</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">A grouping of people or organizations with a common purpose</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b4e293ec-8895-4162-bac6-7eb12b61c6d8
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 111f865e-362f-4c99-8646-3a1aa8bd5a14
 document.getElementById('cbsas-cpts-bundle-aggregatorD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('sas-cpts-bundle-aggregatorD'), 'binding', document.getElementById('cbsas-cpts-bundle-aggregatorD-binding').checked, document.getElementById('ppsas-cpts-bundle-aggregatorD'));
 document.getElementById('cbsas-cpts-bundle-aggregatorD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2741,7 +2743,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Signature">Signature</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Digital Signature</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b4e293ec-8895-4162-bac6-7eb12b61c6d8
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 111f865e-362f-4c99-8646-3a1aa8bd5a14
 document.getElementById('cbsas-cpts-bundle-aggregatorS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('sas-cpts-bundle-aggregatorS'), 'binding', document.getElementById('cbsas-cpts-bundle-aggregatorS-binding').checked, document.getElementById('ppsas-cpts-bundle-aggregatorS'));
 document.getElementById('cbsas-cpts-bundle-aggregatorS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -3451,7 +3453,9 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
     <a name="tabs-summ"> </a>
     <div id="tabs-summ">
       <div id="tbl-summ">
-        <p></p>
+        <p>This structure is derived from 
+  <a href="http://hl7.org/fhir/R4/bundle.html">Bundle</a>
+</p>
         <div id="tbl-summ-inner">
           <a name="summary"> </a>
           <a name="s-summary"> </a>
@@ -4050,7 +4054,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Status response code (text optional)</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b4e293ec-8895-4162-bac6-7eb12b61c6d8
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 111f865e-362f-4c99-8646-3a1aa8bd5a14
 document.getElementById('cbsas-cpts-bundle-aggregatorKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('sas-cpts-bundle-aggregatorKA'), 'binding', document.getElementById('cbsas-cpts-bundle-aggregatorKA-binding').checked, document.getElementById('ppsas-cpts-bundle-aggregatorKA'));
 document.getElementById('cbsas-cpts-bundle-aggregatorKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -4360,7 +4364,9 @@ filterDesc(document.getElementById('sas-cpts-bundle-aggregatorKA'), 'obligation'
         <p>
           <b>Differential View</b>
         </p>
-        <p></p>
+        <p>This structure is derived from 
+  <a href="http://hl7.org/fhir/R4/bundle.html">Bundle</a>
+</p>
         <div id="all-tbl-diff-inner">
           <table border="0" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;" id="sas-cpts-bundle-aggregatorDA" data-fhir="generated-heirarchy"><tr fhir="generated-heirarchy" style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top" data-fhir="generated-heirarchy"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="The logical name of the element" data-no-external="true">Name</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Information about the use of the element" data-no-external="true">Flags</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Minimum and Maximum # of times the element can appear in the instance" data-no-external="true">Card.</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Reference to the type of the element" data-no-external="true">Type</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Additional information about the element" data-no-external="true">Description &amp; Constraints</a>&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-weight: normal">Filter: <input size="10" name="filter" style="border: 1px #F0F0F0 solid; background-color: rgb(254, 254, 231);" onInput="filterTree(document.getElementById('sas-cpts-bundle-aggregatorDA'), event.target.value)" type="text"/> <img onClick="showPanel(event.target, document.getElementById('sas-cpts-bundle-aggregatorDA'), document.getElementById('ppsas-cpts-bundle-aggregatorDA'))" src="tree-filter.png" alt="Filters"/><div style="display: none; position: fixed; opacity : 1.0; background-color: rgb(254, 254, 231); border: 1px solid #ccc; padding: 10px; boxShadow: 0 2px 5px rgba(0,0,0,0.2); zIndex: 1000; borderRadius: 4px" id="ppsas-cpts-bundle-aggregatorDA">Bindings <input onClick="filterDesc(document.getElementById('sas-cpts-bundle-aggregatorDA'), 'binding',event.target.checked, document.getElementById('ppsas-cpts-bundle-aggregatorDA'))" size="1" name="binding" checked="true" id="cbsas-cpts-bundle-aggregatorDA-binding" type="checkbox"/><br/>Constraints <input onClick="filterDesc(document.getElementById('sas-cpts-bundle-aggregatorDA'), 'constraint',event.target.checked, document.getElementById('ppsas-cpts-bundle-aggregatorDA'))" size="1" name="constraint" checked="true" id="cbsas-cpts-bundle-aggregatorDA-constraint" type="checkbox"/><br/>Obligations <input onClick="filterDesc(document.getElementById('sas-cpts-bundle-aggregatorDA'), 'obligation',event.target.checked, document.getElementById('ppsas-cpts-bundle-aggregatorDA'))" size="1" name="obligation" checked="true" id="cbsas-cpts-bundle-aggregatorDA-obligation" type="checkbox"/><br/></div></span><span style="float: right"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format" data-no-external="true"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" onLoad="fhirTableInit(this)" style="background-color: inherit"/></a></span></th></tr>
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a no-external="true" href="StructureDefinition-sas-cpts-bundle-aggregator-definitions.html#Bundle" data-no-external="true">Bundle</a><a name="a-Bundle"> </a></td>
@@ -4478,7 +4484,7 @@ filterDesc(document.getElementById('sas-cpts-bundle-aggregatorKA'), 'obligation'
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-sas-cpts-organization-aggregator.html" title="Organization">FrOrganizationAgregateurCPTS</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">A grouping of people or organizations with a common purpose</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b4e293ec-8895-4162-bac6-7eb12b61c6d8
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 111f865e-362f-4c99-8646-3a1aa8bd5a14
 document.getElementById('cbsas-cpts-bundle-aggregatorDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('sas-cpts-bundle-aggregatorDA'), 'binding', document.getElementById('cbsas-cpts-bundle-aggregatorDA-binding').checked, document.getElementById('ppsas-cpts-bundle-aggregatorDA'));
 document.getElementById('cbsas-cpts-bundle-aggregatorDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -5781,7 +5787,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Signature">Signature</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Digital Signature</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b4e293ec-8895-4162-bac6-7eb12b61c6d8
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 111f865e-362f-4c99-8646-3a1aa8bd5a14
 document.getElementById('cbsas-cpts-bundle-aggregatorSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('sas-cpts-bundle-aggregatorSA'), 'binding', document.getElementById('cbsas-cpts-bundle-aggregatorSA-binding').checked, document.getElementById('ppsas-cpts-bundle-aggregatorSA'));
 document.getElementById('cbsas-cpts-bundle-aggregatorSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -6486,8 +6492,9 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       </div>-->
 
       <div id="all-summ">
-        <p></p>
-        </p>
+        <p>This structure is derived from 
+  <a href="http://hl7.org/fhir/R4/bundle.html">Bundle</a>
+</p>
         <div id="all-summ-inner">
           <a name="a-summary"> </a>
 <p><b>
@@ -6578,8 +6585,8 @@ Summary
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Package ans.fhir.fr.sas#1.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-11 14:02:00 +0000">
-    2026-09-11
+  <span title="2026-10-08 12:45:00 +0000">
+    2026-10-08
   </span>
 
           <br/>

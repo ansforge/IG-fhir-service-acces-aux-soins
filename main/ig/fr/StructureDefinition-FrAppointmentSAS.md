@@ -2,9 +2,6 @@
 
 ## Profil de ressource: FrAppointmentSAS 
 
- 
-Profil de Appointment, dérivé de FrAppointment, pour le cas d'usage prise de RDV de la plateforme SAS - Commun cas d'usage PS Indiv et CPTS 
-
 **Utilisations:**
 
 * Exemples pour ce/t/te Profil: [Appointment/1](Appointment-1.md) and [Appointment/2](Appointment-2.md)
@@ -100,7 +97,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FrAppointmentSA
   "version" : "1.2.0",
   "name" : "FrAppointmentSAS",
   "status" : "active",
-  "date" : "2026-09-11T14:02:19+00:00",
+  "date" : "2026-10-08T12:45:09+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

@@ -2,9 +2,6 @@
 
 ## Resource Profile: BundleAgregateurCPTS 
 
- 
-Profil de Bundle qui représente le flux de réponse contenant les créneaux disponibles dans le cadre du service d'agrégation de créneaux de la plateforme SAS - Cas d'usage CPTS 
-
 **Usages:**
 
 * Examples for this Profile: [Bundle/ExampleBundleCPTS1](Bundle-ExampleBundleCPTS1.md) and [Bundle/ExampleBundleCPTS2](Bundle-ExampleBundleCPTS2.md)
@@ -31,7 +28,7 @@ Other representations of profile: [CSV](../StructureDefinition-sas-cpts-bundle-a
   "version" : "1.2.0",
   "name" : "BundleAgregateurCPTS",
   "status" : "active",
-  "date" : "2026-09-11T14:02:19+00:00",
+  "date" : "2026-10-08T12:45:09+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

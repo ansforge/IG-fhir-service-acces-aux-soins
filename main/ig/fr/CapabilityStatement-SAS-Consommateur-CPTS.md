@@ -2,9 +2,6 @@
 
 ## CapabilityStatement: Profil SAS consommateur de créneaux CPTS 
 
- 
-Un consommateur consulte les créneaux CPTS mis à disposition par un gestionnaire d’agenda. La platefome numérique SAS joue le rôle de consommateur et affiche les créneaux récupérés 
-
  [Fichier de définition d'OpenAPI-Swagger](../SAS-Consommateur-CPTS.openapi.json) | [Télécharger](../SAS-Consommateur-CPTS.openapi.json) 
 
 

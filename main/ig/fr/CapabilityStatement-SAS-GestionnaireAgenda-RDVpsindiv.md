@@ -2,9 +2,6 @@
 
 ## CapabilityStatement: Profil SAS gestionnaire d'agenda RDV ps indiv 
 
- 
-Un gestionnaire d'agenda reçoit des rendez-vous ps indiv envoyés par un déclarant de rendez-vous. La platefome numérique SAS joue le rôle de gestionnaire d'agenda et stocke les rendez-vous récupérés 
-
  [Fichier de définition d'OpenAPI-Swagger](../SAS-GestionnaireAgenda-RDVpsindiv.openapi.json) | [Télécharger](../SAS-GestionnaireAgenda-RDVpsindiv.openapi.json) 
 
 

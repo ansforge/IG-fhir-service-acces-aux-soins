@@ -2,9 +2,6 @@
 
 ## CapabilityStatement: Profil SAS gestionnaire d'agenda PS Indiv 
 
- 
-Un gestionnaire d'agenda met à disposition d'un consommateur des créneaux de disponibilité. Cas d'usage PS à titre individuel 
-
  [Fichier de définition d'OpenAPI-Swagger](../SAS-GestionnaireAgenda-PsIndiv.openapi.json) | [Télécharger](../SAS-GestionnaireAgenda-PsIndiv.openapi.json) 
 
 

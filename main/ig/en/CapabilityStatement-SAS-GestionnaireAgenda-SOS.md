@@ -2,9 +2,6 @@
 
 ## CapabilityStatement: Profil SAS gestionnaire d'agenda SOS 
 
- 
-Un gestionnaire d'agenda met à disposition d'un consommateur des créneaux de disponibilité. Cas d'usage SOS médecins 
-
  [Raw OpenAPI-Swagger Definition file](../SAS-GestionnaireAgenda-SOS.openapi.json) | [Download](../SAS-GestionnaireAgenda-SOS.openapi.json) 
 
 

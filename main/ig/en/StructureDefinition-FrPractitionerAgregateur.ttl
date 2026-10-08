@@ -17,7 +17,7 @@
   fhir:StructureDefinition.version [ fhir:value "1.2.0"] ;
   fhir:StructureDefinition.name [ fhir:value "FrPractitionerAgregateur"] ;
   fhir:StructureDefinition.status [ fhir:value "active"] ;
-  fhir:StructureDefinition.date [ fhir:value "2026-09-11T14:02:19+00:00"^^xsd:dateTime] ;
+  fhir:StructureDefinition.date [ fhir:value "2026-10-08T12:45:09+00:00"^^xsd:dateTime] ;
   fhir:StructureDefinition.publisher [ fhir:value "ANS"] ;
   fhir:StructureDefinition.contact [
      fhir:index -1 ;
@@ -479,8 +479,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/DomainResource" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
          ]
        ] ;
        fhir:ElementDefinition.mapping [
@@ -559,8 +559,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/DomainResource" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
          ]
        ] ;
        fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ] ;
@@ -739,8 +739,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/DomainResource" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
          ]
        ] ;
        fhir:ElementDefinition.mapping [
@@ -994,8 +994,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/DomainResource" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
          ]
        ] ;
        fhir:ElementDefinition.mapping [
@@ -1169,8 +1169,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/DomainResource" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
          ]
        ] ;
        fhir:ElementDefinition.mapping [
@@ -1683,8 +1683,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "start.hasValue().not() or end.hasValue().not() or (start <= end)" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Address" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Address>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Identifier" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Identifier>
          ]
        ] ;
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
@@ -1759,8 +1759,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/MedicationAdministration" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/MedicationAdministration>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Organization" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Organization>
          ]
        ] ;
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
@@ -2002,8 +2002,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/DomainResource" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
          ]
        ] ;
        fhir:ElementDefinition.mapping [
@@ -2078,8 +2078,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/DomainResource" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
          ]
        ] ;
        fhir:ElementDefinition.mapping [
@@ -2492,8 +2492,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "start.hasValue().not() or end.hasValue().not() or (start <= end)" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Address" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Address>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Identifier" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Identifier>
          ]
        ] ;
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
@@ -2569,8 +2569,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "value.empty() or system.exists()" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "not(exists(f:value)) or exists(f:system)" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Practitioner" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Practitioner>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Organization" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Organization>
          ]
        ] ;
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
@@ -2700,8 +2700,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/DomainResource" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
          ]
        ] ;
        fhir:ElementDefinition.mapping [
@@ -2776,8 +2776,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/DomainResource" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
          ]
        ] ;
        fhir:ElementDefinition.mapping [
@@ -3068,8 +3068,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "start.hasValue().not() or end.hasValue().not() or (start <= end)" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Address" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Address>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Identifier" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Identifier>
          ]
        ] ;
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
@@ -3328,8 +3328,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "data.empty() or contentType.exists()" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "not(exists(f:data)) or exists(f:contentType)" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Practitioner" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Practitioner>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Patient" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Patient>
          ]
        ] ;
        fhir:ElementDefinition.mapping [
@@ -3500,8 +3500,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/DomainResource" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
          ]
        ] ;
        fhir:ElementDefinition.mapping [
@@ -3565,8 +3565,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/DomainResource" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
          ]
        ] ;
        fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ] ;
@@ -3805,8 +3805,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/DomainResource" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
          ]
        ] ;
        fhir:ElementDefinition.mapping [
@@ -4079,8 +4079,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/DomainResource" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
          ]
        ] ;
        fhir:ElementDefinition.mapping [
@@ -4095,15 +4095,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR36.system" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.system" ] ;
        fhir:ElementDefinition.short [ fhir:value "Autre diplôme obtenu" ] ;
        fhir:ElementDefinition.definition [ fhir:value "The identification of the code system that defines the meaning of the symbol in the code." ] ;
@@ -4158,15 +4149,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR36.version" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.version" ] ;
        fhir:ElementDefinition.short [ fhir:value "Version of the system - if relevant" ] ;
        fhir:ElementDefinition.definition [ fhir:value "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." ] ;
@@ -4219,15 +4201,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR36.code" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.code" ] ;
        fhir:ElementDefinition.short [ fhir:value "Symbol in syntax defined by the system" ] ;
        fhir:ElementDefinition.definition [ fhir:value "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." ] ;
@@ -4282,14 +4255,6 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR36.display" ] ;
        fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ], [
          fhir:index -1 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable" ] ;
          fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
@@ -4347,15 +4312,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR36.userSelected" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.userSelected" ] ;
        fhir:ElementDefinition.short [ fhir:value "If this coding was chosen directly by the user" ] ;
        fhir:ElementDefinition.definition [ fhir:value "Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays)." ] ;
@@ -4585,8 +4541,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/DomainResource" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
          ]
        ] ;
        fhir:ElementDefinition.mapping [
@@ -4601,15 +4557,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR47.system" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.system" ] ;
        fhir:ElementDefinition.short [ fhir:value "Commission de qualification" ] ;
        fhir:ElementDefinition.definition [ fhir:value "The identification of the code system that defines the meaning of the symbol in the code." ] ;
@@ -4664,15 +4611,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR47.version" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.version" ] ;
        fhir:ElementDefinition.short [ fhir:value "Version of the system - if relevant" ] ;
        fhir:ElementDefinition.definition [ fhir:value "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." ] ;
@@ -4725,15 +4663,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR47.code" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.code" ] ;
        fhir:ElementDefinition.short [ fhir:value "Symbol in syntax defined by the system" ] ;
        fhir:ElementDefinition.definition [ fhir:value "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." ] ;
@@ -4788,14 +4717,6 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR47.display" ] ;
        fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ], [
          fhir:index -1 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable" ] ;
          fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
@@ -4853,15 +4774,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR47.userSelected" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.userSelected" ] ;
        fhir:ElementDefinition.short [ fhir:value "If this coding was chosen directly by the user" ] ;
        fhir:ElementDefinition.definition [ fhir:value "Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays)." ] ;
@@ -5091,8 +5003,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/DomainResource" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
          ]
        ] ;
        fhir:ElementDefinition.mapping [
@@ -5107,15 +5019,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR48.system" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.system" ] ;
        fhir:ElementDefinition.short [ fhir:value "Diplôme de l'Etat français" ] ;
        fhir:ElementDefinition.definition [ fhir:value "The identification of the code system that defines the meaning of the symbol in the code." ] ;
@@ -5170,15 +5073,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR48.version" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.version" ] ;
        fhir:ElementDefinition.short [ fhir:value "Version of the system - if relevant" ] ;
        fhir:ElementDefinition.definition [ fhir:value "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." ] ;
@@ -5231,15 +5125,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR48.code" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.code" ] ;
        fhir:ElementDefinition.short [ fhir:value "Symbol in syntax defined by the system" ] ;
        fhir:ElementDefinition.definition [ fhir:value "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." ] ;
@@ -5294,14 +5179,6 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR48.display" ] ;
        fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ], [
          fhir:index -1 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable" ] ;
          fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
@@ -5359,15 +5236,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR48.userSelected" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.userSelected" ] ;
        fhir:ElementDefinition.short [ fhir:value "If this coding was chosen directly by the user" ] ;
        fhir:ElementDefinition.definition [ fhir:value "Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays)." ] ;
@@ -5597,8 +5465,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/DomainResource" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
          ]
        ] ;
        fhir:ElementDefinition.mapping [
@@ -5613,15 +5481,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR49.system" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.system" ] ;
        fhir:ElementDefinition.short [ fhir:value "Diplôme d'Etudes Spécialisées" ] ;
        fhir:ElementDefinition.definition [ fhir:value "Diplôme d'Etudes Spécialisées" ] ;
@@ -5676,15 +5535,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR49.version" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.version" ] ;
        fhir:ElementDefinition.short [ fhir:value "Version of the system - if relevant" ] ;
        fhir:ElementDefinition.definition [ fhir:value "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." ] ;
@@ -5737,15 +5587,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR49.code" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.code" ] ;
        fhir:ElementDefinition.short [ fhir:value "Symbol in syntax defined by the system" ] ;
        fhir:ElementDefinition.definition [ fhir:value "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." ] ;
@@ -5800,14 +5641,6 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR49.display" ] ;
        fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ], [
          fhir:index -1 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable" ] ;
          fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
@@ -5865,15 +5698,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR49.userSelected" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.userSelected" ] ;
        fhir:ElementDefinition.short [ fhir:value "If this coding was chosen directly by the user" ] ;
        fhir:ElementDefinition.definition [ fhir:value "Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays)." ] ;
@@ -6103,8 +5927,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/DomainResource" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
          ]
        ] ;
        fhir:ElementDefinition.mapping [
@@ -6119,15 +5943,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR50.system" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.system" ] ;
        fhir:ElementDefinition.short [ fhir:value "DESC Groupe 1 (diplôme)" ] ;
        fhir:ElementDefinition.definition [ fhir:value "The identification of the code system that defines the meaning of the symbol in the code." ] ;
@@ -6182,15 +5997,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR50.version" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.version" ] ;
        fhir:ElementDefinition.short [ fhir:value "Version of the system - if relevant" ] ;
        fhir:ElementDefinition.definition [ fhir:value "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." ] ;
@@ -6243,15 +6049,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR50.code" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.code" ] ;
        fhir:ElementDefinition.short [ fhir:value "Symbol in syntax defined by the system" ] ;
        fhir:ElementDefinition.definition [ fhir:value "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." ] ;
@@ -6306,14 +6103,6 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR50.display" ] ;
        fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ], [
          fhir:index -1 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable" ] ;
          fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
@@ -6371,15 +6160,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR50.userSelected" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.userSelected" ] ;
        fhir:ElementDefinition.short [ fhir:value "If this coding was chosen directly by the user" ] ;
        fhir:ElementDefinition.definition [ fhir:value "Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays)." ] ;
@@ -6609,8 +6389,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/DomainResource" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
          ]
        ] ;
        fhir:ElementDefinition.mapping [
@@ -6625,15 +6405,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR51.system" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.system" ] ;
        fhir:ElementDefinition.short [ fhir:value "DESC Groupe 2 (diplôme)" ] ;
        fhir:ElementDefinition.definition [ fhir:value "The identification of the code system that defines the meaning of the symbol in the code." ] ;
@@ -6688,15 +6459,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR51.version" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.version" ] ;
        fhir:ElementDefinition.short [ fhir:value "Version of the system - if relevant" ] ;
        fhir:ElementDefinition.definition [ fhir:value "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." ] ;
@@ -6749,15 +6511,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR51.code" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.code" ] ;
        fhir:ElementDefinition.short [ fhir:value "Symbol in syntax defined by the system" ] ;
        fhir:ElementDefinition.definition [ fhir:value "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." ] ;
@@ -6812,14 +6565,6 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR51.display" ] ;
        fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ], [
          fhir:index -1 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable" ] ;
          fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
@@ -6877,15 +6622,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR51.userSelected" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.userSelected" ] ;
        fhir:ElementDefinition.short [ fhir:value "If this coding was chosen directly by the user" ] ;
        fhir:ElementDefinition.definition [ fhir:value "Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays)." ] ;
@@ -7115,8 +6851,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/DomainResource" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
          ]
        ] ;
        fhir:ElementDefinition.mapping [
@@ -7131,15 +6867,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR52.system" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.system" ] ;
        fhir:ElementDefinition.short [ fhir:value "Capacité (diplôme)" ] ;
        fhir:ElementDefinition.definition [ fhir:value "The identification of the code system that defines the meaning of the symbol in the code." ] ;
@@ -7194,15 +6921,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR52.version" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.version" ] ;
        fhir:ElementDefinition.short [ fhir:value "Version of the system - if relevant" ] ;
        fhir:ElementDefinition.definition [ fhir:value "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." ] ;
@@ -7255,15 +6973,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR52.code" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.code" ] ;
        fhir:ElementDefinition.short [ fhir:value "Symbol in syntax defined by the system" ] ;
        fhir:ElementDefinition.definition [ fhir:value "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." ] ;
@@ -7318,14 +7027,6 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR52.display" ] ;
        fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ], [
          fhir:index -1 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable" ] ;
          fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
@@ -7383,15 +7084,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR52.userSelected" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.userSelected" ] ;
        fhir:ElementDefinition.short [ fhir:value "If this coding was chosen directly by the user" ] ;
        fhir:ElementDefinition.definition [ fhir:value "Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays)." ] ;
@@ -7621,8 +7313,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/DomainResource" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
          ]
        ] ;
        fhir:ElementDefinition.mapping [
@@ -7637,15 +7329,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR53.system" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.system" ] ;
        fhir:ElementDefinition.short [ fhir:value "Diplôme d'un pays de l'EEE" ] ;
        fhir:ElementDefinition.definition [ fhir:value "The identification of the code system that defines the meaning of the symbol in the code." ] ;
@@ -7700,15 +7383,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR53.version" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.version" ] ;
        fhir:ElementDefinition.short [ fhir:value "Version of the system - if relevant" ] ;
        fhir:ElementDefinition.definition [ fhir:value "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." ] ;
@@ -7761,15 +7435,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR53.code" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.code" ] ;
        fhir:ElementDefinition.short [ fhir:value "Symbol in syntax defined by the system" ] ;
        fhir:ElementDefinition.definition [ fhir:value "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." ] ;
@@ -7824,14 +7489,6 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR53.display" ] ;
        fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ], [
          fhir:index -1 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable" ] ;
          fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
@@ -7889,15 +7546,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR53.userSelected" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.userSelected" ] ;
        fhir:ElementDefinition.short [ fhir:value "If this coding was chosen directly by the user" ] ;
        fhir:ElementDefinition.definition [ fhir:value "Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays)." ] ;
@@ -8127,8 +7775,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/DomainResource" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
          ]
        ] ;
        fhir:ElementDefinition.mapping [
@@ -8143,15 +7791,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR54.system" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.system" ] ;
        fhir:ElementDefinition.short [ fhir:value "Diplôme d'Université ou Inter-Universitaire" ] ;
        fhir:ElementDefinition.definition [ fhir:value "Diplôme d'Université ou Inter-Universitaire" ] ;
@@ -8206,15 +7845,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR54.version" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.version" ] ;
        fhir:ElementDefinition.short [ fhir:value "Version of the system - if relevant" ] ;
        fhir:ElementDefinition.definition [ fhir:value "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." ] ;
@@ -8267,15 +7897,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR54.code" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.code" ] ;
        fhir:ElementDefinition.short [ fhir:value "Symbol in syntax defined by the system" ] ;
        fhir:ElementDefinition.definition [ fhir:value "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." ] ;
@@ -8330,14 +7951,6 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR54.display" ] ;
        fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ], [
          fhir:index -1 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable" ] ;
          fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
@@ -8395,15 +8008,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR54.userSelected" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.userSelected" ] ;
        fhir:ElementDefinition.short [ fhir:value "If this coding was chosen directly by the user" ] ;
        fhir:ElementDefinition.definition [ fhir:value "Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays)." ] ;
@@ -8633,8 +8237,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/DomainResource" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
          ]
        ] ;
        fhir:ElementDefinition.mapping [
@@ -8649,15 +8253,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR55.system" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.system" ] ;
        fhir:ElementDefinition.short [ fhir:value "Certificat d'Etude Spéciale" ] ;
        fhir:ElementDefinition.definition [ fhir:value "Certificat d'Etude Spéciale" ] ;
@@ -8712,15 +8307,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR55.version" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.version" ] ;
        fhir:ElementDefinition.short [ fhir:value "Version of the system - if relevant" ] ;
        fhir:ElementDefinition.definition [ fhir:value "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." ] ;
@@ -8773,15 +8359,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR55.code" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.code" ] ;
        fhir:ElementDefinition.short [ fhir:value "Symbol in syntax defined by the system" ] ;
        fhir:ElementDefinition.definition [ fhir:value "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." ] ;
@@ -8836,14 +8413,6 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR55.display" ] ;
        fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ], [
          fhir:index -1 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable" ] ;
          fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
@@ -8901,15 +8470,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR55.userSelected" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.userSelected" ] ;
        fhir:ElementDefinition.short [ fhir:value "If this coding was chosen directly by the user" ] ;
        fhir:ElementDefinition.definition [ fhir:value "Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays)." ] ;
@@ -9139,8 +8699,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/DomainResource" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
          ]
        ] ;
        fhir:ElementDefinition.mapping [
@@ -9155,15 +8715,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR56.system" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.system" ] ;
        fhir:ElementDefinition.short [ fhir:value "Attestation" ] ;
        fhir:ElementDefinition.definition [ fhir:value "The identification of the code system that defines the meaning of the symbol in the code." ] ;
@@ -9218,15 +8769,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR56.version" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.version" ] ;
        fhir:ElementDefinition.short [ fhir:value "Version of the system - if relevant" ] ;
        fhir:ElementDefinition.definition [ fhir:value "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." ] ;
@@ -9279,15 +8821,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR56.code" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.code" ] ;
        fhir:ElementDefinition.short [ fhir:value "Symbol in syntax defined by the system" ] ;
        fhir:ElementDefinition.definition [ fhir:value "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." ] ;
@@ -9342,14 +8875,6 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR56.display" ] ;
        fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ], [
          fhir:index -1 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable" ] ;
          fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
@@ -9407,15 +8932,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR56.userSelected" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.userSelected" ] ;
        fhir:ElementDefinition.short [ fhir:value "If this coding was chosen directly by the user" ] ;
        fhir:ElementDefinition.definition [ fhir:value "Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays)." ] ;
@@ -9645,8 +9161,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/DomainResource" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
          ]
        ] ;
        fhir:ElementDefinition.mapping [
@@ -9661,15 +9177,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR57.system" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.system" ] ;
        fhir:ElementDefinition.short [ fhir:value "Diplôme Européen d'Etudes Spécialisées" ] ;
        fhir:ElementDefinition.definition [ fhir:value "Diplôme Européen d'Etudes Spécialisées" ] ;
@@ -9724,15 +9231,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR57.version" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.version" ] ;
        fhir:ElementDefinition.short [ fhir:value "Version of the system - if relevant" ] ;
        fhir:ElementDefinition.definition [ fhir:value "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." ] ;
@@ -9785,15 +9283,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR57.code" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.code" ] ;
        fhir:ElementDefinition.short [ fhir:value "Symbol in syntax defined by the system" ] ;
        fhir:ElementDefinition.definition [ fhir:value "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." ] ;
@@ -9848,14 +9337,6 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR57.display" ] ;
        fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ], [
          fhir:index -1 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable" ] ;
          fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
@@ -9913,15 +9394,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR57.userSelected" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.userSelected" ] ;
        fhir:ElementDefinition.short [ fhir:value "If this coding was chosen directly by the user" ] ;
        fhir:ElementDefinition.definition [ fhir:value "Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays)." ] ;
@@ -10151,8 +9623,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/DomainResource" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
          ]
        ] ;
        fhir:ElementDefinition.mapping [
@@ -10167,15 +9639,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR58.system" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.system" ] ;
        fhir:ElementDefinition.short [ fhir:value "Autre type de diplôme" ] ;
        fhir:ElementDefinition.definition [ fhir:value "Autre type de diplôme" ] ;
@@ -10230,15 +9693,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR58.version" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.version" ] ;
        fhir:ElementDefinition.short [ fhir:value "Version of the system - if relevant" ] ;
        fhir:ElementDefinition.definition [ fhir:value "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." ] ;
@@ -10291,15 +9745,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR58.code" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.code" ] ;
        fhir:ElementDefinition.short [ fhir:value "Symbol in syntax defined by the system" ] ;
        fhir:ElementDefinition.definition [ fhir:value "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." ] ;
@@ -10354,14 +9799,6 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR58.display" ] ;
        fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ], [
          fhir:index -1 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable" ] ;
          fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
@@ -10419,15 +9856,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR58.userSelected" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.userSelected" ] ;
        fhir:ElementDefinition.short [ fhir:value "If this coding was chosen directly by the user" ] ;
        fhir:ElementDefinition.definition [ fhir:value "Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays)." ] ;
@@ -10657,8 +10085,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/DomainResource" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
          ]
        ] ;
        fhir:ElementDefinition.mapping [
@@ -10673,15 +10101,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR226.system" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.system" ] ;
        fhir:ElementDefinition.short [ fhir:value "Diplôme de 2ième cycle non qualifiant" ] ;
        fhir:ElementDefinition.definition [ fhir:value "The identification of the code system that defines the meaning of the symbol in the code." ] ;
@@ -10736,15 +10155,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR226.version" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.version" ] ;
        fhir:ElementDefinition.short [ fhir:value "Version of the system - if relevant" ] ;
        fhir:ElementDefinition.definition [ fhir:value "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." ] ;
@@ -10797,15 +10207,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR226.code" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.code" ] ;
        fhir:ElementDefinition.short [ fhir:value "Symbol in syntax defined by the system" ] ;
        fhir:ElementDefinition.definition [ fhir:value "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." ] ;
@@ -10860,14 +10261,6 @@
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR226.display" ] ;
        fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ], [
          fhir:index -1 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable" ] ;
          fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
@@ -10925,15 +10318,6 @@
      ], [
        fhir:index -1 ;
        fhir:Element.id [ fhir:value "Practitioner.qualification.code.coding:degreeR226.userSelected" ] ;
-       fhir:Element.extension [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ] ;
-         fhir:Extension.valueCode [ fhir:value "normative" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version" ] ;
-         fhir:Extension.valueCode [ fhir:value "4.0.0" ]
-       ] ;
        fhir:ElementDefinition.path [ fhir:value "Practitioner.qualification.code.coding.userSelected" ] ;
        fhir:ElementDefinition.short [ fhir:value "If this coding was chosen directly by the user" ] ;
        fhir:ElementDefinition.definition [ fhir:value "Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays)." ] ;
@@ -11084,8 +10468,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "start.hasValue().not() or end.hasValue().not() or (start <= end)" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Address" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Address>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Identifier" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Identifier>
          ]
        ] ;
        fhir:ElementDefinition.mapping [
@@ -11155,8 +10539,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/MedicationAdministration" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/MedicationAdministration>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Organization" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Organization>
          ]
        ] ;
        fhir:ElementDefinition.mapping [
