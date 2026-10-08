@@ -1,0 +1,43 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/sas/Organization/ExampleOrgaSOS2> a fhir:Organization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "ExampleOrgaSOS2"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator" ;
+       fhir:index -1 ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-organization-aggregator>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "fr"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : Organisation ExampleOrgaSOS2</b></p><a name=\"ExampleOrgaSOS2\"> </a><a name=\"hcExampleOrgaSOS2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-sos-organization-aggregator.html\">FrOrganizationAgregateurSOS</a></p></div><p><b>identifier</b>: Identification nationale de structure définie par l’ASIP-SANTE dans le CI_SIS/392080466300010</p><p><b>name</b>: SOS Médecins Lorient et agglomération</p></div>"
+  ] ;
+  fhir:Organization.identifier [
+     fhir:index -1 ;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type" ] ;
+         fhir:Coding.code [ fhir:value "IDNST" ]
+       ]
+     ] ;
+     fhir:Identifier.system [ fhir:value "urn:oid:1.2.250.1.71.4.2.2" ] ;
+     fhir:Identifier.value [ fhir:value "392080466300010" ]
+  ] ;
+  fhir:Organization.name [ fhir:value "SOS Médecins Lorient et agglomération"] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/sas/Organization/ExampleOrgaSOS2.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

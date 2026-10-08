@@ -1,0 +1,82 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/sas/Slot/ExampleSlotPSIndiv4> a fhir:Slot ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "ExampleSlotPSIndiv4"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur" ;
+       fhir:index 0 ;
+       fhir:link <http://sas.fr/fhir/StructureDefinition/FrSlotAgregateur>
+     ] ;
+     fhir:Meta.security [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau" ] ;
+       fhir:Coding.code [ fhir:value "PUBLIC" ]
+     ], [
+       fhir:index 1 ;
+       fhir:Coding.system [ fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R314-TypeCreneau/FHIR/TRE-R314-TypeCreneau" ] ;
+       fhir:Coding.code [ fhir:value "PRO" ]
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : Slot ExampleSlotPSIndiv4</b></p><a name=\"ExampleSlotPSIndiv4\"> </a><a name=\"hcExampleSlotPSIndiv4\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-FrSlotAgregateur.html\">FrSlotAgregateur</a></p><p style=\"margin-bottom: 0px\">Label de sécurités: <a href=\"https://smt.esante.gouv.fr/fhir/ValueSet/TRE-R314-TypeCreneau\">Créneau accessible par le grand public (Détails : code TRE_R314_TypeCreneau PUBLIC = 'Créneau accessible par le grand public')</a>, <a href=\"https://smt.esante.gouv.fr/fhir/ValueSet/TRE-R314-TypeCreneau\">Créneau accessible par l'ensemble des professionnels de santé (Détails : code TRE_R314_TypeCreneau PRO = 'Créneau accessible par l'ensemble des professionnels de santé')</a></p></div><p><b>serviceType</b>: <span title=\"Codes :{http://terminology.hl7.org/CodeSystem/v3-ActCode HH}\">home health</span>, <span title=\"Codes :\">Visite de contrôle</span>, <span title=\"Codes :\">Consultation de suivi pneumologique</span></p><p><b>specialty</b>: <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM41}\">Pneumologie (SM)</span>, <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM54}\">Médecine générale (SM)</span></p><p><b>appointmentType</b>: <span title=\"Codes :{http://terminology.hl7.org/CodeSystem/v2-0276 ROUTINE}\">Routine appointment - default if not valued</span></p><p><b>schedule</b>: <a href=\"Schedule-ExampleSchedule3.html\">Schedule</a></p><p><b>status</b>: Free</p><p><b>start</b>: 2021-11-04 14:40:00+0000</p><p><b>end</b>: 2021-11-04 15:00:00+0000</p><p><b>comment</b>: https://exemple.com/rdv/com/</p></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Slot ExampleSlotPSIndiv4</b></p><a name=\"en-ExampleSlotPSIndiv4\"> </a><a name=\"en-hcExampleSlotPSIndiv4\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-FrSlotAgregateur.html\">FrSlotAgregateur</a></p><p style=\"margin-bottom: 0px\">Security Labels: <a href=\"https://smt.esante.gouv.fr/fhir/ValueSet/TRE-R314-TypeCreneau\">Créneau accessible par le grand public (Details: TRE_R314_TypeCreneau code PUBLIC = 'Créneau accessible par le grand public')</a>, <a href=\"https://smt.esante.gouv.fr/fhir/ValueSet/TRE-R314-TypeCreneau\">Créneau accessible par l'ensemble des professionnels de santé (Details: TRE_R314_TypeCreneau code PRO = 'Créneau accessible par l'ensemble des professionnels de santé')</a></p></div><p><b>serviceType</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode HH}\">home health</span>, <span title=\"Codes:\">Visite de contrôle</span>, <span title=\"Codes:\">Consultation de suivi pneumologique</span></p><p><b>specialty</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM41}\">Pneumologie (SM)</span>, <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM54}\">Médecine générale (SM)</span></p><p><b>appointmentType</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0276 ROUTINE}\">Routine appointment - default if not valued</span></p><p><b>schedule</b>: <a href=\"Schedule-ExampleSchedule3.html\">Schedule</a></p><p><b>status</b>: Free</p><p><b>start</b>: 2021-11-04 14:40:00+0000</p><p><b>end</b>: 2021-11-04 15:00:00+0000</p><p><b>comment</b>: https://exemple.com/rdv/com/</p></div></div>"
+  ] ;
+  fhir:Slot.serviceType [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ] ;
+       fhir:Coding.code [ fhir:value "HH" ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:CodeableConcept.text [ fhir:value "Visite de contrôle" ]
+  ], [
+     fhir:index 2 ;
+     fhir:CodeableConcept.text [ fhir:value "Consultation de suivi pneumologique" ]
+  ] ;
+  fhir:Slot.specialty [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale" ] ;
+       fhir:Coding.code [ fhir:value "SM41" ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale" ] ;
+       fhir:Coding.code [ fhir:value "SM54" ]
+     ]
+  ] ;
+  fhir:Slot.appointmentType [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0276" ] ;
+       fhir:Coding.code [ fhir:value "ROUTINE" ]
+     ]
+  ] ;
+  fhir:Slot.schedule [
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Schedule/ExampleSchedule3> ;
+     fhir:Reference.reference [ fhir:value "Schedule/ExampleSchedule3" ]
+  ] ;
+  fhir:Slot.status [ fhir:value "free"] ;
+  fhir:Slot.start [ fhir:value "2021-11-04T14:40:00.000+00:00"^^xsd:dateTime] ;
+  fhir:Slot.end [ fhir:value "2021-11-04T15:00:00.000+00:00"^^xsd:dateTime] ;
+  fhir:Slot.comment [ fhir:value "https://exemple.com/rdv/com/"] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/sas/Slot/ExampleSlotPSIndiv4.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

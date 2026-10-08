@@ -1,0 +1,75 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/sas/Location/3333333333> a fhir:Location ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "3333333333"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator" ;
+       fhir:index -1 ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "fr"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : Localisation 3333333333</b></p><a name=\"3333333333\"> </a><a name=\"hc3333333333\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-sos-location-aggregator.html\">FrLocationAgregateurSOS</a></p></div><p><b>identifier</b>: Identifiant interne/3333333333</p><p><b>name</b>: Centre de consultation Lorient</p><p><b>telecom</b>: <a href=\"tel:+33139555992\">+33139555992</a></p><p><b>address</b>: 12 impasse Royer Dubail LORIENT 56100 </p><p><b>managingOrganization</b>: <a href=\"Organization-ExampleOrgaSOS2.html\">Organization SOS Médecins Lorient et agglomération</a></p><blockquote><p><b>hoursOfOperation</b></p><p><b>daysOfWeek</b>: Tuesday, Thursday, Saturday</p><p><b>openingTime</b>: 11:00:00</p><p><b>closingTime</b>: 18:00:00</p></blockquote></div>"
+  ] ;
+  fhir:Location.identifier [
+     fhir:index -1 ;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type" ] ;
+         fhir:Coding.code [ fhir:value "INTRN" ]
+       ]
+     ] ;
+     fhir:Identifier.system [ fhir:value "https://editeur.com" ] ;
+     fhir:Identifier.value [ fhir:value "3333333333" ]
+  ] ;
+  fhir:Location.name [ fhir:value "Centre de consultation Lorient"] ;
+  fhir:Location.telecom [
+     fhir:index -1 ;
+     fhir:ContactPoint.system [ fhir:value "phone" ] ;
+     fhir:ContactPoint.value [ fhir:value "+33139555992" ]
+  ] ;
+  fhir:Location.address [
+     fhir:Address.line [
+       fhir:value "12 impasse Royer Dubail" ;
+       fhir:index -1
+     ] ;
+     fhir:Address.city [ fhir:value "LORIENT" ] ;
+     fhir:Address.postalCode [ fhir:value "56100" ]
+  ] ;
+  fhir:Location.managingOrganization [
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/sas/Organization/ExampleOrgaSOS2> ;
+     fhir:Reference.reference [ fhir:value "Organization/ExampleOrgaSOS2" ]
+  ] ;
+  fhir:Location.hoursOfOperation [
+     fhir:index -1 ;
+     fhir:Location.hoursOfOperation.daysOfWeek [
+       fhir:value "tue" ;
+       fhir:index -1
+     ], [
+       fhir:value "thu" ;
+       fhir:index -1
+     ], [
+       fhir:value "sat" ;
+       fhir:index -1
+     ] ;
+     fhir:Location.hoursOfOperation.openingTime [ fhir:value "11:00:00"^^xsd:time ] ;
+     fhir:Location.hoursOfOperation.closingTime [ fhir:value "18:00:00"^^xsd:time ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/sas/Location/3333333333.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
