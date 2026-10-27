@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Location xmlns="http://hl7.org/fhir">
+  <id value="2222222222"/>
+  <meta>
+    <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Location 2222222222</b></p><a name="en-2222222222"> </a><a name="en-hc2222222222"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-sas-sos-location-aggregator.html">FrLocationAgregateurSOS</a></p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Centre de consultation Rennes Cleunay (Identifiant interne: 2222222222)</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Physical location">Address:</td><td colspan="3">106 rue Eugène Pottier RENNES 35000 </td></tr><tr><td style="background-color: #f3f5da" title="Ways to make contact with the location">Contact Detail</td><td colspan="3"><a href="tel:+33145249912">+33145249912</a></td></tr><tr><td style="background-color: #f3f5da" title="The organization responsible for the provisioning and upkeep of the location">Managed By:</td><td colspan="3"><a href="Organization-ExampleOrgaSOS1.html">SOS Médecins de Rennes (Identification nationale de structure définie par l’ASIP-SANTE dans le CI_SIS: 334173748400020)</a></td></tr><tr><td style="background-color: #f3f5da" title="When the location is (and is not) open">Hours:</td><td colspan="3"><ul><li>Monday, Tuesday, Wednesday, Thursday: 09:00:00 - 21:00:00</li></ul></td></tr></table></div>
+  </text>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"/>
+        <code value="INTRN"/>
+      </coding>
+    </type>
+    <system value="https://editeur.com"/>
+    <value value="2222222222"/>
+  </identifier>
+  <name value="Centre de consultation Rennes Cleunay"/>
+  <telecom>
+    <system value="phone"/>
+    <value value="+33145249912"/>
+  </telecom>
+  <address>
+    <line value="106 rue Eugène Pottier"/>
+    <city value="RENNES"/>
+    <postalCode value="35000"/>
+  </address>
+  <managingOrganization>
+    <reference value="Organization/ExampleOrgaSOS1"/>
+  </managingOrganization>
+  <hoursOfOperation>
+    <daysOfWeek value="mon"/>
+    <daysOfWeek value="tue"/>
+    <daysOfWeek value="wed"/>
+    <daysOfWeek value="thu"/>
+    <openingTime value="09:00:00"/>
+    <closingTime value="21:00:00"/>
+  </hoursOfOperation>
+</Location>

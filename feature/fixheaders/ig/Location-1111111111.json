@@ -1,0 +1,44 @@
+{
+  "resourceType" : "Location",
+  "id" : "1111111111",
+  "meta" : {
+    "profile" : ["https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : Localisation 1111111111</b></p><a name=\"1111111111\"> </a><a name=\"hc1111111111\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-sas-sos-location-aggregator.html\">FrLocationAgregateurSOS</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Centre de consultation Rennes Nord (Identifiant interne: 1111111111)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Physical location\">Address:</td><td colspan=\"3\">320 avenue Général Georges Patton RENNES 35700 </td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to make contact with the location\">Coordonnées</td><td colspan=\"3\"><a href=\"tel:+33193246789\">+33193246789</a></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"The organization responsible for the provisioning and upkeep of the location\">Managed By:</td><td colspan=\"3\"><a href=\"Organization-ExampleOrgaSOS1.html\">SOS Médecins de Rennes (Identification nationale de structure définie par l’ASIP-SANTE dans le CI_SIS: 334173748400020)</a></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"When the location is (and is not) open\">Hours:</td><td colspan=\"3\"><ul><li>Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday: 08:00:00 - 19:00:00</li></ul></td></tr></table></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Location 1111111111</b></p><a name=\"en-1111111111\"> </a><a name=\"en-hc1111111111\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-sas-sos-location-aggregator.html\">FrLocationAgregateurSOS</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Centre de consultation Rennes Nord (Identifiant interne: 1111111111)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Physical location\">Address:</td><td colspan=\"3\">320 avenue Général Georges Patton RENNES 35700 </td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to make contact with the location\">Contact Detail</td><td colspan=\"3\"><a href=\"tel:+33193246789\">+33193246789</a></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"The organization responsible for the provisioning and upkeep of the location\">Managed By:</td><td colspan=\"3\"><a href=\"Organization-ExampleOrgaSOS1.html\">SOS Médecins de Rennes (Identification nationale de structure définie par l’ASIP-SANTE dans le CI_SIS: 334173748400020)</a></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"When the location is (and is not) open\">Hours:</td><td colspan=\"3\"><ul><li>Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday: 08:00:00 - 19:00:00</li></ul></td></tr></table></div></div>"
+  },
+  "identifier" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type",
+        "code" : "INTRN"
+      }]
+    },
+    "system" : "https://editeur.com",
+    "value" : "1111111111"
+  }],
+  "name" : "Centre de consultation Rennes Nord",
+  "telecom" : [{
+    "system" : "phone",
+    "value" : "+33193246789"
+  }],
+  "address" : {
+    "line" : ["320 avenue Général Georges Patton"],
+    "city" : "RENNES",
+    "postalCode" : "35700"
+  },
+  "managingOrganization" : {
+    "reference" : "Organization/ExampleOrgaSOS1"
+  },
+  "hoursOfOperation" : [{
+    "daysOfWeek" : ["tue",
+    "wed",
+    "thu",
+    "fri",
+    "sat",
+    "sun"],
+    "openingTime" : "08:00:00",
+    "closingTime" : "19:00:00"
+  }]
+}

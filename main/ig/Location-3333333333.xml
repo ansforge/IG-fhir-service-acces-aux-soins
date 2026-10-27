@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Location xmlns="http://hl7.org/fhir">
+  <id value="3333333333"/>
+  <meta>
+    <profile value="https://interop.esante.gouv.fr/ig/fhir/sas/StructureDefinition/sas-sos-location-aggregator"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="fr" lang="fr"><hr/><p><b>French</b></p><hr/><p class="res-header-id"><b>Narratif généré : Localisation 3333333333</b></p><a name="3333333333"> </a><a name="hc3333333333"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-sas-sos-location-aggregator.html">FrLocationAgregateurSOS</a></p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Centre de consultation Lorient (Identifiant interne: 3333333333)</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Physical location">Address:</td><td colspan="3">12 impasse Royer Dubail LORIENT 56100 </td></tr><tr><td style="background-color: #f3f5da" title="Ways to make contact with the location">Coordonnées</td><td colspan="3"><a href="tel:+33139555992">+33139555992</a></td></tr><tr><td style="background-color: #f3f5da" title="The organization responsible for the provisioning and upkeep of the location">Managed By:</td><td colspan="3"><a href="Organization-ExampleOrgaSOS2.html">SOS Médecins Lorient et agglomération (Identification nationale de structure définie par l’ASIP-SANTE dans le CI_SIS: 392080466300010)</a></td></tr><tr><td style="background-color: #f3f5da" title="When the location is (and is not) open">Hours:</td><td colspan="3"><ul><li>Tuesday, Thursday, Saturday: 11:00:00 - 18:00:00</li></ul></td></tr></table></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Location 3333333333</b></p><a name="en-3333333333"> </a><a name="en-hc3333333333"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-sas-sos-location-aggregator.html">FrLocationAgregateurSOS</a></p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Centre de consultation Lorient (Identifiant interne: 3333333333)</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Physical location">Address:</td><td colspan="3">12 impasse Royer Dubail LORIENT 56100 </td></tr><tr><td style="background-color: #f3f5da" title="Ways to make contact with the location">Contact Detail</td><td colspan="3"><a href="tel:+33139555992">+33139555992</a></td></tr><tr><td style="background-color: #f3f5da" title="The organization responsible for the provisioning and upkeep of the location">Managed By:</td><td colspan="3"><a href="Organization-ExampleOrgaSOS2.html">SOS Médecins Lorient et agglomération (Identification nationale de structure définie par l’ASIP-SANTE dans le CI_SIS: 392080466300010)</a></td></tr><tr><td style="background-color: #f3f5da" title="When the location is (and is not) open">Hours:</td><td colspan="3"><ul><li>Tuesday, Thursday, Saturday: 11:00:00 - 18:00:00</li></ul></td></tr></table></div></div>
+  </text>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"/>
+        <code value="INTRN"/>
+      </coding>
+    </type>
+    <system value="https://editeur.com"/>
+    <value value="3333333333"/>
+  </identifier>
+  <name value="Centre de consultation Lorient"/>
+  <telecom>
+    <system value="phone"/>
+    <value value="+33139555992"/>
+  </telecom>
+  <address>
+    <line value="12 impasse Royer Dubail"/>
+    <city value="LORIENT"/>
+    <postalCode value="56100"/>
+  </address>
+  <managingOrganization>
+    <reference value="Organization/ExampleOrgaSOS2"/>
+  </managingOrganization>
+  <hoursOfOperation>
+    <daysOfWeek value="tue"/>
+    <daysOfWeek value="thu"/>
+    <daysOfWeek value="sat"/>
+    <openingTime value="11:00:00"/>
+    <closingTime value="18:00:00"/>
+  </hoursOfOperation>
+</Location>

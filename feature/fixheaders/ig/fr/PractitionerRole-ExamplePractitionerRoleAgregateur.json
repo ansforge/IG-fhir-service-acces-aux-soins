@@ -1,0 +1,56 @@
+{
+  "resourceType" : "PractitionerRole",
+  "id" : "ExamplePractitionerRoleAgregateur",
+  "meta" : {
+    "profile" : ["http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"]
+  },
+  "language" : "fr",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : PractitionerRole ExamplePractitionerRoleAgregateur</b></p><a name=\"ExamplePractitionerRoleAgregateur\"> </a><a name=\"hcExamplePractitionerRoleAgregateur\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-FrPractitionerRoleExerciceAgregateur.html\">FrPractitionerRoleExerciceAgregateur</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Pierre Foret (Identifiant National de Professionnel de Santé: 810002909371) at id: Identification nationale de structure définie par l’ASIP-SANTE dans le CI_SIS: 412345678912345</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"The practitioner who is able to provide the services in this role\">Practitioner:</td><td colspan=\"3\"><a href=\"Practitioner-ExamplePractitioner.html\">Pierre Foret (Identifiant National de Professionnel de Santé: 810002909371)</a></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"The organization where the practitioner performs the roles\">Organization:</td><td colspan=\"3\">Identifier: Identification nationale de structure définie par l’ASIP-SANTE dans le CI_SIS/412345678912345</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"The locations at which the practitioner provides care\">Location:</td><td colspan=\"3\"><a href=\"#hcExamplePractitionerRoleAgregateur/ExampleLocation\">Unnamed Location (Identifiant interne: 123456789)</a></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the practitioner in this role\">Coordonnées</td><td colspan=\"3\"><a href=\"tel:+33561855977\">+33561855977</a></td></tr></table><hr/><p><b>Ressource contenue</b></p><hr/><a name=\"ExamplePractitionerRoleAgregateur/ExampleLocation\"> </a><p class=\"res-header-id\"><b>Localisation #ExampleLocation</b></p><a name=\"hcExamplePractitionerRoleAgregateur/ExampleLocation\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-FrLocationAgregateur.html\">FrLocationAgregateur</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Unnamed Location (Identifiant interne: 123456789)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Physical location\">Address:</td><td colspan=\"3\">25 CHEMIN DE MOUNESTIE Aussonne 31840 </td></tr></table></div>"
+  },
+  "contained" : [{
+    "resourceType" : "Location",
+    "id" : "ExampleLocation",
+    "meta" : {
+      "profile" : ["http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur"]
+    },
+    "identifier" : [{
+      "type" : {
+        "coding" : [{
+          "system" : "http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type",
+          "code" : "INTRN"
+        }]
+      },
+      "system" : "https://editeur.com",
+      "value" : "123456789"
+    }],
+    "address" : {
+      "line" : ["25 CHEMIN DE MOUNESTIE"],
+      "city" : "Aussonne",
+      "postalCode" : "31840"
+    }
+  }],
+  "practitioner" : {
+    "reference" : "Practitioner/ExamplePractitioner"
+  },
+  "organization" : {
+    "identifier" : {
+      "type" : {
+        "coding" : [{
+          "system" : "http://interopsante.org/fhir/CodeSystem/fr-v2-0203",
+          "code" : "IDNST"
+        }]
+      },
+      "system" : "urn:oid:1.2.250.1.71.4.2.2",
+      "value" : "412345678912345"
+    }
+  },
+  "location" : [{
+    "reference" : "#ExampleLocation"
+  }],
+  "telecom" : [{
+    "system" : "phone",
+    "value" : "+33561855977"
+  }]
+}

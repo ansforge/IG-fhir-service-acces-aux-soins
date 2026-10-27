@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PractitionerRole xmlns="http://hl7.org/fhir">
+  <id value="ExamplePractitionerRoleAgregateur2"/>
+  <meta>
+    <profile value="http://sas.fr/fhir/StructureDefinition/FrPractitionerRoleExerciceAgregateur"/>
+  </meta>
+  <language value="fr"/>
+  <text>
+    <status value="generated"/><div xml:lang="fr" lang="fr"><hr/><p><b>French</b></p><hr/><p class="res-header-id"><b>Narratif généré : PractitionerRole ExamplePractitionerRoleAgregateur2</b></p><a name="ExamplePractitionerRoleAgregateur2"> </a><a name="hcExamplePractitionerRoleAgregateur2"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-FrPractitionerRoleExerciceAgregateur.html">FrPractitionerRoleExerciceAgregateur</a></p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Sébastien THOMAS (Identifiant National de Professionnel de Santé: 810100050075) at id: Identification nationale de structure définie par l’ASIP-SANTE dans le CI_SIS: 1810004421</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="The practitioner who is able to provide the services in this role">Practitioner:</td><td colspan="3"><a href="Practitioner-ExamplePractitioner2.html">Sébastien THOMAS (Identifiant National de Professionnel de Santé: 810100050075)</a></td></tr><tr><td style="background-color: #f3f5da" title="The organization where the practitioner performs the roles">Organization:</td><td colspan="3">Identifier: Identification nationale de structure définie par l’ASIP-SANTE dans le CI_SIS/1810004421</td></tr><tr><td style="background-color: #f3f5da" title="The locations at which the practitioner provides care">Location:</td><td colspan="3"><a href="#hcExamplePractitionerRoleAgregateur2/ExampleLocation3">Unnamed Location (Identifiant interne: 1)</a></td></tr></table><hr/><p><b>Ressource contenue</b></p><hr/><a name="ExamplePractitionerRoleAgregateur2/ExampleLocation3"> </a><p class="res-header-id"><b>Localisation #ExampleLocation3</b></p><a name="hcExamplePractitionerRoleAgregateur2/ExampleLocation3"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-FrLocationAgregateur.html">FrLocationAgregateur</a></p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Unnamed Location (Identifiant interne: 1)</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Physical location">Address:</td><td colspan="3">1 rue Mme DELMAS AGEN 47000 </td></tr></table></div>
+  </text>
+  <contained>
+    <Location>
+      <id value="ExampleLocation3"/>
+      <meta>
+        <profile value="http://sas.fr/fhir/StructureDefinition/FrLocationAgregateur"/>
+      </meta>
+      <identifier>
+        <type>
+          <coding>
+            <system value="http://interopsante.org/fhir/CodeSystem/fr-location-identifier-type"/>
+            <code value="INTRN"/>
+          </coding>
+        </type>
+        <system value="urn:oid:1.1.111.1.111.1.1.1"/>
+        <value value="1"/>
+      </identifier>
+      <address>
+        <line value="1 rue Mme DELMAS"/>
+        <city value="AGEN"/>
+        <postalCode value="47000"/>
+      </address>
+    </Location>
+  </contained>
+  <practitioner>
+    <reference value="Practitioner/ExamplePractitioner2"/>
+  </practitioner>
+  <organization>
+    <identifier>
+      <type>
+        <coding>
+          <system value="http://interopsante.org/fhir/CodeSystem/fr-v2-0203"/>
+          <code value="IDNST"/>
+        </coding>
+      </type>
+      <system value="urn:oid:1.2.250.1.71.4.2.2"/>
+      <value value="1810004421"/>
+    </identifier>
+  </organization>
+  <location>
+    <reference value="#ExampleLocation3"/>
+  </location>
+</PractitionerRole>
